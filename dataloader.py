@@ -31,10 +31,11 @@ class Myarticles(data.Dataset):
         #self.glove_init()
         #self.w2v = self.init_word2vec()
         self.articles = self.Creat_article_list(csvfile_path)
-        if validation:
-            self.articles = self.articles[200:250]
-        else:
-            self.articles = self.articles[0:200]
+        #if validation:
+        #    self.articles = self.articles[200:250]
+        #else:
+        #    self.articles = self.articles[0:200]
+        self.articles = self.articles[0:250]
         self.folderpath = txt_folder_path
         self.snowball_stemmer = SnowballStemmer('english')
         self.wordnet_lematizer = WordNetLemmatizer()
@@ -205,7 +206,7 @@ class Myarticles(data.Dataset):
 if __name__ == '__main__':
     article = Myarticles('./wp_analysis.csv','./txt')
     test_loader = data.DataLoader(article,batch_size=1,shuffle=False)
-#article.save_wdx()
+    article.save_wdx()
     for sample, target in test_loader:
         print(sample)
         print(target)
