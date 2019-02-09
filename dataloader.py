@@ -203,7 +203,7 @@ class Myarticles(data.Dataset):
         return len(self.articles)
 
 if __name__ == '__main__':
-    article = Myarticles('/Users/duanyiqun/Downloads/Textcls/wp_analysis.csv','/Users/duanyiqun/Downloads/Textcls/txt')
+    article = Myarticles('./wp_analysis.csv','./txt')
     test_loader = data.DataLoader(article,batch_size=1,shuffle=False)
 #article.save_wdx()
     for sample, target in test_loader:
