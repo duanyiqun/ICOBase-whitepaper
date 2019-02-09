@@ -1,0 +1,1228 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+Accord 
+minimizing the risk in digital 
+
+currencies 
+
+V 1.0.3 
+
+Contract Address: 0x75aa7b0d02532f3833b66c7f0ad35376d373ddf8 
+
+https://Accordtoken.com 
+
+Support@accordtoken.com 
+
+10 Nov, 2017 
+
+ 
+
+This document is to present the idea and to disseminate the public information about the project; it does 
+
+not solicit to sell or buy any digital tokens or currencies without consent. Information provided in the 
+
+document is subject to change without prior notification from the organization thereof this document 
+
+should not be copied or reused without written permission.  
+
+ 
+
+Abstract 
+
+Accord is a new digital currency on Ethereum blockchain, regulated by the ERC20 smart contract, 
+
+intended to use as primary currency on Accord hedging platform (AHP). AHP is aimed to mitigate the 
+
+risk available on digital currencies, by applying existing tools of financial market and to provide the 
+
+maximum trade profits on digital currency with controlled risk by providing traders with Hedging 
+
+Options.  
+
+ 
+
+ 
+
+ 
+
+ 
+
+https://accordtoken.com/
+
+
+Contents 
+Introduction ............................................................................................................................................................................. 3 
+
+The Accord Cryptocurrency ..................................................................................................................................................... 4 
+
+Purpose and characterization ................................................................................................................................................ 4 
+
+Implementation: Ethereum and ERC20 ................................................................................................................................ 4 
+
+Accord’s Vision .................................................................................................................................................................. 4 
+
+Infrastructures Provided by Accord Hedging Platform ............................................................................................................... 5 
+
+Risk in Crypto-currency ecosystem ...................................................................................................................................... 5 
+
+Hedging solution to mitigate risk ......................................................................................................................................... 6 
+
+Options: Calls and Puts ................................................................................................................................................... 6 
+
+Call options: ................................................................................................................................................................... 6 
+
+Put options: .................................................................................................................................................................... 6 
+
+The Advantages of Options .................................................................................................................................................. 6 
+
+1. Cost Efficiency ...................................................................................................................................................... 6 
+
+2. Less Risk – Fixing the technical problem in stop-loss order ..................................................................................... 7 
+
+3. Higher Potential Returns ........................................................................................................................................ 8 
+
+4. More Strategic Alternatives .................................................................................................................................... 8 
+
+Calculative specifications ......................................................................................................................................................... 8 
+
+Option intrinsic value .......................................................................................................................................................... 8 
+
+Call premium ...................................................................................................................................................................... 9 
+
+Formulation breakdown ....................................................................................................................................................... 9 
+
+Delta .............................................................................................................................................................................. 9 
+
+Gamma .........................................................................................................................................................................10 
+
+Theta .............................................................................................................................................................................10 
+
+Vega .............................................................................................................................................................................10 
+
+Rho ...............................................................................................................................................................................10 
+
+Order specification ..................................................................................................................................................................11 
+
+Cost and Fee ......................................................................................................................................................................11 
+
+Order placement .................................................................................................................................................................11 
+
+Order cancelation ...............................................................................................................................................................12 
+
+Token Specifications ...............................................................................................................................................................12 
+
+Distribution of reserved token: ............................................................................................................................................13 
+
+Buy back guarantee ............................................................................................................................................................13 
+
+Token's Liquidity ...............................................................................................................................................................14 
+
+Summary ................................................................................................................................................................................15 
+
+Acknowledgement ..................................................................................................................................................................16 
+
+References ..............................................................................................................................................................................17 
+
+
+
+ 
+
+Introduction  
+
+ 
+
+Blockchains have been revolutionary since the inception, allowing anyone to own and transfer 
+
+assets in an open network without trusted third parties interference. Blockchain has a massive 
+
+influence across many domains, particularly in the finance sector. It is strongly believed that 
+
+tokenization [1][2] offers many solutions across these domains. Asset tokenization can reduce 
+
+cost, and globalize the asset and increase the liquidation thereof. Individuals are using digital 
+
+assets just not for the medium of exchange but also for the store of value as money and other 
+
+stocks, need to control the risk available in the digital assets have been raised for the market 
+
+which worth more than USD 650 billion [3].    
+
+Now there are hundreds [3] of blockchain based assets, and each of these assets have certain 
+
+degree of volatility and risk factor. This risk factor in the absence of regulatory bodies and purely 
+
+individual involvement becomes huge, same as in the case of digital assets. But the risk available 
+
+in the market can be reduced to a minimal value with certain tools and techniques.  Hedging is an 
+
+important technique to mitigate risk in the financial market for a few key reasons: Hedging can 
+
+save your position in sharp price decline which happens often in the digital currency markets [4], 
+
+Hedging technique allows  individual to open long term cost effective position in the market with 
+
+the help of forward contracts.    
+
+Accord is a new digital currency on Ethereum blockchain, regulated by the ERC20 smart 
+
+contract, intended to use as primary currency on Accord hedging platform (AHP). AHP is aimed 
+
+to mitigate the risk available on digital currencies, and to provide the maximum trade profits with 
+
+controlled risk by providing hedging techniques.  
+
+
+
+The Accord Cryptocurrency 
+
+ Purpose and characterization  
+
+Accord Organization is introducing an open source crypto token, named Accord, which is 
+
+envisioned for use in Accord Hedging Platform (AHP). Accord will be the unit of account for all 
+
+economic transactions within the AHP. In character, Accord is a pure cryptocurrency of fixed 
+
+supply. However, as described below, only a portion of the Accord (ARD) supply will become 
+
+liquid in the crowd sale, as rest of the ARD supply is reserved for the Accord organization and 
+
+incentive distribution. Like other cryptocurrencies, units of ARD are fungible and transferable, 
+
+and they will be expected to trade on well reputed cryptocurrency exchanges. 
+
+ Implementation: Ethereum and ERC20  
+
+Accord will be implemented on the public Ethereum blockchain as an ERC20 token. The 
+
+Ethereum blockchain is currently the industry standard for issuing custom digital assets and 
+
+smart contracts. The ERC20 token interface allows for the deployment of a standard token that is 
+
+compatible with the existing infrastructure of the Ethereum ecosystem, such as development 
+
+tools, wallets, and exchanges. Ethereum’s ability to deploy Turing-complete trustless smart 
+
+contracts enables complex issuance rules for cryptocurrencies, digital financial contracts, and 
+
+automated incentive structures. These advanced features and active ecosystem make Ethereum a 
+
+natural fit for Accord. 
+
+ 
+
+Accord’s Vision 
+
+ 
+
+The first step is to create a new cryptocurrency: Accord (ARD) a primary currency for Accord 
+
+Hedging Platform (AHP).  The word “Accord” is conveying a meaning “To grant someone a 
+
+power”. For a cryptocurrency to be viable it must also be useful and valuable, to fulfill that 
+
+purpose initially we have announced an innovative platform for crypto currency day trading.   
+
+AHP is giving cryptocurrency traders a power to minimize trade risk in long term and short term 
+
+trades.  
+
+ 
+
+“Creation of a flexible token, to stabilize the crypto trading” 
+
+ 
+
+ 
+
+
+
+Infrastructures Provided by Accord Hedging Platform 
+
+ Accord will provide the following infrastructures 
+
+ 
+
+1.High-quality Crypto hedging platform 
+
+2.To create digital currency as a bridge to facilitate the platform trading. 
+
+3. Secure wallets  
+
+4. Autonomous ecosystem 
+
+Risk in Crypto-currency ecosystem  
+
+ 
+
+In the financial world, the definition 
+
+of risk is the chance that an investment's 
+
+actual return will be different than expected. 
+
+Technically, this is measured in statistics 
+
+by standard deviation. Risk means you have 
+
+the possibility of losing some, or even all, of 
+
+your original investment. Low levels of 
+
+uncertainty (low risk) are associated with 
+
+low potential returns. High levels of 
+
+uncertainty (high risk) are associated with 
+
+high potential returns. [5]  
+
+The risk/return tradeoff is the balance between the desire for the lowest possible risk and the 
+
+highest possible return. This is demonstrated graphically in the chart below. A higher standard 
+
+deviation means a higher risk and higher possible return.  
+
+This risk factor in the crypto currency market is huge for example the standard deviation of 
+
+Bitcoin closing price in the last 6 month is  USD $1090 which is impracticable .This huge risk 
+
+available in the market is due to key factors. 
+
+1. Absence of regulatory bodies; the crypto-currency market is unregulated on government 
+level and when any government take action to regulate or ban the Crypto-currencies on 
+
+national level that creates chaos among investors resulting in crash. [6]  
+
+2. Involvement of individual investors; the investment in crypto-currency market mostly 
+belongs to individuals that makes the market more volatile.  
+
+3. Cyber attacks: Hacks of Mt. Gox, Shapeshift and Bitfinex [3] have demonstrated that 
+these types of systemic risks are resulted in huge Price crash.  
+
+   These all systematic risks available in crypto currency ecosystem are controllable in the 
+
+presence of Hedging techniques, which Accord is intended to provide in its own Hedging 
+
+platform.  
+
+ 
+
+http://www.investopedia.com/terms/r/risk.asp
+http://www.investopedia.com/terms/s/standarddeviation.asp
+http://www.investopedia.com/terms/r/riskreturntradeoff.asp
+
+
+Hedging solution to mitigate risk  
+
+ 
+
+A hedge is an investment to reduce the risk of adverse price movements in an asset. Normally, a 
+
+hedge consists of taking an offsetting position in a related security, such as a futures contract and 
+
+Options. 
+
+ 
+
+Options: Calls and Puts 
+
+An option is common form of a derivative. It's a contract, or a provision of a contract, that gives 
+
+one party (the option holder) the right, but not the obligation to perform a specified transaction 
+
+with another party (the option issuer or option writer) according to specified terms. Options can 
+
+be embedded into many kinds of contracts.  
+
+Call options: 
+
+Provide the holder the right (but not the obligation) to purchase an underlying asset at a specified 
+
+price (the strike price), for a certain period of time. If the digital asset fails to meet the strike 
+
+price before the expiration date, the option expires and becomes worthless. Investors buy calls 
+
+when they think the token price of the underlying security will rise or sell a call if they think it 
+
+will fall. Selling an option is also referred to as ''writing'' an option. [7] 
+
+Put options: 
+
+Give the holder the right to sell an underlying asset at a specified price (the strike price). The 
+
+seller (or writer) of the put option is obligated to buy the digital asset at the strike price. Put 
+
+options can be exercised at any time before the option expires. Investors buy puts if they think 
+
+the token price of the underlying digital asset will fall, or sell one if they think it will rise.  
+
+ 
+
+The Advantages of Options 
+
+ 
+
+The key advantages (in no particular order) that options may give an investor: they may provide 
+
+increased cost efficiency; they have the potential to deliver higher percentage returns; and they 
+
+offer a number of strategic alternative. 
+
+1. Cost Efficiency 
+
+Options have great leveraging power. As such, an investor can obtain an option position that will 
+
+mimic a digital asset position almost identically, but at a huge cost savings.  
+
+Example  
+
+Say you wish to purchase (BCH) because you think it will be going up over the next several 
+
+months. You want to buy 200 tokens while BCH is trading at $131; this would cost you a total of 
+
+$26,200. Instead of putting up that much money, you could have gone into the options market, 
+
+http://www.investopedia.com/terms/f/futurescontract.asp
+
+
+picked the proper option that mimics the digital asset closely and bought the August call option, 
+
+with a strike price of $100, for $34. In order to acquire a position equivalent in size to the 200 
+
+tokens mentioned above, you would need to buy two contracts. This would bring your total 
+
+investment to $6,800 (2 contracts x 100 tokens/contract x $34 market price), as opposed to 
+
+$26,200. The difference could be left in your account to gain interest or be applied to another 
+
+opportunity that provides better diversification potential, among other things. 
+
+2. Less Risk – Fixing the technical problem in stop-loss order 
+
+ 
+
+Options can be less risky for investors because they require less financial commitment than 
+
+equities (owned digital assets), and they can also be less risky due to their relative 
+
+imperviousness to the potentially catastrophic effects of gap openings.  
+
+Options are the most dependable form of hedge, and this also makes them safer in day trading. 
+
+When an investor purchases digital assets, a stop-loss order is frequently placed to protect the 
+
+position. [14] The stop order is designed to "stop" losses below a predetermined price identified 
+
+by the investor. The problem with these orders lies in the nature of the order itself. A stop order 
+
+is executed when the digital asset trades at or below the limit as indicated in the order. 
+
+ 
+
+For example, let's say you buy a token xyz at $50. You do not wish to lose any more than 10% 
+
+of your investment, so you place a $45 stop order. This order will become a market order to sell 
+
+once the digital asset trades at or below $45.This order will trigger as soon as market hit $45, and 
+
+possibly it was the day low but you losses your 10%.  
+
+Had you purchased a put option for protection, you would not have had to suffer the catastrophic 
+
+loss. Unlike stop-loss orders,. They give you insurance 24 hours a day, seven days a week. This 
+
+is something that stop orders can't do. This is why options are considered a dependable form of 
+
+hedging. 
+
+Furthermore, as an alternative to purchasing the digital asset, you could have employed the 
+
+strategy mentioned above (digital asset replacement), where you purchase an in-the-money call 
+
+instead of purchasing the digital asset. There are options that will mimic up to 85% of a digital 
+
+asset's performance, but cost one-quarter the price of the digital asset. If you had purchased the 
+
+$45 strike call instead of the digital asset, your loss would be limited to what you spent on the 
+
+option. If you paid $6 for the option, you would have lost only that $6, not the $31 you'd lose if 
+
+you owned the digital asset. The effectiveness of stop orders pales in comparison to the natural, 
+
+full-time stop offered by options.  
+
+
+
+3. Higher Potential Returns 
+
+You don't need a calculator to figure out that if you spend much less money and make almost the 
+
+same profit, you'll have a higher percentage return. When they pay off, that's what options 
+
+typically offer to investors. [13] 
+
+Example, using the scenario from above, let's compare the percentage returns of the digital asset 
+
+(purchased for $50) and the option (purchased at $6). Let us also say that the option has a delta 
+
+of 80, meaning that the option's price will change 80% of the digital asset's price change. If the 
+
+digital asset were to go up $5, your digital asset position would provide a 10% return. Your 
+
+option position would gain 80% of the digital asset movement (due to its 80 delta), or $4. A $4 
+
+gain on a $6 investment amounts to a 67% return - much better than the 10% return on the digital 
+
+asset. Of course, we must point out that when the trade doesn't go your way, options can exact a 
+
+heavy toll: there is the possibility that you will lose 100% of your investment.  
+
+4. More Strategic Alternatives 
+
+ 
+
+The final major advantage of options is that they offer more investment alternatives. Options are 
+
+a very flexible tool. There are many ways to use options to recreate other positions. We call these 
+
+positions synthetics. 
+
+Synthetic positions present investors with multiple ways to attain the same investment goals, and 
+
+this can be very, very useful. While synthetic positions are considered an advanced option topic, 
+
+there are many other examples of how options offer strategic alternatives. 
+
+ Example, many investors use Exchanges like (Kraken, Poloniex etc) that charge a margin when 
+
+an investor wants to short a digital asset. The cost of this margin requirement can be quite 
+
+prohibitive. Other investors use exchanges (Bittrex) that simply do not allow for the shorting of 
+
+digital assets, period. The inability to play the downside when needed virtually handcuffs 
+
+investors and forces them into a black-and-white world while the market trades in color. But no 
+
+broker has any rule against investors purchasing puts to play the downside, and this is a definite 
+
+benefit of options trading. 
+
+Calculative specifications  
+
+ 
+
+Option intrinsic value  
+
+Call Option Intrinsic Value =  
+
+Underlying Stock\'s Current Price – Call Strike Price  
+
+ 
+
+ 
+
+Put Option Intrinsic Value =  
+
+Put Strike Price – Underlying Stock\'s Current Price 
+
+ 
+
+
+
+Call premium  
+
+Call option (C) and put option (P) prices are calculated using the following formulas: 
+
+ 
+ 
+
+ 
+
+ 
+
+Where N(x) is the standard normal cumulative distribution function. 
+
+The formulas for d1 and d2 are: 
+
+ 
+
+ 
+
+ 
+
+S0 = underlying price ($$$ per share) 
+
+X = strike price ($$$ per share) 
+
+σ = volatility (% p.a.) 
+
+r = continuously compounded risk-free interest rate (% p.a.) 
+
+q = continuously compounded dividend yield (% p.a.) 
+
+t = time to expiration (% of year) 
+
+ 
+
+Formulation breakdown 
+
+Delta 
+
+ 
+
+ 
+
+Delta values can be positive or negative depending on the type of option. For example, the delta for a call 
+
+option always ranges from 0 to 1, because as the underlying asset increases in price, call options increase in price. 
+
+Put option deltas always range from -1 to 0 because as the underlying security increases, the value of put 
+
+options decrease. For example, if a put option has a delta of -0.33, if the price of the underlying asset increases by 
+$1, the price of the put option will decrease by $0.33. Technically, the value of the option's delta is the first 
+
+derivative of the value of the option with respect to the underlying security's price [9] 
+
+Delta spread is an options trading strategy in which the trader initially establishes a delta neutral position – by 
+
+simultaneously buying and selling options in proportion to the neutral ratio (that is, the positive and negative deltas 
+
+offset each other, so that so that the overall delta of the assets in question totals zero). Using a delta spread, a 
+
+trader usually expects to make a small profit if the underlying security does not change widely in price. However, 
+
+http://www.macroption.com/volatility/
+http://www.investopedia.com/terms/c/calloption.asp
+http://www.investopedia.com/terms/c/calloption.asp
+http://www.investopedia.com/terms/u/underlying-security.asp
+http://www.investopedia.com/terms/p/putoption.asp
+http://www.investopedia.com/terms/p/putoption.asp
+
+
+larger gains or losses are possible if the stock does move significantly in either direction. 
+  
+
+ 
+
+Gamma 
+
+ 
+
+Theta 
+
+ 
+
+Where T is the number of days per year (calendar or trading days, depending on what you are using) [8] 
+
+Thetas inside a matrix of strike prices depend on time to expiration and distance away from the money. The 
+
+highest Thetas are found at-the-money and closest to expiration.[12] 
+
+ 
+
+Vega 
+
+ 
+
+Rho 
+
+ 
+
+  
+ 
+
+
+
+Rho is the rate at which the price of a derivative changes relative to a change in the risk-free rate of interest. Rho 
+
+measures the sensitivity of an option or options portfolio to a change in interest rate. 
+
+ 
+
+Order specification 
+
+Initially, AHP will list top 25 tokens in term of daily trade volume. The order placement and 
+
+order cancelation will be as easy as in other trading platforms. 
+
+Cost and Fee 
+
+Exchanges normally charge a transaction fee. For instance, we assume the fee will be  
+
+Calculated in Accord token ARD, and total fee for completing the transaction 
+
+Is: 
+
+                                                    𝑓𝑖 = 𝑏𝑖.𝑚𝑖√𝑏𝑖 
+. 
+
+Order placement 
+
+A single order placement can create multiple trade positions depending on how many trades are 
+
+used to fill the order. The order position consolidates all the trade positions under a single 
+
+position so it's easier to see the net result of the order. 
+
+User A will generate the order with all specifications 
+
+ underlying asset; Bitcoin or Iota 
+
+ Time specification; 2 days or 2 weeks.  
+
+ Option type; Call or Put.  
+
+After placement of order it will match automatically with the seller’s ask, it is also a 
+
+possibility the order will match partially. Following are the possible combinations of 
+
+order placement between three users A, B, C though it can go beyond.   
+
+ 
+
+User Asset Quantity Option 
+
+A BTC 4 Holder 
+
+B BTC 2 Writer 
+
+C BTC 2 Writer 
+
+ 
+
+Above is an example of an order (considering all other specification like duration and interest rate are 
+
+matched) with one option holder and multiple writers, it can be otherwise as following. [11] 
+
+User Asset Quantity Option 
+
+A Ether 50 Holder 
+
+B Ether 20 Holder 
+
+C Ether 70 Writer 
+
+http://www.investopedia.com/terms/d/derivative.asp
+http://www.investopedia.com/terms/p/portfolio.asp
+http://www.investopedia.com/terms/i/interestrate.asp
+
+
+Order cancelation  
+
+Order cancelation on the platform is not as it is in other trading platforms. It is based on the mutual 
+
+understanding between the option writer and option holder. It is further explained graphically on the 
+
+diagram below.  
+
+ 
+
+ 
+
+Token Specifications 
+
+ 
+
+There are 200,000,000 tokens of Accord 
+
+(ARD) out of which total of 65% are to be 
+
+distributed in the ICO. 
+
+48% for crowd sale purpose to raise ethers 
+
+for development of platform. 
+
+2% to cover cost incurred during ICO 
+
+15% to be distributed among early birds and 
+
+left over to be distributed as referral reward.  
+
+35% reserved for team, which will be 
+
+distributed among team in the period of 5 
+
+years gradually.    
+
+  
+
+48%
+
+2%
+
+15%
+
+35%
+
+Token Distribution
+
+Token sale
+
+ICO cost
+
+Incentives
+
+Reserved token
+
+
+
+ 
+
+Each token priced at USD $0.1, Thus, Crowdsale will raise the sum of USD $10 million. 
+
+Crowdsale raised sum will finance the following activities described in the Image below.  
+
+ 
+
+ 
+
+If organization failed to sale 100 million tokens in crowdsale, leftover tokens will be kept by the organization for second crowdsale before 
+
+launching the Platform. 
+
+Distribution of reserved token: 
+
+35% ARD of the total supply are reserved for the organization and to be distributed among the team over 
+
+the span of 10 years.  
+
+Year 1 2 3 4 5 6 7 8 9 10 
+
+Distribution of 
+
+reserved ARD 
+
+(Million) 
+
+ 
+
+11 
+
+ 
+
+10 
+
+ 
+
+9 
+
+ 
+
+8 
+
+ 
+
+7 
+
+ 
+
+7 
+
+ 
+
+6 
+
+ 
+
+5 
+
+ 
+
+4 
+
+ 
+
+3 
+
+  
+
+70 million reserved ARD are planned to distribute among team over 10 years, distribution will be made 
+
+on monthly bases to avoid huge dumping of token.  
+
+ 
+
+Buy back guarantee  
+
+ 
+
+We believe in adding value in the crypto ecosystem, the Implementation of AHP itself will 
+
+provide the financial trading instrument in the crypto ecosystem for the very first time. So we 
+
+50%
+
+30%
+
+8%
+
+7%
+
+1% 4%
+
+Distribution of crowd sale
+
+Development cost
+
+Ether reserve for buy
+back
+
+Network security
+
+Marketing
+
+Misc Activities
+
+Platform insurance
+
+
+
+believe, not just to raise sum but to deliver is our main goal. So we will buy back our token any 
+
+time holder believes he or she want to. We are liable to give their investment back.  
+
+Token's Liquidity 
+
+  
+
+Accord token is based on ERC20 Ethereum Token Standard and can be liquidated 
+
+Through an Accord token smart contract. This means that ARD trading can be done through a 
+
+centralized exchange. All the ERC20 Ethereum tokens can be exchanged to ARD token. Accord 
+
+token will be listed on renowned exchanges and on Accord Hedging platform too.  
+
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+Summary  
+
+ 
+
+Accord token is introducing first ever Crypto Hedging platform to reduce the market risk for the 
+
+Crypto investors. The regulatory currency to be used on Accord Hedging Platform (AHP) is 
+
+Accord (ARD) an ERC20 token developed on Ethereum blockchain. AHP will be the first 
+
+platform to give Crypto traders with Hedging instruments. ARD has limited token supply of 200 
+
+million ARD 50% of which are to be distributed in the crowd sale. 15 % of token are to be 
+
+distributed as Platform Marketing to incentivize.  
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+     
+
+
+
+Acknowledgement  
+ 
+
+We would like to express our gratitude to our mentors, advisors and to the many people in the 
+
+Ethereum community that have been so welcoming and generous with their knowledge. In 
+
+particular, we would like to thank DR. Edward holmes, A.K. Daniel for editing and providing 
+
+feedback on this work. We would also like to thank people who have helped us on this project 
+
+improvisation DR. John tarar, Prof. P. Herman Stewart and Dr. Diya chatterjee for reviewing and 
+
+providing feedback on this work. We will also welcome any feedback from the community.   
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+References  
+ 
+
+[1] Paul Tak Shing Liu. Medical record system using blockchain, big data and tokenization. In Information and 
+
+Communications Security, pages 254–261. Springer, 2016. 
+
+[2] Konstantinos Christidis and Michael Devetsikiotis. Blockchains and smart contracts for the internet of things. IEEE 
+
+Access, 4:2292–2303, 2016. 
+
+[3] coinmarketcap. https://coinmarketcap.com/all/views/all/. Accessed: 2017-02-016. 
+
+[4] An Illustrated History 0f Bitcoin Crashes https://www.forbes.com/sites/timothylee/2013/04/11/an-illustrated-history-of-
+
+bitcoin-crashes/#5104689f4039 
+
+[5]FinancialConcepts:TheRisk/ReturnTradeoff http://www.investopedia.com/university/concepts/concepts1.asp#ixzz4vbMgu
+
+1ER  
+
+[6] 5 major crashes in Bitcoin history. http://fortune.com/2017/09/18/bitcoin-crash-history/ 
+
+ 
+
+[7] Options: Calls and Puts http://www.investopedia.com/exam-guide/cfa-level-1/derivatives/options-calls-
+
+puts.asp#ixzz4vakZ5vf0 
+
+[8]Call premium calculation: http://www.macroption.com/black-scholes-formula/ 
+
+[9] The Bell Journal of Economics and Management Science, Vol. 4, No. 1. (Spring, 1973), pp. 141-183 
+
+[10] Delta breakdown: Delta http://www.investopedia.com/terms/d/delta.asp#ixzz4wxENfJf7 
+
+[11] Madura, J. (1984). The Real Costs of Hedging in the Forward Exchange Market: An Empirical Investigation. Management 
+
+International Review, 24(2), 24-27 
+
+[12] Kim, H., Brorsen, B., & Anderson, K. (2010). Profit Margin Hedging. American Journal of Agricultural 
+
+Economics, 92(3), 638-653. 
+
+[13] CAMPELLO, M., LIN, C., MA, Y., & ZOU, H. (2011). The Real and Financial Implications of Corporate Hedging. The 
+
+Journal of Finance, 66(5), 1615-1647. 
+
+[14] Rustem, B., & Howe, M. (2002). A continuous minimax strategy for options hedging. In Algorithms for Worst-Case Design 
+
+and Applications to Risk Management (pp. 179-246). Princeton University Press. 
+
+financialconcepts:TheRisk/ReturnTradeoff
+http://www.investopedia.com/university/concepts/concepts1.asp#ixzz4vbMgu1ER
+http://www.investopedia.com/university/concepts/concepts1.asp#ixzz4vbMgu1ER
+http://www.investopedia.com/exam-guide/cfa-level-1/derivatives/options-calls-puts.asp#ixzz4vakZ5vf0
+http://www.investopedia.com/exam-guide/cfa-level-1/derivatives/options-calls-puts.asp#ixzz4vakZ5vf0
+http://www.investopedia.com/terms/d/delta.asp#ixzz4wxENfJf7
+http://www.investopedia.com/terms/d/delta.asp#ixzz4wxENfJf7
+
+	Introduction
+	The Accord Cryptocurrency
+	Purpose and characterization
+	Accord Organization is introducing an open source crypto token, named Accord, which is envisioned for use in Accord Hedging Platform (AHP). Accord will be the unit of account for all economic transactions within the AHP. In character, Accord is a pure...
+	Implementation: Ethereum and ERC20
+	Accord will be implemented on the public Ethereum blockchain as an ERC20 token. The Ethereum blockchain is currently the industry standard for issuing custom digital assets and smart contracts. The ERC20 token interface allows for the deployment of a ...
+	Accord’s Vision
+
+	Infrastructures Provided by Accord Hedging Platform
+	Accord will provide the following infrastructures  1.High-quality Crypto hedging platform 2.To create digital currency as a bridge to facilitate the platform trading. 3. Secure wallets  4. Autonomous ecosystem
+	Risk in Crypto-currency ecosystem
+	Hedging solution to mitigate risk
+	Options: Calls and Puts
+	Call options:
+	Put options:
+
+	The Advantages of Options
+	1. Cost Efficiency
+	2. Less Risk – Fixing the technical problem in stop-loss order
+	3. Higher Potential Returns
+	4. More Strategic Alternatives
+
+
+	Calculative specifications
+	Option intrinsic value
+	Call premium
+	Formulation breakdown
+	Delta
+	Gamma
+	Theta
+	Vega
+	Rho
+
+
+	Order specification
+	Cost and Fee
+	Order placement
+	After placement of order it will match automatically with the seller’s ask, it is also a possibility the order will match partially. Following are the possible combinations of order placement between three users A, B, C though it can go beyond.
+	Order cancelation
+
+	Token Specifications
+	Distribution of reserved token:
+	Buy back guarantee
+	Token's Liquidity
+
+	Summary
+	Acknowledgement
+	References
+

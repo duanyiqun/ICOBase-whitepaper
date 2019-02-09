@@ -1,0 +1,1519 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Word - aelf_v1.2.docx
+
+
+  
+
+Ælf - A Multi-Chain Parallel Computing 
+
+Blockchain Framework 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+V 1.2 
+
+25th November , 2017 
+
+
+
+ 
+
+ 
+
+Abstract 
+The Blockchain community has witnessed rapid development in the past few years. 
+Firstly emerged as a secured decentralized P2P transfer mechanism, Satoshi's Bitcoin 
+has proved the concept of decentralized crypto-currency. Ethereum then contributed 
+the community with successful implementation of versatile "Smart Contracts". It 
+unleashed great potential of Blockchain into numerous applications and industries. As 
+a result, many alternative crypto assets have been built upon these Blockchains. This 
+is only the dawn of Blockchain, as the boundary between Blockchain Community and 
+business world are yet to be broken. We are at a turning point that the next phase of 
+Blockchain will lead the integration between Blockchain and physical business world, 
+and inevitably bring in much more solid digital assets. 
+In order to enter the new paradigm of Blockchain, there needs to be a versatile 
+Operating System designed to meet commercial needs. This Chain has to address 
+three main challenges: 
+
+1. Current Blockchains are not scalable, as the performance of one single 
+node/mining machine determines the performance of the whole system.  
+
+2. Current Blockchains do not segregate resources for different Smart 
+Contracts, leading to interference among Smart Contract executions.  
+
+3. Current Blockchains do not have pre-defined Consensus Protocol to adopt 
+updates or new technology.  
+
+This white paper introduces a highly efficient Blockchain architecture which 
+incorporated State-of-Art IT design principles and technologies to bring it up to 
+commercial standard. We envision it creates a "Linux eco-system" for Blockchain. We 
+focus on defining and providing the most basic, essential and time-consuming 
+components of the system and making significant improvements based on existing 
+Chains in the market. The system allows developers to customize it to meet their own 
+needs, particularly commercial requirements for various industries. It will contain the 
+below main features: 
+
+1. Introduces the concept of Main Chain and multi-layer Side Chains to handle 
+various commercial scenarios. One chain is designed for one use case, 
+distributing different tasks on multiple chains and improve processing efficiency 
+
+2. Enables Ælf to communicate with external Blockchain systems via messaging, 
+e.g. Bitcoin, Ethereum 
+
+3. Permits parallel processing for non-competing transactions and cloud-based 
+service 
+
+4. Defines basic components of minimum viable Block and Genesis Smart 
+Contract Collection for each Chain to reduce data complexity and achieve high 
+customization 
+
+5. Permits stakeholders to approve amendments to the protocol, including 
+redefining the Consensus Protocol; Permits Side Chains to join or exit from 
+Main Chain dynamically based on Consensus Protocol, therefore introducing 
+competition and incentive to improve each Side Chain 
+ 
+
+  
+
+
+
+3 
+
+  
+
+ 
+
+Contents 
+1. Current Blockchain Systems ............................................................................... 5 
+
+1.1. General Blockchain vs. Complex Business Scenarios .............................. 5 
+1.2. Performance Limitation of Sequential Processing ..................................... 5 
+1.3. Data Complexity and Redundancy ............................................................ 6 
+1.4. Dilemma of Protocol Update ...................................................................... 6 
+1.5. Inflation of Block ........................................................................................ 6 
+1.6. Inefficient Point-to-Point Communication Support ..................................... 6 
+1.7. Pending Breakthrough for Cross-Chain Communication ........................... 6 
+
+2. Key objectives of Ælf ........................................................................................... 8 
+2.1. A Highly Customizable OS for Commercial Use ........................................ 8 
+2.2. Cross-Chain Interaction ............................................................................. 8 
+2.3. Performance Improvement ........................................................................ 8 
+2.4. Protocol Update ......................................................................................... 8 
+2.5. Private Chain Module ................................................................................ 9 
+
+3. Core Approaches to Realize Ælf System .......................................................... 10 
+3.1. Performance Enhancements ................................................................... 10 
+3.2. Resource Segregation ............................................................................. 10 
+3.3. Structure of Governance ........................................................................... 11 
+
+3.3.1. Resemblance of Representative Democracy .......................... 11 
+3.3.2. Exercise of Power by the Delegates ........................................ 11 
+
+4. Ælf System ........................................................................................................ 12 
+4.1. Ælf Architecture ....................................................................................... 12 
+
+4.1.1. One Chain One Contract ........................................................ 12 
+4.1.2. Side Chain Dynamic Indexing ................................................. 13 
+4.1.3. "Tree branch" Side Chain Extension ....................................... 13 
+
+4.2. Ælf Main Chain ........................................................................................ 13 
+4.2.1. Side Chain Index System ....................................................... 13 
+4.2.2. Ælf Token System ................................................................... 16 
+4.2.3. Consensus Protocol ................................................................ 16 
+4.2.4. DPoS ...................................................................................... 16 
+4.2.5. Confirmation of Transactions .................................................. 19 
+
+4.3. Ælf Side Chain ......................................................................................... 19 
+4.4. The Economics of Ælf .............................................................................. 20 
+4.5. System Built-in Ælf Side Chains .............................................................. 21 
+
+
+
+4 
+
+  
+
+ 
+
+4.5.1. Information Registration and Authentication Side Chain ........ 21 
+4.5.2. Digital Asset Ownership Side Chain ....................................... 22 
+4.5.3. Asset Initial Distribution Side Chain ........................................ 22 
+4.5.4. Decentralized Exchange Side Chain ...................................... 22 
+
+4.6. Ælf Cross-Chain Optimization ................................................................. 22 
+5. Ælf Operating System ....................................................................................... 23 
+
+5.1. Definition of Minimum Viable Blockchain System .................................... 23 
+5.2. Ælf Kernel ................................................................................................ 23 
+
+5.2.1. Built-in Minimum Viable Blockchain System ........................... 23 
+5.2.2. Unified Account System .......................................................... 23 
+5.2.3. Parallel Transactions Processing Within a Block .................... 23 
+5.2.4. Transactions Marked by Blocks .............................................. 25 
+5.2.5. Smart Contract Collection ....................................................... 26 
+5.2.6. Smart Contract Update ........................................................... 26 
+5.2.7. Customizable Consensus Protocol ......................................... 26 
+5.2.8. Customizable Block Header ................................................... 26 
+
+5.3. Ælf Operating System Customer Interface .............................................. 27 
+5.3.1. Smart Contract Execution ....................................................... 27 
+5.3.2. Micro-service .......................................................................... 27 
+5.3.3. Cloud Base ............................................................................. 27 
+5.3.4. Light Node .............................................................................. 28 
+5.3.5. Optional Modules .................................................................... 28 
+
+5.3.5.1. Data Cleansing Mechanism ................................................ 28 
+5.3.5.2. Data Tunnel ........................................................................ 28 
+5.3.5.3. Rapid Confirmation Model .................................................. 29 
+5.3.5.4. Token Module ..................................................................... 29 
+5.3.5.5. Customization ..................................................................... 29 
+
+6. Ælf Eco-system development ........................................................................... 30 
+6.1. Technology ............................................................................................... 30 
+6.2. Business applications .............................................................................. 30 
+6.3. Capital ...................................................................................................... 32 
+
+ 
+  
+
+
+
+5 
+
+  
+
+ 
+
+1. Current Blockchain Systems 
+At present, the Blockchain technology and its application are developing exponentially. 
+Many industries are experimenting how to migrate from traditional network 
+architecture to Blockchain-based network architecture. However, current Blockchain 
+systems are not yet capable and efficient of functioning as a versatile Operating 
+System and supporting various applications on it. Bitcoin as the pioneering Blockchain 
+design is more similar to an application. Ethereum has demonstrated some 
+characteristics of an Operating System – developers can program applications as 
+Smart Contracts on Ethereum, the Chain provides programming language and 
+Adaptor in the form of Solidity, etc. However, from the perspective of modern Operating 
+System, Ethereum still has several drawbacks, such as lack of decoupling between 
+system components, lack of customization of most modules and insufficient system 
+interfaces, etc. 
+This approach lacks of the holistic design of the system and not yet commercially 
+viable for cross-industry application scenarios. It greatly limits the commercial 
+application of Blockchain technology. 
+
+1.1. General Blockchain vs. Complex Business Scenarios 
+The current challenge impeding large scale commercial adoption of Blockchain 
+technology is its inability to meet the requirements of various complex business 
+scenarios. These scenarios often have different characteristics in terms of process 
+and execution logic, requiring distinctive solutions. Therefore a "one fits all" Blockchain 
+faces tough dilemma to balance needs from different business scenarios. For 
+example, ticket issuance is of high frequency which high TPS in the system is 
+desirable; Digital legal contract on the other hand emphasizes high security and 
+reliability.   
+There are two general solutions to meet these requirements:  
+
+i. Use Blockchain as solely a database and do not deal with business logic. 
+This approach aims to handle any business scenario and maintain 
+compatibility. Many Chains similar to Bitcoin use this approach. They record 
+business-related data and hash, into a transaction output "OP_RETURN", 
+stored in the Blockchain.  
+
+ii. Record various complex Smart Contracts onto one single Blockchain. These 
+Smart Contracts are to serve pre-defined business models from various 
+scenarios. Ethereum represents this type of Chains. Due to the fact that all 
+Smart Contracts are written on one single Chain, the Blockchain becomes 
+complex, requires high maintenance cost and lacks of effective structure to 
+execute Smart Contracts. 
+
+1.2. Performance Limitation of Sequential Processing 
+As a Blockchain is more and more widely used, especially handling large scale 
+transactions, its transaction processing capacity is under tremendous pressure using 
+sequential processing, resulting in the bottleneck of network performance. Current 
+Blockchain systems face multiple challenges to improve its capacity, sometimes at the 
+expense of transaction efficiency. For example, Bitcoin transaction fee is getting more 
+expensive as transaction volume increases and a large backlog waits for confirmation 
+
+
+
+6 
+
+  
+
+ 
+
+for a long time. Ethereum faces increasing number of congestions during token sales. 
+However, in traditional IT architecture, modern techniques such as partitioning, 
+sharding and decentralized architecture, have been proven highly effective to improve 
+system performance. 
+On the other hand, the concept of parallel task processing has not been adopted to 
+increase efficiency. When a Block contains large amount of transaction data and 
+complex Smart Contracts, sequential transaction has hit its efficiency limitation of 
+Block formation and verification. 
+
+1.3. Data Complexity and Redundancy 
+As described in Section 1.1, one universal Blockchain is used to meet the needs of 
+different business scenarios. The drawback of universal Blockchain system is over-
+complex Smart Contracts and Consensus Protocol, lack of tailored solution to 
+specific business scenarios and redundant data. 
+
+1.4. Dilemma of Protocol Update 
+Despite the increasing adoption of Blockchains, it is still at nascent stage. Significant 
+improvement and innovation are yet to come in the future. These updates are essential 
+to evolve Blockchains and keep up with ever-changing environment and stakeholder's 
+interest. The large variety of stakeholders within the eco-system is usually hard to 
+reach Consensus without effective governance mechanism, leading most current 
+Protocol updates into impasse or disputes. One vivid example is Bitcoin as the 
+community found difficult to reach agreement for introduction of many new features in 
+recent years. 
+
+1.5. Inflation of Block 
+The more successful a Blockchain system is, the higher its maintenance cost. Running 
+through a Current Bitcoin full node requires over 130G space, and over 180G for 
+Ethereum. This situation will not be improved in the future. As more users adopt 
+Blockchain and conduct more transaction activities, the inflation of Block will 
+accelerate and maintenance cost will grow even higher. Actions have to be taken to 
+alleviate the vicious cycle. 
+
+1.6. Inefficient Point-to-Point Communication Support 
+Existing Blockchains are mainly communicated based on broadcast network. And the 
+support for P2P communication is inefficient and insecure. One example is that if a 
+certain data is only concerned by one group of users, these data should be 
+communicated among finite nodes, instead of broadcasted to all nodes. 
+
+1.7. Pending Breakthrough for Cross-Chain Communication 
+Existing Blockchain systems have experimented cross-chain communication to 
+process related business logics. However the outcomes are still unsatisfactory. 
+Current cross-chain communication includes centralized mechanism and HTLC 
+mechanism. Centralized mechanism deviates from the idea of Blockchain, leading to 
+lack of trust, single node failure, single node bottleneck and only applicable to certain 
+scenarios. The HTLC mechanism can only deal with specific scenarios such as asset 
+
+
+
+7 
+
+  
+
+ 
+
+exchange, and impose strict requirements on the protocols and Consensus Protocols 
+of communicating chains. And implementation of such mechanism is usually complex. 
+As a result, it is imperative to address the two critical issues, i.e. Protocol compatibility 
+and data exchanging format compatibility.  
+
+
+
+8 
+
+  
+
+ 
+
+2. Key objectives of Ælf 
+
+2.1. A Highly Customizable OS for Commercial Use 
+We envision Ælf as a highly efficient and customizable OS and will become the "Linux 
+system" in Blockchain community. Take Linux as an example, Linux Kernel and various 
+Linux versions constitute the large and successful Linux family. Linux Kernel resolves 
+the most fundamental, critical and time-consuming parts, allowing other developers to 
+make customized systems based on application scenario and customer needs. This 
+makes Linux the most popular server OS, supporting all kinds of industries. 
+The same idea has been incorporated into Ælf design. Firstly, we define and 
+implement the Ælf Kernel which includes fundamental functions of a Blockchain 
+system, namely the minimum viable Blockchain system. Secondly, we develop a 
+"shell" as the basic interactive interface to the Core. Users can either use the complete 
+Blockchain OS, or rapidly develop a customized OS based on the Core via redefining 
+the Core through interfaces. 
+
+2.2. Cross-Chain Interaction 
+Ælf will interact with Bitcoin, Ethereum, and other Blockchain systems. cross-chain 
+interaction with mainstream Chains will be realized via messaging.  And it will also 
+form an endogenous multi-level cross-chain structure based on cross-chain 
+interaction, in order to share the digital assets, users and information.  
+
+2.3. Performance Improvement 
+In traditional IT architecture, distributed structure is the popular solution to 
+debottleneck capability limitation. Blockchain system should also support distributed 
+parallel processing, e.g. parallel processing multiple transactions with non-competing 
+data to improve transaction efficiency. In addition, when one chain has become too 
+complex to be effectively processed, it should be split into parallel Chains to offload 
+the traffic. 
+The initial design of an effective Blockchain should focus on solving specific business 
+scenarios, rather than combining all Smart Contracts on one single Chain. In order to 
+deliver optimal performance based on business requirement, the Chain has to provide 
+effective and customized data structure, Smart Contract logic, and Consensus 
+Protocol specifically for the targeted objective. By doing so, the components and data 
+within the Chain will be much simpler and easy to manage. 
+In addition, Ælf can define the mechanism to trigger snapshot in the system. Upon 
+defined cycle, it takes a snapshot of current data and trims detailed transaction data. 
+A new Genesis Block will include all subsequent transactions. This idea has been 
+adopted in traditional IT database architecture to alleviate system inflation. 
+
+2.4. Protocol Update 
+Upon the Genesis of Blockchain, the voting and update mechanism has to be clearly 
+defined. With introduction of Consensus Protocol to include new features in the future, 
+it avoids impasse and dispute over Protocol update. 
+
+
+
+9 
+
+  
+
+ 
+
+2.5. Private Chain Module 
+Considerable number of businesses is interested in Private Chain to leverage the 
+advantage of Blockchain technology. These private Chains usually exist in isolation 
+without any connection to external eco-system or other businesses. We provide a 
+model similar to Amazon cloud service "AMI", where users can rapidly create an 
+independent Chain using Private Chain module and obtain full ownership of it. 
+  
+
+
+
+10 
+
+  
+
+ 
+
+3. Core Approaches to Realize Ælf System 
+
+3.1. Performance Enhancements 
+The core principle of Ælf is to resolve practical technical problems using solutions that 
+have already been tested. Instead of “optimizing” the concepts of Blockchain, more 
+attention is paid to provide a mature configuration for the stable execution of business 
+applications.  
+A few performance enhancement ideas being explored nowdays:  
+Most Blockchain sharding solutions are implemented by dividing a single consensus 
+into numerous sub-consensus. So basically, the consensus as a whole is split, leaving 
+several sub-consensus group easier to be attacked than a single one. People can 
+increase randomness to complicate the routing path, but it will impairs the 
+specialization of the mining node. 
+PoW mining node decreased substantially as more mining pools replaced them as a 
+specialized ledger system. These pools are able to ensure mining efficiency and timely 
+broadcasting, slowing down the speed of block formation and keep it steady. By 
+leveraging the experiences in IT industry, mining pools have abandoned using the 
+strandard official node software but aggregating computing power through load 
+balancing and run smart contracts in an asynchronous parallel manner, put their own 
+nodes globally to improve the broadcasting efficiency. However, the performance of 
+mining pools is still limited by the technical differences used in the pool, and by the 
+fact that nodes are all designed equally, and also limited by the procotol itself. So the 
+upgrading of one single node does not lead to the improvement of the whole network. 
+Here is Ælf’s logic: nodes in Ælf are categorized according to their roles; those who 
+provide standard services on clusters are open-sourced and work through DPoS to 
+reach consensus of the Main Chain. The delegated mining nodes are able to protect 
+Side Chains to the largest extent and share the strong consensus of the Main Chain. 
+This method increases the pressure for each delegates, however, will improve 
+efficiency as more Side Chains are added, because delegated mining nodes are 
+capable of running in clusters. Side Chains are independent of each other, thus one 
+additional Side Chain will increase the efficiency of the whole system. Moreover, the 
+efficiency of each Side Chain will also benefit from parallel processing. 
+
+3.2. Resource Segregation 
+To protect Smart Contracts from unnecessary mutual interference and maintain their 
+stable running on Blockchain, Ælf abandons one-chain-fits-all solution and design a 
+public Blockchain that is able to ensure the proper running of each contract. 
+Ælf envisions a cloud-computing platform similar to AWS. No business would like to 
+be disturbed by other businesses. For example, trades in future market will not be 
+interfered by the traffic generated by the Black Friday. However, this seemingly 
+impossible interference is commonly seen in the domain of Blockchain. So the key 
+obstacle preventing Blockchain technology being applied in real cases lies in its initial 
+design. 
+
+
+
+11 
+
+  
+
+ 
+
+3.3. Structure of Governance 
+Due to historical limitations, the current Blockchain governance structure is often not 
+well defined when it is created. This problem becomes more prominent when there’s 
+a major functional upgrading or a stagnation caused by bugs. For example, Bitcoin, is 
+stuck in scaling problems for more than two years and finally forked; the differences 
+on The DAO incidence between the Etheruem community and the foundation led to 
+the birth of ETC. As a result, we clarify the method of Ælf direction-setting before users 
+entering the world of Ælf: 
+We acknowledge the fact that Ælf Token holders have the greatest right in the future 
+of Ælf, and token holders’ interests are linked with the destiny of Ælf, in particular those 
+with long-term locked-in tokens in particular. 
+
+3.3.1. Resemblance of Representative Democracy 
+One of the key principles of Ælf is designating specialized nodes to perform 
+specialized tasks. In Ælf, vital decisions will be carried out through a mechanism that 
+resembles representative democracy. Delegated nodes must have enough votes from 
+other stakeholders to participate in Ælf governance. Mining nodes to some extent 
+constitute the health of Ælf system, so these nodes are responsible for being a ledger, 
+hand out bonus and feedback values to the stakeholders who entrusted them through 
+Smart Contracts. 
+ 
+
+3.3.2. Exercise of Power by the Delegates 
+Foundation realize its governance by submitting the source code and delegating 
+mining node’s to review and vote. The process goes as follows: Foundation members 
+provide open-source code and submit new features. Then delegates choose specific 
+features to incorporate based on their needs. If one feature is adopted by enough 
+delegates, it gains approval by the whole system. 
+  
+
+
+
+12 
+
+  
+
+ 
+
+4. Ælf System 
+
+4.1. Ælf Architecture 
+We introduce the Ælf consisting of one Main Chain and multiple Side Chains attached 
+to the Main Chain (Figure 4.1). The difference from traditional Single Chain system is 
+that Ælf is a "branched eco-system" where Main Chain works as the backbone of the 
+system and connects to multiple Side Chains (can be even multiple layers). 
+
+Figure 4.1: Overview of Ælf Structure 
+
+Ælf connects with Bitcoin, Ethereum, and other Blockchain systems via adaptor, in 
+order to be compatible with existing popular eco-systems. Ælf Side Chains include 
+System built-in Ælf Side Chains and other chains generated based on the Ælf 
+operating system or Ælf kernel. The Main Chain interacts with the Side Chains by 
+Side Chain dynamic indexing. 
+
+4.1.1. One Chain One Contract 
+Compared with traditional structure of "one Chain to any types of Contracts", Ælf 
+imposes "one Chain to one type of Contract". As illustrated in Figure 4.2 (b), each 
+Chain dedicates to one type of transaction and resolves one type of business 
+problems. This makes the whole structure and data simpler and much more tailored 
+to commercial requirements. By adding new Side Chains to Ælf, Ælf will be 
+empowered with new functions, while maintaining an "easy to manage" structure. 
+
+                    
+     (a)  one Chain to any types of Contracts                              (b) in Ælf, one Chain to one type of Contract 
+
+Figure 4.2: A Blockchain with Complex Data Structure 
+
+
+
+13 
+
+  
+
+ 
+
+4.1.2. Side Chain Dynamic Indexing 
+Ælf is a dynamic system, where all Side Chains are attached to the Main Chain. The 
+Main Chain contains the index of the system boundaries (recording what are the Side 
+Chains attached). They interact with each other via the Main Chain in the form of 
+Merkle tree and verification through external information input. As such, Side Chains 
+do not interact directly, allowing Side Chains to be added or excluded in Ælf system. 
+
+4.1.3. "Tree branch" Side Chain Extension 
+As illustrated in Figure 4.3, Ælf defines a "Main Chain and Side Chain structure". 
+Theoretically speaking, any Side Chain can also be connected with a few sub Chains 
+underneath, acting as a "Main Chain" in one part of the system. This creates the 
+branches structure in the system that allows Ælf to extend both horizontally and 
+vertically. This idea is similar to partitioning and sharding in database architecture. It 
+allows each shard to perform specific functions and when one shard is too large to 
+manage, it can be further broken down to multiple shards. In Ælf, this corresponds to 
+Side Chains. 
+
+ 
+Figure 4.3: Multi-layer Side Chain Structure 
+
+4.2. Ælf Main Chain 
+Ælf Main Chain is a Blockchain run by the Ælf OS, acting as the backbone of the whole 
+system. The Main Chain consists of a Side Chain index system, Token system, and 
+DPoS Consensus Protocol. 
+
+4.2.1. Side Chain Index System 
+Side Chain index system connects all Chains within Ælf eco-system. Ælf indexes two 
+types of Chains: 
+
+• External Chains of high importance, can be used to expand the boundary of 
+Ælf, e.g. Bitcoin, Ethereum 
+
+• Internal Side Chains operating under Ælf OS, which contributes to the 
+economics of Ælf system using Ælf Token 
+
+Side Chain indexing works in following steps: 
+
+
+
+14 
+
+  
+
+ 
+
+• Nodes of the Main Chain read information from Side Chains and form a 
+Merkle Tree 
+
+• The header of the new Block records the Merkle Tree Root. As illustrated in 
+Figure 4.4, if we want to confirm transaction TX1 on the 1000th Block of BTC, 
+we only need to prove the existence of Merkle Tree of the 1000th Block of 
+BTC as stored on the Merkle Tree Root of the Main Chain, and Merkle proof 
+of TX1 on the 1000th Block of BTC via messaging. This approach also works 
+for other Chains such as Ethereum as long as a Merkle Tree Root is formed. 
+
+ 
+
+ 
+Figure 4.4: Side Chain Indexing 
+
+In order to improve verification efficiency, we suggest expanding the structure of a 
+Merkle Tree, including not only Block hashes as well as the Merkle Tree Root of 
+transactions in Figure 4.5 and states in Figure 4.6. 
+
+ 
+Figure 4.5: Transaction Indexing 
+
+ 
+
+
+
+15 
+
+  
+
+ 
+
+ 
+Figure 4.6: State Indexing 
+
+One key issue to be discussed is the timing of Side Chain indexing by the Main Chain. 
+If the Main Chain frequently indexes a Side Chain with high probability of fork, it wastes 
+efforts to index Orphaned Blocks. Therefore we suggest different indexing strategy for 
+each Side Chain based on its characteristics and this can be defined in the system. 
+Indexing strategy for Blockchain similar to Bitcoin can be after one minute of a Block 
+is formed. This has been proven statistically as a Block can be confirmed not an 
+orphan after one minute of formation. Within Ælf, if a Side Chain and the Main Chain 
+adopt merge mining, real-time indexing can be conducted due to the same miners. 
+
+Figure 4.7 Timing of Indexing 
+
+
+
+16 
+
+  
+
+ 
+
+4.2.2. Ælf Token System 
+Ælf token incentivizes honest behavior in the system. All Ælf Side Chains accept Ælf 
+Token as storage of value and means of value transfer. It can be transferred across 
+Chains that accepts Ælf Token. 
+When a Side Chain applies to be indexed by the Main Chain, it receives some locked-
+in Tokens from the Main Chain. When the Side Chain receives transaction fees, it 
+shares partially with the miners of the Main Chain. When the Main Chain finds indexing 
+a Side Chain is economically unfavorable to its benefit, the Main Chain has the right 
+to terminate indexing, or permitting competition of two Side Chains providing the same 
+services. 
+
+ 
+
+4.2.3. Consensus Protocol 
+A stable and efficient Block formation mechanism is the foundation for Ælf system. 
+The operation and maintenance of Ælf is more complicated than Bitcoin and 
+Ethereum. This is due to the fact that Ælf Block formation requires the Main Chain to 
+record information from Side Chains, and Ælf is designed to provide cloud-based 
+enterprise services in a more complex structure. In addition, miners need to update 
+information from multiple Chains in parallel. The Main Chain will adopt DPoS to ensure 
+high frequency and predictability of Block formation, in order to improve user 
+experience. 
+
+4.2.4. DPoS 
+Ælf delegates 2N+1 mining nodes. N starts with 8, and increase 1 every year. These 
+nodes in the Ælf system enforce all of consensus rules of Ælf. 
+The purpose of these delegated mining nodes is to enable transaction relay, 
+transaction confirmation, packaging blocks and data transfer. As Ælf adopts multi-Side 
+Chain architecture, mining nodes have to work as miner for some Side Chains.  
+2N+2 nodes will be go through a randomized order calculation each week.  
+Randomization process is illustrated as follows:  
+Ælf is running along the timeline with processing units we call “round” (horizontal arrow 
+in Fig. 4.8 and Fig. 4.9). Within each round, one mining node will produce one block 
+each time, while one node will have one extra transaction at the end of each round 
+(vertical arrow in Fig 4.9). 
+
+Each mining node ( ) has three main properties in a specific round ( ): (1) Private 
+key,  ,which is a value inputed from the mining node and it is kept privately by 
+the mining node itself in round . It will be published to public after all block generations 
+in round  completed; (2) Public key,  , which is the hash value of . 
+Every node in the Ælf network can look up this value at any time; (3) Signature, 
+
+ , which is a value generated by the mining node itself in the first round. After 
+the first round, it can only be calculated after the previous round completed. It is used 
+as the signature of this mining node in this round and it is also opened to public at all 
+times like the   . Please see Fig 2.1 for more details. 
+
+
+
+17 
+
+  
+
+ 
+
+There are two main processes in DPoS: (1) Pre-verification; and (2) order calculation 
+within each round. 
+
+Pre-verification (Fig 4.8): before a node starts its block generation in round ( ), it 
+has to be verified of its status in round ( ). In round ,  is already published 
+to public, and  can be queried at any time. So to verify the status of  in 
+round  , other nodes can check  . 
+
+ 
+Figure 4.8 Pre-verification. 
+
+Order calculation (Fig 4.9): In Fig 4.9, we used 4 mining nodes as an example to 
+explain our order calculation strategy. In each round  mining nodes have  block 
+generation. In the first round (Round 1 in Fig 4.9), the ordering of block generations 
+as well as the signature ( ) for each node are totally arbitrary. In the second round 
+(Round 2 in Fig 4.9), the block generations are again arbitrarily ordered. However, 
+from the second round, the signature will be calculated by 
+
+ 
+
+where 
+
+ 
+here,  means the node processing the  transaction in round . 
+From round 3, the ordering within a round is generated from the ordering and the node 
+signature from the previous round. In round , we traverse the signature of nodes 
+at round  in order. The ordering of a node in   is calculated by 
+
+ 
+For cases of conflict, i.e. results pointed to places which are not empty, we point the 
+node to the next available place. If the node is conflict at the  place, we will start to 
+find the available place from the first place. 
+
+
+
+18 
+
+  
+
+ 
+
+The node to process the one extra transaction is calculated from the signature of the 
+node in first place of previous round. 
+
+ 
+
+ 
+Figure 4.9 Order Calculation Details for First Three Rounds 
+
+ is decided by: (1) all the signatures from previous round ; (1) the value 
+ of itself in round ; (3) which node generate the extra block. So it can only be 
+
+calculated after previous round   completed. Moreover, as it needs all the 
+signatures from previous round and the value   is inputed by each node 
+independently, there is no way to control the ordering. The one extra block generation 
+is used to increase the randomness. In general, we create a random system rely on 
+extra inputs from outside. Base on the assumption that no node can know all other 
+nodes’ inputs in a specific round, no node could control the ordering. 
+
+If one node cannot generate a block in round , it also cannot input its  for this round. 
+In such case, the previous  will be used. Since all mining nodes are voted to be 
+reliable node, such situation should not happen too much. Even this situation 
+happened, the mentioned strategy is sufficient to deal with it in a fair way. 
+Every node only has a certain T second to process transactions. Under the present 
+network condition, T=4 is a reasonable consideration, meaning every node only has 4 
+seconds to process transactions and submit the result to the network. Any delegate 
+who fails to submit within 4 seconds is considered abandoning this block. If a delegate 
+failed two times consecutively, there will be a window period calculated as W hours 
+(W=2N, N stands for the number of failure) for that node. 
+In the systematic design, Ælf defines that only one node generates blocks within a 
+certain period. Therefore it is unlikely for a fork to happen in an environment where 
+mining nodes are working under good connectivity. If multiple orphan node groups 
+occur due to network problems, the system will adopt the longest chain due to the fact 
+
+
+
+19 
+
+  
+
+ 
+
+that it most likely comes from the orphan node group with largest number of mining 
+nodes. If a vicious node mines in two forked Blockchain simultaneously to attack the 
+network, this node should be voted out of the entire network. 
+DPoS mining nodes are elected in a way that resembles representative democracy. 
+The elected nodes decide how to hand out the bonus to the other mining nodes and 
+stakeholders. This mechanism will be further discussed in the later chapter. 
+ 
+
+4.2.5. Confirmation of Transactions 
+Compared to the present Blockchain system, Ælf has a faster and more predictable 
+confirmation. Different from PoW, DPoS does not have to package hashes repeatedly. 
+So the time for one mining node to package a block is stable and can be controlled 
+within T (4 seconds).  
+Ælf recommends: one fast confirmation that accepted by 5 blocks is used for the 
+general transactions; that accepted by 15 blocks is used for substantial transactions. 
+Thus, one general transaction will be confirmed within 20 seconds, a substantial one, 
+within 60 seconds.  
+Please note, this is a conservative recommendation. Bitcoin recommends a 
+confirmation of 6 blocks, but many users only use one or two blocks to confirm. 
+Advanced users are allowed to observe and collect data of their own blockchain and 
+tailor a confirmation time for themselves according to the average processing time by 
+their own mining nodes, and that by the whole network 
+ 
+
+4.3. Ælf Side Chain 
+Chains that are indexed by the Ælf Main Chain are considered as Side Chains. As 
+mentioned before, it is recommended that each Side Chain to be designed to handle 
+one specific type of transaction (Figure 4.8). 
+When a new Side Chain is created via Ælf OS, it is recommended to merge mining 
+with the Main Chain and establish its own Consensus Protocols. To contribute to the 
+Ælf eco-system, Side Chains should reserve certain amount of Ælf Token and share 
+partial transaction fees with the Main Chain. 
+When a Side Chain needs to verify information from another Side Chain, it has to 
+include the Block header information of the Ælf Main Chain. Side Chains do not 
+interact directly with each other. Verification is done through Merkle Tree Root provided 
+by the Main Chain. 
+
+                      
+Figure 4.8: Messaging Interaction between Two Side Chains 
+
+
+
+20 
+
+  
+
+ 
+
+It is highly complicated to obtain state information from UTXO systems such as Bitcoin, 
+for example the available balance from an address. Across-Chain communication can 
+be addressed via a Blockchain Adaptor, where it creates a compatible Block header 
+including Merkle Tree with Bitcoin. Ælf adopts such Adaptor and intends to establish 
+a fully compatible Bitcoin Side Chain using Ælf OS to cooperate with the widely used 
+Bitcoin and interact with its assets. 
+
+4.4. The Economics of Ælf 
+A virtuous economy lays the foundation of a sustainable Ælf eco-system.  
+For PoS and DPoS, any stakeholder can sell their Tokens and exit from the eco-
+system in a short timeframe (PoS has a certain lock-up period). One challenge that 
+PoS and DPoS are facing is the fact that Exchanges hold large amount of Tokens in 
+the system, therefore earning interest at almost zero cost.  
+For PoW, miners face more complex consideration before exiting. Exit is constrained 
+by external factors such as electricity cost, mining machine depreciation, land lease, 
+and human resources. 
+Ælf will use DPoS on the Main Chain to incentivize large Stakeholders to maintain a 
+stable system and will deploy PoW for the Side Chain where mining creates Ælf Token. 
+In Ælf system, Consensus Protocol on each Chain can be customized to achieve 
+specific objectives. 
+
+ 
+Figure 4.9: Fee Mechanism of Indexing Ælf Side Chains 
+
+After a Side Chain is included by the Ælf eco-system, it will pay a certain amount of 
+transaction fee to the Main Chain for indexing. Ælf adopts a dynamic transaction fee 
+strategy to reflect the different contribution level of each Side Chain to Ælf eco-system. 
+For instance, Ælf will charge less transaction fee for a Side Chain with high 
+contribution (e.g. No fee charged on indexing Bitcoin for its wide adoption and 
+associated assets. On the other hand, a Side Chain with little value to the eco-system 
+and consuming resources from other Chains will be charge high transaction fee). 
+
+
+
+21 
+
+  
+
+ 
+
+ 
+Figure 4.10.: Sub-Chain Indexing 
+
+The Eco-system of each Side Chain votes to determine its indexing strategy for Sub-
+Chains independent of the Main Chain. Its own strategy includes but not limited to the 
+business scope (e.g. An insurance Chain will only include sub-Chains that are also in 
+Insurance business) and fee scheme of Sub-Chains. Any Chain can also decide not 
+to include any Sub-Chain or actively invite a Chain to become a Sub-Chain, as a 
+means to enrich its Eco-system. Within the Ælf Eco-system, any Chain can apply to 
+become a Sub-Chain of another Chain or even multiple Chains.  
+
+4.5. System Built-in Ælf Side Chains 
+Ælf Node Topology consists of an interlinking P2P network between Full Nodes of the 
+Main Chain, light nodes and Nodes of Side Chains. Non-mining nodes are usually 
+Light Nodes. Similarly, ledger Nodes are Full nodes. Nodes of Side Chains are 
+distributed in Ælf Node Topology based on its indexing relationship with Main Chain. 
+Side Chains will be developed under the guidance of Foundation. We believe it is 
+necessary to build a system like this. Ælf does not aim to build a Side Chain itself, but 
+will provide a developing template and infrastructure for a Side Chain, and facilitate 
+the communications between Side Chains. 
+For example, there’s a content-based network, where users are able to buy contents 
+with the token of this network. When a decentralized “twitter” join Ælf, Ælf will help 
+users to share contents through this network, distribute network resources, and swap 
+this “twitter” token with tokens of content-distribution network on an decentralized 
+exchange. 
+
+ 
+Figure 4.11: Illustration of Ælf Node Topology 
+
+4.5.1. Information Registration and Authentication Side Chain 
+Information registration and authentication Side Chain creates great value to 
+industries both online and offline. Currently it has been widely adopted in O2O 
+
+
+
+22 
+
+  
+
+ 
+
+businesses, such as e-commerce, car hailing and delivery. Huge opportunities are yet 
+to be unleashed in businesses such as supply chain finance, logistics, credit scoring 
+etc, where their large information assets can be migrated to this Side Chain in the 
+future. 
+
+4.5.2. Digital Asset Ownership Side Chain 
+The main function of this Side Chain is to store digital assets and wallet ownership 
+information. 
+
+4.5.3. Asset Initial Distribution Side Chain 
+The main function of this Side Chain is to facilitate asset initiation (First Coin Sales). 
+Once the distribution has been completed, assets will be moved to the Digital asset 
+ownership Side Chain. The advantage is that normal transactions will not be 
+interrupted during a large scale First Coin Sales. 
+
+4.5.4. Decentralized Exchange Side Chain 
+A decentralized transaction Side Chain functions as an Exchange. It enables KYC, 
+asset transfer, order placement/ withdrawal and execution. 
+
+4.6. Ælf Cross-Chain Optimization 
+Cross-chain transactions need to be optimized to match the block formation speed 
+between different chains. We design two mechanisms to solve this problem. First, 
+hierarchical side chain mechanism. We categorize chains into different levels in 
+accordance with the block formation speed of the chain, and provide a dedicated 
+adapting side chain or adapter module to carry out the same level of cross-chain 
+transactions for each level of the chain. Second, cross-level guarantee mechanism. 
+For cross-chain transactions at different levels, the main chain provides a guarantee 
+for the  slower chain. This is only an optional mechanism if required. These two 
+mechanisms can be an effective solution to enhance the Ælf cross-chain transaction 
+speed. 
+
+Figure 4.12: Illustration of Ælf Node Topology  
+
+
+
+23 
+
+  
+
+ 
+
+5. Ælf Operating System 
+
+5.1. Definition of Minimum Viable Blockchain System 
+Ælf system creates highly specialized and efficient Chain structure to handle all kinds 
+of business scenarios. It also enables "Chain split" to address capacity issue when 
+demand increases. To further enhance its commercial potential, it is essential to lay 
+out the most fundamental block and infrastructure of the system for developers and 
+the community. The following Chapters discuss the minimum viable Blockchain system 
+and Ælf Operating System as the foundation for achieve high customization and 
+efficiency. 
+Block: A Block is used to record a state in the system. The transition from last Block 
+to current Block is defined by the transactions included in current Block. 
+Transaction: Transaction logic is defined as Smart Contract. Smart Contract is 
+essentially a Protocol. It always gives the same output with the same input.  
+Account: An account is used to distinguish the boundaries of data storage. It consists 
+of public key and private key systems. 
+P2P network communication: Data transmission between nodes is through the 
+underlying P2P network. 
+Consensus Protocol: A Consensus Protocol defines the rules and authority to update 
+a state within the Blockchain. 
+
+5.2. Ælf Kernel 
+
+5.2.1. Built-in Minimum Viable Blockchain System 
+These are the foundational components of the Blockchain system operating within the 
+Ælf Kernel. They are linked with relevant interfaces to define the customizable parts 
+of Smart Contract, Consensus Protocol, and customizable area of Blockchain header. 
+
+5.2.2. Unified Account System 
+Bitcoin system introduces public and private keys into the concept of account. The Pay 
+to Script Hash gives transaction authority to a Smart Contract. Ethereum defines 
+externally owned account and contract account. Ælf Kernel defines both types of 
+accounts as Smart Contracts. 
+
+5.2.3. Parallel Transactions Processing Within a Block 
+Ælf analyzes the static state of transactions and assesses the impacted data range of 
+each transaction. As illustrated in Figure 5.1 Multiple transactions without read/ write 
+conflicts can then be processed in parallel, without affecting the output of each 
+transaction. During the process of Block formation, nodes assign transactions to 
+different groups based on mutex of the transactions. Transactions within a group will 
+be processed in sequence, while all groups will be processed simultaneously. 
+
+
+
+24 
+
+  
+
+ 
+
+ 
+Figure 5.1: Parallel transactions processing within a block 
+
+There are special transactions that cannot be processed in parallel due to the fact that 
+its impacted data range changes while other transactions are being processed. Under 
+such circumstance, nodes will prioritize transactions that can be processed in parallel. 
+With sufficient transaction fee, these special transactions in a non-parallel group will 
+be processed in sequence. Otherwise nodes can reject to process these transactions. 
+It is to be noted that, when an evil node accepts a transaction that cannot be processed 
+in parallel and time-consuming, the probability that other nodes reject this Block will 
+increase.  
+Amdahl's law is an empirical rule in computer architecture.It is named after computer 
+scientist Gene Amdahl. It gives the theoretical speedup in efficiency when using 
+parallel processing. 
+Think about a program that runs on a single processor. in terms of the execution time, 
+“f” is the proportion of the execution time that the part benefiting from improved 
+resources originally occupied, so (1-f) is the proportion of execution time that is fixed 
+for sequential processing. If there are “m” (numbers) processors that run in parallel, 
+then the theoretical speedup of this program will be calculated as follows: 
+
+𝑆𝑝𝑒𝑒𝑑𝑈𝑝&'()*+ =
+1
+
+(1 − 𝑓) + 𝑓𝑚
+
+ 
+
+Two major conclusions are conducted: 
+
+•  (1)Speedup hardly improves when f is at minimum. 
+
+•  (2)As m rises to the maximum, speedup is limited by 1/(1-f). 
+Amdahl's law is a fixed-size mode, which means it will solve problems of a fixed size 
+with a fixed proportion of execution in parallel. 
+Most of the Blockchain transactions are not correlated. From the perspective of 
+Amdahl’s law, data execution can be greatly speedup. however, most of the present 
+Blockchain system execute in sequence, and all nodes carry out the same set of 
+computing. This wastes resources and hinders transaction speed. EVM, for instance, 
+does not only process transactions sequentially, but also has requirement for gas fees, 
+resulting in an extreme low performance efficiency. 
+
+
+
+25 
+
+  
+
+ 
+
+ 
+Figure 5.2 
+
+To solve blockchain problems, low-speed transaction is not an option. Ælf aims to build 
+a Blockchain system with high on-chain TPS through parallel processing. The key to 
+the solution is to separate transaction data and computational dependency so as to 
+solve data hazard. We could refer to the architecture of Intel micro-processor, where 
+a reservation station separates electrocircuit dependency along with other technics 
+such as register renaming to deal with large data hazard frequently occurring in RAW, 
+WAW, and WAR and execute ALUs in parallel. 
+Ælf Parallel Execution Scheduler (GPES) adopts a similar approach. In the regular 
+internal test, Ælf separates computational dependency, data dependency in 
+Blockchain from the memory pool. GPES also has a set of pretreatment, i.e, prediction 
+on computing time span, pre-indexing of code segment that is able to be processed in 
+parallel, initiating the pipeline, and execute parallel processing in multi dimensions. 
+This set of indexing language can be used to solve more complicated parallel logic 
+problems. 
+Ælf’s pipeline is also an important method to increase the speed. It is widely adopted, 
+such as CPU, meta function (map, aggregate first, and contains) processing. This set 
+of Turning incomplete language is a perfect for processing data streams (or simple 
+transaction streams). Parallel processing functions and context free/immutable 
+computing will make full use of cores and nodes 
+In general, parallel processing is a comprehensive strategy. 
+
+5.2.4. Transactions Marked by Blocks 
+A valid transaction in the period between broadcasting and confirmation is considered 
+in a “pending” state. Usually, transactions will be quickly packaged and confirmed. 
+However, there are also some cases that transactions are left unconfirmed in a 
+relatively long period, for instance, in time of Bitcoin’s network congestion or when a 
+majority of miners are unsatisfied with the gas fees. When a transaction is either 
+confirmed nor able to be withdrawn for a relatively long period, it will be considered in 
+a state of “chaos”. 
+Ælf requires that the broadcast for every transaction is labelled with a “mark”, which is 
+the hash header of the the lastest block when the transaction happens. Then the 
+mining node will only process the hash header of the recent 64 blocks. If a transaction 
+is not confirmed after 64 blocks are generated, then this transactions is deemed as 
+expired. In another word, a transaction that is not confirmed within 5 minutes, token 
+holders can rebuild this transaction.  
+Another function of marking transactions is to obsolete blockchain forking effectively.  
+One node successfully marks a transaction when the the hashes of this transaction 
+
+
+
+26 
+
+  
+
+ 
+
+are included the latest 64 blocks. If a node receive a large amount of invalid marking 
+hashes from the highest chain, and is not able to package these transactions, then it 
+is likely working on a forked chain. If nodes receive a large amount of transactions with 
+invalid marking, there’s a high possibility that this blockchain has forked. At this 
+moment, nodes can suspend trading to avoid risks. 
+
+5.2.5. Smart Contract Collection 
+The Ælf Chain Contract has a collection of Smart Contracts that are defined during 
+the Genesis. This collection is name as Genesis Smart Contract Collection, in honor 
+of Satoshi. The essence of Smart Contract Collection is a class that defines the main 
+functions, Consensus Protocol of the chain and the update mechanism of the 
+collection. 
+
+5.2.6. Smart Contract Update 
+The functions of Ælf are defined by the Smart Contract Collection. Therefore updating 
+the Collection will impact the functions of the whole Chain. The update mechanism of 
+the collection is defined by the previous collection. For example, we define that if 80% 
+votes for a new Smart Contract Collection in the most recent 100th Block, it is 
+confirmed by the consequent 2000 Blocks, new collection will replace the original one. 
+Nodes that do not update the collection will be terminated for work. 
+
+5.2.7. Customizable Consensus Protocol 
+For specific business scenario, Consensus Protocol has major impact on participants' 
+decision. For a private chain with high trust level, PBFT is a popular Consensus 
+Protocol. It creates high performance with small number of pre-assigned miners. In an 
+environment with low trust, the stability of a Blockchain is maintained via Consensus 
+Protocols such as PoW, PoS and DPoS. 
+Ælf defines Consensus Protocols as part of the Smart Contract collection and can 
+implement any type of Consensus Protocol based on business scenario. We use 
+Bitcoin and Peercoin as an example to illustrate the considerations of choosing 
+Consensus Protocol. 
+PoW used by Bitcoin authenticates the Blockchain solely based on information from 
+the Block header without any forms of input. On the other hand, PoS used by Peercoin 
+requires data from stake transaction within the Block, its own authentication of the 
+transaction besides Block header. We recommend future users to pursue Consensus 
+Protocol that only requires Block header information, in order to achieve timely 
+authentication. In addition, for specific scenarios, customized Consensus Protocol 
+shall be implemented. 
+
+5.2.8. Customizable Block Header 
+To facilitate the recommendation that Consensus Protocol to only use Block header 
+information, we introduce customizable block header. The Block header of Peercoin 
+does not contain information that verifies the legitimacy of the Block, therefore a stake 
+Block cannot verify the Block legitimacy by itself. Ælf Kernel allows customizing Block 
+header structure during the creation of a Chain. Self-proof based on Block header can 
+be done by verifying unspent transaction Merkle Tree with Hash (TxID + N + Value), 
+calculate the stored Root, to obtain TxID, N and Value and Merkle Tree verification. 
+
+
+
+27 
+
+  
+
+ 
+
+5.3. Ælf Operating System Customer Interface 
+
+ 
+Figure 5.3: Ælf Operating System Interface 
+
+5.3.1. Smart Contract Execution 
+Ælf Operating System defines Smart Contracts as Protocols. It can be executed in any 
+forms of service realization.  
+Ælf Operating System prefers Docker and also supports native programming 
+languages such as Java, C#, Go, Javascript, LUA. 
+For Docker, Ælf provides internal RPC services to grant access to read variables and 
+user accounts during Smart Contract realization. For native programming language, 
+Ælf provides respective SDKs to execution functions. 
+
+5.3.2. Micro-service 
+Smart Contracts are defined as micro-service in Ælf. This makes Smart Contracts 
+independent of specific programming language. Consensus Protocol essentially 
+becomes a service as it is defined in Smart Contract. 
+
+5.3.3. Cloud Base 
+Through the micro-service approach, Ælf Kernel extends parallel processing to a 
+cloud, thus enables cloud-based contract execution. 
+
+
+
+28 
+
+  
+
+ 
+
+Ælf Kernel has defined data structure and standards, therefore hot data can be stored 
+in RAM. By utilizing mature decentralized database service, it can effectively improve 
+IO performance of the system. 
+
+5.3.4. Light Node 
+
+ 
+Figure 5.4: Illustration of Light Node Data Structure 
+
+Through customization and internal Merkle Tree verification mechanism, each node 
+within Ælf only handles relevant information within the system. This enables nodes to 
+be lighter and significantly increase compatibility with light desktop and mobile 
+terminals. 
+
+5.3.5. Optional Modules 
+
+5.3.5.1. Data Cleansing Mechanism 
+
+ 
+Figure 5.5: Illustration of Data Cleansing Mechanism 
+
+Ælf system adopts a snapshot mechanism and resets the Block formation, with 
+addition of the original data to the new Genesis Block. But Ælf system will not rely on 
+the historical data but only focus on the new data to process. Human history lost many 
+details, but this does not affect the decision of people towards the present situation. 
+Similarly, if the data is too bulky to record, Ælf system needs to have the ability to  
+abandon some historical data. 
+
+5.3.5.2. Data Tunnel 
+
+Data tunnel is one mechanism to execute P2P transfer. These data will not be 
+recorded in the Block. Data tunneling is only applicable to encrypted P2P data transfer. 
+For example, if A purchases data from B, B transfers data to A while A transfers asset 
+to B, both through the data tunnel. The design aims to enable data transfer between 
+two nodes directly. In the present Blockchain system, the only strategy is to broadcast 
+transactions and all the nodes need to process this transaction. This is a waste of 
+resources, and will limit the volume of processed transactions as well.  
+Data tunnel can be realized through a plug-in protocol. But this will require the approval 
+by all the nodes. If this isn’t the case, things will become intractable. (e.g, Developers 
+often get into trouble when IE does not support some features in chrome) With this 
+protocol, Ælf will support more applications, for instance, a data purchase contract 
+(see farther below). 
+
+
+
+29 
+
+  
+
+ 
+
+5.3.5.3. Rapid Confirmation Model 
+
+Ælf permits rapid transaction confirmation if the recipient has been authorized by the 
+sender. The authorization is only valid for a certain type of transaction during a certain 
+period and between assigned addresses. For example, A wants to initiate a rapid 
+confirmation model with B during an asset transfer.  A needs to initiate a transaction 
+with certain amount of asset reserved for this transaction, and specify B to be the 
+counterparty. During the actual transaction process, A will send the signed transaction 
+to B via Data Tunnel. B instantly confirms the transaction when it receives the 
+transaction. Affected assets will then be transferred to B after B signs on the 
+transaction with its address. A will receive the remaining assets. Data Tunnel is 
+terminated after the transaction. 
+
+5.3.5.4. Token Module 
+
+The Token module defines all logics and algorithms for the value carrier (Token). It 
+specifically serves scenarios such as payment for resource allocation, or reward to 
+maintaining the stability of Ælf. 
+In most of the public chains, token mechanism is indispensable. It is used to incentivize 
+the healthy development of the whole network, and settle the contribution of different 
+roles. So Ælf designs a token module, where every Side Chain recognized by Ælf 
+Operation System is allowed to accept Ælf token. 
+
+5.3.5.5. Customization 
+
+Ælf enables developers to rapidly customize the system via redefining parameters in 
+each module, and to implement Side Chains by Ælf Operation System Ælf follows the 
+principle that "one chain serves one specific business scenario", and establishes a 
+highly abstract and modular architecture. For enterprise users and entrepreneurs, this 
+accelerated the process to implement their business ideas. For sophisticated users, it 
+permits high customization for their own Chains, and unleashes the full operation of 
+Blockchain.  
+
+
+
+30 
+
+  
+
+ 
+
+6. Ælf Eco-system development 
+Any new technology does not succeed without commercial adoption and a sustainable 
+eco-system. Ælf has proposed a technical blueprint with commercial application 
+instilled throughout the whole design. It is crucial to establish a Ælf eco-system, 
+including internal and external resources. We will pursue the goal by concurrently 
+striving in three dimensions: technology, business, and capital 
+
+6.1. Technology 
+The chapters above have laid out the key technical features of Ælf. The Ælf team has 
+several years of Blockchain development experience, particularly involved in a few 
+commercial-focused enterprise projects. The proposed Ælf technical solution intends 
+to resolve the most pressing obstacles for commercial adoption of Blockchain, such 
+as scalability, security, customization, and interoperability. It provides a highly efficient 
+infrastructure to adopt new protocols and support all kinds of commercial scenarios in 
+the future. 
+
+6.2. Business applications 
+Ælf is intended to ultimately become the new “internet infrastructure” to support the 
+next generation of “digital businesses”. The team and its advisors have been 
+advising numerous Blockchain projects in the past and we see a few industries will 
+be the “early adaptors” and “Blockchain stars” on Ælf: 
+
+ 
+Figure 6.1: Illustration of Ælf Business Applications 
+
+1) Financial services 
+Blockchain has drawn a lot of attention in financial services industry as it 
+significantly reduces intermediaries and ensures secure transactions. It is 
+highly likely that multiple chains on Ælf will be developed specifically for 
+financial services, such as cross-border payment, trade finance, supply chain 
+financing, etc. The parallel processing feature is capable of handling business 
+transactions at international scale and the inter-chain communication feature 
+allows smooth coordination from asset registration, account management, real-
+time transaction. 
+
+2) Insurance 
+
+
+
+31 
+
+  
+
+ 
+
+Insurance is another highly attractive field to be disrupted by Blockchain. A 
+dedicated Ælf side chain for insurance will integrate various DAPPs for 
+insurance, transforming the whole industry value chain, starting from user 
+identity, to insurance contract execution, to claim handling.  
+
+3) Digital identity and IPs 
+Ælf’s multi-chain structure has a built-in chain for digital identity. This ensures 
+the performance of such side chain if another side chain is busy, e.g. a new 
+token is issued on the other side chain.  
+Within Ælf, digital identity can be used by other side Chains via “messaging”. 
+Using adaptor, Ælf is also capable of retrieving information and data from other 
+established chains, such as Bitcoin and Ethereum.  
+
+4) Smart City 
+Governments will also be interested in Ælf as it allows them to securely and 
+conveniently to run certain administrative tasks on Ælf. Government or 
+organization can customize the consensus protocol to meet national security 
+requirement. Activities, such as utility recording, citizen identities, government 
+agency information disclosure and polling can be realized on Ælf with great 
+transparency and efficiency. A few countries are experimenting in this field, 
+including Estonia, Singapore, China, etc. 
+
+5) Internet of things 
+Ælf supports light node and cloud service, which reduces the computational 
+requirement for devices connected to it, while maintaining high performance. 
+This is critical in order to manage billions of devices and enables micro-payment 
+across them to link internet of things. 
+
+Ælf has laid out strong foundation for the above industries and more to strive on it, 
+we will actively identify new business opportunities and DAPPS to be part of Ælf eco-
+system.  
+
+1) Interoperate with existing DAPPs on existing chains 
+There are already some proven DAAPs on existing Chains, such as on Bitcoin 
+and Ethereum. Ælf will leverage its interoperability feature to connect with these 
+DAPPs in order to allow asset exchange and also capture the transaction data 
+coming from those DAPPs 
+
+2) Nurture new start-ups ideas 
+The development team and its advisors are deeply involved in new idea 
+formation and commercialization in the global Blockchain community. New 
+start-up ideas have approached us for technical and commercial advice. We 
+will leverage this strong connection to nurture new start-up ideas and include 
+them in Ælf eco-system. Together with VCs, we are confident to identify and 
+bring the most promising projects to be launched on Ælf. 
+
+3) Transform established companies to “Blockchain savvy” 
+Established companies pose another opportunity to be part of Ælf eco-system. 
+They already possess large customer base and proven value for their current 
+business. Ælf can transform them into even more powerful models with strong 
+incentives and rewards to customers, resolving certain pain points within the 
+
+
+
+32 
+
+  
+
+ 
+
+industry as described above. The Ælf team has been in discussion with a few 
+Internet companies and traditional corporates on disruptive business model on 
+Ælf. We foresee a few exciting announcements will be made in near future. In 
+addition, the team intends to collaborate with global strategy consulting firms to 
+push the boundary of next generation business models on Ælf eco-system. 
+
+6.3. Capital 
+Building an eco-system requires undoubtedly large amount of capital. Besides 
+leveraging the fund raised during Token sale, the team and its advisors have 
+established strong alliance with leading crypto funds globally. The team and its 
+advisors have been advising numerous Token sale projects internationally to 
+successfully raise fund and develop their solutions. The international capital network 
+and reputation ensures a strong financing capability to support future pipeline with 
+long-term view. 
+  
+
+
+
+33 
+
+  
+
+ 
+
+References 
+1. Satoshi Nakamoto. Bitcoin: A peer-to-peer electronic cash system. 2008. 
+
+2. Vitalik Buterin. Ethereum White Paper: A Next Generation Smart Contract and 
+
+Decentralized Application Platform. 2013. 
+
+3. Melanie Swan. Blockchain: Blueprint for a new economy. ” O’Reilly Media, 
+
+Inc.”,2015. 
+
+4. Frederick P. Brooks. The Design of Design: Essays from a Computer Scientist. 
+
+“Addison-Wesley”, 2010. 
+
+5. Andrew S. Tanenbaum. Modern Operating Systems “Pearson”, 2007. 
+
+6. Joseph Poon and Thaddeus Dryja, The Bitcoin Lightning Network: Scalable Off-
+
+Chain Instant Payments. 2016. 
+
+7. Gavin Wood. Ethereum: A secure decentralized generalized transaction ledger. 
+
+2014. 
+
+8. Hyperledger Whitepaper. 2016. 
+
+9. Muhammad Saqib Niaz and Gunter Saake. Merkle Hash Tree based Techniques 
+
+for Data Integrity of Outsourced Data. 2015. 
+
+10. Robert McMillan. The inside story of mt. gox, Bitcoin’s 460 dollar million disaster. 
+
+2014. 
+
+11. Sunny King, Scott Nadal. PPCoin: Peer-to-Peer Crypto-Currency with Proof-of-
+
+Stake. 2012. 
+
+12. David Schwartz, Noah Youngs, and Arthur Britto. The ripple protocol consensus 
+
+algorithm. Ripple Labs Inc White Paper, 5, 2014. 
+
+
+
+34 
+
+  
+
+ 
+
+13. Leslie Lamport. The Part-Time Parliament. ACM Transactions on Computer 
+
+Systems, 21(2):133–169, May 1998. 
+
+14. Leslie Lamport, Robert Shostak, and Marshall Pease. The byzantine generals 
+
+problem. ACM Transactions on Programming Languages and Systems 
+
+(TOPLAS), 4(3):382–401, 1982. 
+
+15. Leslie Lamport. Time, Clocks, and the Ordering of Events in a Distributed 
+
+System. Communications of the ACM, 21(7):558–565, Jul 1978. 
+
+16. Paul Tak Shing Liu. Medical record system using Blockchain, big data and 
+
+tokenization. Information and Communications Security, pages 254–261. 
+
+Springer, 2016. 
+
+17. Robert Love. Linux Kernel Development. “Addison-Wesley”, 2010. 
+
+18. Shawn Wilkinson and Tome Boshevski, Storj: A Peer-to-Peer Cloud Storage 
+
+Network. 2016. 
+
+19. Contract. URL https://en.Bitcoin.it/wiki/Contract, 2014. 
+
+20. Mandatory activation of segwit deployment, UASF, BIP 0148. URL 
+
+https://github.com/Bitcoin/bips/blob/master/bip-0148.mediawiki, 2017. 
+
+21. Smart Property. URL https://en.Bitcoin.it/wiki/Smart_Property, 2016. 
+
+

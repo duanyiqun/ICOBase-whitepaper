@@ -1,0 +1,1112 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+ 
+
+FirstBlood 
+A Decentralized eSports Platform Based on Smart Contracts 
+Marco Cuesta, Zack Coburn, Anik Dang, Joe Zhou  
+ 
+Draft Version 0.1.5 
+August 2016 
+
+ 
+
+This document is for informational purposes only and does not 
+constitute an offer or solicitation to sell shares or securities in 
+FirstBlood or any related or associated company. Any such offer or 
+solicitation will be made only by means of a confidential offering 
+memorandum and in accordance with the terms of all applicable 
+securities and other laws. 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+
+
+Private & Confidential 
+
+Table of Contents 
+
+Abstract 
+Autonomous 
+Decentralized 
+Fully Automated 
+
+Market 
+Opportunity 
+The Solution 
+Future Vision 
+Licensing 
+App Token 
+
+Token Acquisition 
+Token Pre­sale 
+Playing Matches 
+Match Result Verification 
+Witnesses 
+Jury Voting Pool 
+Sybil Attack Prevention 
+Dynamic Reward Formulas 
+Hosting Tournaments 
+Referral Rewards 
+eSports Federation 
+
+Gamification Design 
+Global Ranking 
+Lessons and Mentorships 
+Matchmaking Ranking 
+User Reputation System 
+Reputation Incentive 
+
+Platform Design 
+Applications UI/UX 
+App Availability 
+Desktop App 
+App Architecture 
+Security Audit 
+
+Timeline 
+Funding breakdown 
+The Team 
+
+Experience and Traction 
+Members 
+Legal Counsel 
+Advisors 
+
+Disclaimer 
+ 
+
+1 
+
+
+
+Private & Confidential 
+
+Abstract  
+FirstBlood.io (“FirstBlood”) is an upcoming decentralized eSports gaming app that will                     
+allow individuals to test their skill and compete in 1v1 and team vs team matches for                               
+popular online games, such as League of Legends, Dota 2, and Counter­Strike: Global                         
+Offensive.  
+
+Autonomous 
+FirstBlood’s innovations will allow skill based competition to take place independent of                       
+middlemen, such as financial institutions or casinos. The cryptocurrency Ethereum                   
+allows for the creation of smart contracts that run business logic autonomously in the                           
+blockchain. These smart contracts can be used for fast, secure and reliable processing                         
+of results and rewards from competitive eSports matchplays. Unlike existing platforms                     
+(which are both skill and game of chance­based), all of FirstBlood’s transactions are                         
+publicly verifiable, viewable, resistant to counterfeit, and not subject to the risk of                         
+institutional processing.  
+
+Decentralized 
+Traditional online businesses with centralized structures are subject to hacking, strict                     
+financial regulations, and onerous overhead costs. Peer­to­Peer (“P2P”)               
+decentralization allows skill based competition without reliance on payment processors,                   
+reduces operational regulatory burdens, and protects against organizational corruption                 
+such as fraud and embezzlement.  
+
+Fully Automated 
+Each match outcome will be automatically verified by two groups: Witnesses, and/or the                         
+Jury Voting Pool (“JVP”). Witnesses are people running the automated Witness node                       
+software that verifies and reports game results. Payouts will be rewarded to the winner                           
+based on player reports and Witness checks. This significantly reduces the risk of                         
+fraudulent reporting that is rampant on similar platforms. 
+ 
+ 
+ 
+ 
+ 
+
+2 
+
+
+
+Private & Confidential 
+
+ 
+ 
+
+Market 
+Worldwide Digital Games Market, 2015E (​$64.7B​): 
+ 
+Organizing eSports tournaments is a key strategic component for top Multiplayer Online                       
+Battle Arena (“MOBA”) and First­Person Shooter (“FPS”) games, which have earned a                       
+combined $1.6B in revenues year­to­date. MOBA and FPS MMO (Massively                   1
+
+Multiplayer Online) players ​spend more on gaming­related expenditures than the                   
+average gamer, globally, converting ​into paying customers this year at a rate of 7.7%                           
+and 10.8% ​, respectively. Studios have capitalized on this: since Riot began officially                       2
+
+sanctioning League of Legends tournaments in 2011, the game’s annual revenue has                       
+increased from $85.3M to a whopping $1.2B projected by year’s end.  3
+
+ 
+The global eSports market generated ​$748M in revenue in 2015E, and is expected to                           
+grow to ​$1.9B by 2018E. ​North America and Europe comprise 52% of the market as                             
+they continue to rapidly invest in the space. ​One                 4
+
+American analyst even predicts that the eSports             
+market in the U.S. alone will grow from $85M in 2014                     
+to $1.2B in 2018, a compound annual growth rate of                   
+93.8%​. ​The definition of the eSports market, as               5
+defined by SuperData Research , includes the           6
+
+following categories: 
+ 
+
+● Sponsorships & advertising  
+● eSports betting & fantasy sites  
+● Major League Gaming prize pools  
+● Micro­tournaments  
+● Merchandise  
+● Ticket sales 
+
+ 
+
+1 ​Llamas, Stephanie, and Ravon James. ​ESports_Market_Brief_Update_2015­2016_SuperData_Research​ . New York, New York: 
+SuperData Research, 2015. PDF. 
+2 ​Llamas, Stephanie, and Ravon James 
+3 ​Llamas, Stephanie, and Ravon James. 
+4 ​Llamas, Stephanie, and Ravon James. 
+5  Lee, Paul, and Duncan Stewart. "ESports: Bigger and Smaller than You Think." ​Http://www.deloitte.com/​ . The Creative Studio at 
+Deloitte, 2016. Web. 2016.  
+6 ​Llamas, Stephanie, and Ravon James. 
+
+3 
+
+
+
+Private & Confidential 
+
+In 2015E, Betting & Fantasy sites, Prize pools and Tournaments revenues amounted to                         
+roughly $56M, $54M, and $28M respectively, totaling $138M, and is expected to grow                         
+to $350M by 2018E. This enormous growth potential presents FirstBlood with a                       7
+
+compelling opportunity to capitalize on the growing interest of eSports enthusiasts who                       
+want to be more involved in the action. 
+ 
+A third of fans don’t just want to watch eSports, they also want to compete.  8
+ 
+On average, eSports fans compete in four live tournaments every six months. This can                            9
+be inconvenient for frequent competitors. Likewise, nearly half of eSports enthusiasts                     
+bet on sports matches every week. They would like to be able to compete online                             10
+
+through a trusted operator. Currently, there are only flawed solutions to the problem,                         
+and none support a seamless customer experience. Problems ranging from confusing                     
+user­interfaces (“UI”), to potential for fraud, have prevented current operators from                     
+reaching full potential. 
+ 
+FirstBlood’s decentralized online platform will provide an environment for gamers to                     
+compete without the problems associated with the current market offerings. 
+
+Opportunity 
+The global eSports market is growing prodigiously, with an expected compound annual                       
+growth rate (“CAGR”) of 37%. By 2018, the eSports market is expected to generate                           11
+
+$1.92B in global revenue. Additionally, 33% of eSports fans don’t just want to watch,                           12
+
+they also want to compete. Based on these figures, a market capture of merely 0.5%                             13
+
+would produce an estimated $70,445,000 in platform volume for FirstBlood by 2018 just                         
+from competitive matchmaking. 
+ 
+ 
+   
+
+7 ​Llamas, Stephanie, and Ravon James. 
+8 ​Souza, Emily. "The ESports Industry to Date." ​https://newzoo.com​ . Newzoo, 2015. Web. 2016.  
+9 ​Llamas, Stephanie, and Ravon James. 
+10 ​Souza, Emily. 
+11 ​Llamas, Stephanie, and Ravon James. 
+12 ​Llamas, Stephanie, and Ravon James. 
+13 ​Llamas, Stephanie, and Ravon James. 
+
+4 
+
+
+
+Private & Confidential 
+
+Potential platform volume based on current data 
+ 
+
+Game  Current Daily Players  Potential Volume  14
+
+League of Legends  27,000,000  $49,275,000 
+
+Hearthstone  10,000,000  15 $18,250,000 
+
+Dota II  1,000,000  $1,825,000 
+
+CS:GO  600,000  16 $1,095,000 
+
+Total  38,600,000  $70,445,000 
+
+The Solution 
+FirstBlood will be the first decentralized app, built on top of Ethereum, that allows                           
+eSports enthusiasts to compete in their favorite games through a decentralized,                     
+automated platform. 
+ 
+Through decentralization, participants are completely in control of their funds while                     
+using FirstBlood. The payments and payouts are made by the individual players and                         
+cleared on the Ethereum blockchain without ever being processed by a bank or any                           
+third party institution. This decentralized model reduces transaction and other operating                     
+costs. These savings will be passed on to the consumer, adding value that competitors                           
+cannot provide. Existing centralized solutions place consumers at risk. Players’                   
+centralized accounts and deposits can be hacked, embezzled, or even confiscated with                       
+little recourse for those affected. With FirstBlood, users are completely in control of their                           
+assets with no involvement of third party institutions. 
+ 
+Smart contracts paired with a decentralized jury and witness system allow FirstBlood to                         
+operate in a unique way that has never existed before, and to be independent from                             
+game API policy changes. If a dispute arises that requires a higher level of scrutiny,                             
+FirstBlood’s in­house jury system will be activated to adjudicate.  
+
+14 ​Assumption: Daily players play 1 game daily. FirstBlood customer conversion = 0.5%; Average stake per game = $5; FirstBlood’s 
+fee = 5.0%; Potential daily revenue = Daily Players * 20% * 0.5% * $5 * 5.0% 
+15 ​Assumption: 20% of total player­base play daily 
+16 ​"Counter­Strike: Global Offensive ­ Steam Charts." ​Counter­Strike: Global Offensive ­ Steam Charts​ . N.p., n.d. Web. 2016. 
+
+5 
+
+
+
+Private & Confidential 
+
+Future Vision 
+FirstBlood aims to be the preferred global platform for skill­based eSports competitors                       
+and to play an essential part in shaping the future of blockchain­based projects. This                           
+project will initially focus on one gaming community, but will expand to include all of the                               
+major competitive eSports games. Ultimately, FirstBlood will be a leading brand in                       
+competitive eSports, affiliated with P2P gaming as well as influential regional and global                         
+tournaments. FirstBlood will also work with game developers by forming symbiotic                     
+relationships to enhance the gaming experience for all users. Doing so will encourage a                           
+higher level of participation on both parties’ platforms and bring cryptocurrencies and                       
+decentralized applications one step closer to mainstream. 
+
+Licensing 
+Due to transparent nature of smart contracts, much of the intellectual property will be                           
+open source.  
+
+App Token 
+FirstBlood Token (“1SŦ”) is an essential part of the FirstBlood ecosystem and economy.                         
+The four major utilities available to FirstBlood Token holders are:  
+
+● Playing matches 
+● Witnessing matches and voting on the jury 
+● Hosting tournaments 
+● Claiming rewards from referrals 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+6 
+
+
+
+Private & Confidential 
+
+Token Acquisition 
+As a utility token, 1SŦ is involved in every process of the ecosystem. 1SŦ can be                               
+acquired through FirstBlood’s native app, from another player via transfer, through                     
+playing competitive matches with players, from fulfilling jury duty or Witness duty after                         
+participants acquire 1SŦ, or from claiming referral rewards. Users will have the ability to                           
+acquire 1SŦ by sending Ether (“ETH”) to the 1SŦ creation contract on the blockchain                           
+during a pre­sale. The FirstBlood interface will integrate third party trading solutions                       
+such as Shapeshift and Coinbase for users who don’t have ETH.  
+
+Token Pre­sale 
+The FirstBlood Token initial distribution will be in the form of a pre­sale. Anyone will be                               
+able to acquire 1SŦ at a discount rate by pledging ETH into the token sale smart                               
+contract. People who have other cryptocurrencies such as ETC, BTC or STEEM can                         17
+
+create 1SŦ via a third­party conversion service that will be available on the pre­sale                           
+page. The sale will last four weeks from 9/26/2016 to 10/24/2016. These dates are                           
+approximate, as the actual start and end time will correspond to Ethereum block                         
+numbers.  
+
+ 
+The first hour of the sale will be               
+a Power Hour. At this time,           
+tokens will be available at a rate             
+of 170 1SŦ to 1 ETH. Then the               
+rate will change to 150 1SŦ to 1               
+ETH. Every week, the rate will           
+decrease linearly until it hits 100           
+1SŦ to 1 ETH.  
+ 
+The token sale will have a hard             
+cap that, when reached, will         
+immediately disable additional     
+sales. The cap will be measured           
+in Ether and set in the token             
+sale smart contract to a value           
+
+approximately equal to $5.5 million USD based on the ETH/USD price at the start of the                               
+token sale. 
+
+17 ​Both Steem and Steem Dollars (SBD) will be accepted. 
+
+7 
+
+
+
+Private & Confidential 
+
+ 
+At the end of the sale, the founding team will receive a 10% allocation of 1SŦ, subject to                                   
+a twelve month holding period. These tokens will serve as long­term incentive for the                           
+FirstBlood founding team. An additional 5% will be allocated to an eSports ecosystem                         
+fund to be used for promotions and eSports tournament rewards. 2,500,000 1SŦ will be                           
+allocated to a FirstBlood bounty fund. The bounty fund will be used for pre­sale                           
+marketing and bug bounties. At the end of the pre­sale, token creation will be closed                             
+permanently. Token transfers will be restricted for two months after the sale ends. 
+
+Playing Matches 
+The FirstBlood platform is web and desktop software that allows users to interact with                           
+the FirstBlood smart contracts. 1SŦ can be used as                 
+stake in competitive eSports matches on the             
+platform. Users will have the ability to send their                 
+stake to a smart contract that acts as a                 
+decentralized escrow. The smart contract handles           
+the matchmaking and reward settlement after the             
+match is processed by a decentralized result             
+verification system. 
+
+Match Result Verification 
+A decentralized result verification system is           
+beneficial because it is resistant to game API policy changes, fraud from subjective                         
+reporting, and certain criminal activities. All 1SŦ holders have the right to help determine                           
+match outcomes by witnessing matches and voting in the JVP.  
+ 
+A match result can be either contested or uncontested. A match is contested if the                             
+opponents disagree about the result of the match. A match is uncontested if the                           
+opponents agree about the result of the match. Whether a match is contested or                           
+uncontested, it needs to be confirmed by two Witnesses.  
+
+Witnesses 
+A Witness is a special role in the match verification system. In order to act as a Witness,                                   
+a 1SŦ holder must run automated Witness node software. Witness nodes are the                         
+curators of matches. They serve as the final gateway before matches and rewards are                           
+processed. The network of Witness nodes act as a decentralized proxy that has the                           
+
+8 
+
+
+
+Private & Confidential 
+
+ability to connect to game APIs and cross­reference game outcomes to ensure no false,                           
+fraudulent, or suspicious matches are being processed by the platform. 
+ 
+In order to be part of the pool of possible Witnesses, 1SŦ holders need to opt in by                                   
+sending a transaction to the smart contract. For each match, approximately two Witness                         
+nodes are chosen by a weighted random selection process and awarded 1SŦ for their                           
+services. Specifically, the Witness node software looks at each match assigned to it,                         
+checks game APIs for official results, and sends the results to the blockchain for all to                               
+see. The Witness node software is completely automated, thus, people running Witness                       
+node software do not need to intervene in any way. 
+ 
+A Witness’ probability of being selected will be proportional to his share of the total 1SŦ                               
+supply that has been opted­in to the JVP. Specifically, 1SŦ share is calculated as                           
+
+. In order to do the random selection, the smartuser 1SŦ balance) / (opted_in 1SŦ supply)(                    
+contract will provide a function that hashes a random seed provided by FirstBlood, the                           
+user’s address, and the match ID. The smart contract will use this hash to extract a                               
+random number from 0 to 1. The random number will then be scaled by the desired                               
+number of Witnesses. Finally, the random number will be compared to the user’s 1SŦ                           
+share. If the random number is less than the 1SŦ share, then the user is selected as a                                   
+Witness. 
+ 
+Running a Witness node brings game result data into the system and helps protect the                             
+reputation and integrity of the platform. Witnesses provide a valuable service, and this is                           
+why they are rewarded with 1SŦ. Assume a Witness owns of the total (opted­in)                    %W        
+1SŦ supply, the average Witness reward for each match is , and the volume of the                    R            
+network is  per second. The Witness’ total hourly reward will be:V  
+ 
+
+ourly Reward  W R   V   3600 secondsH =   *   *   *    
+ 
+
+Let    0.5%, R  $0.125, V   10  W =     =     =   :  
+ 
+
+ourly Reward  0.5% 0.125 0 600 seconds  $22.5 or $200, 80 annually  H =   * $ * 1 * 3 =   8  
+ 
+
+The potential incentive of running Witness nodes grows linearly with the network as                         
+more matches are needed to be processed in the queue. Thus, Witnesses have an                           
+incentive for the platform to succeed. 
+
+9 
+
+
+
+Private & Confidential 
+
+Jury Voting Pool 
+One of the perks of holding 1SŦ is the ability to receive compensation for fulfilling jury                               
+duty. In the event a match is contested, two Witnesses will be required. Some members                             
+of the JVP will be randomly selected as members of the jury. In order to be considered                                 
+a member of the JVP, 1SŦ holders need to opt in by sending a transaction to the smart                                   
+contract using the graphical user interface (GUI). All 1SŦ holders are recommended to                         
+be opted­in so they can get rewarded by the system and so that the platform can better                                 
+handle high match volume. Jury members will be selected by the same weighted                         
+random selection processes used for Witnesses. 
+ 
+ 
+If a member of the JVP has been selected to sit on a jury, that juror may submit one                                     
+vote to influence the outcome of the dispute. The juror’s decision should be based on                             
+the results provided by the Witnesses, and any additional evidence or screenshots                       
+submitted by the players. FirstBlood will provide software to make it easy for players to                             
+provide evidence of their result. Once the desired quorum has been reached, the winner                           
+will receive the reward. For example, if one hundred people are selected in the JVP,                             
+
+and the quorum is twenty, then twenty jurors must submit their vote before a case is                               
+considered resolved. A fraction of the reward will be paid to FirstBlood, and a fraction of                               
+
+10 
+
+
+
+Private & Confidential 
+
+the reward will be paid to the Witnesses and any jury members who voted with the                               
+majority. Members of the jury who voted with the minority may be penalized with a                             
+negative reward. 
+
+Sybil Attack Prevention 
+Because 1SŦ relies on a decentralized JVP to give rewards to the true winners, it is                               
+important to avoid corruption through Sybil Attacks by automatically created accounts. It                       
+would be harmful if one person used multiple accounts to get multiple seats on a jury.                               
+Likewise, it would be unfavorable if one group of users bought more 1SŦ than everyone                             
+else and managed to control juries by dominating the weighted selection process.                       
+FirstBlood has solutions for both of these cases: 
+ 
+
+1. In order to opt in to the JVP, users must provide identity information such as first                               
+name, email or cell (could be activated for two­factor authentication (2FA)) to                       
+FirstBlood. This way, FirstBlood can ensure that each person has one unique                       
+account being used to participate in the JVP. 
+
+ 
+2. While the probability of being selected for jury duty is proportional to number of                           
+
+tokens, this probability is capped at 1% per account. This way, FirstBlood can                         
+ensure no one is able to dominate the jury selection process. A user is free to                               
+purchase more than 1% of the token supply (for instance, to use in matches), but                             
+the probability will be capped at 1%. 
+
+Dynamic Reward Formulas 
+The desired jury size, quorum size,           
+rewards and penalties all may change as             
+necessary. As they become available,         
+FirstBlood will provide formulas so users           
+can plan accordingly. 
+ 
+For example, in order to ensure           
+FirstBlood’s ability to scale when more           
+matches are being played at a given time,               
+a Dynamic Reward Mechanism (“DRM”)         
+will be implemented at the smart contract             
+level. Rewards for running a Witness           
+node or voting accurately on a jury can vary dynamically based on how many cases are                               
+
+11 
+
+
+
+Private & Confidential 
+
+available versus the processing speed at a given time. Similar to a ride­sharing app,                           
+with surge pricing to incentivize drivers, FirstBlood has its own floating reward structure.                         
+As match volume surges, so does the reward percentage for Witnesses and members                         
+of the JVP. 
+
+Hosting Tournaments 
+Another utility of 1SŦ is the ability to initiate tournaments on the platform. Tournaments                           
+can be competitive matches between individuals or teams. These tournaments can be                       
+an array of prearranged matches (bracketed, charity,             
+free­to­play) handled by the same mechanism using             
+JVP and Witness nodes. The 1SŦ tournament             
+creation function will be one of the main pillars of the                     
+FirstBlood eSports ecosystem by attracting new           
+users to become 1SŦ holders in the network.  
+
+Referral Rewards 
+Another way to acquire 1SŦ is by inviting friends to                   
+become active users on FirstBlood’s platform. Once             
+the friend has played his or her first competitive match on the platform, the referrer will                               
+earn a referral reward. 
+
+eSports Federation 
+The future vision for the FirstBlood Ecosystem extends far beyond our rewards platform.                         
+We aim for the FirstBlood token to be redeemable for goods and services within a                             
+partnered network of retailers, DAPPS, and other participants associated with                   
+FirstBlood. The team aims to be proactive in scouting synergetic projects that share the                           
+same values of innovation in the eSports industry. 
+
+Gamification Design 
+FirstBlood will implement a gamification element by introducing concepts like Global                     
+Ranking (leaderboard style) and Match­making Ranking (“MMR”).  
+
+12 
+
+
+
+Private & Confidential 
+
+Global Ranking 
+A global ranking system will be viewable on FirstBlood’s platform to encourage                       
+competition among eSports players. Ranks will be awarded based on achievements                     
+such as special activities, “killing streaks”, and FirstBlood competition wins.  
+
+Lessons and Mentorships 
+Once a high enough rank is achieved by a player on the platform, the veteran player will                                 
+be able to mentor less­experienced players. The 1SŦ stake that is normally put up for a                               
+match will become payment for the lesson. This will allow the less experienced players                           
+to feel that they have the ability to succeed on the platform. 
+
+Matchmaking Ranking  
+A player’s Matchmaking Ranking (“MMR”) will be adjusted after every match. The MMR                         
+adjustment will depend on the current MMR of the player and the opponent. Winning a                             
+match can increase a player’s MMR by up to 39 points, while losing can decrease a                               
+player’s MMR by up to 39 points. The MMR gained or lost by one player in a match will                                     
+be the opposite of the gain or loss of his opponent. Here is a sample formula: 
+ 
+
+var​ calcMMR ​=​ ​function​(​MMR1​,​ MMR2​){ 
+var​ adjustment ​=​ ​(​Number​(​MMR1​)​ ​­​ ​Number​(​MMR2​))​ ​/​ ​20​; 
+var​ s1 ​=​ ​20​ ​­​ ​Math​.​min​(​Math​.​max​(​adjustment​,​ ​­​19​),​ ​19​); 
+return​ ​[​adjustment​,​ s1​]; 
+
+}; 
+
+User Reputation System 
+FirstBlood will have a User Reputation System (“URS”) to protect players, restrict                       
+hackers/criminals, and encourage healthy competition. This URS will be present in                     
+every aspect of the user experience, from initial sign­ups to professional tournament                       
+play. Newly­joined players will have to gain reputation to build trust in the community.                           
+The URS will incorporate public ranking with achievements to allow users to easily                         
+identify players who may have a history of abusing other players or hacking. This                           
+method could reduce abusive cases handled by the JVP. Likewise, the URS will                         
+enhance the competitive experience by encouraging players to level up and build                       
+reputation.  
+
+13 
+
+
+
+Private & Confidential 
+
+Reputation Incentive 
+FirstBlood’s URS can provide incentive for users to behave nicely and discourage toxic                         
+or malicious users from registering multiple accounts. The platform matchmaking engine                     
+(based on MMR) gives higher matching priority to users with higher reputation score.                         
+Each individual user will also have the ability to set the minimum reputation threshold for                             
+joining a specific match on the GUI level. Having a better reputation also allows users to                               
+play at higher levels with larger stakes. 
+
+Platform Design 
+
+Applications UI/UX 
+
+Screenshot of FirstBlood prototype as of July, 2016.  
+ 
+
+FirstBlood is a platform for players to compete with each other and win rewards. FirstBlood is                               
+developing a unique application interface that propagates its branding and provides an                       
+easy­to­navigate user experience (UX). 
+ 
+The typical UX begins with registering a new account via the account creation process,                           
+followed by a guided tutorial of the platform, shown after the account is verified through                             
+email. 
+ 
+
+14 
+
+
+
+Private & Confidential 
+
+Representative available features on the user panel include:  
+ 
+1. Basic Account Information  
+2. Connected Games (Icons) 
+3. Available Matches (Matches) 
+4. Recent Matches (Results) 
+
+App Availability  
+Matches must be easy for users to join, making it essential to provide the interface on both                                 
+web and mobile platforms. FirstBlood’s plans incorporate an agile cross­platform framework                     
+to reduce redundant work on specific OS­focused development.  
+
+Desktop App 
+FirstBlood plans to use an agile framework to create a native application that runs on players’                               
+desktops. ​Electron ,​ a framework for creating native applications with web technologies such                       18
+
+as JavaScript, HTML, and CSS, could underpin a desktop application. This type of                         
+framework will enable the team to focus on the core of FirstBlood’s business. For example,                             
+Atom text editor, Slack desktop app, and Mist Wallet are some popular apps that are built                               
+using this framework. 
+
+App Architecture 
+● The user interface will be a single page app. 
+● The interface will allow the user to create an account by funding a new Ethereum                             
+
+address with Ether via an established payment processor. 
+● The user will then be able to create a username for this account, and the account                               
+
+information will be stored locally in browser storage (cookies). The user will be                         
+encouraged to write down the Ethereum account and private key as a backup. 
+
+● In order to encourage new users who aren’t familiar with Ethereum, FirstBlood will                         
+officially support MetaMask, a Chrome plugin that simplifies the process of getting an                         
+Ethereum account and allows users to avoid running an Ethereum node locally. 
+
+18 ​Electron​, a popular web framework for building native desktop applications. http://electron.atom.io/ 
+
+15 
+
+
+
+Private & Confidential 
+
+● FirstBlood will store certain important information related to its KYC /AML                     19 20
+
+operation on a centralized database. User funds and game information will always be                         
+stored in the Ethereum blockchain, outside of FirstBlood control. 
+
+● FirstBlood will maintain a server to monitor the Ethereum events being emitted by the                           
+smart contracts via Geth. This server will keep track of statistics (top payouts, players,                           
+etc.) so that it can be viewed from the application without having to do heavy                             
+blockchain calls. 
+
+Security Audit 
+In order to ensure the safety of customer funds held in smart contracts, the FirstBlood team                               
+commits to subjecting its platform to a comprehensive security audit before launching on the                           
+Ethereum mainnet. In the past, Ethereum­related projects have hired security consultants to                       
+conduct security audits prior to launch. FirstBlood will do the same with each updated version                             
+of the platform and will release the results prior to launch. 
+
+Timeline 
+Aug, 2016 :  White Paper & Pre­sale Announcement 
+Sep, 2016 :  Crowdsale Starts 
+Oct, 2016 :   Crowdsale Concludes 
+Dec, 2016 :  Private Alpha among ​1SŦ holders​, Alpha Community Tournaments 
+Jan, 2017 :  Regional FirstBlood eSports Communities   
+Mar, 2017 :  Private Beta 
+May, 2017 :  Public Beta Release  
+
+19 ​Know your customer​ (KYC) is the process of a business verifying the identity of its clients. The term is also used to refer to the 
+bank regulation which governs these activities. 
+20 ​Anti­money laundering​ (AML) is a set of procedures, laws or regulations designed to stop the practice of generating income 
+through illegal actions. 
+
+16 
+
+
+
+Private & Confidential 
+
+Funding breakdown 
+
+ 
+
+ 
+
+ 
+
+   
+
+17 
+
+
+
+Private & Confidential 
+
+The Team 
+
+Experience and Traction 
+Core team members are proficient in multiple skills and speak multiple languages. 
+ 
+Members of the FirstBlood business team have expertise in multiple areas including                       
+compliance, business development, sales and marketing. In addition, all members have prior                       
+experience in either managing or working for startup companies. 
+ 
+Members of the development team also have experience in working on open source projects,                           
+such as Solome, which was a finalist for the Riot API Challenge, which provides 1v1                             
+matchmaking and MMR tracking for the MOBA game League of Legends.  
+ 
+FirstBlood’s chief architect is the founder of Etheropt, the first decentralized options                       
+exchange for Ether. This project provided extensive experience in decentralized applications                     
+based on smart contracts and oracles in the blockchain. 
+   
+
+18 
+
+
+
+Private & Confidential 
+
+Members 
+Joe Zhou | Project Lead, Dev 
+Joe is a derivatives trader and previously co­founder and CEO of Alt­Options, a Boston based fintech                               
+startup. His most recent project is Solome, a solo matchmaking engine with the ability to autocheck game                                 
+outcomes for League of Legends. He holds B.S.B.A in finance and entrepreneurship and he is an ACAMS                                 
+chartered anti­money laundering specialist. He has experiences in building and leading startups and he’s                           
+also fluent in both English and Chinese. Joe is a Gold III League of Legends player and also plays popular                                       
+FPS games such as CS:GO and Call of Duty: Modern Warfare 3. 
+ 
+Marco Cuesta | Head of Business Development 
+Marco previously cofounded Alt­Options, a Boston based fintech startup. He holds a B.S.B.A in finance and                               
+strategy and trades cryptocurrency. He is a chartered ACAMS (certified anti­money laundering specialist).                         
+He also has practical experience in marketing and design from running his own production studio, Cuestam                               
+Productions. Marco plays a variety of FPSs but is most experienced with CS:GO and TF2 on the Steam                                   
+gaming platform. Gamertag: OmnesOmni. 
+ 
+Zack Coburn | Back­end Dev, Smart Contract Architect 
+Zack left a career as an options trader at a Chicago market making firm to be a full­time entrepreneur. His                                       
+most recent project is Etheropt, a decentralized options exchange built on Ethereum. Previously, Zack has                             
+founded or co­founded a variety of startups, including Chancecoin (alt­coin for gambling), Subvert and Profit                             
+(social media marketing site), DormItem (college classifieds), and Madhens (ad auctions). Zack is an avid                             
+Rocket League player and beginner at League of Legends. His favorite offline game is Death Note Mafia. 
+ 
+Anik Dang |​ ​ Front­end Developer 
+Prior to FirstBlood, Anik worked at Alt­Options building and maintaining front­end functionality of its                           
+derivative trading platform. His most recent project is Solome, a platform for matching 1v1 games and                               
+tracking solo MMR ratings. For this, Anik designed and implemented the matchmaking engine. He                           
+graduated Summa Cum Laude from Boston University with coursework in computer science focusing on                           
+algorithms and computational performance. Additionally, Anik possesses experience in both investment and                       
+corporate finance and is fluent in 3 languages: English, Russian, and Vietnamese. Anik is an avid gamer,                                 
+reaching a Master Guardian Elite rank in CS:GO and has recently started playing League of Legends. 
+
+Legal Counsel 
+Daniel Temkin | Legal Counsel 
+Dan is an attorney licensed in New York, Massachusetts and before the United States Patent and                               
+Trademark Office. He has years of experience advising, mentoring and representing tech startups. Prior to                             
+beginning his legal career, he worked in sales and marketing roles at Procter & Gamble Co. Dan is an old                                       
+school RTS gamer who still has a solid Castle time in Age of Empires II. 
+   
+
+19 
+
+
+
+Private & Confidential 
+
+ 
+
+Advisors 
+Joey Krug | Technical Advisor 
+Joey attended Pomona College and discovered that his true calling was to design revolutionary systems on                               
+the blockchain. He is a core developer at Augur, a decentralized predictions market that raised over $5.3                                 
+million during its crowdfunding campaign. He is experienced in writing trading and consensus mechanisms                           
+on Ethereum contracts. Joey was also the first person to successfully conduct a Bitcoin transaction over                               
+sound. Most recently, the Thiel Foundation admitted Joey as a 2016 Thiel Fellow in recognition of his                                 
+exceptional ability. 
+ 
+Mikko Ohtamaa | Technical Advisor 
+Mikko Ohtamaa is a blockchain entrepreneur having 15+ years experience in software and fintech                           
+industries. Mikko works for Revoltura, a Gibraltar based company in disruptive investment products. He                           
+regularly advises governments and financial institutions in blockchain matters. He is one of founders and                             
+former CTO of LocalBitcoins, the largest person­to­person Bitcoin exchange in the world. Mikko is also the                               
+sole creator of libertymusicstore.net, the largest Bitcoin music store in the world. 
+ 
+George Popescu | Finance and Operations Advisor 
+George is a serial entrepreneur who is experienced in all aspects of a startup company including finance,                                 
+operations and marketing. He is the chairman of the Board of Advisors for Gatecoin, a blockchain asset                                 
+exchange and also the founder and CEO of Lending Times, a media and affiliate marketing company in the                                   
+peer­to­peer, marketplace and alternative lending space. He previously founded and exited Boston                       
+Technologies (BT) group, a technology, market maker, high­frequency trading and inter­broker broker­dealer                       
+in the FX Spot, precious metals and CFDs space company. In 2011, BT was ranked #1 fastest growing                                   
+company in Boston. George is Silver IV in League of Legends player, and also plays Witcher III, Total War                                     
+series and many more strategy games.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+   
+
+20 
+
+
+
+Private & Confidential 
+
+Disclaimer  
+ 
+ 
+ 
+
+NOT AN OFFER TO SOLICIT SECURITIES AND 
+
+RISKS ASSOCIATED WITH 1SŦ AND THE FIRSTBLOOD NETWORK 
+
+Last Updated August 8​th​, 2016 
+
+ 
+ 
+This document is for informational purposes only and does not constitute an                       
+offer or solicitation to sell shares or securities in FirstBlood or any related or                           
+associated company. Any such offer or solicitation will be made only by means of                           
+a confidential offering memorandum and in accordance with the terms of all                       
+applicable securities and other laws. None of the information or analyses                     
+presented are intended to form the basis for any investment decision, and no                         
+specific recommendations are intended. Accordingly this document does not                 
+constitute investment advice or counsel or solicitation for investment in any                     
+security. This document does not constitute or form part of, and should not be                           
+construed as, any offer for sale or subscription of, or any invitation to offer to buy                               
+or subscribe for, any securities, nor should it or any part of it form the basis of, or                                   
+be relied on in any connection with, any contract or commitment whatsoever.                       
+FirstBlood expressly disclaims any and all responsibility for any direct or                     
+consequential loss or damage of any kind whatsoever arising directly or                     
+indirectly from: (i) reliance on any information contained in this document, (ii) any                         
+error, omission or inaccuracy in any such information or (iii) any action resulting                         
+therefrom. 
+ 
+FirstBlood Token, or “1SŦ”, is a cryptographic token used by the FirstBlood network. 
+
+1SŦ is not a cryptocurrency. 
+
+At the time of this writing, 1SŦ (i) cannot be exchanged for goods or services, (ii) has no                                   
+known uses outside the FirstBlood network, and (iii) cannot be traded on any known                           
+exchanges. 
+
+21 
+
+
+
+Private & Confidential 
+
+1SŦ is not an investment. 
+
+There is no guarantee – indeed there is no reason to believe – that the 1SŦ you purchase will                                     
+increase in value. It may – and probably will at some point – decrease in value. Those who                                   
+do not actually use their 1SŦ honestly and fairly will lose their 1SŦ to those who do. 
+
+1SŦ is not evidence of ownership or right to control. 
+
+Controlling 1SŦ does not grant its controller ownership or equity in FirstBlood, or the                           
+FirstBlood network. 1SŦ does not grant any right to participate in the control the direction or                               
+decision­making of FirstBlood or the FirstBlood Network. 
+
+1) Risk of Losing Access to 1SŦ Due to Loss of Credentials 
+
+The purchaser’s 1SŦ may be associated with an FirstBlood account until they are distributed                           
+to the purchaser. The FirstBlood account can only be accessed with login credentials                         
+selected by the purchaser. The loss of these credentials will result in the loss of 1SŦ. Best                                 
+practices dictate that 
+purchasers safely store credentials in one or more backup locations geographically                     
+separated from the working location. 
+
+2) Risks Associated with the Ethereum Protocol 
+
+1SŦ and the FirstBlood network are based upon the Ethereum protocol. As such, any                           
+malfunction, unintended function or unexpected functioning of the Ethereum protocol may                     
+cause the FirstBlood network or 1SŦ to malfunction or function in an unexpected or                           
+unintended manner. Ether, the native unit of account of the Ethereum Protocol may itself lose                             
+value in ways similar to 1SŦ, and also other ways. More information about the Ethereum                             
+protocol is available at http://www.ethereum.org. 
+
+3) Risks Associated with Voting 
+
+The purchaser may lose 1SŦ by exercising votes maliciously or carelessly.   
+ 
+4) Risks Associated with Purchaser Credentials 
+Any third party that gains access to the purchaser’s login credentials or private keys may be                               
+able to dispose of the purchaser’s 1SŦ. To minimize this risk, the purchaser should guard                             
+against unauthorized access to their electronic devices. 
+
+22 
+
+
+
+Private & Confidential 
+
+5) Risk of Unfavorable Regulatory Action in One or More Jurisdictions 
+
+Blockchain technologies have been the subject of scrutiny by various regulatory bodies                       
+around the world. The functioning of the FirstBlood network and 1SŦ could be impacted by                             
+one or more regulatory inquiries or actions, including but not limited to restrictions on the use                               
+or possession of digital tokens like 1SŦ, which could impede or limit the development of the                               
+FirstBlood network. 
+
+6) Risk of Alternative, Unofficial FirstBlood Networks 
+
+Following the presale and the development of the initial version of the 1SŦ platform, it is                               
+possible that alternative networks could be established, which utilize the same open source                         
+code and open source protocol underlying the FirstBlood network. The official FirstBlood                       
+network may compete with these alternative, unofficial 1SŦ­based networks, which could                     
+potentially negatively impact the FirstBlood network and 1SŦ. 
+
+7) Risk of Insufficient Interest in the FirstBlood Network or Distributed Applications 
+
+It is possible that the FirstBlood network will not be used by a large number of businesses,                                 
+individuals, and other organizations and that there will be limited public interest in the                           
+creation and development of distributed applications. Such a lack of interest could impact the                           
+development of the FirstBlood network and therefore the potential uses or value of 1SŦ. 
+
+8) Risk that the FirstBlood Network, As Developed, Will Not Meet the Expectations of 
+
+Purchaser 
+
+The FirstBlood network is presently under development and may undergo significant                     
+changes before release. Any expectations regarding the form and functionality of 1SŦ or                         
+the FirstBlood network held by the purchaser may not be met upon release, for any                             
+number of reasons including a change in the design and implementation plans and                         
+execution of the FirstBlood network. 
+
+9) Risk of Theft and Hacking 
+
+Hackers or other groups or organizations may attempt to interfere with the FirstBlood network                           
+or the availability of 1SŦ in any number of ways, including without limitation denial of service                               
+attacks, Sybil attacks, spoofing, smurfing, malware attacks, or consensus­based attacks. 
+
+23 
+
+
+
+Private & Confidential 
+
+10) Risk of Security Weaknesses in the 1SŦ network Core Infrastructure Software 
+
+The FirstBlood network consists of open­source software that is itself based on open­source                         
+software. There is a risk that the FirstBlood team, or other third parties may intentionally or                               
+unintentionally introduce weaknesses or bugs into the core infrastructural elements of the                       
+FirstBlood network interfering with the use of or causing the loss of 1SŦ. 
+
+11) Risk of Weaknesses or Exploitable Breakthroughs in the Field of Cryptography 
+
+Advances in cryptography, or technical advances such as the development of quantum                       
+computers, could present risks to cryptocurrencies and the FirstBlood platform, which could                       
+result in the theft or loss of 1SŦ. 
+
+12) Risk of 1SŦ Mining Attacks 
+
+As with other decentralized cryptographic tokens and cryptocurrencies, the blockchain used                     
+for the FirstBlood network is susceptible to mining attacks, including but not limited to                           
+double­spend attacks, majority mining power attacks, “selfish­mining” attacks, and race                   
+condition attacks. Any successful attacks present a risk to the FirstBlood network, expected                         
+proper execution and sequencing of FirstBlood markets, and expected proper execution and                       
+sequencing of Ethereum contract computations. Despite the efforts of the FirstBlood Team,                       
+the risk of known or novel mining attacks exists. 
+
+13) Risk of Lack of Adoption or Use of the FirstBlood Network 
+
+While 1SŦ should not be viewed as an investment, it may have value over time. That value                                 
+may be limited if the FirstBlood network lacks use and adoption. If this becomes the case,                               
+there may be few or no markets upon the launch of the platform, limiting the value of 1SŦ. 
+
+14) Risk of an Illiquid Market for 1SŦ 
+
+There are currently no exchanges upon which 1SŦ might trade. If ever exchanges do                           
+develop, they will likely be relatively new and subject to poorly­understood regulatory                       
+oversight. They may therefore be more exposed to fraud and failure than established,                         
+regulated exchanges for other products. To the extent that the exchanges representing a                         
+substantial portion of the volume in 1SŦ trading are involved in fraud or experience security                             
+failures or other operational issues, such exchanges’ failures may result in a reduction in the                             
+value or liquidity of 1SŦ. 
+
+24 
+
+
+
+Private & Confidential 
+
+15) Risk of Uninsured Losses 
+
+Unlike bank accounts or accounts at some other financial institutions, funds held using the                           
+FirstBlood or Ethereum network are generally uninsured. In the event of loss or loss of value,                               
+there is no public insurer, such as the F.D.I.C., or private insurer, to offer recourse to the                                 
+purchaser. 
+
+16) Risk of Dissolution of the FirstBlood Project 
+
+It is possible that, due to any number of reasons, including without limitation an unfavorable                             
+fluctuation in the value of Bitcoin, unfavorable fluctuation in the value of 1SŦ, the failure of                               
+business relationships, or competing intellectual property claims, the FirstBlood project may                     
+no longer be a viable business and may dissolve or fail to launch. 
+
+17) Risk of Malfunction in the FirstBlood Network 
+
+It is possible that the FirstBlood network malfunctions in an unfavorable way, including but                           
+not limited to one that results in the loss of 1SŦ, or information concerning a market. 
+
+18) Unanticipated Risks 
+
+Cryptocurrency and cryptographic tokens are a new and untested technology. In addition to                         
+the risks set forth here, there are risks that the FirstBlood team cannot anticipate. Risks may                               
+further materialize as unanticipated combinations or variations of the risks set forth here. 
+
+25 
+
+

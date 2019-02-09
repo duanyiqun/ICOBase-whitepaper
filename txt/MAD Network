@@ -1,0 +1,1815 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+W H I T E P A P E R 1 . 2
+
+
+
+2
+
+This version of the MAD whitepaper is released as a working draft - with the 
+purpose of introducing the idea and receiving feedback from the blockchain 
+community. If you wish to contribute by leaving your comment or review, 
+please email thoughts@madnetwork.io .
+
+Disclaimer:  The information and opinions contained in this whitepaper does 
+not purport to be comprehensive and have not been independently verified. 
+While the whitepaper has been prepared in good faith, no representation, 
+warranty, assurance or undertaking (express or implied) is or will be made, 
+and no responsibility, liability or duty of care is or will be accepted by the 
+MADnetwork.io or any of its investors or subsidiaries or by any of their 
+respective affiliates, advisers in relation to the adequacy, accuracy, 
+completeness, reliability or reasonableness of this whitepaper. All and any such 
+responsibility and liability is expressly disclaimed. In particular, but without 
+prejudice to the generality of the foregoing, no representation, warranty, 
+assurance or undertaking is given as to the achievement or reasonableness of 
+any future projections, management estimates, prospects or returns contained 
+in this whitepaper, or in such other information, notice or document. These 
+projections are illustrative only and actual results may be materially affected by 
+changes on economic or other circumstances which cannot be foreseen. The 
+reader of this whitepaper acknowledges that it should conduct its own 
+independent investigation and assessment as to the validity of the information 
+contained in this whitepaper and the economic, financial, regulatory, legal, 
+taxation and accounting implications of that information and consult its own 
+professional advisers. The information in this document is subject to change or 
+update without notice and should not be construed as commitment by 
+MADnetwork. This document is for informational purposes only and does not 
+constitute an offer or solicitation to sell shares or securities in MADnetwork.io 
+or any related or associated company.
+
+
+
+3
+
+Abstract 4
+
+Token Sale 21
+
+Team 23
+
+Evolution of Ad Tech
+
+Brief History of Ad Tech
+
+Current Ad Tech ecosystem
+
+Problems
+
+5
+
+6
+
+8
+
+9
+
+MAD Network
+
+MADnet Books - Decentralized Payment Rail
+
+MADnet Core - Decentralized Ad Server and Exchange
+
+MADnet Data - Decentralized Data Management Platform (DMP)
+
+11
+
+12
+
+16
+
+19
+
+TABLE OF CONTENTS
+
+
+
+ABSTRACT
+The ad tech supply chain consists of advertisers, publishers and a 
+series of costly middlemen. The middlemen designed the 
+programmatic ecosystem to maximize revenue for themselves 
+rather than for the advertiser and publisher. Today, machine 
+learning for ad placement is priced as a luxury service, often taking 
+a large percentage of the ad spend. At MAD, we believe these 
+services are commodities and should be treated as such.
+
+MAD’s consensus algorithm, Proof of Real Work, commoditizes 
+these services by utilizing necessary work both to secure the 
+network and match relevant ads with available inventory. Proof of 
+Real Work powers the ad server to facilitate the fairest deal 
+possible between the advertiser and publisher as the algorithm is 
+not invested in its own profitability. Rather, the ad server supports 
+an ecosystem of miners who are incentivized to create faster, more 
+efficient machine learning algorithms to win the block.
+
+4
+
+
+
+EVOLUTION OF
+AD TECH
+Programmatic advertising, or the use of software to purchase digital advertising, is growing at a 
+rapid pace. According to Adweek, programmatic display spending will reach $33 billion in 2017, 
+with 74 percent of total U.S. digital display ad dollars spent going to private marketplaces and 
+programmatic setups. Programmatic ad spending is expected to grow to $45 billion by 2019.
+
+Prior to the expansion of programmatic spending infrastructure, advertisers and publishers 
+managed transactions manually, a process that proved to be slow and inefficient. Now, most manual 
+agreements are reserved for large-scale placements that are consequently inflexible and 
+cumbersome. This rigid infrastructure makes actively optimizing ads difficult, and gathering data 
+about their performance an even greater challenge. Programmatic advertising has introduced a way 
+for advertisers and publishers to transact automatically, decreasing the amount of labor required to 
+serve advertisements, and increasing the advertiser’s return on investment (ROI) through data-
+enriched decision-making.
+
+Programmatic advertising’s success hinges on its ability to glean valuable insights from large user 
+datasets. Data gives advertisers better understanding of their targeted audiences, as well as novel 
+ways to optimize their placements for the highest possible conversions. Programmatic advertising 
+also reduces overhead for both advertisers and publishers by outsourcing some decision-making to 
+software.
+
+Programmatic advertising was a huge breakthrough for digital advertising. However, its underlying 
+infrastructure has also presented new problems.
+
+Because the ad tech industry grew organically from the internet’s network growth, it has always 
+needed a decentralized model. The ecosystem consists of many remote actors who all try to service 
+the same supply chain.
+
+As the ecosystem evolved, trust had to be enabled by third parties, which resulted in a slew of costly 
+middlemen. The advent of blockchain technology effectively removes the need for trust from the 
+business equation and provides the decentralized tools to build a better ad tech ecosystem.
+
+5
+
+
+
+Brief History of Ad Tech
+
+In 1994, AT&T was eager to expand the reach of its famous “You Will” campaign, a surprisingly 
+
+prescient campaign to promote an internet-enabled future (brought to you by AT&T). AT&T 
+
+thought the newly launched web magazine, hotwired.com, an extension of Wired, would be a great 
+
+place to promote its “You Will” campaign on the internet. Thus, the internet’s first banner ad was 
+
+born. Initially, relationships between publishers, like hotwired.com, and brands, like AT&T, were 
+
+not so different than how brands and agencies interacted with print or TV publishers.
+
+However, increased demand for the internet and an explosion of websites to commoditize this 
+
+demand soon made the analog model between brands and publishers difficult to manage and scale. 
+
+Brands could not easily find ad inventory to purchase, and worse, they could not track the 
+
+effectiveness of the banner ads they did use. Advertisers were forced to contract individually with 
+
+websites or with publishers with a large network of sites and available ad inventory. WebConnect, 
+
+an online ad agency, was the first to bundle many sites and give brands access to an open network of 
+
+ad inventory on its partner sites. This launched the first ad network, which offered brands scale and 
+
+the ability to price based on the website’s audience.
+
+The first ad network helped advertisers reach a broader audience, but it was still difficult for 
+
+publishers to reach and sell to potential advertisers. Enter the ad server. In addition to helping 
+
+deliver ads to display, ad servers such as DoubleClick emerged to track information about 
+
+impressions and clicks, and to help provide an ROI for ad dollars spent. DoubleClick, which was 
+
+founded in 1996, saw huge growth as brokers for their ad inventory were aided by the ability to 
+
+track users more easily through the use of cookies.
+
+In 2000, Google launched AdWords to help monetize its search engine. Instead of images or banner 
+
+ads, it promoted textually relevant ads to leverage its strength as the premier search experience. 
+
+Before Google launched AdWords, GoTo.com (later Overture) invented the first Paid Placement 
+
+Model (PPM). This introduced the auction model to the online advertising industry; the higher the 
+
+bid, the higher an ad appeared in search results. While Google’s text ads were popular, it was 
+
+missing the revenue that high-bid advertisers would pay for premium placement. Google’s approach 
+
+was different from GoTo.com. Instead of just auctioning off placement on key searches, Google 
+
+judged relevance (and the ad’s price) by how many click-throughs the ad received on a key search. 
+
+This Pay Per Click (PPC) model proved to be extremely profitable for Google searches. Google later 
+
+expanded their network with AdSense, which allowed for text, image, video or interactive ads to be 
+
+displayed on partner websites.
+
+6
+
+
+
+Many publishers and advertisers still suffered from liquidity problems in existing ad networks. 
+
+Publishers were connected to ad networks, but oftentimes advertisers would purchase excess 
+
+inventory or be unaware of unused ad space that could be sold for a discount. Ad exchanges emerged 
+
+to fill this gap.
+
+With advertisers submitting campaigns for targeted audiences, ad exchanges would purchase 
+
+individual user impressions and then match them with the highest bidder from submitted ad 
+
+campaigns in their system.
+
+As more ad exchanges came onto the marketplace to bundle inventory around the internet, another 
+
+layer crept into the crowded ad tech space — demand-side platforms (DSPs). DSPs provided a way for 
+
+advertisers to bundle different ad exchanges to purchase impressions across various ad exchanges, 
+
+which reached even more ad networks made up of networks of sites offering inventory.
+
+The emergence of mobile and social media platforms in the mid-2000s opened up new access 
+
+channels and new ways to target audiences. New sites such as Facebook and Twitter first 
+
+concentrated on gaining a large user base, then determined how best to serve targeted ads to them. By 
+
+offering advertisers access to ad inventory and the data to target a specific audience, Google and 
+
+Facebook emerged as the major players in this space. Unfortunately, publishers, audiences, advertisers 
+
+and brands are all squeezed by the duopoly created by Facebook and Google’s “walled gardens.”
+
+Outside of Google and Facebook, the space became increasingly complicated as additional layers 
+
+emerged to transact bundled sets of user data and ad inventory. Real-time bidding (RTB) gives 
+
+advertisers more specificity in their ad spends, but the myriad of entities in between advertisers and 
+
+publishers makes transparency of price and effectiveness difficult. 
+
+7
+
+
+
+From the inception of an advertisement to 
+
+when the final audience member views it, 
+
+the ad passes through a series of entities.
+
+Current Ad Tech Ecosystem
+
+8
+
+Digital Asset Management
+
+Dynamic Creative Optimization
+
+Data Management Platform
+
+Demand Side Platform
+
+Supply Side PlatformData
+
+Publisher
+
+DAM
+DCO
+DMP
+DSP
+SSP
+PUB
+
+
+
+PROBLEMS
+Although programmatic advertising has alleviated many of 
+the pain points previously felt by advertisers, its growth has 
+also brought a slew of problems, namely supply chain opacity, 
+the “disappearing ad dollar” and data leakage.
+
+Lack of transparency in the supply chain allows middlemen to get away with some truly unsavory 
+
+practices. One practice in particular that the MAD Network aims to reduce is auction price 
+
+manipulation. Price manipulation encompasses a wide array of practices that involve exchanges or 
+
+publishers misrepresenting or not disclosing data or bids with the intention of controlling the price 
+
+of ad inventory.
+
+One common form is “dynamic floor pricing.” This technique is used to inflate prices for ad 
+
+inventory by constantly adjusting price floors. Price floors are generally not visible to buyers, 
+
+forcing them to raise their bid price in hopes of it being higher than the unknown floor. Although 
+
+this does protect publishers, it is detrimental for advertisers, especially when there is only one 
+
+bidder. Furthermore, once a buyer places a bid, they have no insight into the rest of the exchange 
+
+process. Most ad exchanges refuse to disclose any information; therefore, there is no way to hold 
+
+them accountable. This lack of transparency opens the opportunity for ad exchanges to directly 
+
+control prices in second price auctions. Second price auctions are auctions in which the winning 
+
+bidder pays only one cent higher than the second-highest bid. After an auction is won, exchanges 
+
+tack on arbitrary bidding fees. These fees are adjusted for every bid and can add up to one cent less 
+
+than the winning bid price. This defeats the purpose of second price auctions and forces advertisers 
+
+to pay more than is necessary for ad inventory. 
+
+Supply Chain Opacity
+
+9
+
+
+
+The ad tech industry currently requires a great deal of trust to operate. Intermediaries that supply 
+
+this trust capture more than 60 percent of the value generated in today’s ecosystem, leaving 
+
+publishers with a fraction of every ad dollar spent. Each party that sits between the advertiser and 
+
+publisher charges some service fee, which accounts for 5 to 30 percent of each dollar spent. As a 
+
+result, the majority of the costs boil down to moving data through the system and authenticating 
+
+each participant in the supply chain. This widespread problem is referred to as the “disappearing ad 
+
+dollar.” Furthermore, supply chain opacity presents opportunities for rent-seeking arbitrageurs to 
+
+purchase ad inventory and resell for significant profits. This results in advertisers paying much 
+
+more than necessary for ad inventory, and publishers earning less.
+
+Disappearing Ad Dollar
+
+Data leakage is another rampant problem that costs publishers money and stymies the efficient flow 
+
+of data. In turn, data leakage creates a culture of isolationism that limits the effectiveness of cross-
+
+platform targeted advertising. Data leakage is defined by the SANS Institute as the unauthorized 
+
+transmission of data from within an organization to an external destination or recipient. When 
+
+publishers sell their ad inventory, they often have to share their data with many third parties to 
+
+receive the highest bids. This results in data leaking because once the third parties receive the data, 
+
+they tend to keep it for further use or sale — often without consequence, which results in inventory 
+
+mispricing. Many publishers refuse to share their data for this reason, and when they do it is often 
+
+mispriced. For this reason, publisher data is extremely underutilized, and Facebook and Google are 
+
+able to use their troves of user data to force advertisers to go through them for effective targeting. 
+
+Although extremely profitable for Facebook and Google, this duopoly creates an unnecessary, costly 
+
+and inefficient market for digital advertising.
+
+Data Leakage
+
+10
+
+
+
+Blockchain technology promises to alleviate many of the programmatic advertising industry’s biggest 
+
+pain points. Decentralized networks help disintermediate third-party bundlers and link advertisers 
+
+seamlessly with publishers. Additionally, unlike the current market of data secrecy and walled 
+
+gardens, distributed systems can more accurately reflect value, effectiveness and campaign reach.
+
+The MAD Network is comprised of three distinct blockchain layers: MADnet Books, MADnet Core 
+
+and MADnet Data. The MADtoken will be escrowed to activate a payment channel for the 
+
+accounting, fulfillment and instant reconciliation of ad delivery. Advertisers and publishers will have 
+
+the option to exchange on credit or settle in real time with their escrowed MADtoken or 
+
+cryptocurrency of choice. Ultimately publishers have the final say in how they would like to be paid. 
+
+MADnet Books is a private chain maintained by the AdLedger Consortium, designed to track high-
+
+frequency network transactions, expose price manipulation and facilitate accurate reconciliation. 
+
+MADnet Core is the decentralized ad server and exchange powered by our proof-of-real-work 
+
+algorithm. MADnet Data is a data storage layer that facilitates pseudonymous, one-time-use sharing 
+
+of consumer data to increase the value of publisher inventory while drastically improving targeting.
+
+MAD NETWORK
+
+11
+
+Layer 1 Layer 2 Layer 3
+
+
+
+12
+
+MADnet Books is a decentralized payment rail for staking Insertion Orders using MADtoken, an 
+
+ERC20 token issued on Ethereum. MADnet Books will initially be fulfilled via MadHive’s 
+
+centralized ad server. The decentralized payment rail will open a tokenized marketplace for 
+
+exchanging the value of an impression. Advertising spend tracking will be open to create a fair, 
+
+transparent network that penalizes price manipulation. With the advent of the open network, 
+
+advertisers will be informed of third parties that are involved in the ad placement. The advertiser, 
+
+empowered with data insights, will no longer be beholden to complicated third parties that are 
+
+currently taking large margins.
+
+A recent lawsuit explains the state of the ad tech industry. The Guardian sued the Rubicon Project 
+
+for “recovery of non-disclosed buyer fees in relation of Guardian inventory.” Exchanges, SSPs and 
+
+DSPs often hide fees in the fine print of contracts and manipulate prices by adding arbitrary fees 
+
+after private auctions. As The Guardian discovered, the ad tech industry has a reputation of 
+
+protecting information by building black-box systems that third parties learn how to manipulate. 
+
+Hiding transaction flow allows for bad behavior such as creating fake bids or misrepresenting 
+
+transaction prices. The payment rail will empower advertisers to avoid inefficient advertising 
+
+spending and increase the value of their spending.
+
+Decentralized
+Payment Rail
+
+M A D N E T  B O O K S
+
+
+
+An advertiser will utilize the MADnet Books layer by staking MADtoken to create an Insertion 
+
+Order. Insertion Orders are smart contracts that specify how ads should be executed. As 
+
+MADtokens are staked, an equivalent value of credit (“MADcred”) will be generated and exchanged 
+
+on the MAD Network. The MADcred is paid to the publishers for placing ads in near-real-time. 
+
+MADcred will be a non-fungible token with an explicit reference to the Insertion order contract in 
+
+a manner consistent with the ERC non-fungible standard. After the MADcred is spent, a publisher 
+
+redeems their MADcred in a settlement step based on the payment terms established in the 
+
+Insertion Order. The publisher then returns the MADcred to the Insertion Order, signaling receipt 
+
+of payment. As the publisher confirms payment, MADbonus is paid to the advertiser. MADbonus is 
+
+a loyalty reward for utilizing the MAD Network. If a publisher does not return the MADcred to the 
+
+Insertion Order, the advertiser may decide to blacklist them to avoid the possibility of not receiving 
+
+the MADbonus in the future.
+
+Advertisers may stake MADbonus in place of MADtoken for their Insertion Order. MADbonus is a 
+
+reward for early participation in the network and incentivizes advertisers to continue using the Mad 
+
+Network by allowing them to reduce the required amount of MADtoken needed when staking 
+
+Insertion Orders. This also solves the problem of the MADtoken market cap being an upper limit 
+
+on ad spend that can be delivered on the network at any given time. MADbonus may only be used 
+
+one time.
+
+MADbonus will be issued in a decay curve. Initially, more MADbonus will be issued to excite new 
+
+entrants to use the MAD Network. As the MAD Network grows, MADbonus issuance will be 
+
+reduced. Since the MADbonus maintains its value only when the advertiser makes good on its 
+
+commitment to pay fiat to publishers, this mechanism further incentivizes publishers to come on 
+
+the network in order to gain access to the ad spend committed to the system.
+
+13
+
+
+
+14
+
+Miners
+
+Advertisers Publishers
+Broker Services
+
+(abstraction layer)
+
+1b
+
+1a 4a
+
+5a 5b
+
+2a 3a
+
+2b 3b
+4b
+
+Enters into agreement with broker to purchase a certain USD worth of advertising; the broker 
+
+purchases MADtoken determined at the current price
+
+Broker informs advertisers of their commitment to pay fiat directly to publishers via wire transfer to reconcile 
+
+their MADcred balance for ads served
+
+Broker takes MADtokens provided by advertisers or purchased on behalf of advertisers and places it in an escrow account 
+
+in exchange for MADcred required to execute transactions
+
+Network provides MADbonus to broker, which it can use to substitute for MADtoken when staking USD, to create an 
+
+incentive for brokers to maintain a constant identity and be good actors; the network provides near-real-time visibility 
+
+into transactions occurring and the balance of the MADcred accounts
+
+Network transfers MADcred to seller account for financial value accumulated by transactions generated in the 
+
+MAD Network advertising exchange
+
+Broker broadcasts publishers’ inventory into the network to offer inventory to exchange
+
+Broker provides publisher with accounting of MADcred it’s accumulated and tracks the fiat payment events that close the 
+
+loop — reconciling with MADcred-based bookkeeping
+
+Publisher provides broker with instructions regarding what inventory to publish on the exchange and the rules about 
+
+how it can be used, including price floors
+
+Network provides the miners with a share of all MADtoken accumulated
+
+Miners provide decentralized computation power (trust) to the network
+
+Advertiser1a
+
+1b
+
+2a
+
+2b
+
+3a
+
+3b
+
+4a
+
+4b
+
+5a
+
+5b
+
+Broker
+
+Broker
+
+Network
+
+Network
+
+Broker
+
+Broker
+
+Publisher
+
+Network
+
+Miner
+
+
+
+15
+
+8
+
+Advertiser wants to buy 
+$1M of advertisements
+
+Publisher has a $10 slot to show an ad in, which Advertiser
+wants to spend all their MADcred on
+
+Broker stakes the 4 Million MAD to a smart contract 
+to keep Tokens in escrow
+Upon staking, 1% of the MAD is burned
+
+The escrow of remaining 99% MAD is for trust and bookkeeping purposes
+
+Publisher exchanges their 9 MADcred for $9 USD 
+at their broker
+
+Advertiser gives broker $1M and broker buys 4 Million MAD
+MAD is worth 25 cents at the time of staking
+
+$1M worth of MAD is 4 Million MAD
+
+Publisher receives the $9 USD and returns their 9 MADcred 
+to the smart contract which burns the MADcred
+
+Advertiser spends 10 MADcred ($10) at a time
+
+1 MADcred ($1) is sent to Miners running the node
+
+9 MADcred ($9) is sent to Publisher
+
+The smart contract produces 1 Million MADcred for the advertiser
+
+MADcred are non-fungable, non-capped, and pegged to USD, 
+guaranteeing a real world value of $1M
+
+With 1 Million MADcred, the advertiser can spend $1M in the system
+
+The Advertiser is given MADbonus to incentivize system use
+
+MADbonus are non-fungable, valued at $1 each, and tied to the 
+wallet address of the smart contract’s creator
+
+MADbonus can be spent and staked to a smart contract, up to 50% 
+of the total value being staked
+
+2
+
+Now that the spot is successfully paid for, the MAD,
+which was represented by the MADcred, is released
+back to the Advertiser
+
+6
+
+4
+
+$1M
+
+$9
+
+$10
+
+4M
+
+ESCROW
+
+PUB
+
+5
+
+9C
+PUB
+
+1C
+
+9C
+
+7
+
+9C
+
+3
+
+1MC
+
+1
+
+$1M=
+4M
+
+9
+
+B
+
+
+
+Decentralized
+Ad Server
+and Exchange
+
+M A D N E T  C O R E
+
+MADnet Core is the ad server designed to execute buying and selling of advertising. MADnet Core 
+
+will be powered by our proof-of-real-work algorithm, which combs through ad requests and 
+
+campaigns to find fast feasible matches, maximizing throughput simultaneously ensuring campaigns 
+
+deliver and inventory gets monetized. Feasible matches are defined as pairings of individual ad 
+
+requests to campaigns that meet all publisher and advertiser rules including real time restrictions 
+
+such as frequency caps and industry separation.
+
+MADnet Core transactions are candidate matches and blocks are served when a sufficient number 
+
+of matches are found.  Serving a block indicates that the set of candidate matches has been validated 
+
+by other nodes checking the rule set intersection. MADnet Core serving the block includes 
+
+executing the orders corresponding to the match transactions with the publishers on behalf of the 
+
+advertisers, validates that the ad was served, and keeps an audit trail of events on MADnet Books 
+
+allowing for  near-real-time feedback to both sides.
+
+The MAD Network follows a proof-of-work protocol in which the cryptographic puzzle 
+
+constituting “work” is replaced with a real-world task.
+
+16
+
+
+
+Advertisers defined 
+rules for acceptable 
+inventory
+
+Publisher defined 
+rules for acceptable 
+
+campaigns
+
+Feasible 
+matching
+
+The proposed “real work” takes the following form: Find N advertising-to-inventory matches, 
+
+defined by the rule set intersection (see figure).
+
+A computational challenge is presented with the following properties:
+
+Key Properties of “Work”:
+
+It takes significant computational effort to find a solution
+
+It takes a comparatively trivial amount of effort to validate a solution once found
+
+There is a single parameter capable of modifying the difficulty so as to control block time
+
+Due to high volumes of ad requests and campaigns running on the network, and the incredibly high 
+
+cardinality of the rule sets, finding a match is hard. In the worst case, finding a match is a brute force 
+
+challenge with complexity, bound to be determined by the large cardinalities. As “matching rates rise,” 
+
+the number N of matches required to discover a block is increased, controlling difficulty and 
+
+establishing expected block times. The critical property that makes “ad match finding” a valid puzzle for 
+
+proof of work is the fact that verifying the rule set intersection is trivial compared to finding a match.
+
+In the best case, smarter algorithms may uncover patterns allowing a node to estimate match 
+
+likelihoods, allowing for faster mining (“matching”). Smart algorithms that “match” faster can be seen 
+
+as analogous to the addition of GPUs to the Bitcoin ecosystem — here, the parameter N ramps 
+
+significantly to control block times to the desired rate, but the difficulty feedback in the mechanism 
+
+ensures that while innovations in matching algorithms may yield short-term boons to miners 
+
+(“matchers”), the network will not lose its intended proof-of-work property as long as there is 
+
+sufficient demand for advertising.
+
+17
+
+
+
+18
+
+Note that the existing ad tech ecosystem currently serves millions of ads per second. An additional 
+
+property of this solution is the fact that the matching incentives drive the system toward a state of 
+
+being able to serve more ads per second with the same hardware, helping to ensure the network can 
+
+scale to meet the demand of the ad tech ecosystem, and getting the auditability provided by blockchain 
+
+governance, all without wasting energy on hashing computation.
+
+The proof-of-real-work scheme is subject to the criticism that miners doing ‘real work’ may find 
+
+incentives to take actions out of alignment with those of the advertisers and publishers. This is an area 
+
+of active consideration but the MADnet Core is a consortium network and therefore the 51% attack 
+
+sufficient to serve ads that fail to match the advertiser and publisher ruleset intersection would be a 
+
+transparent and corrective measures would be handled at the level of the Adledger consortium.
+
+Alternatively, nodes might find throughput efficiencies in ways that advertisers or publishers felt 
+
+unfavorable; however, this can be addressed by adding additional rules to the publisher and advertiser 
+
+rulesets to restrict the unfavorable matches from the feasible ruleset intersection. While practical 
+
+implementation challenges are expected, incentives within the consortium are sufficiently well aligned 
+
+to support proof-of-real-work for decentralized ad serving.
+
+
+
+19
+
+MADnet Data is a decentralized Data Management Platform (DMP) charged with the governance 
+
+and accounting of data usage within the MADnet Core. Miners verifying matches between 
+
+advertising campaigns and ad requests from publishers do so using 1st, 2nd and 3rd party data. 
+
+MADnet Data provides data rights management ensuring that value add data providers 
+
+contributions are accounted for and invoice-able via MADnet Books.
+
+Existing data management platforms can connect with MADnet Core via an application 
+
+programming interface (API) to provide targeted information for the serving of ads. This function 
+
+will later be replaced by MADnet Data, an extension of MADnet Core and a decentralized DMP that 
+
+captures information from the use of MAD Network and allows peers within the network to 
+
+exchange information. 
+
+We are experimenting with the use of homomorphic encryption to power atomic data swaps for 
+
+one-time-use data exchange. Impressions can ideally be served to a user without anyone knowing 
+
+the true identity of a user or their information. This prevents third parties from taking data and 
+
+selling it to competitors, and provides publishers with a vehicle to monetize their data without losing 
+
+sole possession of it. This results in an efficient market for data exchange and allows for true price 
+
+discovery of users, impressions and their associated data.
+
+Decentralized Data 
+Management 
+Platform (DMP)
+
+M A D N E T  DATA
+
+
+
+The MAD Network is a direct response to the advertising industry’s most pervasive problems, 
+
+including supply chain opacity, data leakage and profit-seeking intermediaries. By allowing ad tech 
+
+stakeholders to transact through an open blockchain network, the MAD Network will enable value 
+
+to move freely and transparently. The MAD Network will not eliminate intermediaries entirely, 
+
+but it will ensure that these intermediaries provide real value back to advertisers and publishers - 
+
+each end of the ecosystem.
+
+Each blockchain within the MAD Network will replace an existing legacy system. The ultimate 
+
+goal is to craft solutions so that industry incumbents can comfortably embrace decentralized 
+
+technologies. We are focusing our initial efforts on creating the backbone of any network, 
+
+payments, to showcase how efficient blockchain systems can be. Once advertisers and publishers 
+
+can exchange money through MADnet Books, we will build out decentralized servers and 
+
+exchanges, effectively allowing ads to be matched autonomously via smart contracts. Decentralized 
+
+data management platforms will give publishers a multitude of new ways to monetize their data in 
+
+a private and secure manner.
+
+The core objective of the MAD Network is to create an ecosystem of decentralized advertising 
+
+tools that enable trustless transactions between advertisers and publishers. For publishers, this will 
+
+mean more innovative opportunities to both utilize and monetize their data as well as establish 
+
+new customer connections, while advertisers will be able to grow their brands and better 
+
+understand their audiences.
+
+CONCLUSION
+
+20
+
+
+
+TOKEN SALE
+
+The MADtoken is the exclusive way for network participants to access the features of MADnet 
+
+Books, the decentralized payment rail powering the ecosystem. Advertisers stake the MADtoken in 
+
+Insertion Orders, which are smart contracts that specify how ads should be executed. Each Insertion 
+
+Order produces an equivalent amount of MADcred, the only acceptable payment method within the 
+
+MAD Network.
+
+The MADtoken is an ERC20-compatible token, meaning it will easily integrate with existing 
+
+decentralized infrastructure including wallets, exchanges and smart contracts.
+
+The MADtoken serves several purposes:
+
+Acts as a “software license” that activates a payment channel for the accounting, 
+
+fulfillment and reconciliation of ad delivery
+
+Incentivizes participant behavior to be aligned with the benefit of the network
+
+Bootstraps the long-term development of the MAD Network
+
+21
+
+U S E  O F  F U N D S
+
+50%
+
+15%
+
+15%
+
+10%
+
+5%
+
+5%
+
+R&D
+
+Platform
+
+Business Development
+
+Marketing
+
+Token Launch
+
+Legal
+
+O V E R V I E W
+
+MAD
+
+220,000,000
+
+$0.40
+
+ERC20
+
+$25,000,000
+
+$88,000,000
+
+December 14, 2017
+
+Symbol
+
+Total Tokens
+
+Price Per Token
+
+Token Type
+
+Fundraising Goal
+
+Implied Market Cap
+
+Token Sale Date
+
+
+
+ADLEDGER CONSORTIUM
+
+REFERENCES
+
+http://pedrolaboy.com/2017/10/13/notebook-thoughts-the-adtech-supply-chain/
+
+https://blogs.cornell.edu/info2040/2016/10/25/manipulated-prices-in-second-price-auctions/
+
+https://digiday.com/marketing/proverbial-black-box-open-exchange-auctions-transparency-problem/
+
+https://www.sans.org/reading-room/whitepapers/awareness/data-leakage-threats-mitigation-1931
+
+AdLedger is a consortium of advertising and publishing executives co-founded by MadHive, Tegna 
+
+and IBM. The consortium’s purpose is to bring transparency and data security to the ad tech supply 
+
+chain by harnessing a blockchain-backed peer-to-peer network. Examples of tangible goals that this 
+
+consortium will work to achieve are as follows:
+
+Validate placements and transactions, ensuring brand safety through greater transparency
+
+Data portability using multisignature wallets and cryptographic keys for unduplicated 
+
+campaign execution and measurement
+
+Remove layers of inefficiency in technology stacks to cure the disappearing ad dollar
+
+Cross-network identity management and attribution reporting
+
+Establish protocol around a decentralized peer-to-peer data sharing solution
+
+22
+
+
+
+MAD TEAM
+
+23
+
+Chris Powers, Project Manager
+Chris is a vice president at BTC Labs, a venture studio building a suite of decentralized 
+applications for forward-thinking media companies. He previously spent eight years in 
+Shanghai consulting for investment banks and mutual funds on the Chinese capital markets 
+before joining ICOAGE, the world’s largest ICO platform, as Director of International Markets.
+
+Konstantin Richter, Token Strategist
+A serial entrepreneur in the SaaS media space, Konstantin is an advisor to leading blockchain 
+companies like Gem, ShoCard and Po.et. He is the co-chair of the advertising consortium 
+AdLedger and CEO of Blockdaemon.
+
+Tom Bollich, Lead Architect
+Tom is an entrepreneur in the technology space, particularly in “gamification of economies.” 
+Before advising various Fortune 500 companies on “gamification,” he was a founding team 
+member and studio CTO at Zynga. Tom has been at the forefront of many disruptive trends we 
+now see as commonplace, including gamification, online casinos, real-time labor and even 
+cannabis.
+
+Adam Helfgott, Project Lead
+Adam is a CTO and serial tech entrepreneur. As the co-founder and CEO of MadHive, Adam 
+conceptualizes and builds OTT ad tech with a blockchain architecture. Adam has worked 
+directly on multiple blockchain projects and has held strategic advisory positions within several 
+leading blockchain and media companies including Gem and IMG/WME.
+
+
+
+24
+
+This Whitepaper in current form is being circulated by MAD Technologies Foundation Ltd. (“MAD Technologies”) for general information 
+
+and to invite investor feedback only on the MAD Network as presently conceived, and is subject to review and revision by the directors of 
+
+MAD Technologies, the board of advisors and/or legal advisors of MAD Technologies. Please do not replicate or distribute any part of this 
+
+Whitepaper without this section in accompaniment. The information set forth below may not be exhaustive and no part of this Whitepaper 
+
+is intended to create legal relations between a recipient of this Whitepaper or to be legally binding or enforceable by such recipient against 
+
+MAD Technologies. An updated version of this Whitepaper may be published on a date to be determined and announced by MAD 
+
+Technologies in due course.
+
+While we make every effort to ensure that any material in this Whitepaper is accurate and up to date, such material in no way constitutes the 
+
+provision of professional advice. MAD Technologies does not guarantee, and accepts no legal liability whatsoever arising from or connected 
+
+to, the accuracy, reliability, currency, or completeness of any material contained in this Whitepaper. Investors and potential MADtoken 
+
+holders should seek appropriate independent professional advice prior to relying on, or entering into any commitment or transaction based 
+
+on, material published in this Whitepaper, which material is purely published for reference purposes alone.
+
+MADtokens are not be intended to constitute securities of any form, units in a business trust, units in a collective investment scheme or any 
+
+other form of regulated investment or investment product in any jurisdiction. This Whitepaper does not constitute a prospectus or offer 
+
+document of any sort and is not intended to constitute an offer of securities of any form, units in a business trust, units in a collective 
+
+investment scheme or any other form of regulated investment or investment product, or a solicitation for any form of regulated investment 
+
+or investment product in any jurisdiction. No regulatory authority has examined or approved of any of the information set out in this 
+
+Whitepaper. No such action has been or will be taken by MAD Technologies to obtain such approval under the laws, regulatory 
+
+requirements or rules of any jurisdiction. The provision of this Whitepaper to you does not imply that the applicable laws, regulatory 
+
+requirements or rules have been complied with.
+
+MAD Technologies or this Whitepaper does not constitute or form part of any opinion on any advice to purchase, sell or otherwise transact 
+
+with MADtokens and the fact of presentation of this Whitepaper shall not form the basis of, or be relied upon in connection with, any 
+
+contract of investment decision.
+
+You are not eligible and you are not to purchase any MADtokens if you are:
+
+(a) not a Qualified Person, where “Qualified Person” means (i) an "Accredited Investor" as defined in Rule 501(a) of Regulation D under the 
+
+U.S. Securities Act of 1933, and has such knowledge and experience in financial and business matters that it is capable of evaluating the merits 
+
+and risks of the purchase of Tokens to be made by such person hereunder, or (ii) a person that is not a "U.S. Person" as defined in Rule 902(k) 
+
+of Regulation S under the U.S. Securities Act of 1933; 
+
+(b) located in the Republic of Singapore or the People’s Republic of China (“PRC”), at the time of your intended purchase/purchase of 
+
+MADtokens in the Token Sale;
+
+(c) a citizen, domiciled in, or resident of the Republic of Singapore or an entity incorporated under the laws of Singapore; or
+
+(d) a citizen, domiciled in, or resident of the PRC or an entity incorporated under the laws of the PRC, (collectively, “Excluded Persons”)
+
+PLEASE READ THIS DISCLAIMER SECTION CAREFULLY. IF YOU ARE IN ANY DOUBT AS TO 
+
+THE ACTION YOU SHOULD TAKE, YOU SHOULD CONSULT YOUR LEGAL, FINANCIAL, TAX 
+
+OR OTHER PROFESSIONAL ADVISOR(S).
+
+IMPORTANT INFORMATION
+
+
+
+25
+
+No MADtoken should be construed, interpreted, classified or treated as enabling, or according any opportunity to, purchasers to participate 
+
+in or receive profits, income, or other payments or returns arising from or in connection with the MADtokens or the proceeds of the initial 
+
+token sale (“ITS”), or to receive sums paid out of such profits, income, or other payments or returns.
+
+No person is bound to enter into any contract or binding legal commitment in relation to the sale and purchase of the MADtokens, and no 
+
+cryptocurrency or other form of payment is to be accepted on the basis of this Whitepaper.
+
+Any agreement as between MAD Technologies and you as a purchaser, and in relation to any sale and purchase, of MADtokens is to be 
+
+governed by only a separate document setting out the terms and conditions (the “T&Cs”) of such agreement. In the event of any 
+
+inconsistencies between the T&Cs and this Whitepaper, the former shall prevail.
+
+There are risks and uncertainties associated with MAD Technologies and its business and operations, the MADtokens, the MAD Network 
+
+and the ITS. Please refer to the section entitled “Risks and Uncertainties” set out at the end of this Whitepaper.
+
+This Whitepaper, any part thereof and any copy thereof must not be taken or transmitted to any country where distribution or dissemination 
+
+of this Whitepaper is prohibited or restricted.
+
+No part of this Whitepaper is to be reproduced, distributed or disseminated without including this section and the following sections entitled 
+
+“Disclaimer of Liability”, “No Representations and Warranties”, “Representations and Warranties By You”, “Cautionary Note On Forward-
+
+Looking Statements”, “Third Party Information and No Consent of Other Persons”, “Terms Used”, “No Advice”, “No Further Information or 
+
+Update”, “Restrictions On Distribution and Dissemination” and “Risks and Uncertainties”.
+
+DISCLAIMER OF LIABILITY
+
+To the maximum extent permitted by the applicable laws, regulations and rules, MAD Technologies shall not be liable for any indirect, 
+
+special, incidental, consequential or other losses of any kind, in tort, contract or otherwise (including but not limited to loss of revenue, 
+
+income or profits, and loss of use or data), arising out of or in connection with any acceptance of or reliance on this Whitepaper or any part 
+
+thereof by you.
+
+NO REPRESENTATIONS AND WARRANTIES
+
+MAD Technologies does not make or purport to make, and hereby disclaims, any representation, warranty or undertaking in any form 
+
+whatsoever to any entity or person, including any representation, warranty or undertaking in relation to the truth, accuracy and 
+
+completeness of any of the information set out in this Whitepaper.
+
+REPRESENTATIONS AND WARRANTIES BY YOU
+
+By accessing and/or accepting possession of any information in this Whitepaper or such part thereof (as the case may be), you represent and 
+
+warrant to MAD Technologies as follows:
+
+you agree and acknowledge that the MADtokens do not constitute securities of any form, units in a business trust, units in a 
+
+collective investment scheme or any other form of regulated investment or investment product in any jurisdiction;
+
+you are not an Excluded Person, or a citizen or resident of a country the laws of which prohibit or conflict with the ITS or your 
+
+participation in the ITS;
+
+(a)
+
+(b)
+
+
+
+26
+
+you agree and acknowledge that this Whitepaper does not constitute a prospectus or offer document of any sort and is not intended 
+
+to constitute an offer of securities of any form, units in a business trust, units in a collective investment scheme or any other form of 
+
+regulated investment or investment product in any jurisdiction, or a solicitation for any form of regulated investment or investment 
+
+product, and you are not bound to enter into any contract or binding legal commitment and no cryptocurrency or other form of 
+
+payment is to be accepted on the basis of this Whitepaper;
+
+you acknowledge and understand that no MADtoken should be construed, interpreted, classified or treated as enabling, or according 
+
+any opportunity to, MADtoken holders to participate in or receive profits, income, or other payments or returns arising from or in 
+
+connection with the MADtokens or the proceeds of the ITS, or to receive sums paid out of such profits, income, or other payments 
+
+or returns;
+
+you agree and acknowledge that no regulatory authority has examined or approved of the information set out in this Whitepaper, no 
+
+action has been or will be taken by MAD Technologies to obtain such approval under the laws, regulatory requirements or rules of 
+
+any jurisdiction and the publication, distribution or dissemination of this Whitepaper to you does not imply that the applicable laws, 
+
+regulatory requirements or rules have been complied with;
+
+you agree and acknowledge that this Whitepaper, the undertaking and/or the completion of the ITS, or future trading of 
+
+MADtokens on any cryptocurrency exchange, shall not be construed, interpreted or deemed by you as an indication of the merits of 
+
+MAD Technologies, the MADtokens, the ITS, and the MAD Network;
+
+the distribution or dissemination of this Whitepaper, any part thereof or any copy thereof, or acceptance of the same by you, is not 
+
+prohibited or restricted by the applicable laws, regulations or rules in your jurisdiction, and where any restrictions in relation to 
+
+possession are applicable, you have observed and complied with all such restrictions at your own expense and without liability to 
+
+MAD Technologies;
+
+You agree and acknowledge that in the case where you wish to purchase any MADtokens, MADtokens are not to be construed, 
+
+interpreted, classified or treated as:
+
+any kind of currency other than cryptocurrency;
+
+debentures, stocks or shares issued by any person or entity;
+
+rights, options or derivatives in respect of such debentures, stocks or shares;
+
+rights under a contract for differences or under any other contract the purpose or pretended purpose of which is to secure a 
+
+profit or avoid a loss;
+
+securities;
+
+units or derivatives of units in a business trust;
+
+units in a collective investment scheme; or
+
+any form of regulated investment or investment product; 
+
+(c)
+
+(d)
+
+(e)
+
+(f)
+
+(g)
+
+(h)
+
+(i)
+
+(ii)
+
+(iii)
+
+(iv)
+
+(v)
+
+(vi)
+
+(vii)
+
+(viii)
+
+
+
+27
+
+you are fully aware of and understand that you are not eligible and you are not to purchase any MADtokens if you are an Excluded 
+
+Person;
+
+you are legally permitted to participate in the ITS and all actions contemplated or associated with such purchase, including the 
+
+holding and use of MADtokens;
+
+the amounts that you use to purchase MADtokens were not and are not directly or indirectly derived from any activities that 
+
+contravene the laws and regulations of any jurisdiction, including anti-money laundering laws and regulations;
+
+if you are a natural person, you are of sufficient age and capacity under the applicable laws of the jurisdiction in which you reside and 
+
+the jurisdiction of which you are a citizen to participate in the ITS;
+
+you are not obtaining or using MADtokens for any illegal purpose;
+
+none of: (i) you; (ii) any person controlling or controlled by you; (iii) if you are a privately-held entity, any person having a beneficial 
+
+interest in you; or (iv) any person for whom you are acting as agent or nominee in connection with this ITS is a senior foreign 
+
+political figure, or any immediate family member or close associate of a senior foreign political figure. A “senior foreign political 
+
+figure” is defined as a senior official in the executive, legislative, administrative, military or judicial branch of a government (whether 
+
+elected or not), a senior official of a major political party, or a senior executive of a foreign government-owned corporation, and 
+
+includes any corporation, business or other entity that has been formed by, or for the benefit of, a senior foreign political figure.  
+
+“Immediate family” of a senior foreign political figure typically includes such figure’s parents, siblings, spouse, children and in-laws.  
+
+A “close associate” of a senior foreign political figure is a person who is widely and publicly known to maintain an unusually close 
+
+relationship with such senior foreign political figure, and includes a person who is in a position to conduct substantial domestic and 
+
+international financial transactions on behalf of such senior foreign political figure;
+
+if you are affiliated with a non-U.S. banking institution (“Foreign Bank”), or if you receive deposits from, make payments on behalf 
+
+of, or handle other financial transactions related to a Foreign Bank, you represent and warrant to MAD Technologies that: (i) the 
+
+Foreign Bank has a fixed address, and not solely an electronic address, in a country in which the Foreign Bank is authorized to 
+
+conduct banking activities; (ii) the Foreign Bank maintains operating records related to its banking activities; (iii) the Foreign Bank is 
+
+subject to inspection by the banking authority that licensed the Foreign Bank to conduct its banking activities; and (iv) the Foreign 
+
+Bank does not provide banking services to any other Foreign Bank that does not have a physical presence in any country and that is 
+
+not a regulated affiliate;
+
+you have a basic degree of understanding of the operation, functionality, usage, storage, transmission mechanisms and other material 
+
+characteristics of cryptocurrencies, blockchain-based software systems, cryptocurrency wallets or other related token storage 
+
+mechanisms, blockchain technology and smart contract technology;
+
+you are fully aware and understand that in the case where you wish to purchase any MADtokens, there are risks associated with 
+
+MAD Technologies and its businesses and operations, MADtokens, the MAD Network and the ITS;
+
+you bear the sole responsibility to determine what tax implications purchasing MADtokens may have for you and agree not to hold 
+
+MAD Technologies or any other person involved in the ITS liable for any tax liability associated with or arising therefrom;
+
+(i)
+
+(j)
+
+(k)
+
+(l)
+
+(m)
+
+(n)
+
+(o)
+
+(p)
+
+(q)
+
+(r)
+
+
+
+28
+
+you agree and acknowledge that MAD Technologies is not liable for any direct, indirect, special, incidental, consequential or other 
+
+losses of any kind, in tort, contract or otherwise (including but not limited to loss of revenue, income or profits, and loss of use or 
+
+data), arising out of or in connection with any acceptance of or reliance on this Whitepaper or any part thereof by you; 
+
+you waive the right to participate in a class action lawsuit or a class wide arbitration against MAD Technologies and/or any person 
+
+involved in the ITS and/or with the creation and distribution of MADtokens; and
+
+all of the above representations and warranties are true, complete, accurate and non-misleading from the time of your access to and/
+
+or acceptance of possession this Whitepaper or such part thereof (as the case may be).
+
+CAUTIONARY NOTE ON FORWARD-LOOKING STATEMENTS
+
+All statements contained in this Whitepaper, statements made in press releases or in any place accessible by the public and oral statements 
+
+that may be made by MAD Technologies or its directors, executive officers or employees acting on behalf of MAD Technologies (as the case 
+
+may be), that are not statements of historical fact, constitute “forward-looking statements”. Some of these statements can be identified by 
+
+forward-looking terms such as “aim”, “target”, “anticipate”, “believe”, “could”, “estimate”, “expect”, “if”, “intend”, “may”, “plan”, “possible”, 
+
+“probable”, “project”, “should”, “would”, “will” or other similar terms. However, these terms are not the exclusive means of identifying 
+
+forward-looking statements. All statements regarding MAD Technologies’ business strategies, plans and prospects and the future prospects of 
+
+the industry which MAD Technologies is in are forward-looking statements. These forward-looking statements, including but not limited to 
+
+statements as to MAD Technologies’ prospects, future plans, other expected industry trends and other matters discussed in this Whitepaper 
+
+regarding MAD Technologies are matters that are not historic facts, but only predictions.
+
+These forward-looking statements involve known and unknown risks, uncertainties and other factors that may cause the actual future results, 
+
+performance or achievements of MAD Technologies to be materially different from any future results, performance or achievements 
+
+expected, expressed or implied by such forward-looking statements. These factors include, amongst others:
+
+changes in political, social, economic and stock or cryptocurrency market conditions, and the regulatory environment in the 
+
+countries in which MAD Technologies conducts its business and operations;
+
+the risk that MAD Technologies may be unable to execute or implement its business strategies and future plans;
+
+changes in interest rates and exchange rates of fiat currencies and cryptocurrencies;
+
+changes in the anticipated growth strategies and expected internal growth of MAD Technologies and the MAD Network;
+
+changes in the availability and fees payable to MAD Technologies in connection with its businesses and operations or on the MAD 
+
+Network;
+
+changes in the availability and salaries of employees who are required by MAD Technologies to operate their respective businesses 
+
+and operations;
+
+changes in preferences of users of the MAD Network;
+
+changes in competitive conditions under which MAD Technologies operates, and the ability of MAD Technologies to compete 
+
+under such conditions;
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+(f)
+
+(g)
+
+(h)
+
+(s)
+
+(t)
+
+(u)
+
+
+
+29
+
+changes in the future capital needs of MAD Technologies and the availability of financing and capital to fund such needs;
+
+war or acts of international or domestic terrorism;
+
+occurrences of catastrophic events, natural disasters and acts of God that affect the businesses and/or operations of MAD 
+
+Technologies;
+
+other factors beyond the control of MAD Technologies; and
+
+any risk and uncertainties associated with MAD Technologies and its business and operations, the MADtokens, the MAD Network 
+
+and the ITS.
+
+All forward-looking statements made by or attributable to MAD Technologies or persons acting on behalf of MAD Technologies are 
+
+expressly qualified in their entirety by such factors. Given that risks and uncertainties that may cause the actual future results, performance or 
+
+achievements of MAD Technologies to be materially different from that expected, expressed or implied by the forward-looking statements in 
+
+this Whitepaper, undue reliance must not be placed on these statements. These forward-looking statements are applicable only as of the date 
+
+of this Whitepaper.
+
+Neither MAD Technologies nor any other person represents, warrants and/or undertakes that the actual future results, performance or 
+
+achievements of MAD Technologies will be as discussed in those forward-looking statements. The actual results, performance or 
+
+achievements of MAD Technologies may differ materially from those anticipated in these forward-looking statements.
+
+Nothing contained in this Whitepaper is or may be relied upon as a promise, representation or undertaking as to the future performance or 
+
+policies of MAD Technologies.
+
+Further, MAD Technologies disclaims any responsibility to update any of those forward-looking statements or publicly announce any 
+
+revisions to those forward-looking statements to reflect future developments, events or circumstances, even if new information becomes 
+
+available or other events occur in the future.
+
+THIRD PARTY INFORMATION AND NO CONSENT OF OTHER PERSONS
+
+This Whitepaper includes information obtained from various third party sources (“Third Party Information”). None of the publishers of the 
+
+Third Party Information has consented to the inclusion of the Third Party Information in this Whitepaper and is therefore not liable for the 
+
+Third Party Information. While MAD Technologies has taken reasonable action to ensure that the Third Party Information have been 
+
+included in their proper form and context, neither MAD Technologies, nor its directors, executive officers and employees acting on its behalf, 
+
+has independently verified the accuracy, reliability, completeness of the contents, or ascertained any applicable underlying assumption, of the 
+
+relevant Third Party Information. Consequently, neither MAD Technologies nor its directors, executive officers and employees acting on 
+
+their behalf makes any representation or warranty as to the accuracy, reliability or completeness of such information and shall not be obliged 
+
+to provide any updates on the same.
+
+TERMS USED
+
+To facilitate a better understanding of the MADtokens being offered for purchase by MAD Technologies, and the businesses and operations 
+
+of MAD Technologies, certain technical terms and abbreviations, as well as, in certain instances, their descriptions, have been used in this 
+
+Whitepaper.
+
+(i)
+
+(j)
+
+(k)
+
+(l)
+
+(m)
+
+
+
+30
+
+These descriptions and assigned meanings should not be treated as being definitive of their meanings and may not correspond to standard 
+
+industry meanings or usage.
+
+Words importing the singular shall, where applicable, include the plural and vice versa and words importing the masculine gender shall, 
+
+where applicable, include the feminine and neuter genders and vice versa. References to persons shall include corporations.
+
+NO ADVICE
+
+No information in this Whitepaper should be considered to be business, legal, financial or tax advice regarding MAD Technologies, the 
+
+MADtokens, the MAD Network, or the ITS. You should consult your own legal, financial, tax or other professional advisor regarding MAD 
+
+Technologies and its business and operations, the MADtokens, the MAD Network, and the ITS. You should be aware that you may be 
+
+required to bear the financial risk of any exchange for of MADtokens for an indefinite period of time.
+
+NO FURTHER INFORMATION OR UPDATE
+
+No person has been or is authorised to give any information or representation not contained in this Whitepaper in connection with MAD 
+
+Technologies and its business and operations, the MADtokens, the MAD Network, or the ITS and, if given, such information or 
+
+representation must not be relied upon as having been authorised by or on behalf of MAD Technologies. The ITS shall not, under any 
+
+circumstances, constitute a continuing representation or create any suggestion or implication that there has been no change, or development 
+
+reasonably likely to involve a material change in the affairs, conditions and prospects of MAD Technologies or in any statement of fact or 
+
+information contained in this Whitepaper since the date hereof.
+
+RESTRICTIONS ON DISTRIBUTION AND DISSEMINATION
+
+The distribution or dissemination of this Whitepaper or any part thereof may be prohibited or restricted by the laws, regulatory 
+
+requirements and rules of any jurisdiction. In the case where any restriction applies, you are to inform yourself about, and to observe, any 
+
+restrictions which are applicable to your possession of this Whitepaper or such part thereof (as the case may be) at your own expense and 
+
+without liability to MAD Technologies.
+
+Persons to whom a copy of this Whitepaper has been distributed or disseminated, provided access to or who otherwise have the Whitepaper 
+
+in their possession shall not circulate it to any other persons, reproduce or otherwise distribute this Whitepaper or any information 
+
+contained herein for any purpose whatsoever nor permit or cause the same to occur.
+
+RISKS AND UNCERTAINTIES
+
+Prospective purchasers of MADtokens should carefully consider and evaluate all risks and uncertainties associated with MAD Technologies 
+
+and its business and operations, the MADtokens, the MAD Network, and the ITS,  and all information set out in this Whitepaper and the 
+
+T&Cs prior to any purchase of the MADtokens. If any of such risks and uncertainties develops into actual events, the business, financial 
+
+condition, results of operations and prospects of MAD Technologies could be materially and adversely affected. In such cases, you may lose all 
+
+or part of the value of the MADtokens.
+
+
+
+31
+
+ADDENDUM
+Leveraging MadHive's status as the largest premium OTT ad buyer in the world, the MAD Network has 
+
+a realistic path for quick adoption. The road to mainstream disruption begins with television.
+
+The MAD Network’s ultimate goal is to build a decentralized infrastructure for programmatic 
+
+advertising. To attain this goal, the MAD Network must first prove its efficacy by carving out a niche.
+
+Go to Market Strategy
+
+Why is the MAD Network going after 
+OTT and TV first?
+
+The MAD strategy focuses on a TV-First rollout, beginning with regional and local advanced 
+
+television ($18B/yr market), where MadHive™ already has traction through 46 television stations 
+in 38 markets. Within 2 years, MAD plans to expand to national sales for both digital and linear 
+
+television.
+
+To start, OTT advertising and TV are rapidly growing markets. In 2022, the forecast for OTT and 
+
+TV ad revenue is over $80 billion, up from just under $38 billion in 2016. 
+
+Regional and Local Linear television
+
+National digital television
+
+Regional and Local Digital television ($13 billion industry/yr in USA)
+
+MadHive already has traction through 46 tv stations in 38 markets
+
+Step 1
+
+Step 2
+
+Step 3
+
+Step 4 Digital reac h extension
+
+
+
+32
+
+100 000
+
+80 000
+
+60 000
+
+40 000
+
+20 000
+
+0
+
+17 218
+
+2016
+
+3 837
+4 197
+
+11 756
+
+2017*
+
+23 174
+
+4 047
+4 863
+
+14 377
+
+2022*
+
+41 167
+
+5 198
+
+8 082
+
+28 999
+
+SVOD Rental DTO/EST AVOD
+
+R
+ev
+
+en
+ue
+
+ in
+ m
+
+ill
+io
+
+n 
+U
+
+.S
+. d
+
+ol
+la
+
+rs
+
+Over-the-top (OTT) TV and video revenue worldwide from 2016 to 2022, by source (in million U.S. dollars)
+
+An OTT application is any app or service that provides a product over the internet and bypasses traditional distribution; Hulu, 
+
+Apple TV, and YouTube are prime examples. OTT and TV ads consist mostly of high-end premium video, making it a very 
+
+lucrative market. The MAD Network is designed to cater to the needs of OTT and TV advertisers and publishers.
+
+Furthermore, premium OTT video accounts for only 10% of all ad inventory, but commands 40% of all 
+
+ad spend. This means OTT and TV inventory provide a lot of value for advertisers. Our goal is to 
+
+protect the high end video stakeholders from the duopoly of Facebook and Google by providing them 
+
+an alternative.
+
+Both Facebook and Google have yet to conquer the premium long form video market. Their absence 
+
+leaves a void that the MAD Network and MadHive can fill together. MadHive’s high-end video 
+
+presence combined with Facebook and Google’s absence put the MAD Network in a prime position to 
+
+capture a sizable high-end video marketshare.
+
+Conclusion
+The MAD Network team aims to improve an already profitable ad tech company, MadHive, by 
+
+constructing a decentralized infrastructure for programmatic advertising. By going after a niche and 
+
+lucrative market, the MAD Network will be able to gain early traction for fast adoption and prove 
+
+that blockchain technology is a viable solution to many of the problems in digital advertising.
+
+

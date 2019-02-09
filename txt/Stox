@@ -1,0 +1,2967 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Stox Platform for 
+Prediction Markets
+White Paper 
+V03
+
+
+
+Table of Content
+
+Table of Content 2
+
+Overview 5
+
+Introduction 6
+
+What are prediction markets 6
+
+Challenges 7
+
+Market size and projections 7
+
+About invest.com 8
+
+The Stox Token 10
+
+Purpose and usage 10
+
+Technical implementation 11
+
+Bringing cryptocurrency to the masses 11
+
+A sustainable economy 12
+
+Liquidity and volatility 12
+
+Bancor as a token platform 14
+
+The Stox Ecosystem 15
+
+Providers and operators 15
+
+Stox 16
+
+From individuals to an ecosystem 17
+
+Tools for growth 17
+
+The Stox Platform 18
+
+Events 18
+
+Event creation 18
+
+Event participation 20
+
+Event discovery 21 
+
+Syndication mechanism 21
+
+Promotional credit mechanism 22
+
+
+
+Collateral mechanism 23
+
+Oracles and dispute mechanism 23
+
+Review of platform incentives for providers and operators 25
+
+Review of platform incentives for users 26
+
+The Stox App 27
+
+Reference implementation 27
+
+Derived and customized versions 28
+
+Product concept and screenshots 29
+
+Competitive Analysis 33
+
+Augur 33
+
+Gnosis 33
+
+Stox 34
+
+Roadmap 36
+
+Milestone 1 - development of the Stox Platform 36
+
+Milestone 2 - development of the Stox App 38
+
+Milestone 3 - launch with invest.com customer network 39
+
+Milestone 4 - development of an ecosystem member SDK 39
+
+Milestone 5 - growing the ecosystem 40
+
+Funding breakdown 42
+
+Token Issuance 43
+
+Sale event 44
+
+After the event 44
+
+Founding Team 45
+
+Advisory Board 48
+
+Risk Factors 49 
+
+Regulatory Strategy 50
+
+
+
+Technical Considerations 51
+
+The Stox P2P protocol 51
+
+Stox App architecture 52
+
+Ethereum client 52
+
+Cross platform desktop framework 52
+
+Market makers 53
+
+Platform limitations 56
+
+
+
+5
+
+Overview
+
+Prediction markets are a disruptive economic instrument that has yet to penetrate mass investor 
+
+audiences due to excessive regulation and the fragility of existing centralized implementations. The 
+
+maturity of blockchain technology is poised to change that as decentralized implementations for 
+
+scalable prediction markets are within reach. 
+
+Stox is an open source, Ethereum based platform for prediction markets where people can trade 
+
+the outcome of events in almost any imaginable category - sports, celebrity marriages, election 
+
+results and even the weather. The platform targets mainstream audiences and provides a haven for 
+
+investors to find refuge from traditional financial instruments and participate in prediction events 
+
+with the purpose of making profit, leveraging their knowledge in almost any imaginable field. 
+
+Stox was designed by veterans of the online trading industry, using the knowledge and experience 
+
+acquired by invest.com. invest.com is an established online financial company which has been 
+
+operating in the investment field since 2014. invest.com’s trading platforms accommodate over 
+
+3 million registered users and facilitated more than 8 million transactions last year alone. invest.
+
+com currently employs over 200 employees across 5 countries, providing the solid foundation and 
+
+infrastructure of the franchise to bootstrap the Stox network. 
+
+Combining expertise in regulated markets together with blockchain technology creates a unique 
+
+solution for prediction markets that are tailored towards approaching the masses. Stox is creating 
+
+a robust business model that incentivizes other providers and industry leaders with existing 
+
+customer bases, such as invest.com itself, to join the Stox network and drive traffic to the network. 
+
+Event syndication between providers carries this traffic beyond the confines of a single provider. 
+
+Providers are motivated to cooperate as part of a larger network. On the other hand, users will 
+
+enjoy a well-rounded selection accommodating their diversified interests, increasing overall 
+
+engagement. 
+
+The power behind Stox is the STX digital token. All activity in the network revolves around STX, 
+
+from serving as the primary form for fees and collaterals, to serving as the main currency used  for 
+
+predicting event outcomes. STX is the driver of a sustainable economy where demand grows as 
+
+more users and providers join the ecosystem.
+
+
+
+6
+
+Introduction
+
+What are prediction markets
+ 
+Prediction markets are an exchange where any individual or organization can tap into the "wisdom 
+
+of the crowd" to ask any question or predict the result of any event. Like any other exchange 
+
+prediction platform, Stox utilizes the relevant event in the form of a stock where participants can 
+
+trade on the outcome of the event. 
+
+Predicted events are diverse and can be based on any imaginable topic such as election results, 
+
+sports, entertainment, financial instruments and even the weather. Similar to the financial markets, 
+
+which assign a price to the future estimated earnings of a stock, prediction markets assign a traded 
+
+price to a belief about the future. The market price can also be used to indicates how the crowd in 
+
+general sees the probability of the outcome of an event. 
+
+Individuals buy and sell outcome shares based on what they see as the probability at any given 
+
+moment. As long as a prediction is active, the price continues to fluctuate and indicates the 
+
+probability of an outcome according to the crowd's wisdom. 
+
+Let's assume that a certain event is given a 60% chance of happening. This percentage represents 
+
+the price of the event, in this case 0.6. As more people believe this event is going to happen, 
+
+normally because they are in possession of information about this event but sometimes just 
+
+because they are "following the crowd", more “shares" of this event outcome will be purchased 
+
+and the price will increase. On contrary, some people may predict that this event will not happen 
+
+and this opinion will effectively cause the price to drop. During the prediction period, the crowd 
+
+analyzes the chances of this event happening, creating a useful tool to understand the crowd 
+
+mindset on certain topics. 
+
+Because prediction markets represent diverse thoughts and opinions from different locations and 
+
+personal observations, they have proven to be effective as a prognostic tool, similar to economic 
+
+markets. As a result of their visionary value, prediction markets have been utilized by institutions 
+
+and large companies like Google to predict internal outcomes of product development.
+
+We believe that due to their increasing popularity, prediction markets will become a popular tool 
+
+with traders, especially as more platforms are introduced and decentralized technologies increase 
+
+trust in these systems.
+
+
+
+7
+
+Challenges 
+ 
+There are various challenges in implementing prediction markets that serve as barriers of entry to 
+
+this field and have prevented it from reaching mass adoption thus far. 
+
+Definition It is yet unclear how this activity is treated from a regulatory viewpoint. In the past, 
+
+certain prediction markets were treated as financial activities as they predicted financial 
+
+instruments and the regulator treated it as futures trading. It is clear that financial predictions will 
+
+continue to be monitored by financial regulators, however it is not certain how other predictions 
+
+such as political events, product releases etc will be governed, especially in a decentralized world 
+
+and whether such activity will be captured by online gaming regulations. Stox is committed to 
+
+following all required regulations. 
+
+Liquidity as with any exchange may also present issue. If there is not enough liquidity, investors 
+
+may be deterred from participating. Another important consequence of lack of liquidity is that 
+
+predictions might be less accurate when the amount and diversity of users is limited. 
+
+We believe that the answers to these challenges lie in decentralized platform and blockchain 
+
+technology. These innovations have the power to bring prediction markets closer to users and 
+
+increase trust in the system, its oracles and its operators. 
+
+Market size and projections 
+ 
+Prediction markets have an immense potential. Companies working in this field have tens of 
+
+thousands of active traders generating millions of dollars of trading volume. Profits are growing 
+
+exponentially. Nevertheless, none of these companies appear to be exploiting the full potential of 
+
+prediction markets. 
+
+PredictIt, a NZ-based company specializing in prediction markets, offers exchanges on political and 
+
+financial events. It launched operations on November 3rd 2014 and by March 2016 had had 29K 
+
+active traders. SMarkets is another example, it was founded in 2008 and almost doubled its trading 
+
+volume between 2014 to 2015, increasing its pre-tax profit by 1,568%.  
+
+The vast majority of companies offer prediction market services in just a single area and each of 
+
+the major areas within the prediction market arena shows growth. The global market for sports for 
+
+example was almost 50 billion dollars in 2016 and keeps growing steadily by at least 10% annually. 
+
+Financial predictions also show potential which is already seen in centralized online companies 
+
+
+
+8
+
+where daily trading volume tops $5.5 billion. These numbers are expected to grow significantly in a 
+
+decentralized environment. 
+
+Many prediction verticals are not currently available in prediction markets including weather, 
+
+current events, environmental, social, entertainment, decisions and policy set by governments and 
+
+many more. These offer great potential and the chance for users to find new ways to profit from 
+
+leveraging their interests and personal knowledge.
+
+About invest.com 
+ 
+invest.com is an established online financial services provider. The invest.com brands are at the 
+
+cutting edge of the fintech industry and their innovative platforms empower new and experienced 
+
+investors to actively manage their finances with a large variety of instruments such as currencies, 
+
+commodities, indices, CFDs, shares and automated investment strategies.   
+
+invest.com has been operating in the online investment field since 2014, serving a registered user 
+
+base of over 3 million customers. The group currently employs over 200 people in five locations 
+
+around the world - Berlin, Limassol, London, Sofia and Tel Aviv.  
+
+invest.com has experience with regulated markets and operates a legal division with expertise 
+
+in licensing and compliance in multiple territories. The group is licensed to provide cross-border 
+
+investment services in the European Union.  
+
+The invest.com group has developed a multitude of innovative investment platforms. These include 
+
+a suite of automated investment strategies which use artificial intelligence to take advantage of 
+
+market movements. These strategies, similar to quant hedge funds, are available to investors 
+
+through robo-adviser technology. This is the first time this type of investment has been made 
+
+available to retail investors.  
+
+The group’s trading platforms harness technology to offer a choice of ways to trade and are 
+
+suitable for all levels of traders. They includes leveraged trading, buying and selling stocks and 
+
+social trading where investors can follow and automatically copy others. The group has released 
+
+a web-based trading app and online investment portfolio as well as a set of popular native mobile 
+
+apps for iOS and Android. 
+
+ 
+
+ 
+
+
+
+9
+
+The invest.com Pro platform is designed for experienced traders. It gives professional investors full 
+
+control over their trades with the ability to reverse, double positions or close all trades in the click 
+
+of a button. In addition, it offers competitive spreads and deep liquidity as expected from platforms 
+
+of this caliber. 
+
+The invest.com Simple™ trading platform is tailored for introductory level investors and was 
+
+designed with the novice in mind. The platform has innovative features that help minimise risk and 
+
+simplify trading. It allows users to practise before performing actual trades and get the real trading 
+
+experience with zero risk. All practice trades are based on actual real-time market movements. 
+
+In 2016 alone, invest.com’s group achieved: 
+
+• More than $50 million revenue
+
+• A trading volume of over 8 million trades on invest.com platforms
+
+• Transaction volume of $12 billion 
+
+These achievements are due to the group’s development of innovative investment products which 
+
+focus on a user-friendly experience, their top-class marketing capabilities and excellent customer 
+
+support. 
+
+The scale of ambition in developing audacious investment products and the strong track record in 
+
+attracting and retaining customers makes invest.com an ideal partner for Stox. As a launch partner 
+
+invest.com will assume the role of an initial provider and operator of events in the Stox network 
+
+and will drive traffic into the network to help bootstrap activity using invest.com’s existing user 
+
+base. Since the Stox platform is decentralized and open for anyone, other industry leaders will 
+
+follow and join as providers as the ecosystem matures.
+
+
+
+10
+
+The Stox Token
+
+The Stox ecosystem is based on an open source cryptographic token named STX (the Stox Token). 
+
+Like other similar cryptocurrencies, STX is fractionally divisible, transferable and fungible 
+
+ 
+Purpose and usage
+ 
+Activity in the Stox ecosystem is performed primarily using STX, making the token an integral part 
+
+of the Stox platform and the driver for its economy. This includes: 
+
+• Users apply STX in the prediction of event outcomes and accordingly, profits over successful 
+
+predictions are collected in STX. Users are required to purchase STX in order to participate in 
+
+prediction markets running over the Stox network. 
+
+• Fees for participating in event predictions and investing in event outcomes are collected in STX. 
+
+These fees are the primary channel of revenue for event creators  and market makers. 
+
+• Syndication fees for promoting events between apps of different providers in the Stox 
+
+ecosystem are paid between providers in STX. 
+
+• Event operators are required to hold STX as collateral for publishing new events for users to 
+
+invest in. This means that providers are required to purchase STX in order to participate in the 
+
+Stox network and generate revenue from it. 
+
+• Event operators must hold a reserve of STX to act as a counterparty for investments made by 
+
+users on specific outcomes during the event.
+
+
+
+11
+
+Technical implementation
+ 
+The Stox token (STX) is implemented as an ERC20-compatible token over the public Ethereum 
+
+blockchain. Ethereum is the natural fit for Stox as it is quickly becoming the industry-standard for 
+
+issuing custom digital assets. 
+
+Compatibility with the ERC20 standard leverages the rich existing infrastructure of the Ethereum 
+
+ecosystem such as development tools, wallets and exchanges. The ability to program trustless 
+
+smart contracts over Ethereum with a Turing-complete language allows for robust and secure 
+
+customization of the cryptocurrency to the domain-specific requirements of the Stox network in a 
+
+fully decentralized manner.
+
+1 ERC20 is the Ethereum token standard. https://github.com/ethereum/EIPs/issues/20 
+
+ 
+
+Bringing cryptocurrency to the masses
+ 
+One of the primary goals of Stox is the introduction of decentralized prediction markets to 
+
+mainstream audiences. Such audiences are likely to have little experience with cryptocurrencies 
+
+and likely to have little to no knowledge of blockchain-based technologies. Stox is looking to expand 
+
+beyond the crypto community and focus its activity on broad audiences of regular investors in 
+
+traditional financial instruments. Similarly, catering to this audience requires expertise on part of 
+
+the application providers and operators:  acquaintance with the industry’s marketing ecosystem, 
+
+regulatory framework and UX know-how are a significant hurdle in providing a prediction market 
+
+app, without which a provider would be slow to grow to achieve critical mass required for a 
+
+successful prediction market.  
+
+As such, acquisition and utilization of STX will be made as straightforward for users as using tokens 
+
+in an online game. The complexities of opening and maintaining a cryptocurrency wallet and paying 
+
+Ethereum contract transaction fees in ether are abstracted in full by the Stox app. 
+
+Stox is developed in close cooperation with incumbents providers in the industries of stock trading, 
+
+options trading and currency trading, intending to operate as providers in the Stox ecosystem.  
+
+Incumbents are expected to be the main channel for acquiring mainstream users as they are 
+
+expected to introduce STX to their existing customer base. Our launch partner is invest.com, with a 
+
+user base of over 3 million registered users. These users will have a cryptocurrency wallet opened 
+
+seamlessly for their benefit at launch, making STX one of the most popular 
+
+cryptocurrencies among mainstream users. 
+
+https://github.com/ethereum/EIPs/issues/20
+
+
+12
+
+Incentivizing established companies and organizations that currently focus on traditional financial 
+
+tools to enter the field of prediction markets through adoption of the Stox platform and technology 
+
+will leverage their experience in maintaining active communities of investors and marketing 
+
+efficiently towards these crowds. As the blockchain market is maturing, the time is ripe for 
+
+established companies to benefit from decentralized systems and reap value from the rapid growth 
+
+of this ecosystem.
+
+A sustainable economy
+ 
+For a cryptocurrency to be successful over time, it must become the driver for a sustainable 
+
+economy. As STX is utilized by more users and adopted by more providers, the network effect 
+
+of the Stox ecosystem will grow, building the value of the ecosystem for the benefit of long time 
+
+holders and token sale participants. 
+
+A successful economy requires STX to have growing demand within the Stox network. Since 
+
+participation in event prediction requires users to acquire STX, demand for the token will grow in 
+
+proportion to the number of active users and the number of active events they invest in. Demand 
+
+will also grow in proportion to the number of active providers who rely on STX to create events. 
+
+Providers are incentivized to hold significant reserves of STX in order to provide the required 
+
+collaterals and market making reserves for running many events concurrently. 
+
+Aside from spending STX, the model also provides a means of earning STX as reward for services 
+
+given. Event providers in the Stox ecosystem such as invest.com, are compensated in fees for the 
+
+work they put towards operating events, acting as oracles and assuming the risks of functioning as 
+
+market makers. 
+
+ Liquidity and volatility 
+ 
+STX will be a single currency used both for the operation of the Stox network (transaction fees, 
+
+syndicate payments, oracle payments) and as the functional currency for predicting event 
+
+outcomes. Unlike other proposals for investment currencies, it is a flexible exchange-rate currency, 
+
+making it exposed to liquidity and volatility risks: 
+
+• Liquidity: the risk of investors unable to acquire tokens when they want to speculate on the 
+
+outcome of an event, and of users unable to sell tokens when they want to cash out.
+
+
+
+13
+
+•  Volatility: the risk of currency fluctuations between the time an investor entered the action and 
+
+purchased shares of an event outcome and the time the user wants to cash out. 
+
+These risks are a big concern for most bootstrapping markets, when the proposed service launches 
+
+together with the currency, and in the subsequent period of no or little growth of the service. 
+
+This is typical because peer-to-peer markets tend to follow an exponential growth pattern, due to 
+
+the network externalities inherent to peer-to-peer services. Several techniques are being used to 
+
+mitigate these risks, mainly usage of secondary currencies or an introduction of a pegged currency 
+
+/ stablecoins to be used by consumers. In the case of prediction markets, this comes at the price 
+
+of separating the currency used for operational mechanisms from the investment currency. Such 
+
+separation has adverse effects in thinning out the market for the operational currency, in addition 
+
+to the missing out on the advantages that flexible exchange rate currencies have against 
+
+monetary shocks. 
+
+Relying on Bancor as a token platform for STX will provide an unlimited liquidity pool and resolve 
+
+liquidity risks. Volatility risk is also mitigated as our data shows that STX will enjoy a thick market 
+
+from day one, eliminating the need for pegging or stabilization mechanism. invest.com, committed 
+
+to be the first provider on the Stox network, enjoys more than 8 million trades annually. Such 
+
+activity volume ensures the required liquidity and achieving a critical mass of end users needed to 
+
+create efficient trade.
+
+
+
+14
+
+Bancor as a token platform 
+ 
+
+We aim to implement the STX token as a Smart Token which uses the Bancor protocol to maintain 
+
+liquidity. Bancor is an ERC20-compatible token template, which offers continuous liquidity via an 
+
+on-chain market maker. The Bancor smart contract holds a reserve of another currency (BNT) 
+
+amounting to 4% of the STX market cap, and determines an appropriate exchange rate between 
+
+BNT and STX in such way that assures the BNT reserve remains at 4%. Individuals wishing to buy or 
+
+sell STX buy from, or sell to the market maker at the current price. The market maker can always 
+
+act as the counterparty to such trade, as it holds a BNT reserve with which it can buy STX, and it has 
+
+the sole permission to create STX which it can sell. Among the special properties of such token: 
+
+• Anyone can buy or sell STX at any time, without risk of not having a counterparty, and at 
+
+predetermined cost (even “slippage” - exchange rate changes during the trade - can be 
+
+calculated in advance). 
+
+• The total amount of STX in circulation can vary dynamically, as the market maker creates or 
+
+removes STX. 
+
+• The core value of an STX unit is backed by its BNT reserve, assuring holders that the token has 
+
+intrinsic value. 
+
+• BNT itself is a smart token backed by ETH, making conversion to and from ETH a simple two-
+
+step function. 
+
+More information about Bancor can be found on Bancor website and the Bancor white paper.
+
+Our data shows that STX will enjoy sufficient liquidity and volatility from day one, eliminating the 
+
+need for pegging or stabilization mechanism. invest.com, committed to be the first provider on 
+
+the Stox network, enjoys more than 8 million trades annually. Such activity volume ensures the 
+
+required liquidity and achieving a critical mass of end users needed to create efficient trade.
+
+2  https://www.bancor.network/static/Bancor_Protocol_Whitepaper_en.pdf
+
+https://www.bancor.network
+
+
+15
+
+The Stox Ecosystem
+
+The Stox Ecosystem will seek to establish a global decentralized network centered around 
+
+prediction markets where users are able to discover and participate in events created by providers 
+
+and operators. The ecosystem builds a long term cooperative operating model where providers 
+
+enjoy the opportunity to innovate and compete for compensation, and users enjoy the diversity of 
+
+experiences and the ability to profit from participating in a wide variety of prediction events. 
+
+ 
+Providers and operators
+ 
+Providers develop the prediction market client apps, based on the open source implementation 
+
+provided by Stox (the reference implementation). Providers may customize the app, to create a 
+
+user experience according to their best practice. 
+
+The roles of a provider include:
+
+• Provide users with access to the network through the original Stox app or release a branded 
+
+version of the app according to the reference implementation provided by Stox
+
+• Bring traffic into the Stox network by promoting the app to its customers
+
+Operators create events and upon time resolve their real-world outcome. Upon creating an event, 
+
+the operator determines the participation fee in that event, out of which the syndication fee will be 
+
+paid to the provider. Any entity, individual or organization 
+
+can become an operator in the Stox network. 
+
+The roles of an operator include:
+
+• Create prediction events that users will be interested in
+
+• Act as a centralized reputable oracle for these events
+
+• Provide the necessary collaterals and market maker reserves required for running these 
+
+events
+
+It is possible for a single entity to act as both a provider and an operator; similarly, a provider may 
+
+integrate prediction markets from different operators in their app.  
+
+
+
+16
+
+The model incentivizes existing companies such as invest.com to join the Stox network as 
+
+providers and operators. Hubs of similar financial instruments such as investment platforms, short 
+
+term trading platforms, binary options, Forex can capitalize on their existing customer base by 
+
+introducing them to prediction markets through Stox. Even companies such as William Hill that 
+
+focus on online betting are incentivized to adopt STX and bring their customers into prediction 
+
+markets on Stox. 
+
+invest.com will be one of the launch partners for the Stox network and serve among the first 
+
+providers and operators. This will bootstrap activity in Stox from day one.
+
+Stox
+ 
+The official entity that creates the Stox token (STX), model and technology. Stox is focused on 
+
+releasing open source cryptographic technologies that enable the decentralized operation of the 
+
+Stox network.
+
+The roles of Stox include:
+
+• Create the Stox token (STX) and execute its token event to fund  
+
+development and operation of the network 
+
+• Define the model for executing prediction markets over the  
+
+Stox network in a secure, fair and decentralized manner
+
+• Create incentives for providers to join the Stox network, adopt STX and introduce their 
+
+customer base to prediction markets on Stox 
+
+• Develop the technology required for running the network such as Ethereum smart contracts 
+
+that run prediction events 
+
+• Release the Stox app as an open source reference implementation for allowing users to 
+
+participate in the Stox network 
+
+• Promote the Stox network by forming partnerships and marketing to bootstrap activity 
+
+• Dealing with regulatory aspects of the ecosystem
+
+Stox Ltd. is incorporated as a for-profit company in Gibraltar. The revenues of Stox Ltd. will come 
+
+from consulting services to companies that are using the STX platform and from its assets. Stox Ltd. 
+
+does not operate events but may curate them in the apps it distributes.
+
+
+
+17
+
+From individuals to an ecosystem
+ 
+The power of the Stox network comes from creating a whole that is larger than the sum of its 
+
+parts. Basing operation on a common currency, STX, will generate trust for users and mainstream 
+
+audiences as well as provide a liquidity pool required for frictionless operation. Basing execution 
+
+of events on a common technology will ensure interoperability between providers and a standard 
+
+level of security and fairness throughout the network.
+
+A decentralized ecosystem provides a robust model of operation. While specific nodes can always 
+
+be shut down, without a centralized point of failure, new ones will emerge as the ecosystem keeps 
+
+growing. The infrastructure is separate from the entities that act as providers and operators, 
+
+minimizing the exposure to regulatory scrutiny and related costs.
+
+Tools for growth
+
+Providers are incentivized to bring traffic into the network and share their customers with other 
+
+operators for fair compensation. A provider’s app may display events operated by the same 
+
+provider; providers may choose to display events they operate alongside other operators’ events, in 
+
+order to provide broader selection of events; some providers may be whitelabel curators bringing 
+
+valuable events operated by 3rd parties to their users. 
+
+The syndication fee mechanism  assures that such models are beneficial to both the provider and 
+
+operator, since cross promotion of events is not a hard requirement of the network. The diversity 
+
+across a broad range of categories will guarantee users enjoy larger variety of events in their app 
+
+and find engaging matches for their personal interests and passions.
+
+
+
+18
+
+The Stox Platform
+
+Events
+ 
+Events in prediction markets constitute the basic activity that prediction actions revolves around. 
+
+An event has the format of a speculative question about the future. For example: “Who will win 
+
+the upcoming soccer match between FC Barcelona and Real Madrid?” or “What will the opening 
+
+weekend box office revenue for the upcoming Star Wars movie be?” 
+
+For simplicity and practical reasons, events on the Stox platform are required to have a discrete 
+
+and well-defined number of potential outcomes. For example the soccer match mentioned above 
+
+has three possible outcomes for a winner, either “FC Barcelona”, “Real Madrid” or “No winner” 
+
+(in case of a tie, game cancellation etc). Events with continuous outcomes, such as the opening 
+
+weekend revenue for Star Wars above, can be normalized into discrete ranges by the event creator. 
+
+Every event has a well defined and agreed upon resolution point. This is the point in time where 
+
+the speculative question about the future is given a definite answer. For example, in the soccer 
+
+match above, this is the point where the match ends and a victor is declared. The multiple potential 
+
+outcomes of the event resolve into a single outcome that is a deemed winner and all other 
+
+outcomes are deemed losers.
+
+Event creation
+ 
+The Stox platform is a decentralized system which allows events to be created by anyone, including 
+
+users. In practice, we expect the vast majority of events to be created by providers. Creating events 
+
+of quality is a laborious process that takes expertise. Consider events related to sports - this would 
+
+includes following the various leagues, processing a realtime feed for every match in the list of 
+
+available sports and formalizing an event for each one detailing the potential outcomes. 
+
+We expect different providers to focus on different niches of events. One provider might focus 
+
+on sports events in certain leagues, while another might focus on politics in a certain country 
+
+and a third might focus on movies and entertainment news. Users are expected to participate in 
+
+prediction events they feel a strong affinity towards. Identifying these tastes and crafting events 
+
+that will spark a passionate debate is the art practiced by seasoned event operators. 
+
+A new event is created by publishing a smart contract to the blockchain. 
+
+ To create the smart contract, the operator determines the following parameters:
+
+ 
+
+
+
+19
+
+• Formal description; The formal phrasing of the speculative question the event is attempting to 
+
+predict. For example “Who will win the soccer match on date 1/1/18 between FC Barcelona and 
+
+Real Madrid?” 
+
+• List of potential outcomes; A discrete list of all potential outcomes for the event. When the 
+
+event is resolved, a single element of this list will be deemed winner. 
+
+• Oracle; Identity and characterization of the entity or process that will declare the official 
+
+outcome of the event at the point of resolution. 
+
+• Participation fee; The event creator defines the fee charged from users for participating in 
+
+investing in specific event outcomes. The fee is defined as a percentage from the investment 
+
+made by a user. The event creator is free to make the fee as high or low as they want as fees 
+
+are ultimately paid to them. Part of the fee can be reserved for event syndication by other 
+
+providers bringing traffic to this event. The size of this part is also defined by the game creator. 
+
+For example, the total fee for the game is 1%, out of which 30% is given to the provider who 
+
+brought the user who made the investment. 
+
+• Collateral; To protect users from fraud and make sure deliberate false reporting by an oracle 
+
+cannot be profitable, operators need to provide a collateral securing the event. Collateral can 
+
+be put per-event, as a collateral in STX which is locked in a smart contract for 24 hours past 
+
+event resolution by the oracle, or by linking the event to the operator’s CR collateral. Depending 
+
+on the collateral type, its amount must surpass a defined proportion to the total amount of 
+
+active investments in all outcomes. If a user disputes the oracle’s report on the event and wins 
+
+this dispute, part of the collateral will be lost. The exact amount lost is proportional to the total 
+
+investment amount on losing outcomes and divided between all users that have suffered a 
+
+loss. However, all disputes are made publicly and we expect operators to strive to eliminate 
+
+false reporting on both small and big events for risk of affecting their reputation. 
+
+• Market maker reserve; The event creator acts as a market maker for the event by providing a 
+
+reserve in STX towards bootstrapping prediction as the counterparty for the first investments. 
+
+The reserve size affects the rate at which the LMSR market maker adjusts the prediction ratios 
+
+of the different outcomes. This reserve is expected to return to the operator, although it may 
+
+diminish or grow as a result of the actual distribution of user speculations.
+
+
+
+20
+
+Event participation
+ 
+
+All investments in prediction of event outcomes are made with STX. A user can invest in a certain 
+
+outcome with this workflow:
+
+• The user performs a call to the smart contract’s “buyOption” method with the following 
+
+parameters: 
+
+• Amount of STX to spend on shares of the outcome
+
+• The potential outcome to invest in
+
+• Provider address (for transferring syndication fees)
+
+• Optionally, a maximum price for outcome options
+
+• The “buyOption” method is executed on the blockchain, allocating the caller with outcome 
+
+shares according to the current market price.
+
+• The amount of invested STX is locked in the contract until the event resolves, and the user is 
+
+allocated outcome shares on the blockchain.
+
+• Participation fees are deducted from the bet amounts according to the percentages defined on 
+
+event creation. Syndication fees are deducted from the participation fees. Each fee is sent to its 
+
+addressee.
+
+• The user may liquidate part or all of her outcome shares by calling the “sellOption” method of 
+
+the smart contract.
+
+• If the user didn’t sell all her outcome shares, she waits until the event is resolved and the oracle 
+
+reports the outcome of the event
+
+• If the user has shares of the correct outcome, she calls the “collect” method of the smart 
+
+contract. The method will send its caller with the gained amounts according the the amount of 
+
+outcome shares the caller has.
+
+• In the next 24 hours, any user can choose to dispute the oracle’s report by sending STX to the 
+
+dispute smart contract. This will trigger a dispute process that is outlined below. 
+
+At any given point in time, users can see the current prediction of the market on event outcome. 
+
+The prediction ratios are calculated according to the total amount of STX placed on each of the 
+
+event outcomes. 
+
+ 
+
+
+
+21
+
+When a user participates by placing STX on an event outcome, they are effectively buying shares of 
+
+the outcome payout. If the event resolves to a different outcome, shares of the losing outcomes are 
+
+worth zero and STX placed on the outcome is lost. If the event resolves to the predicted outcome, 
+
+the user may collect her share of the payout according to the amount of outcome shares they 
+
+have. The price of outcome shares fluctuates as the event progresses and more investments are 
+
+made. The price is derived from a variant of LMSR market maker algorithm, coded into the event 
+
+participation smart contract, which takes into account the total amount of STX placed so far on 
+
+each of the potential outcomes. More details on market makers and LMSR are provided in the 
+
+technical considerations section below.
+
+The steps outlined above are performed by users using the official Stox app or a derivation of this 
+
+reference implementation app released by a specific provider. The purpose of the apps among 
+
+others is to abstract the technicalities of the process and provide an easy to use product with 
+
+minimal friction and a great user experience.
+
+Event discovery
+ 
+Provides act as curators of events, maintaining up-to-date databases of categorized events, and 
+
+distributing these databases to client apps using decentralized file storage network (see “Stox P2P 
+
+Protocol” in the technical considerations section below). 
+
+The reference implementation of the app sorts events by default and display active events first 
+
+(events with at least one investment made on one of its outcomes). Providers may distribute 
+
+proprietary apps derived from the reference implementation, in which they can choose other 
+
+sorting methods and filters to use on displayed events.
+
+Syndication mechanism
+
+Events have part of their participation fee designated for syndication by providers who bring 
+
+traffic to the event. When an outcome investment is placed by a user via the event smart contract, 
+
+and this activity was facilitated by the syndication mechanism by another provider, this provider 
+
+address must be included in the transaction. If there is no syndication involved, the operator’s 
+
+address should be used. Syndication fees are paid directly to this address. 
+
+Using this mechanism, providers are incentivized to share their own traffic with events from other 
+
+providers and help their own customers discover events created by others. 
+
+
+
+22
+
+This mechanism enables providers to engage their users in other operators’ events, when the 
+
+provider’s collection of self-operated events does not suffice. The provider is paid for his part 
+
+in bringing the user to the event, compensating for the sales and marketing costs of such. The 
+
+mechanism assures the user remains in the provider’s app, helping the provider to retain his 
+
+customers rather than risk losing them. 
+
+Unrelated to the syndication mechanism, providers may have their own traditional affiliate 
+
+programs to incentivize traditional affiliates (who deal with traffic) to promote their apps. In this 
+
+case, any user the affiliates bring to the provider and is staying in the provider’s app for a long time 
+
+period, is expected to yield a larger reward. These programs may form separately and the Stox 
+
+platform is not directly involved in them.
+
+Promotional credit mechanism
+
+Providers can provide users with promotional credit in order to reduce barriers for first play. 
+
+Similar mechanisms have been used successfully in related industries and have shown to increase 
+
+user engagement with the platform in a significant manner. This mechanism has been adapted to 
+
+the decentralized nature of Stox. 
+
+Using promotional credit, users can start playing and place STX on outcomes before going through 
+
+the friction of buying STX. Promotional credit is given in STX. The provider can set an expiry time for 
+
+this credit. If set, the STX credit will return to the provider address unless used on an event before 
+
+the expiry time. 
+
+Promotional credit mechanisms are subject to Sybil attacks. It’s under the provider’s responsibility 
+
+to mitigate this risk and make sure that users that are about to receive credit are not fake ones. 
+
+The provider can use any validation method for this purpose, for example verify the user’s phone 
+
+number. 
+
+The promotional credit mechanism is implemented as part of the Stox token smart contract. When 
+
+promotional credit is given, a new Ethereum wallet is created for the user. This wallet is marked in 
+
+the on-chain ledger as a promotional one with the required expiry time. Tokens from this wallet 
+
+can only be used to participate in an event prediction. This is enforced by allowing tokens from 
+
+this wallet to only be sent to specific event smart contracts (as investment in outcome shares). 
+
+Promotional credit can be locked to events created by the issuing provider only, and will  return 
+
+unspent credit back to the provider if the expiry time has passed.
+
+
+
+23
+
+Collateral mechanism
+
+Event operators are required to provide a collateral in STX which is locked in a smart contract for 
+
+24 hours past event resolution. The collateral amount should be proportional to the amount of STX 
+
+placed on all outcomes. 
+
+One of the purposes of the collateral is incentivizing event operators to choose trustworthy oracles 
+
+and report event outcomes accurately. If there was a successful dispute on this event, the losing 
+
+parties which invested in losing outcomes would receive part of the collateral in proportion to their 
+
+total losses. 
+
+Should the collateral be made to be required or optional? If the collateral is required, the barrier 
+
+for creating events is increased and regular users will create significantly less events by themselves. 
+
+This is probably not a problem since we expect most quality events to be created by providers. If 
+
+the collateral is optional, we are trusting in users to prefer events with high collateral. Our current 
+
+recommendation is making the collateral required. 
+
+How high should the collateral amount be? A general guideline is that the collateral should be 
+
+high enough to compensate losing parties in case of dispute. We can allow event operators to put 
+
+more tokens than needed into the collateral to generate more trust with users. If a mechanism 
+
+that reverses all event payouts on a successful dispute is implemented, this will also guard 
+
+against investor loss due to incorrect reports and can make the required collaterals smaller. The 
+
+drawback of this approach is reducing market activity due to freezing event profits for 24 hours 
+
+on average past an event end. The two different approaches can be experimented with during the 
+
+development process to measure their effect in practice.
+
+Oracles and dispute mechanism
+ 
+One of the challenges in implementing a trustless decentralized system for prediction markets is 
+
+event resolution. Decentralized implementations traditionally rely on trustless smart contracts that 
+
+are executed on-chain. Smart contracts are limited in their ability to read data outside the chain 
+
+because there is no way to guarantee different nodes will receive the same results or that the 
+
+results will not be manipulated. Since the majority of events are tied to actual events taking place in 
+
+the real world, the source of truth for their outcome is naturally external to the chain.
+
+ 
+
+
+
+24
+
+The common solution to this problem is relying on an oracle to report event outcome from the 
+
+real world onto the chain. Once the oracle has reflected external outcome on-chain, this data is 
+
+available for consumption by the various smart contracts implementing the system.
+
+One of the design principles behind the Stox platform is no compromise on practicality of actual 
+
+use. The purpose of the Stox network is to become the leading enabler for high scale prediction 
+
+markets and encourage mass participation of mainstream users in prediction events. As such, 
+
+mechanisms like decentralized oracles with slow convergence and resolution times are impractical 
+
+and provide a subpar user experience. Instead, we propose a mechanism of fast resolving 
+
+centralized oracles protected by a decentralized dispute mechanism. 
+
+When creating an event, its operator is required to specify the address of the oracle associated 
+
+with the event. The platform is agnostic to oracle type, so decentralized oracles can be used as well, 
+
+but in practice we expect most event operators to specify their own address as oracles, so that the 
+
+operator’s private key is required to sign the oracle report. This means many oracles in the system 
+
+will be inherently centralized. The system transforms every centralized oracle into effectively a 
+
+decentralized one by providing a decentralized dispute mechanism for users who disagree with an 
+
+oracle’s report. 
+
+Various approaches for resolving disputes in a decentralized manner are considered. The default 
+
+method is to resolve disputes using consensus from other members of the Stox network. The 
+
+mechanism follows the frontrunner method: the disputing party must place tokens on the line 
+
+against the oracle report. Anyone in the network can agree or disagree and put tokens on the 
+
+line as well. The frontrunner is the side (agree/disagree) that has the most tokens on the line so 
+
+far. If the frontrunner doesn’t change in a period of 24 hours, we have a victory and the dispute 
+
+is resolved. The victorious side shares all the tokens from the losing side, which is penalized by 
+
+losing all tokens put on the line. This dispute mechanism can be implemented in a trustless and 
+
+decentralized way using a dedicated smart contract. 
+
+An alternative model for dispute resolution relies on polling of random users of the ecosystem as to 
+
+the true event outcome. Ideally, only users who aren’t involved in the disputed event will be picked. 
+
+In addition, chances of being picked should depend on amount of STX held to deter Sybil attacks. 
+
+Users will be incentivized to respond to the poll using funds from the collateral (if the dispute wins) 
+
+or the disputing party (if the dispute loses). 
+
+We expect the majority of events in the Stox ecosystem to be created by established providers. 
+
+Since providers are compensated in proportion to the volume of STX placed on outcomes of their 
+
+events, successful providers will grow by increasing their customer base and attracting more traffic. 
+
+Creating a loyal customer base goes hand in hand with maintaining a trustworthy brand. This 
+
+
+
+25
+
+gives strong incentivization for providers to act as truthful oracles and avoid public disputes of its 
+
+reporting, rendering the dispute mechanism unnecessary in practice in the vast majority of cases.
+
+Review of platform incentives for providers and operators
+ 
+The Stox platform model provides the following incentives for providers and event operators:
+
+• Operators are incentivized to create popular events because they profit directly from 
+
+investment fees charged for participating in these events. 
+
+• Syndication fees incentivize providers to advertise to customers and promote Stox in order to 
+
+get traffic for their events. 
+
+• Providers are incentivized to serve as truthful oracles and report event results accurately. If 
+
+a provider fails to do so, it stands to lose its collateral under a dispute process. In addition, it 
+
+jeopardizes the reputation it has won with its customers. 
+
+• Providers are incentivized to share their own traffic with syndicated events and help their own 
+
+customers discover events by other providers. If a user did not find a suitable game in the 
+
+provider’s portfolio of self-operated events, it makes sense for the provider to promote events 
+
+from other providers, earning a syndication fee and keeping the user engaged. 
+
+• Providers are incentivized to participate in the token sale and hold significant amounts of STX. 
+
+Since collateral and reserve are required for creating a large number of concurrent events, a 
+
+provider will need to hold STX to grow and create more events. Special discount is offered for 
+
+sale of tokens intended for operator use. 
+
+• Providers are incentivized to customize the reference implementation of the Stox app and 
+
+release it with their own branding. Once users choose this app, there’s better chance for 
+
+retention and repeat use. If providers make smart use of syndicated events, users are unlikely 
+
+to use multiple Stox-ecosystem apps, since they’re likely to contain the same events. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+26
+
+Review of platform incentives for users 
+
+The Stox platform model provides the following incentives for users: 
+
+• Users have a single significant incentive under the model - play in a prediction market with 
+
+a chance to win more money than you put in. This financial instrument is not available to 
+
+most users due to excessive regulation, so a decentralized approach that prevents external 
+
+regulation lowers the barrier of participation for everyone. 
+
+• New users can be incentivized to start playing by receiving promotional credit from a provider. 
+
+• Users are incentivized to open a dispute against an oracle report only if this report isn’t truthful. 
+
+By jeopardizing more tokens for dispute, users are deterred from abusing the dispute process. 
+
+
+
+27
+
+BitTorrent (via easy to use web-based client interfaces like instant.io) to guarantee they are resilient 
+
+and always available. PGP signature of the binary will be placed on the official website and will allow 
+
+users to verify that the binary has not been tampered with. 
+
+Once a user downloads the app binary successfully, they will be able to run it locally on their 
+
+computer. The app will provide a fully functional P2P prediction market client. Anyone will be able 
+
+to use the app to place actual STX on event outcome and use the product in real life. Since the 
+
+app is designed to be completely peer to peer, it does not rely on any centralized points of failure. 
+
+Future versions of the app will include a mobile version that will run natively on iOS and Android 
+
+devices and web-based versions that will run inside a web browser without the requirement of local 
+
+installation.
+
+ 
+Reference implementation
+
+The official Stox app will be published as open source software on GitHub and serve as the formal 
+
+reference implementation for a fully compliant client to the Stox network. To maintain compatibility 
+
+with the Stox network, the following aspects of the app must be maintained:
+
+• Reliance on STX as the token of choice for all network activity
+
+• Usage of the official Ethereum smart contracts of the Stox platform
+
+• Compliance with the Stox P2P protocol for peer-to-peer event discovery
+
+The Stox App
+
+Stox will develop and publish a client for the Stox platform in the form of a fully functional 
+
+prediction market app. The app will be open source and implement the user side of the model 
+
+including on-chain access over Ethereum to Stox smart contracts and access to content, listings and 
+
+event metadata from decentralized cloud storage.
+
+The app is aimed to run on the following platforms:
+
+• Native application for Windows
+
+• Native application for Mac
+
+• Native application for Linux
+
+• Native application for Android 
+
+Besides source code, Stox will place a pre-built version of the app binary for download in multiple 
+
+public locations on the web. These public locations may include decentralized networks like 
+
+
+
+28
+
+Derived and customized versions
+
+Any entity, individual or organization is encouraged to alter the official reference implementation 
+
+and release their own branded and customized client to the Stox network. This is true for providers 
+
+in particular as they are encouraged to perform this process in order to provide their customers 
+
+with their branded experience. By specifying their own provider address as a syndication address 
+
+when calling event methods, providers will enjoy the syndication fee paid by third party operators 
+
+for investments made by users of their app. 
+
+Stox will publish an open source customization SDK with tutorials and documentation to make the 
+
+customization process as easy as possible. This is crucial for encouraging providers such as invest.
+
+com to adopt Stox while retaining their own brand identity. 
+
+ The following aspects of customization will be officially supported and documented: 
+
+• Changing the UI, graphics, colors and branding of the app
+
+• Setting the provider address for syndication fee settlements
+
+• Modifying the UX for participating in an event in order to provide innovative industry-specific 
+
+event experiences
+
+• Customization of the event discovery process by changing the filters and sort order of displayed 
+
+events from across the network 
+
+It is important to emphasize that derived and customized app implementations are not forks of 
+
+the Stox platform and are not forks of the Stox token STX. Derived implementations are simply a 
+
+different client for the same network providing a different user experience while maintaining the 
+
+core characteristics of the network such as reliance on STX for event participation.
+
+  
+
+ 
+
+
+
+29
+
+Product concept and screenshots
+
+ Illustration 1 - Exploration and event discovery in multiple categories
+
+Illustration 2 - Detailed listings of active prediction events ready for participation
+
+
+
+30
+
+Illustration 3 - Event filtering by category
+
+Illustration 4 - Account overview and STX balance
+
+
+
+31
+
+Illustration 5 - Details about a specific event with ratio history
+
+Illustration 6 - Managing an active prediction in real time as event progresses
+
+
+
+32
+
+Illustration 7 - Platform history and closed predictions
+
+Illustration 8 - Mobile App platform
+
+
+
+33
+
+Competitive Analysis
+
+Prediction market platforms are among the more successful projects utilizing blockchain 
+
+technology and applying it to a real world use case. The market has reached a certain maturity 
+
+and several excellent implementations are already available. This section aims to discuss the 
+
+differentiators of Stox compared to competing implementations.   
+
+Traditional option markets and betting exchanges have provided a centralized platform for 
+
+predicting discrete events outcomes. These platforms have always attracted users, proving beyond 
+
+doubt the appeal of prediction markets to the masses. These centralized platforms are plagued 
+
+by over-regulation and are limited in their capacity to serve broad audiences. Since they are not 
+
+competing directly with Stox due to the decentralized nature of the Stox platform, they are beyond 
+
+the scope of this discussion. 
+
+Stox is introduced to a market already offering two prominent decentralized implementations 
+
+- Augur and Gnosis. Both carried out successful ICOs and paved the way for blockchain-based 
+
+solutions in this field. The estimated target market for these solutions goes well beyond the crypto 
+
+community and is large enough to host multiple projects  focusing on different aspects of the 
+
+problem. Moreover, we expect that because the different solutions can each have advantages in 
+
+their area of focus, there could be opportunities for arbitrage between events on the different 
+
+networks.
+
+Augur
+ 
+Augur is a hub for market making activity, giving ample focus to generating data and testing 
+
+prediction market theory in an applied setting but with a declaratively purist approach. For 
+
+example, Augur’s oracle system is completely decentralized which is fully aligned with the ideals of 
+
+a truly trustless and fair system. The trade-off of this approach is that events are slow (8 weeks) to 
+
+resolve and the feedback cycle for event participants becomes impractical for most mainstream 
+
+audiences looking for a viable investment channel.
+
+Gnosis
+ 
+Gnosis, on the other hand, positions itself as a platform for building decentralized prediction 
+
+market applications with focus on the production of actionable information. The project looks far 
+
+beyond the trade engine and the economy of prediction markets as a business, and declares a 
+
+mission of transforming the large set of prediction market data points into meaningful information 
+
+
+
+34
+
+that can be utilized by human and AI decision-making agents. The end goal revolves around 
+
+knowledge - making it simpler and easier for users to gain insights into complex topics and make 
+
+more well-informed decisions. This focus opens up a diverse world of indirect applications for 
+
+prediction markets such as insurance and asset hedging.
+
+Stox
+
+Stox is designed, first and foremost, as a practical framework for mainstream investments in 
+
+prediction markets. Several key factors in its structure were put in place to accommodate proven 
+
+business practices in distribution and operation of prediction markets, for example:
+
+• Smart contracts that process syndication fees, enabling incumbent marketing channels and 
+
+cross promotion of events between different providers;
+
+• Smart contract support for promotional credit, enabling marketers to lock tokens for use with a 
+
+specific provider and limiting their lifetime;
+
+• Capital requirements on operators are aligned with common regulator requirements for MSBs 
+
+and betting licenses;
+
+• Quick event resolution, separate from dispute processing;
+
+• A liquidity-sensitive market maker, curbing the operator’s need to predict amount of activity in 
+
+an event for determining the optimal market-maker deposit
+
+The focus of Stox is to create a sustainable economy revolving around a functioning prediction 
+
+market where investors can find refuge from traditional financial instruments and participate in 
+
+prediction events with the purpose of making profit. Stox views prediction markets as a business, 
+
+where those who possess information of a greater quality and are able to make better informed 
+
+decisions can leverage this knowledge for personal material gain by investing STX in event 
+
+outcomes. 
+
+For Stox to carry out its mission, the trade engine must be practical and able to operate at a 
+
+velocity that satisfies its users. This, for example, lead us to design the oracle mechanism with the 
+
+assumption that it would usually use a centralized oracle, which - contrary to the decentralization 
+
+ideal - mainstream users do not normally consider a disadvantage.
+
+The main utilization of the Stox token serves the same goal - driving the economy. STX is an integral 
+
+part of the prediction and investment process. It serves more than a sideline mechanism for oracle 
+
+
+
+35
+
+reports, and it goes beyond being an alternate currency for fees. All activity in the Stox network 
+
+revolves around STX. In addition to serving as the primary form for fees and collaterals, it is also 
+
+the main currency participants use for investing in event outcomes. The fact that STX is a special-
+
+purpose currency enables providers to offer their customers with exchange services from fiat, 
+
+without needing to become general-use exchanges.
+
+Stox was designed by veterans of the online trading industry, using the knowledge and experience 
+
+acquired by invest.com, an established online financial company which has been operating in the 
+
+investment field since 2014. invest.com’s trading platforms accommodate over 3 million registered 
+
+users and facilitated more than 8 million transactions last year alone. invest.com currently employs 
+
+over 200 employees across 5 countries, providing the solid foundation and infrastructure of the 
+
+franchise to bootstrap the Stox network.
+
+Combining expertise in regulated markets together with blockchain technology creates a unique 
+
+solution for prediction markets that are tailored towards approaching the masses. Stox is creating 
+
+a robust business model that incentivizes other providers and industry leaders with existing 
+
+customer bases, such as invest.com itself, to join the Stox network and drive traffic to the network. 
+
+Event syndication between providers carries this traffic beyond the confines of a single provider. 
+
+Providers are motivated to cooperate as part of a larger network. On the other hand, users will 
+
+enjoy a well-rounded selection accommodating their diversified interests, increasing  
+
+overall engagement.
+
+ 
+The following table summarizes the key differentiators between the three platforms:
+
+Stox Gnosis AugurFeature
+
+Scalable platform
+
+Business model for growth via providers
+
+Support for decentralized oracles
+
+Diverse applications such as insurance
+
+Critical mass of users on launch
+
+Unlimited liquidity using Bancor protocol
+
+All funds held by contract
+
+Focus on single token economy
+
+Quick market resolution
+
+Past experience in regulated markets
+
+
+
+36
+
+Roadmap
+
+The end goal for Stox is to create the leading decentralized prediction market used by mainstream 
+
+audiences by maintaining a thriving ecosystem of users looking to invest in event outcomes and 
+
+providers looking to create events and be compensated for operating them. The main role of Stox 
+
+is to develop the open source technology required for running the decentralized Stox platform and 
+
+network and create a successful model incentivizing both users and providers to join the network. 
+
+The Stox platform is built with the solid foundation of invest.com’s infrastructure, resources and 
+
+franchise. invest.com’s main product to date is an investment and trade platform with multiple 
+
+apps used in production by investors in traditional markets over a large variety of financial 
+
+instruments such as currencies, commodities, indices, shares and CFDs. Apps include both a 
+
+web-based trade platform and online portfolio management and a set of native mobile apps 
+
+for iOS and Android. invest.com’s products cater both to professional investors and hobbyists 
+
+/ first-time traders. Invest Pro platform is optimized for professionals while the Invest Simple™ 
+
+platform is optimized for a user-friendly experience with intuitive controls abstracting most of the 
+
+complexity behind online trading. The experience gained by catering both types of audiences is 
+
+key to designing an easily accessible platform for prediction markets that will successfully engage 
+
+mainstream audiences. 
+
+invest.com’s experience with regulation and ability to bootstrap the network with its existing 
+
+customer base will drive traffic to the Stox network from the first days after launch. invest.com will 
+
+also leverage its ties in the trade field to bring additional established partners as event providers to 
+
+the Stox network.
+
+Milestone 1 - development of the Stox Platform
+ 
+The first milestone after raising funds through the token sale is implementation of the 
+
+decentralized Stox platform according to the guidelines outlined in this white paper. We are seeking 
+
+feedback from the community regarding the specifics of the model and plan to iteratively improve 
+
+the model in order to reach a platform that is both secure and fair.  
+
+Some of the model parameters, like collateral amount requirements, will be tweaked over time in 
+
+a discretionary manner and according to feedback by experimenting over actual events to analyze 
+
+
+
+37
+
+actual impact on operation of the network. 
+
+The main part of the decentralized platform will be implemented as a set of Ethereum smart 
+
+contracts carrying out the behaviors described in the Stox Platform section of this document. The 
+
+official smart contracts will be published as open source software on GitHub. The contracts include 
+
+implementation for:
+
+• ERC20-compatible implementation of the STX token itself including basic functionality like 
+
+trading tokens between addresses
+
+• Creation of a prediction event, specifying the formal description, discrete list of potential 
+
+outcomes, identity of the oracle, participation fee particulars and syndication fee particulars
+
+• Per-event collateral system locking an STX amount from event creation until 24 hours after 
+
+game resolution
+
+• Provider CR collateral system locking an STX amount for long periods, which can be used as 
+
+alternative to the per-event collateral system
+
+• Market maker implementations, with both a standard LMSR and a Liquidity-Sensitive 
+
+automated Market Maker variant, controlling the current price of outcome shares based on 
+
+total STX placed on the various event outcomes
+
+• Ability for event investors to buy and sell event outcome shares according to the LMSR market 
+
+makers during an active event that has not been resolved
+
+• Verification of an event details, reading its various parameters, current totals of STX placed on 
+
+the various outcomes and the current prediction ratios
+
+• Oracle report mechanism for game resolution
+
+• Dispute mechanism for users to object to oracle report jeopardizing 
+
+the event creator collateral
+
+• Promotional credit mechanism locked for participation in events by specific providers for a 
+
+limited amount of time until refund
+
+
+
+38
+
+Milestone 2 - development of the Stox App
+
+While the first milestone concentrates on backend of the system, the second milestone 
+
+concentrates on frontend and end user experience. Stox will release a reference implementation 
+
+of the Stox app according to the guidelines specified in the relevant section of this document. The 
+
+app will be released as open source software on GitHub. Conceptual screenshots of the app can be 
+
+seen as well in the relevant section. 
+
+The app is planned to be developed using cross-platform web technologies using the electron 
+
+framework. The app will include a thin Ethereum client based on a standard open source 
+
+implementation that will allow the app to communicate with the various smart contracts that make 
+
+the Stox platform. Initial versions of the app will be published in various online locations to allow 
+
+users to download and operate the app without building it themselves from source code. 
+
+Planned functionality of the app in the reference implementation includes: 
+
+• Ability to create an STX wallet, see current balance and perform basic transactions
+
+• Ability to buy and sell STX using various fiat currencies using dedicated specialized third party 
+
+providers which will provide a streamlined process
+
+• Ability to consume promotional credit
+
+• Security and protection of the local wallet operated by the app
+
+• Event discovery using a event categories published by various providers and a sorted list of 
+
+events under each one
+
+• Search and filter of events during the event discovery process
+
+• Event details screen explaining the formal question, event details, various outcomes and 
+
+current investment ratios for every outcome
+
+• Calculator of event participation showing the potential profit and loss per investment amount 
+
+on a specific outcome
+
+• Ability to participate in an event and invest STX in a specific outcome
+
+• List of active predictions and the current profit/loss ratio for each one with the ability to cash 
+
+out instead of seeing the event through
+
+
+
+39
+
+ 
+
+Milestone 3 - launch with invest.com customer network 
+
+As development of the platform and app moves forward in parallel, the first execution milestone 
+
+of the model is using customer infrastructure provided by invest.com. By leveraging invest.com’s 
+
+ability to market the app to its existing active user base, mainstream traffic will be directed towards 
+
+the Stox network and real users will be introduced to an operable prediction market. 
+
+In order to test and tweak the platform and app implementations as early as possible, this process 
+
+will not wait until development is finalized. We plan to launch experimental beta versions of both 
+
+as soon as a minimum viable product is available. User participation in the network may be limited 
+
+during initial testing periods. 
+
+It is important to emphasize that invest.com will only be the first provider, bootstrapping network 
+
+activity. Additional established providers interested in experimenting with the network in its earliest 
+
+beta stages are welcome to join; the platform is fully decentralized and does not favor one provider 
+
+over another. They can choose to provide and distribute their own Stox-based app (becoming 
+
+“providers”), or create events, provide the oracles to resolve them and act as market makers during 
+
+user participation in investing in event outcomes (“operators”).  
+
+One of the goals of the initial launch is to experiment with various model parameters and 
+
+analyze their effect over network behavior with actual users. We believe that without practical 
+
+measurements and analytics, we will not reach an optimum of incentives for both users and 
+
+providers.
+
+Milestone 4 - development of an ecosystem member SDK
+
+While bootstrap of the Stox network is expected to take place with initial launch partners such 
+
+as invest.com, the network will not thrive until more providers join in. The model incentivizes 
+
+providers to compete for compensation by creating events in the network. Providers are also 
+
+expected to drive traffic into the network by marketing an app to their existing customers. 
+
+ 
+It is expected that not all providers will choose to market the official Stox app and prefer a branded 
+
+version of the app that will prioritize their own events over third party events in the network 
+
+and maintain the relationship with their own customers under their own brand and their own 
+
+control. The purpose of the ecosystem member SDK is to make rebranding of the reference 
+
+implementation as easy as possible. The SDK will give providers immediate access to all required 
+
+
+
+40
+
+technology to release their own derivative of the Stox app and create a fully functional prediction 
+
+market app under their own name in minutes. 
+
+The Stox platform incentivizes providers to promote syndicated events. The reference 
+
+implementation will always prioritize the provider’s own events for users of their own app. Users 
+
+that are not satisfied with these events, for example those seeking events in other categories 
+
+that the provider does not specialize in, will be given access to events by other providers sorted 
+
+by syndication fee. This enables the provider to profit from users which would otherwise not 
+
+participate in an event. The ecosystem member SDK will set the correct wallet address of the 
+
+provider for syndication compensation purposes.
+
+The various customization supported by the SDK are described in detail under “Derived and 
+
+customized versions” in the Stox App section of this document, and include:
+
+• Rebranding of the reference implementation with their own logo, name and colors
+
+• Setting the provider address for syndication fee settlements
+
+• Modifying the UX for participating in an event in order to provide innovative industry-specific 
+
+event experiences
+
+• Customization of the event discovery process
+
+Milestone 5 - growing the ecosystem 
+
+With the majority of required technology for operating the Stox network at scale available (the 
+
+platform, the reference implementation app and customization SDK), the main focus of the Stox 
+
+team will shift from development to growth. Investment in network growth will not wait until all 
+
+development is finalized and will take place in parallel as soon as viable versions of these products 
+
+are available for preliminary release.
+
+Growth of the network is two sided. The first side focuses on providers. The Stox network will 
+
+benefit from as many providers as possible joining the ecosystem. Providers are the main creators 
+
+of events in the network and serve as engines for driving traffic to the network. Providers consume 
+
+STX for collateral and market making as they are depended on STX to operate. Channels for 
+
+attracting providers include forming partnerships with established companies in adjacent fields, 
+
+promoting the Stox model among individuals and organizations with access to relevant customer 
+
+bases and providing guidance and support to new providers interested in joining the network in 
+
+order to make the process as friction free as possible.
+
+
+
+41
+
+A more aggressive approach to bring providers into the network includes pre-creation of a branded 
+
+app for relevant entities that can profit from acting as providers and approaching these entities 
+
+with a ready-made solution that only requires advertizing in order to turn profit. Since advertizing 
+
+to an existing customer base does not require significant investment, potential providers will be in 
+
+a position to generate an additional revenue stream with very little effort.
+
+The second side of network growth focuses on end users. The more active users in the network, 
+
+the more participation in events and the greater the profits for providers. Greater participation 
+
+will increase the demand for STX and increase the network value. Channels for increasing the Stox 
+
+user base include marketing and promotion of the Stox app to relevant audiences, marketing and 
+
+promotion of specific events that are likely to have strong user engagement and promotion of 
+
+education about prediction markets in general. 
+
+Attracting more users is not the only avenue of growth as improving engagement of existing users 
+
+is equally important. User retention in the network can be increased by ongoing improvement 
+
+to the core product. Such improvements will be published as updates to the reference 
+
+implementation and encouraged to be adopted in derived apps as well. The standard practice of 
+
+ongoing improvement includes monitoring app usage, analyzing user behavior and introducing 
+
+iterative product changes while measuring their impact on key performance metrics.
+
+
+
+42
+
+Funding breakdown 
+
+Figure 1 summarizes Stox project expected use of proceeds, assuming we raise $30M USD 
+
+denominated in ETH in our token sale.
+
+• Employees; Developing the Stox platform involves substantial R&D expenditures. As described 
+
+in the Milestone section above this includes all components of the Stox platform as well as the 
+
+open source app.  
+
+• Marketing; Our marketing efforts include enhancing cooperation with potential providers and 
+
+operators in order to allow as many of them to join the platform. In addition, we plan to focus 
+
+efforts on marketing the platform to the broad audiences, acquainted traditional centralized 
+
+prediction markets. 
+
+• Legal; Legal efforts include among others incorporation, regulation, compliance and ongoing 
+
+operation.
+
+• The expected breakdown may be altered as the project progresses.
+
+Figure 1 - Stox Project Expected Use of Proceeds
+
+
+
+43
+
+Token Issuance
+
+In order to finance Stox’s road map, Stox will conduct a token sale of an initial supply of STX tokens. 
+
+STX will be sold at a constant price (in ETH) and the initial supply will depend on amount of STX 
+
+sold. As of the conclusion of the sale, the distributed STX will constitute the entirety of the available 
+
+liquid supply. A portion of the supply would be preallocated to invest.com as the founding member 
+
+of the ecosystem, in a long term vesting schedule. Major portion of the allocation to Stox Ltd. will 
+
+be used for bringing further strategic partners to the Stox platform. 
+
+The STX distribution is summarized in the table below:
+
+% of Total Supply Beneficiary Special terms
+
+50% Coins cannot be transferred until end of token sale period
+
+Uniform 12-month vesting 
+schedule
+
+Uniform 24-month vesting 
+schedule
+
+Will be used  to bring strategic 
+partners to the Stox ecosystem, 
+
+and as operational reserve. 
+
+Token sale participants
+
+Stox team
+
+invest.com Ltd.
+
+Stox Ltd.
+
+12.5%
+
+10%
+
+27.5%
+
+
+
+44
+
+After the event 
+
+After the end of the sale period, Stox will deposit 4% of the STX market cap in BNT as the currency 
+
+reserve of STX, thereby activating its Bancor Smart Token features. From this point forward, the 
+
+smart token’s market maker will enable anyone wishing to buy or sell STX to do so at a determined 
+
+market price. At the moment of activation this price is equal to the token sale price, and later it may 
+
+fluctuate according to market supply and demand. Further details about STX as a Bancor Smart 
+
+Tokens can be found under Bancor as a token platform above, and in Bancor’s documentation.
+
+ 
+
+Sale event 
+
+The sale event will start in the following weeks and continue for 14 days, or until the sale cap of ETH 
+
+is reached. Participation instructions will be published on the Stox.com website. 
+
+STX price will be fixed (in ETH) throughout the sale. The STX price will be published on the Stox.com 
+
+website before the sale starts.
+
+https://www.stox.com
+https://www.stox.com
+
+
+45
+
+Founding Team
+
+Ophir Gertner 
+Founder, Chief Strategist 
+
+An entrepreneur at heart, Ophir has a strong track record of developing market-leading products and 
+
+services, including technology start-ups and real estate development. He has a wealth of international 
+
+experience, including leadership roles in several companies and over 15 years’ experience in financial 
+
+markets. Founded invest.com, the fulfillment of an aspiration to harness technology and financial 
+
+expertise to provide a genuine investment alternative to enhance the lives of retail investors.
+
+Yossi Peretz 
+Chief of Operations and Technology 
+
+Skilled COO and business development professional with a proven track record in the financial services 
+
+industry. Skilled in leading global business activities, operations management, technical support, service 
+
+management, IT security & strategy and finding solutions for insurmountable challenges.
+
+Leonid Beder (CoinTree) 
+Blockchain Security Architect 
+
+Seasoned professional of system security, cryptocurrency systems and various blockchain 
+
+protocols, architecture, and implementations. An all-around player and a technology geek with 
+
+proven experience in management and hands-on development.
+
+Oded Noam (CoinTree) 
+Blockchain Architect 
+
+Founder of VidWatch and PhraseTech technology startups. Senior engineering and management 
+
+positions at Mobixell Networks, Adamind, Schema and Gate42. Holds BSc (cum laude) in 
+
+Mathematics, Economy and Psychology.
+
+Assaf Moalem 
+Financial Controller 
+
+Expert in all things finance. 6 years’  experience in online trading markets as a CFO & Head Finance 
+
+Controller. MBA in Finance and Financial Management Services from the Recanati Business School, 
+
+Certified Public Accountant (Israel).
+
+Marek Lorinc 
+Executive Director 
+
+Has over 20 years’ experience in investing, finance and banking as well as international project 
+
+management. Received his MBA from Concordia University, Montreal.
+
+
+
+46
+
+Jose Danon Saltiel 
+Online Marketing Wizard 
+
+Experienced online marketer with over 10 years’  experience in many industries including gaming, 
+
+gambling, fintech and more.  Has a deep understanding of the industry, particularly in channels 
+
+as affiliation, media buying, social and RTB . Self-driven, responsible and with vast experience in 
+
+English, Spanish, German, Dutch and French markets.
+
+Shay Cohen 
+Master of UX & Design 
+
+Passionate & versatile UX/UI designer driven by curiosity in user experience. Believes in the appeal 
+
+of visual language and pixel- perfect design. Creates IOS, Android and web interfaces and crafted 
+
+the Stox platform & visuals.
+
+Varda Bachrach 
+Content Specialist 
+
+Finds the right words at the right time. Has over 15 years’ experience communicating difficult 
+
+subjects to different audiences including finance, economics, pediatric heart disease, regenerative 
+
+medicine, sport and the arts.
+
+Oren De-Lange 
+Community Manager 
+
+Active crypto enthusiast since 2014. Holds an LLB in Law and B.A in Business Administration, both 
+
+cum laude, from IDC Herzliya.
+
+Ilya Kolesnikov 
+Core developer 
+
+Highly effective software engineer with over a decade’s experience mainly in ecommerce and 
+
+fintech. Has managed international teams of developers. Strongly believes in the brilliant future of 
+
+blockchain technologies.
+
+Liron Golan 
+HR Manager 
+
+Over six years experience in HR, including 3 years in online companies. Has a first and masters 
+
+degree in Human Resources. Passionately believes that the workplace should be a pleasant 
+
+environment for all employees.
+
+
+
+47
+
+Eran Klein 
+Head of product and QA 
+
+With almost 20 years’  experience in high tech companies, Eran is an expert in product and Quality 
+
+Assurance. He specializes in online product and is an expert in both mobile and web applications.
+
+Yevgeny Michlin 
+Support Engineer 
+
+With over 8 years’ experience in technical support, Yevgeny utilizes his passion for networking 
+
+and solving complex technical issues into practice on a daily basis, creating real value for both 
+
+customers and colleagues.
+
+Israel Shenkar 
+System Administrator 
+
+Experienced  IT specialist with over 10 years’ experience. Always seeking improvements and the 
+
+latest technology.  Self-learner  with a  passion for new technologies and ensuring that all office 
+
+functions run smoothly 365 days a year (366 in leap years!).
+
+Nissim Ben Alus 
+Support Team Leader 
+
+Responsible for Customers Success, always challenges the status quo and seeks holistic solutions 
+
+and approaches to customer service. Focuses on added value, exceeding customer expectations 
+
+and building loyalty.
+
+Konstantin Rezhets 
+Mobile developer 
+
+With over 5 years’ experience in startups, specializes in building lean, optimized and secure 
+
+applications from scratch. Keeps Apps at the cutting edge.
+
+Rutty Yeziorsky 
+Office Manager & PA to CEO 
+
+An expert at creating and maintaining a happy and efficient working environment. Takes care of all 
+
+office administration from the mundane to fun activities.
+
+Eyal Perera 
+Analyst 
+
+Experienced stockbroker and investment portfolio manager with over 7 years’ experience in the 
+
+financial markets. Holds an MBA and a degree in economics and business management.
+
+
+
+48
+
+Advisory Board
+
+Eyal Hertzog 
+Foundation Council of Bancor 
+
+Venture-backed technology entrepreneur for over 20 years. Founder of MetaCafe, Israel's fastest 
+
+growing video sharing site reaching over 50m uniques at its peak. Previously, Eyal founded Contact 
+
+Networks, one of the first social networks in 1999.
+
+Uriel Peled 
+CEO of CoinTree 
+
+Uriel Peled is head of operations at CoinTree, a blockchain advisory firm based in Tel Aviv, Israel. 
+
+Prior to CoinTree, Uriel was a co-founder and CPO at Visualead, an Israeli O2O and IoT startup with 
+
+investors such as Alibaba. Uriel Holds BSc summa cum laude in Electrical Engineering from the 
+
+Technion university.
+
+Joe Chen 
+Founder, Chairman & CEO of RenRen 
+
+Joseph Chen is a pioneer of China's internet industry. Chen holds a master's degree in engineering 
+
+from the MIT, and a MBA degree from Stanford. Board member at Invest.com
+
+Moshe Hogeg 
+Founder & Chairman of the Singulariteam Group. 
+
+A serial entrepreneur and Board member at invest.com.
+
+Itai Avneri 
+CEO invest.com 
+
+Entrepreneur and experienced executive, expert in online marketing with expertise in players / 
+
+traders life cycle (acquisition, conversion, retention) for the gaming and finance industries. Has vast 
+
+experience in business leadership including marketing, operations, and technology. Held several 
+
+leadership roles in global online companies including CEO of Playtech Marketing.
+
+Eduardo A. Schilman, Ph.D. 
+A Behavioral Psychologist at Playtika (sold for $4.4B). Earned post-doctorate from the Weizmann 
+
+Institute of Science.
+
+https://cointree.capital/
+
+
+49
+
+Risk Factors
+
+The following are the risk factors in relation to Stox business in general and the Token Sale event in 
+
+particular.
+
+• Stox may not reach the target sale amount and may not have the sufficient funds to execute on 
+
+its business plan
+
+• The STX token may be significantly influenced by digital currency market trends and STX value 
+
+may be severely depreciated due to non-STX related events in the digital currency markets. 
+
+• Prediction market may be coming under global or local regulation that may limit the use of 
+
+tokens for predictions trade
+
+• Stox is relying on the infrastructure and talent of invest.com hence any detriment scenario that 
+
+may occur in invest.com is likely to impact significantly on Stox 
+
+• Stox is a complex software platform and its launch may be significantly delayed due to 
+
+unforeseen development barriers 
+
+• Competition may introduce same or better prediction market solutions and cause Stox to lose 
+
+market share and eventually fail to deliver on its business goals 
+
+• Digital currencies are extremely volatile and STX token may suffer from said volatility
+
+• International laws and regulations may render the STX trade impossible 
+
+• The use of STX tokens may come under the scrutiny of governmental institutions 
+
+• The ownership of STX tokens may fall under new and unpredicted taxation laws that will erode 
+
+STX benefits 
+
+• Stox may not succeed in creating the necessary momentum and acceptance for the STX token 
+
+which may result in low liquidity and  depletion of trades
+
+• The positions and plans outlined in this white paper may be altered as the project progresses.
+
+
+
+50
+
+Regulatory Strategy
+
+Prediction markets utilize a large set of activities that may be subject to regulatory scrutiny in 
+
+various territories.  This large and varied set may need to comply with regulation on securities 
+
+trading, on financial institutions and money services businesses,  on gaming and on gambling. 
+
+Complying with each of these regulations, and sometimes in each jurisdiction, requires experience 
+
+and comes at a great cost. 
+
+In decentralized applications, no single entity has control over the infrastructure required for 
+
+its operation. This allows separating the infrastructure from the app content, in our case the 
+
+prediction markets. The resulting structure has the advantage of modular isolation: separate 
+
+functions in the system can operate in isolation from one another, and possibly be provided by 
+
+different vendors. 
+
+Modular isolation brings an advantage to companies and individuals when it comes to regulatory 
+
+compliance: each only needs to comply with regulation in a limited field, lowering the cost of 
+
+creating the required expertise and making it easier for new businesses to start up.
+
+
+
+51
+
+Technical Considerations
+
+The Stox P2P protocol
+
+The Stox App aims to provide complete functionality of a prediction market app without requiring 
+
+a central server for any of it. Prediction markets require functionalities such as curation of events, 
+
+market making, providing players with information and analytics, reporting event outcomes, and 
+
+of course collection and payments. Each these services requires some expertise, and may be 
+
+subject to a different set of rules of conduct and regulatory restrictions. Centralized applications 
+
+need to gain all expertise and comply with all regulations under one roof, creating an incentive 
+
+for consolidation and centralization resulting in higher fees for the consumer. The decentralized 
+
+architecture simplifies the collaborative offering of these services: each operates separately from 
+
+the others, focusing on their area of expertise and able to provide better services at lower costs. 
+
+Stox uses existing distributed protocols as the building blocks for the Stox protocol for prediction 
+
+markets apps:  
+
+• Smart contracts for managing events and market making. 
+
+• IPFS for content discovery. The Stox App runs on clients and does not require a central 
+
+backend. To enable clients to discover all active markets with their taxonomy and metadata, 
+
+each provider maintains a hierarchical structure of active markets descriptors, as JSON 
+
+files stored on IPFS. This content includes each category and each event’s metadata (name, 
+
+description, images etc). IPFS is a decentralized file storage network, operating with no single 
+
+points of failure, and no dependence on geographic or political territory. Each file on IPFS can 
+
+be located using a canonical URL. Each provider’s client app is hardcoded with the the URL of its 
+
+content root; the content root may contain sub-category descriptors linking to their URLs, which 
+
+in turn may link to further sub-categories.
+
+• Ethereum LOG directives for push notifications. Clients may need to alert or notify users of 
+
+remote events; the initiator of such events will normally be the smart contract, notifying clients 
+
+of changes in its lifecycle states and announcing the market maker’s offered rate. Additionally, 
+
+the market operator may want to send custom messages to clients participating in a market. 
+
+These notifications shall be distributed using the Ethereum network: clients participating in 
+
+an event remain subscribed to the smart contract’s events. Ethereum protocol carries events 
+
+emitted from executed smart contracts as LOG records on block closure and propagates them 
+
+to subscribed clients.
+
+
+
+52
+
+• Whisper for real-time peer-to-peer communications. In the future, the Stox app may 
+
+provide users participating in a certain event with an in-app chat. Whisper, a decentralized 
+
+protocol for peer to peer communication, which routes messages between ethereum nodes 
+
+as an addendum to the ethereum protocol, will be used to deliver the chat messages in a 
+
+decentralized way. 
+
+Stox App architecture 
+ 
+Ethereum client 
+ 
+The Stox app is required to perform transactions in STX which is an ERC20 compatible token over 
+
+the Ethereum blockchain. In addition, the app is required to transact with Stox Ethereum smart 
+
+contracts. Performing these actions on-chain requires an Ethereum 
+
+ client to be distributed with the app.
+
+There’s a wide variety of available open source Ethereum clients. One of the most robust and 
+
+feature complete implementations is the go-ethereum client commonly referred to as Geth. If Geth 
+
+is running in standalone mode, the app can communicate with it programmatically using JSON-RPC 
+
+over one of the available transports (IPC, HTTP or WS). Geth can also be used as a library for iOS, 
+
+Android and Go projects.
+
+Running an Ethereum client creates a node in the network which synchronizes blocks in the chain 
+
+in order to verify and validate the current state. Full synchronization is the most secure but can 
+
+take a long time and consume a large amount of disk space. As a compromise, the Ethereum client 
+
+can run in fast mode which cuts back validation of older blocks. The synchronization process in this 
+
+case may still take several hours and consume several GB of disk space - more resources than what 
+
+we’d like to allocate for the Stox app. This leaves us with light mode which only gets the current 
+
+state without validating previous blocks. The resource budget in this case is several hundreds of MB 
+
+of disk space and an initial sync time of several minutes with later updates taking several seconds.
+
+ Cross platform desktop framework 
+
+The Stox app is required to run as a standalone desktop app for Windows, Mac and Linux. For 
+
+easy support of multiple platforms with a single codebase, a cross-platform app framework should 
+
+be used. The Stox app relies on electron for this purpose. The electron framework provides high 
+
+https://github.com/ethereum/go-ethereum
+https://electron.atom.io/
+
+
+53
+
+development velocity by leveraging web technologies such as JavaScript, HTML and CSS.
+
+Another benefit of the electron framework is lowering the barrier for customization of the Stox 
+
+app. Altering the UI, brand and colors of the app using HTML and CSS for all platforms at once will 
+
+make the customization process accessible for most developers in a rather painless manner. The 
+
+same codebase could later be used for web hosted client solutions as well although those are not 
+
+planned in the immediate future.
+
+Market makers 
+
+In an abstract prediction market, each player has an idea as to the distribution of probabilities of 
+
+the possible outcomes of an event. Two players that have a different idea of these probabilities can 
+
+make a trade.  
+
+In the most basic example, suppose Amanda believes there’s a 100% chance of rain on Monday, 
+
+and Brian is certain Monday will be sunny (0% chance of rain). Amanda and Brian could pledge $1 
+
+each. They meet up at 11:59pm on Monday, and Brian collects his $2 because it did rain. 
+
+On Tuesday, Amanda believes there’s a 80% chance of rain, and Brian expects a 30% chance. If they 
+
+are both confident with their forecasts, they could take a bet for any betting ratio between 8:2 and 
+
+3:7, because both expect a positive outcome (though by 11:59pm on Tuesday they will discover that 
+
+only one of them was right):
+
+
+
+54
+
+Range
+Example  
+wager Amanda’s expectation Brian’s expectation Result
+
+Prediction ratio 
+greater than 8:2
+
+Prediction ratio 
+is exactly 8:2
+
+Prediction ratio 
+between 8:2 and 
+3:7
+
+No trade: both Amanda 
+and Brian want to bet on a 
+sunny Tuesday.
+
+Probably no trade: 
+Amanda has nothing 
+to gain from plaaying. 
+(unless she enjoys the 
+thrill, and would play for 
+no expected gain)
+
+Game on: Amanda wants 
+to bet on a rainy Tuesday, 
+Brian wants to speculate a 
+sunny Tuesday.
+
+9:1
+
+8:2
+
+1:1
+
+Expectancy of proceeds if 
+speculating: 
+
+Erainy= 80% · 1 = 0.8 
+
+Expectancy of proceeds if 
+speculating no rain: 
+
+Esunny= 20% · 9 = 1.88 
+
+Amanda will prefer to bet on a 
+sunny Tuesday.
+
+Expectancy of proceeds if 
+speculating rain: 
+
+Erainy= 80% · 2 = 1.6 
+
+Expectancy of proceeds if 
+speculating no rain: 
+
+Esunny= 20% · 8 = 1.6 
+
+Amanda has no preference.
+
+Expectancy of proceeds if 
+speculating: 
+
+Erainy= 80% · 1 = 0.8 
+
+Expectancy of proceeds if 
+speculating no rain: 
+
+Esunny= 20% · 1 = 0.2 
+
+Amanda will prefer to bet on a 
+sunny Tuesday.
+
+Expectancy of proceeds if 
+speculating: 
+
+Erainy= 30% · 1 = 0.3 
+
+Expectancy of proceeds if 
+speculating no rain: 
+
+Esunny= 70% · 9 = 6.3 
+
+Brian will prefer to bet on a 
+sunny Tuesday.
+
+Expectancy of proceeds if 
+speculating: 
+
+Erainy= 30% · 2 = 0.6 
+
+Expectancy of proceeds if 
+speculating no rain: 
+
+Esunny= 70% · 8 = 5.6 
+
+Brian will prefer to bet on a 
+sunny Tuesday.
+
+Expectancy of proceeds if 
+speculating: 
+
+Erainy= 30% · 1 = 0.3 
+
+Expectancy of proceeds if 
+speculating no rain: 
+
+Esunny= 70% · 1 = 0.7 
+
+Brian will prefer to bet on a 
+sunny Tuesday.
+
+How would Amanda and Brian find each other to make the trade? In a double auction market, 
+
+all players meet up at an exchange, and some of them announce the rates they are willing to 
+
+speculate. All players listen to these announcements and take the offers they find acceptable. The 
+
+announcers are called the “market makers” the listeners taking on an offer are called the “market 
+
+takers”.
+
+
+
+55
+
+The problem, however, is that this exchange is a high burden on all players:
+
+• They need to be at the exchange at the same time;
+
+• Some of the players need to make announcements, thus need to determine an optimal rate to 
+
+announce; 
+
+• Some of the announcements will not be taken, frustrating some players that took the burden of 
+
+announcing but didn’t get to participate in the trade;  
+
+This burden becomes smaller if there are many players in the market. In practice, such market is a 
+
+reasonably good solution for a prediction market if there are many players active at any hour of the 
+
+day, although the burden of making an announcement is creating “product friction” reducing the 
+
+number of predicted events. 
+
+The solution to this is to use a market maker: a party interested in enabling the prediction deposits 
+
+a sum, which it will use to be the counterpart to any player wanting to speculate (liquidity). To 
+
+rule used by the market maker to determine, at each point in time, the prediction ratio it accepts 
+
+is called a Scoring Rule. The family of Scoring Rules that are applicable to prediction markets, 
+
+i.e. incentivise players to hedge their beliefs, are called Proper Scoring Rules. Of these, the gold 
+
+standard in prediction market is Hanson’s Logarithmic Market Scoring Rule: suppose at the time 
+
+Christopher wants to speculate that Wednesday will be rainy, after Amanda and Brian already put 
+
+their wagers. The quoted rate he sees is
+
+Whereas      the natural logarithm, qrainy and qsunny are the sum of previous wagers on either 
+
+outcome, and b is the calculated from the liquidity sum deposited by the market maker.
+
+The actual rate Christopher needs to pay differs from the quote, because his bet changes one of 
+
+the q’s (the quote would only apply to an infinitesimally-small wager). Supposing Christopher wants 
+
+to place a wager that would pay him $x if Wednesday turns out to be rainy, the market maker 
+
+would accept his wager if he pays
+
+The Stox network will initially offer two variants of market makers derived from LMSR, namely
+
+• Liquidity-Sensitive automated Market Maker
+
+• Standard LMSR
+
+3  Robin Hanson. Combinatorial information market design. Information Systems Frontiers, 5(1), 2002.
+
+
+
+56
+
+Platform limitations 
+
+The events are operated on the public Ethereum blockchain, requiring all operations that change 
+
+the market’s state (creation, users’ opening and closing positions, oracle reports, users’ collection 
+
+of payments) to be broadcast to the blockchain. Technical and throughput limits of the Ethereum 
+
+network and its processing costs have several adverse effects on Stox:
+
+• The throughput of the Ethereum network puts an upper bound on the rate at which an on-
+
+chain prediction market can process orders and modify positions, which in practice stands 
+
+at hundreds of calls per minute. In the near future, high-traffic prediction markets, with 
+
+participation of thousands of users, cannot be supported by the Ethereum network.
+
+• When the Ethereum network is under low load, its block confirmation time of 17 seconds 
+
+means a user would wait an average of 8.5 seconds for each operation. Under a normal 
+
+workload, transactions may be processed only after a block or two, resulting in a longer wait 
+
+of around one minute. Such latency is not reasonable for UX and require designing the user 
+
+experience in a way that provides immediate feedback for actions, then processes blockchain 
+
+operations in the background.
+
+• At higher network loads, the Ethereum network suffers from a very high variance in 
+
+confirmation times. Transactions may queue for several blocks’ time,  resulting in a wait of 
+
+minutes or hours. When this happens, users’ predictions may fail to register on the blockchain, 
+
+due to the event closing or significant change in the rate offered by the market maker.
+
+• Ethereum currently supports fee payments only by the sender, and only in ETH. Transaction 
+
+fees on Ethereum network are expected to amount between $0.02-$0.20 per operation when 
+
+the network is under reasonable load, in addition to the fees collected by the prediction 
+
+markets. This also creates product complexity as it requires users to hold a small ETH balance 
+
+in order to make payments (we recommend that operators refund users their transaction fees, 
+
+so that a small ETH deposit could be sufficient for a user).
+
+4 A. Othman, T. Sandholm, D.M. Pennock, and D.M. Reeves (2010). A practical liquidity-sensitive 
+
+automated market maker. ACM Conference on Electronic Commerce: 377-386
+
+
+
+57
+
+Despite these drawbacks, Ethereum is still the best public blockchain available today. New 
+
+developments in the Ethereum network should mitigate all of the abovementioned issues:
+
+• RAIDEN and CASPER are expected to increase the capacity of the Ethereum network enabling 
+
+significant reduction of block times and variance in block waits. Similarly, the increase in 
+
+capacity and offloading of large amounts of transactions to state channels are expected to 
+
+result in significant reduction in network fees.
+
+• CASPER proposes abstractions that could enable contract-pays schemes for fees, eliminating 
+
+the need for users to hold ETH.  
+
+Several bodies are promoting research on off-chain scalability of prediction markets. We are 
+
+monitoring the advances in these fields in hope for a viable solution, however, at the moment 
+
+we will be taking a cautious approach in planning, as we consider currently known models to be 
+
+impractical.
+
+

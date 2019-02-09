@@ -1,0 +1,852 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Title
+
+
+BlockCAT
+
+Smart Contracts For Everybody
+
+Last Revision: January 5th, 2018.
+© 2018 BlockCAT Technologies Inc. All rights reserved.
+
+
+
+Contents
+
+1 Executive Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+2 Background . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.1 Smart Contracts and Their Motivation 5
+
+3 Mission Statement and Objectives . . . . . . . . . . . . . . . . . . . . . . 7
+3.1 Core Objectives 7
+
+4 Why Ethereum? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+5 Applications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+5.1 Safe Remote Purchases and Escrows 9
+5.2 Prediction Market Integration 9
+5.3 Crowdfunding 9
+5.4 Tamper Resistant Polls and Voting 9
+5.5 Auctions 10
+5.6 Proof of Existence 10
+
+6 CAT Token Mechanics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+6.1 CAT as an ERC20 Token 11
+6.2 Marketplace Verification and Security 11
+
+7 Technical Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+7.1 Implementation Requirements and Considerations 13
+7.2 Technologies and Decentralization 14
+
+8 Operations and Roadmap . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+8.1 Key Activities 17
+8.1.1 Platform Development, Testing, and Maintenance . . . . . . . . . . . . . . . . . . . . 17
+8.1.2 Auditing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+8.1.3 Business Growth and Development . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+8.1.4 Legal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+8.2 Future Goals 18
+
+9 Legal Considerations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+2
+
+
+
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+3
+
+
+
+Executive Summary
+
+The Ethereum platform has opened our world to the possibility of “programmable money.”
+We now have a blockchain-based currency with powerful smart contracts enabling a number
+of previously difficult applications without requiring trust in a centralized third party. Dam-
+age deposits, online shopping, delayed payments, joint purchases, and tamper-proof ballots
+are some of the many automated processes that stand to significantly benefit or be made
+possible by trustless computing networks such as Ethereum.
+
+BlockCAT, short for Blockchain Complex Automated Transactions, is a decentralized plat-
+form that provides an easy to use web portal, hand crafted by our expert engineering team, to
+allow end users and organizations the ability to provision and deploy the smart contracts that
+drive these complex transactions, zero programming required. Other payment processing
+solutions can be eliminated from your financial workflow to reduce costs and streamline
+processes to increase efficiency. The BlockCAT marketplace will allow anyone to contribute
+and sell smart contracts, while our custom designed contract auditing system keeps our users
+safe in a completely decentralized manner. The BlockCAT platform will not require users of
+our smart contracts to know how to write any code, unlocking access to services that they
+would otherwise not be capable of using.
+
+Unlike other decentralized systems that are currently available or under development, Block-
+CATwill never ask users to pay for functionality they do not require. Instead, the philosophy
+of BlockCAT is to offer these services “à la carte,” in small pieces that can be chosen to suit
+each individual use case. Users pay as they go for only what they use, ensuring that everybody
+gets maximum value for what they spend. BlockCAT is the solution that provides a smart
+contract platform in a way that is accessible to everybody, worldwide.
+
+4
+
+
+
+Background
+
+2.1 Smart Contracts and Their Motivation
+
+Over the past three decades, the global economy has been revolutionized by the ability to
+move money electronically. The four largest American credit card issuers processed over
+two trillion USD ($2,000,000,000,000) worth of transactions in 2014 alone [1], and PayPal has
+processed over 100 billion USD worth of eCommerce transactions in just the first quarter of
+2017 [2]. However, current popular solutions require trust in one or more centralized parties
+to carry out the transaction securely and correctly. Furthermore, centralized systems are dif-
+ficult to automate beyond trivial problems, and large scale transaction processes frequently
+require experts such as lawyers, bankers, accountants, and software developers in order to
+ensure error-free and reliable methodology is followed throughout the entire lifecycle of a
+transaction.
+
+The introduction of blockchain technology allows for electronic transactions to occur in a
+secure, deterministic, and tamper-proof way. Bitcoin (BTC), with it’s market capitalization
+of over $250 billion USD, is one of the leading digital currencies.
+
+Because blockchains can contain both information regarding asset movement and otherwise,
+it is possible to place special computer software on blockchains to be executed by a network
+of computers, called smart contracts. Smart contracts are the key to unlocking a world where
+any computer oriented task can be executed completely autonomously and correctly, without
+fear of external manipulation or tampering.
+
+Imagine being able to easily set up recurring payments to pay your monthly rent, or to give
+your nephew some money that only unlocks on his birthday. You could even have money
+be automatically distributed amongst several friends to make paying back small loans a
+breeze, or allow groups of people to all contribute payment towards a single purchase. Using
+smart contract technology, these small financial tasks become available to anyone to use in a
+completely automated, independent fashion that utilizes the power of the world’s distributed
+database by writing these tasks directly into the blockchain. Such technology eliminates the
+possibility of banks or financial institutes closing down and ruining your transactions, and
+guarantees that every payment will be carried out exactly as written without the risk of any
+improper handling or malicious interference. A common complaint many users have with
+services such as PayPal is that they hold too much power over funds or assets stored in their
+system, allowing them to freeze accounts and cancel transactions for any reason.
+
+While ways of writing simple smart contracts exist for many digital currencies, it was not
+until Ethereum was launched in 2015 that truly valuable software could be built on top
+of blockchains. Ethereum is a blockchain-based computer network paired with the Ether
+currency, and has implemented a powerful distributed computing environment called the
+Ethereum Virtual Machine (EVM). As part of the platform, a programming language for writ-
+ing smart contracts targeting the EVMcalled Solidity implements familiar high level program-
+ming concepts that allows more sophisticated smart contracts to be written. The Ethereum
+network has quickly become the most popular smart contract platform, even attracting
+the attention of major companies such as Microsoft, ING, Toyota, Samsung, J.P. Morgan,
+
+5
+
+
+
+State Street Corporation, Accenture, and Intel [3]. Ethereum averaged approximately 40,000
+transactions per day in early 2017, but its explosive growth in traction and adoption has
+resulted in a 25x increase in daily transactions, with over 1,000,000 transactions served daily
+in late 2017.
+
+Smart contracts, such as those built on the Ethereum platform, offer several key benefits:
+
+1. Smart contracts are completely autonomous and require zero human intervention or
+oversight.
+
+2. They are implemented using a programming language, and thus are unambiguous.
+3. Properly written smart contracts are resistant to malicious attack or external tamper-
+
+ing.
+
+Unfortunately, these benefits come with their own barriers to mass adoption:
+
+1. Smart contracts must be written by programmers, making them accessible to few
+potential users and enigmatic to those who cannot code.
+
+2. While smart contracts are unambiguous in their meaning, only those familiar with
+the language can interpret them, making it difficult to reach agreement with any non-
+technical party.
+
+3. Smart contracts, even when written by capable and well-intentioned developers, can
+contain bugs, whichmay result in the loss of assets. TheDAOHack [4], which attacked
+a DecentralizedAutonomousOrganization calledTheDAO, resulted in an outright loss
+of 3.6 million Ether valued at more than $60 million USD and also resulted in the price
+of Ether crashing by 35%. A bug-free smart contract would have prevented this hack
+from ever occurring.
+
+Industries are moving to leverage this disruptive technology. Deloitte, now part of the
+Enterprise Ethereum Alliance (EEA) [3], said “By 2025, 10% of [the] global GDP will be stored
+on [the] blockchain” [5]. In order for the potential of ubiquitously applied smart contracts
+on blockchain currencies to be realized, the previously mentioned barriers will need to be
+overcome. Without simple to use, verified, and trusted methods for efficiently creating
+accurate smart contracts, widespread adoption will never occur. Put simply, democratized
+smart contracts will make advanced use of current blockchain possibilities available to the
+widest possible audience.
+
+6
+
+
+
+Mission Statement and Objectives
+
+“Our mission is to provide the world a safe way of leveraging inexpensive smart contracts on
+the Ethereum network and beyond, creating intelligent and automated economic activity at
+scales not previously possible.”
+
+Our team firmly believes in the disruptive power of smart contracts, when made accessible.
+Whether the purpose is personal, business, or otherwise, accessible smart contracts have the
+potential to be the basis for emerging technology and economic and social activity. We see a
+future where smart contracts are used by non-technical individuals to buy and sell goods and
+services, finalize no-nonsense business deals without lawyers in seconds, implement intelli-
+gent on-premise and internet-based checkout systems, automate repetitive enterprise-grade
+fund transfer processes, and create entirely new organizational hierarchies with the press of
+a button – amongst many other possibilities, all with trust and simplicity. BlockCAT will
+be a timely and influential platform ready to usher in an explosion in the number of smart
+contracts utilized.
+
+3.1 Core Objectives
+
+BlockCAT has the following core objectives:
+
+1. To build and become the de facto platform for creating and deploying smart contracts
+in an accessible fashion by delivering a device-agnostic web portal and a broad set of
+configurable templates for rapidly constructing, deploying, and optionally extracting
+data.
+
+2. Make smart contracts quicker to use, more efficient, easier to understand, and less
+costly than current agreements, contracts, and multi-step payment solutions.
+
+3. Provide smart contracts that are reliable and inexpensive enough that even the most
+technically acclimated smart contract developers will gain value from using our pre-
+built or customized contracts, at a fraction of the time and cost of manual deployment.
+
+4. Implement the tooling necessary to create smart contracts that have minimal risk of
+failure.
+
+5. Provide integrationwith a variety of other valuable services such as predictionmarkets,
+payment interfaces, and digital asset/currency exchanges.
+
+6. Provide a marketplace for curating and selling smart contracts created by the world-
+wide blockchain community.
+
+In summary, BlockCAT aims to make using smart contracts so simple, reliable, and, cost-
+effective that they become widely adopted, improving peoples’ lives andmaking society more
+efficient.
+
+7
+
+
+
+Why Ethereum?
+
+Ethereum has become the standard for decentralized distributed computing platforms. Its
+digital currency, Ether, has also become one of the most popular and fastest growing offer-
+ings. Many innovative companies are quickly joining the development ecosystem to deliver
+value not previously possible. The BlockCAT team believes that as more services come into
+existence on the Ethereum network, our product will become more valuable to everyone.
+The momentum behind Ethereum as a blockchain-based development platform is unrivaled
+at present.
+
+In addition to its popularity, many large organizations have banded together to form the
+EEA, a consortium whose purpose is to ensure Ethereum is a suitable platform for reliable,
+enterprise-grade technologies backed on the blockchain. Major new projects are being in-
+creasingly demoed by both startups and established mega-companies on Ethereum, thanks
+to the rich environment it provides [6]. Their contributions will help ensure future versions
+of Ethereum reach their potential.
+
+Ethereum is also a constantly evolving ecosystem. The Ethereum Foundation has demon-
+strated a clear commitment to continual innovation with planned milestone releases, going
+above and well beyond in having core developers engage and solicit feedback from the larger
+community, and in experimenting with new features. The Ethereum Foundation has spent
+their time and effort wisely, and also have provided new tooling that is well planned and
+valuable. As evidence of this, Ethereum’s experimental Viper language for smart contracts
+will provide significant improvement in smart contract safety and security.
+
+While we believe Ethereum currently provides the best andmost robust platform for develop-
+ing impactful and secure smart contracts, we also recognize that smart contract technology
+is a young and agile ecosystem, liable to rapid change both in future iterations of existing
+platforms, and in the emergence of future blockchain systems. We at BlockCAT are commit-
+ted to our core philosophy of providing accessible smart contracts, and thus remain open to
+exploring additional platforms.
+
+8
+
+
+
+Applications
+
+While far from an exhaustive list, the following examples provide some insight into the
+general idea and class of applications that BlockCAT targets. Please note that this list in no
+way represents the set of complete features ready to be used. This document is not intended,
+at any point, to state or imply the currently implemented features of BlockCAT.
+
+5.1 Safe Remote Purchases and Escrows
+
+If you wish to buy from a stranger online, you are required to trust that stranger will honor
+their agreement in sending the goods. Similarly, the seller must trust the buyer will be honest
+about receiving the goods. With smart contracts, the system becomes trustless as both parties
+must uphold their agreement to receive the goods or funds. With BlockCAT, anybody can set
+up these contracts on a per-use-basis without needing to write a single line of code, opening
+up the world of trustless online purchasing and other forms of escrows without the need for
+centralized systems.
+
+5.2 Prediction Market Integration
+
+Prediction markets, such as Augur [7] and Gnosis [8] provide an easy way to access external
+information not typically available to smart contracts, such as the results of elections. Block-
+CAT can leverage this information to provide simple ways of automating transactions that
+occur according to the results of this information.
+
+5.3 Crowdfunding
+
+Platforms such as Kickstarter [9] or IndieGoGo [10] are popular places to provide the initial
+funds for large scale projects. However, the project creators have little to no accountability
+to actually create and deliver their proposed project. BlockCAT will provide smart contract
+based crowdfunding that guarantees accountability from the creators. This additional trust
+throughout the whole crowdfunding system will therefore encourage more money to be
+invested into projects. Additionally, BlockCAT will integrate with payment platforms, so
+funders not holding digital currencies can effortlessly contribute.
+
+5.4 Tamper Resistant Polls and Voting
+
+Traditional online polling systems require significant trust, and are vulnerable to attack due
+to their centralized nature. Conducting polls through the use of smart contracts can provide
+strong and transparent voting systems that operate completely autonomously. Decentraliz-
+ing the entire process guarantees that miscounts of ballots are impossible. Additionally, the
+immutable and open nature of the blockchain means that anybody can audit the process and
+
+9
+
+
+
+verify the results independently. BlockCAT ensures that this process is painless to setup and
+eliminates the need to manually program each poll, transforming the lengthy and tedious
+process into just a few clicks on our platform.
+
+5.5 Auctions
+
+Online auctions are vulnerable to many methods of user manipulation. Both bidders and
+sellers can fail to uphold their promise to pay or deliver goods once the auction has ended.
+Malicious users or bots can place fictitious bids to artificially inflate prices, and throw the
+bidding process into disarray. Centralized auction services can fail to resolve user conflicts
+and freeze funds for large amounts of time. BlockCAT will prevent these problems through
+decentralized smart contracts, ensuring all parties involved must conduct the auction in a
+fair and transparent way.
+
+5.6 Proof of Existence
+
+Typically, in order to certify ownership or existence of an item or idea, a centralized party
+must serve as an authoritative source of truth that others must trust. Using smart con-
+tracts, this ownership data can be written permanently into the blockchain, where it remains
+extremely resistant to malicious change or accidental data loss. BlockCAT makes it easy
+for anyone to perform proof of existence, by providing externally verifiable procedures for
+anybody to confirm the blockchain data is valid.
+
+10
+
+
+
+CAT Token Mechanics
+
+CAT facilitates two key operations within the BlockCAT platform:
+
+1. CAT will be a safe, cost effective, and more flexible payment method for contract
+deployment.
+
+2. Staked CATwill serve as the primarymechanism for verifying third party marketplace
+smart contracts in a secure and democratic fashion.
+
+6.1 CAT as an ERC20 Token
+
+CAT will be implemented as an ERC20 Token to ensure maximum compatibility with the
+Ethereum ecosystem. Opting for a token instead of directly transacting in Ether provides
+several key benefits:
+
+The allowance feature of the ERC20 specification is similar to a Pre-Authorized Debit (PAD)
+that banks provide. Once an allowance has been made, small amounts can be withdrawn
+from a CAT holder’s account to pay for fees, but the full balance remains safe in the account.
+Thismeans the CAT held can remain in a paper or hardware wallet, ensuring that the security
+of the wallet remains uncompromised. Allowances are a unique feature not possible if Ether
+is used as the transactionary medium.
+
+Without a third party service, certain blockchain queries are extremely expensive to execute.
+
+For example, the query:
+
+”Give me all the transactions sent by address X”
+
+Requires a scan across all blocks and transactions within the chain in order to aggregate
+and return the desired results. Leveraging the built-in Event Logging system native to the
+EVM, smart contracts can store small amounts of data in a very cost effective and efficiently
+indexable way. Properly implemented, the same query as above on a CAT holder requires
+only a fraction of the computation power to execute, due to special search strategies and
+structures, such as bloom filters[11], that can be utilized when searching event logs.
+
+In order for the staking mechanism to function properly, the distribution of the staked
+medium must be carefully controlled. By utilizing CAT, which we have carefully crafted
+and distributed to ensure optimal staking properties, we can fully control and understand
+the behaviour and environment of contract verification.
+
+6.2 Marketplace Verification and Security
+
+The BlockCAT Platform will allow third party smart contract developers to publish their
+contracts on our platform. This allows them to plug their contracts into the BlockCAT
+interface, hooking up their contract functionality to our easy-to-use UI. By establishing
+our smart contract ecosystem, we provide a strong, consistent, and familiar interface across
+many related but distinct smart contract challenges – directly addressing one of the biggest
+
+11
+
+
+
+challenges in cryptocurrency adoption: user experience. In the same way that automobiles
+from different manufacturers provide a consistent control scheme to reduce the learning
+curve of operating the vehicle, our marketplace will be an industry leader in standardizing
+smart contract interaction.
+
+All published contracts will pay a portion of the fees collected back to the original author. In
+essence, our marketplace becomes an easy way to gain exposure and traction for well crafted
+smart contracts.
+
+As part of the marketplace, security and verification of third party contracts is our top
+priority. A broken, flawed, or malicious smart contract could result in stolen or lost assets.
+We recognize this risk, and we will put in place the necessary safeguards to mitigate attack.
+
+A key component of our security model will involve a staking mechanism. CAT holders will
+have the option to lock in their tokens and perform smart contract validation. The consensus
+provided by staked validators will be used as part of our algorithm that computes the validity
+and trustworthiness of a third party smart contract.
+
+The staked CAT provides financial incentive against malicious actors. Once contract validity
+is resolved, any stakers deemed malicious will have their CAT forfeit and confiscated. This
+means any potential gain that could be extracted from manipulating the marketplace will be
+offset by the significant cost required to launch the attack.
+
+To reward and positively incentivize stakers who behave in an honest and correct way, stakers
+will be paid a portion of the fees collected by the contract for their validation work. We
+believe that our validation model, when combined with the other security measures that will
+be put in place, will designate BlockCAT as the leading platform for high quality, trustable
+smart contracts.
+
+12
+
+
+
+Technical Summary
+
+7.1 Implementation Requirements and Considerations
+
+The main value proposition of BlockCAT is to provide a painless platform for creating and
+deploying smart contracts to the Ethereum network. To accomplish this, our team will build
+a blockchain based application composed of a device-agnostic, web-based user interface and
+a set of audited smart contracts to securely create and deploy the smart contracts of our users’
+choosing.
+
+Our primary technical concern is in reducing the gas cost1 associated with the smart con-
+tracts used by the BlockCAT platform. By minimizing the cost overhead, we maximize the
+accessibility of BlockCAT and reduce the cost burden on our users. There exist multiple ways
+of implementing, managing, and deploying smart contracts for our users. We summarize the
+various options below.
+
+For the most straightforward class of smart contract, such as setting up a delayed payment,
+we can utilize a cost saving technique known as forwarding contracts [12] to save over half of
+the gas cost that would have been required to deploy the contract as a standalone entity.
+This type of smart contract deployment currently works well for small contracts not larger
+than 4,096 bytes, with few function calls needed, though this option may become more eco-
+nomical for more smart contracts with the coming Metropolis Ethereum platform revision.
+Effectively, this strategy replaces the expensive, one-time cost of contract creation with a
+higher per-access overhead. Particularly for BlockCAT contracts of this class, where the
+expected number of times a user would interact with their contract is minimal, this shows
+to be the most optimal strategy in reducing overhead expenses. This is especially true when
+factoring in maintenance and bug-fixes.
+
+Another strategy for deploying contracts involves creating contracts in groups, allowing one
+contract specification to be reused by another “master” contract many times. While this has
+a high initial cost, this technique is very cost efficient, assuming the smart contracts have no
+significant bugs. In effect, we again reuse one contract deployment for many instantiations
+of the same type of contract, over and over, at a much reduced cost. For many of our core,
+battle tested contracts, this will be the method we choose to use.
+
+For smart contracts that are prone to change, custom built by the user, or otherwise un-
+suitable for the above two processes, we will deploy the contracts on a per-need basis. By
+leveraging all possible methods for deploying smart contracts, as dictated by the situation,
+we will provide the best possible value to our users.
+
+Another challenge is in protecting BlockCAT smart contracts from non-authorized instan-
+tiators, especially moving forward with future Ethereum revisions. To prevent contract theft
+where appropriate, we will incorporate the payment code directly into the pre-deployed
+smart contracts, so that they cannot be instantiated without paying the BlockCAT fees. This
+ensures that the value and profit incentive paid to validators will remain safe and undiluted.
+
+1These are the costs paid in compensation to Ethereum miners for use of the network resources.
+
+13
+
+
+
+To make BlockCAT as accessible as possible, our platform must make retrieving and re-
+porting smart contract state simple and readily available. The most typical use case of this
+in BlockCAT is for the display of notifications at the various stages of a user’s contract.
+Without incorporating this into our user interface, users would be forced to retrieve state
+programmatically, which is antithetical to the core principles of our platform. We intend
+to use events to minimize costs associated with reporting state information. BlockCAT will
+maintain a standard API and extensive documentation for these events, so that experienced
+developers can leverage these low cost events to roll their own user interface.
+
+For marketplace contracts, we face a unique set of dilemmas not common to internally de-
+veloped smart contracts. These contracts cannot be known ahead of time, a key requirement
+to parcelling them together as we deploy the main blockchain application. Further, they
+may be of arbitrary complexity, so cannot always be forwarded. Malicious developers might
+attempt to create smart contracts that claimmore of the deployment profit than agreed upon,
+or worse, intentionally make their contracts vulnerable to attacks that render their services
+unusable. Bad contracts will hurt the ecosystem and put BlockCAT users at risk, and thus
+the prevention of such attacks or failures is heavily factored in any design choices made for
+the marketplace integration.
+
+Thus, we propose the following: All contracts, from the marketplace or otherwise, will be
+purchased with our token, CAT. This token can only be spent through the smart contracts
+BlockCAT provides, meaning deploying marketplace contracts will ensure fees are processed
+correctly. Further, this token will be used to verify the trustability of marketplace contracts
+in a decentralized fashion.
+
+Marketplace developers who have their smart contracts audited by a trusted and certified
+third party will also be given a higher portion of the CAT paid (with BlockCAT receiving an
+equally lower portion of the CAT paid) and such contracts will be marked as audited in the
+marketplace.
+
+7.2 Technologies and Decentralization
+
+Our team very much believes that decentralizing platforms such as BlockCAT greatly ben-
+efits the end users as well as our team. On the other hand, decentralization poses other
+hurdles, especially regarding private data and data under access control. Fortunately, several
+technologies have been developed that ease many of these challenges.
+
+Of particular interest to our use cases, we will investigate and research the applicability of
+several core decentralized technologies, including the following:
+
+Ethereum. The smart contracts that both manage BlockCAT and are eventually deployed
+will be compiled for and executed using the Ethereum network. As previously noted, other
+smart contract enabled computing networks may be supported in the future.
+
+IPFS. IPFS provides public data storage bymeans of a distributed hash table and is commonly
+used for storing static files, such as front-endmarkup and code for web sites. Wewill use IPFS
+both for storingHTML and Javascript, in addition to any other static or seldom updated data
+that can be stored off of the blockchain in public view.
+
+14
+
+
+
+Sia. Some data, such as login account information, needs to remain private. In such cases, the
+data can be stored in a decentralized fashion using one of a number of services. Sia’s solution
+incentivizes long-term participation in storing data at a competitive price.
+
+The landscape for building DApps changes quickly, and the right way to build the appli-
+cation at the time of this writing may not hold true going forward. While this section is
+intended to give the reader some insight into how we will build our application, further
+evaluation and constraints may motivate us to change our plans.
+
+15
+
+
+
+Operations and Roadmap
+
+Our team wants to proceed with due care and caution to minimize potential asset loss for
+users. As these smart contracts are deployed on the Ethereum blockchain as immutable code,
+it is particularly crucial that everything is thoroughly battle hardened and easily updateable
+to handle bugs. As part of the development process, we will source independent professional
+software auditing for all smart contracts, in addition to our internal verification pipeline –
+this comprehensive testing routine is allocated its necessary portion of time and is reflected
+in the paced release schedule. BlockCAT features will be released in the following order:
+
+2017 2018 2019
+
+Q3 Q4 Q1 Q2 Q3 Q4 Q1 Q2 Q3 Q4
+
+Sale
+
+Token Sale
+
+Business Plan Adjustment
+
+Updated Plan Released
+
+Core Platform
+
+Testing
+
+Audit + Revisions
+
+Launch
+
+Marketplace
+
+Testing
+
+Audit + Revisions
+
+Launch
+
+User-Designed Contracts
+
+Design
+
+Develop + Testing
+
+Audit + Revisions
+
+Release
+
+Figure 8.1: The feature release schedule for the BlockCAT platform.
+
+16
+
+
+
+10%
+
+10%20%
+
+30%
+
+30%
+
+Other and Reserve
+Business Growth and Development
+Legal and Accounting
+Auditors and Consultants
+Platform Development and Maintenance
+
+Figure 8.2: The expected expenditures in percent of total costs for the BlockCAT platform
+
+8.1 Key Activities
+
+Disclaimer: The projected financial expenditure plan and release timeline are only estimates
+and serve to illustrate the general future plan of BlockCAT. We reserve the right to make
+adjustments as reasonable based on available resources and other constraints.
+
+Our projected cost breakdown is shown in Figure 8.2. We briefly summarize core activities
+and specific expenditures below.
+
+8.1.1 Platform Development, Testing, and Maintenance
+
+Further development and continued maintenance of the core BlockCAT platform is the
+primary cost that BlockCAT will expense in the near future. This allocation of resources
+will be put towards the compensation of the core BlockCAT team, and any future personnel
+who are signed onto the BlockCAT team, as necessary. This will primarily consist of Software
+Engineers, Platform and Infrastructure Engineers, Customer Service and Support Specialists,
+and Product Strategists.
+
+8.1.2 Auditing
+
+To minimize risks to BlockCAT users, we have reached out to multiple trusted security and
+software verification firmswhich specialize in smart contract auditing. These auditors will be
+responsible for verifying our smart contracts before deployment, in addition to the rigorous
+set of internal testing performed by the BlockCAT team. Given the sensitive nature of
+BlockCAT’s platform, we believe that it is better to err on the side of caution and will devote
+all of the necessary resources to ensuring a safe and secure platform for all BlockCAT users.
+
+8.1.3 Business Growth and Development
+
+We will be marketing our platform to ensure healthy growth. This is not only important for
+ensuring that BlockCAT remains the best platform for deploying smart contracts, but also
+
+17
+
+
+
+for marketplace participants, as their ability to earn CAT will depend entirely on the size of
+the user base.
+
+We intend to acquire new users via targeted marketing, first focusing on targeting early
+adopters and businesses already building on blockchain technology. We will quickly extend
+our efforts towards additional channels to bring new users to both the BlockCAT platform
+and Ethereum in general. We intend to appeal both personal uses as well as businesses.
+
+That said, we view business growth in a holistic manner. We believe in demonstrating value
+first, as well as attracting attention through collaboration. As noted in our roadmap, we
+intend to organize at least one hackathon to jump start the contract marketplace. For this
+event, we intend to create voter tokens and to have participants choose winners. These
+winners will receive free auditing and early availability of their developed smart contracts
+on the marketplace.
+
+We will also form partnerships with other blockchain innovators to create mutual value for
+our users. We will focus our business development efforts on those technologies with identi-
+fiable synergies and compatibilities with BlockCAT. We put open and honest relationships
+first, and seek to mutually encourage innovation and growth.
+
+8.1.4 Legal
+
+Our platform will require users have a clear understanding of the rights and responsibilities
+of all parties involved in using BlockCAT. Once our token sale has concluded, we will invest
+the necessary time and capital in developing user agreements for smart contract deployers
+and marketplace sellers. Future legal costs are also accounted for here.
+
+8.2 Future Goals
+
+Bugs and unforeseen flaws are an inevitable risk with any programming code, regardless
+of how thoroughly they have been vetted and reviewed. BlockCAT will strive to provide
+its users with the maximum amount of assurance possible by implementing enhanced secu-
+rity measures in any contract where appropriate. The ability to stop a rogue contract in a
+structured, pre-determined way will prevent high-value losses and ensure a safe platform for
+everyone, without resorting to or relying on controversial hard-forks.
+
+We also recognize that the technology landscape is quickly evolving, and that our platform
+infrastructure must remain agile and adapt to changing conditions. As new technology and
+solutions such as decentralized hosting and storage stabilize and gain adoption, we intend to
+move more and more of the BlockCAT platform to these services. This will ensure that our
+platform remains the preferred solution for smart contract deployment.
+
+18
+
+
+
+Legal Considerations
+
+The CAT Token is a functional utility token to be used only as the exchanged medium for
+the BlockCAT Platform and Marketplace. These tokens will give access to the BlockCAT
+mainnet demo app as soon as the minimum cap is achieved. CAT are not for speculative
+investment. No promises regarding value or future performance are made regarding CAT.
+No promises regarding any particular value of CAT are made. No other rights associated
+with holding CAT are given. Proceeds of the token sale may be spent as the company sees
+appropriate, which may change as deemed necessary in the maturation and advancement of
+BlockCAT.
+
+Our team is investing heavily in the safety and security of the services BlockCAT provides,
+as detailed previously. However, we cannot protect against all possible sources of error, espe-
+cially those in parts of the technology stack we cannot control. Therefore all risks assumed by
+using the BlockCAT platform in any capacity, including but not limited to deploying smart
+contracts, buying or selling smart contracts using BlockCAT’s marketplace, and collecting
+CAT through the marketplace are solely assumed by the user. CAT tokens are meant to be
+held and used by those well-versed in cryptographic tokens, only for the purpose of accessing
+the services offered on the BlockCAT platform.
+
+BlockCAT and its team must abide within the laws set forth in its operational country(ies).
+We intend to provide our services in as decentralized a fashion as reasonably feasible, but
+our legal entity must act according to the rules and bounds encoded in applicable laws. This
+includes but is not necessarily limited to laws governing financial operations, employment,
+fee charging, and sales.
+
+19
+
+
+
+References
+
+[1] http : / / www . creditcards . com / credit - card - news / market - share -
+statistics.php (cited on page 5).
+
+[2] https://www.statista.com/statistics/277841/paypals-total-payment-
+volume/ (cited on page 5).
+
+[3] http://entethalliance.org/ (cited on page 6).
+[4] https : / / en . wikipedia . org / wiki / The _ DAO _ (organization) (cited on
+
+page 6).
+
+[5] https://twitter.com/Deloitte/status/866398442951778304 (cited on
+page 6).
+
+[6] https://www.ethnews.com/microsoft-demo-day-features-triple-play-
+of-ethereum-based-products (cited on page 8).
+
+[7] https://augur.net/ (cited on page 9).
+[8] https://gnosis.pm/ (cited on page 9).
+[9] https://www.kickstarter.com/ (cited on page 9).
+[10] https://www.indiegogo.com/ (cited on page 9).
+[11] https://blog.medium.com/what-are-bloom-filters-1ec2a50c68ff (cited
+
+on page 11).
+
+[12] https://www.reddit.com/r/ethereum/comments/6c1jui/delegatecall_
+forwarders_how_to_save_5098_on/ (cited on page 13).
+
+20
+
+http://www.creditcards.com/credit-card-news/market-share-statistics.php
+http://www.creditcards.com/credit-card-news/market-share-statistics.php
+https://www.statista.com/statistics/277841/paypals-total-payment-volume/
+https://www.statista.com/statistics/277841/paypals-total-payment-volume/
+http://entethalliance.org/
+https://en.wikipedia.org/wiki/The_DAO_(organization)
+https://twitter.com/Deloitte/status/866398442951778304
+https://www.ethnews.com/microsoft-demo-day-features-triple-play-of-ethereum-based-products
+https://www.ethnews.com/microsoft-demo-day-features-triple-play-of-ethereum-based-products
+https://augur.net/
+https://gnosis.pm/
+https://www.kickstarter.com/
+https://www.indiegogo.com/
+https://blog.medium.com/what-are-bloom-filters-1ec2a50c68ff
+https://www.reddit.com/r/ethereum/comments/6c1jui/delegatecall_forwarders_how_to_save_5098_on/
+https://www.reddit.com/r/ethereum/comments/6c1jui/delegatecall_forwarders_how_to_save_5098_on/
+
+	1 Executive Summary
+	2 Background
+	2.1 Smart Contracts and Their Motivation
+
+	3 Mission Statement and Objectives
+	3.1 Core Objectives
+
+	4 Why Ethereum?
+	5 Applications
+	5.1 Safe Remote Purchases and Escrows
+	5.2 Prediction Market Integration
+	5.3 Crowdfunding
+	5.4 Tamper Resistant Polls and Voting
+	5.5 Auctions
+	5.6 Proof of Existence
+
+	6 CAT Token Mechanics
+	6.1 CAT as an ERC20 Token
+	6.2 Marketplace Verification and Security
+
+	7 Technical Summary
+	7.1 Implementation Requirements and Considerations
+	7.2 Technologies and Decentralization
+
+	8 Operations and Roadmap
+	8.1 Key Activities
+	8.1.1 Platform Development, Testing, and Maintenance
+	8.1.2 Auditing
+	8.1.3 Business Growth and Development
+	8.1.4 Legal
+
+	8.2 Future Goals
+
+	9 Legal Considerations
+	References
+

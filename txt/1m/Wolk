@@ -1,0 +1,857 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Token Generation Event of WOLK for the Wolk Protocol - Whitepaper - July 21, 2017 ---
+
+
+	
+	
+
+ 
+
+Token	Generation	Event	of	WOLK		
+for	the		
+
+Wolk	Protocol	
+supporting	Decentralized	Data	Exchanges	
+
+ 
+
+July	21,	2017	
+Wolk	Foundation	
+
+ 
+Abstract  
+
+Digital advertising is dominated by Facebook and Google. This centralized oligopoly is sharing consumer data 
+with no one, causing publishers and advertisers to lose revenue and targeting capabilities outside of Facebook 
+and Google, while consumers and businesses are earning nothing despite their direct participation in their 
+network effects.  Existing avenues for owners of data to benefit from data have become very limited due to 
+privacy and trust considerations. Ethereum-based smart tokens in conjunction with decentralized data storage, 
+however, can help solve these limitations. The Wolk Protocol supports decentralized data exchange using 
+decentralized virtual currency keyed in by IDs, enabling data buyers and data sellers to exchange information 
+about IDs such as mobile device IDs, emails and phone numbers.  Wolk APIs use a new Ethereum-based token 
+called "WOLK".  In the Wolk Protocol, data buyers spend WOLK tokens to acquire data about specific IDs via 
+APIs and data suppliers earn WOLK for data delivered to buyers using those APIs. This document outlines the 
+parameters of a Token Generation Event of WOLK for contributors to: evolve the Wolk Protocol to support paid 
+data exchange using decentralized data storage, develop dynamic pricing models for data, develop decentralized 
+token smart contracts for managing reputations of data suppliers and data scientists, and enable consumers and 
+businesses to economically participate in data-driven business models. The Wolk protocol will apply to advertising 
+data to start, but this protocol can be applied to housing addresses, license plates, UPC codes, Ethereum 
+addresses; basically anything where there is data attached to IDs that can be shared publicly.  
+  
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-1-	
+
+The attached white paper is meant to describe Wolk’s currently anticipated plans for developing its business, its 
+platform, and its WOLK tokens.  Nothing in this document should be treated or read as a guarantee or promise of 
+how Wolk’s business will develop or of the utility or value of the WOLK; the document outlines our current plans, 
+which could change at our discretion, and the success of which will depend on many factors outside our control, 
+including market-based factors and factors within the data and cryptocurrency industries, among others.  Any 
+statements about future events are based solely on our analysis of the issues described in this document, and our 
+analysis may prove to be incorrect.  Purchasing WOLK is subject to many potential risks, some of which are 
+described in this paper, and some of which are provided in the FAQ on WOLK and our Token Generation Event 
+and in the WOLK Risk Disclosures.  These documents, along with additional information about our business and 
+the WOLK, are available on our website.  Purchasers of WOLK could lose all or some of the value of the funds 
+used to purchase WOLK. 
+
+1.	Wolk	Core	Value	Proposition		
+The Wolk Foundation introduces the Wolk Protocol, supporting decentralized data exchange among data buyers 
+and data sellers.  The Wolk Protocol enables data buyers and sellers to share data tied to IDs. The first use case 
+is to share data about IDs that are commonly used consumer identifiers for digital advertising and marketing: 
+
+● device ID (for mobile or other devices) 
+● email 
+● phone number 
+
+ 
+A new ETH-backed WOLK token is used as a key input to fully functional Wolk APIs (http://docs.wolk.apiary.io/) 
+that enable data buyers to obtain data about consumers (e.g. age, gender, app usage, emails, ...) and enable 
+data suppliers to get compensated for the onboarded data.  In the domain of digital advertising, Wolk provides the 
+following core value propositions: 
+
+● Marketers improve data-driven targeting of mobile advertising, email marketing, telemarketing or texting 
+campaigns.  They do so by buying WOLK to obtain data via Wolk APIs and the Wolk Protocol. With 
+improved targeting, advertisers will increase the overall efficiency of their marketing dollars. 
+
+● Publishers, while staying anonymous, increase their revenue from appropriate valuation of their data 
+assets.  They do so by earning WOLK when supplying valuable data that buyers retrieve via the Wolk 
+APIs. 
+
+● Consumers experience more relevant advertisements and personalized messages from marketers. 
+Rather than having their data used to build up massive walled businesses, consumers can support Wolk 
+Protocol and participate in the ownership of WOLK. 
+ 
+
+The value of all WOLK tokens (and thus typically, the price of the WOLK token), can be proportional to the API 
+demand for all the data stored in the decentralized backend. The WOLK Smart Token Contract makes 
+exchanging WOLK to ETH and ETH to WOLK easy - using a 20% ETH - backed reserve (detailed later). The 
+Wolk APIs make it easy for data buyers and data sellers to buy and sell data.  Because WOLK is "burnt" on each 
+API call, and supply of WOLK thus decreases, Wolk anticipates that the internal economics will tend towards 
+increased value of WOLK.  Finally, the Wolk Foundation aims to support multiple ID spaces with multiple API 
+service providers following the Wolk Protocol.   
+While our initial focus is in the domain of advertising, the Wolk Protocol can also be used for other ID spaces (eg 
+Ethereum addresses, domains, location IDs, ...).   
+This document reviews problems in buying and selling advertising data in Section 2 and motivates the 
+development of the Wolk Protocol and Wolk Ecosystem in Section 3.  A review of the advertising data business 
+landscape is presented in Section 4.  Parameters for a Token Generation Event of WOLK is described in Section 
+5, for which all interested parties may participate in August 2017.  Please refer to the WOLK Token term sheet 
+and FAQ on who may participate.  
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-2-	
+
+2.	Problems	in	Buying	and	Selling	Advertising	Data	
+Google and Facebook have the vast majority of advertising data about consumers across the world.  The reason 
+is simple: they have services loved by consumers.  Consumers use mobile devices running on Android (with over 
+80% market share worldwide) to search for information on Google.com, check their email on gmail, and use 
+Facebook, Instagram, Whatsapp, FB Messenger to communicate with the world.    Over the last 2 decades, 
+Google and Facebook have used network effects to build massive advertising businesses with targeting data from 
+search and highly detailed information acquired from freely volunteered information.  Consumers trust Google and 
+Facebook with their most intimate personal information systematically and regularly.  Where Google and 
+Facebook do not dominate (e.g. in China, Korea and Japan), other local companies enjoy similar centralized 
+oligopolies over advertising data. 
+Publishers and advertisers are now highly dependent on these two companies, for advertising revenue and to 
+reach consumers at scale.  However, there is no access to any of the data powering their services.  The reason is 
+simple: they do not wish to eliminate their network effects that power their data duopoly.  The end result for 
+consumers is a low quality ad experience for services not dependent on Facebook or Google.   
+Wolk's Advertising Data Exchange is designed to level the playing field of data, to enable a decentralized network 
+of data buyers and suppliers to collaborate and compete collectively with the centralized oligopolies. 
+
+2.1	Challenges	in	Buying	Advertising	Data	about	Consumers	
+Google and Facebook provide very limited access to consumer data.  There are few effective methods to access 
+information about how to map a person's IDs such as: 
+
+● Email ID: george.washington@gmail.com 
+● Mobile ID: George Washington's deviceID 0000994B-4C70-4710-85D7-D1D022C7000E 
+● Phone number: 202-555-9876 
+
+to attributes such as: 
+● other IDs: Emails, Mobile IDs, Phone numbers -- which are critical for cross channel marketing 
+● demographic data: age, gender, ethnicity, relationship status, number of children, ... 
+● purchase intent data: auto, mortgage, real estate, ... 
+● device data, e.g. iPhone 7 plus 
+
+ 
+Every publisher must re-request the same information from consumers to use this for targeting, leading to wasted 
+cycles of endless re-registering the same attributes over and over -- so many publishers just do nothing.  If 
+authentication schemes of Google or Facebook Connect are used, heavy handed policies from them in the name 
+of "data leakage" pose a threat to a publisher’s ownership and control of that data -- the publisher can't use 
+"Facebook's data" without restriction, and certainly not for the purpose of advertising and marketing. 
+In the old days, a marketer could get a phone book and look up George Washington and know that he lived at 
+2305 Main St, learn that his phone number is 202-555-9876.  In the current digital ecosystem, it is not possible to 
+do that easily, because the phone book has been replaced with centralized services of Google and Facebook 
+whose ID of 0000994B-4C70-4710-85D7-D1D022C7000E cannot be mapped to such attributes.   
+Over the last decade, data services from Oracle (Blue Kai, Datalogix), Salesforce (Krux), Acxiom (LiveRamp) 
+have been developed for marketers to map domain-specific cookies to these attributes, but the coverage is 
+nothing like a phone book and not built for a mobile device ID dominated era: coverage is relatively poor in the US 
+and often non-existent outside the US!  From a data advertising point of view, the data business is fraught with 
+problems:  
+
+1. datasets are not real-time, not high quality, not well standardized, and therefore require significant amounts of data 
+science to find signals in the noise; 
+   
+
+2. datasets utilize impression-based monetization as a business model -- each segment has a CPM and if that segment 
+is used to target consumers, requires data buyers to report usage of the data based on impression counts.  This is 
+frequently underreported due to (1), and many data suppliers are wary of supplying actionable data as a result. 
+ 
+
+3. datasets traditionally have CPMs that are too high for data buyers or CPMs are too low for data suppliers. which 
+leads to data poor advertising campaigns outside of the Facebook and Google universe and buyers having no 
+alternative vendors to rely on. 
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-3-	
+
+2.2	Challenges	of	Selling	Advertising	Data		
+Consumers expect to access content (websites and mobile applications) for free using advertiser-supported 
+services.  However, consumers also want publishers to respect their privacy with now commonly accepted and 
+mature privacy principles, and consumer data is protected by state and federal privacy laws and regulations.  
+Assuming these privacy principles and laws are respected and basic controls are in place, Google and Facebook 
+have proven that consumers are willing to share vast amounts of data in exchange for valuable services.  
+However, once the consumer provides data to a publisher (e.g. a web site or mobile application), there are not 
+easily available means for that publisher to monetize that data: 
+
+1. Publishers are very wary of violating consumer trust 
+ 
+
+2. Publishers want anonymity: because of the above, they do not wish to be identified as the seller of 
+consumer data to either consumers or advertisers 
+
+ 
+3. Publishers do not know how their data should be valued and desire maximum monetization opportunities 
+
+in a dynamic pricing model. 
+ 
+
+Very few options exist for publishers wishing to sell their data in a way that addresses the above problems.  If 
+publishers provide their data to marketplaces like Oracle (Blue Kai, Datalogix), Salesforce (Krux), Acxiom 
+(LiveRamp) and others, the structure of these exchanges force publishers into dealing with the following 
+problems: 
+
+1. Publishers risk violating consumer trust 
+ 
+
+2. Publishers lose anonymity 
+  
+
+3. Publishers risk undercompensation because data buyers under-report and/or have a poorly priced CPMs 
+for their data 
+
+ 
+Because publishers have few means of sharing data with others anonymously and getting compensated for the 
+value they bring, a better solution is required.  
+
+	
+	 	
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-4-	
+
+3.	Introducing	the	Wolk	Protocol	and	Ecosystem	
+3.1	Ecosystems	
+The Wolk ecosystem is powered by the WOLK token. 
+The Wolk Protocol, developed by the Wolk Foundation, aims to meet the challenges in buying and selling data 
+using Ethereum-based tokens, working in conjunction with a decentralized data storage mechanism based on 
+Swarm.  Blockchains are a powerful distributed ledger running behind a large distributed set of nodes on the 
+Internet all working in concert to verify transactions submitted and stored on that ledger.  Many are familiar with 
+the dominant cryptocurrency of Bitcoin, but Wolk uses the cryptocurrency Ethereum for its programmable "smart 
+contracts".   
+Ethereum smart contracts live on the blockchain permanently and can hold balances not only in ETH but also 
+inETH-based cryptoassets that can be freely traded amongst thousands of participants. This document describes 
+a new ERC20 cryptoasset of the "WOLK" token that works in conjunction with data stored in decentralized data 
+storage.   Typical transactions that can be recorded on the public blockchain are e.g. "Data Buyer sends 100 
+WOLK to Exchange" or "Exchange sends 75 WOLK to Data Supplier" where 100 WOLK represents the 
+settlement of a buyer obtaining a stream of data attached to a set of IDs and 75 WOLK represents the WOLK 
+earned by the supplier in this transaction. 
+The Wolk Ecosystem consists of: 
+
+● Wolk Foundation, a non-profit Swiss Foundation promoting the development of the Wolk Protocol for 
+decentralized data exchange  
+
+● Wolk API Service Providers, for profit entities working with data suppliers and data buyers to use the Wolk 
+Protocol in APIs  
+
+● Data Buyers, who get data in exchange for WOLK 
+● Data Suppliers, who get WOLK in exchange for quality data 
+● Data Scientists, who get WOLK in exchange for analyzing data   
+● Consumers, who are what the data is about 
+
+ 
+The basic actors of this ecosystem are shown in Figure 1 (the Wolk Foundation, Data Scientists and Consumers 
+are omitted).    Data Buyers exchange ETH for WOLK and Data Suppliers WOLK for ETH via the WOLK Token 
+Contract Functions purchaseWolk and sellWolk.  Data Buyers use the WOLK API to bid on data and Data 
+Sellers use the WOLK APIs to provide data, with the Wolk API Service provider calling settleBuyer and 
+settleSeller functions regularly to transfer WOLK between Buyer and Seller account.  An internal exchange 
+rate is updated by purchaseWolk, sellWolk and with the goal of maintaining, a fixed 20% reserve following 
+the Bancor formula.  Because the settleBuyer operation burns a percentage of WOLK (up to 10%), long-term 
+WOLK holders can potentially enjoy the benefits of an increasing ETH-backed exchange rate as Wolk API usage 
+increases.        
+ 
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-5-	
+
+ 
+Figure 1.  WOLK/ETH flow and Data flow between Data Buyer, Data Supplier and Wolk API Service Provider.   
+
+ 
+
+3.2	Wolk	Protocol  
+Data suppliers use open source APIs to onboard and store data in decentralized backends with the WOLK 
+token.   
+The Wolk Protocol will use decentralized data storage mechanisms based on Swarm to store mappings between 
+IDs and data about those IDs. Data can be onboarded in bulk or point by point with APIs that load data into the 
+decentralized back end in canonical form, e.g. an API call of 
+
+https://api.wolk.com/data/1.0/sell?key={APIKEY}&age=45&gender=M&ids=0000994B-4C70-4710-85D7-
+D1D022C7000E   
+stores the mapping that deviceID "0000994B-4C70-4710-85D7-D1D022C7DCCE" has "age:45, gender:Male" 
+As of June 2017, Wolk has on boarded over 400MM mobile deviceIDs with email, age and gender data and over 
+3B data points with app usage information.  Typically, when suppliers provide datasets, the onboarding of data 
+consists of taking files of around 1MM-10MM lines and bringing them into "device", "email" and/or "phone"  
+mappings stored in decentralized backend storage.  For high volume throughput and low latency API responses, 
+our current implementation uses Google Cloud's BigTable [HBase] as a cache into this decentralized backend 
+storage. 
+ 
+	  
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-6-	
+
+Data buyers use open source APIs to buy paid data stored in decentralized backends with WOLK tokens.  
+See Figure 2 for a screenshot of the June 2017 Wolk API documentation for mobile device IDs.  An example API call is: 
+
+ 
+https://api.wolk.com/data/1.0/api?key={APIKEY}&currency=USD&age=4&gender=15&ids=0000994B-4C70-4710-
+85D7-D1D022C7000E 
+which returns attribute-value responses as such: 
+
+{ 
+    "requestID": "52d6ba4e4117fa15899b5a7d4029ae36", 
+    "deviceID": "0000994B-4C70-4710-85D7-D1D022C7000E", 
+    "age": { 
+            "code": 26, 
+                  "description": "Insufficient Bid" 
+       }, 
+    "gender": { 
+             "value": "M", 
+             "p": 0.94965, 
+                  "price": 3.0357, 
+                  "code": 20, 
+                  "description": "Found" 
+               } 
+} 
+
+ 
+In the above example, the buyer is bidding $4 per 1000 "age" datapoints and $15 per 1000 "gender" datapoints 
+asking about a specific mobile device ID; the API returns that the age bid was insufficient while the gender bid is 
+settled at $3.0357 per 1000 datapoints, where the "gender" attribute for that mobile deviceID is "M" for male.    
+Each ID space has its own specification of a set of attributes and values that could be returned for requested IDs.  
+In the Wolk Protocol, maximum bids are in WOLK and settled in WOLK internally, but buyers can specify their 
+own currency (USD, EUR, GBP, CHF, JPY etc.) which are mapped into ETH and then WOLK using externally 
+available APIs.      
+Every 15-20 minutes, on the public Ethereum blockchain, data buyers accounts are debited and data suppliers 
+accounts are credited based on the aggregated WOLK activity with settleBuyer and settleSeller 
+functions; this can be also done through the use of "payment channel" mechanisms. This flow of WOLK is shown 
+in Figure 1.  Data buyers obtain WOLK by sending ETH to the Wolk Smart Token contract address and obtain 
+WOLK with purchaseWolk; buyers can then use their WOLK to submit bids for data attributes via the Wolk 
+APIs.  If data is available from one or more suppliers, 20% of the WOLK is provided to an API service provider 
+(managed by the Wolk Foundation), up to 10% is "burnt" to compensate the WOLK ecosystem holders at large, 
+and the remaining 75% is shared between data suppliers who supplied the data in the API response.   
+
+ 
+	  
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-7-	
+
+ 
+Figure 2.  Wolk APIs are publicly available and fully functional. 
+
+ 
+The Wolk Protocol organizes how APIs exposed by API Service Providers are used by data buyers and 
+data suppliers in conjunction with decentralized virtual currency, decentralized data storage and data 
+scientists. 
+The Wolk Foundation supports the development of the Wolk Protocol to organize many ID spaces with different 
+structures in conjunction with multiple API Service Providers.  For ease of use from API users, the mappings 
+between ID spaces should be coordinated in the API outputs.  Here is a small sample of additional ID spaces to 
+consider, all subject to applicable privacy policies: 
+
+● residential and business addresses (e.g. "2305 Appleby Ct") 
+● federal and state government issued IDs (e.g. 447-71-5082) 
+● vehicle identification numbers  
+● face recognition IDs / photo URLs 
+● open social network IDs (Facebook, LinkedIn, ...) 
+● UPC codes 
+● … more 
+
+ 
+For each space, it may be natural to adopt the WOLK token to model the data available in the space or launch 
+separate tokens, e.g. an "ADDRESS" tokens, "GOV" tokens, "VIN" tokens, "FACE" tokens ... It is a broader aim of 
+the Wolk Foundation to expand the scope to include these spaces after the advertising space is proven liquid.	  
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-8-	
+
+3.3	Wolk	Pricing	Dynamics	and	Reputation	Model	
+Dynamic pricing models of different data attributes will be developed to augment current exchange 
+dynamics in the current API designs.  
+At present, the Wolk Protocol relies on suppliers specifying the price floor they are willing to sell their data and 
+buyers specify the price ceiling they are willing pay for the data, with the above API dynamics enabling settlement 
+with familiar "exchange" dynamics where prices are between a specific buyer’s max and a supplier’s min.   The 
+Ethereum token ecosystem has witnessed rapid innovations in smart contract pricing in token sales and it is likely 
+that smart contract pricing techniques suitable for automatic data pricing will be developed in the community.  The 
+Wolk Foundation intends to support technical innovation by supporting dynamic pricing models for ID attributes 
+among its API service providers that improve upon this well understood exchange dynamic.  
+WOLK will be offered in a Token Generation Event and then liquidity of WOLK will be backed by ETH-
+backed reserves. 
+WOLK will be provided to contributors via a Token Generation Event described in detail in Section 5.  After this 
+"Token Generation Event", 20% of ETH will be kept in reserve to support the liquidity of WOLK: 
+
+1. WOLK Token holders may exchange WOLK for ETH and drive WOLK prices down [exactly as much as 
+necessary to maintain the 20% ETH reserve] 
+
+2. ETH holders may exchange ETH for WOLK and drive WOLK prices up [again, exactly as much as 
+necessary to maintain the 20% ETH reserve] 
+
+In addition, WOLK owners may sell their WOLK to data buyers or others using exchanges listing WOLK.  
+Reputation and data quality scoring methods will be developed to support decentralized data exchange.   
+Currently, all advertising data suppliers that have been onboarded have been vetted for having publicly visible 
+data collection methods (mobile app and desktop registration, or mobile SDKs used in applications) and 
+recognizable consumer web/mobile brands.  However, the Wolk Protocol and APIs will be open to allow everyone 
+to participate: suppliers only need an Ethereum address and a small amount of WOLK to store their onboarded 
+data onto decentralized storage.  Since suppliers have financial incentive to get paid in WOLK without regard to 
+data quality and potentially in fraudulent ways, it is critical to augment the Wolk Protocol to support reputation 
+mechanisms and data quality scoring mechanisms.  To balance this financial incentive, we will introduce two core 
+mechanisms: 
+
+● data suppliers will be paid or charged storage fees as a function of their reputation and reliability 
+● data scientists will be compensated in WOLK for determining data supplier reputation and reliability 
+
+ 
+The intention is to have data suppliers earn good reputation scores and onboard data that is timely and accurate, 
+and not redundant and inconsistent.  The Wolk Foundation will support Wolk protocol development along these 
+lines with multiple API service providers and may develop new token models with the above design 
+considerations.   
+
+	
+	 	
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-9-	
+
+3.4	Uses	of	WOLK		
+WOLK is used to buy data.   
+The initial primary use case for WOLK tokens is to access data about mobile device IDs, raw and hashed emails, 
+phone numbers, where future ID spaces anticipated by the Wolk Foundation.  For each ID space, multiple 
+standardized attributes will have their own API design.  Because Wolk APIs have WOLK bids for each individual 
+attribute, different kinds of data elements can be priced differently. It is anticipated that additional data models and 
+APIs will be designed, increasing the potential value of WOLK. This increasing array of data attributes for 
+increasing numbers of consumer identifiers will enable increased fine-grained personalization for marketers, 
+increased monetization for publishers, and better experiences for consumers. 
+WOLK is used to monetize data.   
+As buyers use the Wolk API, sellers accumulate WOLK tokens.   By allowing WOLK to be exchanged for ETH 
+using a 20% ETH-reserve, Wolk intends to provide sellers a liquid market for their data, so long as ETH itself is 
+liquid. In addition, the WOLK token is an ERC20 token, so with sufficient transaction volume, it can be traded on a 
+number of exchanges and supported by multiple cryptocurrency wallets, allowing data suppliers monetize their 
+WOLK token.      
+WOLK can be used to compensate API service providers for its data value-added services.   
+Additional Wolk APIs could be used by other API service providers to support data buying and selling. 
+WOLK can be used to reward early WOLK contributors.   
+Because a small percentage of WOLK is effectively "burnt" in each API call, WOLK holders may see price 
+appreciation of their WOLK when buyers use the API as this burning drives up the value of WOLK 
+programmatically.     
+
+	 	
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-10-	
+
+4	Business	Landscape	-	Advertising	Data	
+Because the initial development of the Wolk Protocol is focused on advertising data, we limit our discussion to 
+advertising data only. 
+
+4.1	Competition	for	serving	buyers	and	sellers	of	advertising	data 
+● Google and Facebook do not provide their data to anyone and use their walled gardens to strengthen 
+
+their position further.   Google and Facebook and other cloud companies will of course explore blockchain 
+technology but are intrinsically disincentivized to release their data to the broader ecosystem.  However, 
+collectively the Wolk ecosystem will compete with Google and Facebook for digital advertising ecosystem 
+revenues. 
+
+● Existing CRM systems and DMPs from Salesforce/Krux, Adobe, Lotame and many others currently house 
+first-party data and incorporate third-party data keyed in by identifiers of emails, mobile deviceIDs, 
+cookies and phone number.  The end point of data from Wolk may be DMPs like this and interfaces 
+between DMP and Wolk may be important to develop.   
+
+● Existing Data Exchanges such as LiveRamp/Acxiom and Oracle/Datalogix/BlueKai do not have quality 
+deterministic data available.  Their business models are based off of impression delivery, are poorly 
+policed and are underpriced or overpriced, resulting in massive data leakage, low quality control and poor 
+monetization.  Buyers use data from these exchanges because they have no other real choice and when 
+they do, the perception is that the data is low scale.  
+
+	
+
+4.2	Wolk	Protocol	Advantages		
+With sufficient data supply, Wolk believes the architecture is intrinsically able to compete with Facebook and 
+Google in the mobile advertising ecosystem: 
+
+Current Data Exchange Methods Wolk Protocol Solution 
+
+Fixed CPM-based business model 
+ 
+
+Low data monetization for data suppliers 
+ 
+
+No Anonymity for data supplier 
+ 
+
+Poor Mobile ID Coverage 
+ 
+
+Unknown Accuracy 
+ 
+
+No aggregation of data suppliers 
+ 
+
+Data leakage 
+ 
+
+High trust required 
+ 
+
+Low competence to compete with FB and GOOGL 
+
+Dynamic Token-based business model 
+ 
+
+High data monetization for data suppliers 
+ 
+
+Anonymous data supplier 
+ 
+
+High Mobile ID Coverage 
+ 
+
+Validated Accuracy (p-value) for core attributes 
+ 
+
+Systematic aggregation of data suppliers 
+ 
+
+Data secured in Decentralized Storage accessed by API 
+ 
+
+Trustless 
+ 
+
+High prospects to compete with Facebook and Google 
+ 
+
+	
+
+	 	
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-11-	
+
+4.3	Wolk	Background	
+The Wolk Foundation was created by professionals in mobile advertising that saw a need for decentralized data 
+protocols.  Several of the team members came from CrossChannel Inc. Founded in November 2009, 
+CrossChannel is a Mobile Demand Side Platform with 25 people on staff and has placed over $175MM in mobile 
+advertising during its 8 year history.   
+CrossChannel’s specialty has been running performance-based in-app advertising campaigns and through this 
+developed a core expertise in modelling mobile deviceIDs and developing real-time bidding algorithms for the 
+purpose of bidding on exchanges of Google, Twitter/Mopub, Unity, Rubicon, and dozens of other programmatic 
+mobile supply side platforms.   
+Through experience, CrossChannel has developed deep first hand knowledge of the relative dominance of 
+Google and Facebook in mobile advertising, the lack of real data solutions from existing vendors, and how mobile 
+marketing can be done more efficiently with the benefit of quality data at scale.   
+In response to this, CrossChannel recognized the need for quality mobile device ID data by the entire mobile 
+marketing ecosystem and recognized how the decentralized Ethereum-based virtual currency and decentralized 
+storage mechanism could be brought together to improve multiple data ecosystems.  Thus, the birth of Wolk 
+Protocol and the Wolk Foundation. 
+The Wolk Foundation aims to develop and promote the Wolk Protocol with multiple Wolk API service companies, 
+starting with Wolk Inc as its first advertising data service provider.  Wolk Inc is charged to:  
+
+● develop relationships with data buyers worldwide, who must be educated about how to use the Wolk API 
+to improve their advertising campaigns or serve clients better 
+
+● develop and enhance Wolk APIs for data buyers and suppliers to transact with WOLK, and deliver 
+increasing data quality for data buyers  
+
+ 
+Under the direction of the Wolk Foundation, the wolk.com web site and Wolk API is developed and hosted by 
+Wolk Inc and enables buyers and suppliers to view their data buying and selling and transact in their fiat currency.   
+Because of the above background, the Wolk Inc team is composed of many people from CrossChannel's mobile 
+DSP and will expand to include others from neighboring marketing ecosystem backgrounds.    
+The Wolk Core Team consists of: 
+
+● Sourabh Niyogi, 45, Wolk Foundation Council President 
+● Sonia Gonzalez, 38, Wolk Foundation Council Vice-President, Wolk Inc GM 
+● Harish Thimmappa, 33, Wolk SVP Revenue 
+● Rodney Witcher, 36, Wolk VP Business Development 
+● Michael Chung, Wolk Product Manager and Protocol Developer - API+Protocol Designer  
+● Mayumi Matsumoto, Wolk Data Scientist - API+Protocol Designer 
+● Alina Chu, Wolk Data Scientist & Quantitative Analyst 
+● Nitin Chauhan, Wolk Data Engineer 
+● Bruce Han, Wolk Software Engineer 
+● Luvsanbyamba Buyankhuu, Wolk Data Engineer 
+● Scott Salin, Wolk Business Development 
+
+ 
+For more complete bios of our team, please visit our site team page here: https://wolk.com/app/team. 
+ 
+ 
+As the marketplace for multiple data exchanges emerges with maturing decentralized tokens and decentralized 
+data storage models, multiple Wolk API service companies will be supported by the Wolk Foundation in the same 
+way.		 	
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-12-	
+
+5	WOLK	Token	Generation	Event	
+
+5.1	Summary	
+Our goal is to distribute a minimum of 50MM WOLK and maximum of 500MM WOLK tokens in a "Token 
+Generation Event" from August 28, 2017 until September 28, 2017 in the following distributional pattern: 
+
+● Token Generating Event:   Minimum: 50MM WOLK [50,000 ETH] 
+     Maximum 500MM WOLK [500,000 ETH] 
+
+ 
+
+• Targeted Launch Date : Aug. 28, 2017 00:01am GMT (decided by block number) 
+• Targeted Closing Date : Sep. 28, 2017 23:59am GMT (decided by block number) 
+
+ 
+Contributions of ETH sent to the token address will be converted into WOLK. 
+Token contract address: TBD [ENS: wolktoken.eth]  (Published on wolk.com at least 3-5 days before token 
+launch date).  
+Token launch completion: Token launch will end when either the maximum number of WOLK is  raised (500MM 
+WOLK) or September 28, 2017 and the minimum number of WOLK has not been achieved (50MM WOLK). If less 
+than the minimum WOLK are raised, ETH will be refunded to the sending addresses.  
+ 
+
+ 
+Figure 3. WOLK Token Economics. 
+
+	 	
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-13-	
+
+5.2	Wolk	Token	Economics	
+After the Token Launch, data buyers and suppliers and Buyers may trade tokens freely on the exchanges but 
+may use 2 smart contract functions "purchaseWolk" and "sellWolk" to exchange ETH for WOLK and WOLK 
+for ETH freely using a 20% ETH reserve: 
+
+● data buyers will be able to buy WOLK by interacting with the "purchaseWolk" function of the WOLK 
+Token Contract by sending ETH and using the ETH:WOLK exchange rate internal to the contract.   The 
+ETH contributed goes into a "ETH reserve" and the prevailing ETH:WOLK exchange rate is automatically 
+updated.   Buyers who obtain WOLK then use the API Key (known to the buyer and the Wolk API service 
+provider only) to obtain data from the API; 
+
+● data sellers will be able to sell WOLK by interacting with the "sellWolk" function of the WOLK Token 
+Contract, specifying the amount of WOLK they wish to sell in exchange for ETH.   Using the ETH:WOLK 
+exchange rate internal to the contract, ETH is reduced in the reserve and the ETH:WOLK exchange rate 
+is automatically updated.    
+
+The total number of tokens therefore can increase from data buyers calling purchaseWolk and can decrease 
+from data sellers calling sellWolk: this drives WOLK pricing up (via purchaseWolk) and down (via 
+sellWolk) programmatically.   Furthermore, because up to 10% of the token supply is "burnt" through the 
+settlement operations without any such price changes by the API service provider, token holders can potentially 
+experience gains in the value of their WOLK.    
+Figure 4 shows the basic economics at a high level: we anticipate that the total value of all the WOLK tokens will 
+be proportional to the amount of quality data that buyers actually transact with via Wolk API.  The more the API is 
+used (because of the valuable data), the more that is settled and the value of WOLK can increase.  The less the 
+API is used (because of lack of valuable data), the less that is settled out and the value of WOLK can decrease.  
+Because the settlement operations are on the Ethereum blockchain, WOLK holders will have full transparency 
+into the whole operation. 
+
+5.3	Use	of	Proceeds	
+ETH raised in the Token Generation Event will be distributed as follows: 
+
+● 20% - supports liquidity of WOLK directly via purchaseWolk, sellWolk functions directly in the token 
+contract, which increase this reserve programmatically  
+
+● 20% - supports the API Service Provider Wolk Inc - marketing, business development, operations, etc.  
+● 5% - supports the Wolk Foundation operationally for 3-10 years  
+● 40% - will support a “Wolk Ecosystem Development Fund,” which will support data supplier onboarding 
+
+and data buyer onboarding by Wolk Inc. and any future service providers to the platform 
+● 15% - reserved by the Wolk Foundation for additional API Service Providers following the Wolk Protocol, 
+
+or for supporting related token based business models. 
+
+5.4	Wolk	Inc	Sustainability	/	Follow	on	Offerings	
+Wolk Inc is the service company charged with developing the data buyer and seller ecosystem of the first ID 
+space (of mobile deviceIDs, emails and phone numbers).   Wolk Inc sustainability is derived from: 
+
+• the WOLK earned from API calls in the settleBuyer and settleSeller functions.  The Wolk 
+Protocol has API Service Providers earning ~20% of all settled transactions in WOLK.  
+ 
+
+• the 20% of ETH from the Token Generation Event (see 5.3 above) 
+ 
+
+• While no follow on offerings will support Wolk Inc, additional Token offerings by the Wolk Foundation may 
+support additional ID spaces and support additional Wolk API service providers. 
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-14-	
+
+5.5	WOLK	FAQs		
+
+What	does	WOLK	represent?		
+WOLK represents a decentralized virtual currency represented in specialized Ethereum smart contracts following 
+an "ERC20" standard.  WOLK enables participants to interact with decentralized data exchanges utilizing the 
+Wolk Protocol.  Data is obtained with WOLK as a payment mechanism via the Wolk API.  The Wolk Protocol can 
+be used for any shared ID spaces but initial Wolk APIs are specifically focused on advertising data keyed in by 
+mobile device IDs, emails and phone numbers.    Data suppliers are compensated in WOLK for their highly 
+valuable data.   
+
+Are	you	distributing	WOLK	Tokens	in	the	Token	Generation	Event?		
+Yes.  The Wolk Foundation is offering to distribute a minimum of 50MM WOLK and a maximum of 500MM WOLK. 
+
+How	do	I	obtain	WOLK	in	the	Token	Generation	Event?	
+To obtain WOLK, you must have ETH stored in an Ethereum wallet.  Other cryptocurrencies must be exchanged 
+for ETH to obtain WOLK.  
+
+What	is	the	value	of	WOLK?		Is	WOLK	transferable?		
+During the token generation event, the value of WOLK is proportional to the value of ETH in the fixed schedule 
+shown in 5.1.   Afterwards, buyers and sellers of WOLK can potentially exchange WOLK freely on cryptocurrency 
+exchanges.   In addition, the 20% ETH reserve held in the WOLK Token Smart Contract should enable systematic 
+exchange of WOLK for ETH and vice versa with publicly visible exchange rates. 
+WOLK is transferable.  It can be sold to buyers who require WOLK to procure data, to suppliers and 
+cryptocurrency speculators.   All transactions conducted are verifiable and secured on the public Ethereum 
+blockchain. 
+
+Does	WOLK	represent	ownership	of	Wolk	Inc	or	of	the	Wolk	Foundation?	 
+No.  WOLK does not represent any ownership rights in Wolk Inc and does not represent participation in Wolk Inc., 
+nor does it represent any ownership rights in Wolk Foundation and does not represent participation in Wolk 
+Foundation.    
+
+When	will	the	token	launch	happen?		
+Wolk Token Offering will be conducted between August 28, 2017 and September 28, 2017, with precise block 
+numbers decided based on Ethereum mining rates.   
+
+How	will	Wolk	store	ETH?		
+The Wolk Foundation will use the standard Ethereum multisig wallet to store ETH. 
+ 
+For additional information, see our FAQ on WOLK and our Token Generation Event. 
+
+	
+	 	
+
+
+
+WOLK	Token	Whitepaper	-	Unstoppable	Advertising	Data	Exchange	–	July	21,	2017	
+-15-	
+
+5.6 Risks	and	Risk	Mitigation	
+Wolk advises on the following risks: 
+
+I. Insufficient Data Supply.   While Wolk is optimistic that decreasing CPMs and reduced revenue from competition 
+Google and Facebook motivate publishers to seek new monetization options such as Wolk, the market for data 
+monetization may be slower to develop given uncertainty on revenue potential.  
+  
+
+II. Insufficient Data Demand.  While Wolk has significant interest from mobile demand side platforms in attributes 
+keyed in by mobile device ID and is in testing, Wolk has not validated other addressable ids of email and phone 
+number.  It is anticipated that other identifiers will be at similar demand levels but this has not been validated in 
+the same way as mobile advertising IDs. 
+
+ 
+
+III. Insufficient liquidity for WOLK.  WOLK is a specialty token for a much smaller B2B community of data suppliers 
+and data buyers.  A smaller number of participants implies lower volumes of WOLK transaction, which may result 
+in higher volatility of WOLK.    
+
+ 
+
+IV. Privacy and local regulations may pose unforeseen limits on Wolk.  While Wolk will abide by industry standard 
+privacy principles and control measures, many local markets operate with different principles and the restrictions 
+may pose limits on what can be done in Wolk APIs or on the blockchain structure. 
+
+ 
+
+V. Data copying and fraud protection measures are being actively developed.  Data buyers may copy data against 
+API terms of service, reducing the ability for data suppliers to fully monetize their data because of the actions of 
+fraudulent actors.  Wolk Inc has developed basic countermeasures for bad actors but there can be no 
+assurances that the measures will be fully complete. 
+
+ 
+
+VI. Transaction throughput may be insufficient to support extraordinarily high API demand.  The decentralized 
+backend currently has been tested to 100K QPS transaction volumes with a hybrid "cache" architecture.  
+However, but it is possible that higher throughputs will be necessary and significant investments will need to be 
+made. 
+
+ 
+
+VII. WOLK Tokens may be regulated in unforeseen ways.  Wolk believes the WOLK tokens are not securities 
+because WOLK is used to consume the API.  However, local regulatory bodies may decide differently, limiting 
+the availability of API to the widest pool of data buyers.   
+
+ 
+
+VIII. Currently, WOLK is an Ethereum backed token. Should further developments in the cryptocurrency ecosystem 
+enable the handling of higher throughput, lower latency software architecture, the Wolk Foundation wishes to 
+remain nimble enough to transition over to better blockchain technology. 
+
+Wolk will use all available resources to reduce risks but outside of data buyers and suppliers participating, only accredited 
+investors and investors comfortable with the above openly stated risks should hold WOLK tokens.   
+
+For additional information on risks associated with purchasing WOLK, see our FAQ on WOLK and our Token Generation 
+Event and our WOLK Risk Disclosures. 
+
+5.7	Communications	
+A public Slack channel #announcements  on Wolk's Slack Channel will be used for all communications concerning WOLK 
+token sales and thereafter.   
+
+5.8	Open	Source	
+A draft of the WOLK Token Contract is available on https://github.com/wolktoken/token 
+
+A final version of the WOLK Token Contract will be available the week of August 21, 2017.   
+
+

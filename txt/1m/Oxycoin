@@ -1,0 +1,910 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Last Update on 14 March 2018
+
+The easiest way to buy 
+digital currencies
+with fiat.
+
+Oxycoin White Paper v2.1
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 2
+
+Abstract
+
+Introduction – The first problem: User-facing Limitations
+
+Introduction – The second problem: Developer tool Limitations 
+
+Our vision – The solutions
+
+Technical summary - OXYCOIN® MOBILE Application
+
+Technical summary - OXYCOIN® Software Development Kits and OXY Token use cases
+
+Mobile App Features 
+
+The plan
+
+Early supporters program – A new approach
+
+Early supporters program – Bonus structure
+
+ICO - Initial coin offering overview
+
+ICO - Funds distribution 
+
+ICO - OXY distribution
+
+Distribution calculations – Fundamentals
+
+Distribution calculations – Equations
+
+Distribution calculations – Example #1
+
+Distribution calculations – Example #2
+
+Distribution calculations – Example #3
+
+End 
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+10
+
+12
+
+13
+
+14
+
+15
+
+17
+
+18
+
+19
+
+20
+
+21
+
+ 22
+
+23
+
+24
+
+Table of Contents 
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 3
+
+Abstract
+In this paper, we present a high-level overview of the OXYCOIN® mobile application:  the one place 
+that contains everything cryptocurrency investors need right at their fingertips. This mobile application 
+will enable investors to easily purchase cryptocurrencies directly with FIAT (i.e. USD or EUR), 
+manage all their wallets and passwords, implement a user-friendly Global Address Book, and will be 
+the information hub where they can access any information they need to make informed investment 
+decisions. As a result of its simplicity, we believe the OXYCOIN® mobile application will pave the way 
+for mass adoption of cryptocurrencies. 
+
+This paper will also contain an overview of the OXYCOIN® Software Development Kits which will 
+serve as solutions to another large problem - software development tool limitations -  that is also 
+hindering cryptocurrency mass adoption. After completing our first milestone, the OXYCOIN® mobile 
+application, we will release an “Enhanced Decentralized Software Development Kit” which will allow 
+non-blockchain developers to build decentralized applications (DAPPs) using JavaScript and enable 
+something truly powerful that has never been possible before – Mobile and Web applications interacting 
+with decentralized applications! With these powerful tools being placed in the hands of non-blockchain 
+developers, many exciting OXYCOIN® token uses cases will be made possible. 
+
+The purpose of this document is to illustrate the vision of the OXYCOIN® team, explain the problems 
+that we are solving and how we are going to achieve our goals. There will be a separate Technical Paper 
+which will further elaborate on the technical fundamentals such as how the dPOS (Delegated Proof of 
+Stake) blockchain will be used, the network infrastructure, security, and core functionalities of the mobile 
+application and future developments.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 4
+
+Introduction – The First Problem: User-Facing 
+Limitations
+For many years, the cryptocurrency community has steadily grown, but the fact remains that this 
+community is still in the early stages of expansion. Reputable media outlets have started reporting on 
+the progress - mostly the price - of Bitcoin and other cryptocurrencies. As more exciting news stories 
+are reported and the world’s curiosity towards cryptocurrency grows, people are continuously attracted 
+to the fascinating world of digital currencies. There are many people wanting to invest in blockchain 
+technologies, unfortunately many have not been able to due to the complexity of entering crypto-
+markets. 
+
+Ever since the inception of Bitcoin and throughout the entire history of cryptocurrency, one of the 
+major barriers to entry for curious individuals has always been converting FIAT directly into Bitcoin 
+and other cryptocurrencies. The process usually requires some degree of technical skill and knowledge, 
+an understanding of security, and trust in a system which is unlike anything these people have previously 
+used. There’s no phone call to a broker to make a trade, there’s no speaking with an advisor in an office, 
+and of course there are ways of being swindled. Currently, the process of buying cryptocurrencies is a 
+tremendous multi-step hassle. Generally speaking, it begins with trying to figure out how to buy Bitcoin 
+from various platforms (e.g. Bitcoin ATM, website, cash-deal), sending it to an exchange (e.g. Bittrex, 
+Poloniex) and then figuring out how to make a trade for the desired cryptocurrency. These multiple 
+steps can seem complex, intimidating, and incomprehensible in some cases. Even for experienced 
+investors with technical knowledge, the process of converting FIAT into digital currencies is generally 
+slow, limited, frustrating, and occasionally risky. Due to these inconveniences, we believe that curious 
+and qualified investors are still turning their backs on the crypto-markets and are consequently missing 
+opportunities they would have otherwise seized. 
+
+Another one of the major barriers to entry for investors is acquiring the right news articles and 
+development progress information. It’s common for a crypto-enthusiast browsing the internet in search 
+of accurate information needed to make an informed decision. It’s not easy for new crypto-enthusiasts 
+to find the right sources because they are seemingly endless and unfamiliar – the task of seeking 
+information can feel cumbersome in a world they have just started trying to understand. Wouldn’t it be 
+logical to have all the current news, market values, video tutorials, and technology updates in one place 
+where investors can quickly and easily access the information needed to make informed decisions? 
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 5
+
+Introduction – The Second Problem: Developer 
+Tool Limitations
+In the current evolution of blockchain technology, there are still limitations to decentralized applications, 
+also known as DAPPs, as they require a blockchain node (server) to properly execute.  These nodes 
+are difficult to use for the average end-user. For example, in the case of Ethereum, users must tweak 
+“GAS values” and “transaction values”. These tweaks allow the DAPP to accept the inputs and function 
+as desired. In a world where people want to easily send money with the click of a button, these extra 
+technical steps are not user-friendly and increase the risk of user-error.
+
+Outside the challenges faced by regular users, in the world of blockchain software development, DAPP 
+SDKs (Decentralized Application Software Development Kits) are lacklustre and often difficult to 
+understand -  a problem which limits the potential of what can be created with blockchain technology. 
+The existing DAPP SDKs do not offer the proper facilitations and information to developers. 
+Consequently, they are forced to write code for the most basic functionalities, which is extra work that 
+can hinder progress and deter them from working with blockchain all together. In addition to these 
+problems, there does not yet exist an SDK specifically designed for Mobile or Web applications. This 
+type of tool would have the power to spark a complete shift in the entire world of software development.  
+
+After completing our first milestone - the OXYCOIN® mobile platform - we will tackle the developer-
+facing problem by creating the Enhanced DAPP SDK. As mentioned in our Abstract, this special tool 
+will enable “non-blockchain developers” to build decentralized applications (DAPPs) using JavaScript 
+and enable something truly powerful that has never been possible before – the interaction of DAPPS 
+with Mobile and Web applications! A valuable aspect of this SDK is that developers will essentially no 
+longer have to worry about the backend. Our technology manages the backend work behind the scenes 
+and allows DAPPs to “talk” with our blockchain through Application Program Interfaces (APIs). For 
+once, developers will have the tools they need to solely focus on what matters - building their frontend. 
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 6
+
+Our Vision – The Solutions 
+We’re pleased to announce that the solutions to the aforementioned problems are the OXYCOIN® 
+mobile platform and OXYCOIN® Enhanced DAPP SDK (Decentralized App Software Development 
+Kit). It is our mission to enable investors that are trying to enter the crypto-markets; we can achieve 
+this by simplifying the purchase of cryptocurrencies. Our mobile application will be the easiest way to 
+purchase cryptocurrencies with FIAT and will also feature a central information hub where investors will 
+receive any crypto-media they would need for investing in digital currencies and blockchain projects. In 
+short, we are tackling user-facing limitations by building the one and only platform that has everything 
+that crypto-enthusiasts will need in one place and tackling developer tool limitations by creating SDK’s 
+which will allow Mobile and Web applications to make use of decentralized applications.
+
+Understanding the true growth potential of the cryptocurrency world becomes obvious when observing 
+the facts. According to a study by the University of Cambridge: “the current number of unique active 
+users of cryptocurrency wallets is estimated to be between 2.9 million and 5.8 million” - representing 
+less than 1% of the world’s population. Though the full growth potential of the crypto-markets clearly 
+remains largely untapped, at the time of writing this white paper the total market capitalization of all 
+cryptocurrencies is still a very impressive figure - approximately $141,253,369,650 (~ $141 Billion) 
+according to Cryptolization. 
+
+With community support and ICO funding, the OXYCOIN® team plans to push the number of active 
+users to over 10 million and the market capitalization to over $300,000,000,000 ($300 Billion) in our 
+first year by enabling a whole new wave of crypto-enthusiasts that are waiting for a simple platform to 
+help them easily convert FIAT into cryptocurrency.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 7
+
+Technical Summary - OXYCOIN® Mobile 
+Application
+The main feature of the OXYCOIN® mobile application is to enable users to purchase cryptocurrencies 
+directly with FIAT - whether they have IT knowledge or not. OXYCOIN® provides a user-friendly 
+platform that contains all the information and tools needed by any crypto-enthusiast and puts it right at 
+their fingertips. With OXYCOIN® our users will be empowered to make informed decisions and take 
+positions in crypto-markets effortlessly.
+
+We’re also tackling the issue of tracking multiple addresses for multiple cryptocurrencies, lowering the 
+possibility of sending funds to the wrong place, by introducing our OXYCOIN® Global Address Book. 
+Users may create one single username that is searchable in the Global Address Book, and all their wallets 
+will be linked to this one username. This feature lowers the risks that accompany long alphanumeric 
+addresses such as “3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy”, which are prone to typos. 
+
+With our Global Address Book, users simply type their friend’s name, see their friend’s various 
+cryptocurrency wallets, and transfer funds to them within seconds. Keeping simplicity at the core of our 
+vision, we also plan to utilize QR codes as another user-friendly way to transfer funds.
+ The OXYCOIN® platform avails itself of the full power of blockchains to simplify the lives of 
+cryptocurrency users in that OXYCOIN® usernames are stored in the blockchain, allowing anyone 
+to find the addresses of their friends and use them right away. For example, when opening the mobile 
+application, a fresh list of the usernames (and their addresses) will be retrieved from the blockchain. This 
+enables auto-completion when one types a username in the Global Address Book. 
+
+These are just a handful of examples to briefly illustrate the value we can add by enabling user-friendly 
+features by including specific types of information in our secure blockchain, extracting its practically 
+limitless value. There are more technological features we will implement with our OXYCOIN® mobile 
+application, and the full details will be explained in our Technical Paper.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 8
+
+Technical Summary - OXYCOIN® SDKs and OXY 
+Token Use Cases
+After completing our first milestone, the OXYCOIN® mobile platform, we will tackle the second 
+problem – Developer Tool Limitations - by creating the Enhanced DAPP SDK, Mobile SDK, and Web 
+SDK.
+
+ENHANCED DAPP SDK
+The Enhanced DAPP SDK is crucial for enabling “non-blockchain developers” to build their own 
+DAPPs using JavaScript and make it possible for Mobile and Web applications to interact with them. 
+The current problem is that most of the existing DAPPs only contain backend code (code that runs 
+on the server). This means that to build a user interface, you would typically need to have your own 
+server and create a website (or an app) that interacts with core-code through Application Program 
+Interfaces (APIs). We will deliver the OXYCOIN® Enhanced DAPP SDK to let developers build User 
+Interfaces without the need to run their own server. Such an SDK will also be used to interact with 
+our mobile apps or even third-party mobile apps. The SDK will essentially allow DAPPs to “talk” with 
+our blockchain through Application Program Interfaces (APIs) and manage the backend work behind 
+the scenes. For once, developers will have the tools they need to solely focus on what really matters - 
+building their frontend.
+
+Another important feature to consider is that developers would have the ability the create user 
+interfaces directly within their DAPP and allow any other software developer to use their DAPP on the 
+OXYCOIN® mobile app. 
+
+User interfaces aside, we believe that third party developers with little to no experience in blockchain 
+technologies who want to use OXY in their app need the chance to be involved. That’s why the 
+Enhanced DAPP SDK will also include mechanisms for developers to:
+ - Manage end-user one-time payments (e.g. Google PlayTM Store)
+ - Manage end-user subscriptions model payments
+
+Providing these developers with an easy way to interact with our OXY blockchain will be critical in 
+making users aware of OXY and the power of blockchain technology.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 9
+
+Technical Summary - OXYCOIN® SDKs and OXY 
+Token Use Cases
+
+THE MOBILE SDK & WEB SDK:
+
+The OXYCOIN® SDKs for Mobile Applications and Web Applications will pave the way for a whole 
+new wave of development possibilities! Developers will be able to create DAPPS that can interact 
+with our Mobile and Web SDKs. When considering use cases for the OXY token, it is very exciting 
+that developers could now take advantage of the OXY in-app payment system instead of using current 
+expensive options such as Google Play™ Store (30%). All the functionalities included in the Enhanced 
+DAPP SDK – UI rendering, in-app purchases, in-app subscriptions – will have their own counterpart 
+within the Mobile SDK and Web SDK. The potential with these tools is effectively limitless.
+
+What can be achieved with these new development tools?
+
+The momentum behind mobile application development continues to grow each day and blockchain 
+technologies are quickly gaining more traction between users and developers. With the potential that 
+our 3 SDKs could unlock, we expect to see a proliferation of Mobile & Web apps using blockchain 
+technology as their persistent database. Here are some examples of token use cases:
+
+• Mobile in-app revenue model (e.g. games accepting/spending OXY). To contrast, through the 
+Google PlayTM platform, developers pay 30% commission which is very expensive.
+
+• Mobile apps securing their data using OXY blockchain. Blockchains are very secure, inexpensive, 
+and efficient. Conventional methods for storing data are more expensive, centralized, and potentially 
+more vulnerable to security breaches.
+
+• Mobile apps marketplaces
+• Micropayments
+• Subscription model DAPPs
+• E-commerce websites using OXY blockchain
+
+These examples are just a handful of use cases and there are obviously many other opportunities for 
+developers when they start making use of our powerful SDK’s. Once the floodgates of creativity are 
+opened for non-blockchain developers, it will be exciting to observe the evolution of DAPP integration 
+into the Mobile and Web world.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 10
+
+Mobile App Features 
+As the first version of OXYCOIN® mobile app is launched, there will be a primary set of supported 
+cryptocurrencies that our users will be able to purchase and trade through our platform. More of 
+them will be added in the future as we complete our development goals and receive feedback from our 
+supportive community. 
+
+The first set of supported cryptocurrencies will be the following: Bitcoin (BTC), Bitcoin Cash (BCC), 
+Ethereum (ETH), ARK (ARK), SHIFT (SHIFT), RISE (RISE), LISK (LSK), and of course OXY. 
+
+The OXYCOIN® mobile application is pushing the boundaries of simplicity with these features: 
+
+CORE FEATURES 
+
+• Mobile application is Android and iOS compatible
+• Create wallets for any of the supported 
+
+cryptocurrencies 
+• Buy any supported cryptocurrency with Bitcoin 
+• Sell any supported cryptocurrency for Bitcoin 
+• Easily send and receive the supported 
+
+cryptocurrencies using QR codes 
+• Manage multiple wallets and passwords in one 
+
+secure place 
+• Create your own username in the Global Address 
+
+Book, which is linked to all your wallets 
+• Find contacts using a Global Address Book (No 
+
+longer the need to copy/paste long addresses e.g. 
+1BoatSLRHtKNngkdXEeobR76b53LETtpyT) 
+
+• View the current market value per supported 
+cryptocurrency in USD/EUR/BTC
+
+• Create a backup of your addresses/passwords and 
+send it to your Dropbox, e-mail or print it as offline 
+backup 
+
+• Optional security features such as PIN code or 
+Touch ID
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 11
+
+PLANNED FEATURES
+
+• Buy any supported cryptocurrency with FIAT
+• FIAT payment options such as iDeal, Paypal and SOFORT Banking
+• Request adding new cryptocurrencies and provide feedback directly
+• View current ROI (Return on Investment)
+• Push Notifications when the price of a supported coin is above/below a certain market value
+• Import all addresses from a backup by scanning a QR code
+• Provide updates on crypto related news
+• Create a set of user-centric video tutorials and clearly defined quick reference guides
+• Market values
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 12
+
+The Plan
+
+MOBILE APP
+
+Our talented Android and iOS developers are actively working to produce the first version of the 
+OXYCOIN® mobile app. After the first version is released, we will continue to develop new features and 
+add more cryptocurrencies into the OXYCOIN® platform. 
+
+The backbone of the mobile application relies on a robust blockchain network that has 100% uptime, 
+meaning the network will always be online and available. The blockchain will securely store your wallet 
+addresses of any supported cryptocurrency by linking it with your username. This way, other users can 
+easily transfer cryptocurrency to your wallet by finding your username in a Global Address Book. If you 
+would like to read more about the use of our blockchain or other technical information, please refer to 
+our Technical Paper.
+
+MARKETING
+
+To reach our goals of making the mass adoption of cryptocurrencies a reality, it will be crucial that 
+we continuously promote our vision across the globe. Our talented marketing team will be actively 
+promoting the OXYCOIN® platform by using ambassadors and distributing media through major social 
+media platforms and media outlets.
+
+ICO
+
+ An Initial Coin Offering, a common way of starting projects in the blockchain world, will be used to 
+generate the seed funding that is needed to support our project goals. The ICO details can be found on 
+the “ICO – Initial Coin Offering” section of this white paper and on the ICO web page. 
+
+EARLY SUPPORTERS
+
+There are individuals who would like to support OXYCOIN® before the ICO begins. To compensate 
+them for their extra support and trust, we are developing an “Early Supporter Program”. Early 
+supporters will receive many benefits which are described in the “ESP – Early Supporter Program” 
+section of this white paper and on the Early Supporter web page.
+
+ROADMAP
+
+In short, we’re starting with creating the iOS and Android mobile applications, creating the 
+OXYCOIN® website, launching our main production network.  The official Roadmap of our project can 
+be found in the “Roadmap” section of this white paper and on the Roadmap webpage.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 13
+
+Early Supporters Program – A New Approach
+Conventional token exchange platforms revolve around the concept of currency exchange; Bitcoins 
+in exchange for tokens. The relationship between development teams and supporters is virtually non-
+existent - strictly monetary. This means the voice of the supporters is not heard and their knowledge is 
+not leveraged. 
+
+The OXYCOIN® team believes in the value of supporter knowledge and experience. We know that 
+you have the power to grow and improve our platform, thus we would like to give you a mechanism 
+to vocalize your opinions and collaborate. The Early Supporters will essentially be the voice of our 
+community and will actively take part in the decision making through our weighted polling system.
+For example, we understand there are many ways to monetize our platform, but our current primary 
+focus is developing a revolutionary and user-friendly mobile application. This means our new approach 
+involves leveraging the expertise of the Early Supporters, which will provide many possible solutions for 
+the future success of our platform. This new system will assist our team in determining the best course of 
+action for advancing the potential of OXYCOIN®.
+
+One of the best aspects this program is the Status and Bonus Protection for Early Supporters. For 
+individuals planning to send BTC or alternative cryptocurrencies, this system ensures that when you join 
+the Early Supporters Program, your status and bonus tier will be protected in the event of a downward 
+trend in the alternative currency markets during the ESP/ICO period.  Once an Early Supporters, 
+always an Early Supporters. The main purpose of this protection is to ensure that the Early Supporters 
+win big if the currencies they send increase in value and still win when the currencies they send decrease 
+in value. Please note, there is an entire section dedicated to explaining this concept in full detail with 
+various examples beginning from the section entitled “Distribution Calculations – Fundamentals”.
+
+Early Supporters will receive many other benefits such as Early-Bird-News, Early-Bird-Access, poll 
+taking, ROI (Return on Investment) calculations, insight into our detailed task list, Meet & Greet with 
+the team, and receiving BONUS OXY.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 14
+
+Early Supporters Program – Bonus Structure
+The contribution of Early Supporters will receive a bonus of 25% or more OXY in the ICO coin 
+calculation. Furthermore, that same weight will also be used in the poll-taking process, thus Supporters 
+with larger amounts of OXY will have more voting weight. Please note, we will be accepting the 
+following cryptocurrencies: Bitcoin (BTC), Bitcoin Cash (BCC), Ethereum (ETH), ARK (ARK), 
+SHIFT (SHIFT), RISE (RISE), LISK (LSK). The financial details for our Bonus and ICO distribution 
+calculations when using cryptocurrencies other than BTC for can be found in the section covering 
+examples for distribution calculations.
+
+BONUS STRUCTURE
+
+From August 21st, 2017 until August 31st, 2017 - Early Supporters the following bonuses:
+
+• Send   4 BTC or more: receive 25% bonus
+• Send 10 BTC or more: receive 30% bonus
+• Send 20 BTC or more: receive 35% bonus
+• Send 50 BTC or more: receive 50% bonus
+
+EARLY BIRD ADDITIONAL BONUS
+
+From August 15th, 2017 until August 20th, 2017 - Early Supporters receive an additional 10% bonus:
+
+• Send 4 BTC or more: receive 25% + 10% = 35% bonus 
+• Send 10 BTC or more: receive 30% + 10% = 40% bonus 
+• Send 20 BTC or more: receive 35 % + 10% = 45% bonus 
+• Send 50 BTC or more: receive 50% + 10% = 60% bonus 
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 15
+
+ICO – Initial Coin Offering Overview
+An Initial Coin Offering, a common way of starting a project in crypto-currency world, will be used to 
+generate the seed funding that is needed to support our project goals.
+
+MINIMUM THRESHOLD 
+
+We are looking to raise a minimum of 250 BTC. This will enable us to deliver v1.0 of the mobile 
+applications (basic functionality) and enable it to run on our stable blockchain network. The 250 BTC 
+will cover all the costs related to this including development, marketing and server expenses until 
+December 31, 2017. Therefore, we will be setting 250 BTC as our minimum funding threshold.
+
+TARGET 
+
+The target figure for the campaign is 700 BTC. This will enable us to release a fully functional version of 
+the application on both Android and iOS mobile platforms which will include full functionality of all 
+features, a news section, video tutorials and a globally stable blockchain network.
+Hard Cap - A Funding Ceiling of 2,000 BTC has been established. This is to ensure that those who sent 
+BTC receive a certain amount of OXY after the end of the ICO. If the 2,000 BTC limit is reached, the 
+ICO will be closed and the OXY tokens distributed between the participants.
+
+SUPPORTING WITH ALTCOINS
+
+Accepted tokens are: BTC, BCC, ETH, SHIFT, LISK, RISE and ARK. For those participants 
+supporting with Altcoins rather than BTC, the value of the tokens used will be averaged across the 
+period of August 15th to the end of the ICO Period. The average value will be calculated by picking the 
+value of each Altcoin multiple times a day using the Coinmarketcap API functionalities.
+
+PRICE PER OXY 
+
+The price of the OXY token will depend upon the amount raised during the ICO and reaching the 
+minimum funding goal of 250 BTC.  The full calculation details and examples can be found in the 
+sections of this white paper for “Distribution Calculation Examples”.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 16
+
+ICO – Initial Coin Offering Overview
+
+THRESHOLD NOT REACHED? 
+
+If the minimum funding target of 250 BTC is not reached by the end of the ICO:
+
+• Supporters will be given a chance to request a full refund of their support funds until October 15, 
+2017 01:00am UTC.
+
+• We will continue developing v1.0 of the mobile application.
+• There will be a fixed price of 0,00000933 BTC per OXY.
+• The OXY that are not sold in the ICO will be locked away in a separate wallet for a year or until the 
+
+team lacks funds, to be used for a second ICO.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 17
+
+ICO – Funds Distribution
+As stated in our Plan, in order to generate seed funding for our OXYCOIN® project, we will launch 
+an ICO (Initial Coin Offering) on September 1st, 2017.  These funds will contribute to supporting 
+development, server expenses, marketing, consultancy, team expansion, and founders.
+Please refer to the following diagram for the ICO funds distribution:
+
+CONSULTANCY
+10%
+
+FOUNDERS
+10%
+
+TEAM EXPANSION
+10%
+
+MARKETING & PR
+20%
+
+SERVER EXPENSES
+10%
+
+DEVELOPMENT
+40%
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 18
+
+ICO – OXY Distribution
+The total amount of coins created at the start of our main network is 100,000,000 OXY. To fund our 
+project for the first year and continue development, we will sell a maximum of 75,000,000 OXY (75%) 
+throughout the Early Supporters Program and ICO. 
+
+Please refer to the following diagram for the OXYCOIN® distribution of 100,000,000 total supply:
+
+ICO
+75,000,000
+
+STARTUP BONUS FOR TEAM
+1,000,000
+
+AIRDROP FOR TESTERS
+4,500,000
+
+AIRDROP FOR AMBASSADORS
+4,500,000
+
+TEAM WALLET 
+(VOTING WEIGHT)
+
+10,000,000
+
+BOUNTIES
+5,000,000
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 19
+
+Distribution Calculations – Fundamentals 
+We understand that there are individuals who will support our project using cryptocurrencies other 
+than BTC. The ICO distribution calculations for those not using BTC are slightly more complex due to 
+price fluctuations, however we’ve implemented an attractive calculation system which will protect Early 
+Supporter bonuses. The ICO and ESP final distribution calculations depend on two systems: “Status and 
+Bonus Protection for Early Supporter” and “Average BTC Value of the Alternative Cryptocurrencies”.
+
+STATUS AND BONUS PROTECTION FOR EARLY SUPPORTERS
+
+We are protecting the status and bonuses for our Early Supporters by determining eligibility and bonus 
+tier based on the value of the transaction at the time it appears – not the average value at the end of the 
+ICO. This system will protect the Early Supporter status and bonus percentage if there are downward 
+trends in the alternative cryptocurrencies during the ESP and ICO period.
+
+For example, when sending 4 BTC worth of LISK during the Early Supporter period, the value of the 
+transaction at the time when it appears guarantees that you are an Early Supporter and will still receive 
+your bonus, even if the average BTC value of the LISK you sent is worth less than 4 BTC at the end of 
+the ICO.
+
+In the case of higher tier Early Supporters (10 BTC or more), your bonus tier will not drop into a lower 
+bonus tier, it will be protected and stay the same.
+
+AVERAGE BTC VALUE OF THE ALTERNATIVE CRYPTOCURRENCIES
+
+As of August 15th, 2017 – the start of the Early Supporters Program - the BTC value of all supported 
+alternative cryptocurrencies will be saved each day until the end of the ICO period. We will determine 
+the average BTC value of alternative currencies over the whole period between August 15th and the end 
+of ICO. This average BTC value will be used in determining bonuses and final OXY distribution. There 
+are many detailed examples in the following pages of this white paper.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 20
+
+Distribution Calculations – Equations
+
+EQUATIONS & TERMINOLOGY 
+
+BTC value sent by an account - This is the amount of BTC “value” sent by an account during the ESP 
+and/or ICO period. This figure considers both the actual amount of BTC sent and the average BTC 
+value of alternative cryptocurrencies sent. It is calculated with the following equation:
+
+[Actual BTC sent] + [Average BTC value of alternative crypto currencies sent]
+
+Total BTC value received - This is the total amount of BTC “value” received by the OXYCOIN® team 
+during the ESP and/or ICO period.  This figure considers both the actual amount of BTC received and 
+the average BTC value of alternative cryptocurrencies received. Note, it does not factor in bonuses. It is 
+calculated with the following equation:
+
+Sum for all accounts [BTC value sent by an account]
+
+Weighted BTC value sent by an account - This is the total weighted BTC value sent by an account 
+which factors in the bonuses. It is calculated with the following equation:
+
+ [BTC value sent by an account + Bonus] 
+Where Bonus = [Bonus Percentage * BTC Value sent by an account]
+
+Total weighted BTC value received - This is the total weighted BTC value received by the OXYCOIN® 
+team which factors in the bonuses. It is calculated with the following equation:
+
+Sum for all accounts [Weighted BTC value sent by an account]
+
+Percentage of ICO distribution -  This is the percentage that an account will receive from the 75,000,000 
+OXY that will be distributed at the end of the ICO. It is calculated as follows:
+
+[Weighted BTC value sent by account / Total weighted BTC value received]
+
+OXY final distribution – This is the amount of OXY the account will receive at the end of the ICO 
+period. It is calculated with the following equation:
+
+[Percentage of ICO distribution * 75,000,000 OXY]
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 21
+
+Distribution Calculations – Example #1 – “Only 
+BTC is Sent”
+
+SCENARIO: 
+
+OXYCOIN® received 750 BTC and the calculated average BTC value of alternative currencies received 
+is 250 BTC at the end of the ICO. 
+
+• On August 25th John sent 4 BTC
+• John qualifies as an Early Supporter so will also receive the 25% bonus OXY.
+• John’s “weighted BTC value” to factor in his 25% bonus is going to be calculated as 4 BTC +   1 
+
+BTC.
+• His total weighted BTC value is 5 BTC. 
+• For OXYCOIN®, Total BTC value received = 750 BTC + 250 BTC = 1000 BTC.
+• If the Total weighted BTC received by OXYCOIN® was 1300 (Please note that this figure can only 
+
+really be determined at the end of the ICO when all the bonus calculations are done).
+• John’s Percentage of ICO distribution is: 
+
+[5 BTC / 1300 BTC] = 0.003846154
+• John’s final distribution is:
+
+0.003846154 * 75,000,000 OXY = 288,461 OXY
+
+NOTES
+
+• Without Early Supporter Bonus, John’s final distribution would have been 230,946 OXY.
+[ 4 BTC / 1299 BTC ] * 75,000,000 = 230,964 OXY.
+
+• If John was an Early Supporter with Early Bird Bonus of +10%, John’s final distribution would have 
+been 311,442 OXY.
+
+ [ 5.4 BTC / 1300.4 BTC ] * 75,000,000 = 311,442 OXY
+
+* In these calculations, the weighted BTC value received by OXYCOIN® must change due to the changes in 
+John’s bonus. 
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 22
+
+Distribution Calculations – Example #2 – “Win 
+When Markets Lose”
+This example will illustrate the added value of our Early Supporter Status and Bonus Protection system 
+when average BTC values of alternative cryptocurrencies decrease during the ICO period.
+
+SCENARIO: 
+
+OXYCOIN® received 750 BTC and the calculated average BTC value of alternative currencies received 
+is 250 BTC at the end of the ICO. In this scenario, the average BTC value of Ark and LISK are half 
+value at the end of the ICO. 
+
+• On August 25th John sent 2 BTC + 1 BTC worth of LISK + 1 BTC worth of ARK.
+• On August 25th, the BTC value sent by John was 4 BTC.
+• John qualifies as an Early Supporter will also receive 25% bonus OXY.
+• If at the end of the ICO the average BTC value for ARK and LISK are half compared to the day he 
+
+sent it, thus the BTC value sent from John’s account will now be 3 BTC as per:
+• John sent 2 BTC + the average BTC value of his ARK is now 0.5 BTC + for LISK 0.5 BTC, 
+
+totaling 3 BTC. John does not lose his Early Supporter Status or Bonus.
+• John’s “weighted BTC value” to factor in his 25% bonus is 3 BTC + 0.75 BTC.
+• His total weighted BTC value is 3.75 BTC. 
+• For OXYCOIN®, Total BTC value received = 750 BTC + 250 BTC = 1000 BTC.
+• If the Total weighted BTC received by OXYCOIN® was 1300 (Please note that this figure can only 
+
+really be determined at the end of the ICO when all the bonus calculations can be done)
+• John’s Percentage of ICO distribution is: 
+
+[3.75 BTC / 1300 BTC] = 0.002884615
+• John’s final distribution is:
+
+0.002884615 * 75,000,000 OXY = 216,346 OXY
+
+NOTES: 
+
+• Without Early Supporter Status and Bonus Protection, John’s final distribution would have been 
+173,176 OXY.  John has saved himself from losing 43,170 OXY by taking advantage of the Early 
+Supporter Status and Bonus Protection. [3BTC /1299.25 BTC] *75,000,000 =173,176 OXY
+
+• If John was an Early Supporter with Early Bird Bonus of +10%, John’s final distribution would have 
+been 233,600 OXY.   [4.05 BTC / 1300.3 BTC] * 75,000,000 = 233,600 OXY
+
+* In these calculations, the weighted BTC value received by OXYCOIN® must change due to the changes in 
+John’s bonus.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 23
+
+Distribution Calculations – Example #3 “Win 
+When Markets Win”
+This example will illustrate the added value of the Early Supporters Program when average BTC values 
+of alternative cryptocurrencies increase during the ICO.
+
+SCENARIO:
+
+OXYCOIN® received 750 BTC and the calculated average BTC value of alternative currencies received 
+is 250 BTC at the end of the ICO. In this scenario, the average BTC value of Ark and LISK are double 
+the value at the end of the ICO. 
+• On August 25th John sent 2 BTC + 1 BTC worth of LISK + 1 BTC worth of ARK.
+• On August 25th, the BTC value sent by John was 4 BTC.
+• John qualifies as an Early Supporter and will also receive 25% bonus OXY.
+• If at the end of the ICO the average BTC value for ARK and LISK have doubled from the day he 
+
+sent it, the BTC value sent from John’s account will now be 6 BTC as per:
+• John sent 2 BTC + the average BTC value of his ARK is now 2 BTC and for LISK 2 BTC, totaling 
+
+6 BTC.
+• John’s “weighted BTC value sent” to factor in his 25% bonus is going to be calculated as 6 BTC + 
+
+1.5 BTC.
+• His total weighted BTC value is 7.5 BTC.
+• For OXYCOIN®, Total BTC value received is 750 BTC + 250 BTC = 1000 BTC.
+• If the Total weighted BTC value received by OXYCOIN® was 1300 BTC (Please note that this 
+
+figure can only really be determined at the end of the ICO when all the bonus calculations can be 
+done. Here we are using a sensible number to show how the calculation would work).
+
+• John’s Percentage of ICO distribution is:
+[7.5 BTC / 1300 BTC] = 0.00576923077
+
+• John’s final distribution is:
+0.0057692307 * 75,000,000 OXY = 432,692 OXY
+
+NOTES:
+
+• Without the Early Supporters Program Bonus, John’s final distribution would have been 346,533 
+OXY. John now has an extra 86,539 OXY by taking advantage of the Early Supporters Program.             
+
+[ 6 BTC / 1298.5 BTC ] * 75,000,000 = 346, 533 OXY
+• If John was an Early Supporters with Early Bird Bonus of +10%, John’s final distribution would 
+
+have been roughly 467,092 OXY.    
+[ 8.1 BTC / 1300.6 BTC ] * 75,000,000 = 467,092 OXY
+
+* In these calculations, the weighted BTC value received by OXYCOIN® must change due to the changes in 
+John’s bonus.
+
+
+
+© 2018 OXYCOIN. All rights reserved.
+OXYCOIN® is a trademark registered at Benelux Office for Intellectual Property. 24
+
+End
+The OXYCOIN® team would like to thank you for reading our White Paper. If you did not find what 
+you were looking for, your question might already be answered in your FAQ webpage. 
+
+We hope that you are as excited about this project as we are! It’s time to make mass adoption of 
+cryptocurrencies a reality. Together, we can make it simple for more people to join the wonderful world 
+of blockchain technologies that are filled with technological and financial opportunities.
+
+

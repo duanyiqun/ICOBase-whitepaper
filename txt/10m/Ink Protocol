@@ -1,0 +1,927 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+Decentralized​ ​reputation​ ​and 
+payments​ ​for​ ​peer-to-peer 
+marketplaces 
+ 
+ 
+
+Listia​ ​Inc. 
+Ink​ ​Protocol​ ​Whitepaper,​ ​Public​ ​Draft​ ​v5​ ​-​ ​December​ ​1,​ ​2017 
+https://paywithink.com 
+ 
+   
+
+ 
+
+1 
+ 
+
+
+
+ 
+
+Summary 
+
+Ink​ ​Protocol​ ​is​ ​developed​ ​by​ ​Listia,​ ​a​ ​P2P​ ​marketplace 
+for​ ​buying​ ​and​ ​selling​ ​used​ ​goods​ ​online.​ ​Launched​ ​in 
+2009,​ ​the​ ​marketplace​ ​now​ ​has​ ​over​ ​10​ ​million 
+registered​ ​users​ ​who​ ​have​ ​exchanged​ ​100​ ​million 
+items.​ ​The​ ​company​ ​has​ ​raised​ ​$11MM​ ​in​ ​venture 
+capital​ ​from​ ​prominent​ ​investors. 
+ 
+Listia​ ​will​ ​be​ ​introducing​ ​a​ ​new​ ​decentralized 
+reputation​ ​and​ ​payment​ ​system​ ​called​ ​Ink​ ​Protocol 
+(“Ink”),​ ​which​ ​is​ ​powered​ ​by​ ​the​ ​Ethereum​ ​blockchain 
+and​ ​XNK,​ ​an​ ​ERC20​ ​compatible​ ​token.​ ​Ink​ ​helps​ ​users 
+safely​ ​send​ ​and​ ​receive​ ​payments​ ​in​ ​P2P​ ​marketplaces​ ​while​ ​earning​ ​public​ ​reputation​ ​for​ ​every 
+completed​ ​transaction.​ ​It​ ​greatly​ ​enhances​ ​the​ ​buying/selling​ ​process​ ​with​ ​decentralized 
+reputation​ ​and​ ​feedback​ ​ratings,​ ​decentralized​ ​escrow​ ​for​ ​secure​ ​payments,​ ​third​ ​party​ ​dispute 
+resolution,​ ​and​ ​very​ ​low​ ​transaction​ ​costs. 
+ 
+Ink​ ​can​ ​be​ ​integrated​ ​into​ ​new​ ​or​ ​existing​ ​marketplaces​ ​and​ ​can​ ​also​ ​be​ ​used​ ​in​ ​marketplaces 
+that​ ​don't​ ​directly​ ​handle​ ​payments​ ​(eg,​ ​Craigslist​ ​and​ ​Facebook​ ​Marketplace).​ ​For​ ​sellers, 
+accepting​ ​Ink​ ​builds​ ​up​ ​their​ ​public​ ​reputation,​ ​which​ ​allows​ ​them​ ​to​ ​start​ ​selling​ ​quickly​ ​on​ ​new 
+marketplaces​ ​without​ ​needing​ ​to​ ​build​ ​reputation​ ​from​ ​scratch.​ ​Buyers​ ​can​ ​view​ ​any​ ​seller's 
+reputation​ ​across​ ​multiple​ ​marketplaces​ ​and​ ​confidently​ ​pay​ ​using​ ​either​ ​automated​ ​or 
+human-mediated​ ​escrow​ ​contracts.​ ​Payments​ ​can​ ​be​ ​made​ ​and​ ​received​ ​natively​ ​using​ ​the​ ​Ink 
+Protocol​ ​Token​ ​(XNK)​ ​or​ ​converted​ ​easily​ ​to​ ​and​ ​from​ ​fiat​ ​currencies​ ​like​ ​USD. 
+ 
+Ink​ ​will​ ​also​ ​become​ ​the​ ​new​ ​reputation​ ​and​ ​payment​ ​system​ ​within​ ​the​ ​Listia​ ​marketplace. 
+Listia​ ​currently​ ​uses​ ​a​ ​centralized​ ​virtual​ ​currency​ ​called​ ​Listia​ ​Credits​ ​for​ ​all​ ​transactions. 
+Existing​ ​users​ ​with​ ​Listia​ ​Credits​ ​will​ ​have​ ​their​ ​balances​ ​converted​ ​to​ ​XNK,​ ​providing​ ​Ink​ ​with​ ​a 
+tremendous​ ​boost​ ​for​ ​initial​ ​usage,​ ​stability,​ ​and​ ​network​ ​effects​ ​on​ ​day​ ​one.​ ​Additionally,​ ​Listia 
+will​ ​create​ ​a​ ​standalone​ ​payments​ ​app​ ​so​ ​users​ ​of​ ​local​ ​marketplaces​ ​such​ ​as​ ​Craigslist​ ​and 
+Facebook​ ​Marketplace​ ​can​ ​build​ ​reputation​ ​and​ ​start​ ​using​ ​Ink​ ​right​ ​away.​ ​With​ ​large​ ​scale 
+adoption​ ​and​ ​apps​ ​that​ ​can​ ​be​ ​used​ ​in​ ​multiple​ ​marketplaces​ ​at​ ​launch,​ ​Ink​ ​is​ ​well​ ​situated​ ​to 
+become​ ​the​ ​preferred​ ​reputation​ ​and​ ​payment​ ​system​ ​in​ ​all​ ​P2P​ ​marketplace​ ​transactions. 
+
+ 
+
+2 
+ 
+
+
+
+ 
+
+1.​ ​History​ ​&​ ​Vision 
+
+About​ ​Listia 
+The​ ​Listia​ ​marketplace​ ​(https://www.listia.com)​ ​was​ ​founded 
+and​ ​launched​ ​in​ ​2009​ ​as​ ​a​ ​“Marketplace​ ​for​ ​Free​ ​Stuff”​1​. 
+Listia’s​ ​vision​ ​is​ ​to​ ​create​ ​a​ ​safe,​ ​easy,​ ​and​ ​rewarding​ ​way​ ​for 
+people​ ​to​ ​get​ ​rid​ ​of​ ​the​ ​unused​ ​stuff​ ​lying​ ​around​ ​their​ ​homes. 
+Today,​ ​the​ ​community​ ​consists​ ​of​ ​10​ ​million​ ​registered​ ​users 
+who​ ​have​ ​exchanged​ ​100​ ​million​ ​items​ ​through​ ​the​ ​Listia 
+mobile​ ​apps​ ​and​ ​website.​ ​Listia​ ​has​ ​raised​ ​over​ ​$11M​ ​in 
+venture​ ​capital​ ​from​ ​prominent​ ​Silicon​ ​Valley​ ​VCs​ ​and​ ​investors​ ​including​ ​​General​ ​Catalyst, 
+A16Z,​ ​Y​ ​Combinator,​ ​SV​ ​Angel,​ ​Founder​ ​Collective,​ ​Max​ ​Levchin,​ ​Naval​ ​Ravikant​ ​and​ ​others. 
+ 
+Listia​ ​is​ ​unique​ ​in​ ​that​ ​users​ ​of​ ​the​ ​marketplace​ ​buy​ ​and​ ​sell​ ​goods​ ​exclusively​ ​using​ ​a 
+centralized​ ​virtual​ ​currency​ ​the​ ​company​ ​created​ ​called​ ​“Listia​ ​Credits”​ ​which​ ​have​ ​been​ ​in 
+circulation​ ​since​ ​launch.​ ​Users​ ​earn​ ​Credits​ ​by​ ​selling​ ​things​ ​in​ ​the​ ​marketplace​ ​and​ ​then​ ​spend 
+those​ ​Credits​ ​to​ ​buy​ ​other​ ​things​ ​in​ ​the​ ​marketplace.​ ​Credits​ ​can​ ​also​ ​be​ ​earned​ ​through​ ​various 
+activities​ ​such​ ​as​ ​interacting​ ​with​ ​listings​ ​or​ ​other​ ​users,​ ​inviting​ ​friends,​ ​completing​ ​special 
+offers​ ​and​ ​goals,​ ​or​ ​they​ ​can​ ​be​ ​purchased​ ​directly​ ​from​ ​Listia. 
+
+Today’s​ ​Listia​ ​Credits 
+As​ ​it​ ​works​ ​today,​ ​there​ ​are​ ​a​ ​couple​ ​key​ ​reasons​ ​why​ ​the​ ​Listia​ ​marketplace​ ​works​ ​better​ ​with 
+the​ ​Credit​ ​system​ ​than​ ​it​ ​would​ ​with​ ​real​ ​money.​ ​For​ ​example: 
+ 
+
+● Used​ ​goods​ ​are​ ​hard​ ​to​ ​value 
+ 
+When​ ​Listia​ ​was​ ​created,​ ​marketplaces​ ​like​ ​Craigslist​ ​and​ ​eBay​ ​were​ ​already​ ​huge,​ ​yet 
+people​ ​in​ ​the​ ​U.S.​ ​still​ ​have​ ​over​ ​$3,100​2​ ​ ​of​ ​unused​ ​goods​ ​in​ ​their​ ​homes.​ ​It​ ​seemed​ ​that 
+unless​ ​an​ ​item​ ​was​ ​worth​ ​a​ ​lot​ ​of​ ​money,​ ​people​ ​had​ ​little​ ​incentive​ ​to​ ​price​ ​and​ ​list 
+those​ ​items​ ​for​ ​sale.​ ​Listia​ ​invented​ ​new​ ​ways​ ​to​ ​motivate​ ​people​ ​to​ ​start​ ​selling​ ​these 
+types​ ​of​ ​items​ ​by​ ​creating​ ​a​ ​marketplace​ ​that​ ​is​ ​fun,​ ​easy​ ​to​ ​use​ ​and​ ​rewarding​ ​in 
+non-monetary​ ​ways.​ ​Price​ ​was​ ​no​ ​longer​ ​something​ ​that​ ​held​ ​people​ ​back,​ ​and​ ​users 
+love​ ​buying​ ​and​ ​selling​ ​their​ ​used​ ​items​ ​using​ ​Credits. 
+
+ 
+● No​ ​or​ ​low​ ​transaction​ ​fees 
+
+ 
+
+ 
+
+3 
+ 
+
+
+
+ 
+
+People​ ​who​ ​sell​ ​items​ ​in​ ​some​ ​of​ ​the​ ​most​ ​popular​ ​marketplaces​ ​generally​ ​pay 
+upwards​ ​of​ ​10-20%​ ​in​ ​transaction​ ​fees.​ ​A​ ​portion​ ​of​ ​the​ ​fee​ ​is​ ​simply​ ​how​ ​the 
+business​ ​makes​ ​money,​ ​but​ ​a​ ​large​ ​part​ ​of​ ​the​ ​fee​ ​is​ ​there​ ​because​ ​transferring​ ​real 
+money​ ​between​ ​people​ ​is​ ​an​ ​expensive​ ​process​ ​due​ ​to​ ​credit​ ​card​ ​and​ ​bank​ ​fees,​ ​escrow 
+services,​ ​chargebacks,​ ​fraud,​ ​etc.​ ​Listia's​ ​Credit​ ​system​ ​allows​ ​users​ ​to​ ​trade​ ​items 
+fee-free​ ​and​ ​thus​ ​extract​ ​more​ ​value​ ​than​ ​existing​ ​marketplaces.​ ​This​ ​is​ ​especially 
+important​ ​with​ ​lower​ ​priced​ ​items​ ​where​ ​fees​ ​effectively​ ​kill​ ​any​ ​incentive​ ​to​ ​sell​ ​in​ ​the 
+first​ ​place. 
+
+ 
+These​ ​two​ ​reasons​ ​alone​ ​have​ ​been​ ​enough​ ​to​ ​support​ ​over​ ​100​ ​million​ ​items​ ​exchanged​ ​since 
+2009.​ ​However,​ ​with​ ​technology​ ​constantly​ ​evolving,​ ​and​ ​the​ ​advent​ ​of​ ​smart​ ​contracts​ ​and 
+decentralized​ ​currencies,​ ​Listia​ ​now​ ​has​ ​a​ ​chance​ ​to​ ​revolutionize​ ​not​ ​only​ ​the​ ​Listia 
+marketplace,​ ​but​ ​all​ ​third​ ​party​ ​marketplaces​ ​by​ ​establishing​ ​a​ ​decentralized​ ​payment​ ​system 
+specifically​ ​designed​ ​to​ ​handle​ ​trustless​ ​transactions,​ ​reputation,​ ​and​ ​feedback. 
+
+Introducing​ ​a​ ​new​ ​decentralized​ ​reputation​ ​and​ ​payment​ ​system 
+Listia​ ​Credits​ ​have​ ​worked​ ​exceptionally​ ​well​ ​over 
+the​ ​past​ ​8​ ​years,​ ​albeit​ ​with​ ​plenty​ ​of​ ​ups​ ​and​ ​downs 
+along​ ​the​ ​way.​ ​Now,​ ​learning​ ​from​ ​years​ ​of​ ​running​ ​a 
+marketplace​ ​and​ ​virtual​ ​currency,​ ​Listia​ ​is 
+introducing​ ​a​ ​new​ ​decentralized​ ​cryptocurrency​ ​and 
+reputation​ ​system​ ​called​ ​Ink​ ​Protocol​ ​(“Ink”),​ ​which 
+is​ ​powered​ ​by​ ​the​ ​Ethereum​ ​blockchain​ ​and​ ​XNK,​ ​an 
+ERC20​ ​compatible​ ​token.​ ​Ink​ ​is​ ​designed​ ​specifically 
+for​ ​P2P​ ​marketplace​ ​transactions​ ​where​ ​trust 
+between​ ​the​ ​buyer​ ​and​ ​seller​ ​may​ ​be​ ​limited. 
+ 
+Ink​ ​will​ ​not​ ​only​ ​be​ ​useful​ ​on​ ​Listia,​ ​but​ ​will​ ​also​ ​serve​ ​as​ ​a​ ​fully​ ​decentralized​ ​reputation​ ​and 
+payment​ ​system​ ​for​ ​potentially​ ​any​ ​P2P​ ​transaction,​ ​independent​ ​of​ ​marketplace.​ ​Ink​ ​has​ ​the 
+power​ ​to​ ​create,​ ​disrupt,​ ​and​ ​adapt​ ​to​ ​the​ ​world’s​ ​largest​ ​online​ ​marketplaces​ ​by​ ​publicly 
+sharing​ ​reputation​ ​information​ ​on​ ​the​ ​Ethereum​ ​blockchain. 
+ 
+Due​ ​to​ ​its​ ​decentralized​ ​nature,​ ​sellers​ ​can​ ​bring​ ​their​ ​reputation​ ​with​ ​them​ ​to​ ​sell​ ​on​ ​multiple 
+marketplaces​ ​at​ ​the​ ​same​ ​time​ ​or​ ​move​ ​from​ ​one​ ​to​ ​another​ ​without​ ​having​ ​to​ ​rebuild​ ​their 
+reputation.​ ​Buyers​ ​can​ ​also​ ​view​ ​any​ ​seller’s​ ​reputation​ ​and​ ​confidently​ ​pay​ ​using​ ​escrow 
+contracts​ ​with​ ​optional​ ​third​ ​party​ ​mediation.​ ​Payments​ ​can​ ​be​ ​made​ ​directly​ ​using​ ​XNK​ ​or 
+converted​ ​to​ ​and​ ​from​ ​fiat​ ​currencies​ ​like​ ​USD. 
+ 
+
+ 
+
+4 
+ 
+
+
+
+ 
+
+To​ ​support​ ​these​ ​use​ ​cases,​ ​Ink​ ​will​ ​natively​ ​solve​ ​some​ ​of​ ​the​ ​most​ ​common​ ​and​ ​difficult 
+issues​ ​with​ ​transacting​ ​on​ ​a​ ​pure​ ​P2P​ ​marketplace.​ ​With​ ​these​ ​features,​ ​Ink​ ​has​ ​a​ ​big 
+advantage​ ​over​ ​not​ ​only​ ​Listia​ ​Credits,​ ​but​ ​also​ ​traditional​ ​forms​ ​of​ ​payment: 
+ 
+
+● Decentralized​ ​Reputation​ ​and​ ​Feedback 
+ 
+
+● Decentralized​ ​Escrow 
+ 
+
+● Third​ ​Party​ ​Dispute​ ​Resolution 
+ 
+
+● Very​ ​Low​ ​Transaction​ ​Costs 
+ 
+It’s​ ​important​ ​to​ ​note​ ​that​ ​most​ ​current​ ​marketplaces​ ​such​ ​as​ ​Listia​ ​were​ ​never​ ​built​ ​to​ ​be​ ​100% 
+decentralized.​ ​So,​ ​while​ ​Ink​ ​supports​ ​all​ ​of​ ​these​ ​features,​ ​individual​ ​marketplaces​ ​have​ ​the 
+freedom​ ​to​ ​customize​ ​their​ ​integration​ ​to​ ​fit​ ​their​ ​community.​ ​For​ ​example,​ ​Ink​ ​still​ ​allows 
+Listia’s​ ​customer​ ​support​ ​team​ ​to​ ​provide​ ​an​ ​extra​ ​layer​ ​of​ ​security​ ​and​ ​trust​ ​by​ ​mediating​ ​every 
+dispute​ ​as​ ​the​ ​third​ ​party.​ ​Each​ ​marketplace​ ​that​ ​uses​ ​Ink​ ​can​ ​establish​ ​their​ ​own​ ​rules​ ​and 
+implement​ ​dispute​ ​resolution​ ​as​ ​they​ ​see​ ​fit,​ ​and​ ​users​ ​who​ ​use​ ​Ink​ ​for​ ​transactions​ ​on 
+unmanaged​ ​marketplaces​ ​like​ ​Craigslist​ ​and​ ​Facebook​ ​Marketplace​ ​are​ ​free​ ​to​ ​choose​ ​their 
+own​ ​third​ ​party​ ​mediator,​ ​an​ ​automated​ ​contract,​ ​or​ ​none​ ​at​ ​all. 
+
+Timeline 
+June​ ​2009​​ ​-​ ​Listia​ ​Inc.​ ​is​ ​founded​ ​and​ ​receives​ ​funding​ ​from​ ​Y​ ​Combinator 
+August​ ​2009​​ ​-​ ​The​ ​Listia​ ​marketplace​ ​launches 
+October​ ​2009​​ ​-​ ​Listia​ ​announces​ ​$400K​ ​angel​ ​round 
+April​ ​2011​​ ​-​ ​Listia​ ​launches​ ​iOS​ ​app,​ ​announces​ ​$1.75MM​ ​seed​ ​round​ ​led​ ​by​ ​A16Z 
+January​ ​2012​​ ​-​ ​Listia​ ​reaches​ ​1M​ ​registered​ ​users,​ ​launches​ ​Android​ ​app 
+January​ ​2013​​ ​-​ ​Listia​ ​partners​ ​with​ ​Best​ ​Buy​ ​to​ ​power​ ​the​ ​Listia​ ​Rewards​ ​Store 
+October​ ​2013​​ ​-​ ​Listia​ ​announces​ ​$9MM​ ​series​ ​A​ ​led​ ​by​ ​General​ ​Catalyst 
+February​ ​2014​​ ​-​ ​Listia​ ​allows​ ​Bitcoin​ ​to​ ​be​ ​bought​ ​and​ ​sold​ ​in​ ​the​ ​marketplace 
+November​ ​2014​​ ​-​ ​Listia​ ​first​ ​experiments​ ​with​ ​creating​ ​a​ ​cryptocurrency 
+December​ ​2015​​ ​-​ ​Listia​ ​launches​ ​the​ ​Credit​ ​Exchange,​ ​allowing​ ​sellers​ ​to​ ​earn​ ​USD 
+April​ ​2016​​ ​-​ ​Listia​ ​launches​ ​Credits​ ​+​ ​Cash​ ​feature 
+June​ ​2016​​ ​-​ ​Listia​ ​launches​ ​Listia​ ​Plus 
+September​ ​2016​​ ​-​ ​Listia​ ​integrates​ ​shipping​ ​labels​ ​and​ ​tracking 
+May​ ​2017​​ ​-​ ​Listia​ ​hits​ ​10M​ ​registered​ ​users 
+June​ ​2017​​ ​-​ ​Listia​ ​begins​ ​work​ ​on​ ​Ink​ ​Protocol​ ​design​ ​and​ ​whitepaper 
+September​ ​2017​​ ​-​ ​Listia​ ​publishes​ ​first​ ​draft​ ​of​ ​Ink​ ​Protocol​ ​whitepaper 
+
+ 
+
+5 
+ 
+
+
+
+ 
+
+November​ ​2017​​ ​-​ ​Listia​ ​introduces​ ​the​ ​Ink​ ​Protocol​ ​project​ ​publicly 
+January​ ​2018​​ ​-​ ​Ink​ ​Protocol​ ​public​ ​launch​ ​and​ ​token​ ​distribution​ ​event 
+
+Immediate​ ​value,​ ​growth​ ​and​ ​network​ ​effects 
+Unlike​ ​other​ ​recently​ ​launched​ ​cryptocurrencies,​ ​Listia​ ​has​ ​a​ ​large​ ​community​ ​of​ ​users​ ​who 
+have​ ​already​ ​generated​ ​millions​ ​of​ ​dollars​ ​in​ ​revenue​ ​using​ ​an​ ​existing​ ​virtual​ ​currency​ ​called 
+Listia​ ​Credits.​ ​Ink​ ​will​ ​be​ ​fully​ ​integrated​ ​into​ ​the​ ​Listia​ ​marketplace​ ​and​ ​replace​ ​Listia​ ​Credits, 
+resulting​ ​in​ ​widespread​ ​adoption​ ​and​ ​immediate​ ​usage​ ​of​ ​Ink​ ​at​ ​launch.​ ​With​ ​the​ ​current​ ​install 
+base,​ ​that​ ​will​ ​mean​ ​millions​ ​of​ ​real​ ​user​ ​wallets​ ​can​ ​go​ ​live​ ​and​ ​there​ ​will​ ​be​ ​enough​ ​transaction 
+liquidity​ ​to​ ​start​ ​using​ ​Ink​ ​as​ ​intended​ ​from​ ​day​ ​one. 
+ 
+At​ ​launch,​ ​the​ ​Listia​ ​marketplace​ ​will​ ​be​ ​able​ ​to​ ​jumpstart​ ​Ink​ ​via​ ​millions​ ​of​ ​buyers​ ​with​ ​XNK 
+balances,​ ​sellers​ ​with​ ​feedback​ ​and​ ​reputation,​ ​and​ ​also​ ​kick​ ​off​ ​the​ ​network​ ​effects​ ​in​ ​a​ ​way 
+that​ ​most​ ​new​ ​cryptocurrencies​ ​could​ ​never​ ​do. 
+
+Ink​ ​Pay​ ​app​ ​and​ ​Ink​ ​Protocol​ ​on​ ​other​ ​marketplaces 
+On​ ​top​ ​of​ ​integrating​ ​with​ ​the​ ​Listia 
+marketplace,​ ​Listia​ ​will​ ​also​ ​create​ ​a 
+standalone​ ​payments​ ​app,​ ​called​ ​Ink​ ​Pay, 
+so​ ​users​ ​of​ ​other​ ​marketplaces​ ​such​ ​as 
+Craigslist​ ​can​ ​build​ ​reputation​ ​and​ ​start 
+using​ ​Ink​ ​immediately​ ​without​ ​having​ ​to 
+wait​ ​for​ ​those​ ​marketplaces​ ​to​ ​integrate. 
+The​ ​app​ ​is​ ​designed​ ​to​ ​obscure 
+everything​ ​related​ ​to​ ​blockchain​ ​and 
+cryptocurrencies,​ ​so​ ​anyone​ ​can​ ​start 
+using​ ​it.​ ​Buyers​ ​and​ ​sellers​ ​would​ ​simply 
+meet​ ​up​ ​and​ ​send​ ​payment​ ​instantly, 
+while​ ​generating​ ​publicly​ ​accessible 
+reputation​ ​for​ ​each​ ​other. 
+ 
+As​ ​more​ ​people​ ​start​ ​using​ ​Ink,​ ​their 
+reputation​ ​and​ ​transaction​ ​history​ ​start​ ​to 
+grow​ ​and​ ​each​ ​additional​ ​completed 
+
+transaction​ ​adds​ ​to​ ​their​ ​trustworthiness.​ ​This​ ​public​ ​history,​ ​stored​ ​on​ ​the​ ​Ethereum 
+blockchain,​ ​is​ ​incredibly​ ​useful​ ​in​ ​person-to-person​ ​transactions​ ​to​ ​establish​ ​trust​ ​and 
+credibility.​ ​Being​ ​able​ ​to​ ​move​ ​around​ ​and​ ​carry​ ​your​ ​reputation​ ​with​ ​you​ ​to​ ​any​ ​other 
+
+ 
+
+6 
+ 
+
+
+
+ 
+
+marketplace​ ​will​ ​be​ ​a​ ​huge​ ​benefit,​ ​so​ ​any​ ​marketplace​ ​that​ ​supports​ ​Ink​ ​natively​ ​can​ ​easily 
+improve​ ​the​ ​trust​ ​and​ ​success​ ​rate​ ​of​ ​their​ ​communities. 
+ 
+Ink​ ​also​ ​has​ ​the​ ​power​ ​to​ ​disrupt​ ​marketplaces​ ​that​ ​choose​ ​not​ ​to​ ​share​ ​reputation​ ​and 
+feedback​ ​on​ ​the​ ​blockchain​ ​and​ ​attempt​ ​to​ ​monopolize​ ​the​ ​data.​ ​New​ ​marketplaces​ ​can​ ​quickly 
+launch​ ​with​ ​instant​ ​trust​ ​and​ ​feedback​ ​in​ ​place,​ ​while​ ​adding​ ​to​ ​the​ ​rapidly​ ​growing​ ​public 
+feedback​ ​and​ ​transaction​ ​history.​ ​Eventually,​ ​trusted​ ​users​ ​will​ ​begin​ ​to​ ​see​ ​every​ ​completed 
+transaction​ ​online​ ​as​ ​something​ ​that​ ​they​ ​should​ ​be​ ​rewarded​ ​and​ ​credited​ ​for,​ ​and 
+marketplaces​ ​that​ ​refuse​ ​to​ ​give​ ​them​ ​public​ ​credit​ ​on​ ​the​ ​blockchain​ ​for​ ​their​ ​activity​ ​will​ ​be 
+viewed​ ​as​ ​incomplete​ ​or​ ​unsatisfying​ ​experiences.​ ​Users​ ​will​ ​migrate​ ​to​ ​marketplaces​ ​that​ ​give 
+them​ ​public​ ​recognition,​ ​so​ ​they​ ​can​ ​get​ ​better​ ​user​ ​experiences​ ​across​ ​every​ ​marketplace​ ​at 
+once.   
+
+ 
+
+7 
+ 
+
+
+
+ 
+
+2.​ ​The​ ​Ink​ ​Protocol​ ​Token​ ​(XNK)​ ​and​ ​Features 
+
+Purpose 
+Ink​ ​is​ ​a​ ​decentralized​ ​reputation​ ​and​ ​payment​ ​system​ ​powered​ ​by​ ​the​ ​Ethereum​ ​blockchain​ ​and 
+a​ ​native​ ​ERC20​ ​utility​ ​token​ ​called​ ​Ink​ ​Protocol​ ​Token​ ​(XNK).​ ​It​ ​is​ ​designed​ ​specifically​ ​for​ ​P2P 
+marketplace​ ​transactions​ ​where​ ​trust​ ​between​ ​the​ ​buyer​ ​and​ ​seller​ ​may​ ​be​ ​limited.​ ​Ink​ ​greatly 
+enhances​ ​the​ ​buying/selling​ ​process​ ​by​ ​helping​ ​users​ ​safely​ ​send​ ​and​ ​receive​ ​payments​ ​in​ ​P2P 
+marketplaces​ ​while​ ​earning​ ​publicly​ ​viewable​ ​reputation.​ ​Payments​ ​within​ ​Ink​ ​are​ ​sent​ ​using 
+XNK,​ ​but​ ​users​ ​can​ ​also​ ​convert​ ​to​ ​and​ ​from​ ​other​ ​cryptocurrencies​ ​or​ ​fiat​ ​currencies​ ​such​ ​as 
+USD. 
+
+Token​ ​implementation 
+Ink​ ​is​ ​implemented​ ​on​ ​Ethereum​ ​as​ ​a​ ​Smart​ ​Contract​ ​and​ ​includes​ ​an 
+ERC20​ ​compatible​ ​utility​ ​token,​ ​called​ ​XNK,​ ​which​ ​is​ ​used​ ​for 
+payments.​ ​XNK​ ​is​ ​a​ ​general​ ​purpose​ ​cryptocurrency​ ​that​ ​is: 
+ 
+
+● Fixed​ ​supply 
+● Fractionally​ ​divisible 
+● Non-inflationary 
+● Fungible​ ​and​ ​transferable,​ ​likely​ ​via​ ​third​ ​party​ ​exchanges 
+
+Smart​ ​Contract​ ​features 
+Ink​ ​solves​ ​some​ ​of​ ​the​ ​most​ ​common​ ​and​ ​difficult​ ​issues​ ​with​ ​buying​ ​and​ ​selling​ ​on​ ​a​ ​P2P 
+marketplace​ ​through​ ​the​ ​following​ ​features: 
+ 
+
+● Decentralized​ ​feedback 
+ 
+
+After​ ​every​ ​completed​ ​Ink​ ​transaction,​ ​the​ ​buyer​ ​can​ ​leave​ ​feedback​ ​for​ ​the​ ​seller​ ​about 
+that​ ​transaction.​ ​Ink​ ​does​ ​not​ ​support​ ​leaving​ ​feedback​ ​for​ ​a​ ​buyer,​ ​as​ ​this​ ​is​ ​typically 
+not​ ​useful​ ​nor​ ​is​ ​it​ ​actionable​ ​since​ ​sellers​ ​usually​ ​cannot​ ​choose​ ​their​ ​buyers. 
+ 
+Feedback​ ​consists​ ​of​ ​a​ ​rating​ ​and​ ​a​ ​comment​ ​about​ ​the​ ​transaction,​ ​which​ ​are​ ​stored​ ​as 
+data​ ​on​ ​the​ ​Ethereum​ ​blockchain.​ ​The​ ​feedback​ ​entry​ ​references​ ​the​ ​id​ ​of​ ​the 
+transaction​ ​that​ ​the​ ​seller​ ​was​ ​involved​ ​in​ ​and​ ​can​ ​be​ ​seen​ ​by​ ​anyone​ ​with​ ​access​ ​to​ ​the 
+
+ 
+
+8 
+ 
+
+
+
+ 
+
+public​ ​Ethereum​ ​blockchain​ ​and​ ​Ink​ ​Smart​ ​Contract.​ ​Any​ ​person​ ​or​ ​marketplace​ ​will 
+then​ ​be​ ​able​ ​to​ ​look​ ​up​ ​the​ ​feedback 
+history​ ​for​ ​a​ ​specific​ ​seller​ ​to 
+determine​ ​their​ ​trustworthiness 
+before​ ​choosing​ ​to​ ​buy​ ​from​ ​that 
+seller. 
+
+ 
+● Decentralized​ ​reputation 
+
+ 
+Reputation​ ​refers​ ​to​ ​the​ ​aggregate​ ​of 
+all​ ​the​ ​seller’s​ ​feedback​ ​and 
+transaction​ ​history.​ ​The​ ​feedback 
+and​ ​transaction​ ​history​ ​for​ ​an 
+individual​ ​seller​ ​can​ ​be​ ​read​ ​from​ ​the 
+public​ ​data​ ​within​ ​the​ ​Smart 
+Contract​ ​and​ ​used​ ​by​ ​anyone​ ​to 
+assign​ ​a​ ​reputation​ ​score​ ​based​ ​on 
+those​ ​signals.​ ​Ink​ ​does​ ​not​ ​include​ ​a​ ​specific​ ​algorithm​ ​or​ ​calculation​ ​method​ ​to 
+compute​ ​this​ ​score,​ ​as​ ​it​ ​should​ ​be​ ​marketplace​ ​or​ ​app-specific. 
+
+ 
+However,​ ​not​ ​all​ ​information​ ​should​ ​be​ ​treated​ ​equally.​ ​Ink​ ​transactions​ ​will​ ​include 
+information​ ​about​ ​the​ ​parties​ ​involved,​ ​who​ ​mediated​ ​the​ ​transaction,​ ​what​ ​happened 
+with​ ​the​ ​transaction​ ​(confirmed​ ​or​ ​refunded),​ ​the​ ​feedback​ ​rating​ ​and​ ​comment,​ ​and 
+optionally​ ​what​ ​the​ ​transaction​ ​was​ ​for.​ ​Each​ ​individual​ ​marketplace​ ​has​ ​access​ ​to​ ​all​ ​of 
+this​ ​information​ ​and​ ​should​ ​filter​ ​what​ ​is​ ​important​ ​to​ ​them​ ​when​ ​displaying​ ​a​ ​reputation 
+score.​ ​For​ ​example,​ ​as​ ​more​ ​third​ ​party​ ​marketplaces​ ​start​ ​using​ ​Ink,​ ​it​ ​is​ ​possible​ ​that 
+certain​ ​marketplaces​ ​may​ ​be​ ​untrustworthy​ ​and​ ​transactions​ ​recorded​ ​through​ ​them 
+may​ ​hold​ ​little​ ​to​ ​no​ ​value​ ​when​ ​scoring​ ​reputation​ ​within​ ​another​ ​marketplace. 
+Additionally,​ ​transactions​ ​where​ ​users​ ​simply​ ​transfer​ ​XNK​ ​to​ ​each​ ​other​ ​without​ ​context 
+should​ ​not​ ​be​ ​used​ ​in​ ​a​ ​reputation​ ​score​ ​to​ ​prevent​ ​gaming​ ​the​ ​system. 
+
+ 
+● Decentralized​ ​escrow​ ​with​ ​third​ ​party​ ​dispute​ ​resolution 
+
+ 
+Ink​ ​supports​ ​decentralized​ ​escrow​ ​natively​ ​to​ ​create​ ​a​ ​safe​ ​way​ ​for​ ​buyers​ ​and​ ​sellers​ ​to 
+transact.​ ​When​ ​a​ ​buyer​ ​pays,​ ​the​ ​Ink​ ​Tokens​ ​are​ ​held​ ​by​ ​the​ ​contract​ ​until​ ​the​ ​buyer 
+indicates​ ​that​ ​the​ ​items​ ​have​ ​been​ ​received.​ ​At​ ​that​ ​point,​ ​the​ ​tokens​ ​are​ ​released​ ​to​ ​the 
+seller​ ​and​ ​the​ ​transaction​ ​is​ ​finalized.​ ​This​ ​also​ ​serves​ ​as​ ​a​ ​staking​ ​function​ ​within​ ​the 
+protocol.​ ​The​ ​seller​ ​must​ ​stake​ ​their​ ​reputation​ ​against​ ​the​ ​tokens​ ​until​ ​the​ ​buyer 
+receives​ ​their​ ​item. 
+ 
+
+ 
+
+9 
+ 
+
+
+
+ 
+
+However,​ ​sometimes​ ​the​ ​transaction​ ​in​ ​a​ ​P2P​ ​marketplace​ ​does​ ​not​ ​go​ ​as​ ​planned. 
+For​ ​example,​ ​the​ ​item​ ​may​ ​arrive​ ​damaged,​ ​the​ ​seller​ ​may​ ​lie​ ​about​ ​shipping​ ​an​ ​item 
+out,​ ​or​ ​the​ ​item​ ​may​ ​not​ ​be​ ​as​ ​described.​ ​In​ ​this​ ​case,​ ​most​ ​centralized​ ​marketplaces​ ​will 
+help​ ​resolve​ ​your​ ​dispute​ ​by​ ​having​ ​a​ ​customer​ ​support​ ​team​ ​member​ ​look​ ​at​ ​the 
+evidence​ ​and​ ​decide​ ​whether​ ​a​ ​refund​ ​is 
+necessary. 
+ 
+Ink​ ​supports​ ​this​ ​in​ ​a​ ​decentralized​ ​way​ ​by 
+allowing​ ​users​ ​to​ ​assign​ ​a​ ​human​ ​or 
+automated​ ​mediator​ ​to​ ​every​ ​transaction. 
+The​ ​mediator​ ​of​ ​a​ ​transaction​ ​exists​ ​as​ ​a 
+third​ ​party​ ​Smart​ ​Contract​ ​that​ ​anybody 
+can​ ​create.​ ​For​ ​example,​ ​marketplaces​ ​will 
+create​ ​their​ ​own​ ​mediation​ ​contract​ ​to​ ​be 
+used​ ​by​ ​their​ ​customer​ ​support​ ​staff,​ ​and 
+individuals​ ​may​ ​set​ ​up​ ​their​ ​own​ ​contracts 
+and​ ​provide​ ​mediation​ ​services​ ​to​ ​others. 
+
+ 
+● Mediation​ ​and​ ​Transaction​ ​Fees 
+
+ 
+To​ ​create​ ​incentives​ ​for​ ​marketplaces,​ ​apps,​ ​and​ ​users,​ ​Ink​ ​allows​ ​mediators​ ​in​ ​a 
+transaction​ ​to​ ​take​ ​a​ ​transaction​ ​and/or​ ​mediation​ ​fee​ ​in​ ​the​ ​form​ ​of​ ​Ink​ ​Protocol 
+Tokens.​ ​The​ ​fee​ ​structure​ ​is​ ​defined​ ​by​ ​the​ ​mediator’s​ ​Smart​ ​Contract​ ​and​ ​can​ ​be​ ​setup 
+as​ ​either​ ​a​ ​flat​ ​fee​ ​or​ ​a​ ​percentage​ ​fee.​ ​The​ ​mediator​ ​has​ ​the​ ​option​ ​of​ ​taking​ ​both​ ​a 
+transaction​ ​fee​ ​on​ ​every​ ​transaction​ ​and/or​ ​a​ ​mediation​ ​fee​ ​on​ ​transactions​ ​where​ ​the 
+buyer​ ​and​ ​seller​ ​actually​ ​need​ ​the​ ​mediator​ ​to​ ​step​ ​in.  
+ 
+Marketplaces​ ​that​ ​incorporate​ ​Ink​ ​will​ ​likely​ ​set​ ​themselves​ ​as​ ​the​ ​mediator​ ​of​ ​every 
+transaction​ ​within​ ​the​ ​marketplace​ ​and​ ​take​ ​transaction​ ​fees​ ​and/or​ ​mediation​ ​fees​ ​as 
+part​ ​of​ ​their​ ​business​ ​model.​ ​It​ ​is​ ​also​ ​possible​ ​that​ ​individuals​ ​may​ ​set​ ​up​ ​mediation 
+services​ ​where​ ​they​ ​can​ ​get​ ​rewarded​ ​to​ ​help​ ​mediate​ ​disputes​ ​on​ ​marketplaces​ ​such​ ​as 
+Craigslist​ ​or​ ​Facebook​ ​Marketplace.​ ​It​ ​will​ ​be​ ​up​ ​to​ ​the​ ​buyers,​ ​sellers,​ ​and​ ​the 
+community​ ​at​ ​large​ ​to​ ​vet​ ​these​ ​third​ ​party​ ​mediators​ ​by​ ​auditing​ ​their​ ​public​ ​Smart 
+Contracts​ ​and​ ​mediation​ ​histories,​ ​all​ ​of​ ​which​ ​will​ ​be​ ​viewable​ ​on​ ​the​ ​Ethereum 
+blockchain. 
+ 
+
+● Linked​ ​Addresses 
+ 
+Buyers​ ​and​ ​sellers​ ​within​ ​Ink​ ​are​ ​designated​ ​by​ ​their​ ​Ethereum​ ​addresses,​ ​which​ ​is​ ​how 
+you​ ​uniquely​ ​identify​ ​a​ ​specific​ ​user​ ​and​ ​pay​ ​that​ ​user.​ ​Over​ ​time,​ ​users​ ​may​ ​accumulate 
+
+ 
+
+10 
+ 
+
+
+
+ 
+
+multiple​ ​addresses​ ​that​ ​they​ ​use​ ​on​ ​different​ ​marketplaces​ ​or​ ​apps.​ ​These 
+addresses​ ​would​ ​all​ ​have​ ​their​ ​own​ ​transaction​ ​and​ ​feedback​ ​history​ ​and​ ​thus 
+differing​ ​reputations.​ ​Ink​ ​allows​ ​users​ ​to​ ​link​ ​addresses​ ​they​ ​own​ ​to​ ​merge​ ​their 
+feedback​ ​and​ ​transaction​ ​histories​ ​and​ ​create​ ​a​ ​single​ ​reputation.​ ​Linked​ ​addresses 
+cannot​ ​be​ ​unlinked. 
+ 
+
+● Authorized​ ​Agents 
+ 
+Ink​ ​allows​ ​one​ ​address​ ​to​ ​designate​ ​another​ ​address​ ​as​ ​its​ ​Authorized​ ​Agent​ ​and​ ​act​ ​on 
+its​ ​behalf.​ ​This​ ​is​ ​mostly​ ​used​ ​by​ ​marketplaces​ ​or​ ​apps​ ​which​ ​may​ ​want​ ​to​ ​control​ ​an 
+address​ ​for​ ​the​ ​end​ ​user,​ ​which​ ​is​ ​the​ ​key​ ​to​ ​getting​ ​mass​ ​consumer​ ​adoption. 
+Specifically,​ ​this​ ​is​ ​useful​ ​when​ ​the​ ​marketplace​ ​wants​ ​to​ ​hide​ ​the​ ​complexities​ ​of​ ​using 
+the​ ​Ethereum​ ​blockchain​ ​and​ ​Ink​ ​Smart​ ​Contracts​ ​or​ ​when​ ​the​ ​marketplace​ ​wants​ ​to 
+incur​ ​the​ ​ETH​ ​gas​ ​costs​ ​itself​ ​and​ ​not​ ​have​ ​to​ ​send​ ​ETH​ ​to​ ​each​ ​address​ ​it​ ​controls​ ​just 
+to​ ​pay​ ​for​ ​the​ ​gas​ ​required​ ​to​ ​run​ ​a​ ​contract​ ​function.​ ​This​ ​way,​ ​a​ ​marketplace​ ​or​ ​app​ ​can 
+control​ ​many​ ​addresses​ ​at​ ​once​ ​and​ ​not​ ​have​ ​to​ ​waste​ ​time​ ​and​ ​money​ ​sending​ ​ETH​ ​to 
+each​ ​address​ ​before​ ​it​ ​can​ ​perform​ ​a​ ​function. 
+
+Transaction​ ​States 
+Ink​ ​distills​ ​a​ ​typical​ ​marketplace​ ​transaction​ ​into​ ​a​ ​series​ ​of​ ​states​ ​defined​ ​below.​ ​This​ ​flow​ ​was 
+developed​ ​based​ ​on​ ​the​ ​team’s​ ​many​ ​years​ ​of​ ​experience​ ​running​ ​Listia​ ​and​ ​dealing​ ​with​ ​all 
+sorts​ ​of​ ​outcomes​ ​and​ ​edge​ ​cases​ ​that​ ​can​ ​occur​ ​during​ ​a​ ​marketplace​ ​transaction.​ ​A​ ​full 
+diagram​ ​of​ ​the​ ​states​ ​is​ ​included​ ​below​ ​as​ ​well. 
+ 
+
+● Initiating​ ​a​ ​Transaction 
+ 
+All​ ​transactions​ ​are​ ​created​ ​by​ ​the​ ​buyer.​ ​The​ ​buyer​ ​specifies: 
+
+ 
+1. Who​ ​the​ ​seller​ ​is​ ​(represented​ ​by​ ​an​ ​Ethereum​ ​address) 
+2. The​ ​price​ ​of​ ​the​ ​item​ ​in​ ​tokens 
+3. Optionally,​ ​the​ ​mediator​ ​and​ ​policy​ ​addresses  
+4. The​ ​metadata​ ​of​ ​the​ ​transaction​ ​(this​ ​is​ ​a​ ​hashed​ ​representation​ ​of​ ​the 
+
+metadata) 
+ 
+It​ ​may​ ​seem​ ​strange​ ​at​ ​first​ ​that​ ​the​ ​buyer​ ​is​ ​the​ ​one​ ​initiating​ ​the​ ​transaction,​ ​but​ ​this​ ​is 
+to​ ​prevent​ ​an​ ​extra​ ​call​ ​to​ ​the​ ​Ethereum​ ​blockchain.​ ​In​ ​practice,​ ​apps​ ​supporting​ ​the​ ​Ink 
+Protocol​ ​will​ ​wrap​ ​the​ ​entire​ ​process​ ​for​ ​buyers​ ​and​ ​sellers​ ​such​ ​that​ ​either​ ​the​ ​buyer​ ​or 
+seller​ ​can​ ​create​ ​a​ ​transaction.​ ​Additionally,​ ​even​ ​though​ ​a​ ​buyer​ ​initiates​ ​the 
+transaction,​ ​it​ ​does​ ​not​ ​mean​ ​that​ ​the​ ​seller​ ​is​ ​automatically​ ​held​ ​accountable​ ​for​ ​the 
+
+ 
+
+11 
+ 
+
+
+
+ 
+
+transaction.​ ​The​ ​seller​ ​must​ ​approve​ ​the​ ​transaction​ ​before​ ​it​ ​is​ ​considered 
+legitimate.​ ​The​ ​seller​ ​can​ ​also​ ​just​ ​ignore​ ​it​ ​completely.​ ​Meanwhile,​ ​the​ ​buyer’s​ ​funds 
+are​ ​held​ ​in​ ​escrow​ ​by​ ​the​ ​transaction. 
+ 
+
+● Revoking​ ​a​ ​Transaction 
+ 
+If​ ​the​ ​buyer​ ​and​ ​seller​ ​do​ ​not​ ​agree​ ​on​ ​the​ ​terms​ ​of​ ​the​ ​transaction,​ ​the​ ​seller​ ​simply 
+ignores​ ​the​ ​transaction.​ ​The​ ​buyer​ ​however,​ ​has​ ​to​ ​revoke​ ​the​ ​transaction​ ​to​ ​get​ ​her 
+tokens​ ​back​ ​from​ ​escrow. 
+
+ 
+● Accepting​ ​a​ ​Transaction 
+
+ 
+The​ ​seller​ ​specified​ ​on​ ​the​ ​transaction​ ​can​ ​accept​ ​the​ ​transaction​ ​if​ ​he​ ​agrees​ ​to​ ​the 
+terms​ ​specified​ ​by​ ​the​ ​buyer.​ ​Accepting​ ​the​ ​transaction​ ​means​ ​that​ ​the​ ​seller​ ​can 
+confidently​ ​begin​ ​to​ ​process​ ​and​ ​ship​ ​the​ ​purchased​ ​item​ ​since​ ​the​ ​payment​ ​is​ ​secured 
+in​ ​escrow. 
+
+ 
+● Transaction​ ​in​ ​Progress 
+
+ 
+Upon​ ​accepting,​ ​the​ ​transaction​ ​is​ ​now​ ​in​ ​progress,​ ​and​ ​the​ ​seller​ ​is​ ​now​ ​on​ ​a​ ​fulfillment 
+timer​ ​to​ ​deliver​ ​the​ ​goods​ ​as​ ​promised.​ ​The​ ​length​ ​of​ ​time​ ​allowed​ ​for​ ​fulfillment​ ​(e.g.​ ​2 
+weeks)​ ​is​ ​defined​ ​in​ ​the​ ​Policy​ ​specified​ ​in​ ​the​ ​transaction.​ ​At​ ​this​ ​point,​ ​one​ ​of​ ​four 
+things​ ​can​ ​happen: 
+
+ 
+1. If​ ​the​ ​item​ ​is​ ​not​ ​delivered​ ​within​ ​the​ ​fulfillment​ ​time,​ ​the​ ​buyer​ ​has​ ​the​ ​option​ ​to 
+
+dispute​ ​the​ ​transaction. 
+2. If​ ​the​ ​buyer​ ​receives​ ​the​ ​item​ ​and​ ​all​ ​is​ ​well,​ ​she​ ​would​ ​confirm​ ​the​ ​transaction 
+
+and​ ​the​ ​payment​ ​will​ ​be​ ​moved​ ​to​ ​the​ ​seller’s​ ​address​ ​from​ ​escrow. 
+3. The​ ​seller​ ​can​ ​refund​ ​the​ ​transaction​ ​if​ ​something​ ​went​ ​wrong​ ​and​ ​the​ ​seller 
+
+accepts​ ​fault. 
+4. Enough​ ​time​ ​(defined​ ​in​ ​the​ ​Policy​ ​as​ ​the​ ​“transaction​ ​time”)​ ​has​ ​gone​ ​by​ ​and​ ​the 
+
+buyer​ ​has​ ​neither​ ​confirmed​ ​nor​ ​disputed​ ​the​ ​transaction.​ ​The​ ​seller​ ​is​ ​now​ ​able 
+to​ ​confirm​ ​the​ ​transaction​ ​himself​ ​and​ ​receive​ ​payment. 
+
+ 
+● Transaction​ ​is​ ​Disputed 
+
+ 
+After​ ​the​ ​buyer​ ​disputes​ ​the​ ​transaction,​ ​the​ ​seller​ ​has​ ​a​ ​chance​ ​to​ ​respond.​ ​One​ ​of​ ​four 
+things​ ​can​ ​happen: 
+ 
+
+ 
+
+12 
+ 
+
+
+
+ 
+
+1. The​ ​seller​ ​can​ ​escalate​ ​the​ ​dispute​ ​to​ ​the​ ​mediator​ ​to​ ​determine​ ​the​ ​outcome 
+of​ ​the​ ​transaction. 
+
+2. The​ ​seller​ ​can​ ​refund​ ​the​ ​transaction. 
+3. The​ ​buyer​ ​can​ ​confirm​ ​the​ ​transaction. 
+4. The​ ​buyer​ ​can​ ​force​ ​a​ ​refund​ ​on​ ​the​ ​transaction​ ​after​ ​a​ ​time​ ​(defined​ ​in​ ​the​ ​Policy 
+
+as​ ​the​ ​“escalation​ ​time”)​ ​has​ ​passed. 
+ 
+
+● Transaction​ ​in​ ​Mediation 
+ 
+After​ ​escalation,​ ​the​ ​mediator​ ​chosen​ ​by​ ​the​ ​buyer​ ​and​ ​seller​ ​should​ ​begin​ ​the​ ​process 
+of​ ​collecting​ ​information​ ​to​ ​make​ ​an​ ​informed​ ​decision​ ​on​ ​the​ ​outcome​ ​of​ ​the 
+transaction.​ ​The​ ​mediator​ ​is​ ​granted​ ​a​ ​period​ ​of​ ​time,​ ​defined​ ​by​ ​“mediation​ ​time”​ ​in​ ​the 
+Policy​ ​of​ ​the​ ​transaction,​ ​to​ ​complete​ ​this​ ​work.​ ​During​ ​this​ ​period,​ ​neither​ ​buyer​ ​nor 
+seller​ ​can​ ​act​ ​on​ ​the​ ​transaction. 
+ 
+In​ ​the​ ​rare​ ​case​ ​that​ ​the​ ​mediator​ ​is​ ​non-responsive​ ​or​ ​late​ ​in​ ​their​ ​response​ ​(the 
+“mediation​ ​time”​ ​has​ ​passed),​ ​the​ ​buyer​ ​and​ ​seller​ ​each​ ​have​ ​two​ ​options​ ​available​ ​to 
+them.​ ​The​ ​buyer​ ​can​ ​choose​ ​to​ ​confirm​ ​the​ ​transaction,​ ​thus​ ​transferring​ ​the​ ​payment​ ​to 
+the​ ​seller.​ ​The​ ​seller​ ​on​ ​the​ ​other​ ​hand​ ​can​ ​choose​ ​to​ ​refund​ ​the​ ​transaction. 
+Alternatively,​ ​both​ ​the​ ​buyer​ ​and​ ​seller​ ​can​ ​unilaterally​ ​settle​ ​the​ ​transaction,​ ​causing​ ​a 
+50/50​ ​split​ ​in​ ​the​ ​payment​ ​going​ ​to​ ​buyer​ ​and​ ​seller.​ ​For​ ​all​ ​three​ ​of​ ​these​ ​outcomes,​ ​no 
+mediation​ ​fee​ ​may​ ​be​ ​taken​ ​by​ ​the​ ​mediator. 
+ 
+After​ ​the​ ​“mediation​ ​time”,​ ​and​ ​until​ ​the​ ​buyer​ ​or​ ​seller​ ​have​ ​taken​ ​action,​ ​the​ ​mediator 
+can​ ​still​ ​respond​ ​to​ ​the​ ​dispute. 
+
+ 
+● Transaction​ ​is​ ​Mediated 
+
+ 
+The​ ​assigned​ ​mediator​ ​is​ ​responsible​ ​for​ ​making​ ​a​ ​decision​ ​after​ ​collecting​ ​enough 
+information​ ​from​ ​both​ ​buyer​ ​and​ ​seller.​ ​The​ ​mediator​ ​can​ ​do​ ​one​ ​of​ ​the​ ​follow: 
+
+ 
+1. Refund​ ​the​ ​transaction — payment​ ​goes​ ​back​ ​to​ ​the​ ​buyer,​ ​less​ ​the​ ​mediator’s 
+
+fee. 
+2. Confirm​ ​the​ ​transaction — payment​ ​goes​ ​to​ ​the​ ​seller,​ ​less​ ​the​ ​mediator’s​ ​fee. 
+3. Settle​ ​the​ ​transaction — the​ ​payment​ ​is​ ​divided​ ​between​ ​the​ ​buyer​ ​and​ ​seller​ ​at 
+
+the​ ​mediator’s​ ​discretion.​ ​The​ ​mediator​ ​can​ ​also​ ​take​ ​a​ ​mediation​ ​fee​ ​at​ ​this 
+point​ ​as​ ​well. 
+
+ 
+
+13 
+ 
+
+
+
+ 
+
+ 
+
+ 
+
+14 
+ 
+
+
+
+ 
+
+3.​ ​Integration​ ​with​ ​the​ ​Listia​ ​Marketplace 
+
+Replacing​ ​Listia​ ​Credits 
+XNK​ ​will​ ​fully​ ​replace​ ​Listia​ ​Credits​ ​as​ ​the​ ​main 
+currency,​ ​and​ ​Ink​ ​will​ ​become​ ​the​ ​main​ ​reputation 
+system​ ​within​ ​the​ ​marketplace.​ ​Users​ ​will​ ​buy​ ​and 
+sell​ ​items​ ​using​ ​XNK​ ​and​ ​initially​ ​will​ ​be​ ​able​ ​to 
+earn​ ​additional​ ​XNK​ ​for​ ​engaging​ ​with​ ​users, 
+listings,​ ​and​ ​advertisers​ ​in​ ​the​ ​marketplace.​ ​It​ ​will 
+be​ ​a​ ​seamless​ ​transition​ ​for​ ​current​ ​Listia​ ​users 
+who​ ​are​ ​already​ ​accustomed​ ​to​ ​using​ ​a​ ​virtual 
+currency​ ​to​ ​buy​ ​and​ ​sell. 
+ 
+Existing​ ​Listia​ ​users​ ​will​ ​need​ ​to​ ​login​ ​and​ ​verify 
+their​ ​accounts,​ ​if​ ​they​ ​haven’t​ ​already,​ ​before 
+exchanging​ ​their​ ​current​ ​Listia​ ​Credits​ ​for​ ​XNK. 
+This​ ​exchange​ ​of​ ​Credits​ ​for​ ​XNK​ ​will​ ​be​ ​available 
+at​ ​launch​ ​and​ ​for​ ​at​ ​least​ ​6​ ​months​ ​after​ ​launch.​ ​At 
+launch,​ ​new​ ​listings​ ​and​ ​prices​ ​in​ ​the​ ​marketplace​ ​will​ ​be​ ​converted​ ​from​ ​Credits​ ​to​ ​XNK,​ ​so 
+each​ ​user’s​ ​buying​ ​power​ ​remains​ ​exactly​ ​the​ ​same​ ​to​ ​start.​ ​This​ ​will​ ​serve​ ​as​ ​an​ ​initial​ ​anchor 
+and​ ​stabilizer​ ​for​ ​the​ ​market​ ​price​ ​of​ ​XNK. 
+ 
+After​ ​launch,​ ​users​ ​will​ ​also​ ​start​ ​to​ ​earn​ ​XNK​ ​in​ ​all​ ​the​ ​places​ ​where​ ​they​ ​used​ ​to​ ​earn​ ​Listia 
+Credits,​ ​such​ ​as​ ​certain​ ​goals​ ​and​ ​incentivized​ ​engagement,​ ​referring​ ​other​ ​users,​ ​and 
+completing​ ​tasks​ ​and​ ​offers.​ ​The​ ​amounts​ ​of​ ​these​ ​rewards​ ​will​ ​change​ ​and​ ​the​ ​requirements 
+may​ ​become​ ​more​ ​strict​ ​as​ ​the​ ​incentives​ ​and​ ​potential​ ​value​ ​of​ ​XNK​ ​changes.​ ​Users​ ​will​ ​still​ ​be 
+able​ ​to​ ​buy​ ​XNK​ ​to​ ​spend​ ​or​ ​make​ ​up​ ​the​ ​difference​ ​when​ ​they​ ​don’t​ ​have​ ​enough​ ​to​ ​buy​ ​an 
+item.​ ​In​ ​this​ ​case,​ ​Listia​ ​may​ ​sell​ ​directly​ ​from​ ​its​ ​own​ ​supply​ ​of​ ​XNK​ ​or​ ​help​ ​users​ ​buy​ ​from​ ​a 
+third​ ​party​ ​exchange. 
+
+Millions​ ​of​ ​consumer​ ​wallets 
+Listia​ ​will​ ​integrate​ ​virtual​ ​XNK​ ​wallets​ ​for​ ​each​ ​Listia​ ​user​ ​account.​ ​The​ ​wallets​ ​will​ ​be​ ​created 
+and​ ​maintained​ ​by​ ​Listia​ ​for​ ​the​ ​purposes​ ​of​ ​transactions​ ​within​ ​the​ ​Listia​ ​marketplace,​ ​but​ ​will 
+also​ ​support​ ​withdrawals​ ​and​ ​deposits​ ​to​ ​and​ ​from​ ​external​ ​addresses​ ​via​ ​the​ ​public​ ​Ethereum 
+network.​ ​Within​ ​the​ ​Listia​ ​marketplace,​ ​Listia​ ​will​ ​manage​ ​the​ ​transactions​ ​for​ ​each​ ​user​ ​and 
+hide​ ​the​ ​complexities​ ​of​ ​dealing​ ​with​ ​public/private​ ​keys,​ ​Smart​ ​Contracts,​ ​etc.​ ​In​ ​the​ ​beginning, 
+
+ 
+
+15 
+ 
+
+
+
+ 
+
+Listia​ ​will​ ​maintain​ ​its​ ​own​ ​centralized​ ​off-chain​ ​transaction​ ​history​ ​to​ ​speed​ ​up​ ​transactions 
+and​ ​avoid​ ​fees,​ ​while​ ​separately​ ​settling​ ​fully​ ​completed​ ​transactions​ ​on​ ​the​ ​Ethereum 
+blockchain​ ​as​ ​needed​ ​to​ ​publicly​ ​record​ ​reputation​ ​and​ ​feedback.​ ​However,​ ​the​ ​long​ ​term​ ​plan​ ​is 
+for​ ​all​ ​Ink​ ​transactions​ ​on​ ​Listia​ ​to​ ​settle​ ​directly​ ​on​ ​the​ ​Ethereum​ ​blockchain.​ ​Listia​ ​users​ ​will 
+not​ ​need​ ​any​ ​Ethereum​ ​or​ ​cryptocurrency​ ​knowledge​ ​to​ ​start​ ​and​ ​continue​ ​buying​ ​and​ ​selling​ ​in 
+the​ ​marketplace. 
+ 
+
+4.​ ​Token​ ​Distribution​ ​&​ ​Economics 
+
+Token​ ​distribution 
+XNK​ ​will​ ​be​ ​distributed​ ​as​ ​widely​ ​as​ ​possible​ ​during​ ​a​ ​token​ ​distribution​ ​event​ ​at​ ​launch.​ ​The 
+distribution​ ​will​ ​consist​ ​of​ ​exchanging​ ​existing​ ​Listia​ ​Credits​ ​for​ ​XNK,​ ​and​ ​also​ ​a​ ​private​ ​and 
+public​ ​capped​ ​sale​ ​of​ ​tokens. 
+
+Token​ ​allocation 
+
+ 
+
+ 
+
+16 
+ 
+
+
+
+ 
+
+Token​ ​sale​ ​terms 
+● Ethereum​ ​ERC20​ ​Token​ ​called​ ​XNK 
+● 500​ ​Million​ ​Ink​ ​Protocol​ ​Tokens​ ​Issued​ ​(500,000,000​ ​XNK) 
+
+○ 6%​ ​reserved​ ​for​ ​existing​ ​Listia​ ​User​ ​Credits 
+○ 30%​ ​sold​ ​in​ ​presale​ ​and​ ​public​ ​token​ ​sale 
+○ 32%​ ​retained​ ​by​ ​Listia,​ ​vested​ ​over​ ​3​ ​years 
+○ 32%​ ​allocated​ ​for​ ​distribution​ ​and​ ​incentivizing​ ​the​ ​network,​ ​released​ ​over​ ​3​ ​years 
+
+● Price​ ​per​ ​Token:​ ​$0.10​ ​USD 
+● $15MM​ ​Maximum​ ​Sale​ ​Cap 
+
+5.​ ​Team 
+The​ ​team​ ​first​ ​came​ ​together​ ​in​ ​2009​ ​to​ ​build​ ​Listia​ ​into​ ​a​ ​community​ ​where​ ​over​ ​100​ ​million 
+items​ ​have​ ​been​ ​traded.​ ​With​ ​over​ ​8​ ​years​ ​of​ ​experience​ ​building​ ​a​ ​peer-to-peer​ ​marketplace, 
+the​ ​team​ ​is​ ​now​ ​focused​ ​on​ ​applying​ ​what​ ​they​ ​have​ ​learned​ ​and​ ​creating​ ​the​ ​foundation​ ​for 
+decentralized​ ​marketplaces​ ​of​ ​the​ ​future. 
+ 
+https://www.paywithink.com/#team 
+
+6.​ ​FAQ 
+“For​ ​Listia,​ ​what​ ​is​ ​the​ ​benefit​ ​of​ ​switching​ ​from​ ​Credits​ ​to​ ​XNK?” 
+ 
+
+- XNK​ ​provide​ ​more​ ​value​ ​to​ ​the​ ​end​ ​user​ ​because​ ​they​ ​are​ ​fungible​ ​and​ ​can​ ​be 
+exchanged​ ​for​ ​fiat​ ​currency​ ​or​ ​other​ ​cryptocurrencies. 
+
+ 
+- Listia​ ​no​ ​longer​ ​needs​ ​to​ ​act​ ​as​ ​a​ ​central​ ​bank​ ​to​ ​print​ ​and​ ​regulate​ ​the​ ​credits,​ ​which 
+
+has​ ​led​ ​to​ ​inflation​ ​issues​ ​in​ ​the​ ​past. 
+ 
+
+- Listia​ ​can​ ​eventually​ ​replace​ ​its​ ​centralized​ ​reputation,​ ​feedback,​ ​and​ ​escrow​ ​systems 
+with​ ​Ink’s​ ​decentralized​ ​system. 
+
+ 
+“Why​ ​create​ ​Ink​ ​and​ ​not​ ​use​ ​existing​ ​tokens​ ​or​ ​cryptocurrencies?”  
+ 
+
+- From​ ​a​ ​technology​ ​standpoint,​ ​you​ ​could​ ​certainly​ ​use​ ​other​ ​cryptocurrencies​ ​purely​ ​for 
+payment,​ ​but​ ​Ink​ ​is​ ​more​ ​than​ ​just​ ​a​ ​payment​ ​system.​ ​Ink​ ​is​ ​all​ ​about​ ​decentralizing 
+reputation​ ​and​ ​helping​ ​buyers​ ​and​ ​sellers​ ​connect​ ​and​ ​pay​ ​safely​ ​no​ ​matter​ ​which 
+
+ 
+
+17 
+ 
+
+https://www.paywithink.com/#team
+
+
+ 
+
+marketplace​ ​platform​ ​they​ ​choose​ ​to​ ​use.​ ​The​ ​Ink​ ​Protocol​ ​Token​ ​is​ ​required​ ​to​ ​write 
+to​ ​this​ ​new​ ​reputation​ ​network​ ​and​ ​is​ ​the​ ​best​ ​way​ ​to​ ​guarantee​ ​that​ ​payment​ ​is 
+made​ ​to​ ​the​ ​right​ ​person. 
+
+ 
+- The​ ​price​ ​of​ ​XNK​ ​should​ ​also​ ​be​ ​decoupled​ ​from​ ​the​ ​price​ ​of​ ​ETH​ ​and​ ​other 
+
+purpose-built​ ​cryptocurrencies,​ ​as​ ​Ink’s​ ​market​ ​cap​ ​should​ ​be​ ​tied​ ​to​ ​the​ ​GMV​ ​of​ ​the 
+goods​ ​and​ ​services​ ​being​ ​traded​ ​in​ ​peer​ ​to​ ​peer​ ​markets​ ​and​ ​not​ ​the​ ​price​ ​of​ ​running 
+contracts​ ​in​ ​Ethereum​ ​or​ ​influenced​ ​by​ ​Ethereum​ ​policies​ ​that​ ​may​ ​affect​ ​ETH​ ​in 
+significant​ ​ways. 
+
+ 
+- Most​ ​importantly,​ ​creating​ ​a​ ​native​ ​token​ ​helps​ ​to​ ​create​ ​strong​ ​incentives​ ​for​ ​users​ ​and 
+
+build​ ​very​ ​powerful​ ​network​ ​effects.​ ​The​ ​problem​ ​with​ ​current​ ​cryptocurrencies​ ​is​ ​that 
+there​ ​isn’t​ ​any​ ​consumer​ ​usage​ ​and​ ​no​ ​reason​ ​for​ ​users​ ​to​ ​start​ ​using​ ​it.​ ​Ink​ ​has​ ​the 
+power​ ​to​ ​change​ ​that,​ ​as​ ​it​ ​is​ ​designed​ ​from​ ​the​ ​ground​ ​up​ ​specifically​ ​for​ ​P2P 
+marketplace​ ​transactions.​ ​Users​ ​who​ ​use​ ​it​ ​will​ ​have​ ​an​ ​ownership​ ​stake​ ​in​ ​the​ ​system 
+and​ ​be​ ​more​ ​incentivized​ ​to​ ​spread​ ​its​ ​usage​ ​as​ ​they​ ​can​ ​directly​ ​benefit​ ​from​ ​its 
+success. 
+
+ 
+- To​ ​truly​ ​jumpstart​ ​these​ ​network​ ​effects,​ ​Listia​ ​will​ ​be​ ​able​ ​to​ ​distribute​ ​XNK​ ​to​ ​millions 
+
+of​ ​users​ ​in​ ​the​ ​existing​ ​marketplace.​ ​These​ ​are​ ​power​ ​users​ ​who​ ​are​ ​already​ ​buying​ ​and 
+selling​ ​using​ ​a​ ​virtual​ ​currency.​ ​Each​ ​of​ ​these​ ​users​ ​can​ ​directly​ ​benefit​ ​by​ ​spreading​ ​the 
+usage​ ​of​ ​Ink.​ ​It​ ​is​ ​not​ ​possible​ ​to​ ​do​ ​this​ ​with​ ​an​ ​existing​ ​cryptocurrency​ ​such​ ​as​ ​ETH​ ​or 
+BTC. 
+
+ 
+“What​ ​incentive​ ​is​ ​there​ ​to​ ​hold​ ​XNK?​ ​Will​ ​the​ ​velocity​ ​be​ ​too​ ​high​ ​to​ ​support​ ​the​ ​token’s 
+economy?” 
+ 
+
+- XNK​ ​is​ ​designed​ ​to​ ​function​ ​as​ ​a​ ​cryptocurrency,​ ​so​ ​selling​ ​and​ ​buying​ ​with​ ​XNK​ ​will 
+typically​ ​be​ ​cheaper​ ​than​ ​converting​ ​back​ ​and​ ​forth​ ​between​ ​fiat​ ​currency​ ​each​ ​time,​ ​due 
+to​ ​credit​ ​card​ ​and/or​ ​bank​ ​fees.​ ​So,​ ​for​ ​users​ ​that​ ​are​ ​buying​ ​and​ ​selling​ ​frequently​ ​within 
+either​ ​the​ ​Listia​ ​marketplace​ ​or​ ​other​ ​marketplaces,​ ​it​ ​makes​ ​sense​ ​to​ ​hold​ ​XNK​ ​so​ ​they 
+can​ ​purchase​ ​goods​ ​or​ ​services​ ​through​ ​the​ ​token​ ​at​ ​a​ ​later​ ​time. 
+
+ 
+- Managed​ ​marketplaces​ ​like​ ​Listia​ ​will​ ​also​ ​incentivize​ ​holding​ ​XNK​ ​by​ ​giving​ ​lower 
+
+service​ ​and​ ​transaction​ ​fees​ ​when​ ​transacting​ ​using​ ​the​ ​cryptocurrency​ ​vs.​ ​fiat. 
+ 
+
+- Ink​ ​has​ ​a​ ​staking​ ​function​ ​built​ ​directly​ ​into​ ​the​ ​protocol​ ​in​ ​the​ ​form​ ​of​ ​the​ ​escrow 
+feature,​ ​which​ ​naturally​ ​reduces​ ​velocity​ ​of​ ​the​ ​token.​ ​Escrow​ ​locks​ ​up​ ​tokens​ ​for​ ​a​ ​long 
+period​ ​of​ ​time,​ ​usually​ ​many​ ​days​ ​to​ ​a​ ​couple​ ​weeks.​ ​During​ ​this​ ​time,​ ​the​ ​seller​ ​prepares 
+
+ 
+
+18 
+ 
+
+
+
+ 
+
+and​ ​ships​ ​the​ ​item​ ​while​ ​staking​ ​their​ ​reputation​ ​against​ ​the​ ​tokens​ ​in​ ​escrow​ ​until 
+the​ ​buyer​ ​receives​ ​the​ ​item. 
+
+   
+“What​ ​unique​ ​functionality​ ​will​ ​Ink​ ​provide​ ​that​ ​is​ ​not​ ​already​ ​present​ ​in​ ​other​ ​tokens​ ​and 
+cryptocurrencies?” 
+ 
+
+- Ink​ ​is​ ​built​ ​specifically​ ​for​ ​a​ ​typical​ ​transaction​ ​within​ ​a​ ​P2P​ ​marketplace​ ​and​ ​thus 
+includes​ ​all​ ​of​ ​these​ ​features​ ​built-in:​ ​decentralized​ ​reputation​ ​and​ ​feedback, 
+decentralized​ ​escrow,​ ​and​ ​third​ ​party​ ​dispute​ ​resolution. 
+
+ 
+“Why​ ​would​ ​other​ ​companies​ ​use​ ​Ink​ ​over​ ​starting​ ​their​ ​own​ ​coin​ ​or​ ​token?” 
+ 
+
+- Any​ ​app​ ​can​ ​certainly​ ​start​ ​their​ ​own​ ​token​ ​for​ ​transactions​ ​within​ ​their​ ​own​ ​ecosystem, 
+but​ ​by​ ​creating​ ​a​ ​purpose-built​ ​token​ ​for​ ​P2P​ ​marketplace​ ​reputation​ ​and​ ​payments, 
+getting​ ​it​ ​into​ ​the​ ​hands​ ​of​ ​millions​ ​of​ ​people​ ​on​ ​day​ ​one​ ​and​ ​being​ ​the​ ​first​ ​of​ ​its​ ​kind, 
+Ink​ ​can​ ​generate​ ​the​ ​network​ ​effects​ ​necessary​ ​to​ ​become​ ​the​ ​​de​ ​facto​​ ​standard​ ​way 
+that​ ​people​ ​buy​ ​and​ ​sell​ ​with​ ​each​ ​other. 
+
+ 
+- Once​ ​enough​ ​users​ ​have​ ​built​ ​up​ ​their​ ​public​ ​reputation​ ​within​ ​Ink,​ ​it​ ​will​ ​be​ ​difficult​ ​to 
+
+incentivize​ ​them​ ​to​ ​move​ ​to​ ​a​ ​new​ ​system. 
+ 
+“Will​ ​companies​ ​be​ ​willing​ ​to​ ​share​ ​proprietary​ ​data​ ​from​ ​users?” 
+ 
+
+- Ink​ ​is​ ​designed​ ​to​ ​capture​ ​the​ ​fundamental​ ​details​ ​about​ ​a​ ​transaction,​ ​so​ ​it​ ​does​ ​not 
+require​ ​other​ ​companies​ ​to​ ​actively​ ​share​ ​any​ ​proprietary​ ​or​ ​sensitive​ ​data​ ​about​ ​their 
+users.​ ​The​ ​data​ ​within​ ​the​ ​Ink​ ​ecosystem​ ​will​ ​be​ ​built​ ​organically​ ​one​ ​transaction​ ​at​ ​a 
+time,​ ​with​ ​a​ ​big​ ​boost​ ​from​ ​the​ ​Listia​ ​marketplace​ ​integration. 
+
+ 
+“Why​ ​would​ ​other​ ​marketplaces​ ​use​ ​Ink​ ​instead​ ​of​ ​only​ ​fiat​ ​currency​ ​like​ ​USD?” 
+ 
+
+- Listia​ ​will​ ​also​ ​be​ ​building​ ​a​ ​simple​ ​payments​ ​app​ ​so​ ​users​ ​of​ ​huge​ ​marketplaces​ ​such 
+as​ ​Craigslist,​ ​Facebook​ ​Marketplace,​ ​OfferUp,​ ​Letgo,​ ​etc.​ ​can​ ​start​ ​using​ ​Ink​ ​right​ ​away, 
+without​ ​needing​ ​any​ ​integration​ ​or​ ​support​ ​from​ ​those​ ​marketplaces. 
+
+ 
+- Companies​ ​like​ ​Airbnb​ ​rely​ ​heavily​ ​on​ ​user​ ​reputation​ ​and​ ​feedback,​ ​which​ ​is​ ​why​ ​they 
+
+have​ ​insurance​ ​for​ ​home​ ​renters​ ​and​ ​require​ ​deposits​ ​for​ ​guests.​ ​If​ ​users​ ​came​ ​on​ ​board 
+with​ ​existing​ ​transaction​ ​histories,​ ​things​ ​like​ ​insurance​ ​rates​ ​could​ ​go​ ​down​ ​and​ ​there 
+would​ ​be​ ​lower​ ​fees​ ​for​ ​home​ ​renters​ ​that​ ​accept​ ​Ink.​ ​Guests​ ​would​ ​not​ ​need​ ​to​ ​place 
+deposits​ ​each​ ​time,​ ​and​ ​then​ ​get​ ​them​ ​refunded,​ ​as​ ​they​ ​could​ ​use​ ​the​ ​Ink​ ​escrow 
+feature,​ ​which​ ​would​ ​automatically​ ​settle​ ​funds​ ​as​ ​needed. 
+
+ 
+
+19 
+ 
+
+
+
+ 
+
+ 
+- Marketplaces​ ​that​ ​exchange​ ​money​ ​for​ ​services​ ​like​ ​Angie’s​ ​List​ ​or​ ​Upwork​ ​try​ ​to 
+
+control​ ​feedback​ ​scoring​ ​and​ ​reputation​ ​within​ ​their​ ​marketplace.​ ​However,​ ​for​ ​the 
+service​ ​provider​ ​that​ ​is​ ​providing​ ​great​ ​quality​ ​service,​ ​they​ ​still​ ​have​ ​to​ ​ask​ ​you​ ​to​ ​leave 
+positive​ ​feedback.​ ​The​ ​decentralized​ ​reputation​ ​and​ ​feedback​ ​built​ ​into​ ​Ink​ ​rewards 
+service​ ​providers​ ​with​ ​a​ ​better​ ​payment​ ​option​ ​and​ ​automated​ ​way​ ​to​ ​earn​ ​reputation 
+and​ ​get​ ​feedback.​ ​Marketplaces​ ​working​ ​together​ ​on​ ​one​ ​blockchain​ ​have​ ​more​ ​power 
+to​ ​root​ ​out​ ​bad​ ​service​ ​providers​ ​while​ ​making​ ​it​ ​more​ ​efficient​ ​and​ ​rewarding​ ​for​ ​good 
+providers. 
+
+7.​ ​Links 
+ 
+1​https://techcrunch.com/2009/08/05/listia-is-an-awesome-way-to-give-and-get-free-stuff/ 
+ 
+2​http://www.businesswire.com/news/home/20070426005614/en/Average-U.S.-Household-50-
+Unused-Items-Worth 
+
+ 
+
+20 
+ 
+
+https://www.listia.com/team
+https://techcrunch.com/2009/08/05/listia-is-an-awesome-way-to-give-and-get-free-stuff/
+http://www.businesswire.com/news/home/20070426005614/en/Average-U.S.-Household-50-Unused-Items-Worth
+http://www.businesswire.com/news/home/20070426005614/en/Average-U.S.-Household-50-Unused-Items-Worth
+

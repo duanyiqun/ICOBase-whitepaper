@@ -1,0 +1,1693 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ZIPPER 
+Mobile   platform   bringing   blockchain   to   the   masses 
+
+ 
+ 
+ 
+
+Whitepaper 
+ 
+
+Zipper   Global   Ltd 
+30   November   2017 
+
+ 
+Version   0.8   (DRAFT) 
+
+ 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+ 
+ 
+
+ 
+ 
+
+A   hundred   years   ago , 
+ 
+
+If   somebody   had   asked   Alexander   Graham   Bell,   “What   are   you   going   to   be   able   to   do 
+with   a   telephone?”   he   would   not   have   been   able   to   tell   them   the   ways   the   telephone 
+
+would   affect   the   world.   He   didn’t   know   that   people   would   use   the   telephone   to   call   up 
+and   find   out   what   movies   were   playing   that   night   or   to   order   some   groceries   or   call   a 
+
+relative   on   the   other   side   of   the   globe. 
+ 
+
+But   remember   that   first   the   public   telegraph   was   inaugurated,   in   1844.   It   was   an 
+amazing   breakthrough   in   communications.   You   could   actually   send   messages   from 
+New   York   to   San   Francisco   in   an   afternoon.   People   talked   about   putting   a   telegraph 
+
+on   every   desk   in   America   to   improve   productivity.   But   it   wouldn’t   have   worked.   It 
+required   that   people   learn   this   whole   sequence   of   strange   incantations,   Morse   code, 
+
+dots   and   dashes,   to   use   the   telegraph.   It   took   about   40   hours   to   learn.   The   majority   of 
+people   would   never   learn   how   to   use   it.   So,   fortunately,   in   the   1870s,   Bell   filed   the 
+
+patents   for   the   telephone.   It   performed   basically   the   same   function   as   the   telegraph, 
+but   people   already   knew   how   to   use   it.  
+
+…   They’re   not   going   to   learn   slash   q-z   any   more   than   they’re   going   to   learn   Morse 
+code.   That   is   what   Macintosh   is   all   about.   It’s   the   first   “telephone”   of   our   industry. 
+
+ 
+Steve   Jobs,   Playboy   interview,   February   1985 
+
+ 
+ 
+   
+
+1 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Table   of   contents 
+  
+ 
+
+1   Summary 3 
+
+2   Introduction:   blockchain   needs   easier   and   more   secure   consumer   experiences 6 
+Key   challenges   to   scale   the   decentralized   ecosystem 6 
+Three   statements   of   mass   adoption 7 
+Building   the   Ethereum   powered   open   mobile   ecosystem 8 
+
+3   Zipper   platform   supports   decentralized   mobile   services   seamlessly   and   securely 9 
+Value   proposition 10 
+Architecture   &   key   features 11 
+First   day   with   Zipper 14 
+
+4   Developer   &   community   program   for   Sony   Xperia   and   current   state   of   project 16 
+Developer   &   community   program   for   Sony   Xperia 16 
+R&D   roadmap   towards   phase   1 17 
+How   we   got   here 18 
+
+5   Building   the   application   ecosystem 20 
+Partnering   with   large   ongoing   blockchain   projects 20 
+Investing   into   ecosystem   projects 21 
+Rewarding   application   developers   with   ZIP   tokens 21 
+
+6   Getting   decentralized   world   to   the   hands   of   smartphone   users 22 
+Phase   1:   Commercialize 22 
+Phase   2:   Scale   with   device   vendor   partners 23 
+Phase   3:   Scale   as   downloadable   solution 23 
+
+7   ZIP   token 24 
+ZIP   tokens   natural   demand   and   re-spending   model 24 
+Issuance   &   allocation 28 
+Governance 28 
+Token   supply   &   vesting   over   time 29 
+Token   sales 30 
+Token   specification 30 
+
+8   Team   &   advisors 31 
+
+2 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+1   Summary 
+ 
+
+Zipper is building a  mobile platform which brings blockchain based services to the                         
+masses by making them easy to use. The project aims to elevate our smartphones to                             
+blockchain   powered   devices   which   anyone   can   use. 
+
+While Ethereum and other blockchains enable a new decentralized economy, the                     
+cumbersome user experience , for example, with handling one’s private keys, can severely                       
+hinder the mass adoption of various blockchain services. At the same time, there are                           
+billions of people around the world who access the internet primarily with their                         
+smartphones. Building a secure and easy to use mobile platform for smartphone users is                           
+the   key   to   bring   the   benefits   of   blockchain   based   services   to   the   masses. 
+
+The Zipper team is  specialized in building open source mobile operating systems,                       
+products and communities. A decade ago, we contributed in building Nokia’s MeeGo OS,                         
+and founded Jolla in 2011 to create the independent Sailfish OS which is now licensed by                               
+several large nations and industry players. We have also grown active open source                         
+communities around these projects, an asset we can further utilize with the Zipper                         
+initiative. 
+
+As its first step to enter the market, Zipper has partnered with Jolla to launch a developer                                 
+& community program for Sony Xperia smartphone . Developers can use the device to                         
+integrate their blockchain based services to the Zipper platform, and community members                       
+to provide feedback as the platform’s first users. Over time, Zipper aims to make the Zipper                               
+platform and the services integrated into it available to many other Android and Sailfish OS                             
+smartphones   as   a   pre-installed   or   downloadable   solution. 
+
+ZIP token (ZIPT) is Zipper platform’s utility token which is used mainly for three purposes:                             
+the platform and service providers can use ZIP to  reward their active users , helping the                             
+providers to establish a loyal user base and on the other hand rewarding loyal users for                               
+their attention. Moreover, ZIP is used to  incentivise application development for the                       
+Zipper platform as well as to  curate the best applications for discovery through a                           
+curation   market   mechanism. 
+
+Zipper will invest into projects which are essential for the Zipper ecosystem to succeed, and                             
+invites existing blockchain projects to integrate their services into the Zipper platform.                       
+Together we can offer a  smooth integrated user experience , just like iOS and Android do                             
+today,   but,   in   a   decentralized   way    valuing   privacy,   transparency   and   collaboration . 
+
+ 
+
+3 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Disclaimer 
+ 
+This whitepaper draft is for information only and does not constitute an offer or any kind of                                 
+investment advice. Any element of this whitepaper may undergo significant changes as the                         
+project   further   develops. 
+ 
+The brands and visuals seen in this whitepaper are for illustration purposes only, and not                             
+endorsements or partnerships from these specific brands unless explicitly stated                   
+otherwise. 
+ 
+We hope that this draft encourages critical review of our project in the community. You are                               
+more than welcome to contact us and join the discussion on any channel listed on                             
+zipperglobal.com. 
+ 
+   
+
+4 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Glossary 
+ 
+ 
+Zipper   platform   -    Decentralized   application   runtime   environment   which   aims   to   bring 
+blockchain   powered   mobile   experiences   to   the   masses   in   an   easy   and   secure   way. 
+ 
+Decentralized   application   runtime   environment    -   Runtime   used   by   decentralized 
+applications   and   some   system   services   on   mobile   devices,   independent   from   devices’ 
+original   operating   system. 
+ 
+Decentralized   mobile   web    -   The   next   generation   of   internet   where   core   services   like 
+digital   identity   are   decentralized,   and   where   individuals   with   mobile   devices   can   engage   in 
+value   and   ownership   exchange   directly   with   each   other   without   middlemen. 
+ 
+ZIP   token    -   Ethereum   ERC20   utility   token   which   Zipper   platform   and   the   services 
+integrated   into   it   use   to   reward   their   users   and   developers. 
+ 
+Token    -   An   intangible   asset   stored   on   a   blockchain   which   entitles   a   token   holder   to   a 
+bundle   of   rights   (and   possibly   liabilities)   set   out   in   smart   contracts   and   other   relevant 
+documentation. 
+ 
+Zipper   ecosystem    -   Products,   services   and   their   developers   and   providers,   end   users,   and 
+other   participants   who   create,   use   and   promote   ZIP   token   powered   experiences. 
+ 
+ZIP   Trust   -    A   Trust   managing   the   allocation   of   ZIP   tokens. 
+ 
+Zipper   project    -   General   term   for   the   project   described   in   this   whitepaper. 
+ 
+Zipper   Global   Ltd    -   A   Hong   Kong   based   company   founded   in   2016   which   leads   the   Zipper 
+project   and   steers   the   development   of   Zipper   platform. 
+ 
+Jolla   Ltd    -   A   Finnish   technology   company   which   develops   the   open   Sailfish   OS   mobile 
+operating   system   and   is   one   of   Zipper’s   R&D   partners. 
+ 
+ 
+
+ 
+
+   
+
+5 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+2   Introduction:   blockchain   needs   easier 
+and   more   secure   consumer   experiences 
+ 
+New technologies scale into mainstream only with simple and good user experiences.                       
+Apple and its products are a great example of this: first it took personal computers to the                                 
+mainstream by replacing DOS commands with a graphical interface and a mouse. Then                         
+Apple disrupted mobile by replacing a tiny screen and buttons with a large touch screen                             
+and   a   vivid   ecosystem   of   useful   and   easy   to   use   apps. 
+ 
+Blockchain and crypto-assets are the next big disruptor after internet and mobile. Where                         
+mobile internet provided equal access to information for most people in the world,                         
+blockchain and tokens will provide equal access to value exchange for everyone connected                         
+to the internet. The key to reach this vision is easy, trustless, low cost transactions, which                               
+the   Ethereum   platform   and   smart   contracts   can   provide. 
+ 
+The Zipper project’s goal is to enable the average consumer to have access to the                             
+decentralized web’s services, as easily as he accesses the mobile internet with an iPhone or                             
+Android device; just take the device out of the box or install an app and start using and                                   
+earning with it straight away, instead of having to print and hide private key, or worrying if                                 
+one’s   sensitive   data   can   be   leaked. 
+ 
+ 
+
+Key   challenges   to   scale   the   decentralized   ecosystem 
+ 
+The current user experience of mobile Ethereum, and other blockchains, leave a lot to be                             
+desired: 
+ 
+
+- The   handling   of   private   keys   is   far   from   being   usable:   printing   your   private   key   and 
+keeping   it   “safe”,   is   just   not   going   to   work   on   a   large   scale. 
+
+ 
+- The   number   of   hacks,   where   private   keys   have   been   stolen,   by   using   various   social 
+
+engineering   methods,   show   us   that   when   Ethereum   and   the   blockchain   industry 
+moves   into   the   masses,   the   hackers   will   move   along. 
+
+ 
+- Most   of   the   mobile   devices   in   the   world   are   Google   Android   devices   which   base   their 
+
+business   model   on   the   monetization   of   user   data.   Cryptocurrency   users   can   never 
+be   sure   how   their   data   is   being   used.   Building   a   decentralized   mobile   ecosystem   on 
+
+6 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+top   of   the   current   model   is   like   building   your   house   on   sand.   You   can   invest   a   lot   of 
+effort   building   something   great,   but   eventually   the   house   will   sink.  
+
+ 
+- User   interfaces   are   full   of   terms   unknown   and   confusing   for   the   average   person. 
+
+ 
+ 
+
+Three   statements   of   mass   adoption 
+
+ 
+To   enable   the   mass   adoption   of   Ethereum   and   other   blockchains: 
+ 
+
+1. We need to create smartphone experiences which handle our private keys and                       
+transactions   in   a   safe   and   easy   to   use   way. 
+
+ 
+2. We need to address the integration of various Ethereum and blockchain services                       
+
+into   smartphones   as   one   seamless   experience. 
+ 
+
+Currently, 98% of the smartphone industry is dominated by Android and iOS.                       
+Google and Apple decide, and control, what is being integrated into these devices                         
+and   which   applications   shall   have   screen   presence. 
+ 
+Google has very strict agreements with all the device vendors and original device                         
+manufacturers shipping Android devices with Google services, such as the Play app                       
+store. One of the agreements, called MADA, basically determines that the user                       
+interface shall not be modified and that the Google core services shall be the default                             
+services, and in prominent positions in the UI. Moreover, Google and Apple guard                         
+their app stores carefully, and will certainly have their say in allowing decentralized                         
+applications, which bypass their in-app purchasing mechanisms and related fees,                   
+entering their app stores. Decentralized, token powered services simply do not fit                       
+into their business models. Imagine if WhatsApp or Twitter would never have been                         
+accepted   to   Google   Play.   No   one   would   know   about   them.  
+ 
+
+3. We need to build an open and independent smartphone platform for decentralized                       
+services to ensure that our private data or transactions are not used without our                           
+consent. 
+
+ 
+ 
+ 
+
+7 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Building   the   Ethereum   powered   open   mobile   ecosystem  
+ 
+Zipper aims to build five key cornerstones to create the blockchain powered open mobile                           
+ecosystem: 
+ 
+
+1. Zipper   platform,    an   Ethereum   based   open   smartphone   runtime   environment 
+which   supports   Ethereum   and   other   blockchain   protocols   and   dapps   natively   and 
+securely. 
+
+ 
+2. Developer   &   community   program   for   Sony   Xperia    devices   to   empower   dapp 
+
+developers   to   integrate   their   services   to   Zipper   platform   and   to   engage   pioneer 
+users. 
+
+ 
+3. Strong   mobile    dapp   ecosystem ,   partly   funded   by   Zipper   project,   to   provide   Zipper 
+
+platform’s   users   the   services   they   need,   easily   and   safely. 
+ 
+
+4. Distribution    of   Zipper   platform   to   the   hands   of   users   through   Android   and   Sailfish 
+OS   device   vendor   partnerships,   a   downloadable   platform,   and   disruptive   sponsoring 
+and   lending   device   models. 
+
+ 
+5. Passionate    user   and   developer   community    empowered   by    ZIP   token . 
+
+ 
+Each   of   these   cornerstones   will   be   addressed   in   this   whitepaper.   
+
+8 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+3   Zipper   platform   supports   decentralized 
+mobile   services   seamlessly   and   securely 
+ 
+Zipper platform is our solution for making Ethereum and blockchain powered services                       
+accessible to smartphone users around the world. Zipper is a full-stack mobile runtime                         
+environment for decentralized protocols and dapps, fully separated from operating                   
+systems   such   as   Android,   running   side   by   side   on   the   same   hardware. 
+ 
+Zipper platform aims to enable a trustable, beautiful, out-of-box experience that  just works                         
+and   makes   it   easy   for   the   masses   to   start   using   blockchain   based   services.  
+ 
+ 
+
+ 
+ 
+ 
+
+Image   1.     Zipper   platform   enables   core   blockchain   services   to   be   integrated   to   smartphones, 
+out-of-the-box.    Note:    app   icons   are   for   illustration   purposes   only,   not   established   partnerships. 
+
+ 
+ 
+
+9 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Value   proposition 
+ 
+Zipper’s solution brings numerous benefits for users, developers and the decentralized                     
+ecosystem. 
+ 
+ 
+Everyday   mobile   users 
+ 
+Easy   of   use 
+
+- Can   easily   make   cryptocurrency   transactions,   also   to   and   from   fiat 
+- Can   be   worry-free   about   private   key   handling   and   storage 
+- Enjoy   seamless,   integrated   software-hardware   dapp   experiences 
+- Can   access   their   favorite   dapps   whenever;   Zipper   platform   is   just   a   swipe   away   from 
+
+Android   or   Sailfish   OS   home   screen 
+ 
+Data   control 
+
+- Can   trust   that   their   device   does   not   collect   private   data   when   using   Zipper   platform 
+- Can   choose   which   data   to   share   and   with   whom 
+
+ 
+Earning 
+
+- Can   get   paid   in   tokens   for   shared   data 
+- Can   monetize   storage,   computing,   knowledge,   and   other   assets 
+
+ 
+ 
+Dapp   developers 
+ 
+Distribution 
+
+- Get   a   new   distribution   channel   to   reach   users;   Zipper   platform   users   will   have   direct 
+access   to   the   services   integrated   into   it 
+
+ 
+Smooth   user   experience 
+
+- Can   integrate   their   services   “deeply”   into   smartphones   and   build   Apple-like 
+seamless   user   experiences 
+
+ 
+ 
+Ethereum   &   decentralized   ecosystem 
+ 
+Adoption 
+
+- Drives   Ethereum   and   blockchain   adoption   around   the   world 
+
+10 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+- Makes   Ethereum   and   blockchain   approachable   and   easy   to   use   for   the   average 
+consumer 
+
+ 
+Collaboration 
+
+- Encourages   collaboration   among   various   protocols   and   dapp   projects,   to   provide 
+seamless   mobile   experiences 
+
+ 
+ 
+
+Architecture   &   key   features 
+ 
+Zipper platform is based on several open source technologies and is planned to work in                             
+multiple Android and Sailfish OS hardware configurations, either side by side with the OS to                             
+ease   adoption,   or   on   its   own. 
+ 
+ 
+ 
+
+ 
+ 
+
+Image   2.    Zipper   platform   is   fully   separated   from   Android,   running   on   the   same   hardware   side   by 
+side. 
+
+ 
+ 
+ 
+ 
+
+11 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Secure   containers 
+ 
+Zipper platform provides a secure, open source environment for hosting blockchain                     
+services and dapps in separated containers, that can be also accessed through the Android                           
+UX through an internal network on the device, where untrustable Android applications                       
+would not be able to reach private information such as encryption or signing cryptographic                           
+keys   or   encrypted   data. 
+ 
+ 
+Easy   handling   of   private   keys   &   identity 
+ 
+Cumbersome use and storage of one’s private keys and identity management are some of                           
+the key hurdles in the current cryptocurrency experience. Zipper aims to solve this                         
+challenge   by   utilizing   Shamir’s   secret   sharing   to   private   key   management. 
+ 
+The users’ main cryptographic identity (mnemonic) is never fully stored on the device, but is                             
+split up through Shamir’s secret sharing and stored partially in an online service provided                           
+by Zipper (or another service of the user's’ own choosing). This second piece of the split                               
+secret   is   encrypted   with   a   key   only   available   on   the   device. 
+ 
+Upon device boot-up, the pieces are put together and decrypted with a device-specific key,                           
+ideally hosted in the devices’ security chip. If device is lost or stolen, the user will be able to                                     
+ban the device from accessing the second piece of the split secret through another of his                               
+devices   or   other   methods   set   up   by   user. 
+ 
+
+ 
+ 
+
+Image   3.    Splitting   user’s   cryptographic   identity   with   Shamir’s   secret   sharing. 
+ 
+ 
+
+12 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+The key management software also provides methods for enabling passphrase-accessed                   
+mnemonic derived keys akin to the feature of Visa PayPass where only fund transfers                           
+above a certain amount require a PIN, so a frictionless experience is achieved for smaller                             
+transactions. The Zipper project is also looking at several other options to reduce friction of                             
+using private keys, for example writeable NFC tags provided in the box for easy but secure                               
+cryptographic   identity   recovery   in   case   of   device   loss. 
+ 
+ 
+Secure   display   overlays 
+ 
+Enabling further trust, Zipper platform-hosted services can also provide secure display                     
+overlays on the phone that the Android OS side cannot intercept, such as for PIN entry or                                 
+viewing   encrypted   information. 
+ 
+ 
+Restricted   internet   access   &   VPN 
+ 
+Zipper platform does not allow internet access by default for blockchain services and dapps                           
+unless   specifically   allowed   and   provides   ability   for   VPN-only   internet   connectivity. 
+ 
+ 
+Signed   platform   images   &   encrypted   storage 
+ 
+The phone bootloader can be setup to only boot hypervisor and Zipper platform images                           
+that have been cryptographically signed by the user himself, increasing user trust. Zipper                         
+platform comes with an built-in IPFS client, an Ethereum light client, secure encryption key                           
+storage   and   signing   UX.   The   storage   area   of   Zipper   platform   is   fully   encrypted. 
+ 
+ 
+Integration   of   core   blockchain   services   &   seamless   token   exchange 
+ 
+Zipper platform will build an API to enable easy integration of different blockchain services                           
+and applications. Zipper will jointly, with core blockchain services projects, develop a                       
+multitoken solution, so that different tokens are easy to use for the user in connection of                               
+each service. For example, if the user has only ETH tokens in her wallet and makes an                                 
+action in the Status dapp which requires use of its native SNT token, user can simply make                                 
+the action and Zipper platform automatically converts some of the user’s ETH into SNT                           
+tokens. This is important, as without such integration, the user experience will be like                           
+having   a   dinner   and   needing   to   pay   for   the   fork,   knife,   plate   and   glass   separately.  
+ 
+ 
+
+13 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Downloadable   software 
+ 
+Zipper platform is possible to download and install, without the hypervisor and chipset                         
+security bits, for supported existing devices that satisfy the requirements needed for the                         
+platform, such as an open bootloader and kernel source code availability, effectively                       
+creating a secure container with Zipper platform inside that the existing Android system on                           
+the   phone   cannot   access. 
+ 
+ 
+
+First   day   with   Zipper 
+ 
+What   could   the   first   day   with   Zipper   platform   be   like? 
+ 
+John is new to cryptocurrency and he wants to get into the expanding community. He has                               
+heard that getting into crypto can be complex, as its difficult to know which wallet can be                                 
+used safely, and managing private keys by printing them and keeping them safe and                           
+hidden at home frightens him. John has also heard from his friends that many people in                               
+the crypto community have been hacked, and he is worried if the transactions he does with                               
+his Android phone can be tracked and if this can lead to hacking of his wallet. He also does                                     
+not know what kind of different blockchain services there are, and which could be useful                             
+for   him.   He   finds   it   confusing   that   to   use   each   service,   he   needs   to   buy   a   different   token.  
+ 
+John heard from his friend Rachel that there is a secure, easy to use solution available                               
+called Zipper. To get Zipper, John just needs to download Zipper from the project’s website                             
+and   install   it   to   his   Sony   Xperia   Android   smartphone.  
+ 
+After John has downloaded and installed Zipper platform, the device boots up and Zipper                           
+asks John to take a photo of his ID and a selfie to create his digital identity. Now John has a                                         
+digital identity tied to his legal identity, that he can leverage with dapps that require it. The                                 
+ID can also start building a reputation score based on John’s community and financial                           
+activity, if John so prefers. A good score, may, for example, help John to get loans or work                                   
+from   other   Zipper   users   and   projects. 
+ 
+Next, John chooses to create a wallet. Zipper automatically generates private and public                         
+keys for John. The platform splits the private key into two or more pieces, and asks John                                 
+where he would prefer the pieces to be stored. John decides to store one part into his                                 
+phone, and one part into a trusted decentralized storage service. When John makes a small                             
+everyday transaction, he just identifies himself with a fingerprint sensor. After                     
+identification,   the   device   pulls   both   parts   of   the   private   key   and   triggers   the   transaction. 
+ 
+
+14 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Now John opens his wallet. He is happy to see that there is already 20 ZIP tokens deposited                                   
+on his account as a welcome gift from Zipper. He has heard that he can earn money in the                                     
+blockchain space in various ways, for example, by mining cryptocurrencies or by renting his                           
+device’s processing power or storage. John also starts renting his device’s unused storage,                         
+and sharing his mobile data package through a hotspot in case someone in the                           
+neighbourhood   needs   internet   access;   a   nice   way   to   earn   some   tokens   and   help   others.  
+ 
+John continues exploring Zipper by opening its dapp store. He browses through various                         
+blockchain based services, with the most interesting ones curated to the main page by the                             
+community. John opens a career portal. Although John is not actively looking for a new job,                               
+he is interested to see if there are small gigs which he could do in a few hours of his space                                         
+time. John notices that someone is asking a technical opinion on a software package he                             
+knows well, with a 100 ZIP tokens reward. John decides to write the analysis after the                               
+reputation score connected to John’s ID gives him a chance to offer his services in this area.                                 
+John gets the gig, delivers it in a few hours, customer accepts the work, and the ZIP tokens                                   
+are   released   to   John.  
+ 
+John also notices that he can earn ZIP tokens by recommending the people he knows. He                               
+immediately recognised one of his friends using Zipper and gives her a recommendation.                         
+John   gets   a   reward   of   10   ZIP   tokens. 
+ 
+What   a   nice   first   day   for   John   in   the   crypto   world! 
+
+ 
+
+   
+
+15 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+4   Developer   &   community   program   for 
+Sony   Xperia   and   current   state   of   project  
+ 
+
+Developer   &   community   program   for   Sony   Xperia 
+ 
+Zipper will develop the first version of Zipper platform for Android and Sailfish OS powered                             
+Sony Xperia device. The goal is to empower dapp developers to integrate their services into                             
+Zipper platform through a dedicated developer device, and for pioneer users to get early                           
+access   and   give   feedback. 
+ 
+On the device, Zipper platform will run separately from Android or Sailfish operating                         
+system,   while   being   accessible   with   a   single   swipe   from   the   home   screen. 
+ 
+For Sailfish OS support, Zipper has partnered with Jolla, a Finnish developer of the open                             
+and independent Sailfish OS. Earlier, Jolla and Sony have jointly developed a software                         
+solution which enables Sony Xperia X owners to replace Android OS with Sailfish OS just by                               
+downloading   and   installing   it   to   their   device. 
+ 
+More   information   about   the   collaboration   of   Sony   and   Jolla:    https://blog.jolla.com/sailfishx/ 
+ 
+ 
+
+ 
+ 
+
+Image   4.    Sony   Xperia   X   with   Sailfish   OS   (source:   Jolla). 
+
+16 
+
+https://blog.jolla.com/sailfishx/
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+R&D   roadmap   towards   phase   1 
+ 
+Zipper   project   works   to   reach   three   milestones   to   bring   Zipper   platform   to   developers   and 
+early   adopters. 
+ 
+ 
+Milestone   1:   Zipper   platform   for   Sony   Xperia   (Q1   2018) 
+ 
+In   the   first   phase,   we   plan   to   implement   the   following: 
+
+● Vault   key   storage   supporting   per-dapp   private   storage   separate   from   Android   OS 
+● Cryptographic   identity   recovery   through   NFC   tag   +   saving   through   setup 
+● Device   provisioning   and   device   access   revocation   through   other   devices 
+● Signing   UX 
+● Working   API   for   dapps   to   integrate   with   Zipper   platform,   compatible   with   web3.js 
+● First   release   Zipper   platform   for   Sony   Xperia   device 
+
+ 
+ 
+Milestone   2:   Integration   of   core   services   (Q3   2018) 
+ 
+In   the   second   phase,   we   plan   to   integrate   selected   core   blockchain   services   into   the 
+platform: 
+
+● Mobile   usecase   friendly   distributed   file   storage   integration   (IPFS) 
+● Data   mirroring   token   integration   and   API   (Filecoin   or   likes) 
+● KYC   collection,   integration   and   whitelisting   of   a   subset   of   identity   keys,   usable   across 
+
+all   dapps   on   device   in   collaboration   with   a   partner 
+● Cryptographic   identity   and   contacts   database   integration 
+● Android   Zipper   platform   integration,   including   app   launcher   integration   of   installed 
+
+dapps 
+● Non-Google   Chrome   browser   integration   for   dapps 
+● Mobile   security   chip   integration   for   per-device   key   storage   and   secure   display 
+
+overlays 
+ 
+ 
+Milestone   3:   Zipper   platform   for   several   devices   (Q4   2018) 
+ 
+In   the   third   phase,   we   plan   to   launch   Zipper   platform   for   several   Android   devices: 
+
+● ODM   integratable   Zipper   platform   solution 
+● Deterministic   source   code   builds   of   Zipper   platform 
+● Containerisation   of   existing   Android   system   capability   -   Zipper   platform   as   host 
+
+system   on   device 
+
+17 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+● Device   rental   capability   through   partner   integration 
+● Integration   with   mobile   security   chip   and   allowing   end-users   to   pick   keys   for   Zipper 
+
+platform   image   signature   verification 
+● Prototypes   of   Zipper   platform   for   other   devices   (smartwatches,   tablets,   TV) 
+● Ability   to   extend   cryptographic   identity   usage   across   non-Zipper   platform   devices 
+
+such   as   browsers   on   laptops 
+ 
+ 
+ 
+
+ 
+ 
+
+Image   5.    Zipper   project   R&D   roadmap   for   2018. 
+ 
+ 
+
+How   we   got   here 
+ 
+We launched and seed funded the Zipper project in mid-2016, initially developing                       
+Ethereum based identity management and secure, smart contract powered transactions                   
+for   mobile   with   the   perspective   to   make   blockchain   accessible   to   everyone.  
+ 
+Since then, we have identified numerous challenges and opportunities in the decentralized                       
+space which we believe can contribute to, from creating a new user-controlled mobile                         
+ecosystem   to   frictionless   use   of   Ethereum   and   smarter   way   of   funding   promising   projects. 
+ 
+In 2015, before the creation of the company, we initially began exploring the possibilities of                             
+blockchain and dapps on mobile devices under the working title ‘The Human Web’                         
+( https://github.com/thehumanweb/notes/wiki/InfoPackage ) and began designing how a           
+mobile experience would look, that would out of the box empower people worldwide to be                             
+able   to   leverage   the   abilities   that   these   technologies   offer.  
+ 
+This brought us on a journey through different challenges, concept designs and                       
+experiments where we quite early on had prototypes that used IPFS and Ethereum clients                           
+on mobile and remote nodes for querying the blockchain to save on bandwidth and                           
+processing. We then began exploring how these ideas could reach a wider audience,                         
+
+18 
+
+https://github.com/thehumanweb/notes/wiki/InfoPackage
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+including investigating how we would introduce such a mobile experience in sub-Saharan                       
+Africa. 
+ 
+Through the Africa activities, we developed our thoughts surrounding Frictionless                   
+Ethereum - the reduction of the difficulties an ordinary user will have trying to begin using                               
+dapps   or   token   in   order   to   create   a   frictionless   experience.  
+ 
+These thoughts let us to the Zipper platform concept as presented in this whitepaper and                             
+provided the seed for additional use cases of the mobile experiences in these markets,                           
+such   as   easy   smart   contract   controlled   escrow   in   P2P   trade. 
+ 
+Moreover, during spring and summer 2017, we created a new kind of investment model to                             
+invest into ecosystem projects securely. We developed a milestone based investment                     
+model where projects receive funding in tranches according to pre-agreed milestones. For                       
+example, many ICO projects would be better and more safe investments if the funds would                             
+be   released   based   on   the   milestones   met.  
+ 
+These concept explorations and experiments are now coming together through combining                     
+our history in mobile OS development, experience in getting devices into the hands of our                             
+customers with the changed perspective on the future of apps and OS architecture that                           
+blockchain provides. A out of box experience for the possibilities that blockchain gives us                           
+that   everybody   can   be   empowered   by. 
+
+ 
+
+   
+
+19 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+5   Building   the   application   ecosystem 
+ 
+Building an ecosystem is both critical for the competitiveness of the Zipper platform and                           
+for the economy of the ZIP token. A large ecosystem can provide wide competitive set of                               
+services to its users. This is why Google’s Android is currently superior: It has so wide and                                 
+competitive ecosystem than it has become an entry barrier for the competitors to provide                           
+similar level of services. For the token economy, large ecosystem means wide distribution                         
+and   use   of   the   token.  
+ 
+Zipper   will   build   its   platform’s   application   ecosystem   in   three   ways: 
+ 
+
+1. Partnering   with   large   ongoing   blockchain   projects 
+ 
+
+2. Investing   into   ecosystem   projects 
+ 
+
+3. Rewarding   application   developers   with   ZIP   tokens 
+ 
+ 
+
+Partnering   with   large   ongoing   blockchain   projects 
+ 
+Zipper is looking to partner with several large ongoing blockchain projects which will                         
+provide the core services for Zipper platform users. Initially, Zipper plans to partner with                           
+projects   developing: 
+
+ 
+- Digital   identity 
+- File   sharing   &   storage 
+- Decentralized   app   store 
+- Search 
+- Data   monetization   and   sharing 
+- Computing 
+- Messaging 
+- Finance   &   insurance 
+
+ 
+By working together with the core blockchain projects, we believe we can build an easy to                               
+use,   integrated   service   ecosystem.  
+ 
+ 
+
+20 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Investing   into   ecosystem   projects 
+ 
+Zipper will use roughly one-third of the funds raised in its token sales to invest into projects                                 
+which we see critical for the Zipper ecosystem to prosper. The projects Zipper will be                             
+investing in will commit to use ZIP tokens in their solutions. This will further increase the                               
+demand for the ZIP token. So far, Zipper has identified the following projects to be invested                               
+in: 
+ 
+
+- Fiat   and   cryptocurrency   online   bank   solution 
+- P2P   insurance   service 
+- Mobile   financial   platform   for   the   unbanked 
+- Independent   AI   platform   for   mobile 
+- Blockchain   search   engine 
+- Employment   portal   for   the   developing   countries 
+- Digital   education   portal 
+- Secure   messaging   application   with   avatars 
+
+ 
+All of the projects have a working product and have more than three million active users in                                 
+total. With Zipper’s investment, these projects will be able to scale further and reward and                             
+grow their own user communities with ZIP tokens. We can provide more information about                           
+the   projects   upon   request.  
+ 
+Zipper makes the investments using safe milestone based investment model, where                     
+projects   will   get   funds   in   tranches   based   on   reaching   pre-agreed   milestones.  
+ 
+ 
+
+Rewarding   application   developers   with   ZIP   tokens 
+ 
+Zipper will fertilise young ecosystem projects by rewarding them with ZIP tokens                       
+applications developed to the ecosystem. For many nascent projects, early seed funding                       
+might be extremely difficult to get even if they have excellent ideas. At the same time, the                                 
+projects are at too early stage to make an ICO/token sale or receive VC funding. We have                                 
+reserved 20% of the ZIP tokens for incentivising these early stage projects to develop                           
+services to the Zipper ecosystem. Zipper community will have a say on which projects will                             
+be rewarded with ZIP tokens. Moreover, Zipper platform’s curation market mechanism will                       
+incentivise   developers   to   build   apps   to   the   platform   (more   on   that   in   later   chapters). 
+
+21 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+6   Getting   decentralized   world   to   the   hands 
+of   smartphone   users 
+ 
+ 
+Developing Zipper platform, funding and integrating core services into it, and building a                         
+strong developer community is the first part of Zipper project’s journey. The second part is                             
+to   get   the   Zipper   experience   to   the   hands   of   users   around   the   world. 
+ 
+Zipper’s   go-to-market   strategy   has   three   phases: 
+ 
+
+1. Commercialize 
+2. Scale   with   device   partners 
+3. Scale   with   downloadable   solution 
+
+ 
+ 
+
+  Commercialize  Scale   with   device 
+partners 
+
+Scale   with   downloadable 
+solution 
+
+Timeline  2018   -   2019  2019   -   2021  2021-2023 
+
+Target   customers  Cryptocurrency   users  Smartphone   users   in 
+emerging   markets 
+
+Smartphone   users 
+globally 
+
+Size   of   market  10-50   million   users  2   billion   users  4   billion   users 
+
+Target   number   of   Zipper 
+users 
+
+1-5   million   users  30   million   users  100+   million   users 
+
+Device   partnerships  Sony  5-6   partners  Most   devices   in   the 
+market 
+
+Supported   operating 
+system 
+
+Android 
+Sailfish   OS 
+
+Android 
+Sailfish   OS 
+
+Android 
+Sailfish   OS 
+
+ 
+Table   1 .    Three   phases   of   Zipper’s   go-to-market   strategy. 
+
+ 
+
+Phase   1:   Commercialize 
+ 
+At first stage, Zipper will target the growing market of cryptocurrency users by solving the                             
+key problem of the industry – cumbersome management of private keys. The current size                           
+of this market is approximately 10 million users, and with the current base of growth, it can                                 
+
+22 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+reach 50-100 million users in the next five years. The early adopter cryptocurrency user                           
+market   will   help   Zipper   to   commercialise   its   solution   and   to   scale   into   first   1-5   million   users. 
+ 
+ 
+
+Phase   2:   Scale   with   device   vendor   partners 
+ 
+Smartphone users in the emerging markets are faster to adapt new concepts than                         
+developed markets. Emerging markets are not matured yet, and people react sensitively                       
+even   to   small   rewards,   due   to   their   lower   income   level. 
+ 
+Zipper has multiple existing device vendor partnerships around the world in China, India,                         
+South-America and Africa. Zipper can bring its solution to market through these                       
+partnerships as a pre-installed solution in their devices. At this phase, regional approach is                           
+optimal, as Zipper still needs to build and prove its reward solution model to regional                             
+sponsors. 
+ 
+In total, these device vendor partners sell currently more than 30 million smartphones                         
+annually. Zipper could realistically target to be in 1/3 of these devices, and reach a base of                                 
+10   million   users. 
+ 
+ 
+
+Phase   3:   Scale   as   downloadable   solution 
+ 
+Once Zipper has established wide portfolio of sponsors globally as partners in its reward                           
+solution, Zipper solution can be downloaded globally to devices. The wide portfolio of                         
+sponsors will ensure the competitiveness of Zipper’s solution, and users will have an                         
+incentive to download the solution as they know that they will benefit from the reward                             
+solution. 
+ 
+At this stage, the Zipper application ecosystem has also become competitive with several                         
+blockchain based new and value adding apps, which will further drive the demand of the                             
+Zipper solution. The size of the downloadable software market can be significant. In China                           
+alone,   the   market   of   downloaded   Android   versions   is   around   100   million   annually.  
+
+   
+
+23 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+7   ZIP   token 
+ 
+ 
+Our objective for designing Zipper’s token economic model is to create a cryptocurrency                         
+based reward system for mobile operating system in many to many economy, where every                           
+user can earn rewards with their smartphones. We have used the following key design                           
+principles   for   the   reward   system: 
+ 
+
+1. It   improves   current   market   players   competitive   position 
+Zipper aims to bring more value to regional smartphone ecosystem players like device                         
+vendors, ecommerce players or application developers by rewarding users from using                     
+their   services. 
+ 
+
+2. It   enables   users   to   earn   with   their   smartphones 
+Zipper solution will enable users to earn with their activity in purchasing and inviting new                             
+users   to   the   sponsors/service   providers. 
+ 
+
+3. It   provides   an   easy   entry   also   for   non-cryptocurrency   users 
+The user does not have to be familiar with cryptocurrencies as ZIP token will be just a                                 
+reward token used in the solution. User will gradually learn the value of ZIP tokens as                               
+they   learn   what   they   can   do   with   it.  
+
+ 
+4. Its   scale   is   not   limited   by   blockchain’s   transaction   capacity 
+
+As a reward token, ZIP’s transaction speed is not critical. Users will receive ZIPs in                             
+batches,   and   are   not   time   sensitive   on   when   the   ZIP   batch   will   arrive.  
+
+ 
+5. Token   has   a   natural   demand   and   re-spend   model 
+
+The sponsors’ economic need to incentivise the users will create a natural demand for ZIP                             
+tokens. Users will have various ways to re-spend ZIP tokens, which will be introduced                           
+later   in   this   chapter. 
+
+ 
+ 
+
+ZIP   tokens   natural   demand   and   re-spending   model 
+ 
+The Utility value (U) of the Zip token is defined by the Dollar demand of the token (PQ)                                   
+divided   by   Supply   of   tokens   (S)   times   re-spend   (RS)   of   tokens.  
+ 
+
+U   =   (Dollar   demand   (PQ))   /   (Supply   of   tokens   (S)*   re-spend(S)) 
+
+24 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+ 
+The dollar demand of ZIP token (PQ) will derive from the service providers integrated into                             
+the operating system. We will call them sponsors. Sponsors can be ecommerce players,                         
+retail chains, travel companies, airline companies, big data providers, operators or other                       
+applications.  
+ 
+Sponsors will purchase ZIP tokens from the market and ZIP tokens will be used to reward                               
+the users from their activity. For example, activity can be a purchase of services or products                               
+from   sponsors,   new   customer   acquisition,   or   social   media   marketing.  
+ 
+Users   can   re-spend   their   ZIP   tokens   in   several   different   ways:  
+ 
+
+1. Participate   on   curation   market   by   betting   the   future   popularity   of   the   applications 
+2. Sponsor   new   application   developers   from   developing   new   interesting   apps 
+3. Buy   discounts   and   other   benefits   from   sponsors 
+4. Trade   and   lend   ZIP   token   among   themselves   or   in   the   cryptocurrency   markets 
+
+ 
+  
+
+ 
+ 
+
+ 
+Image   6 .    ZIP   token   flow. 
+
+ 
+ 
+ 
+ 
+ 
+
+25 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Curation   market 
+ 
+The purpose of the curation market is to incentivise development of applications for the                           
+Zipper   store   and   power   discovery   for   those   applications.  
+ 
+How   it   works: 
+ 
+
+1. Developer submits application to the Zipper store and to do this he needs to pay,                             
+for example, 1 ZIP. This could also be a dollar value-based price or a perpetually                             
+decreasing ZIP-priced cost. This fee goes into the ecosystem development pool                     
+(discussed   later). 
+
+ 
+2. Users can bet on the future popularity of the application by also staking ZIP, but the                               
+
+amount a user must stake to participate increases in perpetuity. E.g. User #1 needs                           
+to stake 2 ZIP, User #2 needs to stake 3 ZIP, etc. (Could also be exponential = #1-2                                   
+ZIP, #2-4 ZIP, etc). Developer can also bet on the future popularity of its own                             
+application by staking as the first user, which creates a viable method for generating                           
+revenue   even   from   applications   that   don't   have   an   in-built   business   model. 
+
+ 
+3. A user can at any time remove their stake and be rewarded if they were correct in                                 
+
+predicting popularity. Reward is calculated as follows: Total ZIP staked / amount of                         
+users   participating.  
+
+ 
+This means that users who are in the first 50% of predictors make money and users in the                                   
+last   50%   of   predictors   lose   money.  
+ 
+This   relatively   simple   mechanism   achieves   the   following   dynamics: 
+ 
+
+1. There is a financial incentive to create applications for the Zipper store (both with                           
+and   without   in-built   business   model) 
+
+2. There   is   a   financial   incentive   for   users   to   curate   the   app   store. 
+3. There is a small cost to adding an application to the app store to avoid spam and to                                   
+
+fund   further   ecosystem   development. 
+4. There   is   no   cost   to   using   the   app   store   as   a   regular   user. 
+5. There   is   no   clashing   incentive   with   in-app   business   models 
+6. Users participating in this prediction, will have a financial incentive to promote the                         
+
+applications   they   have   bet   on,   leading   to   free   marketing   for   applications. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+26 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Sponsor   app   developers 
+ 
+User can also use ZIP token for sponsoring his favourite app development project. The app                             
+development project can then further incentives their personnel and subcontractors with                     
+ZIP   tokens,   which   they   can   eventually   sell   to   the   market.  
+ 
+ 
+Buy   discounts   from   sponsors 
+ 
+Users can use ZIP tokens for purchasing additional discounts from sponsors for their                         
+purchases. For example, an ecommerce player will be able to give additional discount to                           
+the user against ZIP token, as they can use those ZIP tokens for rewarding other customers                               
+and   ZIP   has   actual   fiat   value   to   them.  
+ 
+ 
+Trade   or   lend   ZIP   tokens   to   other   users 
+ 
+The ZIP token becomes a regionally accepted reward token, as multiple regional service                         
+providers will take the reward system in use. The users will see clear value in the ZIP token,                                   
+similarly that users see clear value in airline loyalty points. This time the reward tokens are                               
+tradable, so users can sell the ZIP tokens to each other or borrow the token and earn                                 
+interest   from   them.  
+ 
+ 
+Summary   of   the   benefits   of   the   Zipper   token   economic   model  
+ 
+The   benefits   of   the   above   described   token   economic   model   are: 
+ 
+Supply (S): The limited supply will have positive impact on token economics. Supply is                           
+limited to fixed 1 billion ZIP tokens, and token are released to the market gradually during                               
+long   time   period.  
+ 
+Demand (D): Sponsors get clear benefits by rewarding the users only from the positive                           
+activity related to their services. The link between activity and reward is very clear. Positive                             
+impact from the reward model will increase the demand of the tokens, as the sponsors will                               
+be   see   the   clear   benefits   from   their   investment.  
+ 
+Re-spend (RS): There is incentive for the user to re-use the token in multiple alternatives                             
+areas,   which   all   benefit   the   user.  
+ 
+ 
+ 
+ 
+
+27 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Issuance   &   allocation 
+ 
+The total number of ZIP tokens is limited to 1 billion. ZIP Trust releases these ERC20 tokens                                 
+gradually over several years to Zipper ecosystem participants as rewards for supporting the                         
+growth   of   the   ecosystem. 
+ 
+Allocation   of   ZIP   tokens: 
+
+- 25%   token   sales 
+- 40%   ecosystem:   developers,   community   &   partners    (released   over   several   years) 
+- 20%   Team   &   advisors    (vested   and   gradually   released   over   two   years) 
+- 15%   Zipper   Global   Ltd    (vested   and   gradually   released   over   two   years) 
+
+ 
+ 
+
+ 
+ 
+
+Image   7 .    ZIP   token   allocation. 
+ 
+
+Governance 
+ 
+To successfully build an ecosystem, it is essential to reserve a large part of tokens to be                                 
+used for ecosystem development activities. On the other hand, the usage of such tokens                           
+need to be governed based on a clearly defined policy, without power struggles and                           
+personal interests having an opportunity to change the policy. A trust is an excellent legal                             
+instrument for this purpose. A trust is a recognised legal relationship which holds assets                           
+
+28 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+(such as tokens) and has clearly defined rules how those assets should be used. The                             
+strength of the trust as holder of reserve tokens is that the pre-defined usage of the tokens                                 
+can not be changed by anybody. The trust and a smart contract work together extremely                             
+well as a smart contract can execute the token allocations based on the trust rules as                               
+written   into   the   smart   contracts.  
+ 
+The ZIP Trust manages the issuance of ZIP tokens, according to predefined terms coded                           
+into the ZIP token issuance smart contract. The contract is based on OpenZeppelin                         
+standard tokens and will be audited and available for viewing before the Zipper platform is                             
+launched   and   ZIP   token   released.  
+ 
+Besides these predefined allocation terms, we are currently considering different options                     
+to utilize ZIP token in the governance of the Zipper project and seeking the ideal incentive                               
+model and coordination mechanism. For example, it would seem wise to design a                         
+governance system which incentivises the participants who are benefiting from the                     
+network   the   most   to   hold   tokens. 
+ 
+ 
+
+Token   supply   &   vesting   over   time 
+ 
+ZIP Trust’s smart contracts release ZIP tokens to designated uses and pools over several                           
+years’ time after the ZIP token launch. Current release plan is stated in table 3 and image 8.                                   
+Note that the release plan and schedule might change in the coming months as we develop                               
+the optimal supply and vesting plan together with our community and advisors, before the                           
+ZIP   token   is   released. 
+ 
+
+  Tokens   released   by   end   of   year,   cumulative 
+
+  0  1  2  3  4 
+
+Token   sales  250,000,000  250,000,000  250,000,000  250,000,000  250,000,000 
+
+Ecosystem:   developers, 
+community   &   partners 
+
+0  80,000,000  150,000,000  210,000,000  260,000,000 
+
+Team   &   advisors  0  100,000,000  200,000,000  200,000,000  200,000,000 
+
+Zipper   Global   Ltd  0  75,000,000  150,000,000  150,000,000  150,000,000 
+
+Total  250,000,000  505,000,000  750,000,000  810,000,000  860,000,000 
+
+ 
+Table   2 .    ZIP   token   supply   over   the   first   four   years. 
+
+29 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+ 
+ 
+
+ 
+ 
+
+Image   8 .    ZIP   token   supply   over   the   first   four   years. 
+ 
+
+Token   sales 
+ 
+The details of ZIP token sales such as availability, schedule, pricing, vesting and terms and                             
+conditions   will   be   announced   in   a   separate   token   sale   document. 
+ 
+ 
+
+Token   specification 
+ 
+ 
+ZIP token will be implemented as ERC20 token on Ethereum. A smart contract maintains                           
+token balances and ensure that payments are handled in a trustless and secure way. To                             
+further aid the transaction scalability of ZIP token, we have opted to keep the                           
+implementation of the token as simple as possible by essentially staying as close to pure                             
+token functionality (transfers, balances) as possible, to be able to leverage Ethereum                       
+community wide efforts in scalability of ERC20 tokens transfer. This will make it easier to                             
+conduct transfers of ZIP tokens using solutions such as Plasma or Raiden state channels                           
+and   keep   our   options   open   in   case   of   other,   better   technologies   emerging. 
+
+30 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+8   Team   &   advisors 
+ 
+The core Zipper team consists of founders and former executives of Finnish mobile                         
+company   Jolla. 
+ 
+
+ 
+
+Dr.   Antti   Saarnio ,   Founder   and   Executive   Chairman 
+ 
+Co-founder and Chairman of Jolla, developer of open mobile operating                   
+system Sailfish OS. 15+ years experience on emerging markets and                   
+investment management from KPMG, Accenture, East Partners. Dr.Tech.               
+in   Strategic   Investments. 
+ 
+
+ 
+
+Carsten   Munk ,   CTO   &   Co-founder 
+ 
+Founder of Mer mobile open source community project. Pioneering                 
+work on Linux/Android stacks for Nokia and later for Jolla as CTO.                       
+Team’s   leading   blockchain   expert.   M.Sc.   in   Computer   Science. 
+ 
+
+ 
+
+Pasi   Rusila ,   COO   &   Co-founder 
+ 
+Former head of products and business development at Jolla. Have built                     
+and launched several consumer products and partnerships with Fortune                 
+500   companies.   M.Sc.   in   Industrial   Management. 
+ 
+
+ 
+
+Antti   Enqvist ,   CLO 
+ 
+Former CLO and Legal Counsel of Jolla, Nokia, Symbian Foundation, and                     
+others. Masters legal and technical side of software business,                 
+experienced in corporate structuring. LL.M. in Law, M.Sc. in Information                   
+Technology. 
+ 
+
+ 
+
+Tom   Swindell ,   Software 
+ 
+10+ years extensive software work for mobile companies such as Nokia                     
+and Jolla. Expertise include Telephony, VoIP, middleware, hardware               
+Adaptations,   C,   C++,   and   Solidity/Ethereum. 
+
+31 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+ 
+
+ 
+
+Robert   Pallas ,   Software 
+ 
+Partner and lead developer at Devtailor. Experienced entrepreneur and                 
+software development team leader. M.Sc. in Cyber Security, 2012 thesis                   
+about   Bitcoin   Security. 
+ 
+
+ 
+
+Niilo   Ristmeri,   Marketing   &   Business   Development 
+ 
+Serial entrepreneur and expert in agile marketing. Formerly marketing                 
+and sales in Jolla and Embassy of Design. B.BA. in Marketing and                       
+Management   Consulting. 
+ 
+
+ 
+
+Marc   Dillon,   Community   Ambassador 
+ 
+Head of software at Zen Robotics. Previously Co-founder and COO of                     
+Jolla,   10+   years   in   various   software   positions   at   Nokia. 
+ 
+
+ 
+
+Teemu   Päivinen,   Advisor 
+ 
+Currently Spacegrade and Zeppelin Solutions, Founder & Chairman of                 
+Oddshot.tv. Entrepreneur and investor focused on blockchain and               
+governance. 
+ 
+
+ 
+
+Matthew   Graham,   Advisor 
+ 
+Founder and CEO at Sino Global Capital. Bridging technology with China                     
+investors and partners with years of investment management               
+experience. 
+ 
+
+ 
+Part-timers: In addition to the core team, Zipper project currently involves a handful of                           
+part-time members contributing to the project in the fields of software R&D, marketing and                           
+communications,   and   business   development. 
+ 
+Advisors: In addition to the current advisors, Zipper team is currently in discussions with                           
+several highly respected members of the society with a wide range of expertise. More                           
+advisors   will   be   revealed   in   due   course. 
+
+32 
+
+
+
+ 
+ 
+
+ZIPPER    -   Mobile   platform   bringing   blockchain   to   the   masses 
+  
+
+Additional   material 
+ 
+ 
+Zipper   blog 
+ 
+06/2017:   Startup   funding   can   be   disrupted   with   tokens 
+https://medium.com/zipperglobal/startup-funding-can-be-disrupted-with-tokens-62acbce99bd0 
+ 
+07/2017:   Is   frictionless   Ethereum   (and   dApp)   usage   possible? 
+https://medium.com/zipperglobal/is-frictionless-ethereum-dapp-usage-possible-a9cd5b01b835 
+ 
+08/2017:   Smart   contracts   could   hold   property   with   Instant   Blockchain   Token   Trusts 
+https://medium.com/zipperglobal/smart-contracts-could-hold-property-with-instant-blockchain-token-trusts-fe5
+7ab6e4b28 
+ 
+09/2017:   Belief   pools — no   public   offering   of   tokens   needed 
+https://medium.com/zipperglobal/belief-pools-no-public-offering-of-tokens-needed-8317354342f6 
+
+33 
+
+

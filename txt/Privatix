@@ -1,0 +1,4229 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MergedFile
+
+
+
+
+ 
+
+First Internet Broadband Marketplace 
+
+powered by P2P VPN Network on Blockchain 
+ 
+
+ 
+
+ 
+
+WHITE PAPER 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Authors 
+
+Dima Rusakov,  Andrei Tseitlin,  Dmitriy Rubtsov, Nikita Kuznetsov 
+
+ 
+
+ 
+
+March 2018 
+
+Release 5.0 - English 
+
+ 
+
+ 
+
+ 
+
+Abstract 
+
+ 
+
+This white paper presents the Privatix concept of a decentralized autonomous P2P VPN network              
+on blockchain with its own crypto-economy which will serve as the first bandwidth exchange              
+marketplace. Based on the blockchain technology, the network will contain thousands or even             
+millions of exit nodes around the world and will provide an innovative new way for developers                
+to build products that will potentially disrupt several markets, like the consumer VPN industry,              
+cyber protection, CDN, business intelligence and even software and mobile apps monetization.  
+
+ 
+
+ 
+
+
+
+ 
+
+Contents 
+1. Introduction 4 
+
+1.1 Major problems facing the internet 4 
+1.2 The current centralized solution 5 
+1.3 New opportunities 6 
+1.4 Our mission and goals 6 
+
+2. Token PRIX 7 
+2.1 Specifications 7 
+2.2 The crypto-economy 9 
+2.3 Examples of use 10 
+
+3. Token sale 12 
+3.1 Privatix Token (PRIX) final distribution details 12 
+
+4. Business model 12 
+4.1 Privatix Network 13 
+4.2 Proof of Concept (PoC) products 13 
+4.3 Long-term strategy 14 
+
+5. Technical specifications 15 
+
+5. 1 General 15 
+Privatix network users 15 
+Concept 15 
+
+5.2 Basic usage scenario 16 
+
+5.3 Prerequisites 16 
+
+5.4 Smart contract operations 16 
+State channel performance 17 
+Smart contract upgrade 18 
+Service supply 18 
+Sybil attack mitigation 18 
+
+Malicious Agent 18 
+Malicious Client 19 
+Reputation 20 
+Summary 20 
+
+5.5 Service offering flow description 20 
+Service discovery and setup overview 20 
+Service offering messaging description 21 
+Publish Service Offering 22 
+
+1 
+
+
+
+ 
+
+Prepare Service offering 22 
+Service offering template 23 
+Service Offering message 25 
+Service offering hash generation 25 
+Service offering signature generation 26 
+Service offering verification 26 
+
+Blockchain usage 26 
+Offering Messaging Channel usage 26 
+
+Discover service offering 27 
+Blockchain usage 27 
+Offering Messaging Channel usage 27 
+Choosing Service Offering 27 
+
+Check for available supply 28 
+Deposit and authentication message 28 
+
+Prepare authentication message 28 
+Authentication message template 28 
+Authentication message hash generation 29 
+Authentication message signature generation 30 
+
+Blockchain usage 30 
+Offering Messaging Channel usage 30 
+
+New subscriptions discovery and account setup 30 
+Blockchain usage 30 
+Offering Messaging Channel usage 30 
+Account setup 30 
+
+Service Endpoint discovery 32 
+Endpoint message template 32 
+Blockchain usage 33 
+Offering Messaging Channel usage 33 
+
+5.6 Service controller functional scheme 33 
+
+5.7 Service controller protocol  scheme 34 
+
+5.8 Glossary 35 
+
+6. Markets overview 39 
+6.1 Global VPN market 39 
+6.2 Cyber security and privacy protection 41 
+6.3 CDN 42 
+6.4  Business intelligence and data collecting (Proxy / Socks gateways) 45 
+6.5 Mobile apps and software monetization 48 
+
+2 
+
+
+
+ 
+
+7. Products and services – Proof of Concept 51 
+7.1 Privatix.Agent - cross-platform software for exit nodes owners 51 
+7.2 Consumer VPN based on DPI-free VPN protocol 53 
+7.3 Privatix.BOX - portable VPN router 55 
+7.4 Advanced Proxy / Socks selling API platform 56 
+7.5 Infrastructure for VPN providers 57 
+7.6 Decentralized CDN on blockchain 58 
+7.7 Privatix.FAAS - anti-censorship solution for developers 59 
+7.8 Privatix.Monetize - mobile apps and software monetization platform 59 
+
+8. The Privatix team 60 
+8.1 Our last projects track record 60 
+8.3 Our “Unfair Advantage” 61 
+
+9.  Roadmap 62 
+9.1 First steps after Token Sale 62 
+
+9.1.1 First month priorities 62 
+9.1.2 Legal, HR and administrative issues 62 
+
+9.2 Q4 / 2017 - Q2 / 2018 : Privatix Network Core Development 63 
+9.2.1 Privatix Network - Alpha 63 
+9.2.2 Privatix.Agent - cross-platform software for exit nodes owners 63 
+
+9.3 Q3 - Q4 / 2018 : Proof of Concept (PoC) products and Network 63 
+9.3.1 Consumer VPN, based on DPI-free VPN protocol 64 
+9.3.2  Advanced Proxy / Socks selling API platform 64 
+9.3.3 Privatix Network - Beta release 64 
+
+9.4 Q1 - Q2 / 2019 : Additional Proof of Concept (PoC) products and Network 64 
+9.4.1 Privatix Network - Final release 65 
+9.4.2 Privatix.FAAS (SDK) 65 
+9.4.3 Privatix.Monetize (SDK) 65 
+
+9.5 Q3 - Q4 / 2019 : Proof of Concept (PoC) products and Network 65 
+9.5.1 Privatix.BOX (Hardware) 66 
+9.5.2 Infrastructure for VPN providers 66 
+
+10. Additional information 66 
+10.1 Legal protection framework for exit nodes owners 66 
+10.2 Solution for mass adoption problem 67 
+10.3 Commitment to open source community 68 
+10.4 Legal disclaimers 68 
+10.5 RISK FACTORS 69 
+
+ 
+
+3 
+
+
+
+ 
+
+1. Introduction 
+ 
+
+Privatix is an established and profitable company that was founded by a group of experienced IT                
+
+entrepreneurs and talented developers who are passionate about the freedom of the internet,             
+
+online security, and the rights of individuals and businesses to privacy protection. 
+
+ 
+
+Our team - which has more than 10 years’ cyber security experience - are the developers of an                  
+
+incredibly easy-to-use, free VPN service - at ​Privatix.com - that can be used by anyone               
+
+anywhere, regardless of their level of technical experience. Since 2015, more than 1,250,000             
+
+users have used this service.  
+
+ 
+
+Privatix is also the team behind ​Temp-Mail.org​. It has more than 200,000 daily visitors and               
+
+filters out more than 10 million spam emails a day. 
+
+ 
+
+Privatix has developed the advanced internet identity checking website Ipleak.com, and many            
+
+other privacy-related services.  
+
+ 
+
+Now we have created a concept of a decentralized, fully autonomous network on blockchain.              
+
+The Privatix Network is designed to have its own advanced crypto-economy and allow the users               
+
+to rent out their broadband. We believe it has the potential to end the current era of internet                  
+
+censorship and totally change the current VPN market, among others (e.g. cyber security).  
+
+ 
+
+1.1 Major problems facing the internet 
+
+ 
+
+The incredible worldwide growth of internet users is astounding. In 2016 we had 3.4 billion               
+
+users, representing 46% of the world’s population. By 2020, it is predicted that we will see 5                 
+
+billion users online.  
+
+ 
+
+4 
+
+https://privatix.com/
+https://temp-mail.org/
+
+
+ 
+
+But, as the number of users online grows, so does the level of internet censorship. In the future,                  
+
+most new users will likely come from countries with increasingly strict internet censorship laws;              
+
+because these users often have poor internet mobile connections, they are the most vulnerable to               
+
+these sometimes draconian and arbitrary laws. It is these users who are seeking effective              
+
+solutions to internet restrictions. 
+
+ 
+
+Today, one of the major problems with the internet is the denial of the network neutrality                
+
+paradigm, that suggests an equal opportunity for everyone to access the world wide web.  
+
+ 
+
+This denial will lead to the collapse of the internet as we have known it over the last 25 years.                    
+
+Users are not just being watched by overzealous governments and cybercriminals, their data is              
+
+collected by ISPs and their basic privacy rights are routinely violated. This is happening not just                
+
+in countries like China or Iran, but in Australia, Germany, and even the U.S.  
+
+ 
+
+The second problem is the cybersecurity issue. According to Cybersecurity Ventures report, we             
+
+have more than $3B in losses from cybersecurity incidents online in 2015 and it is expected to                 
+
+grow to $6B in 2021. The complexity of technical solutions today means that robust encryption               
+
+algorithms aren’t always accessible to ordinary people to effectively protect their data and ensure              
+
+cybersecurity easily and affordably.  
+
+ 
+
+The third problem is speed. While the internet is global, network quality is not equal in all                 
+
+countries. Content is getting heavier all the time, e.g. full HD videos, streaming movies, etc.  
+
+ 
+
+1.2 The current centralized solution 
+
+ 
+
+Solutions for the internet censorship problem are currently available on the market. However,             
+
+they come with a high price tag and are still vulnerable to ISPs control. It’s not a secret that the                    
+
+VPN industry is growing fast, not least of all because of the lure of the industry’s huge profit                  
+
+margins. As an insider, Privatix is aware of some of the major problems in the centralized VPN                 
+
+5 
+
+
+
+ 
+
+arena, including false statements about log-keeping policies, data selling, overcharging, unclear           
+
+billing policies, and the incredible margins that are siphoned off into marketing, advertising, etc.  
+
+ 
+
+In fact, the VPN industry doesn’t protect users’ privacy and data while the users pay a high price                  
+
+for VPN services only because there are no better options on the market. 
+
+ 
+
+1.3 New opportunities 
+
+ 
+
+With its huge potential to be one of the most powerful forces in the internet technologies sphere,                 
+
+blockchain will enable us to turn current internet privacy and security practices on its head,               
+
+simultaneously speeding up the internet (without any physical scaling.)  
+
+ 
+
+Privatix Network is a conceptual new solution that will benefit ordinary internet users,             
+
+developers, and online businesses. We intend to reduce costs and margins on the VPN consumer               
+
+market, eliminate the middleman and enable people to share (and profit from sharing) their spare               
+
+broadband connection. We will provide a new horizon for developers to build awesome apps and               
+
+services on the basis of this network, e.g. CDN, business intelligence proxy tools, anti-censorship              
+
+SDKs for apps, etc. The wealth of potential applications is only limited by imagination.  
+
+ 
+
+1.4 Our mission and goals 
+
+ 
+
+Our mission is ​to create a decentralized and fully autonomous P2P VPN Network on blockchain               
+
+with advanced Internet bandwidth marketplace powered by its own crypto-economy.  
+
+ 
+
+Our goal is to show a possibility to create new kinds of products and services based on the                  
+
+Network capabilities which have the potential to transform a number of markets like VPN, CDN,               
+
+cyber security and encryption or may even change the landscape of application monetization             
+
+market.  
+
+ 
+
+6 
+
+
+
+ 
+
+2. Token PRIX 
+ 
+
+The Privatix Network ecosystem will be based on crypto-economic principles. PRIX will be the              
+
+only crypto-currency allowed for mutual settlements during the buying / selling interactions            
+
+between network participants.  
+
+ 
+
+2.1 Specifications 
+
+ 
+
+PRIX​, an ​ERC20 token on the Ethereum Blockchain, is the central part of the Privatix Network.                
+
+It’s main purpose is to allow network participants to exchange value.  
+
+ 
+ 
+
+Token name Privatix Token 
+
+Ticker PRIX 
+
+Type ERC20 ( Ethereum ) 
+
+Address 0x3adfc4999f77d04c8341bac5f3a76f58dff5b37a 
+
+Decimals  8 
+
+Total supply (after burning) 1,275,455 PRIX (fixed, no dilution) 
+
+Mining No mining or any other means of increasing token amounts will 
+apply to Privatix Token  
+
+Token utility Internal crypto-currency to exchange value (utility) between 
+Privatix Network participants 
+
+Token issuer Privatix Token Ltd (a Gibraltar limited company)  
+
+Token special conditions Token exchanges for purpose of buying / selling internet         
+broadband (between Privatix Network participants only) will be        
+subject to commission fee - up to 1% of transaction price in            
+PRIX. No fees for any other transactions and exchanges except          
+payments for bandwidth.  
+
+ 
+ 
+
+7 
+
+https://etherscan.io/token/0x3adfc4999f77d04c8341bac5f3a76f58dff5b37a
+
+
+ 
+
+2.2 The crypto-economy 
+
+ 
+
+The main economic agents inside the crypto-economy of the Privatix Network are: 
+
+● Users who want to sell their internet bandwidth (Agents) 
+
+● Users who want to buy internet bandwidth from Agents (Clients) 
+
+ 
+
+ 
+
+ 
+
+PRIX will be the only crypto-currency allowed for mutual settlements. At the same time, the               
+
+PRIX token itself is expected to be traded on external exchanges. Assuming there is sufficient               
+
+market volume, PRIX shall be be freely exchangeable for other cryptocurrencies in both             
+
+directions and anytime, subject to applicable regulations and/or restrictions in the various            
+
+jurisdictions.  
+
+ 
+
+PRIX is not intended to be a digital currency, security, commodity, bond, debt instrument or any                
+
+kind of financial instrument or investment carrying equivalent rights, nor are the PRIX tokens              
+
+intended to represent any form of money or legal tender in any jurisdiction, nor any               
+
+8 
+
+
+
+ 
+
+representation of money (including electronic money). Accordingly, any protections offered by           
+
+applicable law in relation to the purchase, holding and/or sale of the instruments and/or              
+
+investments referred to above and generally known as “securities”, should not apply to your              
+
+holding or sale of PRIX tokens. PRIX tokens are intended to be digital goods, similar to                
+
+downloadable software, digital music, and etc.  
+
+ 
+
+In basic economic terms, on the demand side there are Clients and on the supply side there are                  
+
+Agents. Clients want to buy broadband from Agents, and Agents, accordingly, want to sell it. So,                
+
+at the market equilibrium point, the price of internet broadband will be represented in PRIX               
+
+tokens (for example, 1 MB = 0.001 PRIX).  
+
+ 
+
+In the event of an excessive demand for Agents' broadband, the PRIX token is going to increase                 
+
+in price, thereby likely to attract more Agents to the network (as they will see they can sell their                   
+
+broadband for a higher price) and vice versa. 
+
+ 
+
+Demand and supply will be self-regulated effectively by market forces; attracted in the case of               
+
+high traffic costs by Agents craving profit, and in the case of low traffic cost by Clients wishing                  
+
+to buy broadband as cheaply as possible. 
+
+ 
+
+2.3 Examples of use  
+
+ 
+
+Here are two very simple examples which demonstrate PRIX tokens payments inside the Privatix              
+
+Network ecosystem. 
+
+ 
+
+Example 1 
+
+● Hans, a regular internet user from Germany, has a 100 Mbps channel and he does not use                 
+
+it completely, especially at night. 
+
+● He has already paid his ISP so no additional costs are required. 
+
+● Hans installs the Privatix Network software and thereby becomes an Agent. 
+
+9 
+
+
+
+ 
+
+● On the other side of the world is a Chinese internet user, Lee. 
+
+● Lee does not have access to many internet sites because internet censorship in China is               
+
+very strict. 
+
+● Lee installs a VPN program based on the Privatix Network and through it buys              
+
+broadband from Hans. Now he can surf the internet via the encrypted German VPN and               
+
+get access to all internet sites. 
+
+● Hans receives payment in PRIX as Lee uses  his free bandwidth. 
+
+ 
+
+ 
+
+Example 2 
+
+● Alex has an internet hosting business. He rents 10 dedicated servers and sells hosting              
+
+services for his customers, e.g. site owners. 
+
+● All servers are already paid for but their bandwidth is significantly underused. 
+
+● Alex installs the Privatix Network Agent software on all his servers and starts selling his               
+
+bandwidth.  
+
+● Another user, Ivan, the owner of a video site, has to rent expensive servers so that people                 
+
+can watch HD video content from around the world. 
+
+● Ivan, in order to save on data transfer, uses a product based on the Privatix Network - a                  
+
+CDN - which allows him to buy cheap broadband from hundreds of Agents like Alex. 
+
+● As a result, Alex fully loads his servers and receives profit while Ivan cuts content               
+
+delivery costs. 
+
+ 
+
+  
+
+10 
+
+
+
+ 
+
+3. Token sale  
+The Privatix Token Sale opened on 19 October 2017 and ended at 16 November 2017. During                
+
+those 30 days we collected: 5,775 ETH (7,183 ETH in total with 1,408 ETH of Pre-sale).  
+
+ 
+
+3.1 Privatix Token (PRIX) final distribution details 
+
+ 
+
+100% Total supply: 1,275,455 
+
+83% Token Sale and Pre-sale: 1,058,627 
+
+7% Founders (locked for 12m): 89,281 
+
+7% Future and current team: 89,281 
+
+3% Advisors, bounty, and cost covering: 38,263 
+
+Total circulation supply: 1,058,627 (7% of locked 12m tokens excluded) 
+
+Total contributors: 1,435 
+
+ 
+
+All unsold tokens were burned, and no future tokens can be issued. 
+
+The exact total supply is 1,275,455.31177803 PRIX 
+
+Token address: 0x3adfc4999f77d04c8341bac5f3a76f58dff5b37a 
+
+ 
+
+ 
+
+4. Business model  
+ 
+
+The main assets in the Privatix Network are “exit nodes owners” (Agents). These Agents host on                
+
+their internet-connected devices special lightweight software which enables them to sell their            
+
+internet bandwidth.  
+
+  
+
+Most internet-connected users have a lot of spare bandwidth that already has been paid for to an                 
+
+ISP but mostly remain unused.  
+
+11 
+
+
+
+ 
+
+ 
+
+Privatix will enable the sale of this unused asset (bandwidth) to other network participants and               
+
+strives to create meaningful value for Agents with no additional costs or any initial investment               
+
+from their side (installing the free software is quick and easy).  
+
+ 
+
+All financial relationships between Agents and Clients will be in PRIX crypto-currency only.             
+
+Every token exchange linked to payment for internet broadband will be subject to a fee that will                 
+
+be accumulated by Privatix for maintenance and future development. The fee will be in the range                
+
+up to 1% of the transaction amount. All operations except payments for internet bandwidth, like               
+
+token trades on exchanges, will be free from any fees.  
+
+ 
+
+4.1 Privatix Network 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+4.2 Proof of Concept (PoC) products  
+
+12 
+
+
+
+ 
+
+ 
+
+Our mission is to create a decentralized and fully autonomous network on blockchain - the               
+
+Privatix Network – but, hand in hand with this, one of our primary goals is to show how people                   
+
+can make the best use of this network and benefit from it in many different ways, including                 
+
+financially.  
+
+ 
+
+For this reason, we ourselves will create a number of revolutionary PoC products, based on the                
+
+Privatix Network, in order to demonstrate to entrepreneurs and developers how they can use this               
+
+new platform in a number of innovative ways. Privatix, as platform pioneer, also has the               
+
+potential to derive significant profits from these products by transforming several popular VPN             
+
+and other markets (e.g. cyber security).  
+
+ 
+
+The first product we will focus on will be a decentralized unblockable VPN on blockchain that                
+
+we believe will address the challenges facing cybersecurity and internet censorship in the digital              
+
+sphere forever. We expect to totally change the consumer VPN market, enabling people to use               
+
+VPN for free by sharing their own network, or pay less than $5-10 per year (10-20 times less                  
+
+than current centralized VPN prices).  
+
+ 
+
+4.3 Long-term strategy  
+
+ 
+
+We define the long-term strategy as a plan for the next three years. In the current real-world                 
+
+situation of internet disruption and blockchain technologies development, it is a challenge to             
+
+create a fully detailed plan, but by sticking to our mission and goals, and relying on our extensive                  
+
+experience, we are completely confident that we will find the right way in any situation. 
+
+ 
+
+Facilitation of a Privatix Network platform, provision of network supply in the form of Agents,               
+
+as well as the creation of demand in the form of Clients are our main objectives for the                  
+
+immediate future. 
+
+ 
+
+13 
+
+
+
+ 
+
+The challenge we face will be to facilitate a balanced marketplace: we will address this by                
+
+providing adequate compensation to Agents and at the same time create demand by customers.              
+
+Initially, we will take on the roles of customers and PoC products’ owners. We will use our                 
+
+funds to promote the network and ensure its growth and maintain the optimum balance between               
+
+supply and demand. 
+
+ 
+
+At this time we predict the network will include tens of thousands or even millions of Agents. By                  
+
+developing a variety of products based on its foundations, the network will start taking on a life                 
+
+of its own. Privatix will benefit only from the network token exchanges fee and will develop the                 
+
+infrastructure of the network and products. 
+
+ 
+
+5. Technical specifications 
+ 
+
+Specify high-level solution description for Privatix.io services. This document describe high           
+
+level architectural and process overview of Privatix.io service. 
+
+5. 1 General 
+Privatix.io attempts to deliver multiple services that can be used through Privatix network. First              
+
+of them is decentralized VPN service on Ethereum blockchain. This paper will focus on VPN               
+
+service. Before we will dig in to details, of how Privatix services will operate, we need to                 
+
+mention some basic concepts.  
+
+Privatix network users 
+
+Clients - those who consume and pay for services. 
+
+Agents - those who provide services and receive payment. 
+
+Concept 
+
+14 
+
+http://privatix.io/
+
+
+ 
+
+The idea that stands behind this project is to create process that will achieve consensus among                
+
+Privatix network users and develop software products that will allow users to provide and              
+
+consume services on this network. Another important aspect that those processes should be             
+
+decentralized as much as possible, to remove single point of failure both technically and              
+
+politically. Last major goal is to protect privacy of users. 
+
+5.2 Basic usage scenario 
+To allow Privatix network users to provide and consume services they need to: 
+
+● Create service offering 
+
+● Find service offering, compare and accept it 
+
+● Be sure that they can pay and get paid 
+
+● Negotiate on authentication and find service endpoint 
+
+● Provide and consume service 
+
+● Pay and get paid in small portions 
+
+Below we will describe each process, including some technical description.  
+
+5.3 Prerequisites 
+We assume that each network user has: 
+
+1. Internet access 
+
+2. PRIX tokens with corresponding private keys  
+
+3. Agent - have installed Privatix Agent software 
+
+4. Client - have installed Privatix Client software 
+
+5.4 Smart contract operations 
+Ethereum smart contracts playing fundamental role in Privatix DApp architecture. Currently           
+
+deployed smart contract that holds all PRIX tokens called Privatix Token Contact (hereinafter             
+
+PTC) and compliant with ERC20 standard.  
+
+15 
+
+
+
+ 
+
+PTC will be used for: 
+
+● Token exchange 
+
+● Upgrade to new service contract 
+
+To provide additional logic and features, as well as support future upgrades, Privatix will deploy               
+
+additional smart contract named Privatix Service Contract (hereinafter PSC). PSC contract           
+
+implements state channels features, service offering discovery, helps to negotiate on service            
+
+setup, incentivize fair usage and controls supply visibility. Token exchange between Ethereum            
+
+accounts is done using standard ERC20 transfer mechanism. PTC balances will be used to buy               
+
+and sell PRIX only, rather than pay for services. To use Privatix services PRIX tokens will be                 
+
+approved for transfer to PSC contract address effectively delegating all operations to PSC             
+
+contract.  
+
+PSC will be used for: 
+
+● Local balance storage 
+
+● Agent SO registration and deposit placement 
+
+● Agent SO deactivation and deposit return 
+
+● Retrieving available supply for SO 
+
+● Pop up SO 
+
+● Creating state channel 
+
+● Cooperative close of channel 
+
+● Uncooperative close of channel 
+
+● Top up deposit of state channel 
+
+State channel performance 
+
+To save Ethereum gas and decrease time, which is required to setup state channel, PSC will                
+
+maintain its own balance mapping. This mapping will hold mapping of PRIX to user's balances               
+
+until user will decide to move PRIX balance back to PTC. For that purpose, PSC will have                 
+
+mechanism to return back tokens from PSC to user's Ethereum address in PTC. Making PSC               
+
+operations rely on internal balances greatly improves security by preventing external contracts to             
+
+execute arbitrary code thus mitigating reentrancy attacks. 
+
+16 
+
+
+
+ 
+
+Smart contract upgrade 
+
+To support future upgrade of PSC logic and features, while giving users ability to control and                
+
+audit such changes, following upgrade path is planned. Privatix Company may publish new             
+
+version of PSC (e.g. version 2.0) in future. Users would verify smart contract code and if agreed,                 
+
+that it is safe to use, will firstly transfer their PRIX tokens from PSC v1.0 back to PTC and only                    
+
+then to PSC v2.0. Such approach leaves no backdoors even for Privatix employees and gives               
+
+anybody ability to review new smart contract code before they switch to it. Privatix company               
+
+may implement PSC.upgrade() function, which can be executed only by Privatix company. This             
+
+function will prevent incoming transactions from PTC to PSC, but will still allow transfer of               
+
+balances back to PTC. This method can be used as notification of smart contract upgrade to users                 
+
+UI, as well as pushes users to perform upgrade. 
+
+Service supply 
+
+Service supply is maximum number of concurrent Clients that Agent can serve with same SO               
+
+parameters. When Agent registers his offering in PSC, he will specify service supply. Publishing              
+
+service supply will allow Clients to find out, if Agent still has available supply to serve the Client                  
+
+according to published SO. Before state channel is created, PSC will check, if available supply               
+
+still exists and keep demand and supply balanced. After state channel was created PSC will emit                
+
+event with actual service supply, making possible for all users to filter out offerings with zero                
+
+supply. If state channel is closed, service supply will be increased and users notified. 
+
+Sybil attack mitigation 
+
+Sybil attacks mitigation in decentralized networks, where at least some degree of anonymity             
+
+expected is not obvious. We are not informed on any bulletproof technology to mitigate Sybil               
+
+attack completely and without introducing some entrance threshold. Most used techniques today            
+
+are proof of work, proof of stake, one-time fee, IPv4 address binding. 
+
+Malicious Agent 
+
+17 
+
+
+
+ 
+
+To maintain network health and incentivize fair usage, we will require Agents to register their               
+
+service offering in Ethereum blockchain and place deposit. This deposit can be returned back              
+
+after some challenge period is passed from last operation with this SO. This step should protect                
+
+Privatix network from easily being overwhelmed with junk SO and make Sybil attack less              
+
+efficient. Agent Deposit should be proportional to service supply. If malicious Agent will place              
+
+useless SO, that he never goes to fulfill, he will be required to place exactly same deposit as                  
+
+Client will place to accept this offer. On the other hand as time passes from service offering                 
+
+registration, Clients will more likely to consider that this SO is irrelevant and will not accept this                 
+
+offer. Agent will need to notify Clients from time to time that his offer is still alive by popping                   
+
+up it. When Agent pop-ups his SO, deposit will be locked once more for the same challenge                 
+
+period. As pop-up operation makes it cheaper for Agent to spoil service offerings, Clients will               
+
+make additional consideration before accepting such offer. Long running SO can be easily rated              
+
+by comparing number of cooperative channel closes with uncooperative. If Client created state             
+
+channel, but did not receive any service he will be forced to make uncooperative channel close.                
+
+In that case, blockchain event will be emitted where Agent address is listed. If Client will see                 
+
+that there is too many uncooperative closes compared to cooperative once, he will not create new                
+
+state channel with this agent. This will require malicious Agent to create new Agent address,               
+
+transfer tokens and register new service offering. Such malicious operation is expensive and not              
+
+effective.  
+
+If Agent will try to act both as Agent and Client to increase number of cooperative closes, it will                   
+
+cost him additional transaction fees. Moreover, each time he will act as Client he will reduce                
+
+available supply for his service offering. In this case, he need to occupy at least half of maximum                  
+
+supply to make number of cooperative closes equal to number of uncooperative closes. This              
+
+force him to place x 1.5 deposit than locked by normal Clients and still his reputation is far from                   
+
+being perfect. 
+
+We can summarize that Sybil attack by Agent is limited with Agent token balance, by challenge                
+
+period and burns Ether with transaction cost. 
+
+Malicious Client 
+
+18 
+
+
+
+ 
+
+To harm Agent's reputation malicious Client can create state channel and will not send balance               
+
+proofs to Agent. When creating channel, Client is required to place deposit, which is locked for                
+
+challenge period. To return deposit back to his balance he need to close the channel. Both                
+
+operations burns Ether with transaction cost. Agent can also check blockchain event for             
+
+uncooperative closes of channel made Client and rate him accordingly. This limits effectiveness             
+
+of attack. 
+
+Reputation 
+
+Both Client and Agent communication results in cooperative or uncooperative channel close.            
+
+Each time blockchain event is generated which includes address of Client and Agent,             
+
+participating in channel transaction. These events can be used to make decisions about user              
+
+reputation. User can not only count number of cooperative vs uncooperative closes for another              
+
+user, but also go deeper and build reputation based on transactions of observed user's partners.               
+
+For example, if Agent want to decide on Client's reputation he can see that this Client had good                  
+
+transactions with other Agents and then check those Agent's transactions and see their             
+
+transactions, etc.  
+
+Summary 
+
+Even these measures still does not prevent 100% of Sybil attacks; it definitely limits probability               
+
+and effectiveness of them both for Clients and Agents. 
+
+5.5 Service offering flow description 
+Before Client and Agent can use Privatix services, they need to by PRIX tokens and transfer                
+
+them to PSC (Privatix Service Contract). 
+
+Service discovery and setup overview 
+
+Before service can be used, Client should: 
+
+● discover service offering 
+
+● agree 
+
+● put deposit 
+
+19 
+
+
+
+ 
+
+● specify authentication secret (password) 
+
+● get service connection endpoint 
+
+This mechanism is implemented via some sort of messaging between Client and Agent. Medium              
+
+for such communication includes blockchain and offering messaging channel. Offering          
+
+messaging channel is currently implemented as web-service, which allows Clients and Agents to             
+
+publish and retrieve data. Privatix Company will attempt to make a fully decentralized solution              
+
+by removing this single centralized component. 
+
+Service offering messaging description 
+
+Service offering messaging diagram shows sequence of communication between Client and           
+
+Agent through Offering Messaging Channel and Blockchain. This process allows publishing and            
+
+discovering service offering details, securely setup password and securely providing endpoint           
+
+address.  
+
+Operations with blockchain cannot be perfectly sequenced and require multiple checks to ensure             
+
+that state is stored in blockchain with desired degree of probability, which increases             
+
+exponentially with number of mined blocks.  
+
+20 
+
+
+
+ 
+
+Publish Service Offering 
+
+Prepare Service offering 
+
+21 
+
+
+
+ 
+
+Each Agent node may be located in different geographical location, has different internet             
+
+bandwidth and has different cost for internet access. For these and others reasons service              
+
+parameters, TCO and as a result, price may be different on the market. We want to give a                  
+
+freedom for each Agent to decide on his pricing and service policy. On the other hand, we want                  
+
+each Client to be able to understand these offerings and be able to compare among them. To                 
+
+achieve this we will define template for service offering, which will include essential service              
+
+parameters. Along with service and billing parameters, service offering (hereinafter SO) contains            
+
+additional fields, which allows to verify integrity of SO, as well as belonging of SO to specific                 
+
+Agent, holding particular private key. Before publishing, SO Agent cryptographically signs and            
+
+then encrypts it with his own private key.  
+
+One of essential SO fields is Agent's public key. It is used to uniquely identify Agent, encrypt                 
+
+messages to Agent and used by Client to send payments to this Agent. Client must always verify                 
+
+that SO belongs to specific Agent by checking SO signature. SO signature verification ensures              
+
+that no fields in SO were altered, including Ethereum address that is used to receive payments                
+
+for the service being consumed. Service offering template may change in future to support              
+
+different services and additional fields. Each template will contain version field that is unique for               
+
+each service. Below you can find service offering template fields for VPN service with their               
+
+descriptions. 
+
+Service offering template 
+
+Field name Field 
+type 
+
+Field 
+length 
+
+Description Allow 
+null 
+
+Example 
+
+template_version   Version of template  1 
+
+agent_public_key   Agent's public key  04a34b99f22c790c4e36b2b3c2c35a36db0  
+6226e41c692fc82b8b56ac1c540c5bd5b8d  
+ec5235a0fa8722476c7709c02559e3aa73a  
+a03918ba2d492eea75abea235 
+
+service_name   Name of service 
+(e.g. VPN) 
+
+ VPN 
+
+country   Country of service 
+endpoint in ISO 
+3166-1 alpha-2 
+format. 
+
+ US 
+
+22 
+
+
+
+ 
+
+service_supply   Maximum supply 
+of services 
+according to 
+service offerings. It 
+represents 
+maximum number 
+of clients that can 
+consume this 
+service offering 
+concurrently. 
+
+ 5 
+
+service_unit   MB/Minutes  MB 
+
+unit_price   PRIX that must be 
+paid for 
+unit_of_service 
+
+ 0.0000002 
+
+min_units   Used to calculate 
+minimum deposit 
+required 
+
+ 100 
+
+max_units   Used to specify 
+maximum units of 
+service that will be 
+supplied. Can be 
+empty. 
+
+Yes 10000 
+
+billing_interval   Specified in 
+unit_of_service. 
+Represent, how 
+often Client MUST 
+provide payment 
+approval to Agent. 
+
+ 50 
+
+billing_interval_time
+_deviation 
+
+  Time in seconds 
+that Agent will 
+wait for payment 
+approval after each 
+billing interval, 
+before Agent will 
+consider payment 
+approval was not 
+received. 
+
+ 10 
+
+free_intervals   Used to give free 
+trial, by specifying 
+how many intervals 
+can be consumed 
+without payment 
+
+ 2 
+
+23 
+
+
+
+ 
+
+min_download_mbps   Minimum expected 
+download speed 
+(Mbps).Can be 
+empty. 
+
+Yes 0.2 
+
+min_upload_mbps   Minimum expected 
+upload speed 
+(Mbps). Can be 
+empty. 
+
+Yes 0.5 
+
+protocol   Protocol: TCP or 
+UDP 
+
+  
+
+uuid   Random number to 
+allow generation of 
+identical SO with 
+different hash. 
+Possibly UUID4 
+generated 
+according to 
+RFC4122. 
+
+ ea864be6-db42-43e2-bffa-aa44ace573f0 
+
+signature   Cryptographic 
+signature of SO 
+generated using 
+Agent's private 
+key. 
+
+ 1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN  
+GyjfvdCnYYNVCE0plqKKrnNXkaQrbbPnD  
+e2r59jZJSWlicL6YMi/zaH6VhykqBpQWAk  
+pHA+4fxyuiAcSzZAUK9A= 
+
+ 
+
+Order of fields in SO template is significant. Will conform to JSON schema format              
+
+(​http://json-schema.org​). Service offering signature is generated using Ethereum typed data          
+
+signing (according to ​https://github.com/ethereum/EIPs/pull/712​). This signing method includes        
+
+service offering template fields names and types as part of signature, thus strictly binding              
+
+template format with its data. This seems a good practice, especially for integration with UI of                
+
+wallets.  
+
+Service Offering message 
+
+Keccak-256 hash of SO message (aka offering hash) is used to uniquely identify service offering. 
+
+Service offering hash generation 
+
+1. Transform SO template (fields, types and data) to string compliant with Ethereum            
+
+EIP712 
+
+24 
+
+http://json-schema.org/
+https://github.com/ethereum/EIPs/pull/712
+
+
+ 
+
+2. Sign (1) 
+
+3. Generate keccak-256 hash of (2) 
+
+Service offering signature generation 
+
+1. Transform SO template (fields, types and data) to string compliant with Ethereum            
+
+EIP712 
+
+2. Generate keccak-256 hash of string 
+
+3. Sign hash with private key 
+
+Service offering verification 
+
+1. Transform SO template (fields, types and data) to string compliant with Ethereum            
+
+EIP712 
+
+2. Generate keccak-256 hash from string 
+
+3. Use ECVerify.ecverify(_so_hash, _so_signature) to retrieve Agent's Ethereum address 
+
+4. Get Agent's Ethereum address from Agent's public key, published in SO 
+
+5. Compare retrieved Ethereum address in (3) with address in (4) 
+
+Blockchain usage 
+
+After Agent has prepared Service Offering, Hash of SO is published in blockchain using function 
+
+PSC.registerServiceOffering (bytes32 _offering_hash,uint256 _min_deposit,uint16    
+
+_max_supply) Along with SO hash, minimum deposit and maximum supply is specified ( see              
+
+Smart contract operations). Agent will check that SO has successfully stored in blockchain state              
+
+by checking corresponding event 
+
+PSC.LogServiceOfferingCreated 
+
+Agent will query blockchain desired times to ensure that registered SO is not get to uncle block. 
+
+Offering Messaging Channel usage 
+
+After SO was successfully stored in blockchain, Agent will publish his SO through Offering              
+
+Messaging Channel. He will receive response indicating that message was stored successfully. 
+
+Offering Messaging Channel will accept message only if hash of submitted message is registered              
+
+in blockchain and discoverable using blockchain events:  
+
+25 
+
+
+
+ 
+
+● LogServiceOfferingCreated  
+
+● LogChannelCreated  
+
+● LogServiceOfferingEndpoint 
+
+Discover service offering 
+
+Blockchain usage 
+
+Client will search for actual offering by retrieving blockchain events in last defined number of               
+
+blocks. This will prevent from old and unmaintained service offerings to be caught by this query                
+
+(see Smart contract operations). 
+
+● LogServiceOfferingCreated 
+
+● LogServiceOfferingPopedUp 
+
+Client may analyze reputation of service offering submitters (Agents) by observing number of             
+
+cooperative and uncooperative closes that corresponds to their Ethereum address. This can be             
+
+achieved by filtering blockchain events by: 
+
+● LogCooperativeChannelClose 
+
+● LogUnCooperativeChannelClose 
+
+Offering Messaging Channel usage 
+
+After filtering unsatisfactory offerings by minimum deposit and reputation, Client will download            
+
+full SO data. Full SO data is retrieved from offering messaging channel (web service) by               
+
+indicating hash of offering. Client will: 
+
+● verify that signature is correct 
+
+● SO is filled correctly and conforms with known SO template scheme 
+
+○ all not null fields are filled 
+
+○ order of fields is correct 
+
+○ data type correct 
+
+○ field length correct  
+
+If SO passed all verifications it will be stored in DB. If some verifications failed, it will be                  
+
+marked as "not well formed" and will be ignored in future. 
+
+26 
+
+
+
+ 
+
+Choosing Service Offering 
+
+UI of Client allows filtering and ordering of service offerings, getting reputation statistics for              
+
+each agent and therefore giving ability to choose appropriate offering. Client will choose             
+
+manually or automatically suitable offering. 
+
+ 
+
+Service Offering UI​ basic view can be seen as following: 
+
+Date 
+publis
+hed 
+
+Date 
+pop
+ped 
+up 
+
+Agent 
+address 
+
+Coun
+try 
+
+Price 
+(PRIX) 
+
+Unit Min. 
+Deposit 
+(PRIX) 
+
+Supply 
+max/av
+ailable 
+
+Billing 
+interval 
+
+Free 
+trial 
+
+Direct rating 
+(Uncooperative/
+Cooperative) 
+
+Number 
+of 
+transacti
+ons 
+
+11-De
+c-2017 
+
+31-D
+ec-2
+017 
+
+04a3....a
+235 
+
+US 0.0000002 MB 0.00002 10/10 50 MB 100 
+MB 
+
+5% 123 
+
+11-De
+c-2017 
+
+N/A 43b5....c
+273 
+
+IL 0.00015 minu
+te 
+
+0.00008 5/1 10 min 20 min N/A 0 
+
+Check for available supply 
+
+Before Client will place deposit he wants to be sure that Agent has available supply and can                 
+
+serve him. To check for free supply Client will query for blockchain events: 
+
+● LogServiceOfferingDeleted 
+
+● LogServiceOfferingSupplyChanged 
+
+LogServiceOfferingDeleted​ can indicate that SO was deactivated and thus no more relevant. 
+
+LogServiceOfferingSupplyChanged​ will indicate number of available service supply. 
+
+If SO still active and has available supply, Client will attempt to place deposit. 
+
+Deposit and authentication message 
+
+Prepare authentication message 
+
+Authentication message is used by Client to deliver password, which is used to authenticate him,               
+
+while using the service. Password is encrypted with Agent's public key found in SO and               
+
+therefore can be decrypted only by Agent. Authentication message hash is keccak-256 hash of              
+
+authentication message. 
+
+27 
+
+
+
+ 
+
+Authentication message template 
+
+Filed name Field 
+type 
+
+Field 
+length 
+
+Description Allow 
+null 
+
+Example 
+
+template_version   version of template  3 
+
+client_public_key   Client's public key  04a34b99f22c790c4e36b2b3c2c35a36db0  
+6226e41c692fc82b8b56ac1c540c5bd5b8d  
+ec5235a0fa8722476c7709c02559e3aa73a  
+a03918ba2d492eea75abea235 
+
+uuid   Random number to allow 
+generation of identical 
+authentication with 
+different hash. Possibly 
+UUID4 generated according 
+to RFC4122. 
+
+ ea864be6-db42-43e2-bffa-aa44ace573f0 
+
+password   Password encrypted with 
+Agent's public key. Should 
+be randomly generated and 
+complaint to password 
+complexity policy. 
+
+  
+
+signature   Cryptographic signature of 
+authentication message 
+generated using Client's 
+private key. 
+
+ 1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN  
+GyjfvdCnYYNVCE0plqKKrnNXkaQrbbPn
+D  
+e2r59jZJSWlicL6YMi/zaH6VhykqBpQWAk  
+pHA+4fxyuiAcSzZAUK9A= 
+
+Authentication message hash generation 
+
+28 
+
+
+
+ 
+
+1. Transform  template (fields, types and data) to string compliant with Ethereum EIP712 
+
+2. Sign (1) 
+
+3. Generate keccak-256 hash of (2) 
+
+Authentication message signature generation 
+
+1. Transform SO template (fields, types and data) to string compliant with Ethereum            
+
+EIP712 
+
+2. Generate keccak-256 hash of string 
+
+3. Sign hash with private key 
+
+Blockchain usage 
+
+Client will attempt to create state channel (see Smart contract operations). Along with state              
+
+channel creation, Client will specify authentication message hash. Client will check for            
+
+blockchain event ​LogChannelCreated,​ which will indicate successful creation of state channel. 
+
+Offering Messaging Channel usage 
+
+After state channel was successfully created, Client will publish authentication message to            
+
+offering messaging channel. 
+
+ 
+
+New subscriptions discovery and account setup 
+
+Blockchain usage 
+
+Agent will monitor for new subscriptions by continuously monitoring new blockchain event log             
+
+LogChannelCreated. 
+
+Offering Messaging Channel usage 
+
+When Agent get new event ​LogChannelCreated​, he will get authentication message as one of              
+
+event parameters. Agent will retrieve authentication message from offering message channel by            
+
+hash of authentication message. 
+
+Account setup 
+
+Before Agent will setup Clients` account in DB, he will: 
+
+29 
+
+
+
+ 
+
+● verify signature of authentication message 
+
+● verify that signature corresponds to Clients` public key 
+
+● verify that Clients` Ethereum address (part of state channel) corresponds to Clients`            
+
+public key 
+
+● decrypt password field from authentication message, using Agents` private key 
+
+On successful verification Agent setups account in DB, where 
+
+● username = state channel key 
+
+password =  decrypted Client's password 
+
+ 
+
+Secure password storage using encryption at rest is out of scope of this document 
+
+ 
+
+  
+
+30 
+
+
+
+ 
+
+Service Endpoint discovery 
+
+Client needs to know Agents' endpoint address to connect and start using service. To prevent               
+
+third party to get all endpoints addresses easily, Agent will encrypt endpoint data with Clients'               
+
+public key. It will require from Client to create state channel first and publish authentication               
+
+message, which contains Client's public key. Agent will form specific message according to  
+
+Endpoint message template 
+
+Filed name Field 
+type 
+
+Field 
+length 
+
+Description Allow 
+null 
+
+Example 
+
+template_version   Version of 
+template 
+
+ 2 
+
+dns   Endpoint DNS 
+address 
+
+Yes subdomain.domain.com 
+
+ipv4     195.49.100.100 
+
+ipv6    Yes 2001:0db8:85a3:0000:0000:8a2e:0370:7334 
+
+uuid   Random 
+number to 
+allow 
+generation of 
+identical 
+authentication 
+with different 
+hash. Possibly 
+UUID4 
+generated 
+according to 
+RFC4122. 
+
+ ea864be6-db42-43e2-bffa-aa44ace573f0 
+
+signature   Cryptographic 
+signature of 
+authentication 
+message 
+generated 
+using Client's 
+private key. 
+
+ 1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN  
+GyjfvdCnYYNVCE0plqKKrnNXkaQrbbPnD  
+e2r59jZJSWlicL6YMi/zaH6VhykqBpQWAk  
+pHA+4fxyuiAcSzZAUK9A= 
+
+ 
+
+DNS is preferred type of endpoint address, as there is currently no method to rediscover               
+
+endpoint in case IP address of Agent changes. 
+
+31 
+
+
+
+ 
+
+Blockchain usage 
+
+Agent will publish endpoint message using smart contract function         
+
+PSC.publishServiceOfferingEndpoint(). ​This function will emit event      
+
+LogServiceOfferingEndpoint. ​Client will listen to this event and will get endpoint hash as             
+
+parameter of event.  
+
+Offering Messaging Channel usage 
+
+Client will retrieve endpoint message from offering messaging channel using its' hash. He will              
+
+check that endpoint message conforms to known scheme and store in DB, if verification is               
+
+passed. Client is ready to start using service.  
+
+5.6 Service controller functional scheme 
+ 
+
+ 
+
+32 
+
+
+
+ 
+
+5.7 Service controller protocol  scheme 
+ 
+
+ 
+
+  
+
+  
+
+33 
+
+
+
+ 
+
+5.8 Glossary  
+ 
+
+General  
+
+  
+
+Privatix Company Privatix ( ​Privatix.io ) company develop software and        
+process, which will allow Privatix network users to        
+provide and consume services. 
+
+Privatix Network Network that consists of nodes (users) on this network,         
+which can sell and buy Privatix Services using PRIX         
+tokens 
+
+PRIX Token Token on ethereum blockchain that was created during        
+Privatix.io​ Token Sale 
+
+Privatix Service (service) Digital good that is offered by Agent and can be          
+consumed by Client on Privatix network 
+
+Marketplace Website maintained by Privatix Company that will       
+simplify usage of Privatix Network as well as perform         
+some messaging function on early stages of development        
+process. All messaging functionality is expected to be        
+moved on decentralized channel on latter stage of        
+development. 
+
+ 
+
+Technical  
+
+  
+
+Agent Participant of Privatix network that wants to sell services. 
+
+Client Participant of Privatix network that wants to buy services. 
+
+Service offering (SO) 
+(aka Offering) 
+
+Properly filled and signed Service Offering Template.       
+Service offering purpose is Agent's proposal of Privatix        
+Service, which describes its parameters and conditions of        
+sales for specific service. Service offering format is        
+published by Privatix company in form of Service        
+Offering Template 
+
+34 
+
+https://privatix.atlassian.net/wiki/display/~dimarusakov
+http://privatix.io/
+http://privatix.io/
+
+
+ 
+
+Service Offering Template   
+(SOT) 
+
+Documented format, that Agents uses to publish their        
+Service Offering. Format MUST be known by both Client         
+and Agent to successfully agree on Service Offering 
+
+Service Authentication  
+Template (SAT) 
+
+Documented format, that Client uses to pass       
+authentication data to Agent. Agent will authenticate       
+Client, when Client start using service according to data         
+specified in this template. Format MUST be known by         
+both Client and Agent to successfully perform       
+authentication. 
+
+Service Endpoint Template   
+(SAT) 
+
+Documented format, that Agent uses to pass Service        
+Endpoint Address to Client. Client will connect to        
+Service Endpoint using data in this template. Format        
+MUST be known by both Client and Agent to         
+successfully connect to service. 
+
+Agent Key Cryptographic key pair generated according to appendix       
+F. of ​Ethereum Yellow paper​, which is used by Agent to           
+encrypt/decrypt and sign messages. 
+
+Client Key Cryptographic key pair generated according to appendix       
+F. of ​Ethereum Yellow paper​, which is used by Client to           
+encrypt/decrypt and sign messages. 
+
+Agent Ethereum Address Ethereum address of corresponding Agent's Public Key. 
+
+Client Ethereum Address Ethereum address of corresponding Client's Public Key 
+
+Service Offering message (aka    
+offering message) 
+
+Filled Service Offering Template.  
+
+Service Authentication message   
+(aka authentication message) 
+
+Filled Service Authentication Template. 
+
+Service Endpoint message (aka    
+endpoint message) 
+
+Filled Service Endpoint Template. 
+
+Offering message hash Hash of filled Service Offering Tempate using SHA3        
+(according to ​Ethereum Yellow paper​). 
+
+Authentication message hash Hash of filled Service Authentication Tempate using       
+SHA3 (according to ​Ethereum Yellow paper​). 
+
+35 
+
+https://ethereum.github.io/yellowpaper/paper.pdf
+https://ethereum.github.io/yellowpaper/paper.pdf
+https://ethereum.github.io/yellowpaper/paper.pdf
+https://ethereum.github.io/yellowpaper/paper.pdf
+
+
+ 
+
+Endpoint message hash Hash of filled Service Endpoint Tempate using SHA3        
+(according to ​Ethereum Yellow paper​). 
+
+Privatix Token Contract (PTC) Ethereum contract that holds PRIX token that were        
+minted during Privatix.io Token Sale. 
+
+Privatix Service Contract (PSC) Ethereum contract that controlls service usage logic and        
+payment processing by Agents and Clients. 
+
+Service Deposit Deposit that is placed to Privatix Service Contract by         
+Client to prevent double spending and gurantee payment        
+to Agent for Privatix Service.  
+
+Service Offering Messaging   
+Channel 
+
+Channel that used to publish full Service Offering        
+message, Authentication message and Service Endpoint      
+message. Used by Agent and Client to exchange        
+necessary information that allow Client to start using        
+Privatix Service proposed by Agent. 
+
+Service Endpoint Node that provide Privatix Service and operated by        
+Agent.  
+
+Service Endpoint Address DNS or IP address of Agent service node, that Client will           
+use to receive service. 
+
+Marketplace Web site maintained by Privatix Company that will        
+simplify usage of Privatix Network as well as perform         
+some messaging function on early stages of development        
+process. All messaging functionality is expected to be        
+moved on decentralized channel on latter stage of        
+development. 
+
+ 
+
+Products names 
+
+  
+
+VPN Centralized VPN service , like ​Privatix.com  
+
+dVPN Decentralized VPN service based on Privatix Network ( As         
+described in ​privatix whitepaper​ , section 7 )  
+
+dCDN Decentralized CDN based on Privatix Network ( As described in          
+privatix whitepaper​ , section 7 )  
+
+36 
+
+https://ethereum.github.io/yellowpaper/paper.pdf
+https://privatix.com/
+https://privatix.io/#whitepaper
+https://privatix.io/#whitepaper
+
+
+ 
+
+dProxyMarket Decentralized Proxy Maket based on Privatix Network ( As         
+described in ​privatix whitepaper​ , section 7 )  
+
+Privatix.BOX Hardware device, portable VPN router based on Privatix Network         
+( As described in ​privatix whitepaper​ , section 7 )  
+
+Privatix.FAAS Anti-censorship solution for developers (SDK) based on Privatix        
+Network ( As described in ​privatix whitepaper​ , section 7 )  
+
+ 
+
+ 
+
+ 
+
+ 
+
+  
+
+37 
+
+https://privatix.io/#whitepaper
+https://privatix.io/#whitepaper
+https://privatix.io/#whitepaper
+
+
+ 
+
+6. Markets overview 
+ 
+
+Below is a brief overview of the target markets for the Privatix Network and possible products                
+
+that can be made by using the network capabilities of buying / selling internet bandwidth.  
+
+ 
+
+6.1 Global VPN market 
+
+ 
+
+There was an estimate of 3.5 billion internet users worldwide in 2016. This means that about 45                 
+
+percent of the global population accessed the internet that year. The majority of global internet               
+
+users are located in East and South Asia, while China is the largest online market in the world.  
+
+ 
+
+In 2016, China had over 721 million internet users, more than double the amount of third-ranked                
+
+U.S., with nearly 290 million internet users. The global average internet speed stood at 6.1Mbps               
+
+that year.  
+
+ 
+
+With the proliferation of inexpensive smart phones, many of today’s 5 billion feature phone              
+
+users will convert to internet users in the next 5 years. New users will mainly reside in countries                  
+
+with strict or strengthening internet censorship. 
+
+ 
+
+According to latest reports, the Virtual Private Network (VPN) market is expected to reach USD               
+
+106 billion by 2022 at a CAGR (compound annual growth rate) of 13%.  
+
+ 
+
+38 
+
+
+
+ 
+
+ 
+
+ 
+
+The major driving factors of this market are increasing internet censorship, an increase in the               
+
+number of loud security incidents, growing industries, and the increasing number of connected             
+
+devices mostly in countries with strict internet censorship; countries like China, countries in Asia              
+
+and Africa, and now Russia as well.  
+
+ 
+
+There is no leader who controls more than 10% of the VPN market. Most of the 400 primary                  
+
+VPN providers compete for a small fraction of market share.  
+
+ 
+
+The most well-known players are: Hotspot Shield (Anchorfree ) backed with more than $62             1
+
+million invested by VC’s, Zenmate with more than $3 million in investments, and Hidemyass              2
+
+(Privax) that was acquired by AVG in 2015 for $40 million .  3
+
+ 
+
+  
+
+1https://www.crunchbase.com/organization/anchorfree 
+2https://www.crunchbase.com/organization/zenguard 
+3https://now.avg.com/avg-acquires-privax/ 
+
+39 
+
+https://www.crunchbase.com/organization/anchorfree
+https://www.crunchbase.com/organization/zenguard
+https://now.avg.com/avg-acquires-privax/
+
+
+ 
+
+6.2 Cyber security and privacy protection 
+
+ 
+
+According to Zion Market Research , the global cyber security market was valued at USD              4
+
+105.45 billion in 2015; is expected to reach USD 181.77 billion in 2021 and is anticipated to                 
+
+grow at a CAGR (compound annual growth rate) of 9.5% between 2016 and 2021.  
+
+ 
+
+Cyber security is associated with information technology security, which focuses on protecting            
+
+computers and confidential data stored in it from cyber criminals. The cyber security market              
+
+provides several benefits, including enhanced security of cyberspaces, expanded digital          
+
+safeguards, and quicker reaction time to national crises. These benefits automatically enhance the             
+
+value of services to market end-users. 
+
+ 
+
+An example of a major cyber security issue is linked ransomware attacks when people's              
+
+computers are locked and bitcoin payment demanded by cyber criminals to unlock. These events              
+
+have increased awareness of encryption and protection issues.  
+
+ 
+
+ 
+
+Google Trends show spike of interest to ransomware, viruses, and bitcoins after attacks  
+
+4https://www.zionmarketresearch.com/sample/cyber-security-market 
+
+40 
+
+https://www.zionmarketresearch.com/sample/cyber-security-market
+
+
+ 
+
+The cyber security market is segmented based on security types, solution and vertical, and by               
+
+regions. On the basis of security types, the market is divided into network security, cloud               
+
+security, wireless security, and others. The cyber solution segment includes identity and access             
+
+management (IAM), encryption, risk and compliance management, data loss prevention,          
+
+antivirus and anti-malware, firewall, and others. By vertical, the market is segmented into             
+
+aerospace, government, financial services, telecommunication, healthcare, and others. 
+
+ 
+
+6.3 CDN  
+
+ 
+
+Companies leverage Content Delivery Networks (CDN) to increase their online presence in the             
+
+global market and deliver a high-quality user experience worldwide. CDNs improve site speed,             
+
+page load times, availability, and performance dramatically. This not only results in higher             
+
+end-user satisfaction but also increases customer adoption and conversion rates .  5
+
+ 
+
+Market size and growth trends  
+
+● The market size of CDN is expected to grow from $4.95 billion in 2015 to $15.73 billion                 
+
+in 2020, and to $70.3 billion by 2025. 
+
+● The mobile CDN market is estimated to grow from USD 2.11 billion in 2015 to USD                
+
+13.40 billion in 2020, at a compound annual growth rate CAGR (compound annual             
+
+growth rate) of 44.7% from 2015 to 2020. In regional segmentation, North America is              
+
+expected to be the largest market in terms of market size, while APAC, Latin America,               
+
+and MEA are expected to emerge rapidly in this market at high CAGRs. 
+
+● The North American region dominated the CDN market in 2015 and is expected to reach               
+
+$4.6 billion by 2017.  
+
+● There are approximately 8.8 million websites using CDNs worldwide.  
+
+● Out of the top 10,000 websites, 48.3% are currently using a CDN.  
+
+● CDNs, globally, currently serve 50% of content consumed over the internet .  6
+
+5https://www.cdnetworks.com/en/news/content-delivery-network-and-website-performance-stats-2016/513 
+6https://www.cdnetworks.com/en/news/content-delivery-network-and-website-performance-stats-2016/513 
+
+41 
+
+https://www.cdnetworks.com/en/news/content-delivery-network-and-website-performance-stats-2016/513
+https://www.cdnetworks.com/en/news/content-delivery-network-and-website-performance-stats-2016/513
+
+
+ 
+
+● In 2018, worldwide online CDN traffic is expected to reach 72,893 petabytes per month.              
+
+The data volume of global CDN internet traffic from 2016 to 2021 (in petabytes per               
+
+month)  is illustrated in the graph below. 7
+
+ 
+
+ 
+
+ 
+
+ 
+
+7https://www.statista.com/statistics/267184/content-delivery-network-internet-traffic-worldwide/ 
+
+42 
+
+https://www.statista.com/statistics/267184/content-delivery-network-internet-traffic-worldwide/
+
+
+ 
+
+Growth drivers 
+
+● Proliferation of rich media and video content - expected to grow at 4G speed 
+
+● Increasing use of connected and smart devices 
+
+● Optimized network solutions 
+
+● Digitization among organizations 
+
+● Highest growth in the online gaming industry 
+
+ 
+
+Competitive landscape 
+
+ 
+
+The top 10000 websites in the world use the following platforms :  8
+
+ 
+
+ 
+
+ 
+
+  
+
+8https://www.similartech.com/categories/content-delivery-network 
+
+43 
+
+https://www.similartech.com/categories/content-delivery-network
+
+
+ 
+
+6.4 Business intelligence and data collecting (Proxy / Socks gateways) 
+
+ 
+
+The global business intelligence (BI) market was worth $14.15 billion in 2015 and projected to               
+
+reach $26.89 billion by 2020. BI technologies have slowly but steadily revolutionized the field of               
+
+business strategy and management and penetrated all over the world . 9
+
+ 
+
+Market size and growth trends  
+
+● The global BI market is estimated to grow at a compound annual growth rate (CAGR) of                
+
+9.5% between 2016 and 2021 . 10
+
+● Global revenue in the BI and analytics software market is forecast to reach $18.3 billion               
+
+in 2017, an increase of 7.3% from 2016, according to Gartner, Inc .  11
+
+● Data discovery / visualization, self-service BI, and data quality / master data management             
+
+are the three most important trends . 12
+
+● While the use of traditional dashboard BI is receding into the background, self-service             
+
+machine data analytics, self-service data discovery and explorations, and BI and analytics            
+
+in the Cloud are rapidly gaining momentum across the global spectrum .  13
+
+● There is increasing investment in robust BI platforms that can handle multiple data             
+
+management capabilities such as integration, storage, visualization, statistical and         
+
+quantitative analysis, instead of multiple specialty tools. 
+
+ 
+
+9https://www.mordorintelligence.com/industry-reports/global-business-intelligence-bi-vendors-market-indu
+stry 
+10https://bi-survey.com/top-business-intelligence-trends-2017 
+11http://www.gartner.com/newsroom/id/3612617 
+12https://bi-survey.com/top-business-intelligence-trends-2017 
+13http://www.dataversity.net/comparative-study-business-intelligence-analytics-market-trends/ 
+
+44 
+
+https://www.mordorintelligence.com/industry-reports/global-business-intelligence-bi-vendors-market-industry
+https://www.mordorintelligence.com/industry-reports/global-business-intelligence-bi-vendors-market-industry
+https://bi-survey.com/top-business-intelligence-trends-2017
+http://www.gartner.com/newsroom/id/3612617
+https://bi-survey.com/top-business-intelligence-trends-2017
+http://www.dataversity.net/comparative-study-business-intelligence-analytics-market-trends/
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+Growth drivers 
+
+● Increasing usage of data analytics 
+
+● Rising penetration of cloud technologies 
+
+● Need for complex datasets drives investments in data preparation 
+
+45 
+
+
+
+ 
+
+● Increasing adoption of BI in small- and medium-sized enterprises 
+
+● Support for real-time events and streaming data 
+
+ 
+
+ 
+
+ 
+
+Competitive landscape (including list of most prominent players) 
+
+ 
+
+● Some of the key players in the global BI market include Information Builders,             
+
+International Business Machines Corporation, Datawatch, Microsoft Corporation,       
+
+Microstrategy, Inc., Oracle Corporation, Panorama, Pentaho (a Hitachi Company), Qlik          
+
+Technologies, SAP SE, SAS Institute, Sisense Inc., Tableau Software, Tibco Software,           
+
+and Yellowfin International Pty Ltd.  
+
+● Gartner’s Magic Quadrant for Business Intelligence and Analytics Platforms. 
+
+● Services like ​http://luminati.io/​. 
+
+ 
+
+ 
+
+  
+
+46 
+
+http://luminati.io/
+
+
+ 
+
+6.5 Mobile apps and software monetization  
+
+ 
+
+Trends point to hybrid monetization models, such as in-app ads and in-app purchases. In-app              
+
+advertising is set to be a key driver of mobile growth over the coming years. 
+
+ 
+
+Market size and growth trends 
+
+ 
+
+● In 2015, the mobile app industry generated $69.7 billion in gross annual revenue; it is               
+
+projected to exceed $189 billion by 2020 .  14
+
+ 
+
+ 
+
+● The worldwide in-app advertising and app store revenues of mobile apps and games in              
+
+2015 and predicted in 2020 is illustrated below (in billion US$): 
+
+14https://www.statista.com/statistics/293636/app-store-composition-business-models/ 
+
+47 
+
+https://www.statista.com/statistics/293636/app-store-composition-business-models/
+
+
+ 
+
+ 
+
+ 
+
+● May 2016 - Android device owners spent an average of $15.53 making in-app gaming              
+
+purchases; in contrast, iOS device owners spent $10.96.  15
+
+● December 2016: 92% of games on Google Play were free to download, and 23% of those                
+
+used in-app purchases as a monetization model .  16
+
+● Top app monetization models according to mobile developers worldwide (June 2015): 
+
+ 
+
+15https://www.statista.com/statistics/673479/mobile-games-Android-share-monetization-model/ 
+16https://www.statista.com/statistics/673479/mobile-games-Android-share-monetization-model/ 
+
+48 
+
+https://www.statista.com/statistics/673479/mobile-games-android-share-monetization-model/
+https://www.statista.com/statistics/673479/mobile-games-android-share-monetization-model/
+
+
+ 
+
+● North America is the leading region in third party in-app advertising both in absolute and               
+
+relative terms; Asia Pacific will record the largest increase in the next five years at a                
+
+177% compound annual growth rate between 2015 and 2020. 
+
+ 
+
+Growth drivers 
+
+● Customization apps 
+
+● Aggregator apps 
+
+● Enterprise apps – micro and hybrid 
+
+● Software subscription model 
+
+● Messaging apps 
+
+● Internet of Things  17
+
+● Android First  18
+
+● UX, accessibility, and security are more important than ever 
+
+ 
+
+Competitive landscape 
+
+● 9 million mobile app developers in the world; 60% make $500 or less profit per month 
+
+● Less than 0.1% of all apps are commercially successful 
+
+● Companies that focus on mobile in-app advertising command the majority of the mobile             
+
+advertising market and companies that focus on native advertising as a primary revenue             
+
+stream are the most successful at monetizing through mobile .  19
+
+● Top app monetization solution providers include:  20
+
+○ Google AdMob 
+
+○ Facebook Audience Network 
+
+○ Inneractive 
+
+○ OpenX Mobile 
+
+○ Unity Ads 
+
+17https://www.cnbc.com/2015/11/09/forrester-mobile-predictions-for-2016.html 
+18http://r-stylelab.com/company/blog/mobile-technologies/mobile-app-development-trends-for-2017-beyon
+d 
+19https://www.smashingmagazine.com/2017/02/current-trends-future-prospects-mobile-app-market/ 
+20http://www.businessofapps.com/top-app-monetization-platforms/ 
+
+49 
+
+https://www.cnbc.com/2015/11/09/forrester-mobile-predictions-for-2016.html
+http://r-stylelab.com/company/blog/mobile-technologies/mobile-app-development-trends-for-2017-beyond
+http://r-stylelab.com/company/blog/mobile-technologies/mobile-app-development-trends-for-2017-beyond
+https://www.smashingmagazine.com/2017/02/current-trends-future-prospects-mobile-app-market/
+http://www.businessofapps.com/top-app-monetization-platforms/
+
+
+ 
+
+7. Products and services – Proof of Concept  
+ 
+
+This section will describe Proof of Concept (PoC) products based on the Privatix Network, as               
+
+well as the concept of the exit nodes software for Agents (owners of exit nodes). 
+
+ 
+
+7.1 Privatix.Agent - cross-platform software for exit nodes owners  
+
+ 
+
+This software is the primary component of the Privatix Network as it is the one that technically                 
+
+and practically allows the Agents to join the network and start selling their internet bandwidth. 
+
+ 
+
+USE CASE 
+
+- The user learns about the opportunity to earn by selling his unused broadband 
+
+- The user downloads software for his operating system and launches it 
+
+- The user sets the percentage of the traffic that he wishes to share and registers on the                 
+
+network 
+
+- After connecting to the network, the user turns into an Agent, his IP is recorded on the                 
+
+network, and Clients can now connect to him  
+
+- The user can see all accounting and stats in real time 
+
+- After accumulating a balance in PRIX tokens, the user can sell them on the exchange               
+
+straight way or order withdrawal in a fiat currency. After that, we will sell their token at                 
+
+the exchange and send the payment to the user in a fiat currency. 
+
+ 
+
+Alternative solution on the market: ​https://mysterium.network​ (concept only) 
+
+ 
+
+50 
+
+https://mysterium.network/
+
+
+ 
+
+USER INTERFACE PROTOTYPE
+
+ 
+
+Privatix.Agent will be developed on major platforms in order to create total operational system              
+
+coverage.  
+
+ 
+
+The user will also be able to choose if he wants to share his connection for torrenting or not;                   
+
+there are many countries where torrenting is forbidden and fines may be imposed. We will               
+
+pre-set by default countries where this policy is applied, and disable the torrenting option in               
+
+advance.  
+
+  
+
+51 
+
+
+
+ 
+
+7.2 Consumer VPN based on DPI-free VPN protocol 
+
+ 
+
+VPN means Virtual Private Network, a secure tunnel between two or more devices. VPN creates               
+
+a secure tunnel between your computer and the internet, allowing you to surf the web               
+
+anonymously from wherever you want. VPN also hide your IP address and changes it to another                
+
+one.  
+
+ 
+
+Classic VPN providers use dedicated servers around the world and standard VPN protocols like              
+
+Openvpn, pptp,l2tp,sstp, etc.  
+
+ 
+
+VPN shields your privacy, helps to avoid internet censorship and encrypts your transferred data.              
+
+The problem of centralized VPN is DPI-based blockers (utilized in China) and data server’s IP’s               
+
+that detect when you use a VPN.  
+
+ 
+
+VPNs based on the Privatix Network will allow you to surf between millions of exit nodes at the                  
+
+best available speed and use advanced modified VPN connections that are undetectable by DPIs.              
+
+If you choose to be a peer in the network, you will be able to pay for it by sharing your traffic                      
+
+with other users. If you get more traffic than you give you will have to pay the difference. Vice                   
+
+versa the difference will be paid to you. 
+
+ 
+
+Classic VPN service Decentralized p2p VPN on blockchain 
+
+● Focused on owner's profit ONLY 
+● High profit margins  
+● Huge marketing and data costs 
+● No complete anonymity 
+● Risk of data access by a third-party       
+
+Can be blocked by sophisticated DPI 
+● The fact of using VPN is visible 
+● Slow speed and unstable connection  
+
+● Focus on network participants’ benefits 
+● Fair prices without middleman margins 
+● Low traffic expenses 
+● Full anonymity 
+● No private data and logging, no access for a         
+
+third-party 
+●  Can’t be blocked 
+● The fact of using VPN is invisible 
+● High speed and stable connection 
+
+ 
+
+ 
+
+52 
+
+
+
+ 
+
+Prototype of VPN client based on P2P participation in the Privatix Network 
+
+ 
+
+ 
+
+ 
+
+ 
+
+  
+
+53 
+
+
+
+ 
+
+7.3 Privatix.BOX - portable VPN router  
+
+ 
+
+A hardware device (basically an advanced DD-WRT router with pre-set configuration) which             
+
+allows: 
+
+● Connection to the Privatix Network as an Agent without the need to install special              
+
+software 
+
+● Shared VPN-protected connection via Wi-Fi 
+
+ 
+
+Members of the Privatix team have been using our prototypes of these devices, which we created                
+
+on the basis of popular DD-WRT routers, for a long time. This device is particularly useful for                 
+
+travelers and acts as Agent and Client in the Privatix Network without the need to install any                 
+
+software. We also plan to produce these devices in partnership with a suitable manufacturer. 
+
+ 
+
+USE CASE 
+
+- A user goes on vacation with his family and stays in a hotel 
+
+- The user connects Privatix.BOX to an unprotected Wi-Fi hotspot in the hotel 
+
+- The user encrypts his connection and shares this safe connection with other family             
+
+members via Wi-Fi 
+
+54 
+
+
+
+ 
+
+- If the user opted to be an Agent (share broadband), then most likely the user will get an                  
+
+excellent and fast VPN at no cost at all. 
+
+ 
+
+Alternative centralized solution / product on the market: ​https://keezel.co​,  ​https://betterspot.com  
+
+ 
+
+7.4 Advanced Proxy / Socks selling API platform  
+
+ 
+
+When the Privatix Network is established, it will contain hundreds of thousands, even millions,              
+
+of connected devices (Agents) and most of them will have residential IP-addresses.  
+
+ 
+
+ 
+
+ 
+
+ 
+
+For thousands of companies and businesses, residential proxies are a vital and also scarce              
+
+resource. Online retailers collecting comparative pricing information, developers testing their          
+
+web sites from any city in the world, large ad networks using proxies for ensuring the ads they                  
+
+55 
+
+https://keezel.co/
+https://betterspot.com/
+
+
+ 
+
+deliver are safe and compliant, cybersecurity firms checking sites are not malicious, and business              
+
+intelligence tools use thousands of proxies every day to parse search engines or competitors’              
+
+websites.  
+
+ 
+
+Our product will include an advanced API through which anyone will be able to buy the use of                  
+
+proxies (traffic) from Privatix Network Agents in a convenient and easy way.  
+
+ 
+
+USE CASE  
+
+- A large online retailer deals with the daily challenge of collecting data on positions and               
+
+prices on their competitors’ websites 
+
+- Data parsing directly from their servers using datacenter IP addresses even in the rotation              
+
+does not work. The IPs are quickly detected by the competitor and blocked. 
+
+- By connecting their software to the platform API, the retailer’s developers can buy an              
+
+unlimited number of proxies with residential IP addresses and completely mask their            
+
+activity 
+
+- Rotating them and paying only for traffic means the retailer can solve their business              
+
+objectives in very simple and convenient way  
+
+ 
+
+ 
+
+7.5 Infrastructure for VPN providers  
+
+ 
+
+All classic VPN providers on the market today use the infrastructure of dedicated servers in               
+
+different data centers and purchase IPV4 IP address pools. This has a number of serious               
+
+shortcomings: 
+
+ 
+
+● Limited ability to buy new IPV4 IP addresses 
+
+● Expensive maintenance of server infrastructure, balancing, etc. 
+
+● High broadband costs 
+
+56 
+
+
+
+ 
+
+● Most IP addresses from the data center are easily detected and blocked, unlike the IP               
+
+addresses of home or small offices computers (residential IPs) 
+
+ 
+
+Replacing the infrastructure of dedicated servers with a convenient and affordable platform that             
+
+can be implemented in the product will transform this market, dramatically reduce the cost of               
+
+broadband for VPN providers, and improve their ability to stay unblockable with residential IP              
+
+addresses. 
+
+ 
+
+7.6 Decentralized CDN on blockchain 
+
+ 
+
+At Privatix Network, we do not want “merely” to develop awesome products, eliminate the 
+
+middleman and reduce prices, but to speed up the entire internet as well. 
+
+ 
+
+Classic CDN today is a very profitable business. However, content is becoming heavier, and 
+
+more expensive, because of the increasing use of HD videos, games and streaming content.  
+
+ 
+
+The average price for content delivery today is $0.05 - $0.30 per GB. We believe that by using                  
+
+Agents’ broadband from Privatix Network will allow slashing prices 5 or even 10 fold The main                
+
+condition for this is a large number of Agents in the network. 
+
+ 
+
+This proposal is concept-based and can only be developed if the network grows big enough and                
+
+we have funds to invest in R&D. 
+
+ 
+
+Alternative centralized solution / product on the market: ​https://holacdn.com/ 
+
+ 
+
+  
+
+57 
+
+https://holacdn.com/
+
+
+ 
+
+7.7 Privatix.FAAS - anti-censorship solution for developers 
+
+ 
+
+Freedom as a Service (FaaS) - this is the driving force behind Privatix.FAAS. Our goal is to                 
+
+create powerful SDKs that will eliminate the need for developers to worry whether their app will                
+
+be blocked in some country or not.  
+
+ 
+
+Privatix will provide a mobile SDK that will be easy to integrate into any mobile application or                 
+
+software and give developers the ability to send all traffic via the Privatix Network’s secure               
+
+Agents’ proxies, ensuring users always have secure and private access to their applications and              
+
+are never blocked. 
+
+ 
+
+Alternative centralized solution / product on the market: ​https://www.anchorfree.com/sdk/ 
+
+ 
+
+7.8 Privatix.Monetize - mobile apps and software monetization platform 
+
+ 
+
+Developers build applications used by millions of people and, in many cases they can’t monetize               
+
+it as they would like to do.  
+
+ 
+
+The most popular monetization methods are paid subscription and ad injection. Both methods             
+
+always lead to a huge outflow of users, and a decrease in virality as users do not like to pay to                     
+
+watch ads. 
+
+ 
+
+Privatix.Monetize will offer developers an SDK that will help to monetize their apps without ads               
+
+or paid content using the following scheme. Users install the app, which registers in the Privatix                
+
+Network as an Agent and starts selling the users’ idle bandwidth while the developer gets the                
+
+payment for the traffic. 
+
+ 
+
+Alternative centralized solution / product on the market: ​http://luminati.io/sdk 
+
+ 
+
+58 
+
+https://www.anchorfree.com/sdk/
+http://luminati.io/sdk
+
+
+ 
+
+8. The Privatix team  
+ 
+
+Our team has an established record of creating world-class internet services in the VPN and               
+
+cyber security arena for more than 10 years. We have the proven ability to develop amazing                
+
+products and run successful internet businesses. Check out our products and maybe you discover              
+
+that you are already our customer. 
+
+ 
+
+8.1 Our last projects track record 
+
+ 
+
+The Privatix team currently serves more than 50,000 active users per day and transfers over 10                
+
+Petabyte traffic per month through more than 150 of its servers. The customers of our internet                
+
+services and projects are, literally, millions of users. We know exactly how to build, manage and                
+
+develop products in the areas of privacy and internet security. You can read below about some of                 
+
+our current projects.  
+
+ 
+
+Name Privatix VPN  
+
+URL https://privatix.com 
+
+Exists since  2015 
+
+Market VPN service and privacy protection 
+
+Business model Freemium + ad-based 
+
+Platforms Native mobile apps on  iOS and Android; browser 
+extensions for Chrome, Opera, and Firefox; and desktop 
+software on Windows 
+
+Total users More than 1,250,000  
+
+Daily active users (DAU) ~50,000 - 70,000 
+
+Average growth rate (monthly) 9-10% per month in last 2 years 
+
+ 
+  
+
+59 
+
+
+
+ 
+
+ 
+
+Name Temp-mail - temporary email service 
+
+URL https://temp-mail.org 
+
+Android app link Google Play 
+
+Ios app link App Store 
+
+Exists since 2012 
+
+Market Internet services  - email  
+
+Business model Advertising 
+
+Audience More than 200,000 daily and ~5 billion per  month 
+
+Mobile apps installs More than 500,000 in last 6 months (organic)  
+
+Average growth rate (monthly) 5-10% per month in last two years 
+
+ 
+ 
+
+8.3 Our “Unfair Advantage” 
+
+ 
+
+Almost always, behind great ideas stand dreamers, advocates of the “idea first” paradigm. Ideas              
+
+are important but without resources, knowledge, skills, and experience they remain elusive. 
+
+ 
+
+At Privatix there are all the necessary components of a successful team that has proved itself in                 
+
+various projects over the past years, and our record is demonstrable. This team will become the                
+
+backbone of the future Privatix Network company which will attract even more talented             
+
+employees with vision and entrepreneurial spirit, and the hi-tech skills needed in this demanding              
+
+industry. 
+
+ 
+
+This is the first time we have tried to attract investments. But now it has became clear to us that                    
+
+it is simply impossible to implement such a large-scale project as Privatix Network without              
+
+significant funding. Our goals and intentions are clear, and we know how to achieve them.               
+
+Believe in us now and you will participate in the birth of a new global company that will change                   
+
+the world for a better one. 
+
+60 
+
+https://temp-mail.org/
+https://play.google.com/store/apps/details?id=com.tempmail
+https://itunes.apple.com/app/temp-mail-temporary-email/id1214259095
+
+
+ 
+
+ 
+
+9. Roadmap 
+ 
+
+9.1 First steps after Token Sale  
+
+ 
+
+Our plan is to complete the Token Sale by the end of October/ November 2017. Then we will                  
+
+have several months until the end of the year in which we want to prepare the company for the                   
+
+next steps as quickly and efficiently as possible. 
+
+ 
+
+9.1.1 First month priorities 
+
+ 
+
+We have some top priority tasks that must be finalized in the first month after Token Sale.  We 
+
+will report on these steps and our progress to the community: 
+
+ 
+
+● Distributing all bounty tokens to participants and suppliers  
+
+● New office spaces renting or expanding current ones in Ukraine, Israel, and Russia 
+
+● Transferring to third-party management, “canning / preserve”, or sale of existing projects            
+
+of the company 
+
+● Hiring administrative personnel 
+
+ 
+
+ 
+
+9.1.2 Legal, HR and administrative issues  
+
+ 
+
+Some legal formalities, as well as financial business processes, will need to be adjusted and               
+
+facilitated during this period. 
+
+ 
+
+Also, the procedure for selecting and hiring new team members will be started. The procedure               
+
+for hiring talented people is not always easy and it can be time-consuming to source the best, but                  
+
+61 
+
+
+
+ 
+
+with our experience and funding, we will be able to afford to hire the most skilled and motivated                  
+
+people. We know exactly who we are looking for.  
+
+ 
+
+9.2 Q4 / 2017 - Q2 / 2018 : Privatix Network Core Development 
+
+ 
+
+The final quarter of 2017 and the first two quarters of 2018 will be used to develop a prototype                   
+
+and Alpha version of the Privatix Network, as well as cross-platform software for Agents. 
+
+ 
+
+Deadline:​ The end of the second quarter of 2018 
+
+ 
+
+9.2.1 Privatix Network - Alpha  
+
+ 
+
+The first release of the Privatix Network will include centralized elements and will be available               
+
+in open source to receive feedback from the community by the end of the second quarter of 2018. 
+
+ 
+
+9.2.2 Privatix.Agent - cross-platform software for exit nodes owners 
+
+ 
+
+This product is one of the two most important foundations of the entire Privatix Network, since it                 
+
+allows you to route traffic and sell internet bandwidth to the network. 
+
+ 
+
+The first versions for such popular platforms as Windows, Ubuntu, Android, MacOS, iOS will be               
+
+developed. 
+
+ 
+
+9.3 Q3 - Q4 / 2018 : Proof of Concept (PoC) products and Network 
+
+ 
+
+For two quarters, further development of the Privatix Network will be conducted taking into              
+
+account feedback from the community. At the end of that period, the Beta release of the network                 
+
+will be made, which in essence will be a fully working version. 
+
+ 
+
+62 
+
+
+
+ 
+
+At the same time, on the basis of the Alpha version of the network, the development of products                  
+
+based on the network will begin; these products will ensure there is adequate demand for               
+
+broadband. We hope to reduce development time through partnerships or the creation of             
+
+specialized individual teams and business units in the company. 
+
+ 
+
+Deadline​: The fourth quarter of 2018 
+
+ 
+
+9.3.1 Consumer VPN, based on DPI-free VPN protocol  
+
+ 
+
+In the development of standard VPN services we have no competitors. However, we are dealing               
+
+with VPN on blockchain with a completely different level of development. VPN applications             
+
+will be developed for all popular operating systems and platforms for maximum market             
+
+coverage. 
+
+ 
+
+9.3.2 Advanced Proxy / Socks selling API platform 
+
+ 
+
+A unique platform on which it is possible to use the API to buy multiple outgoing residential IP                  
+
+addresses and their associated spare internet broadband. We expect that this product will allow              
+
+us to create a huge demand for traffic on the network and therefore we have made it one of our                    
+
+priorities.  
+
+ 
+
+9.3.3 Privatix Network - Beta release  
+
+ 
+
+The second (Beta) release of the network will be a fully working Network but with some                
+
+centralized elements. These elements will be fully transferred to the blockchain with the final              
+
+release of the network in the next stage. 
+
+ 
+
+9.4 Q1 - Q2 / 2019 : Additional Proof of Concept (PoC) products and Network 
+
+ 
+
+63 
+
+
+
+ 
+
+At the beginning of 2019 our company will already have a fully working Network, so the work                 
+
+that will be conducted in the first two quarters of 2019 will relate to its final release and the                   
+
+transfer of all elements to the blockchain. Also in the first two quarters of 2019, two more                 
+
+products will be created based on the Network. 
+
+ 
+
+Deadline for release​: The second quarter of 2019 
+
+Note:​ This stage will be implemented if the maximum goal (hard cap) is reached. 
+
+ 
+
+9.4.1 Privatix Network - Final release  
+
+ 
+
+The final release of the network means that from then on it becomes completely autonomous and                
+
+any developer can use it to create their own products. 
+
+ 
+
+9.4.2 Privatix.FAAS (SDK) 
+
+ 
+
+A product that removes the need for developers to worry that their application will be blocked                
+
+from any source, whether by a local firewall at the ISP level or a global block at governmental                  
+
+level. 
+
+ 
+
+9.4.3 Privatix.Monetize (SDK) 
+
+ 
+
+This product will allow developers to earn more on their applications and programs. By              
+
+installing our SDK, the developer will be able to monetize a portion of users’ spare bandwidth. 
+
+ 
+
+9.5 Q3 - Q4 / 2019 : Proof of Concept (PoC) products and Network 
+
+ 
+
+In the second half of 2019, having already a working and autonomous Privatix Network, we will                
+
+be able to develop additional products based on it, which will increase the number of participants                
+
+and, accordingly, the demand for the token itself. 
+
+64 
+
+
+
+ 
+
+ 
+
+Deadline for releases​: end of 2019. 
+
+Note​: This stage will be implemented if the maximum goal (hard cap) is reached. 
+
+ 
+
+9.5.1 Privatix.BOX (Hardware) 
+
+ 
+
+A physical device that allows you to simultaneously become an Agent of a Privatix Network and                
+
+also use VPN functions as a Network Client. This device can also be used as a secure Wi-Fi                  
+
+router. 
+
+ 
+
+9.5.2 Infrastructure for VPN providers 
+
+ 
+
+We plan to create a product in the form of a network-based service and essentially resell the                 
+
+broadband to existing VPN providers. They will be able to use the traffic from the Privatix                
+
+Network instead of buying it from internet hosts, and thereby save costs without losing quality. 
+
+ 
+
+ 
+
+10. Additional information 
+ 
+
+10.1 Legal protection framework for exit nodes owners 
+
+ 
+
+We will develop a legal framework to help exit node owners (Agents) to handle situations when                
+
+they are accused of improper activity by someone who used their node (IP address) .  
+
+ 
+
+The basic concept behind this proposal is that certain responsibilities will be transferred from              
+
+Agents to our company. We will provide to all Agents a document stating that we as a company                  
+
+lease their network for our use and resell it. This document will contain the Agent’s node IP and                  
+
+hash in blockchain and the Agent will be able to download it from his dashboard.  
+
+65 
+
+
+
+ 
+
+ 
+
+For example, in the event an exit node was compromised by criminal activity and police make an                 
+
+investigation, the Agent can print the document and give it to the investigators. Based on node                
+
+hash and timestamps, the investigators can find on open blockchain related and relevant             
+
+information, and also contact us and make request for additional data.  
+
+ 
+
+We will also try to provide legal help and assistance to investigators and compromised Agents in                
+
+serious cases at our cost. We will take out some insurance as well; insurance that we can extend                  
+
+to all our Agents in future to cover these types of expenses, should the need arise.  
+
+ 
+
+Anonymity is the basis of our network. Of course it has certain risks, but in response to these                  
+
+risks we are going to free Agents from legal responsibility rather than stake out every user. 
+
+ 
+
+10.2 Solution for mass adoption problem  
+
+ 
+
+As advocates of blockchain principles and a decentralized economy, we certainly support the             
+
+idea that all payments need to be executed internally with our tokens inside our crypto-economy.               
+
+Even though this is our paramount goal, we understand that it would make it quite difficult to                 
+
+achieve mass adoption and tempt Agents. At this time, only a fraction of people understand the                
+
+crypto-economy concept and we don’t have time to wait for the entire internet to climb on board;                 
+
+that could take years.  
+
+ 
+
+In order to grow as fast as possible within these limitations, we will develop a centralized                
+
+exchange gateway to the Privatix crypto-economy in order to create a bigger supply of spare               
+
+broadband and multiply the number of Agents quickly. Thus, not just users that are familiar with                
+
+the crypto-world will be able to be an Agent and profit from spare broadband, but all regular                 
+
+internet users as well.  
+
+ 
+
+66 
+
+
+
+ 
+
+These Agents will see the PRIX token as internal currency and the instant value of these tokens                 
+
+in fiat currency at the same time. For example, if an Agent accumulated the equivalent of “100”                 
+
+in some fiat currency and demanded to be paid, we would provide a simple mechanism to                
+
+withdraw this token though exchange to fiat and pay him using a common payment system.  
+
+ 
+
+10.3 Commitment to open source community  
+
+ 
+
+Our team strongly believe in open source and make a promise after three years to contribute 5%                 
+
+from Privatix profits to the development of important open source projects.  
+
+ 
+
+10.4 Legal disclaimers  
+
+ 
+
+THIS DOCUMENT DOES NOT CONSTITUTE AN OFFER TO SELL, AN INVITATION TO            
+
+INDUCE AN OFFER, OR A SOLICITATION OF AN OFFER TO ACQUIRE SECURITIES.  
+
+ 
+
+THIS DOCUMENT IS PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DOES          
+
+NOT CONSTITUTE INVESTMENT ADVICE.  
+
+ 
+
+OUR WHITE PAPER MAY CONTAIN ‘FORWARD-LOOKING STATEMENTS’ - THAT IS,          
+
+STATEMENTS RELATED TO FUTURE, NOT PAST, EVENTS. IN THIS CONTEXT,          
+
+FORWARD-LOOKING STATEMENTS OFTEN ADDRESS OUR EXPECTED FUTURE       
+
+BUSINESS AND ORGANIZATIONAL PLANS, THE PERFORMANCE, AND       
+
+DEVELOPMENT OF THE PRIVATIX PLATFORM INTEGRATED WITH BLOCKCHAIN,        
+
+AND OFTEN CONTAIN WORDS SUCH AS 'EXPECT', 'ANTICIPATE', 'INTEND', 'PLAN',          
+
+'WILL', 'WOULD', 'ESTIMATE', 'FORECAST' OR 'TARGET'. SUCH FORWARD-LOOKING        
+
+STATEMENTS BY THEIR NATURE ADDRESS MATTERS THAT ARE, TO DIFFERENT          
+
+DEGREES, UNCERTAIN. WE CANNOT GUARANTEE THAT ANY FORWARD LOOKING         
+
+STATEMENTS, BACKTESTS OR EXPERIMENTS MADE BY US OR EXPECTED         
+
+67 
+
+
+
+ 
+
+RESULTS OF OPERATION OF THE PRIVATIX PLATFORM WILL CORRELATE WITH          
+
+THE ACTUAL FUTURE FACTS OR RESULTS.  
+
+ 
+
+ALL POTENTIAL RISKS CAN BE ASSESSED HERE       
+
+https://dxw4crzwfgmzw.cloudfront.net/site/risk-factors.pdf  
+
+ 
+
+THE SALE OF PRIX TOKENS CONSTITUTES THE SALE OF A LEGAL SOFTWARE            
+
+PRODUCT UNDER GIBRALTAR LAW. THIS PRODUCT SALE IS CONDUCTED BY          
+
+PRIVATIX TOKEN LIMITED, A GIBRALTAR LIMITED COMPANY, OPERATING        
+
+UNDER GIBRALTAR LAW. IT IS THE RESPONSIBILITY OF EACH POTENTIAL          
+
+PURCHASER OF PRIX TOKENS TO DETERMINE IF THE PURCHASER CAN LEGALLY           
+
+PURCHASE PRIX TOKENS IN THE PURCHASER’S JURISDICTION AND WHETHER         
+
+THE PURCHASER CAN THEN RESELL THE PRIX TOKENS TO ANOTHER PURCHASER           
+
+IN ANY GIVEN JURISDICTION.  
+
+ 
+
+To be used if the White Paper and other documents will be available in multiple languages: 
+
+ 
+
+FOR THE CONVENIENCE OF OUR USERS, THE PRIVATIX WHITE PAPER, WEBSITE           
+
+AND OTHER RELATED DOCUMENTS ARE AVAILABLE IN A NUMBER OF          
+
+LANGUAGES. IN THE EVENT THERE IS ANY CONFLICT BETWEEN THE ENGLISH           
+
+LANGUAGE VERSION AND A FOREIGN LANGUAGE VERSION, THE ENGLISH         
+
+LANGUAGE VERSION SHALL GOVERN. 
+
+ 
+
+10.5 RISK FACTORS 
+
+ 
+
+You should carefully consider and evaluate each of the following risk factors and all other               
+
+information contained in the Terms of Token Sale (the “Terms”) before deciding to participate in               
+
+the Privatix Token Sale (“Token Sale”). To the best of Privatix Token Ltd.’s (the “Company”)               
+
+knowledge and belief, all risk factors which are material to you in making an informed decision                
+
+68 
+
+https://dxw4crzwfgmzw.cloudfront.net/site/risk-factors.pdf
+
+
+ 
+
+to participate in the Token Sale have been set out below. If any of the following considerations,                 
+
+uncertainties or material risks develops into actual events, the business, financial position and/or             
+
+results of operations of the Company and the maintenance and level of usage of the Privatix                
+
+platform and the Privatix Tokens (“PRIX”) could be materially and adversely affected. In such              
+
+cases, the trading price of PRIX Tokens (in the case where they are listed on a cryptocurrency                 
+
+exchange) could decline due to any of these considerations, uncertainties or material risks, and              
+
+you may lose all or part of your PRIX Tokens. 
+
+ 
+
+RISKS RELATING TO PARTICIPATION IN THE TOKEN SALE 
+
+ 
+
+There is no prior market for PRIX Tokens and the Token Sale may not result in an active or                   
+
+liquid market for the PRIX Tokens  
+
+Prior to the Token Sale, there has been no public market for the PRIX Tokens. Although the                 
+
+Company will use reasonable endeavors to seek the approval for availability of the PRIX Tokens               
+
+for trading on a cryptocurrency exchange, there is no assurance that such approval will be               
+
+obtained. Furthermore, even if such approval is granted by a cryptocurrency exchange, there is              
+
+no assurance that an active or liquid trading market for the PRIX Tokens will develop or if                 
+
+developed, be sustained after the PRIX Tokens have been made available for trading on such               
+
+cryptocurrency exchange. There is also no assurance that the market price of the PRIX Tokens               
+
+will not decline below the original purchase price (the “Purchase Price”). The Purchase Price              
+
+may not be indicative of the market price of the PRIX Tokens after they have been made                 
+
+available for trading on a cryptocurrency exchange. 
+
+A PRIX Token is not a currency issued by any central bank or national, supra-national or                
+
+quasi-national organization, nor is it backed by any hard assets or other credit. The Company is                
+
+not responsible for nor does it pursue the circulation and trading of PRIX Tokens on the market.                 
+
+Trading of PRIX Tokens will merely depend on the consensus on its value between the relevant                
+
+market participants, and no one is obliged to purchase any PRIX Token from any holder of the                 
+
+PRIX Token, including the purchasers, nor does anyone guarantee the liquidity or market price              
+
+of PRIX Tokens to any extent at any time.  
+
+69 
+
+
+
+ 
+
+Furthermore, PRIX Tokens may not be resold to purchasers who are citizens or permanent              
+
+residents of, People’s Republic of China, Republic of Korea (including its territories and             
+
+possessions) or any other jurisdiction where the purchase of PRIX Tokens may be in violation of                
+
+applicable laws. Accordingly, the Company cannot ensure that there will be any demand or              
+
+market for PRIX Tokens, or that the Purchase Price is indicative of the market price of PRIX                 
+
+Tokens after they have been made available for trading on a cryptocurrency exchange.  
+
+Future sales or issuance of the PRIX Tokens could materially and adversely affect the market               
+
+price of PRIX Tokens 
+
+Any future sale or issuance of the PRIX Tokens would increase the supply of PRIX Tokens in                 
+
+the market and this may result in a downward price pressure on the PRIX Token. The sale or                  
+
+distribution of a significant number of PRIX Tokens outside of the Token Sale (including but not                
+
+limited to the sales of PRIX Tokens undertaken after the completion of the initial token sale,                
+
+issuance of PRIX Tokens to persons other than purchasers for purposes of community and              
+
+employee initiatives, affiliate (or bounty) program development, academic research, education          
+
+and market expansion and issuance of PRIX Tokens as a reward to employees and/or users of the                 
+
+Privatix platform), or the mere perception that such further sales or issuance may occur, could               
+
+adversely affect the trading price of the PRIX Tokens. 
+
+Negative publicity may materially and adversely affect the price of the PRIX Tokens  
+
+Negative publicity involving the Company, the Privatix platform, the PRIX Tokens or any of the               
+
+key personnel of the Company, may materially and adversely affect the market perception or              
+
+market price of the PRIX Tokens, whether or not it is justified. 
+
+We may not be able to pay any anticipated rewards in the future  
+
+There is no assurance that there will be any transaction volume such that you will receive any                 
+
+rewards anticipated to be distributed to active users of the Privatix platform. Further, even in the                
+
+event there is substantial transaction volume and interactions among the users and the Privatix              
+
+platform, there is no assurance you personally will receive any part of the rewards. This is                
+
+because the ability of the Company to pay any reward to you will depend on the future results of                   
+
+operations and the future business and financial condition of the Company and there is no               
+
+70 
+
+
+
+ 
+
+assurance of the future results of operations and the future business and financial condition of the                
+
+Company.  
+
+There is no assurance of any success of Privatix Platform or any Future Business Line  
+
+The value of, and demand for, the PRIX Tokens hinges heavily on the performance of the                
+
+Privatix platform. There is no assurance that the Privatix platform will gain traction after its               
+
+launch and achieve any commercial success. Although the Company has performed some testing,             
+
+including QA-testing of the Privatix platform with relatively positive results, the Privatix            
+
+platform has not been fully developed and finalized and is subject to further changes, updates               
+
+and adjustments prior to its launch. Such changes may result in unexpected and unforeseen              
+
+effects on its projected appeal to users, possibly due to the failure to meet users’ preconceived                
+
+expectations based on the beta version, and hence impact its success. Limited usage of the               
+
+Privatix platform and potential lack of trust for its crowdsourced predictive accuracy would             
+
+impact the public demand for the PRIX Tokens and correspondingly the trading price of the               
+
+PRIX Tokens. 
+
+The trading price of the PRIX Tokens may fluctuate following the Token Generation Event  
+
+The prices of cryptographic tokens in general tend to be relatively volatile, and can fluctuate               
+
+significantly over short periods of time. The demand for, and corresponding the market price of,               
+
+the PRIX Tokens may fluctuate significantly and rapidly in response to, among others, the              
+
+following factors, some of which are beyond the control of the Company: 
+
+(a) new technical innovations;  
+
+(b) analysts’ speculations, recommendations, perceptions or estimates of the PRIX Token’s           
+
+market price or the Company’s financial and business performance;  
+
+(c) changes in market valuations and token prices of entities with businesses similar to that of the                 
+
+Company that may be listed on the same cryptocurrency exchanges as the PRIX Tokens;  
+
+(d) announcements by the Company of significant events, for example partnerships,           
+
+sponsorships, new product developments;  
+
+(e) fluctuations in market prices and trading volume of cryptocurrencies on cryptocurrency            
+
+exchanges;  
+
+(f) additions or departures of key personnel of the Company;  
+
+71 
+
+
+
+ 
+
+(h) success or failure of the Company’s management in implementing business, development and             
+
+growth strategies; 
+
+(i) changes in conditions affecting the blockchain or sport technology industry, the general             
+
+economic conditions or market sentiments, or other events or factors. 
+
+The funds raised in the Token Sale are exposed to risks of theft  
+
+Further, upon receipt of the funds, the Company will make every effort to ensure that the funds                 
+
+received will be securely held through the implementation of security measures. Notwithstanding            
+
+such security measures, there is no assurance that there will be no theft of the cryptocurrencies as                 
+
+a result of hacks, sophisticated cyber-attacks, distributed denials of service or errors,            
+
+vulnerabilities or defects on the Token Sale website, in the smart contract(s), if used, on which                
+
+the escrow wallet and the Token Sale may rely, on the Ethereum or any other blockchain, or                 
+
+otherwise. Such events may include, for example, flaws in programming or source code leading              
+
+to exploitation or abuse thereof. In such event, even if the Token Sale is completed, the                
+
+Company may not be able to receive the cryptocurrencies raised and may not be able to use such                  
+
+funds for the development of the Privatix platform and/or for launching the Privatix platform,              
+
+including but not limited to the structuring and through developing of the Privatix peer-to-peer              
+
+bandwidth marketplace. In such case, the launch of the Privatix platform might be temporarily or               
+
+permanently curtailed. As such, distributed PRIX Tokens may hold little worth or value, and this               
+
+would impact its trading price. 
+
+ 
+
+RISKS RELATING TO PRIVATIX TOKEN LIMITED.  
+
+The Privatix platform is developed, operated and maintained by Privatix Token Limited. Any             
+
+events or circumstances which adversely affect Privatix Token Limited or any of its successor              
+
+operating entities (collectively referred to herein as “Privatix Token Limited”) may have a             
+
+corresponding adverse effect on the Privatix platform. Such adverse effects would           
+
+correspondingly have an impact on the utility, liquidity, and the trading price of the PRIX               
+
+Tokens.  
+
+Privatix Token Limited may be materially and adversely affected if it fails to effectively manage               
+
+its operations as its business develops and evolves, which would have a direct impact on its                
+
+72 
+
+
+
+ 
+
+ability to maintain the Privatix platform. The sport media technology and cryptocurrency            
+
+industries, and the markets in which Privatix Token Limited competes have grown rapidly over              
+
+the past years and continue to evolve in response to new technological advances, changing              
+
+business models and other factors. As a result of this constantly changing environment, Privatix              
+
+Token Limited may face operational difficulties in adjusting to the changes, and the             
+
+sustainability of Privatix Token Limited will depend on its ability to manage its operations and               
+
+ensure that it hires qualified and competent employees, and provides proper training for its              
+
+personnel. As its business evolves, Privatix Token Limited must also expand and adapt its              
+
+operational infrastructure. Privatix Token Limited’s business relies on its blockchain-based          
+
+software systems, cryptocurrency wallets or other related token storage mechanisms, blockchain           
+
+technology and smart contract technology, if used, and on machine learning and artificial             
+
+intelligence platforms. All of these systems and tools represent complex, costly, and rapidly             
+
+changing technical infrastructure. In order to demonstrate continued ability to effectively manage            
+
+technical support infrastructure for the Privatix platform, Privatix Token Limited will need to             
+
+continue to upgrade and improve its data systems and other operational systems, procedures and              
+
+controls. These upgrades and improvements will require a dedication of resources, are likely to              
+
+be complex and increasingly rely on hosted computer services from third parties that Privatix              
+
+Token Limited does not control. If Privatix Token Limited is unable to adapt its systems and                
+
+organization in a timely, efficient and cost-effective manner to accommodate changing           
+
+circumstances, its business, financial condition and results of operations may be adversely            
+
+affected. If the third parties whom Privatix Token Limited relies on are subject to a security                
+
+breach or otherwise suffer disruptions that impact the services Privatix Token Limited uses, the              
+
+integrity and availability of its internal information could be compromised, which may            
+
+consequently cause the loss of confidential or proprietary information, and economic loss. The             
+
+loss of financial, labor or other resources, and any other adverse effect on Privatix Token               
+
+Limited’s business, financial condition and operations, would have a direct adverse effect on             
+
+Privatix Token Limited’s ability to maintain the Privatix platform. Any adverse effects affecting             
+
+Privatix Token Limited’s business or technology are likely to also adversely impact the utility,              
+
+liquidity, and trading price of the PRIX Tokens. 
+
+73 
+
+
+
+ 
+
+Privatix Token Limited may experience system failures, unplanned interruptions in its network            
+
+or services, hardware or software defects, security breaches or other causes that could adversely              
+
+affect Privatix Token Limited’s infrastructure network, and/or the Privatix platform. 
+
+Privatix Token Limited is not able to anticipate when there would be occurrences of hacks,               
+
+cyber- attacks, distributed denials of service or errors, vulnerabilities or defects in the Privatix              
+
+platform, in the smart contracts, if used, or on the Ethereum or any other blockchain technology.                
+
+Such events may include, for example, flaws in programming or source code leading to              
+
+exploitation or abuse thereof. Privatix Token Limited may not be able to detect such hacks,               
+
+cyber-attacks, distributed denials of service errors vulnerabilities or defects in a timely manner,             
+
+and may not have sufficient resources to efficiently cope with multiple service incidents             
+
+happening simultaneously or in rapid succession. 
+
+Privatix Token Limited’s network or services, which would include the Privatix platform, could             
+
+be disrupted by numerous events, including natural disasters, equipment breakdown, network           
+
+connectivity downtime, power losses, or even intentional disruptions of its services, such as             
+
+disruptions caused by software viruses or attacks by unauthorized users, some of which are              
+
+beyond Privatix Token Limited’s control. Although Privatix Token Limited has taken steps            
+
+against malicious attacks on its platform or its infrastructure, which are critical for the              
+
+maintenance of the Privatix platform, there can be no assurance that cyber-attacks, such as              
+
+distributed denials of service, will not be attempted in the future, that Company’s enhanced              
+
+security measures will be effective. Privatix Token Limited may be prone to attacks on its               
+
+infrastructure intended to steal information about its technology, financial data or user            
+
+information or take other actions that would be damaging to the Company and/or holders of the                
+
+PRIX Tokens. Any significant breach of the Company’s security measures or other disruptions             
+
+resulting in a compromise of the usability, stability and security of the Privatix platform may               
+
+adversely affect the utility, liquidity and/or trading price of the PRIX Tokens. 
+
+We are dependent in part on the location and data center facilities of third parties  
+
+Privatix Token Limited’s current infrastructure network is in part established through servers            
+
+which it owns and houses at the location facilities of third parties, and servers that it rents at data                   
+
+center facilities of third parties. If the Company is unable to renew its data facility lease on                 
+
+74 
+
+
+
+ 
+
+commercially reasonable terms or at all, Privatix Token Limited may be required to transfer its               
+
+servers to a new data center facility, and may incur significant costs and possible service               
+
+interruption in connection with the relocation. These facilities are also vulnerable to damage or              
+
+interruption from, among others, natural disasters, arson, terrorist attacks, power losses, and            
+
+telecommunication failures. Additionally, the third party providers of such facilities may suffer a             
+
+breach of security as a result of third party action, employee error, malfeasance or otherwise, and                
+
+a third party may obtain unauthorized access to the data in such servers. As techniques used to                 
+
+obtain unauthorized access to, or to sabotage systems change frequently and generally are not              
+
+recognized until launched against a target, Privatix Token Limited and the providers of such              
+
+facilities may be unable to anticipate these techniques or to implement adequate preventive             
+
+measures. Any such security breaches or damages which occur which impact upon the             
+
+Company’s infrastructure network and/or the Privatix platform may adversely impact the utility,            
+
+liquidity, and/or trading price of the PRIX Tokens. 
+
+General global market and economic conditions may have an adverse impact on Privatix Token              
+
+Limited operating performance, results of operations and cash flows 
+
+Privatix Token Limited has been and could continue to be affected by general global economic               
+
+and market conditions. Challenging economic conditions worldwide have from time to time,            
+
+contributed, and may continue to contribute, to slowdowns in the information technology            
+
+industry at large. Weakness in the economy could have a negative effect on the Company’s               
+
+business, operations and financial condition, including decreases in revenue and operating cash            
+
+flows, and inability to attract future equity and/or debt financing on commercially reasonable             
+
+terms. Additionally, in a down-cycle economic environment, Privatix Token Limited may           
+
+experience the negative effects of a slowdown in trading and usage of the Privatix platform.               
+
+Suppliers on which Privatix Token Limited relies for servers, bandwidth, location and other             
+
+services could also be negatively impacted by economic conditions that, in turn, could have a               
+
+negative impact on the Company’s operations or expenses. There can be no assurance, therefore,              
+
+that current economic conditions or worsening economic conditions or a prolonged or recurring             
+
+recession will not have a significant adverse impact on Privatix Token Limited’s business,             
+
+financial condition and results of operations and hence the Privatix platform. Any such             
+
+75 
+
+
+
+ 
+
+circumstances would then correspondingly negatively impact the utility, liquidity, and/or trading           
+
+price of the PRIX Tokens. 
+
+The Company or the PRIX Tokens may be affected by newly implemented regulations  
+
+Cryptocurrency trading and token sales are generally unregulated worldwide, but numerous           
+
+regulatory authorities across jurisdictions have been outspoken about considering the          
+
+implementation of regulatory regimes which govern cryptocurrency or cryptocurrency markets.          
+
+The Company or the PRIX Tokens may be affected by newly implemented regulations relating              
+
+to cryptocurrencies or cryptocurrency markets, including having to take measures to comply with             
+
+such regulations, or having to deal with queries, notices, requests or enforcement actions by              
+
+regulatory authorities, which may come at a substantial cost and may also require substantial              
+
+modifications to the Privatix platform. This may impact the appeal of the Privatix platform for               
+
+users and result in decreased usage of the Privatix platform and the PRIX Tokens. Further,               
+
+should the costs (financial or otherwise) of complying with such newly implemented regulations             
+
+exceed a certain threshold, maintaining the Privatix platform may no longer be commercially             
+
+viable and the Company may opt to discontinue the Privatix platform and/or the PRIX Tokens.               
+
+Further, it is difficult to predict how or whether governments or regulatory authorities may              
+
+implement any changes to laws and regulations affecting distributed ledger technology and its             
+
+applications, including the Privatix platform and the PRIX Tokens. Privatix Token Limited may             
+
+also have to cease operations in a jurisdiction that makes it illegal to operate in such jurisdiction,                 
+
+or make it commercially unviable or undesirable to obtain the necessary regulatory approval(s)             
+
+or license(s) to operate in such jurisdiction. In scenarios such as the foregoing, the utility,               
+
+liquidating, and/or trading price of PRIX Tokens will be adversely affected or PRIX Tokens may               
+
+cease to be traded. 
+
+There may be unanticipated risks arising from the PRIX Tokens  
+
+Cryptographic tokens such as the PRIX Tokens are a relatively new and dynamic technology. In               
+
+addition to the risks included in the above discussion of Risk Factors, there are other risks                
+
+associated with your purchase, holding and use of the PRIX Tokens, including those that Privatix               
+
+Token Limited cannot anticipate. Such risks may further appear as unanticipated variations or             
+
+combinations of the risks discussed above. 
+
+76 
+
+

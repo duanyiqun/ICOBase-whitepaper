@@ -1,0 +1,642 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+
+
+
+Ethbet Whitepaper
+
+Version 3.0
+
+Copyright © 2017 Ethbet. All rights reserved.
+
+Table of Contents
+Abstract.............................................................................................................................................3
+
+Gambling Without a House Edge.....................................................................................................3
+
+Provable Fairness..............................................................................................................................4
+
+The Optional Player-Defined House Edge.......................................................................................6
+
+Platform Potential.............................................................................................................................6
+
+Ethbet Tokens (EBET)......................................................................................................................7
+
+Project Architecture..........................................................................................................................8
+
+Off-Chain Matchmaking...................................................................................................................8
+
+The Ethbet Protocol..........................................................................................................................9
+
+Development Timeline....................................................................................................................10
+
+Timeline..........................................................................................................................................11
+
+Future Possibilities..........................................................................................................................11
+
+Similar Projects...............................................................................................................................11
+
+Disclaimer.......................................................................................................................................13
+
+More Information............................................................................................................................15
+
+2
+
+
+
+Abstract
+Ethbet is a decentralized, peer-to-peer, and provably-fair Ethereum-based dicing game without a 
+mandatory house edge. Ethbet is able to offer bets without a house edge because players bet directly 
+against other players instead of against a centralized house. The disadvantage of this is that in order to 
+place a bet, there must be another party willing to place the same bet. For this reason it is possible that 
+a player must wait for their desired bet to take place, especially if it is very large. To combat this, an 
+additional feature of an optional player-defined house edge is added, allowing players to offer and take 
+(‘call’) bets with any house edge that they desire. Thus, a player that prioritizes speed over their 
+expected return can agree to a bet that gives him a slight disadvantage (i.e., a bet that gives his 
+opponent a small house edge). Similarly, a player that is patient and prioritizes their expected return can
+offer bets that the formerly mentioned player may choose to call. This results in a model where players 
+are effectively able to become their own casinos, allowing market forces to provide players with bets as
+quickly as possible at the best possible rates. The Ethbet protocol features an efficient off-chain 
+matchmaking relay in order to allow players to quickly and cheaply communicate their intent. The 
+protocol can also be extended to support betting using any Ethereum-based (ERC20) token and for use 
+with other games.
+
+Gambling Without a House Edge
+A house edge is a statistical bias in favor of the house, so that the house has a slight advantage in every 
+bet. House edges of various games found in physical casinos often range from 2% to 15%, with some 
+games having a low house edge (such as craps) and other games having a higher house edge (such as 
+slot machines). With the advent of online gambling using cryptocurrencies, various websites offer 
+players relatively lower house edges, such as 1%. Although 1% sounds like a low house edge, one must
+keep in mind that this house edge is applied to every individual bet. Thus, if a player only places one 
+bet, they are expected to lose 1% of it, on average. But it’s likely that most players will want to bet 
+more than just once. If a player places 100 bets, they are expected to lose 1% of each of those 100 bets, 
+making it increasingly difficult for the player to turn a profit, inevitably leading to gambler’s ruin (the 
+player running out of funds). This is how dice sites are able to consistently generate steady streams of 
+profit for their owners and investors – they slowly but surely make sure that the more people play, the 
+more likely they are to lose all of their money to the house.
+
+Betting without a house edge saves players much more than a trivial amount. Because a player’s 
+expected loss can be zero for every bet they make, they can now make hundreds or thousands of bets 
+without statistically being likely to lose more and more of their money over time. With a house edge of 
+0%, a player’s probability of gaining capital is equal to their probability of losing it – they are no longer
+making an inherently irrational decision with a negative expected gain.
+
+3
+
+
+
+Provable Fairness
+Most modern cryptocurrency dicing sites offer provably-fair betting. This is done by having a client 
+seed and a server seed. The client seed is picked by the client, often generated randomly by default. The
+server seed is picked by the server. The server then hashes its server seed using a secure cryptographic 
+hash function (such as a sha2 or sha3 function) and provides the hash to the client before their roll. 
+Then the client submits their client seed and bet information to the server, and the server combines both
+seeds, using a public algorithm to generate a random number. After the roll has been made, the client is 
+able to view the server seed that was used, and can confirm that the server did not modify the client 
+seed or the server seed, and therefore also the result of the roll. This results in a roll that is 
+mathematically impossible to bias or otherwise predict by either party, given basic assumptions 
+including that the client does not use a predictable seed, and that the hash function used is secure.
+Although this model of provable fairness is suitable for a client-server model, it cannot be performed in
+a smart contract, as the blockchain is public information and no fully-unbiased source of entropy exists.
+
+Most solutions put fourth to securely generate a random number on the Ethereum blockchain pose 
+significant downsides, as there are too many actors that are able to influence the blockchain when 
+money is at stake. For example, if the hash of the next Ethereum block was used as a source of 
+randomness, then a miner can choose to modify a block before they publish it, or can decide against 
+publishing a block altogether, depending on if it is favorable to them. Given that there have already 
+been notable instances of miners acting selfishly in a way that hurts other users, this is not an 
+acceptable solution.
+
+RANDAO1 attempts to solve the problem of untrustable miners by effectively crowd-sourcing entropy. 
+Anyone who wants to participate in RANDAO may contribute to its pool of entropy, and is 
+incentivized to do so as they are paid a small reward, which RANDAO in turn collects from those that 
+call its contract. It would take every participant to collude with one another in order to manipulate the 
+result2. Unfortunately it takes a wait time of several blocks for RANDAO to be statistically confident 
+that a miner has not manipulated its pool of entropy. RANDAO is also limited in the amount of entropy
+that it can provide per unit of time, and potentially per unit of ether.
+
+A similar algorithm called the Signidice3 algorithm is being used by early versions of DAO.Casino4, a 
+blockchain protocol designed for provably-fair gambling. Although sound from a statistical and game-
+theoretic point of view, this algorithm is computationally expensive, relatively complex, and has been 
+used less frequently in production settings. This RNG method is best implemented in a separate smart 
+
+4
+
+
+
+contract that has a large amount of participants that are unable to collude among each other. Due to the 
+complexity and amount of risks involved with this algorithm, we have chosen not to adopt it.
+
+One solution which is used by Etheroll5 and others is to use Oraclize6 and random.org7 to generate a 
+random number. Oraclize is a service that fetches external (outside of the blockchain) data for use on 
+the blockchain. Oraclize makes a call to random.org, returning the integer roll from random.org, the id 
+associated with it, and a TLSNotary proof8, showing that Oraclize did not modify the result. As the id 
+associated with the bet (returned from random.org) is supplied as well, it can be shown that Oraclize 
+only made one call to random.org for every call it was requested to make. This solution has two 
+downsides, the first being that it introduces a liability of depending on Oraclize, which is not desired. 
+The second is that random.org must be trusted to provide a secure random number. This solution is 
+currently implemented in at least one decentralized dicing game due to the lack of appealing and 
+efficient alternatives. Performing statistical analysis on the results that have been returned from 
+Oraclize via random.org, it appears that this solution has thus far succeeded (with high probability) in 
+its goal of providing a source of entropy that is unbiased. Although the previously mentioned issue of a 
+miner choosing not to publish a block if it would result in a RNG output that is detrimental to them re-
+occurs in this scenario (with Oraclize instead of the miner, however), a single instance of this occurring
+could be detected as there would be a gap in the integer IDs returned from random.org. If, 
+hypothetically, Oraclize attempted to game this system, it could only be done once before it ceases to 
+work (as they would no longer be trusted afterwards).
+
+An additional solution is currently being tested by Oraclize9. This solution involves a hardware random 
+data source that is integrated with the Ethereum network. The random bytes generated by the data 
+source are periodically published onto the Ethereum network along with a proof that they have not been
+modified. Although fully functional, it is currently only available on the testnet. When available on the 
+mainnet, this will likely become the best option to use for Ethbet’s source of randomness. 
+
+Ethbet utilizes an off-chain matchmaking relay which is further described later in this paper. For that 
+reason we’re able to offer a system of provable fairness that is similar to what is used by a traditional 
+dicing site, however is modified such that we take a seed from both players instead of just one. Both 
+players submit a random seed, and these seeds are combined with a server seed to obtain a random roll. 
+The server is able to publish its server seed after it was used as well is a hash of its server seed before it
+was used, allowing users to ensure that no party has been able to manipulate the outcome of the roll in 
+an unfair manner.
+
+5
+
+
+
+The Optional Player-Defined House Edge
+Placing bets with a house edge of 0% does not come without a disadvantage, i.e., a bet can only take 
+place if there are two parties that wish to make it. As bets are significantly more advantageous for 
+players when made with a 0% (or otherwise negligible) house edge, network effects may cause the 
+majority of players to use Ethbet, as it may be more profitable than other betting alternatives. Even 
+with this, however, it may be possible that players are not content with the amount of time they have to 
+wait between bets, especially for larger bets, which fewer players are willing to call. To solve this 
+problem, an optional feature is added: allow players to offer and call bets with a player-defined house 
+edge. 
+
+With the ability for players to offer and call bets with an arbitrary player-defined house edge, the 
+problem of large wait times for bets can now be solved with negligible downsides. Players are 
+effectively able to become their own casinos within Ethbet, setting their own house edge. As every 
+player that offers bets is competing against other players to have their bets taken, they are incentivized 
+to set their house edge as low as possible. 
+
+For example, if a player wants to make a very large bet, they may be incentivized to offer a house edge 
+to whoever calls the bet, so that they do not have to wait too long for someone to bet against them. This
+player decides to prioritize speed over their proportional expected gain.
+
+Similarly, if a player has a large amount of ETH and wishes to make a profit over time with it (with 
+high or variable probability), they can offer bets with a small house edge in their favor, making it easier
+for others to play the game while giving them a small profit over time for their service. This player is 
+providing ‘bet liquidity’ to Ethbet by acting as their own casino, and in return is rewarded with a house 
+edge in their favor.
+
+Platform Potential
+The global online gambling market is estimated to be worth over $50 billion USD by the end of 201710 
+and is forecast to grow by around 10% for years to come11. With the advent of cryptocurrencies, 
+allowing players to gamble with ease and with a lower house edge than previous options, 
+cryptocurrency gambling has already garnered a significant proportion of this market potential. A 2013 
+estimate suggests that up to 50-60% of all bitcoin transactions were related to gambling at one point12. 
+Although previously dominated by Bitcoin, Ethereum has become a major player within the 
+cryptocurrency world, offering significantly more features as well as a shorter block time and lower 
+transaction fees. As Ethereum gains more users it benefits from network effects, which are currently 
+leading many users to invest in and use Ethereum over Bitcoin, leading its market cap to increase to 
+
+6
+
+
+
+$38 billion USD in June, 201713. Although it is already possible to gamble using Ethereum, even via a 
+smart contract14, players are still faced against a house of 1% or more, which is significantly 
+detrimental even to casual players, as mentioned above.
+
+Given that Ethbet will be able to provide the most competitive house edge that the market allows for, 
+there is a possibility that it will acquire a notable proportion of the cryptocurrency gambling market 
+share, as there is no reason for a user to gamble against a house edge of 1% or higher when they can 
+instead gamble with house edges significantly lower, or possibly zero. Ethbet can allow users to bet any
+amount that is technically possible, using any house edge that they desire, potentially deprecating other 
+forms of gambling for users that wish to maximize their expected value.
+
+Bitcoin dicing sites such as PrimeDice and SatoshiDice (among many others) have reported profits of 
+millions of dollars, with SatoshiDice selling for 126,315 BTC in 2013, which was ‘only’ $11.47 million
+USD at the time15. Ethbet has significant advantages over these platforms, including that it is 
+decentralized, transparent, peer-to-peer, uses Ether over Bitcoin, and, crucially, provides the lowest 
+possible house edge. For the aforementioned reasons, the potential of a platform such as Ethbet is 
+extremely large.
+
+Ethbet Tokens (EBET)
+For the purposes of decentralization, enforcing beneficial market incentives, decentralized governance, 
+and future endeavors of Ethbet, an Ethbet token (EBET) has been created on top of the Ethereum 
+network. EBET is a standard ERC20 token, and thus is secure, easy to store, use, and trade, as wallets 
+and exchanges already have the needed technical infrastructure to interface with tokens that implement 
+the ERC20 interface. For the technical details of the ERC20 specification, see the EIP on Github16.
+
+Ethbet’s initial release uses EBET as the only supported betting currency. After this period, EBET can 
+be integrated in other ways, such as using it for fees, credit, and decentralized governance. Fees based 
+in EBET are dynamic and fluctuate based off of the bet liquidity of the platform. For example, if few 
+users are offering bets, the fee can be low or even negative, compared to a higher fee when many users 
+are offering bets. Additional experimental features can be implemented as needed to help encourage 
+market adoption.
+
+7
+
+
+
+Project Architecture
+The structure of the Ethbet code is intended to be highly modularized, clean, and secure, with the full 
+project functionality being split into several smart contracts based off of the principles of high cohesion
+and low coupling (where applicable). The contract for the crowdsale is separate from the contract for 
+the token, the contract for the game, and others. All contracts are audited and tested extensively, 
+ensuring that best practices are followed and no major bugs exist.
+
+The first implementation of the Ethbet dicing game is relatively lightweight and is intended as a fully-
+functioning proof of concept. Some types of advanced features are excluded but the basic functionality 
+remains robust and useful to its users. The primary betting currency supported is current EBET.
+
+The ability to decide the probability of winning a given bet (such as the ability of a user to set the ‘roll 
+under’ or ‘role over’ values before their roll) will not be available in the initial version of Ethbet. 
+Instead, the win and loss chance will be set to a static value of 50%. This is done for several reasons:
+
+• The original implementation should be as lightweight as possible to encourage a small codebase
+and fewer potential bugs.
+
+• The user experience should be as smooth and simple as possible, to decrease the overhead 
+involved when users use the Ethbet platform.
+
+• The market will likely have an easier time providing all types of players with a desirable 
+selection of available bets if all bets have the same risk/reward ratio.
+
+• Users are still able to manage their risk profile in an arbitrary fashion; they must instead make 
+several bets with potentially differing amounts if they desire a certain ratio of risk to reward. In 
+practice this causes the risk and reward ratio to be equivalent to one found in a variable-
+probability bet17.
+
+With that said, there is no reason why this feature cannot be implemented in some manner if the token 
+holders are in favor of it.
+
+Off-Chain Matchmaking 
+When information is stored on the blockchain, a fee must be paid (referred to as gas) in order to 
+provide an incentive for miners to include the information in the blocks that they mine. The more 
+information that one wishes to store on the blockchain, the higher the fees will be. As the blockchain is 
+immutable and must be stored by all full nodes, storing information on the blockchain is generally a 
+costly transaction, and should be avoided if possible. The blockchain is secure and decentralized, but at 
+the cost of extreme redundancy. For this reason, the blockchain is only needed when we desire a secure,
+decentralized, and immutable environment.
+
+8
+
+
+
+Offering and canceling bets on the blockchain is highly inefficient: if a player wishes to offer many 
+bets and then cancel them, they will pay high gas fees to have that information stored on the blockchain
+forever, even if the bets are never actually executed. A solution to this is to match bets off of the 
+blockchain, and then have players confirm and execute their bets by submitting them via a smart 
+contract.
+
+This is a common system used by decentralized exchanges so that every order placement and 
+cancellation does not need to be stored on the blockchain, and instead the blockchain is only used 
+where its advantages of security and immutability are highly relevant, i.e. for the actual transaction.
+
+One example of an off-chain matchmaking system is used by the decentralized exchange protocol 0x18, 
+where anyone is able to set up a ‘relay’ that allows for efficient communication of intent between 
+exchange users. Users are incentivized to set up honest relays through a fee structure that allows them 
+to profit off of providing this valuable service. Another example is the decentralized exchange known 
+as EtherDelta19, which hosts their own service that allows for this. 
+
+A system similar to this can be implemented within Ethbet: We can have a service that acts as a relay 
+and functions separate from the blockchain which allows users to signal their intent. After a match can 
+be found between the intent of two users, both users can submit their bet to a smart contract, which 
+ensures that their bet is executed fairly and securely. This matchmaking service can be hosted by 
+anyone as the code will be open-source. An official version of the service will be provided even though
+there is no obligation to use it or to use a matchmaking service at all.
+
+This system offers a significant number of improvements over a more naive implementation in which 
+all information is exchanged only via the blockchain. Aside from the significant reduction in fees for 
+users, it allows bets to be communicated significantly more quickly and makes it much easier for users 
+to cancel their bets safely. Instead of placing and canceling a bet by broadcasting and storing two pieces
+of information in the blockchain, a bet can be placed and canceled instantly and with zero fees by 
+signaling intent and then revoking this intent afterwards.
+
+The Ethbet Protocol
+The Ethbet protocol is a description of what information users need to relay to each other in order to 
+signal their intent to bet assets. This protocol is open, meaning that it can be implemented and executed
+by any actor. There is no need to use a specific website, browser, or even medium of communication, as
+the information can be exchanged via any method including email, a forum post, or a physical message.
+In addition to this, the protocol is extendable in that it can be modified for use with not just Ether, but 
+also with any ERC20 token on the Ethereum blockchain. This would allow users not only to bet with 
+each other using Ether, but also any other Ethereum-based token. The original version and deployment 
+of the Ethbet protocol will focus on Ether, leaving the option of arbitrary ERC20 token support for a 
+later period.
+
+9
+
+
+
+The Ethbet protocol closely mirrors the protocol outlined in the 0x whitepaper20, as the Ethbet protocol 
+has almost the same goal’s as 0x’s: 0x intends to allow users to exchange tokens with each other, while 
+Ethbet intends to allow users to bet tokens with each other. The following example demonstrates a 
+scenario of two users using the Ethbet protocol to make a bet with each other. In this example ‘Maker’ 
+is the user that offers a bet and ‘Caller’ is the user that accepts that offer:
+
+1. Maker approves the Ethbet contract to access their balance that they intend to wager
+2. Maker creates an offer to bet their balance, specifying their desired amount, edge and bet expiration 
+time, then signs this offer with their private key, proving both their their ownership and intent
+3. Maker broadcasts their bet via any medium. Theoretically the best place to broadcast a bet will be an 
+Ethbet relay, but there is no reason why it cannot be posted on a forum or sent via an email, as it is only
+a string (text)
+4. Caller reads the bet offer from Maker and decides they would like to call it
+5. Caller approves the Ethbet contract to access their balance as well
+6. Caller submits the Maker’s signed order to the contract
+7. The Ethbet contract authenticates Maker’s signature, verifies that the bet has not expired and that the 
+bet has not already been called
+8. The Ethbet contract executes the bet and transfers the bet amount between the two parties based off 
+of the outcome.
+
+The primary method of communication with the Ethbet protocol is intended to be via relays, as outlined
+in the previous section. The full protocol description of Ethbet is not yet finalized, but the information 
+and format of it will be relatively standard, containing the parameters of a bet (amount, edge, 
+expiration, and later on, asset type), as well as the necessary information to secure it, including a 
+cryptographic hash function like SHA3 and an ECDSA signature from the private key of the 
+participants.
+
+Development Timeline
+The Ethbet token and Ethbet crowdsale contracts are deployed on the mainnet and fully functional, as 
+necessary for the token to function properly. The code in these smart contracts is a relatively standard 
+and lightweight implementation of the ERC20 standard, and the possibility for critical bugs is small in 
+comparison to that of more complex and novel contracts, such as the primary Ethbet game contract. If a
+significant problem occurs that is recoverable, the necessary steps will be taken to remedy the situation.
+For example, if there was somehow a critical flaw in the token contract, allowing someone to steal all 
+Ethbet Tokens, we could fix the problem, deploy the new token contract (with the problem resolved), 
+and restore the balances of all users, migrating the entire platform to the newer version of the token, 
+similar to what happened with Ethereum and the DAO. An issue like this is is very unlikely to occur 
+unless it is caused by a problem within Ethereum itself, as the Ethbet token is isomorphic to most 
+
+10
+
+
+
+Ethereum (ERC20) tokens, so a critical problem with one could indicate the same problem with many 
+others.
+
+Timeline
+Q1 2017 Market research, feasibility assessment, other planning– completed
+
+Q2 2017 Website and Whitepaper – completed
+
+Q3 2017 token launch, live demo, development, community building – complete
+
+Q4 2017 Continuation of development, alpha/beta launches – partially complete
+
+Q1 2018 Full launch, playerbase building, community growth, further improvements as needed 
+
+Q2 2018+ Additional features, projects, games, advertising, and community building
+
+Future Possibilities
+As Ethereum matures as a technology, it will allow decentralized applications such as Ethbet to run 
+more efficiently. Improvements in other technologies such as Web3 browsers (Mist and the Metamask 
+extension) also help to further Ethbet’s goals. As Ethbet progresses as a project, there will be 
+opportunities for more features to be added. Examples include a more feature-rich implementation of 
+dicing, other games such as lotteries or card games, the possibility to bet arbitrary ERC20 tokens, and 
+more advances in gas/time efficiency, such as the use of state channels. In addition to this, many 
+opportunities for lowering gas costs and increasing the quality of provable fairness will exist as more 
+research and projects are performed in these areas.
+
+Similar Projects
+As the size of the blockchain and Ethereum ecosystems has grown considerably over the last few years,
+a number of projects with goals similar to Ethbet’s have emerged. Although some of these projects are 
+similar in nature, they either have different goals or are lacking some of the features of Ethbet. Some of
+these projects are summarized below, with emphasis on why they are different from Ethbet.
+
+11
+
+
+
+Edgeless: Edgelesss claims to offer betting on the Ethereum blockchain with a 0% house edge, 
+however several notable caveats exist, namely:
+
+• Edgeless claims their unreleased Blackjack game will have a house edge of 0%, but this only 
+applies if every move and game played by a player is perfect. As a result, they expect the house 
+to profit from this game21
+
+• Although Edgeless is partially decentralized (exists on the blockchain), it is not peer-to-peer
+• Edgeless does not support ETH, only their own token, EDG, thus you must purchase EDG first 
+
+to use their platform
+• Games such as Blackjack involve large amounts of data stored on the blockchain, and thus the 
+
+fees paid to execute the involved smart contracts can be high
+
+• Edgeless generates random numbers using their own server off of the blockchain
+
+• No publicly readable changes to their smart contracts appear to have been made for at least 
+several months22
+
+Regardless of these drawbacks, Edgeless may be an appealing option for those wishing to play 
+provably-fair games of blackjack on the blockchain in the near future, however we do not consider 
+them a direct competitor for our target audience.
+
+Etheroll: Etheroll was the first functioning dicing game on the Ethereum blockchain. It is similar to 
+Ethbet, however is not peer-to-peer and has a house edge of 1% for every bet. Aside from this, it 
+appears to be a successful platform and one of the only Ethereum projects that is already generating 
+revenue for token holders, making it a good model for future Ethereum-based projects to follow.
+
+DAO.Casino: DAO.Casino is a recently-funded Ethereum-based blockchain protocol. It is not a 
+gambling application in itself, however is intended to function as a framework that allows others to 
+create blockchain-based gambling with a lower overhead. DAO.Casino utilizes a token called BET, 
+which is required for all interactions using its protocol. The goals of DAO.Casino are to help casinos 
+move their games onto the blockchain and to encourage on-chain game development and participation 
+using its protocol. This differs substantially from the goal of Ethbet, which is to provide peer-to-peer 
+dicing on the blockchain with no house edge. 
+
+Peerplays: Among all other projects, Peerplays23 is the only one that markets itself based off of peer-to-
+peer interaction. Critically, Peerplays is its own currency and blockchain, completely separate from 
+Ethereum, and thus the barriers to entry are much larger. Although Peerplays boasts its own 
+
+12
+
+
+
+technologies and smart contracts separate from the Ethereum network, as a result of this is is not able to
+benefit from the network effects of the Ethereum ecosystem or from the security and reliability of the 
+Ethereum virtual machine and its associated smart contracts. In addition to this, there are no visible 
+cases of dicing without a house edge being offered on this platform.
+
+Funfair: Funfair24 is another Ethereum-based project with the ambitious goal of ‘delivering next 
+generation gaming anywhere in the world’, according to their technical whitepaper. Although Funfair’s 
+scope includes gambling games, their focus is on providing a variety of immersive and graphically 
+extensive games which are ‘fun’. To quote directly from their technical whitepaper: “We don’t want 
+just simple, boring ‘pick a number’ games. (...) they are just not fun. We are fun.”25 In order to interact 
+with games built by Funfair, one must use Funfair’s token, FUN. Funfair uses a custom off-chain 
+technology called fate channels which functions in a manner similar to Bitcoin’s proposed lightning 
+network26 and is attempting to secure patents related to this technology. Funfair claims that their 
+implementation of fate channels is provably fair, although the server-side code to it is currently not 
+open source and implementation details have not yet been made public, purportedly to allow Funfair to 
+retain a competitive advantage over other players in the field. Although an interesting project with 
+ambitious goals, their primary objectives are very different from ours.
+
+Although some of the above projects could be considered competitors to Ethbet, many of their stated 
+goals are orthogonal to ours, and just as different cryptocurrencies serve different purposes and cater to 
+different audiences, these projects are able to do so as well. For these reasons, we believe that the 
+demand for the market niche that Ethbet realizes has not yet been met by any of the above projects.
+
+Disclaimer
+There are many risks associated with the Ethbet token, just like with Ethereum.
+
+The entire Ethbet project is dependent on Ethereum; a critical issue in Ethereum could prove 
+significantly detrimental or fatal to Ethbet.
+
+13
+
+
+
+There is no guarantee or expectation that Ethbet tokens purchased will increase in value, provide a 
+return, or will have sufficient adoption and liquidity to enable exchange for other assets.
+
+There is no guarantee that blockchain technology and smart contracts, especially those related to 
+gambling, will remain legal, unregulated, and usable within your legal jurisdiction, even if they 
+presently are.
+
+Owning Ethbet tokens does not constitute a share of, equity of, or ownership of the Ethbet platform.
+
+United States citizens are not allowed to participate in the Ethbet crowdsale. Do not participate in the 
+Ethbet crowdsale if you are a resident of the United States.
+
+There are many risks, both known and unknown, that are involved with cryptographic assets, including 
+Ethereum and Ethbet tokens. These risks include but are not limited to critical bugs, security flaws, 
+difficulty scaling, denial of service, and the risk of new cryptographic breakthroughs.
+
+This document does not constitute a prospectus of any sort, and is not an Initial Public Offering or 
+Share/Equity offering. The tokens involved with Ethbet do not in any way involve any form of ordinary
+shares in Ethbet, and no dividends are guaranteed on Ethbet tokens. Fiat currency is not accepted in the 
+Ethbet crowdsale.
+
+Ethereum is an experimental technology and all possible future risks cannot be enumerated here. Ethbet
+is not responsible for any losses that may occur. Please exercise caution with all cryptographic assets 
+and do not invest money that you cannot afford to lose.
+
+14
+
+
+
+More Information
+For more information about Ethbet, or if you have any questions, please visit the Ethbet website27 at 
+https://ethbet.io/ or send an email to team@ethbet.io.
+
+15
+
+https://ethbet.io/
+
+
+1   https://github.com/randao/randao
+
+2   https://blog.ethereum.org/2015/08/28/on-anti-pre-revelation-games/
+
+3   https://github.com/gluk256/misc/blob/master/rng4ethereum/signidice.md
+
+4   https://github.com/DaoCasino
+
+5   http://crowdfund.etheroll.com/etheroll-whitepaper.pdf
+
+6   http://www.oraclize.it/#services
+
+7   https://random.org/
+
+8   http://docs.oraclize.it/#security-deep-dive-authenticity-proofs-tlsnotary-proof
+
+9   https://blog.oraclize.it/the-random-datasource-chapter-2-779946e54f49
+
+10 https://www.statista.com/statistics/270728/market-volume-of-online-gaming-worldwide/
+
+11 http://www.businesswire.com/news/home/20161006005678/en/Global-Online-Gambling-Market-Worth-USD-66.59
+
+12 http://lsvp.com/2013/08/23/at-least-half-of-all-bitcoin-transactions-are-for-online-gambling/
+
+13 https://coinmarketcap.com/currencies/ethereum/
+
+14 https://etheroll.com/ and other forks
+
+15 http://www.coindesk.com/bitcoin-company-acquisitions-begin-gambling-site-satoshidice-sells-for-11-5m-126315-btc/
+
+16 https://github.com/ethereum/EIPs/issues/20
+
+17 For example, instead of a user making a bet with a 25% win chance and a 4X payout, the user can make 2 bets with a 
+50% win chance and a 2X payout on each, resulting in the same risk to reward ratio. The equivalent can be done for those 
+who wish to risk smaller amounts, as they are able to make bets as small as feasible, dictated by network and gas fees and 
+their preferences.
+
+18 https://0xproject.com/
+
+19 https://etherdelta.github.io/
+
+20 https://0xproject.com/pdfs/0x_white_paper.pdf
+
+21 https://medium.com/edgeless/ultimate-edgeless-faq-22081ae768aa
+
+22 https://github.com/EdgelessCasino/Smart-Contracts
+
+23 https://www.peerplays.com/docs/Peerplays_Whitepaper.pdf
+
+24 https://funfair.io/
+
+25 https://funfair.io/wp-content/uploads/2017/06/FunFair-Technical-White-Paper.pdf
+
+26 https://lightning.network/
+
+27 https://ethbet.io/
+
+https://ethbet.io/
+https://lightning.network/
+https://funfair.io/wp-content/uploads/2017/06/FunFair-Technical-White-Paper.pdf
+https://funfair.io/
+https://www.peerplays.com/docs/Peerplays_Whitepaper.pdf
+https://github.com/EdgelessCasino/Smart-Contracts
+https://medium.com/edgeless/ultimate-edgeless-faq-22081ae768aa
+https://0xproject.com/pdfs/0x_white_paper.pdf
+https://etherdelta.github.io/
+https://0xproject.com/
+https://github.com/ethereum/EIPs/issues/20
+http://www.coindesk.com/bitcoin-company-acquisitions-begin-gambling-site-satoshidice-sells-for-11-5m-126315-btc/
+https://etheroll.com/
+https://coinmarketcap.com/currencies/ethereum/
+http://lsvp.com/2013/08/23/at-least-half-of-all-bitcoin-transactions-are-for-online-gambling/
+http://www.businesswire.com/news/home/20161006005678/en/Global-Online-Gambling-Market-Worth-USD-66.59
+https://www.statista.com/statistics/270728/market-volume-of-online-gaming-worldwide/
+https://blog.oraclize.it/the-random-datasource-chapter-2-779946e54f49
+http://docs.oraclize.it/#security-deep-dive-authenticity-proofs-tlsnotary-proof
+https://random.org/
+http://www.oraclize.it/#services
+http://crowdfund.etheroll.com/etheroll-whitepaper.pdf
+https://github.com/DaoCasino
+https://github.com/gluk256/misc/blob/master/rng4ethereum/signidice.md
+https://blog.ethereum.org/2015/08/28/on-anti-pre-revelation-games/
+https://github.com/randao/randao
+

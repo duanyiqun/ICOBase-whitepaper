@@ -1,0 +1,1716 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WeTrust Whitepaper Table of Contents 
+ 
+
+Abstract 
+
+Vision 
+
+Market Review 
+Trusted Lending Circle, a simple reciprocal aid organization: 
+
+WeTrust Product Ecosystem 
+
+WeTrust People Ecosystem (added after Daniel Z review) 
+
+App Token 
+App Token usage within Trusted Lending Circles 
+Scaling up Trusted Lending Circles 
+
+WeTrust Challenges and Solutions 
+
+Product Road Map/ Budget 
+Budget structure 
+
+Go to market strategy (added after Daniel Z review) 
+
+Blockchain Benefits 
+
+Potential Market Size 
+
+Technical Aspects 
+
+The first dApp - Trusted Lending Circle (aka ROSCA): 
+Why start with Trusted Lending Circle as WeTrust’s first dApp? 
+Deposits and Withdrawals 
+Trusted Lending Circle-ROSCA dApp walkthrough 
+
+Team 
+
+Glossary 
+
+Appendix 
+
+References 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+George Li, Patrick Long, Ron Merom, Tom Nash, Mivsam Yekutiel 
+
+ 
+www.wetrust.io 
+
+ 
+
+Abstract 
+ 
+WeTrust is a collaborative savings, lending and insurance platform that is autonomous, 
+agnostic, frictionless, and decentralized. WeTrust utilizes the Ethereum blockchain to create a 
+full-stack alternative financial system that leverages existing social capital and trust networks, 
+eliminating the need for a “trusted third party”, allowing for lower fees, improved incentive 
+structures, decentralized risks, allowing a greater amount of capital to reside among the 
+participants, and ultimately improving financial inclusion on a global scale. 
+ 
+WeTrust’s first product is a Trusted Lending Circle (TLC) platform, inspired by the ~1 billion 
+people around the world who are using informal TLCs or Rotating and Saving Credit 
+Associations (ROSCAs) to lend/ borrow, and support each other financially within their 
+communities. On top of Trusted Lending Circles, WeTrust plans to build future products that 
+include sovereign credit identities, trusted direct lending, mutual insurance, and more. 
+ 
+
+Vision 
+ 
+WeTrust’s vision is to leverage social capital, trust networks, and blockchain technology to             
+create a financial system that has aligned interests with all of it’s participants. 2 billion adults in                 1
+
+this world do not have a bank account and the existing financial system has many               
+contradictions. One cannot get an affordable loan without having well-paying job and good             
+
+1 ​Demirguc-Kunt, A., Leora K., Dorothe S., and Van Oudheusden, P. “The Global Findex Database 2014: 
+Measuring Financial Inclusion around the World​” (2015). 
+ 
+
+http://www.wetrust.io/
+http://paperpile.com/b/KIgdsU/AvUc
+http://paperpile.com/b/KIgdsU/AvUc
+
+
+credit, while legitimate insurance claims directly reduce an insurance firm’s profits. The            
+un-banked and un-insured are most hurt from this lack of access and misalignment of interests,               
+and are always in search of alternative financial solutions. 
+ 
+We believe that today’s banks and insurance companies play an important role in society.              
+However, in contrast to other industries where undifferentiated products result in low margins,             
+they thrive because of their important role as a “trusted third party”. Yet, our research shows that                 
+there is an alternative to this dependency on a “trusted third party”, one which can help reduce                 
+the friction necessitated by centralized intermediaries and result in a more inclusive financial             
+system where everyone has access to fair, market-priced credit and insurance.  
+ 
+A fundamental building block we plan to use in creating an alternative already exists via a                
+tradition used globally by over 1 billion people -- Trusted Lending Circles (aka Rotating and               
+Saving Credit Association or ROSCA). This grassroots organization leverages personal          
+reputation and social ties -- and draws upon 2,000 years[1] of resilience and effectiveness in               
+offering credit and insurance to communities around the world. 
+ 
+Our first product is a Trusted Lending Circle platform powered by the blockchain - one which                
+enables the creation of social safety nets that address economic uncertainty and provides             
+opportunity for growth. It is the first of a series of products that include credit identities and                 
+scores, lending, mutual insurance, and much more -- all of which leverage the untapped social               
+capital and trust networks that already exist.  
+ 
+In this whitepaper, we propose a plan to implement our vision to amplify the strengths of social 
+capital and reputation based networks, while addressing their weaknesses: scalability, fraud, 
+and lack of innovation.  
+Naturally, our products and research are always a work in progress. We welcome comments, 
+questions and ideas for improvement from our community. Please contact us ​here​ with you 
+thoughts. 
+ 
+
+Market Review 
+ 
+Social safety nets have functioned among humans for millennia since prehistoric times, starting 
+from hunter gatherer societies[2]. In modern times, there are three primary forms of social safety 
+nets: Government, Commercial, and Reciprocal.  
+ 
+Government aid can come in the form of Social Security, Unemployment, Medicare, etc...             
+Unavailable for most global citizens, government aid is also underfunded where currently            
+
+https://wetrustplatform.slack.com/messages/general/
+
+
+offered (US, countries in the EU, Japan, etc…), according to leading economists . While most              2
+
+people in developing countries already experience the lacking nature of Government Aid, many             
+in the developed countries are starting to realize that as well. 
+Commercial aid comes in the form of purchased insurance or emergency loans, and is often               
+laden with high operating costs, especially for those who need it the most. More importantly,               
+commercial aid has a shareholder-first mentality, often to the detriment of policyholders/            
+borrowers, and has a precedent of taking risks that endanger the financial system (see AIG               
+bailouts in 2008[3]). Lastly, this form of safety net is simply inaccessible to two billion adults and                 
+their dependents, ~40% of the global population. 
+ 
+The third option is Reciprocal Aid. Simply put, it is any organization where voluntary participants               
+play the role of both aid giver and receiver depending on the circumstance. They exist in many                 
+forms around the world including Rotating Savings and Credit Associations (referred to as             
+Trusted Lending Circle from here on in this document, also known by different local names               
+globally), mutual insurance groups, fraternal organizations, religious groups, and professional          
+societies. In these organizations, participants receive, by average, what they contribute over the             
+life of their membership, and self-reliance is a core attribute. Their decline in recent years is due                 
+to inability to scale efficiently, lack of transparency relative to Commercial aid, and the increased               
+role of Governmental Aid.  
+ 
+While these organizations play an important role in their respective communities and are             
+currently used by billions of people globally across developing and developed economies,            
+Reciprocal Aid is ​not a panacea. Instead, WeTrust views reciprocal aid as a critical leg to the                 
+three legged stool of protection against uncertainty, and serves a complementary role along with              
+Government and Commercial aid. Furthermore, WeTrust believes that the Social Capital and            
+Trust Networks found in traditional Reciprocal Aid organizations can be leveraged and blended             
+with characteristics found in Commercial organizations, to create entities that result in: lower             
+default rates, better rates for both savers and borrowers, lower expense ratios and lower              
+fraudulent claims for insurance.  
+ 
+Lastly, while many countries that rely upon Reciprocal Aid have low rates of financial inclusion, 
+some institutions have attempted to address the lack of financial inclusion by facilitating access 
+to outside capital via peer-to-peer lending (P2P)[4], such as those offered by ​Kiva.org​. Kiva.org 
+is a well known non-profit that has brought P2P loans to developing countries, but it’s 
+penetration and usage has been limited and is in some cases controversial[5] due to high fees, 
+multiple transaction steps, and lack of transparency. WeTrust believes there is a way to improve 
+financial inclusion via a reciprocal aid approach that is transparent, requires low fees, and 
+promotes sustainable growth.  
+ 
+ 
+
+2 ​Fischer, W. and Sard, B. “Chart Book: Federal Housing Spending is Poorly Matched to Need”. ​Center on Budget and Policy 
+Priorities​  (2016); Biggs, A. “Are State and Local Government Pensions Underfunded by $5 Trillion?” ​Forbes ​ (2016); Cohen, R. 
+“Congress Debates and then Grossly Underfunds Federal Safety-Net Programs”. ​NonProfit Quarterly​  (2015). 
+
+https://www.kiva.org/
+
+
+Trusted Lending Circle, a simple reciprocal aid organization: 
+ 
+Savings and lending is a foundational building block of modern society, serving as both funds in                
+times of financial need and fuel for funding economic growth. Access to capital can have impact                
+of historical proportions. Without access to capital, Columbus’s expeditions to the Americas may             
+not have occurred, and perhaps nor would the subsequent explorations of the “New World”.              
+Without proper financing mechanisms, neither the Industrial Revolution nor the tech boom in             
+Silicon Valley would have spread at such rapid speed. Both national and local economies are               
+affected by the ease or difficulty to access capital.  
+ 
+For thousands of years, people around the world have created mechanisms within the             
+communities to save money, lend and borrow from each other and create financial safety nets.  
+ 
+One of the most widespread communal financial institutions in the developing world are Trusted              
+Lending Circles. 
+A Trusted Lending Circle is “a group of individuals who agree to meet for a defined period in                  
+order to save and borrow together, a form of combined peer-to-peer banking and peer-to-peer              
+lending.”[6] Trusted Lending Circles are commonly built along clan, geographical, social, or            
+professional networks. In countries around the world, these organizations have a variety of             
+different names such as: ​susus ​(Ghana/ Caribbean Islands), ​tandas (Latin America), ​hui            
+(China), ​chit funds​  (India), ​cundinas​  (Mexico), etc...[7]  
+ 
+Here is an example of the detailed mechanics of a Trusted Lending Circle in action​: 
+ 
+
+ 
+
+
+
+ 
+Figure1.1: Trusted Lending Circle mechanics in a single round 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Here is an example of the detailed mechanics of a Trusted Lending Circle running through a full                 
+epoch. 
+
+
+
+ 
+Figure1.2: Trusted Lending Circle mechanics in a full Epoch 
+
+ 
+In a Trusted Lending Circle, i​ndividuals contribute a fixed amount for a set duration at regular                
+intervals, and the money is distributed each interval to individuals via a lottery, a bidding               
+process, or other method as decided by participants (the example above shows bidding,             
+whereas a lottery is a random selection). Some researchers claim that these groups produce              3
+
+results where all participants are individually better off[8] (or no more worse off) than not               
+participating in the group (pareto efficient[9]). 
+Each Trusted Lending Circle has a foreperson, who is organizing the Circle and is responsible               
+to collect funds from all participants. Trusted lending Circles are created among people with              
+close and trusting relationships and social capital is the driving force for continuous             
+participation. 
+ 
+
+3 ​Agegnehu, B.,Karantininis, ​K., and ​Li, F​.​“​Are there Financial Benefits to Join RoSCAs? Empirical Evidence from Equb in Ethiopia”. ​Procedia 
+Economics and Finance ​ 1, ​229-238 (2012). 
+ 
+
+http://www.sciencedirect.com/science/article/pii/S2212567112000275#
+http://www.sciencedirect.com/science/article/pii/S2212567112000275#
+
+
+Trusted Lending Circles have their own set of pros and cons compared to modern banking               
+institutions: 
+Some advantages include: 
+
+● Reduced interest rates that are spread between savers and borrowers.  
+● Communal proprietorship – a financial institution that’s owned by its users. 
+● Group saving has been shown to be more effective in achieving individual            
+
+savings goals due to accountability - akin to group exercise programs 
+● Lack of bureaucracy, less fraud, lower default rates, and non-profit motive for the             
+
+platform 
+ 
+Community benefits from using Trusted Lending Circles: 
+
+● Facilitates reciprocation of credit disbursal. The give-and-take interaction helps         
+increase social bonds, as borrowing and returning money is a significant sign of             
+trust.  
+
+● Avoids exorbitant interest and fees that are funneled towards fragile centralized           
+institutions thousands of miles away, and keeps capital within the community,           
+encouraging growth in the local economy 
+
+● Encourages community participation in other fields of development – the          
+participatory approach of informal initiatives is easily replicable to a wide range of             
+community development issues. 
+
+ 
+Disadvantages of Trusted Lending Circles 
+
+● Informal groups are sub-scale and difficult to increase in size due to the need for               
+in-person interaction - resulting in less efficient lending supply/demand matching. 
+
+● Informal groups have zero tracking or credit-building outside the immediate          
+organization, therefore no additional financial products can be built on top of            
+one’s successful credit history interacting with a siloed Lending Circle. 
+
+● High setup and handling fees charged by state-run Lending Circles (e.g., 5% flat             
+fee plus additional interest to access credit is typical in India; Kerala State             
+Company employs thousands and has billions in operational costs[10]) 
+
+ 
+ 
+
+WeTrust Product Ecosystem 
+ 
+WeTrust is developing a novel financial platform powered by social capital, trust networks, 
+blockchain technology, and includes Trusted Lending Circles, Trusted direct lending, mutual 
+insurance and community-based building of credit history. 
+ 
+WeTrust’s first product​ is the Trusted Lending Circle, a platform for Rotating Savings and 
+Credit Associations (ROSCA), which consists of a smart contract which automates the savings 
+and lending process. This encompasses contributions, bidding, assigning funds at the end of 
+
+
+
+each round, and withdrawing funds. We plan to package this within a mobile web application 
+which an individual can use to manage their participation in one or multiple Trusted Lending 
+Circles. The product has built-in network effects, and incentivizes users to invite trusted 
+associates, which helps seed the network. We believe group based borrowing and lending 
+provides greater social incentives for all participants[11], and a customizable framework allows 
+groups to operate according to their particular needs and circumstances. 
+A Trusted Lending Circle uses technology to ​amplify the strengths and address the 
+shortcomings of traditional ROSCAs by enabling scalability, automating record keeping, and 
+reducing the potential for fraud. 
+ 
+In parallel​ ​ with developing Trusted Lending Circles, we will also integrate the use of 
+stablecoins. These tokens have the transactional qualities of cryptocurrencies and are critical for 
+widespread adoption as they are pegged one to one with fiat currencies and resistant to 
+day-to-day volatility. Our end goal is to have users be able to use our platform without having to 
+understand the underlying complexity.  
+ 
+WeTrust’s second product ​is distributed, sovereign credit identities. Credit identities will be 
+created based on several factors: adherence to Lending Circle terms and the quality of tethered 
+social media accounts. Responsible individuals will be able to build up a strong credit identity, 
+which will enable greater trustworthiness and eventually more powerful features such as the 
+ability to vouch for other members and potentially build trust with individuals formerly outside 
+their social circle. In addition, upon request, credit identities could be shared with external 
+entities (such as traditional banks) to show proof of credit history. Identity is a critical component 
+that enables Lending Circles to scale and become larger savings groups, thus enabling 
+improved credit supply/demand matching and better interest rates for the marketplace. 
+ 
+WeTrust’s third product​ is a Trust Network Powered Lending and Borrowing platform that 
+connects borrowers and savers, and allows for direct loans with minimal fees. 
+ 
+This product is different from existing market solutions due to our ability to leverage the credit 
+identities created previously, the concept of trust inference (social graph), legal contracts and 
+deterrents, and loan guarantees where trusted members vouch and earn fees for taking on 
+reputation risk and partial responsibility for others’ loans. While this concept is in the early 
+stages of development, prior WeTrust products form the foundation that enables a more 
+insightful way to quantify risk and create proper checks/ balances that deter against potential 
+fraud, so that lending and borrowing can extend beyond one’s immediate social circle in a safe 
+and efficient manner. 
+ 
+WeTrust’s fourth product ​is a Mutual Insurance platform which involves smart contracts that 
+evaluate whether or not a set of non-subjective criteria was met (i.e. a drought, or low rainfall) 
+and pay out accordingly. As all criteria for payouts would be public and governed by smart 
+contracts, the process will require minimal fees. However, there are many forms of insurance 
+that do require detailed auditing and reviews. For these, WeTrust plans to create a mechanism 
+
+
+
+that enables a decentralized process flow which incentivizes both policyholders and auditors to 
+arrive at fair outcomes and payouts with significantly reduced friction. Although the insurance 
+platform benefits from the existence of large Trusted Lending Circles, participation in those 
+groups will not be required for individuals to join a mutual insurance pool.  
+ 
+
+WeTrust People Ecosystem ​(added after Daniel Z review) 
+There are four essential parties in the WeTrust ecosystem: General Users, Sponsors, and 
+Forepersons. We want to ensure Trustcoins is used properly to incentivise these actors to 
+behave in a way that fosters growth and integrity on the system. These roles are not mutually 
+exclusive, and one can wear any or all of these hats.  
+
+● General Users use any of our services such as ROSCAs, credit scoring products, or 
+insurance services. Users are WeTrust’s number one focus, as they determine the 
+success of the platform. They provide feedback on how to improve, and help understand 
+how to improve the product. They evangelize and help create the network effect to help 
+the platform grow cost efficiently. 
+
+● Sponsors support the overall development of the platform by participating in the initial 
+crowdsale, bug bounties, and provide feedback on how the product can be improved. 
+
+● Forepersons: The organizer, evangelist, advocate, and product expert on the ground 
+working with users of the WeTrust Platform. We depend on the Foreperson to educate, 
+recruit, enforce and coordinate groups. In the ROSCA context, forepersons are allowed 
+to set their fee rate for the ROSCAs they organize.  
+
+App Token 
+ 
+In the spirit of crowdfunding, Trustcoin (TRST) tokens are the currency for services performed 
+by WeTrust as well as other service providers in the WeTrust ecosystem. The coin is a reward 
+to any actor that ​facilitates​  trust and is paid by any actor that ​uses​  the Trust Network. Market 
+forces and Supply and Demand will dictate the amount of “Trustcoin” per transaction.​ ​WeTrust 
+plans to generate fees in TRST from products such as Trusted Lending Circles, Trusted Direct 
+Lending, and Mutual Insurance in order to support development costs.  
+ 
+
+App Token usage within Trusted Lending Circles 
+
+In the case of our first product, Trusted Lending Circle, while the lending circle itself may be 
+managed in any currency the group chooses (e.g. ETH, BTC, stablecoins, Trustcoin, etc...), the 
+services rendered by the foreperson are paid for using TRST tokens. 
+ 
+While creating a Trusted Lending Circle, the foreperson defines the fee in [% of total pot] that 
+
+
+
+they want to charge, and they get remunerated in TRST. Here is how it’s done: 
+Consider the following example: a 5 participant, $100 contribution per person Trusted Lending 
+Circle, a 2% fee (defined by the foreperson) + 0.3% platform fees  would come down to 5 * $100 4
+
+* 2.3% = $11.5 per round. The platform fees are to support WeTrust’s operations and future 
+product development. 
+ 
+At the end of every round, when fees are secured from the contributions, TRST coins will be 
+automatically bought in the exchanges and be held in escrow by the Trusted Lending Circle 
+contract. When the epoch ends, the foreperson’s fees, as well as WeTrust’s, are released to 
+them in TRST. 
+ 
+Note that while participants will be able to use the cryptocoin of their choice to run Trusted 
+Lending Circles, WeTrust will charge a significantly lower fee for Circles that use TRST as the 
+unit of value, due to the operations being more streamlined. Future products, such as credit 
+scores, mutual insurance, and direct lending, will also involve fees that are represented in 
+TRST. 
+ 
+TRST as collateral in the absence of reputation 
+In a Trusted Lending Circle, the foreperson receives their full fees only if there were no 
+delinquencies. When some participants are delinquent, the foreperson gets penalized by 
+reducing the fees that they earn. 
+ 
+To increase the the participants’ confidence in the foreperson’s abilities to gather a group of 
+trusted associates, the foreperson may put down a collateral, in TRST, that will be distributed to 
+good-standing participants in case of delinquencies.  
+As WeTrust builds additional products that involve other roles in the network, they may also be 
+incentivized to put down collateral in order to perform services (e.g., insurance claims agent). 
+ 
+Trusted Lending Circle fee schedule 
+The preliminary Trusted Lending Circle Fee schedule for Forepersons and WeTrust is as 
+follows: 
+
+● Forepersons set a fee quoted in Trustcoin (equivalent to 0-5% of distributions) 
+○ In every round, fees are deducted for contributions already secure (adjusting for 
+
+delinquencies), converted to TRST (by buying from the market) and reserved for 
+foreperson. This further incentivizes the foreperson to collect all contributions. 
+
+○ At end of an Epoch (i.e. after everyone wins a round), the contract releases the 
+TRST reserved to the foreperson. 
+
+○ To further increase the the participants’ confidence in the foreperson’s abilities 
+(e.g. in the case they don’t know her well beforehand), the foreperson may 
+
+4 ​Note that, in the future WeTrust may offer forepersons the ability to select an alternative fee structure, where only those who 
+receive interest payments in excess of their deposits are charged a fee on the interests received. 
+
+
+
+choose to put down a collateral, in TRST, that will be distributed to good-standing 
+participants in case of delinquencies.  
+
+ 
+● WeTrust plans to charge 0% fees for small Trusted Lending Circle groups of 5 people or 
+
+less 
+○ For groups larger than 5 people, a tier-based, fee schedule will be used. Initial 
+
+fees start at 0.3% for running operations and future product development.  The 5
+
+0.3% fee will be reduced for a given foreperson’s Trusted Lending Circles as 
+cumulative transaction volumes increase on the Trusted Lending Circles they 
+manage. 
+
+○ WeTrust is also exploring other fee structures that forepersons can select, such 
+as charging fees on the amount of distribution that is in excess of contributions. 
+
+ 
+
+Scaling up Trusted Lending Circles 
+Trusted Lending Circles are built on trust and familiarity. A mechanism to scale up an existing 
+Trusted Lending Circle, while maintaining trust between its participants is suggested in this 
+scenario:  
+Suppose a group of people run successful Trusted Lending Circles multiple times and have trust 
+in one another. Another person they know less, and thus trust less, wants to join and benefit 
+from this existing group. WeTrust’s product will allow the new participant to join in a “saver-only” 
+mode, where they will be able to collect their funds only in the last round (with any additional 
+interest received during the running of the Trusted Lending Circle). 
+In this case the group gets a guarantee that the newcomer will pay on time, whereas the 
+newcomer relies on the group past reputation of paying on time. 
+ 
+
+Trustcoins allocation: 
+
+Prior to reaching a steady state where platform resources can be supported through fees, a               
+token sale may be utilized to acquire necessary funds to build out the platform. Subsequently,               
+the WeTrust team expects to utilize funds in the following areas: 
+ 
+
+● Research.​ This includes research in mathematics, game theory, statistical and actuarial 
+models, and computational simulations that will ensure that the proper incentives are in 
+line for all parties. 
+ 
+
+● Software Development.​ This includes budgets for software development, smart 
+contract development, security reviews and developing a seamless user experience. 
+
+5 ​ ​This number was determined according to current models. WeTrust may change this later depending on market conditions.  
+
+
+
+ 
+● Business Development​: This includes expenses for building partnerships with NGOs, 
+
+forming and growing Trusted Lending Circle communities, and hiring community 
+managers to help evangelize around the world. 
+
+ 
+● Marketing​: This includes all expenses related to: Educating the public about our 
+
+platform, travel and admission expenses to blockchain conventions, sponsoring 
+blockchain events / conferences / hackathons, driving users to our platform, developing 
+the WeTrust brand, and relaying our message to Trusted Lending Circle users. 
+
+ 
+● External Costs.​ This includes the token sale structure, security audits, tax/ legal 
+
+advisory, regulatory compliance, bug bounties and other fixed costs (office spaces, 
+telecommuting equipment) associated with technology and development. 
+
+ 
+100 Million Trustcoins (TRST) will be issued once the crowdsale is concluded. Of the 100 Million 
+Trustcoins: 
+
+● 80 Million Trustcoins will be sold to the token sale participants 
+● 10 Million Trustcoins will be reserved for the WeTrust team (vesting over 2 years) 
+● 8 Million Trustcoins will be used to future expenses, marketing, additional team members 
+● 2 Million Trustcoins will be used for token sale bounties 
+
+ 
+ 
+ 
+
+WeTrust Challenges and Solutions 
+
+WeTrust offers a novel and innovative product, and faces diverse challenges. WeTrust            
+platform’s first product is a Trusted Lending Circle on the blockchain, and this will help bootstrap                
+the community and social graph. Next, WeTrust’s credit scoring algorithm will allow basic             
+Trusted Lending Circles to scale and grow/merge with Trusted Lending Circles that have             
+common connections/trust circles. As such, a large and growing user base is the foundation for               
+future WeTrust products, such as lending and mutual insurance. ​Key challenges to growth             
+include: accessibility, usability and cryptocurrency volatility, anti-fraud measures, and         
+defensibility of the platform.  
+
+Addressing accessibility and cryptocurrency volatility through Stablecoins: The MVP         
+version of Trusted Lending Circles currently supports usage of Ether and is built on Ethereum,               
+as it is currently the most mature blockchain to implement smart contracts. Trustcoin and              
+additional tokens such as stablecoin will be supported in the future as well.  
+
+Stablecoins are crypto-tokens whose value is tied to a fiat currency, which we believe is               
+required to gain mass adoption. In addition, users do not want to deal with cryptocurrency               
+
+
+
+volatility. Several stablecoins are under development or are in active usage, including            
+MakerDAI​, ​String Labs Phi​, and ​Tether​. ​Colu and ​Waves also are working on projects that               
+enable the support of digital tokens that are linked to fiat value. WeTrust will integrate               
+stablecoins into its platform as it is critical for large scale adoption and is an important step in                  
+abstracting blockchain/ cryptocurrency from customers​. 
+
+Addressing fraud through incentives and legal measures: A critical foundation of security            
+and well-designed incentives are required in any financial ecosystem that intends to deter bad              
+actors. Governance tools such as legal contracts, collateral risk, loan guarantees, mediation,            
+and more will be available for each organization to utilize as they see fit. See more information                 
+here​. 
+
+ 
+
+Addressing defensibility through open and close source strategy: WeTrust operates in an            
+open-source and decentralized economy, where much of the technology stack is public and             
+auditable by the community. In this spirit, advantages developed within businesses and            
+technology will be openly shared with the community. However, in order to ensure sustainability              
+in our ability to continue dedicating resources to improving the platform, we will open-source the               
+smart contract to keep WeTrust products transparent and secure and close-source the frontend             
+to create a barrier to simply forking the project.  
+
+ 
+
+Product Road Map/ Budget 
+
+The BTC and ETH raised during crowdfunding will be used by Finclusion Labs to build out the 
+WeTrust Platform products Trusted Lending Circles, Credit Identity and Reputation, Trusted 
+Direct Lending, and Mutual Insurance.  
+ 
+The amount of financing received would vary significantly between the minimum and the 
+maximum financing (cap). The roadmap is a full vision to be completed if the cap is reached.  
+WeTrust should be considered an R&D project involving bleeding-edge technologies.  
+ 
+Although the progress we have already made while developing the Trusted Lending Circle MVP 
+proves the validity of utilizing blockchain to create decentralized and scalable digitized financial 
+entities, there is significant work ahead. The WeTrust team is fully committed but the roadmap 
+and pace of development is also dependant upon the level of success achieved from the 
+crowdfunding.  
+ 
+
+https://makerdao.github.io/docs/
+http://string.technology/
+https://tether.to/
+https://www.colu.com/
+https://wavesplatform.com/
+
+
+In the minimum financing scenario, basic versions of Trusted Lending Circles, Credit Identity, 
+and Direct Lending/ Borrowing will be created. The ultimate deliverable is enabling users to 
+create and find ‘circles of trust’ that can be relied upon as a fair marketplace for access to credit.  
+ 
+The maximum financing scenario enables delivery of a much more advanced version of the 
+above products, and also enables creation of more sophisticated payout terms that resemble 
+insurance. Close integrations with ongoing blockchain efforts, and investment into global 
+partnerships will also enable maximum distribution of the services we create. This then enables 
+a virtuous cycle where the fees generated on the platform will be expected to support the efforts 
+made by Finclusion Labs, as well as our ability to make grants to organizations that have a 
+similar vision. Finally, if the funding cap is reached in the crowdfunding, the WeTrust team will 
+also be able to create specific integrations useful to the entire community.  
+ 
+ 
+WeTrust Roadmap is the following, however the timing will depend on the amount of funds that 
+are raised in the crowdsale. The Roadmap below assumes a fundraising amount near the 
+maximum amount; detailed features vs funding documentation is within the whitepaper 
+ 
+Functionality vs 
+Funding   
+
+products min financing (+) additional features (++, +++) 
+
+Trusted Lending 
+Circle 
+
+Q2-Q4’17 
+- support of ETH, BTC, TRST 
+- integration with status.im 
+- dashboarding to manage participation in 
+more than 1 Trusted Lending Circle 
+- fees implemented for foreperson and 
+WeTrust 
+- develop built-in legal contracts for select 
+jurisdictions 
+- develop ability to use digital collateral 
+
+- built-in legal contracts for majority of 
+jurisdictions (++) Q4’17 
+- co-signing to extend credit and trust (++) 
+- support usage of stablecoins (++) Q1’18 
+- build apis and sdks that enable 
+developers to design custom organizations 
+built on Lending Circle foundation (++) 
+Q2’18 
+- support merging of ROSCAs related by 
+weak ties (++) Q3’18 
+- multiple winners per ROSCA round (++) 
+Q3’18 
+ 
+
+Credit Identity 
+
+Q1-Q3’18 
+- develop simple algorithm for basic credit 
+scoring, based on account information, 
+ROSCA participation 
+- users decide whether to keep information 
+private, or share with approval 
+- integrate credit identity with efforts 
+ongoing (e.g., uPort) 
+
+ 
+- advanced reputation system 
+incorporating off-chain activities (++) Q4’18 
+
+Direct Lending/ 
+Borrowing 
+
+Q2’18-Q4’18 - support usage of stablecoins (++) Q4’18 
+
+
+
+- develop simple marketplace for lending 
+products 
+- incorporate features/capabilities 
+developed for Trusted Lending Circle 
+
+- bounties marketplace for unfulfilled 
+contracts and agreements for regions with 
+weak legal frameworks (+++) Q4’18 
+- advanced loan guarantees (jr/sr debt) to 
+extend credit and trust (++) Q1’19 
+- enable physical collateral (+++) Q1’19 
+ 
+
+Mutual Insurance 
+Q1’19-Q3’19 
+- basic insurance product, with payout rules 
+enforced by participants 
+
+ 
+- organizational management tools to 
+facilitate nuanced decision making (e.g., 
+messaging, voting) (++) Q4’19 
+- open platform for open source actuarial 
+tables based on insurance product, region, 
+etc... (+++) Q4’19 
+- design and implement claims process 
+using 3rd party auditor mechanism (+++) 
+Q1’20 
+
+   
+
+Legend   
+
+(+) min 1000 BTC (~$1M)  
+
+(++) midpoint 3500 BTC (~$3.5M)  
+
+(+++) max 6000 BTC ($6M)  
+
+Note: ​dates for min financing scenario are shown per product, dates for additional features are 
+shown per line item  
+
+Budget structure 
+ 
+
+ 
+ 
+WeTrust Team ​consists solely of employment costs. We assume that with maximum financing 
+we will be able to finance a team up to 20 people (mostly developers) for a period of 4 years.  
+ 
+
+
+
+Office and indirect costs​ includes costs of offices in San Francisco Bay Area, as well as other 
+indirect, employment-related costs.  
+ 
+Contractors​ ​covers all third parties we will need to work with. This includes security audits, 
+legal, and accounting services.  
+ 
+Community, Marketing, and Partnerships ​are related to WeTrust’s expansion plan. This 
+includes both communication and marketing efforts to get new communities involved, supporting 
+(financing or co-financing) third party integrations with WeTrust, and building partnerships with 
+external partners that WeTrust depends on for customer acquisition, and building brand equity.  
+ 
+Contingency fund ​​is calculated as ~10% of the total budget  
+ 
+
+Go to market strategy (added after Daniel Z review) 
+
+Immediately following a successful crowdfunding event, the WeTrust team will get on the 
+ground and publicize our prototype (​rosca.WeTrust.io​) to immigrant communities in the Silicon 
+Valley, and collaborate with NGOs who facilitate Lending Circles. WeTrust has secured a 
+contractual relationship with ​growmyfuture.org​ who has a strong presence in the bay area and 
+strong connections with other NGOs, with whom we plan to build partnerships. This represents 
+the phase where we refine our product based on customer use, interaction and feedback.  
+Refining our product with bay area immigrant communities is ideal because they are both 
+technologically savvy, yet also know of the traditions back home and most of their parents have 
+participated in these lending circles before. Concurrently, we will also be incorporating the use 
+of other tokens (various stablecoins under development) to alleviate concerns regarding 
+volatility.  
+ 
+After refining our product after collaborating with NGOs in the US, we plan to expand globally 
+and work with their overseas branches in India, Africa, etc… Partnering with NGOs such as 
+Gates Foundation will provide credibility to our product due to brand equity of NGOs who have 
+built a strong presence in our target communities. Michael Casey (advisor at MIT’s Digital 
+Currency Initiative) is on our team and has strong ties to NGOS - specifically Financial Inclusion 
+organizations globally - and we will collaborate with his organization to accelerate development. 
+
+Blockchain Benefits 
+
+Why choose the blockchain as infrastructure?  
+
+A blockchain-based financial-social platform reduces the friction (high fees, low liquidity,           
+accounting records, potential fraud from organizers) and automates an existing concept already            
+
+https://rosca.wetrust.io/
+http://growmyfuture.org/
+
+
+proven in communities worldwide. We foresee that blockchain technology will impact the            
+financial sectors in the following core areas: 
+
+1. Efficiency and Automation​. Smart contract technology enables end-to-end automation         
+of payments, efficient risk model estimation, and decentralized claims processing. This           
+substantially lowers operating costs. 
+ 
+
+2. Greater Access for the Underbanked/Underserved. A more connected world will          
+enable those in developing markets, low-income businesses, and new product verticals           
+to leapfrog into cutting edge technology. For example, in Kenya, M-PESA[12] has            
+created a simple banking system on feature phones, completely bypassing the need for             
+brick and mortar bank branches.  
+
+ 
+3. All-Inclusive Digital Identity. Digital identities on Blockchains create opportunities for          
+
+individuals to transact across international borders without the hassles of conflicting           
+governance.  
+ 
+
+4. Transparency. ​On most blockchains, transparency is a platform-level feature. All data in            
+a smart contract based system is publicly auditable and can be freely analyzed by third               
+parties, while preserving privacy as required.  
+
+ 
+5. Experimentation. ​With open source code, permission-less usage, wide array of          
+
+customization options, and ease of accounting, groups of trusted associates can           
+experiment and create unique structures/rules according to their circumstances. Groups          
+with a common cause, ranging from university alumni groups, volunteer groups, veterans            
+associations, social activists, political groups, religious groups, etc… can use a simple            
+app to leverage and engage their respective communities with tangible financial impact.  
+
+ 
+
+Rotating Savings and Credit projects outside of the blockchain  
+
+Several companies have tried to create tools and software similar to a Trusted Lending              
+Circle, including eMoneyPool, Puddle, Monk, and Savemates. However, these solutions          
+integrate with the traditional banking system, and require the use of bank accounts, which are               
+typically only usable within a single jurisdiction. Some other drawbacks include:  
+
+● Most current participants of Trusted Lending Circles do not have access to banking             
+services, which are a prerequisite to these tools and software 
+
+● Existing software providers prevent savers from earning a return on their deposit. This             
+shortcoming takes away from the spirit of the Rotating Savings and Credit group, which              
+thrives on the supply/demand dynamic that benefits both savers and borrowers. 
+
+● Smaller markets and jurisdictions suffer from lack of attention and do not benefit from              
+
+
+
+these apps that are being developed.  
+
+By building a decentralized application on the blockchain, we are able to eliminate costs              
+associated with transfers to/from bank accounts, and can reach populations who do not have              
+access to bank accounts. The application can be used in any jurisdiction, and Trusted Lending               
+Circles can be formed among trusted associates across borders. This enables the creation of a               
+more accurate social graph and trust inference data that can be used for a safer and rewarding                 
+experience for users. Lastly, unlike existing solutions, the WeTrust dApp is decentralized, funds             
+are controlled by the users, and each Trusted Lending Circle can determine their own rules for                
+distribution, maximum interest rates, and policies according to their local needs and traditions. 
+
+ 
+
+Potential Market Size 
+ 
+To estimate the potential market size for a financial-social platform one needs to take 
+into account the different community-based financial infrastructure in play globally 
+today, and future demands that might arise due to the emergence of WeTrust as an 
+alternative financial solution. 
+ 
+The global ROSCA ​and informal banking industry is responsible for money flows over 10% of 
+GDP in many countries, despite significant handling/transaction costs. An estimated >$500B 
+flow through Trusted Lending Circle type groups each year, ​as detailed below​. 
+In addition, social capital powered Trusted Lending Circles have potential compete in consumer 
+loans, where the US market represents over $3.2 Trillion in outstanding consumer credit[13]. 
+Globally, the P2P Lending market is growing rapidly and has a market size of over $70B/ year 
+(also, ​detailed below​). Finally, WeTrust plans to deliver insurance services built on the Trusted 
+Lending Circles, which can be seen as the foundation for a mutual insurance framework. The 
+insurance industry[14] generated over $1.1 Trillion in premiums in the United States in 2015.  
+ 
+ 
+ 
+
+
+
+ 
+
+ 
+Figure 2: A conservative estimate of the ROSCA-Trusted Lending Circles and P2P lending markets size 
+
+globally.  
+ 
+
+  
+India: ​Formal banking institutions reach only ~15% of the population, and over $200 B is               
+distributed via regulated and unregulated ROSCAs, known as Chit Funds, where over 15,000             
+are registered entities, with a significantly larger unregulated Chit Fund sector[15]. Fees range             
+from 5-10% of distribution, with thousands employed in the industry[16] and scams costing over              
+$10B in recent years[17]. P2P lending is still in its infancy with over 30 companies[18] currently                
+offering competing services. 
+ 
+China: ​A vast amount of lending is conducted via informal networks, with tech enabled P2P               
+lending exceeding $60B/ yr[19] and conservative estimates of overall unregulated lending at            
+over $2T/ year with at least 5% going through ROSCA-like entities and Lending Circles[20].  
+ 
+Latin America: ​Trusted Lending Circles are used across Mexico (​cundinas​ ), Brazil (​pandeiros​ ),            
+Peru, and Argentina. Estimates of informal bank lending volumes exceed $150B/ yr[21]. 
+ 
+USA: ​while accurate estimates are not available, anecdotal evidence shows 50-80% of recent             
+immigrants from Latin America[22], Asian and West Indies communities participate in some form             
+
+
+
+of informal lending and Trusted Lending Circle type arrangements[23]. ROSCAs and Trusted            
+Lending Circles have transaction volume exceeding $30 B/ yr and online P2P lending exceeds              
+~$10 B / yr[24].  
+ 
+ 
+According to the 2015 ​FDIC National Survey of Unbanked and Underbanked Households,[25]            
+7.0% of households in the United States were unbanked in 2015. This proportion represents              
+approximately 9.0 million households. An additional 19.9% of U.S. households (24.5 million)            
+were underbanked, meaning that the household had a checking or savings account but also              
+obtained financial products and services outside of the banking system. 
+ 
+In general, there is increasing interest in alternative financial companies in the United States, as               
+evidenced by Lemonade Insurance company in New York City (​lemonade.com​), a P2P            
+insurance company that recently raised $13m in Aug 2016 and an additional $34m in Dec               
+2016[26]. 
+ 
+ 
+
+Technical Aspects 
+ 
+WeTrust is characterized by three key operational pillars: ​autonomous, frictionless and 
+decentralized. 
+ 
+Autonomous​: Smart contracts run the business logic autonomously, and we will utilize these             
+features for fast, secure and reliable processing of the detailed product processes. This will              
+reduce the friction currently observed due to the numerous fees and operation costs imposed by               
+middlemen, such as financial institutions.  
+ 
+Unlike existing centralized platforms and services, WeTrust’s transactions are publicly verifiable,           
+viewable, self-operated, and not subject to the risk of mishandling by organizers. Our system is               
+a finite-state machine. Each transaction (i.e. create a fund, contribute, bid, and disburse...) will              
+transform the system to a defined and predictable state. Our smart contract functions do not               
+produce non-deterministic behaviors.  
+ 
+Frictionless​: Traditional Trusted Lending Circle processes have been cumbersome and          
+manual, resulting in high fees, and occasional fraud in the Lending Circle industry. The WeTrust               
+platform focuses on delivering good and friendly experiences to our end-users and developers.             
+We design and build an abstraction layer on top of the underlying blockchain so that developers                
+and customers do not even know they are running on decentralized servers and blockchain              
+technology. Furthermore, we introduce SDK's in different programming languages to help users            
+integrate with our platform, create and manage funds easily. Here is an example of how one                
+could create a Trusted Lending Circle fund in JavaScript: 
+
+https://www.lemonade.com/
+
+
+ 
+
+ 
+var​ TrustedLendingCircle ​=​ ​require​(​'TrustedLendingCircle'​); 
+var​ options ​=​ ​{ 
+    name​:​ ​'example1'​, 
+    startDate​:​ ​2016​-​10​-​10​, 
+    endDate​:​ ​2016​-​11​-​10 
+}; 
+var​ fund ​=​ TrustedLendingCircle​.​initFund​(​options​); 
+fund​.​addUser​(​TrustedLendingCircle​.​findUser​(​'#abc'​));​ ​// User #abc is a member of TrustedLendingCircle platform 
+fund​.​addForeperson​(​TrustedLendingCircle​.​findUser​(​'#xyz'​)); ​// User #xyz is a member of TrustedLendingCircle         
+platform 
+fund​.​start​(); 
+ 
+Decentralized​: Traditional online businesses with centralized structures are subject to hacking           
+and onerous overhead costs. Decentralized fund management, auction arbitration, contribution          
+tracking, and distribution of funds enables elimination of reliance on payment processors,            
+reduces costs associated with fees and bureaucracy, and protects against fraud. Building on top              
+of an Ethereum platform, our entities are based on ‘Smart Contracts’. The detailed architecture              
+of the platform is further described in the diagram below. 
+ 
+
+ 
+ 
+
+Figure 3: Trusted Lending Circle (TLC) dApp Architecture 
+ ​User:​ A smart contract that stores the user’s information and history of Trusted Lending Circle the user participates 
+in. These records will help determine the credit score of the user and/or match him/her with available public Trusted 
+Lending Circle funds. ​Proxy-Controller:​ A smart contract to manage users of the Trusted Lending Circle platform 
+
+and their interactions with the Funds. This contract mostly contains authentication and authorization logic as well as 
+permissions management. ​TLC-Fund:​ A smart contract that store all the states of a Trusted Lending Circle fund 
+
+(e.g., Foreperson, members, term, conditions, status, contributions) and contain business logic to operate the fund 
+(e.g., manage the contribution, bidding and disbursement) 
+
+ 
+ 
+
+Security 
+Since users’ hard earned money is at stake, security is treated with the highest priority at 
+WeTrust. In order to ensure that underlying smart contracts that move funds are secure and 
+working as intended, the WeTrust team commits to subjecting its platform to a comprehensive 
+security audit and bounty programs prior to launching the platform to the public. We will hire the 
+
+
+
+most reputable security experts to conduct security audits prior to our public launch, release all 
+results of the audit and fix any flaws that are identified. 
+ 
+In addition, WeTrust will build a dedicated server to monitor all transactions on our platform 
+anonymously. This server will detect and address suspect behaviors and fraudulent activities. 
+Alert notifications will be automatically set up and will alert developers around the world to fix 
+any known incidents. 
+ 
+Sybil Attack Prevention 
+Because WeTrust is a community-based platform that relies on its users' performance in 
+products such as Trusted Lending Circles and P2P lending to generate credit scores, it is 
+important for us to preserve the integrity of the scores by thwarting Sybil Attacks from 
+automatically created fraudulent accounts. It would be detrimental to our platform if one person 
+created fake profiles and Trusted Lending Circles to generate a legitimate credit score. WeTrust 
+offers some potential solutions:  
+
+1. Require users to provide identity information from off-blockchain sources such as: 
+Facebook, Twitter, or Cell Phone (activated through two-factor authentication).  
+
+2. For each account, we will allow a limited number of “free” Trusted Lending Circle funds. 
+Any additional Trusted Lending Circles will require a small fee. Further, Trusted Lending 
+Circles will be required to be of a minimum size. This would require individuals with 
+malicious intent to actually contribute into a fund and pay the service fees.  
+
+ 
+  
+
+ 
+ 
+
+The first dApp - Trusted Lending Circle (aka ROSCA): 
+ 
+The WeTrust Trusted Lending Circle is powered by smart contracts and blockchain technology.             
+This savings and credit platform allows users to lend and borrow from each other at               
+self-determined interest rates with minimal friction. The immediate purposes that the WeTrust            
+Trusted Lending Circle will serve:  
+ 
+
+● As an affordable path for the two billion “unbanked” to obtain and track savings & credit 
+● Create a competitive alternative asset class for savers  
+● Facilitate group savings as a more effective way to reach individual saving goals​ [27] 
+
+ 
+This product will serve multiple audiences. The main audiences are a) the unbanked who need               
+access to credit and b) those who do have access to formal financial institutions, but desire                
+alternative solutions to saving and credit.  
+ 
+
+
+
+Why start with Trusted Lending Circle as WeTrust’s first dApp? 
+
+Marketplaces can succeed if there is a balance between supply and demand and critical mass               
+is required from day one if users are to find usefulness in the WeTrust Platform. This begs the                  
+inevitable “chicken and egg problem” in which a strong network is essential before users join               
+and vice versa. To overcome this problem, we believe a Trusted Lending Circle product is the                
+ideal vanguard dApp as it facilitates network effects and leverages existing networks/ behavior             
+norms.  
+ 
+Product design: high level summary 
+When users first visit the Trusted Lending Circle (ROSCA) dApp, they would be prompted to               
+create an account. After this they can create a ROSCA in which they are the foreperson and                 
+invite participants (e.g., via whatsapp, email), or join a ROSCA they were invited to. Invitees are                
+also required to create an account before they can join a ROSCA and become active               
+participants. It should be noted that both parties (forepersons and participants), must access the              
+dApp using a compatible browser, which is connected to funded Ethereum accounts. 
+ 
+Once a ROSCA has been created, and participants have joined, the foreperson can deploy the               
+ROSCA smart contract onto the blockchain. This action solidifies the details of the ROSCA, and               
+no further edits can be made after this point. Once the smart contract has been deployed, the                 
+foreperson can begin the ROSCA on or after the predefined start date. 
+ 
+Both participants and foreperson participate in the ROSCA by submitting transactions to the             
+contract. These transactions take the form of starting the round (foreperson only), contributions,             
+bids and withdrawals. Each transaction must originate from the address with which the user              
+joined or created the ROSCA. ROSCA participants are able to see a complete list of these                
+transactions, up to and after the end of the Trusted Lending Circle-ROSCA epoch. 
+
+Deposits and Withdrawals 
+
+Users will deposit from their own wallet to the unique address of the ROSCA smart contract                
+during each round. Any withdrawals are initiated with a transaction, and sent to the address               
+which originated said transaction. 
+ 
+
+Trusted Lending Circle-ROSCA dApp walkthrough 
+ 
+The following is a walkthrough of the Trusted Lending Circle-ROSCA MVP as of whitepaper              
+publication date, and will be updated in the future. This represents a proof of concept, and the                 
+UI/ UX will undergo continuous improvement based on community feedback and input.  
+ 
+
+
+
+The current Trusted Lending Circle product will be accessible through the web. Upon visiting the               
+site, users will be presented with an explanation about what a Trusted Lending Circle is, and                
+how the blockchain brings advantages to traditional Trusted Lending Circles. Once logged in,             
+users are presented with their dashboard, which consists of three lists of ROSCAs: ROSCAs              
+they have created; ROSCAs they have joined as a participant; and ROSCAs they have been               
+invited to. 
+ 
+
+ 
+Figure 4: Trusted Lending Circle-ROSCA Dashboard 
+
+ 
+ 
+
+ 
+‘​ Create a ROSCA​ ’​ : If you want to organize and create a Trusted Lending Circle​ for you and                 
+your friends, start here. We will call the initiator the ‘foreperson’. Creating a new Trusted               
+Lending Circle allows the foreperson to specify the terms of the Trusted Lending Circle, detailed               
+as follows: 
+ 
+
+1. ROSCA ​Name:​ This is a​ name given to identify the Trusted Lending Circle, for ease of                
+use. 
+
+2. Number of Participants:​ The number of other participants that the foreperson is going             
+to invite. After entering this number, fields appear where the user can enter the email               
+addresses of the other participants. 
+
+
+
+3. Payment Frequency:​ The frequency of the payments made by all participants. In the             
+future we plan to open this up to be more flexible. Each round lasts for the amount of                  
+time specified here (e.g. a weekly payment frequency would result in week-long rounds). 
+
+4. Payment Amount:​ The amount in Ether which all participants must contribute each            
+round. The MVP supports only Ether, WeTrust is planning to enable use of other tokens               
+in the future 
+
+5. Start Date: The date on and after which the ROSCA can be started. It should be noted                 
+the ROSCA must be deployed at least three full days before this date, to protect against                
+blockchain timestamp discrepancies. 
+
+ 
+Figure 5: Trusted Lending Circle Creation Form. 
+
+ 
+ 
+ 
+After clicking ‘Create’, the user is prompted to select one of their connected Ethereum accounts               
+with which they will participate in the Trusted Lending Circle. 
+
+
+
+ 
+Figure 6: Account Select 
+
+ 
+ 
+
+Viewing a ROSCA​: Clicking on the name of a ROSCA that a user is either hosting or a                  
+participant in will show the detailed view of that ROSCA. 
+ 
+Joining a ROSCA​: Clicking on a ROSCA that you have been invited to will bring you to a                  
+similar view to Figure 7 below. Users will be presented with an option to join the ROSCA, and                  
+prompted to select an account with which to participate, similar to Figure 6. 
+
+
+
+ 
+Figure 7: ROSCA View 
+
+ 
+1. ‘Deploy​ ’: Deploys the ROSCA to the blockchain. This action is only available to the              
+
+foreperson, and will prompt a transaction which creates the ROSCA smart contract. 
+2. ‘​Edit this ROSCA​ ’: Allows the foreperson to change any details of the ROSCA, including              
+
+inviting extra users and removing existing participants. This option is only available prior             
+to the user deploying the ROSCA. 
+
+ 
+After deploying the ROSCA and reaching the defined start date, the foreperson is given an extra                
+option ‘​Start ROSCA​ ’ which will begin the first round of the ROSCA. 
+ 
+After the ROSCA has been deployed and at least one round has been started, another view is                 
+presented which aims to summarise as much necessary information as possible. 
+ 
+
+
+
+ 
+Figure 8: Active ROSCA View 
+
+ 
+1. ‘​Contract​’: The address of the deployed ROSCA contract. This is a link to the relevant               
+
+contract page on Etherscan.io. 
+2. ‘​Participants Up to Date​’: A list of participants who have contributed their share to the               
+
+ROSCA to date. 
+3. ‘​Lowest Bid​’: The user who currently holds the lowest bid, and the amount of their bid. 
+4. ‘​Participants Not Up to Date​’: A list of participants who have not contributed their share               
+
+to the ROSCA to date. 
+5. ‘Contribute’​: Opens a popup, which details how much the user has left to contribute this               
+
+round, and allows the user to enter an amount to contribute. Multiple contributions can              
+be made per round. 
+
+6. ‘​Withdraw​’: Allows the user to withdraw any positive balance they have in the contract.              
+Positive balance can come from many things, including but not limited to:            
+over-contributing, winning a round and receiving a round discount. 
+
+7. ‘​Bid​’: Opens a popup, which details the current lowest bid (if any), how much the user is                 
+allowed to bid at the current time, and which allows the user to enter an amount to bid.                  
+Multiple bids can be made per round. 
+
+8. ‘​Next Round​’: Foreperson only. Allows the foreperson to advance the ROSCA to the             
+next round. Only visible when the next round is ready to start. 
+
+ 
+
+
+
+As well as the summary of the current round at the top of the page, each user is able to see the                      
+ROSCA history, which details most events, including contributions, bids, withdrawals, and who            
+won the ROSCA round. 
+ 
+
+ 
+Figure 9: ROSCA History 
+
+ 
+
+Team 
+ 
+Core members have deep expertise in entrepreneurship, engineering, business development,          
+finance, compliance, and marketing.  
+ 
+Core Members 
+George Li​ ​| ​co-founder, Product 
+George is an ex-Googler who previously co-founded CottonBrew, a Stanford StartX computer vision and              
+ecommerce company. Prior, he held roles in Corporate Strategy and Infrastructure at Google, and was a                
+consultant at McKinsey. He holds a M.S in Management Science Engineering from Stanford and B.S. in                
+Electrical and Computer Engineering from Rutgers University. 
+ 
+
+https://www.linkedin.com/in/ligeorge
+https://www.linkedin.com/in/ligeorge
+https://www.linkedin.com/in/ligeorge
+
+
+Patrick Long, CPA​ ​| ​co-founder, ​ Strategy & Operations 
+Patrick previously worked in Finance at RMS, and Ernst and Young in Assurance Services where he earned                 
+his CPA. In his spare time, he manages a crypto-currency fund raised from friends and family and is always                   
+scouting for new opportunities. He holds a B.A. in Economics from UC Berkeley.  
+ 
+Ron Merom​ | ​co-founder, ​ CTO 
+Ron previously worked at Google as a Software Engineer, where he specialized in voice recognition,               
+emerging markets and social interactions. Ron is passionate about blockchain technology and wants to use               
+his technical expertise to make a social impact on the lives of those less fortunate. He holds a M.Sc. in                    
+Computer Science from the Weizmann Institute of Science and a B.Sc. in Computer Science and               
+Environmental Science from The Hebrew University. 
+ 
+An Zheng | ​Principal Engineer  
+An previously worked at Sandora as a Senior Software Engineer. An holds a M.S. and B.S. in Systems                  
+Engineering from a highly ranked, world renowned university. 
+ 
+Tom Nash​ ​| ​Front-end Developer 
+Tom previously worked at Hydrant as a Web Developer, but recently has taken a sabbatical to travel the                  
+world and work on freelancing. He is a quick learner, an ambitious individual who is passionate about                 
+blockchain, capable of taking on any task thrown at him, and wants to create social impact through                 
+technology. He holds a B.S. in Computer Science from Lancaster University.  
+ 
+Shine Lee | ​Smart Contract Developer 
+Shine is a entrepreneur at heart. After graduating from UC Davis about a year ago, he created his own                   
+Ethereum mining farm which generates enough passive income for him to be self-employed. He joins               
+WeTrust as a developer working on Solidity smart contracts and brings his cryptocurrency domain              
+experience. He holds a B.S. in Computer Science from UC Davis.  
+ 
+Mivsam Yekutiel, Ph.D​ | ​Research and Global Partnerships Manager  
+Mivsam ​has Ph.D. in Quantum Chemistry from the Otago University in New Zealand and did some post-doc                 
+work in renewable energy at Tel Aviv University. In the last 20 years, teaching and volunteering has always                  
+been a part of Mivsam’s life and she cares deeply about the social impact she has as a person. 
+ 
+Leon Di​ | ​Product Marketing Manager 
+Leon Di has 9 years of experience in Silicon Valley technology firms in Hardware Engineering and                
+Technology Marketing roles. As a Product Manager, he has managed accounts with Intel, Apple, and other                
+major tech companies. He holds MS and BS degrees in Electrical Engineering. 
+ 
+Maggie Deng​ | ​Head of Business Development 
+Maggie is a Statistical Programmer (​8 years at Amgen and Novartis​ ) with a love for entrepreneurship. While                 
+working full time at Amgen, she founded a Precious Metals Trading company which provided wholesale               
+services for banks in China. Maggie holds a B.A. in Finance and M.S. in Economics from the State                  
+University of New York at Buffalo.  
+ 
+Justin Zheng​ | ​Marketing Associate  
+Justin is a marketing guru. He was one of the marketing masterminds behind FirstBlood.io’s record breaking                
+$6 million crowdfunding campaign that was completed in less than 15 minutes. We welcome him as part of                  
+our marketing machine to make WeTrust known to the greater public. 
+
+https://www.linkedin.com/in/patrick-long-cpa
+https://www.linkedin.com/in/patrick-long-cpa
+https://www.linkedin.com/in/ligeorge
+https://www.linkedin.com/in/patrick-long-cpa
+https://www.linkedin.com/in/ronmerom
+https://www.linkedin.com/in/ligeorge
+https://www.linkedin.com/in/tom-nash-4a3435a9
+https://www.linkedin.com/in/tom-nash-4a3435a9
+https://www.linkedin.com/in/tom-nash-4a3435a9
+https://www.linkedin.com/in/mivsam-yekutiel
+https://www.linkedin.com/in/maggie-deng-bbb18a14
+https://www.linkedin.com/in/justin-zheng-961983117
+
+
+ 
+Jessica Aharonov​ | ​Graphic Designer 
+Jessica is a graphic designer with extensive experience in branding, editorial design, and motion graphics. 
+She created Arodesign Studio, an international graphic design agency that has worked on projects spanning 
+the globe, including United States, Singapore, UK and New Zealand. 
+ 
+ 
+ 
+
+Advisors 
+ 
+Emin Gün Sirer​ | ​Security Advisor  
+Emin Gun is an Associate Professor in Cornell whose r​esearch spans operating systems, networking and 
+distributed systems. He is an outspoken member of the hacker community (​@el33th4xor​), runs a technology 
+blog called ​Hacking Distributed​ that questions current practices, and is a co-director at ​IC3​, The Initiative for 
+Crypto-currencies and Contracts. He holds a B.S.E. in Computer Science from Princeton University and a 
+Ph.D. in Computer Science from the University of Washington.  
+ 
+Michael Casey​ | ​Public Relations Advisor 
+Michael Casey is a Senior Advisor for the Digital Currency Initiative at MIT's Media Lab and a partner at 
+Agentic Group. A writer and researcher in the fields of economics, finance and information technology, most 
+of Casey's career was spent as a journalist at the ​Wall Street Journal. ​  He has authored four books, 
+including ​The Age of Cryptocurrency,​  which he co-wrote with Paul Vigna. He holds a B.Comm from the 
+University of Western Australia and an M.A. in Asian Studies from Cornell University.  
+ 
+Michael Hexner​ ​| ​Business Strategy Advisor 
+Michael Hexner is a seasoned entrepreneur and investor with over 40+ years of experience running 
+companies in both the retail and technology space (Wheel Works, SmartPillars, Fundamental Capital, etc.). 
+He is an expert in creating businesses from scratch by identifying real world problems and creating a crystal 
+clear vision to lead his organization. He holds a B.S. in Political Theory from Williams College and a  M.S. in 
+Conflict and Dispute Resolution from Creighton University. 
+ 
+Benedict Chan​ | ​Blockchain Advisor 
+Benedict is the Platform Lead at BitGo and has vast experience in creating blockchain and wallet platforms. 
+He created Ether.Li - first multi-signature web wallet. Ben advises the team on smart contracts, wallets, and 
+security matters. He holds a B.S. in Computer Science from University of New South Wales, Australia.  
+ 
+Fennie Wang​ ​| ​Legal Advisor 
+Fennie works at MONI Limited as General Counsel and was previously an associate at Wilmer Hale. She is 
+passionate about microfinance and tools that address financial inclusion. She holds a B.S. in Business 
+Administration and Legal Studies from UC Berkeley and a J.D. from Columbia University. 
+ 
+Daniel Cawrey​ | ​Marketing Advisor 
+Daniel previously worked at Velocity as Chief Communications Officer and ZapChain as Chief Operating 
+Officer. He brings marketing and strategy expertise from years of experience running crypto-currency 
+projects. He holds a B.S. in Information Science from Central Michigan University. 
+
+https://www.linkedin.com/in/arodesign/en
+https://www.cs.cornell.edu/people/egs/
+https://twitter.com/el33th4xor?lang=en
+http://hackingdistributed.com/
+http://www.initc3.org/
+https://www.linkedin.com/in/michaeljohncasey
+https://www.linkedin.com/in/michael-hexner-a2a3048
+https://www.linkedin.com/in/bencxr
+https://www.linkedin.com/in/fennie-wang-3323061
+https://www.linkedin.com/in/fennie-wang-3323061
+https://www.linkedin.com/in/daniel-cawrey-0a515320
+
+
+ 
+
+Glossary  
+● Rotating Credit and Savings Association (ROSCA): Also known as a Trusted Lending            
+
+Circle, a ROSCA is a group of individuals who act as an alternative financing institution               
+through regular contributions and withdrawals from a common fund. The name Rotating            
+Credit and Savings Association, comes from the type of transactions that occur in these              
+associations in which members contribute on a regular basis (e.g., once a month) and              
+are allowed a chance at the pot each contribution period.  
+
+● Epoch: ​A full cycle of contributions, where the Epoch timeframe is equal to  
+○  [# of participants ]* [regular contribution interval] 
+
+For example, if there are 6 members, and the contribution is weekly, then one Epoch is                
+equal to 6 weeks. Typically a member wins the pot once in each Epoch. 
+
+● Foreperson​: The Foreperson is the individual who initiates the ‘ROSCA Fund’. It is this              
+person who will input the fund’s specifications, input contact information, and be            
+responsible for educating participants about the process, and eventually make sure the            
+contributions are made. 
+
+● Foreperson Fee​: This is the agreed upon rate that the group wants to pay the               
+Foreperson for organizing the group.  
+
+● Platform Fee: ​This is the fee that will be collected by the platform to cover operational                
+costs and development costs, with excess fees going to grants, scholarships, and other             
+non-profit pursuits.  
+
+ 
+
+Appendix  
+ROSCAs Around the World 
+ 
+Trusted Lending Circles-ROSCAs have existed for many years now. In Japan, the earliest 
+records of ROSCA - with contributions in money - date back as far as 1275[28], in Korea they 
+may even go back to the 9th century[29]. 
+ROSCAs are currently popular in regions where there are a lack of sophisticated investment              
+options and where there is difficulty in accessing loans through formal institutions -- typically              
+because credit scores either do not exist or do not play a meaningful role in an individual’s                 
+financial health. In India and China for example, it is common for alumni from a common                
+university, colleagues from the same company, or simply friends from the same city to create               
+informal ROSCAs as a way to save and invest. Research indicates that informal ROSCAs have               
+similar or lower default rates for loans when compared to formal institutions, and offer              
+competitive returns on investment for savers. ROSCAs are increasingly also being used to             
+
+
+
+address the continuing phenomenon of low interest rates and uncertain strength of centralized             
+institutions.  
+ 
+Trusted Lending Circles exist in various incarnations around the world. Here are some             
+examples: 
+
+● As “​Chit Funds​ ”: In ​India​, each State has a regulatory agency for “​Chit Funds​ ” that are                
+responsible for setting rules such as: maximum fees, capital reserve requirements, fund            
+registration, insurance/ bonded requirements, etc. ​Kerala State Financial Enterprise is a           
+government-owned ROSCA fund of Kerala State and is one of the largest funds in India.               
+They employ over 6,000 employees and in fiscal 2015, have substantial operational            
+costs. Currently, financial enterprises in India are large and sophisticated; however,           
+WeTrust believes our technology can reduce costs, yet still preserve transparency,           
+compliance with regulators, and safety. ​[5,10] 
+
+● As “​Tanda​ ”: In Latin America and ​United States​, particularly amongst the migrant            
+worker community from Latin America, workers are employing this group saving concept            
+to help save for their retirement. According to Jeffrey Cheung, President and CEO of              
+OneCalifornia Bank, “[​Tandas​ ] really does hit on the fundamental of lending. Is the             
+person you are lending money to someone you can trust? Someone who is honorable,              
+someone who you think will pay you back?"[30] "[​Tandas​ ] are a worldwide phenomenon             
+for poor people whose access to capital is limited. [​It​ ] easiest way to do it is to pool your                   
+resources," said ​Carlos Vélez-Ibáñez​, Anthropologist at Arizona State University[31]. 
+
+● As “​Hui​ ” or “​Shadow Banks​ ”: Earliest mention of Hui is found in the Han Dynasty[1].               
+Since the Tang Dynasty in ​China, during the spread of Buddhism, the Chit fund tradition               
+also spread from India. Currently, there is a booming “shadow banking” sector in which              
+over $14.5 trillion yuan ($2.2 trillion dollars) are managed informally. This equates to             
+roughly a quarter of all total loans originating in China and is worrying regulators              
+because these loans are often highly leveraged and borrowers are typically less            
+credit-worthy. Again, similar to the case in India, China is another huge market that will               
+benefit from the transparency, auditability and safety the Blockchain can provide[32,33]. 
+ 
+
+Risk Disclosure for Trustcoin crowdsale 
+ 
+Last Updated Feb 22, 2017 
+ 
+WeTrust RISK DISCLOSURE DOCUMENT - RISKS ASSOCIATED WITH Trustcoin AND 
+THE WeTrust NETWORK 
+ 
+This document does not constitute an offer or solicitation to sell shares or securities in 
+Finclusion Labs, Inc. or any related or associated company.  
+Any such offer or solicitation would be made only by means of a confidential offering 
+memorandum, which this is not, and in accordance with the terms of all applicable securities 
+
+http://www.ksfe.com/mainnew.htm
+
+
+and other laws. None of the information or analyses presented are intended to form the basis for 
+any investment decision, and no specific recommendations are intended. Accordingly, this 
+document does not constitute investment advice or counsel or solicitation for investment in any 
+security. This document does not constitute or form part of, and should not be construed as, any 
+offer for sale or subscription of, or any invitation to offer to buy or subscribe for, any securities. 
+Finclusion Labs, Inc. expressly disclaims any and all responsibility for any direct or 
+consequential loss or damage of any kind whatsoever arising directly or indirectly from: (i) 
+reliance on any information contained in this document, (ii) any error, omission or inaccuracy in 
+any such information or (iii) any action resulting from such information. 
+ 
+WeTrust Token, ("Trustcoin"), is a cryptographic token used by the WeTrust network, operated 
+by Finclusion Labs, Inc. (the "Company"). 
+Trustcoin IS NOT A SECURITY AND THIS IS NOT AN OFFER TO SELL A SECURITY. 
+Trustcoin IS NOT AN INVESTMENT AND SHOULD NOT BE PURCHASED AS AN 
+INVESTMENT. 
+If you purchase Trustcoin you certify that you are doing so out of a desire to use or consume 
+Trustcoin on the WeTrust network, to participate in the WeTrust community, or to attempt to 
+personally generate any consideration by using Trustcoin on the network or in the community. 
+You certify that you are not purchasing Trustcoin for any speculative, investment or other 
+financial reasons. 
+Trustcoin is not a cryptocurrency of value. At the time of this writing, Trustcoin (i) cannot be 
+exchanged for goods or services, (ii) has no known uses outside the WeTrust network, and (iii) 
+cannot be traded on any known exchanges. 
+There is no guarantee – indeed there is no reason to believe – that the Trustcoin you purchase 
+will increase in value. Trustcoin MAY – AND LIKELY WILL – DECREASE IN VALUE.  
+Trustcoin is not evidence of ownership in, or right to control, the Company or the WeTrust 
+network. 
+ 
+Holding or using Trustcoin does not grant you ownership or equity in the Company or the 
+WeTrust network. Trustcoin does not grant any right to participate in the control, direction or 
+decision-making of the Company or the WeTrust network. 
+ 
+1) Risk of Losing Access to Trustcoin Due to Loss of Credentials 
+The purchaser’s Trustcoin may be associated with a WeTrust account until it is distributed to the 
+purchaser. The WeTrust account can only be accessed with login credentials selected by the 
+purchaser. The loss of these credentials will result in the loss of Trustcoin. Loss of credentials 
+associated with any third party and or digital wallet containing and or controlling Trustcoin will 
+result in loss of Trustcoin. Best practices dictate that purchasers safely store credentials in one 
+or more backup locations geographically separated from the working location. 
+ 
+2) Risks Associated with the Ethereum Protocol 
+Trustcoin and the WeTrust network are based on the Ethereum protocol. As such, any 
+malfunction, unintended function or unexpected functioning of the Ethereum protocol may cause 
+
+
+
+the WeTrust network or Trustcoin to malfunction or function in an unexpected or unintended 
+manner. Ether, the native unit of account of the Ethereum Protocol, may itself lose value, which 
+could have a negative impact on the functioning of the WeTrust network. More information 
+about the Ethereum protocol is available at http://www.ethereum.org. 
+ 
+3) Risks Associated with Purchaser Credentials 
+Any third party that gains access to the purchaser’s login credentials or private keys may be 
+able to dispose of or misappropriate the purchaser’s Trustcoin. To minimize this risk, the 
+purchaser should guard against unauthorized access to their electronic devices. 
+ 
+4) Risk of Unfavorable Regulatory Action in One or More Jurisdictions 
+Blockchain technologies have been the subject of scrutiny by various regulatory bodies around 
+the world. The functioning of the WeTrust network and Trustcoin could be impacted by one or 
+more regulatory inquiries or actions, including, but not limited to, restrictions on the use or 
+possession of digital tokens like Trustcoin, which could impede or limit the development of the 
+WeTrust network. 
+ROSCAs and facilitating Trusted Lending Circles is a core business of the Company, have 
+been, and will likely continue to be, the subject of scrutiny by various regulatory bodies around 
+the world. The legal ability for the Company to operate the WeTrust network in some or all 
+jurisdictions could be eliminated by future regulation or legal actions. In the event that it is not 
+legal for the WeTrust network to operate in a jurisdiction, the Company will cease operations in 
+that jurisdiction. There is a serious risk that the Company will be unable to operate if regulation 
+makes it difficult to do so. 
+ 
+5) Risk of Alternative, Unofficial WeTrust Networks 
+Following the presale and the development of the initial version of the Trustcoin platform and 
+WeTrust network, it is possible that alternative networks could be established, which utilize the 
+same open source code and open source protocol underlying the WeTrust network. The official 
+WeTrust network may compete with these alternative, unofficial Trustcoin-based networks, 
+which could potentially negatively impact the WeTrust network and Trustcoin. 
+ 
+6) Risk of Insufficient Interest in the WeTrust Network or Distributed Applications 
+It is possible that the WeTrust network will not be used by a large number of businesses, 
+individuals, and other organizations and that there will be limited public interest in the creation 
+and development of distributed applications. Such a lack of interest could impact the 
+development of the WeTrust network and therefore the potential uses or utility of Trustcoin. 
+ 
+7) Risk that the WeTrust Network, As Developed, Will Not Meet the Expectations of the 
+Purchaser 
+The WeTrust network is presently under development and may undergo significant changes 
+before release. Any expectations regarding the form and functionality of Trustcoin or the 
+WeTrust network held by the purchaser may not be met upon release for any number of 
+reasons, including a change in the design and implementation plans and execution of the 
+
+
+
+WeTrust network. 
+ 
+8) Risk of Theft and Hacking 
+Hackers or other groups or organizations may attempt to interfere with the WeTrust network or 
+the availability of Trustcoin in any number of ways, including, but not limited to, denial of service 
+attacks, Sybil attacks, spoofing, smurfing, malware attacks, or consensus-based attacks. 
+ 
+9) Risk of Security Weaknesses in the Trustcoin network Core Infrastructure Software 
+The WeTrust network consists of open-source software that is itself based on open-source 
+software. There is a risk that the Company  team or other third parties may intentionally or 
+unintentionally introduce weaknesses or bugs into the core infrastructural elements of the 
+WeTrust network interfering with the use of or causing the loss of Trustcoin. 
+ 
+10) Risk of Weaknesses or Exploitable Breakthroughs in the Field of Cryptography 
+Advances in cryptography, or technical advances such as the development of quantum 
+computers, could present risks to cryptographic tokens and the WeTrust platform, which could 
+result in the theft or loss of Trustcoin. 
+ 
+11) Risk of Trustcoin Mining Attacks 
+As with other decentralized cryptographic tokens, the blockchain used for the WeTrust network 
+is susceptible to mining attacks, including, but not limited, to double-spend attacks, majority 
+mining power attacks, "selfish-mining" attacks, and race condition attacks. Any successful 
+attacks present a risk to the WeTrust network, including, but not limited to, expected proper 
+execution and sequencing of Ethereum contract computations and the WeTrust network . 
+Despite the efforts of the Company, the risk of known or novel mining attacks exists. 
+ 
+12) Risk of Lack of Adoption or Use of the WeTrust Network 
+While Trustcoin should not be viewed as an investment, it may potentially (but likely will not) 
+have utility value over time. That value may be limited or nonexistent if the WeTrust network 
+lacks use and adoption.  
+ 
+13) Risk of an Unfavorable Fluctuation of Ethereum Ether ("ETH") and Other Currency Value 
+The Company team intends to use the proceeds of the Trustcoin presale to fund development of 
+the WeTrust network. The proceeds of the Trustcoin presale will be denominated in BTC and 
+ETH, and converted into other cryptographic and fiat currencies. If the value of BTC, ETH or 
+other currencies fluctuates unfavorably during or after the presale, the Company team may not 
+be able to fund development, or may not be able to develop the Trustcoin network in the 
+manner that it intended or promised. 
+ 
+14) Risk of an Illiquid Market for Trustcoin 
+There are currently no exchanges upon which Trustcoin might be resold and such exchanges 
+may never exist. If ever exchanges do develop, they will likely be relatively new and subject to 
+poorly-understood regulatory oversight. They may therefore be more exposed to fraud and 
+
+
+
+failure than established, regulated exchanges for other products.  
+ 
+15) Risk of Uninsured Losses 
+Unlike bank accounts or accounts at some other financial institutions, Trustcoins associated 
+with a WeTrust account are uninsured. In the event of loss or loss of utility value, there is no 
+public insurer, such as the Federal Deposit Insurance Corporation, or private insurer, to offer 
+recourse to the purchaser. 
+ 
+16) Risk of Dissolution of the WeTrust Project 
+It is possible that, due to any number of reasons, including, without limitation, an unfavorable 
+fluctuation in the value of Ether (or other cryptographic and fiat currencies), decrease in the 
+utility value of Trustcoin, the failure of business relationships, or competing intellectual property 
+claims, the WeTrust network may no longer be a viable business and the Company may 
+dissolve or the WeTrust network may fail to launch. 
+ 
+17) Risk of Malfunction in the WeTrust Network 
+It is possible that the WeTrust network malfunctions in an unfavorable way, including, but not 
+limited to, one that results in the loss of Trustcoin, confidential information, or personal data. 
+ 
+18) Unanticipated Risks 
+Cryptographic tokens are a new and untested technology. In addition to the risks included in this 
+Risk Disclosure, there are other risks, including those that the Company cannot anticipate. Risks 
+may further materialize as unanticipated combinations or variations of the discussed risks. 
+ 
+
+References 
+[1] Simon, W. K. “Civil Society in China: The Legal Framework from Ancient Times to the “New 
+Reform Era””, ​Oxford University Press ​ (2013), p 62. 
+[2] Harari, Y. N. “Sapiens: A Brief History of Humankind.” ​Harper: New York​  (2015). 
+[3] Amadeo, K. “AIG Bailout: Cost, Timeline, Bonuses, Causes, Effects”. ​The Balance​  (2016). 
+[4] Mateescu, A. “Peer to Peer Lending” ​Data&Society ​ (2015). 
+[5] TwoSolitudes “The Joys of Pretending to Help the Poor: The Kiva Story”. ​Dailykos​  (2014). 
+[6] “Rotating Credit And Savings Association (ROSCA)."  Investopedia.  
+[7]  ​Bouman, F.A.J., "ROSCA: On the Origin of the Species" ​Savings and Development​  (1995) 
+19​, 117-148. 
+[8] ​IFMR LEAD “Chit Funds: Financial Inclusion Tool in India​”​  Video: 
+https://www.youtube.com/watch?v=SG9BwGmQyRs​ (2015)​. 
+[9] ​Pareto efficiency, also known as "Pareto optimality," is an economic state where resources 
+are allocated in the most efficient manner, and it is obtained when a distribution strategy exists 
+where one party's situation cannot be improved without making another party's situation worse. 
+Pareto efficiency does not imply equality or fairness. (Investopedia) 
+[10] The Kerala State Financial Enterprises Limited, Annual Report (2015). 
+
+https://www.youtube.com/watch?v=SG9BwGmQyRs
+
+
+[11] Cohan, P. “SoFi New Take on $1 Trillion Student Loan Market”. ​Forbes​  (2012). 
+[12] Runde, D. “​M-Pesa And The Rise Of The Global Mobile Money Market”. ​Forbes​  (2015). 
+[13] LendingClub Corporation, S-1 Registration Statement. United States Securities and 
+Exchange Commission (2014). See here: 
+http://www.nasdaq.com/markets/ipos/filing.ashx?filingid=9727645 
+[14] Industry Overview. Insurance Information Institute (2015). 
+[15] Kashyap, K. “Disruption of Chit Funds and the Role of the India Stack”. ​Productnation 
+(2017). 
+[16] ​Kapoor, M., Schoar, A.. Roa, P., and Buteau, S. “Chit Funds as an Innovative Access to 
+Finance for Low-Income Households” ​IFMR Research​ . 
+[17] “Chit fund scams: Rs 80,000 crore and counting”. ​Times of India ​ (2016). 
+[18] Antony, A. “India’s P2P Lenders Push Back on Proposed Central Bank Rules”. ​Bloomberg 
+(2016). 
+[19] Chorzempa, M. “ P2P Series Part 2: Regulating China’s Plethora of P2P Players”. ​Peterson 
+Institute for International Economics ​ (2016). 
+[20] Elliot, D., Kroeber, A., and Qia, Y. “Shadow Banking in China: Primer” ​Economic Studies at 
+Brookings​  (2015). 
+[21]  To estimate this value we compared the summed GDP in the following Latin America 
+countries: Brazil ($2.2T), Mexico ($1.3T), Argentina ($0.6T), Chile ($0.3T), Columbia ($0.4T), 
+and Venezuela ($0.4T) (total $5.2T), to India’s GDP ($1.9T). Taking into account the 
+conservative evaluation of the ROSCA market in India ($200B) and based on anecdotal figures 
+on participation rate and shadow banking, Latin America market size is estimated at 3% of GDP 
+($150B) vs 10-25% for India ($200-500B). Anecdotal evidence on popularity of Tandas and 
+Cundinas: Vélez-Ibáñez, C. “An Impossible Living in a Transborder World: Culture, Confianza, 
+and Economy of Mexican-Origin Populations”. ​University of Arizona Press​  (2010). 
+[22] Meraji, S. H. “​Lending Circles Help Latinas Pay Bills And Invest”. ​NPR​  (2014). 
+[23] Hevener, C. C. “Alternative Financial Vehicles: Rotating Savings and Credit Associations 
+(ROSCA)”. ​Discussion Papers, Federal Reserve Bank of Philadelphia​  (2006). 
+[24]Rudegeair, P. “LendingClub to Cut 12% of Its Workforce, as Loan Volumes Fall”. ​The Wall 
+Street Journal​  (2016). 
+[25] “​2015 FDIC National Survey of Unbanked and Underbanked Households”. ​Federal Deposit 
+Insurance Corporation​  (2015). 
+[26] Lemonade Overview on Crunchbase. See here: 
+https://www.crunchbase.com/organization/lemonade#/entity 
+[27] Reyes, B., Lopex, E., Phillips, S., & Schroeder, K. “Building Credit for the Unbanked: Social 
+Lending as a Tool for Credit Improvement”. C​é​sar E. Ch​á​vez Institute: San Francisco State 
+University (2013). 
+[28] Izumida, Y. “The Kou in Japan: A Precursor of Modern Finance”. In Adams and Fitchett 
+(eds), ​Informal Finance in Low-Income Countries​ . Boulder: Westview Press (1992), 165-180. 
+[29]  Kennedy, G. F. “The Korean Kye: Maintaining Human Scale in a Modernizing Society”. 
+Korean Studies ​ (1977) ​1​, 197-222. 
+[30] Gaynor, T. “U.S. migrant money pools thrive in the recession”. ​Reuters​  (2009). 
+
+
+
+[31] ​Vélez-Ibáñez, C. (2010). “An Impossible Living in a Transborder World: Culture, Confianza, 
+and Economy of Mexican-Origin Populations”.​University of Arizona Press​  (2010). 
+[32] ​Boesler, M. “Should we be worried about China’s $2.2-trillion shadow banking system?”. 
+Business Insider​  (2012). 
+[33] ​Forney, M. “China's Shadow Banks”. ​Free China Movement​  (2004).  
+ 
+ 
+ 
+
+

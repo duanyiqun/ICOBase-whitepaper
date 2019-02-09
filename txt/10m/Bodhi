@@ -1,0 +1,966 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bodhi: Decentralized Predictive Market at Scale
+
+White Paper
+Version 1.0
+
+Xiahong Lin∗
+
+∗Bodhi Foundation Ltd.
+
+
+
+Draft for open community review and subject to change.
+
+
+
+NOTICE
+
+NOTHING IN THIS WHITEPAPER CONSTITUTES LEGAL, FINANCIAL, BUSINESS
+
+OR TAX ADVICE AND YOU SHOULD CONSULT YOUR OWN LEGAL, FINANCIAL,
+
+TAX OR OTHER PROFESSIONAL ADVISER BEFORE ENGAGING IN ANY ACTIVITY IN
+
+CONNECTION HEREWITH. NEITHER BODHI FOUNDATION LTD. (THE FOUNDATION),
+
+ANY OF THE PROJECT TEAM MEMBERS WHO HAVE WORKED ON THE BODHI
+
+PLATFORM OR PROJECT IN ANY WAY WHATSOEVER (THE BODHI TEAM) NOR ANY
+
+THIRD PARTY SERVICE PROVIDER SHALL BE LIABLE FOR ANY KIND OF DIRECT
+
+OR INDIRECT DAMAGE OR LOSS WHATSOEVER WHICH YOU MAY SUFFER IN CON-
+
+NECTION WITH ACCESSING THIS WHITEPAPER, MATERIALS PRODUCED BY THE
+
+FOUNDATION, OR ACCESSING THE WEBSITE AT HTTPS://WWW.BODHI.NETWORK/
+
+OR ANY OTHER MATERIALS PUBLISHED BY THE FOUNDATION.
+
+All contributions will be applied towards the Foundation’s objects, including without limitation
+
+promoting and supporting research, design and development of, and advocacy for decentralised
+
+cryptographic or blockchain solutions to build transparent, free and reliable prediction markets,
+
+and influencing prediction markets through global engagement.
+
+This Whitepaper is intended for general informational purposes only and does not constitute
+
+a prospectus, an offer document, or an offer of securities or a solicitation for investment.
+
+The information herein below may not be exhaustive and does not imply any elements of
+
+a contractual relationship. There is no assurance as to the accuracy or completeness of such
+
+information and no representation, warranty or undertaking is or purported to be provided as to
+
+the accuracy or completeness of such information. Where this Whitepaper includes information
+
+that has been obtained from third party sources, the Foundation and/or the BODHI team have not
+
+independently verified the accuracy or completion of such information. There is no assurance
+
+
+
+as to the accuracy or completeness of such information and no representation, warranty or
+
+undertaking is or purported to be provided as to the accuracy or completeness of such information.
+
+This Whitepaper does not constitute any offer by the Foundation or the Bodhi team to sell any
+
+BOT (as defined herein) nor shall it or any part of it nor the fact of its presentation form the basis
+
+of, or be relied upon in connection with, any contract or investment decision. Nothing contained
+
+in this Whitepaper is or may be relied upon as a promise, representation or undertaking as to
+
+the future performance of the platform. The agreement between the Foundation (or its affiliate)
+
+and you, in relation to any sale and purchase of BOT is to be governed by only the separate
+
+terms and conditions of such agreement.
+
+The Foundation and the Bodhi team do not and do not purport to make, and hereby disclaims,
+
+all representations, warranties or undertaking to any entity or person. Prospective purchasers of
+
+BOT should carefully consider and evaluate all risks and uncertainties (including financial and
+
+legal risks and uncertainties) associated with the BOT token sale, the Foundation and the Bodhi
+
+team.
+
+By accessing this Whitepaper or any part thereof, you represent and warrant to the Foundation
+
+and the Bodhi team as follows:
+
+(a) you acknowledge, understand and agree that BOT may have no value, there is no guarantee
+
+or representation of value or liquidity for BOT, and BOT is not for speculative investment;
+
+(b) in any decision to purchase any BOT, you have not relied on any statement set out in this
+
+Whitepaper;
+
+(c) you will and shall at your own expense ensure compliance with all laws, regulatory re-
+
+quirements and restrictions applicable to you (as the case may be); and
+
+(d) you acknowledge, understand and agree that you are not eligible to purchase any BOT if
+
+you are a citizen, resident or green card holder of the United States of America or a citizen
+
+
+
+or resident of the People’s Republic of China.
+
+The agreement for purchase and sale of BOT shall be governed by a separate Token Purchase
+
+Agreement with the terms and conditions of such agreement (the Token Purchase Agreement),
+
+which shall be made available at https://www.bodhi.network/ prior to the sale of any BOT. In
+
+the event of any inconsistencies between the Token Purchase Agreement and this Whitepaper,
+
+the Token Purchase Agreement shall prevail.
+
+All statements contained in this Whitepaper, statements made in press releases or in any place
+
+accessible by the public and oral statements that may be made by the Foundation and/or the
+
+Bodhi team may constitute forward looking statements (including statements regarding intent,
+
+belief or current expectations with respect to market conditions, business strategy and plans,
+
+financial condition, specific provisions and risk management practices). You are cautioned not
+
+to place undue reliance on these forward looking statements given that these statements involve
+
+known and unknown risks, uncertainties and other factors that may cause the actual future results
+
+to be materially different from that described by such forward looking statements. These forward-
+
+looking statements are applicable only as of the date of this Whitepaper and the Foundation and
+
+the Bodhi team expressly disclaims any responsibility (whether express or implied) to release
+
+any revisions to these forward-looking statements to reflect events after such date.
+
+This Whitepaper may be translated into a language other than English and in the event of
+
+conflict or ambiguity between the English language version and translated versions of this
+
+Whitepaper, the English language version shall prevail. You acknowledge that you have read
+
+and understood the English language version of this Whitepaper.
+
+No part of this Whitepaper is to be copied, reproduced, distributed or disseminated in any
+
+way without the prior written consent of the Foundation.
+
+
+
+Abstract
+
+In this paper, we introduce Bodhi, the next generation blockchain based platform that decentralizes
+
+the prediction market. Bodhi leverages the advantages of the state-of-the-art decentralized prediction
+
+markets by integrating third-party Oracles and voting based decentralized Oracles via its Oracle ab-
+
+straction layer. We intend to develop a novel replaceable Oracle framework where the prediction market
+
+is more effective and autonomous. Bodhi will be deployed on Qtum at the initial launch.
+
+Keywords
+
+Bodhi, Prediction Market, Smart Contract, Qtum, Ethereum
+
+I. INTRODUCTION
+
+Humanity has developed strong interests towards understanding history and predicting the
+
+future. What will the weather be like tomorrow? Which soccer team will win the UEFA European
+
+Championship later this year? Is Apple stock going below 100 USD per share on the first weekday
+
+of next year? People attempt to predict the results of simple yet non-trivial questions. The desire
+
+to predict what happens next has generated conventional prediction markets which are heavily
+
+regulated, such as lottery systems and stock markets, as well as illegally operated underground
+
+casinos and insider trading. Excessive regulation and legislation, implemented at large monetary
+
+costs, greatly limit the prediction market from performing its market functions. Meanwhile,
+
+conventional prediction markets have been heavily depending on centralized Oracles who set
+
+all prediction results and their fairness and charge a large amount of money. The high cost of
+
+these Oracles has significantly lowered the users’ willingness to participate and prevented the
+
+prediction markets from large scale adoption.
+
+Prediction Markets are platforms that allows individuals or a group of entities to predict
+
+the outcomes of future events, and to be incentivised from the results. Incentives will be
+
+
+
+redistributed upon the realization of outcomes of an event in which all parties participated.
+
+The fortune redistribution follows a simple yet powerful rule, that the fortune flows from less
+
+skillful and inaccurate participants to more skillful and accurate participants. In order to succeed
+
+in the prediction, participants aggressively gather information, and apply mathematical modeling
+
+to maximize the chance of prediction accurately. Statistically, the price associated with each
+
+outcome has high positive correlation with each outcome. Meanwhile, the accuracy of the
+
+prediction is largely determined by the number of participants. Starting from the very beginning of
+
+information revolution, people has been devoted to making online prediction markets to minimize
+
+the onboarding barrier for participating in prediction. However, centralized online products have
+
+yet to earn people’s trust while excessive regulation and legal restrictions also greatly limits the
+
+development of the prediction market.
+
+With the deluge of the continuous development of blockchain technologies, there is an in-
+
+creasing trust within communities on enabling public blockchain as Oracle that is fair and
+
+decentralized. Blockchain technology is a perfect candidate to form the building block of pre-
+
+diction market due to its characteristics such as information transparency and data immutability.
+
+The fairness of blockchain makes the prediction market run at low-to-no administrative cost.
+
+The application of Smart Contract empowers blockchain with a programmable and dynamic
+
+decision-making capability. All of the above emerging phenomenon resulted in the creation of
+
+decentralized prediction market.
+
+Bodhi’s mission is to build a credible, autonomous, and scalable decentralized prediction
+
+market that promotes the application of prediction market at a global scale to enhance the
+
+effectiveness of decision-making process [1].
+
+
+
+II. RELATED WORK
+
+Augur [2] is a blockchain based decentralized prediction market. A user can create a prediction
+
+event using Ethereum’s [3] smart contract, followed by other users’ predicting and pricing the
+
+probability of each outcome through native tokens. When the event eventually happens, Augur
+
+REP holders report to Augur the right prediction result. The REP holders are the building
+
+blocks of Augur platform, where these holders maintain the platform and constitute the ar-
+
+bitration mechanism. However, as the Augur platform scales, a fully decentralized arbitration
+
+mechanism becomes less efficient. When a large group of prediction events have been created,
+
+it is increasingly challenging for REP holders to vote for all events. REP holders might also
+
+have different domain expertise and have been exposed to events at different comfort levels.
+
+The matchmaking process between an event and event-specific expertise has yet to be improved.
+
+Moreover, problems such as high time-cost and low efficiency associated with REP holders result
+
+in a longer cycle to reach a consensus at the end of a prediction event.
+
+Similar to Augur, Gnosis [4] is another common blockchain based decentralized prediction
+
+market that utilizes Ethereum’s smart contract for event creation and prediction. Unlike Augur,
+
+Gnosis leverages a default centralized Oracle for judging prediction results. The advantage of
+
+using such as centralized Oracle solution is that prediction judgment can be performed au-
+
+tonomously and therefore significantly increases the judgment efficiency. However, a centralized
+
+Oracle solution can cause single point of failure in the events of, eg., server failure, and data
+
+being maliciously tampered. When any of such events occurs, all predictions will be locked and
+
+the credibility of Gnosis platform will be decreased.
+
+Bodhi is the next generation blockchain based platform that decentralizes the prediction market
+
+by overcoming the disadvantage of both Augur and Gnosis. In contrast to Augur, Bodhi uses
+
+third-party Oracle to automatically judge the prediction results to guarantee the efficiency of
+
+
+
+the decision making process. Different from Gnosis’ centralized Oracle solution, Bodhi enables
+
+BOT holders to take over the voting process and make the final decision of a prediction event
+
+in the event of Oracle failure.
+
+III. BODHI OVERVIEW
+
+Bodhi, the next generation blockchain based prediction market, leverages the advantages of
+
+the state-of-the-art decentralized prediction markets by integrating third-party Oracles and voting
+
+based decentralized Oracles via its Oracle abstraction layer. We introduce a novel replaceable
+
+Oracle framework so that the prediction market is more effective and autonomous.
+
+Bodhi will first be deployed on the Qtum [5]. As more users around the world are accessing
+
+the Internet from mobile devices rather than from desktop computers, mobile computing will
+
+be increasingly important to prediction markets. Qtum combines the advantages of Bitcoin and
+
+Ethereum to provide better user experience on mobile devices. Event forecast is very time-
+
+sensitive matter, but smart contract can only rely on the number of blocks to estimate the time.
+
+However, Ethereum has yet to implement the Proof of Stake (PoS). As the Difficulty Bomb
+
+of Ethereum’s current Proof of Work (PoW) starts to take effect, the block time is increasing
+
+exponentially, as shown in Table I, which greatly affects the estimated time of the forecast. Qtum,
+
+which is different from Ethereum, will ensure the stability of the block time by introducing PoS
+
+at the beginning its release. Bodhi will first be deployed onto Qtum to avoid existing problems
+
+with Ethereum. However, as the user base grows, we do not eliminate the possibility to roll out
+
+Bodhi onto other public blockchains.
+
+
+
+Block Number Time Block Time
+
+3000000 2017-01-16 00:38:33 14.86
+
+3500000 2017-04-11 18:09:34 15.27
+
+4000000 2017-08-15 18:20:24 30.01
+
+4500000 2018-11-03 05:55:48 136.71
+
+5000000 2025-10-02 11:47:30 835.81
+
+5500000 2128-03-20 09:14:16 17183.83
+
+6000000 5189-09-26 20:57:59 520901.19
+
+Table I
+THE EFFECTIVENESS OF DIFFICULTY BOMB AFFECTS BLOCK TIME
+
+Bodhi uses third-party Oracle to automatically judge prediction results to guarantee the effi-
+
+ciency of the decision-making process. BOT holders can take over the voting process and make
+
+the final decision for a prediction event if Oracle fails. Algorithm 1 shows how Bodhi works.
+
+As you can see, Bodhi’s Oracle is replaceable. If consensus cannot be obtained through
+
+arbitration, users can continue to make deposits to request the next iteration of arbitration. As
+
+the number of rounds increases, more token deposits get accumulated and BOT holders are
+
+more motivated to maintain the accuracy of the Bodhi platform to protect their token value.
+
+Theoretically, arbitration result will converge to an accurate state. Bodhi leverages the advantages
+
+of the state- of-the-art decentralized prediction markets by integrating third-party Oracles and
+
+a voting based decentralized Oracle via an Oracle abstraction layer. This method combines the
+
+advantages of existing decentralized prediction market.
+
+
+
+Algorithm 1 Bodhi Algorithm
+1: User creates a prediction event on Bodhi
+
+2: Users predict and price the probability of each outcome
+
+3: When a future specified time arrives, Oracle automatically polls the event result from outside
+
+and determines the prediction result.
+
+4: Agreement← False
+5: while Agreement 6= True do
+6: Publish decision on prediction market for 48 hours
+
+7: if Consensus is made & Oracle is valid then
+8: Agreement← True
+9: Users who predict correctly get back original tokens and incentive
+
+10: else
+11: Agreement← False
+12: Users deposit to request next iteration of arbitration
+
+13: end if
+14: end while
+
+User creates a prediction event on Bodhi
+
+Users bet on the prediction event
+
+Oracle determines prediction result BOT holders’ voting results
+
+Request for
+arbitration?
+
+Replace the old Oracle with the
+new one that voted by BOT holders
+
+Finished
+
+Arbitration
+
+Consensus
+
+Figure 1. Bodhi Platform Operation Diagram
+
+
+
+IV. BODHI PREDICTION MARKET PRICING
+
+Bodhi is committed to creating a free-to-participate, low-cost prediction market. On Bodhi,
+
+Oracles serve as judges and BOT holders are maintainers. Incentive (service fee) is provided to
+
+the Oracles on the platform to motivate more Oracles to provide credible and stable services for
+
+Bodhi.
+
+Equation 1 shows how the rate is calculated. Let Fs be the percentage of the service fee
+
+payable to Oracles and Ft be the percentage of the transaction fee payable to the platform. Sloss
+
+denotes the total loss of all parties that failed the prediction and Swin denotes all the gains from
+
+all users that succeed in the prediction.
+
+Swin = Sloss × (1− Fs − Ft) (1)
+
+Fs and Ft will be dynamically determined in the future as we plan to create a prediction event
+
+to let all BOT holders determine the best fees .
+
+V. BODHI TOKEN
+
+The token for Bodhi prediction market is called Bodhi Token (BOT). BOT will be issued
+
+during the contract deployment phase, with a total of 100 million units.
+
+In order to ensure the simplicity and independence of platform logic, Bodhi does not issue
+
+WIZ tokens like Gnosis. At the initial phase when we take Bodhi online, the Bodhi platform
+
+will only support BOT and QTUM. With the rapid evolvement of blockchain technology, stable
+
+coins and cross-chain technologies are emerging. In the near future, Bodhi prediction market is
+
+intended to be flexible enough to allow the use of any cryptocurrency (which is not a security)
+
+to participate in the prediction market.
+
+
+
+BOT represents two main interests:
+
+1) Arbitration and Compensation. BOT holders are entitled to initiate arbitration for disputed
+
+results of prediction events and receive incentives accordingly. Before initiating the arbi-
+
+tration, a BOT holder must lock up certain amounts of BOT as deposit. If the arbitration
+
+result is in favor of the BOT holder, the holder is entitled to receive certain amounts of
+
+BOT as compensation from the losing party of the arbitration.
+
+2) Vote and Incentive. BOT holders are entitled to vote for arbitration results of the disputed
+
+prediction events and receive rewards accordingly. Before voting, BOT holders must lock up
+
+certain amounts of BOT as deposit. If a BOT holder’s vote is consistent with the arbitration’s
+
+final result, the BOT holder is entitled to receive certain amounts of BOT as incentive from
+
+the losing party of the arbitration. In addition, BOT holders may shut down illegitimate and
+
+malicious prediction events through the voting procedure.
+
+By definition, BOT is a utility token which may only be utilized on the Bodhi platform.
+
+Ownership of BOT carries no rights, express or implied, other than the right to use BOT as
+
+a means to enable usage of and interaction with the platform, if successfully completed and
+
+deployed.
+
+BOT is a non-refundable functional utility token, does not in any way represent any share-
+
+holding, participation, right, title, or interest in the Foundation or any other company, enterprise
+
+or undertaking, nor will BOT entitle token holders to any promise of revenue, fees, profits or
+
+investment returns. BOT is not intended to constitute securities in Singapore or any relevant
+
+jurisdiction.
+
+As part of the operation of the prediction markets on the Bodhi platform, BOT will be
+
+consumed as service fee (provided to the Oracles) or as transaction fee (paid to the Bodhi
+
+platform).
+
+
+
+To the extent a secondary market or exchange for trading BOT does develop, it would be run
+
+and operated wholly independently of the Foundation (or its affiliates), the sale of BOT and the
+
+Bodhi platform.
+
+VI. BODHI REVIEW MECHANISM
+
+Bodhi is a blockchain based free prediction market. However, a free market does not mean
+
+that Bodhi is a completely unmonitored platform. It is intended that the Bodhi platform will
+
+provide a decentralized review mechanism where BOT holders can vote to eliminate illegal and
+
+malicious predictions to protect their interests.
+
+VII. BODHI DEVELOPMENT TIMELINE
+
+Bodhi prediction market token ICO is scheduled near the end of 2017. Qtum testnet deploy-
+
+ment of Bodhi prediction market beta version is scheduled around the same time. The MVP,
+
+production and premium versions are scheduled to be deployed onto Qtum main net in 2018
+
+and 2019 respectively. Figure 2 shows the detailed development schedule for Bodhi.
+
+
+
+Figure 2. Bodhi Development Timeline
+
+Risks
+
+YOU CLEARLY UNDERSTAND THAT BLOCKCHAIN AND VIRTUAL CURRENCIES
+
+/ TOKENS, INCLUDING WITHOUT LIMITATION ETHEREUM, QTUM, BITCOIN AND
+
+BOT, ARE NEW AND UNVERIFIED TECHNOLOGIES THAT ARE BEYOND CONTROL
+
+OF THE FOUNDATION OR THE ISSUER (AS THE CASE MAY BE). THE PLATFORM AND
+
+THE PROJECT ARE SUBJECT TO THE FOLLOWING RISKS, WHICH YOU EXPRESSLY
+
+
+
+ACKNOWLEDGE AND ASSUME:
+
+(a) Risks associated with the Qtum Protocol Given that BOT and the Bodhi prediction market
+
+platform are based on the Qtum protocol and architecture, any malfunction, breakdown or
+
+abandonment of the Qtum protocol or architecture may have a material adverse effect on
+
+BOT and/or the Bodhi prediction market platform. Moreover, advances in cryptography, or
+
+technical advances (including without limitation development of quantum computing), could
+
+present unknown risks to BOT and/or the Bodhi prediction market platform by rendering
+
+ineffective the cryptographic consensus mechanism that underpins the Qtum protocol.
+
+(b) Security weaknesses. Hackers or other malicious groups or organizations may attempt to
+
+interfere with BOT and/or the Bodhi prediction market platform in a variety of ways.
+
+(c) Uncertain Regulations and Enforcement Actions The regulatory status of BOT and/or pre-
+
+diction markets, and distributed ledger technology generally is unclear or unsettled in many
+
+jurisdictions. It is impossible to predict how, when or whether regulatory agencies may
+
+apply existing regulations or create new regulations with respect to such technology and
+
+its applications, including BOT and/or the Bodhi prediction market platform. Regulatory
+
+actions could negatively impact BOT and/or the Bodhi prediction market platform in various
+
+ways.
+
+(d) Insufficient Interest It is possible that the Bodhi prediction market platform will not be
+
+used by a large number of individuals, companies and other entities or that there will be
+
+limited public interest in the creation and development of distributed ecosystems (such as
+
+the network or the platform). Such a lack of use or interest could negatively impact the
+
+development of the Bodhi prediction market platform.
+
+(e) Execution. There is the risk that the Foundation and the BODHI team may be unable or
+
+execute or implement the project as set out herein.
+
+
+
+VIII. APPLICATIONS OF BODHI PREDICTION MARKET
+
+A. Financial Tool
+
+Conventional financial market forecasting tools have limitations such as high service costs,
+
+professional barrier, poor scalability, limited ability to express, lack of accuracy, low efficiency,
+
+etc. Bodhi prediction market overcomes those limitations by providing a more detailed description
+
+of economic events, where value and risk assessment can be thoroughly made at both macro
+
+and microeconomic level. Therefore, Bodhi reduces service costs, removes professional barrier,
+
+improves accuracy and efficiency and scales easily. For instance, for a simple prediction event
+
+- What is the opening price for Apple stock at January 1st 2018? - conventional financial
+
+market prediction tools need to analyze investment environment, basic corporate information
+
+and their finances to calculate investment returns, before giving an incomprehensive prediction
+
+result. Using Bodhi, however, the prediction result is calculated by the entire network for better
+
+accuracy and efficiency, as well as lowering the cost. The same mechanism can be applied to
+
+predict other stocks at any given time.
+
+
+
+Figure 3. Financial Tool
+
+B. Information Management
+
+Information plays a critical role in the development of society where many decisions are made
+
+based on accurate and reliable information. In order to obtain accurate information to improve
+
+decision-making accuracy, people use a variety of information retrieval methods, e.g., surveys
+
+and paid data. However, these information retrieval methods are considered costly and unscalable.
+
+Prediction markets can motivate people to provide information proactively. In 1988, professors at
+
+the University of Iowa created a prediction market where participants can predict the identity of
+
+the next elected US president. Since then, the same market has collated predictions for every US
+
+presidential election with a prediction accuracy much higher than the political commentators and
+
+the results of public polls. Bodhi enables prediction markets creation as ease. The value flow of
+
+the blockchain is becoming a profound foundation for prediction markets. Bodhi make prediction
+
+result more accurate due to its decentralized characteristics and large-scale user engagement.
+
+
+
+Figure 4. Information Management
+
+C. Insurance
+
+Insurance industry has various effects on society through the way that it changes who bears
+
+the cost of losses and damage. Traditional insurance industry typically has long and complex
+
+claim process due to its centralized management. The massive agent model that is used to drive
+
+the business has introduced high operational cost. Bodhi’s decentralized solution is a natural fit
+
+to solve these problems. Taking flight insurance as an example, passengers can predict and price
+
+the probability of a flight delay before boarding. In most cases, the flight will be on time, so
+
+that the tokens will be locked in the smart contract of the prediction event. Should a flight delay
+
+occur, the Oracle will write the flight number of the delayed flight to the smart contract. The
+
+Bodhi platform will be able to automatically process the claim for the passengers who purchased
+
+the flight insurance on the corresponding flight. The entire process is fully automated so that no
+
+human intervention is needed. Most of the fund will be used to reimburse passengers and the
+
+
+
+platform only charges a small portion as transaction fees.
+
+Figure 5. Insurance
+
+D. Sports Lottery
+
+The global online sports lottery is a huge market with billions of dollars of regulated market
+
+funds. Sports lotteries are highly localized where each lottery market operates individually due
+
+to the difference in regulations among the regions. Accessibility is limited in those localized
+
+markets where data is isolated and fragmented. Data isolation and fragmentation have limited
+
+the accessibility of those localized markets where it is impossible to create new interesting
+
+lotteries in a timely manner. Regulation is a double-edged sword. On one hand, data shows
+
+that the unregulated lottery market is 10 times of regulated ones, which makes fraud and illegal
+
+operation a common regulatory issue of the global lottery market. On the other hand, centralized
+
+service is prone to hacking, system failure and other uncertainties from service providers. These
+
+uncertainties ultimately result in high cost of creating lottery market and user taxation. It further
+
+
+
+limits the lottery markets from high user engagement and being free markets. The public has
+
+associated the lottery markets with speculation, due to its high risk profile. Bodhi brings an
+
+innovative way to solve these problems. Bodhi is an open platform based on blockchain where
+
+anyone can be transparently involved. Users can create prediction events without high transaction
+
+fees. This free and open platform will greatly improve market liquidity and thus create objective
+
+odds.
+
+Figure 6. Sports Lottery
+
+E. Conventional Prediction Markets
+
+Although conventional prediction markets will still play critical roles and involve in decision-
+
+making processes in all market segments, we foresee the globalization trends in participating
+
+and collaborating in prediction markets. Bodhi is committed to building the next generation
+
+decentralized prediction market platform. In the near future, Bodhi will co-exist with conventional
+
+pre- diction markets and will gradually serve itself as an infrastructure of conventional prediction
+
+
+
+markets to lower the operational cost. Bodhi platform provides most if not all logic to implement
+
+prediction markets where it creates alternative solutions that allows conventional prediction
+
+market to operate on Bodhi’s infrastructure. Bodhi significantly lowers the system failure rate
+
+and operational cost, and it enables users to enter the market easily.
+
+Figure 7. Conventional Prediction Markets
+
+IX. BOT ISSUANCE PLAN
+
+A. BOT Distribution
+
+BOT will be issued during the contract deployment phase, with a total of 100 million units.
+
+Table II and Chart 8 show the allocation plan of BOT. Users will get BOT through airdrop and
+
+exchange. Bodhi employees will be granted restricted BOT upon employment. These BOT will
+
+be eligible to vest upon the satisfaction of a service condition. The service condition is vested
+
+over four years, with the first 20% vested upon the completion of token issuance, second 20%
+
+
+
+vested on the one-year anniversary of vesting commencement date and the rest of 60% vested
+
+monthly thereafter, subject to continued employment.
+
+1) Vest 20% BOT after token issuance
+
+2) Vest additional 20% BOT in one-year cliff.
+
+3) Vest 60% BOT monthly in the next three years
+
+Table II
+BOT ALLOCATION
+
+BOT Percentage Allocation
+60% Issued to community users
+15% Development and Consulting
+10% Employee incentives
+10% Early stage emergency arbitrations locked by Foundation
+5% Bug bounty
+
+60%
+
+15% 10%
+10%
+
+5%
+
+Issued to community users
+Development and Consulting
+Long term development incentives
+Early stage emergency arbitrations locked by Foundation
+Bug bounty
+
+Figure 8. BOT Allocation
+
+B. Token Sale Fund Allocation:
+
+In case Bodhi foundation sells some BOT, the budget from token sale fund will be allocated
+
+for the following purposes by the foundation, see Table III. The budget covers a 5-year period.
+
+
+
+Fund Percentage Allocation
+65% Development
+10% Consulting
+10% Legal
+10% Marketing
+5% Misc.
+
+Table III
+TOKEN SALE FUND ALLOCATION
+
+65%
+
+10% 10%
+10%
+
+5%
+
+Development
+Consulting
+Legal
+Marketing
+Miscellaneous
+
+Figure 9. Token Sale Fund Allocation
+
+1) Development: Prediction market platform is a sophisticated system that consists of a large
+
+number of subsystems. Sufficient funding needs to be allocated for recruitment, team
+
+building, and research and development.
+
+2) Consulting: Prediction markets involve in many areas across different segmentations where
+
+domain knowledge is needed for carrying out market analysis. We will allocate funding for
+
+consulting domain experts and corporations.
+
+3) Legal: Prediction markets are an innovation which is able to disrupt many industries, but is
+
+also a highly-regulated area and therefore legal service is needed to ensure the regulatory
+
+compliance (in particular, in the areas of gambling and securities law). We will allocate
+
+funding for general legal advice and emergency legal services. In this regard, we have
+
+instructed specialist counsel in Singapore from Tzedek Law LLC to advise on the BOT
+
+token sale.
+
+4) Marketing: Branding and marketing operations are important pieces to promote Bodhi to
+
+
+
+potential customers for growth. We will allocate funding for promoting Bodhi platform and
+
+blockchain industry in general.
+
+5) Miscellaneous：Miscellaneous expenses that exclude all above expenses.
+
+X. SUMMARY
+
+Bodhi is a Qtum based platform that decentralizes the prediction market and enables free flow
+
+of valuable information via public wisdom and incentivization. Bodhi leverages the advantages
+
+of the state-of-the-art decentralized prediction markets by integrating third-party Oracles via its
+
+Oracle abstraction layer and a voting based decentralized Oracle mechanism. We introduce a
+
+novel replaceable Oracle framework so that the prediction market is more effectiveness and
+
+autonomous. Bodhi is committed to influencing the Chinese prediction markets through global
+
+engagement.
+
+REFERENCES
+
+[1] “Bodhi,” https://www.bodhi.network.
+
+[2] “Augur,” https://augur.net.
+
+[3] “Ethereum,” https://ethereum.org.
+
+[4] “Gnosis,” https://gnosis.pm.
+
+[5] “Qtum,” https://qtum.org.
+
+

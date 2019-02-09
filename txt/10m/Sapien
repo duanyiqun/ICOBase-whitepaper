@@ -1,0 +1,2351 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ankit Bhatia Robert Giometti Aurélien Nicolas
+
+White Paper v1.3
+March 2018
+
+DECENTRALIZED SOCIAL NEWS PLATFORM
+
+
+
+2
+
+CONTENTS
+
+Glossary 5
+ERC20 5
+Sapien Platform 5
+Sapien Network / Ecosystem 5
+Branch 5
+SPN 5
+Staked SPN 5
+Unstaked SPN 5
+
+Overview 6
+SPN Token Sale 6
+SPN Utility 6
+
+Introduction	 9
+
+What is Sapien? 10
+Core Values 10
+Key Features 10
+Live Beta  10
+
+Objectives	 11
+Establish a Proof of Value Consensus Protocol 11
+Launch the first Democratized Autonomous Platform 11
+Build a Robust Marketplace and Incentivize User Contributions 11
+Power Future Applications on the Sapien Network 11
+
+Why Contribute? 12
+
+Product Roadmap 13
+
+User Stories 15
+Creators 15
+Curators 15
+Freelancers 16
+Developers 16
+Media Companies 16
+
+Market Opportunity 17
+Social Media 17
+E-Commerce 17
+Privacy 18
+Media 19
+
+
+
+3
+
+Business Model 20
+Marketplace 20
+
+Buyers & Sellers 20
+Sapien 20
+
+Ad Platform 20
+Users 21
+Advertisers 21
+Sapien 21
+
+Extend to other Websites 21
+
+Token Sale 22
+Presale  22
+Allocation of Presale Funds 22
+Token Sale Phase #1 22
+Minimum Goal 23
+How to Contribute 23
+Allocation of Funds (2018 - 2022) 24
+Distribution of Tokens 25
+Incentivizing the Network Effect 26
+
+SPN Token 27
+Proposed Utilities 27
+
+Utility I: Staked SPN to Power the Sapien Platform 27
+Utility II: Reputation Network built-in the SPN token 27
+Utility III: Democratized Autonomous Platform (DAP) Proposals 27
+Utility IV: Content Payouts and User-to-user Tips 27
+Utility V: Standardized Token for Integrated Marketplace 28
+Utility VI: Ad Platform Revenue Sharing 28
+
+Use Cases 29
+Use Case I: Fake News 29
+Use Case II: Unified Media Portal 30
+Use Case III: Tokenizing Virtual Goods 31
+
+Platform	Features	 33
+How to Register 33
+How to Qualify for Platform Payouts 33
+Reputation 33
+
+Backfeed Protocol 33
+Voting Mechanisms 34
+Rewards for Posting, Commenting, and Voting Rewards 35
+
+Posting & Commenting Payouts 35
+Voting Payouts 36
+SPN Payout Management 36
+How We Handle Voting Manipulation 36
+
+Democratized Autonomous Platform (DAP) Implementation 37
+Proposal System 37
+Branch Autonomy 37
+Tribunals 37
+
+
+
+4
+
+Token Mechanics 38
+Staking SPN 38
+
+Staked SPN Capacity Bonus 38
+Unstaking SPN 38
+SPN Consensus Mechanism 39
+
+Leadership 40
+Core 40
+Advisors 41
+
+Competitive	Analysis	 43
+I. Steemit 43
+
+a) Choice of Blockchain 43
+b) Distribution of Power 43
+c) Barriers To Entry 43
+
+II. Synereo 44
+a) Technological 44
+b) Token Utility 44
+c) Philosophical 44
+
+Risk Analysis 45
+Quantum Computing Attacks 45
+
+Public-Key Cryptography 45
+Elliptic Curve Cryptography 45
+Elliptic Curve Discrete Logarithm 45
+
+Bots 45
+Sybil Attacks 45
+Inflation 46
+
+Technical	Considerations	for	a	Dapp	 47
+Data 47
+Beta Release 47
+
+SPN Integration 48
+Search 48
+Storage 48
+
+Decentralized Release 48
+Blockchain 48
+Off-chain 48
+
+IPFS & Swarm  50
+
+References	 52
+
+
+
+5
+
+GLOSSARY
+
+ERC20
+A common list of rules for all Ethereum tokens to follow, allowing developers of all types to accurately predict how a 
+token will function within the larger Ethereum ecosystem.
+
+Sapien Platform
+The Sapien Platform is a decentralized social news platform built with Meteor.js, the recommended framework for 
+Ethereum Dapps (Decentralized Applications).
+
+Sapien Network / Ecosystem
+The Sapien Network is powered by the SPN token and includes the Sapien Platform, the decentralized marketplace, 
+integrated third party applications, digital content creators, and media publications.
+
+Branch
+Branches are the communities within Sapien. A branch can be either private or public, and focuses on a specific topic 
+or theme. Users have reputations associated with each branch that they participate in, affecting their influence within 
+the branch.
+
+SPN
+SPN is a cryptocurrency used in Sapien to reward users for their contributions. SPN can be freely exchanged between 
+users within Sapien or held in any ERC20-compliant wallet. SPN can be used for social actions (posting, comments, 
+voting, etc.), purchasing physical or virtual goods on the Sapien marketplace, and to purchase premium content. SPN 
+will be awarded to quality content creators within Sapien, and will track a user’s reputation as their contributions are 
+evaluated.
+
+Staked SPN
+In order to be rewarded for contributions on Sapien, a user must have staked SPN. Unstaked SPN can be staked by 
+locking it into a separate smart contract for a fixed duration of one year.  Upon completion of the staking contract 
+the SPN will be returned to its unstaked form. Users can choose to stake SPN tokens again to increase their capacity 
+for doing social actions, user-to-user tips, and participating in platform and community proposals. Staked SPN is used 
+within the Sapien ecosystem and will not be listed on exchanges.
+
+Unstaked SPN
+Unstaked SPN is not in the Sapien ecosystem. For example, this can be SPN tokens in a personal wallet. A user can 
+manage their portfolio of staked and unstaked tokens within their digital wallet.
+
+
+
+6
+
+OVERVIEW
+
+ - Vision: Sapien is a democratized, tokenized, reputation-based social news platform capable of rewarding millions 
+of digital content creators without any centralized intermediaries. Sapien will be powered by our utility token, 
+SPN, and built to provide a smooth user experience that will bring the benefits of the Blockchain to the masses. 
+
+ - Token sale: Users can acquire SPN tokens to use on the Sapien platform immediately.
+ - Official	Website:	https://www.sapien.network
+ - SPN Decimals: 18
+ - Initial	Token	Supply:	500,000,000
+ - Growth Rate: All new tokens will be minted through Sapien and distributed to value creators at a controlled 
+
+inflation rate.
+
+SPN Token Sale
+ - Token	Allocation:
+
+• 20% reserved for team and advisors (100M)
+
+ » 6-month cliff with a 24-month vesting schedule
+
+• 45% sold during Pre-sale and Token Sale Phase #1 (225M)
+
+• Up to 5% distributed as Bounties (25M)
+
+• 30% in Sapien reserve for future Token Sales and Airdrops (150M)
+
+ - SPN	Distribution: Smart Contract will distribute tokens after Token Sale Phase #1 is complete.
+ - Token	Sale	completion:	250,000,000 SPN tokens are distributed or April 3rd, 2018, whichever comes first.
+ - Unsold SPN: SPNs not sold in the Token Sale will be transferred to the Sapien reserve.
+
+SPN Utility
+1. Tokens will exist in staked and unstaked forms. Staked tokens will provide users with platform functionality. 
+
+Unstaked tokens will be listed on exchanges.
+
+2. The token will keep track of a reputation within each community the user is part of, accumulating a score that 
+reflects their expertise and reduces the spread of fake news.
+
+3. Power a Democratized Autonomous Platform (DAP), enabling users to participate in organizational decisions 
+and shape product roadmap with a proposal system.
+
+4. Allow holders to purchase physical and virtual goods, content, and services in a decentralized marketplace.
+
+5. Reward digital content creators who generate quantifiable value, determined with the consensus of the 
+community.
+
+6. Share ad revenue with users who opt-in to see advertisements. By staking more tokens, users can earn a larger 
+portion of the revenue they generate for Sapien.
+
+
+
+7
+
+This page was intentionally left blank
+
+
+
+8
+
+
+
+9
+
+INTRODUCTION
+
+A multitude of theories behind human intelligence suggest how fundamental social networks have been to the 
+evolution of our species, Homo Sapiens.1 Whereas thousands of years ago the primary objective of interaction 
+was survival, we now interact for numerous reasons, ranging from business to pleasure. Companies like Reddit and 
+Facebook have enabled us to continue this ancient practice of socializing, while simultaneously driving open-source 
+innovations like React.js and GraphQL. Another example of the earliest social activity is payments. Bitcoin is the 
+first successful implementation of a borderless, cryptographical store of value enabling us to discreetly send funds 
+to another person. Yet it was Satoshi Nakamoto’s brilliant idea behind the coin, the Blockchain, that has opened the 
+floodgates of innovation. Immutable, hashed data is stored in blocks that are chained together to create a distributed 
+database, secured with cryptography. This new technology has begun to disrupt everything from healthcare to 
+banking to consumer apps. It is quite likely that we are witnessing the early stages of Web 3.0. Our team believes it 
+is now feasible to combine the innate human desire for social networks with the immense power of the Blockchain 
+to give each individual unprecedented control over their online social experience. We intend to build a democratized 
+social platform that truly serves its users, fueled by a flexible cryptocurrency, SPN, built on the Ethereum Blockchain.
+
+1 https://en.wikipedia.org/wiki/Evolution_of_human_intelligence#Social_brain_hypothesis
+
+
+
+10
+
+WHAT IS SAPIEN?
+
+Sapien is a highly customizable, democratized social news platform capable of rewarding millions of content creators 
+and curators without any centralized intermediaries. Sapien is powered by an ERC20 compliant cryptocurrency 
+called SPN. The Sapien network will rapidly evolve to include a marketplace, various integrations, and third-party 
+applications.
+
+Core Values
+1. Democracy - Users should have the final say over their communities and should be incentivized to contribute.
+2. Privacy - Targeted advertising is profitable but inherently flawed because it exploits user data and infringes on 
+
+user privacy.
+
+3. Free Speech -  A fundamental principle that should be protected online with disruptive tools.
+4. Customizability - Each user should be able to tailor a social experience to their liking.
+
+Key Features
+
+Live Beta 
+You can join the beta waitlist with this link: https://www.sapien.network.
+
+Public/Private Browsing
+Seamlessly switch between public 
+and private modes to experience 
+Sapien with your real identity or 
+anonymously.
+
+Subscriptions
+Subscribe to branches to stay up to 
+date with the latest posts from your 
+friends and people around the world.
+
+Friends, Groups, and Posts
+Add friends, create groups, share 
+posts, write comments, and expand 
+your horizons.
+
+Feature-rich Chat
+Join text and voice channels with 
+our powerful chat interface, which 
+provides a more dynamic and 
+engaging user experience.
+
+Encryption
+Protect your online privacy. Sapien 
+protects your personal data and 
+offers encrypted chat conversations.
+
+Highly Customizeable
+Every individual is unique. Have 
+control over every feature and tailor 
+your own social experience.
+...and much more
+
+
+
+11
+
+OBJECTIVES
+
+Establish a Proof of Value Consensus Protocol
+At its core, SPN derives its value from the ability to collaboratively distinguish high-quality content throughout the 
+Sapien Network. The proof of value mechanism will promote quality contributions and reward users accordingly. 
+As the contributions of users are evaluated throughout the network they will accumulate a score that reflects their 
+reputation. This will allow a user’s domain-specific expertise to be reflected within their communities. Within Sapien, 
+reputation will mitigate trolling and reduce the spread of fake news. The reputation system is inherent to the SPN 
+token and thus not restricted to the Sapien platform.
+
+Launch the first Democratized Autonomous Platform
+To create a truly autonomous social platform, users must have real power over the direction of the platform. Thus, one 
+of the capabilities of the SPN token will be to give users a voice through our innovative proposal system. This will allow 
+users to participate in organizational decisions, feature developments, and marketplace rewards. SPN stakeholders 
+will be in a unique position to suggest and prioritize milestones on our project roadmap. With the first autonomous 
+social platform, we can cultivate a passionate and engaged community that has the ability to change its values 
+over time. In addition, SPN will enable users to vote on proposals within a branch, facilitating democratic decisions 
+at a community level. Ultimately, this will enable branches to self-moderate, without the need for authoritative 
+moderators that are the norm on similar platforms.
+
+Build a Robust Marketplace and Incentivize User Contributions
+Content creators should be rewarded fairly for their time and the original content they add to a platform. Users 
+will be able to tip one another for posts or comments and even receive payouts in SPN from Sapien for posts 
+that have created quantifiable value. By enabling users to pay each other in this manner we believe we will foster 
+an environment that supports quality content and liberates content creators from dependence on ad revenue. A 
+decentralized marketplace is planned in the roadmap to enable SPN holders to purchase exclusive premium content, 
+services, physical merchandise and virtual goods, including themes, integrations, and features.
+
+Power Future Applications on the Sapien Network
+As Blockchain applications become the new standard, Sapien will build out a development platform powered by SPN 
+to offer users a wide variety of app integrations and permit external apps to leverage our user base. We intend SPN 
+to function as a unified currency for all in app purchases on integrated apps. New applications will be able to integrate 
+with SPN easily through the Sapien API allowing users to exchange and make purchases with SPN. The unified 
+market created by SPN will tether virtual items purchased inside integrated applications to the real world value of 
+SPN creating a new dimension of interactions between users on applications integrated with SPN. Lastly, our goal is 
+to establish a global reputation network on all SPN integrated platforms to fight fake news everywhere.
+
+
+
+12
+
+WHY CONTRIBUTE?
+
+Once implemented, we believe that SPN will be one of the most versatile tokens in the online space. Not only will 
+the SPN token be immensely useful within the Sapien ecosystem, SPN will also facilitate creating and transferring 
+value within and beyond the platform. Fake news will be greatly mitigated with secure identities on the Blockchain 
+and an extensive reputation system. SPN will be the backbone of every social action and transaction that happens, 
+embedding its growth potential in the expansion and adoption of the platform instead of any arbitrary fluctuations 
+in the crypto market. Content creators will truly have a viable means of earning rewards without being exploited by 
+centralized entities. Users will finally have a real voice in collaborating and shaping the community they want to be 
+part of. By leveraging the latest Blockchain technologies, we can work together to build a platform that is immune 
+to censorship, guards our free speech, respects our privacy, and persists content throughout humanity’s existence. 
+Now is the time.
+
+Be	on	the	right	side	of	history.
+
+
+
+13
+
+PRODUCT ROADMAP
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+2015 - Idea behind Sapien is conceived and development 
+begins
+
+2017 Q1 - Private beta launched with integrated chat and 
+voice channels
+
+2017 Q2 - Transition from an end-to-end encrypted 
+platform to Blockchain application
+
+2017 Q3 - Completed SPN white paper and begun 
+Ethereum smart contract development
+
+2017 Q4 - Launch testnet faucet and showcase token in 
+Sapien
+
+2019	 Q1	 - Build infrastructure for Democratized 
+Autonomous Platform
+
+2019	 Q2 - Roll out marketplace, premium content and 
+features
+
+2019	 Q3 - Open developer platform to third-party 
+applications and integrations
+
+2019	Q4 - Optimize platform to scale and add 1M new 
+users per month
+
+2016 - Closed alpha is launched, written with full-stack 
+javascript
+
+2018 Q1 - Token Sale Phase #1 and implement payouts 
+for creators and curators
+
+2018 Q2 - Increase brand awareness and begin porting 
+Sapien platform to a DApp
+
+2018 Q3 - Incentivize network effects and revamp UI/UX 
+for crypto novices
+
+2018 Q4 - Ramp up marketing efforts; acquire 10k new 
+users per month
+
+2020 Q2 - Tokenize user data and extend token use to 
+other websites   
+
+2020 Q4 - Add 10 million new users per month
+
+
+
+14
+
+
+
+15
+
+USER STORIES
+
+There are several users that would comprise Sapien’s vibrant ecosystem:
+
+1. Creators: Users who submit original digital content (posts, comments, videos, memes, podcasts, etc.) to the 
+Sapien platform. Their quality contributions are compensated with SPN tokens that increase their reputation on 
+the platform.
+
+2. Curators: These are trusted guides for different branches on Sapien. Curators discover and share high-quality 
+content within their branch and network. For these users, we have designed voting rewards in SPN tokens that 
+recognize their efforts.
+
+3. Freelancers: Individuals who would like to provide services to Sapien users in exchange for SPN tokens. Tasks 
+will be completed on the marketplace with zero transaction fees.
+
+4. Developers: Decentralized app developers who want to contribute to the platform or ecosystem. As the 
+platform grows, our team will open up a developer platform that will allow engineers to build third-party 
+applications, integrations, and features for Sapien.
+
+5. Media Companies: Media Publications can partner with Sapien to set up independent publishing, individual 
+prices for content, create a sustainable business model, and build reputation with our users.
+
+Creators
+Name: Alice
+
+Background: Alice is a prolific content creator who just graduated from college. She loves writing articles on technology 
+and current events. She also recently launched a podcast on SoundCloud to document her growth as an author and 
+a human.
+
+Problem: As much as she enjoys creating digital content on the Internet, Alice is disappointed that she has made $0 
+from her articles, posts, and podcast. She would love to create content for a community of like-minded people that 
+can reward her for her consistent and passionate work. She also wants to set up an easy way for power-users to 
+subscribe to her premium content.
+
+Solution: Alice finds out about Sapien. She posts her articles, podcast, and videos in the technology branch, receiving 
+great feedback from the community. Her efforts are rewarded with SPN tokens, some of which she uses to launch 
+her own branch on Sapien for premium content. She eventually gets hundreds of thousands of followers that are 
+subscribed and paying her weekly in SPN tokens for her content. Alice is excited that she can finally pursue her 
+dreams!
+
+Curators
+Name: Waylan
+
+Background: Waylan is often found in the “new” section of Reddit and 9gag. He spends some of his time curating 
+content on these platforms, giving an upvote if he believes a post should go to the front page or a downvote if he 
+thinks the content is irrelevant or a repost. 
+
+Problem: Users like Waylan are absolutely essential to platforms that depend on users to evaluate the content 
+generated by other creators in an online community. Unfortunately, Waylan is not currently rewarded for his time 
+and effort despite thousands of curators like him underpinning user-generated platforms.
+
+Solution: Waylan joins Sapien. As a curator on the platform, Waylan uses his staked SPN to gives quality contributions 
+
+
+
+16
+
+upvotes. Depending on how early he votes, Waylan now can earn rewards in the form of SPN tokens if the community 
+also finds the post valuable. At the end of the rewards window, Waylan will receive all of his originally staked SPN 
+back and any newly staked SPN, proportional to the amount he originally staked and how early he voted.
+
+Freelancers
+Name: Rahul
+
+Background: Rahul, a passionate full-stack JavaScript developer based in India, enjoys building web applications for 
+clients all over the world. He enjoys the flexibility of working on his own schedule and setting his own prices.
+
+Problem: To list his services, Rahul uses Fiverr and Upwork, two popular freelancing websites. However, as a result 
+of being centralized, both companies take as much as 20% commision on every job that Rahul performs. Rahul is 
+frustrated by these excessive fees, and rightfully so.
+
+Solution: Rahul learns about Sapien’s decentralized marketplace, where in addition to listings for physical goods and 
+virtual commerce, he can also list his services with zero transaction fees. Payments are handled efficiently by the SPN 
+token. He is also happy to notice that as he completes projects successfully, his reputation increases as a vendor. 
+Sapien’s global reputation system lets other websites integrate the SPN token and view Rahul’s stellar reputation.
+
+Developers
+Name: Nzingha
+
+Background: Nzingha has been active in the cryptocurrency space since the early days of Ethereum. She’s an 
+experienced developer and a strong believer in Blockchain technologies. She routinely contributes to open source 
+projects and is active on social media.
+
+Problem: Nzingha enjoys using current platforms, however, she understands the promise of Web 3.0 to return the 
+power to the people. She has many experimental ideas that she wants to try out but unfortunately, can’t contribute 
+directly to any existing centralized websites and open source projects do not reward her time.
+
+Solution: Nzingha learns about the developer platform for the decentralized social news platform, Sapien. The 
+platform enables her to build on top of the platform and sell her creations in an open marketplace. All transactions 
+on the marketplace are powered by SPN tokens. Nzingha can now contribute to the Sapien platform with themes, 
+integrations, and features, while also opening up a sustainable revenue source for her.
+
+Media Companies
+Name: Carlos
+
+Background: Carlos is the chief Editor of a media publication called Now!. Now! is a publication focused on delivering 
+high-quality, impact driven articles and papers about society. Carlos is an ambitious leader, who wants to rapidly grow 
+the Now! digital user base.
+
+Problem: Now! is finding it difficult to distinguish itself from the plethora of other publications in the market. Carlos 
+realizes how hard it is to compete with prolific giants like NY Times and Buzzfeed. He knows that he must build the 
+Now! brand and modernize his business to reach more users.
+
+Solution: Carlos finds an untapped audience for his publication on the Sapien platform, where users can pay with SPN 
+to subscribe to Now! Content. His team can set individual prices or subscriptions for articles, powered by the SPN 
+cryptocurrency. Using the Unified Media Portal, Sapien users can organize their content in one place from Now! and 
+other publications. Carlos is very excited to be at the frontier of media on the Blockchain and build a trusted brand 
+on Sapien.
+
+
+
+17
+
+0.0
+
+0.5
+
+1.0
+
+1.5
+
+2.0
+
+2.5
+
+3.0
+
+3.5
+
+2017 2018* 2019* 2010* 2021*
+
+2.46
+2.62
+
+2.77
+2.9
+
+3.02
+
+N
+um
+
+be
+r o
+
+f u
+se
+
+rs
+ in
+
+ b
+ill
+
+io
+ns
+
+2017 2018* 2019* 2010* 2021*
+
+1.66
+1.79
+
+1.92
+2.05
+
+2.14
+
+N
+um
+
+be
+r o
+
+f u
+se
+
+rs
+ in
+
+ b
+ill
+
+io
+ns
+
+0.0
+
+0.5
+
+1.0
+
+1.5
+
+2.0
+
+2.5
+
+Number	of	social	media	users	worldwide	
+From	2017	to	2021	(source:	Statista)
+
+Number	of	Digital	Buyers	worldwide
+From	2017	to	2021	(source:	Statista)
+
+Figure 1.1 Figure 1.2
+
+MARKET OPPORTUNITY
+
+Social Media
+There are currently over 2.3 billion social media users and by 2020 there will be more than 3 billion. Humans are an 
+inherently	social	species;	thus,	some	form	of	social	media	will	continue	to	play	an	important	role	moving	forward.
+
+E-Commerce
+According	to	Statista,	the	number	of	people	buying	goods	or	services	online	will	increase	from	1.46	billion	in	2015	
+to	more	than	2	billion	in	2020.	Technologies	like	Blockchain,	IoT,	and	cloud	computing	are	radically	changing	how	
+consumers	will	transact	in	the	future.
+
+
+
+18
+
+Privacy
+As	shown	by	Figure	2.1	and	2.2,	trends	indicate	a	rising	privacy	concern	and	a	rising	distrust	of	disclosing	personal	
+info	on	social	media.	These	attitudes	show	internet	users	are	increasingly	concerned	with	privacy,	yet	simply	have	
+no	option	but	to	continue	using	services	that	hoard	and	profit	of	their	data.
+
+1.00
+
+1.50
+
+2.00
+
+2.50
+
+3.00
+
+3.50
+
+4.00
+
+ 22.
+Unauthorized 
+secondary 
+used
+
+ 24.
+Information 
+privacy 
+concerns
+
+Ite
+rati
+
+on
+ 1
+
+Ite
+rati
+
+on
+ 2
+
+Ite
+rati
+
+on
+ 3
+
+Ite
+rati
+
+on
+ 4
+
+Number Hypothesis Findings
+
+H1 Social Media Privacy 
+
+concern are positively 
+
+correlated to time.
+
+Supported
+
+H2 Distrust of Social 
+
+Networking Sites is 
+
+positively correlated to 
+
+time.
+
+Supported
+
+H3 Risk perception for 
+
+privacy disclosure is 
+
+positively correlated to 
+
+time.
+
+Supported
+
+H4 Privacy disclosure to 
+
+Social Networking Sites 
+
+is negatively correlated 
+
+to time.
+
+Supported
+
+Social Disclosure Behaviors
+(source:	Semantic	Scholar)
+
+Longitudinal Study Hypothesis Results
+(source:	Semantic	Scholar)
+
+Figure 2.1 Figure 2.2
+
+
+
+19
+
+Figure 3.1
+
+Figure 3.2
+
+Media
+Figures 3.1 and 3.2 below clearly indicate a move towards more digital spending and this clearly impacts media 
+publishers.	 Sapien	offers	 these	creators	an	opportunity	 to	have	a	digital	 transformation	of	 their	businesses	by	
+offering	consumers	additional	revenue	streams	to	monetize	and	reduce	losses.
+
+
+
+20
+
+BUSINESS MODEL
+
+The primary focus after the SPN token sale will be to securely and accurately implement the proposed utility of 
+SPN. At the same time, the success of the Sapien platform is essential to the  longevity of the SPN token. Thus, it is 
+necessary to create a sustainable business model that aligns the values of SPN token holders, platform users, and 
+company shareholders.
+
+Marketplace
+
+Buyers & Sellers
+Users will be able to purchase and sell physical and virtual goods, services and premium content on the Sapien 
+marketplace using SPN tokens. Reputation scores will be integrated into the marketplace, enabling users to be 
+confident that the vendor they are purchasing from is reliable.
+
+Sapien
+Sapien will charge a 1% transaction fee to buyers and sellers on the Sapien marketplace unless they have a certain 
+threshold of staked SPN. The minimum threshold will initially be set at the equivalent of $20 worth of staked SPN. If 
+a buyer or seller have staked at least $20, then they will pay no transaction fees from their behalf. If either party has 
+less than the minimum threshold staked, they will be charged a 1% transaction fee.
+
+Ad Platform
+
+
+
+21
+
+The rising concern for privacy has been disregarded by most mainstream social platforms. As a result, a collective 
+feeling of helplessness has emerged among users regarding the exploitation of their personal data to use popular 
+services. Users should be in absolute control of their data and how other companies use it. Therefore, prior to any 
+third-party integrations with Sapien, we will attempt to standardize and liquidize any data that we have amassed from 
+our users. SPN tokens will be assigned to various elements of user data for activity, interests, subscriptions, likes, 
+dislikes, etc. Users will have complete autonomy in determining what data is released and be able to reap the rewards 
+for the consensual disclosure of information when third-party apps ask for permissions.
+
+Users
+User privacy is a critical part of our philosophy, and as such we will allow users to have complete control over their 
+relationship with advertisements on Sapien. By default, users will see no advertisements and no personal user data 
+will be collected without a user’s knowledge. If a user so desires, they can opt-in for Sapien to collect and assign SPN 
+token value to their data. Then, users can choose to share their information with advertisers in exchange for SPN 
+tokens. The more staked SPN a user has, the more SPN tokens they will receive for enabling advertisements. 
+
+Advertisers
+Ads will be purchasable on Sapien with SPN tokens and will be served to users who have enabled them. Advertisers 
+will receive a substantial discount for purchasing ads with SPN tokens. Advertisers will be able to place ads on public 
+branches that align with their target audience. The advertising experience will be similar to existing social platforms, 
+except a majority of ad revenue will be given to users.
+
+Sapien
+The majority of revenue earned from ad purchases will be distributed to users who have enabled ads. Users will 
+receive at least 50 percent of the revenue from ad purchases. The ratio of revenue distributed is dynamic and will be 
+adjusted to keep the platform afloat. All ad transactions will be publicly viewable on etherscan.io. This way, Sapien 
+can assure transparency and our users will retain full control over their experience on the platform.
+
+Extend to other Websites
+At its core, the SPN token will always have intrinsic value governed by market supply and demand. To promote the 
+widespread adoption of SPN, we can integrate the token as purely a tipping or payment mechanism in Reddit, Slack, 
+Twitch, etc., thereby increasing token liquidity. An open-source tipping system could be built by developers in each 
+community to tailor SPN to each service and expose more people to the Ethereum Blockchain.
+
+
+
+22
+
+TOKEN SALE
+
+Presale 
+ - Token Exchange Base Rate: Phase #1 rate +20% (final exchange rate will be fixed closer to presale)
+ - Currencies Accepted: ETH
+ - Tiered Investment Structure:
+
+• >$250k: +25% 
+
+• >$100k: +15%
+
+• >$50k: +7%
+
+• >$10k: +3%
+
+• <$10k: no bonuses
+
+ - SPN	Distribution: Smart Contract will distribute tokens after Token Sale Phase #1 is complete.
+ - Minimum Presale Goal: No minimum
+
+Allocation of Presale Funds
+Presale	funds	will	be	used	to	cover	legal	costs,	fund	the	marketing	campaign,	and	pay	for	the	development	of	SPN.
+
+Token Sale Phase #1
+ - Total	Hard	Cap	(in	USD): 30,000 ETH
+ - Currencies Accepted:
+
+• ETH: Natively supported.
+
+ - Token Exchange Base Rate: 1 ETH = 6000 SPN
+ - Bonus Structure:
+
+• March 20 - March 21: +15%
+
+• March 22 - March 23: +12%
+
+• March 24 - March 25: +9%
+
+• March 26 - March 27: +6%
+
+• March 28 - March 29: +3%
+
+• March 30 - April 3: no bonuses
+
+ - Issuance Rate: All new tokens will be distributed to value creators within Sapien
+ - Minimum Goal: 50,000,000 SPN
+
+Minimum Goal
+Our minimum goal has been set strategically to ensure that the Sapien core team can quickly, securely, and completely 
+
+
+
+23
+
+deliver on our promises for the SPN token and the Sapien platform. If our goal is not met, all contributors will be 
+refunded through our smart contract, minus any funds that were liquidated for marketing and other expenses. 
+
+How to Contribute
+ - Contribution address will be released closer to the presale.
+
+ - Send ETH from your personal Ethereum Wallet using MyEtherWallet, Metamask, Parity, Mist or Ledger Nano S
+
+ - Your CONTRIBUTION address MUST be an ERC20-compliant wallet.
+ - Do not send funds before the crowdsale begins, or your transaction will be rejected
+ - Smart Contract will distribute tokens immediately after ETH is received in the crowdsale.
+
+ - Guide: https://youtu.be/h-7EyHjDUuI
+
+
+
+24
+
+Allocation of Funds (2018 - 2022)
+
+ - Administrative: To ensure day-to-day operations run smoothly as the project grows. 
+ - R&D: Development for SPN, including core team and community developers. Funds will be liquidated as our 
+
+company milestones are met.
+
+ - Marketing: We will encourage organic community growth and launch an incentivized referral program. Thus, we 
+have a smaller marketing budget than other similarly situated companies. Traditional media channels and Sapien 
+will be used to reach our user base.
+
+ - Legal: Compliance with the SEC and other regulatory entities will be a top priority for our token. Our budget is 
+allocated to cover existing and any new regulatory laws applicable to SPN.
+
+ - Security Audits: A separate budget has been allocated for continually auditing any new smart contracts our team 
+develops, both for the SPN token and the Sapien platform.
+
+
+
+25
+
+Distribution of Tokens
+
+ - 45% of SPN created during our token sale will be reserved for contributors who send ETH to the smart contract 
+address.
+
+ - 20% of SPN will be locked in a smart contract for the founders and team, subject to a 6-month cliff and 24 month 
+vesting period.
+
+ - 30% will go to the Sapien reserve which will be distributed in our Token Sale Phase #2 to augment platform 
+growth, distributed via Sapien, or burned to control inflation.
+
+ - Up to 5% will be reserved for our bounty program, contingent on the total number of participants in the campaign. 
+Participation details will be released in a separate document.
+
+
+
+26
+
+Incentivizing the Network Effect
+Metcalfe's law2 states that the value of a network is proportional to the square of the number of connected users of 
+the system, n2. The value of a social network clearly increases as more interactive users join. This law also reveals the 
+difficulty facing a nascent social network, as its utility is lower when there are fewer users on the platform. In order 
+to overcome this problem, we will include several incentives for new users. The earlier a user signs up, the more SPN 
+they will receive. We will also create a referral program that will let a user send invitations to join the platform. Users 
+will receive 10/m2  SPN for the m-th user that they have referred. Any SPN tokens distributed in this manner will be 
+provided by tokens allocated in the Sapien reserve.
+
+The n-th user to sign up will receive  SPN tokens from the Sapien reserve, where p is the percentage of 
+the hard cap raised, staked automatically for a period of 12 months and without the option of immediately unstaking. 
+If the hard cap is reached, the first 10,000 users will receive 1,985,446 SPN tokens; the 10,000th user who registers 
+will receive 100 staked SPN tokens; the first 1,000,000 users will receive 19,985,401 tokens; and the 1,000,000th 
+user who registers will receive 10 staked SPN tokens.
+
+For context, with the current SPN phase #1 base rate and Ether price ($450 = 1 ETH), this corresponds to a user 
+acquisition cost of $22.50 for the 10,000th user and $2.25 for the millionth user. If the market cap of SPN significantly 
+changes, this equation will be adjusted to prevent currency dilution. This is shown below in the case that the hard-cap 
+is reached.
+
+2 https://en.wikipedia.org/wiki/Metcalfe's_law
+
+
+
+27
+
+SPN TOKEN
+
+Proposed Utilities
+
+Utility I: Staked SPN to Power the Sapien Platform
+In order to encourage stability of the SPN token, the longevity of its platform, and the curation of good content, 
+Sapien will allow tokens to be staked to access social features on the platform. SPN tokens can be staked for a period 
+of 1 year. Staked tokens can be used to upvote content, vote on proposals, submit new proposals, tip, and access 
+premium branches, and much more. On the other hand, unstaked tokens are liquid: unstaked SPN will be easily 
+transferrable out of Sapien and tradable on exchanges.
+
+Staked SPN tokens do not necessarily get consumed in platform transactions. Rather, consider them “locked up” for 
+platform actions. For example, the platform will at first require 10 staked SPN to make a new post on the platform. 
+Initially, exactly 10 SPN will be returned to the user at the end of the voting period for the post. When SPN payouts 
+are integrated, it would then be possible for the user to receive back more than 10 staked SPN. However, if the user 
+posts illegal content or violates community guidelines, it would be possible to penalize the malicious user by freezing 
+their staked SPN.
+
+Utility II: Reputation Network built-in the SPN token
+Contributions made by users, publishers, and businesses on the Sapien platform will be inherently stored in the SPN 
+token with a reputation score. All users will start out with a reputation score of one. Then, depending on the value 
+the user adds to the platform, this score can be positively or negatively impacted. When quality contributions are 
+evaluated positively, a user’s reputation within a community will increase; low-quality posts and comments will lower 
+a user’s reputation. Reputed users will be delegated more “power” on the platform, allowing them to have a greater 
+say in what qualifies as valuable contributions within their respective communities.
+
+Utility III: Democratized Autonomous Platform (DAP) Proposals
+SPN token holders will be able to create and vote on proposals for Sapien. Proposals can theoretically consist of 
+anything, ranging from organizational decisions to feature requests to marketplace reward modifications. Proposals 
+will be at the core of the DAP, enabling users to self-organize and self-moderate their communities. This elevates 
+the autonomy of a community, empowering users to actively build the community that they want to be a part of. 
+Bad actors will be flagged for inappropriate behavior within a branch, creating a tribunal. A tribunal will enable the 
+community to collaborate and decide if a user should penalized and to what extent. Reputation will be tightly tied to 
+community organization and execution of the DAP.
+
+Utility IV: Content Payouts and User-to-user Tips
+To further encourage and cultivate quality content on Sapien, the SPN token will be the backbone of payouts and 
+user-to-user tipping. Payouts for content creation are the primary mechanism for rewarding users and promoting 
+the creation of quality content. User-to-user transactions will create an altruistic environment in which a user can 
+selectively reward authors and original content creators for posts, comments, podcasts, videos, memes, etc. The 
+elimination of transaction costs and the utility of a token (a tangible reward unlike Reddit gold) should sufficiently 
+incentivize users to post original content, growing both the Sapien platform and the SPN token value.
+
+
+
+28
+
+Users will not be required to have substantial knowledge of cryptography or how tokens operate. Sapien will offer 
+various settings that can be customized to fit the skill-level of users. The interface for single-time payments will be 
+displayed in dollars, while the SPN token will be used in the background. Advanced users will have the option to 
+manage their own private key for their SPN address. Users will also be able to set up recurring payments for premium 
+subscriptions. Our intention is to open the benefits of SPN to everyone, regardless of their qualifications or crypto 
+expertise.
+
+Utility V: Standardized Token for Integrated Marketplace
+The aforementioned DAP proposal system will be used to propel much of the development of the marketplace. 
+After opening up the platform to developers, the interface will benefit from the collective imaginative power of our 
+community.
+
+The Sapien marketplace will be the ultimate portal to manage SPN and accelerate market liquidity. Within Sapien, 
+users will be able to transfer tokens, view the marketplace, and manage their portfolio.
+
+Transfer	Tokens: A simple interface to transfer and exchange SPN tokens.
+
+Manage	Portfolio: Allows users to view their staked and unstaked SPN token distribution.
+
+Marketplace: To complete the ecosystem, a community-driven marketplace will serve as the primary interface for 
+users to create and access exclusive rewards, themes, and components, both within Sapien and through third-party 
+businesses.
+
+Our	team	priorities	for	the	marketplace:
+
+1. Design and develop the initial rewards with input from our user base.
+
+2. Actively reach out to businesses to negotiate discounts for SPN holders on products ranging from ride-sharing, 
+to merchandise, to pizza, etc.
+
+3. Launch a secure community platform for contributors to develop new features, themes, and integrations for 
+Sapien users.
+
+Utility VI: Ad Platform Revenue Sharing
+User privacy is a critical part of our philosophy, and as such we will allow users to have complete control over their 
+relationship with advertisements on Sapien. By default, users will see no advertisements and no personal user data 
+will be collected without a user’s knowledge.
+
+If a user decides to see ads, all revenue generated will be shared between the user and Sapien, with the user receiving 
+no less than 50% of this revenue in the form of SPN tokens. Users will be able to increase the percentage of ad 
+revenue they receive by staking SPN on Sapien. 
+
+By default, user data will not be collected on Sapien. Users will be able to choose what data, if any, they want to 
+share with advertisers. Users will receive a greater percentage of ad revenue for sharing their data with advertisers. 
+The percentage of ad revenue received by a user will be based on a tiered system, with users receiving a greater 
+percentage if they have more SPN tokens staked.
+
+
+
+29
+
+Sapien will also facilitate user-to-user advertising. Community (groups or branches) owners will have the option to 
+display advertisements on their groups and will receive a share of ad revenue for doing so. The choice of whether or 
+not to display advertisements is entirely up to the community owner and they will have complete control over which 
+ads are displayed on their group page. Sapien will receive a small share of ad revenue generated in groups while 
+the majority of this revenue will be split between the community owner and the users. The distribution of revenue 
+between owners and users will also follow the above tiered structure. The portion of ad revenue a owner receives 
+will increase as they stake more SPN.
+
+Advertisers will be able to purchase ads on Sapien with either fiat or SPN tokens and reach users who have shared 
+relevant information or to public branches that align with their target audience. Advertisers will also receive a 
+substantial discount for purchasing ads with SPN tokens. 
+
+Use Cases
+
+Use Case I: Fake News
+Problem: According to study done by Stanford University, there were over 30,000,000 fake items shared in the 
+2016 campaign.1  In this era of fake news and alternative facts, it is not surprising that news subscriptions have been 
+on the rise. The Washington Post recorded a year-to-year growth of 145% while The New York Times has seen a 
+tenfold increase in subscriptions. People have an evident need to access quality content without worrying about the 
+authenticity of the publisher and journalists involved. This trend makes it necessary to shift revenue generation from 
+the manipulative “eyeball” business model to a more sustainable one that uses simple subscriptions. Transparency is 
+essential in this industry, as it can directly influence the masses and motivate certain behaviors.
+
+1 https://web.stanford.edu/~gentzkow/research/fakenews.pdf
+
+
+
+30
+
+The problem of fake news is compounded when technologies such as artificial intelligence become smarter and begin 
+to learn what makes humans tick. Already, machine learning has enabled us to replicate the voices of individuals 
+and combine them with video to give a convincing illusion that the person really did say the fake statements. Online 
+entities, funded by large corporations, will continue spending millions in the booming attention economy, resulting 
+in a constant bidding war for consumer attention. Inevitably, we will need to be quite discerning in how we consume 
+content on the web as truth becomes blurrier. This is precisely where we can leverage Blockchain technology to help 
+us identify and distinguish valuable content while directly rewarding the creators.
+
+Solution: Sapien will leverage the Blockchain for a three-pronged attack against fake news:
+
+1.	 Identity	on	the	Blockchain: Sapien will enable storage of identities on the Blockchain for the purpose of 
+identification. All marketplace sellers will be required to verify their identity prior to selling content. Media 
+publishers and well-known users will also be able to verify their identity on the blockchain. With identities on 
+the Blockchain, it will be harder for trolls to deceive users into believing that they are someone they are not.
+
+2.	 Reputation	in	Communities: Reputation will be fundamental to combating fake news and trolls on the 
+platform. Lower reputation users will have significantly less power on the platform. Reputation is specific to a 
+given branch and so helps identify a user’s expertise across a wide range of subjects. Moreover, reputation will 
+be a valuable asset in the marketplace to exchange goods and services. A reputed vendor or content creator has 
+earned their SPN through consistent contributions, great customer service, or validation from other reputed 
+individuals. This enables the creation of a reputation network that will consciously help our users distinguish 
+the sources of their information, making them less vulnerable to fake news or incessant trolling. Since this 
+utility is inherent to the SPN token, it is easily extensible to other applications and businesses outside the 
+Sapien ecosystem.
+
+3. Something-at-stake Design: By allowing users to stake SPN tokens, we are able to align the interests of 
+the Sapien platform and users. Users have a vested interest in creating quality content on the platform, or 
+risk losing their staked SPN. With this “something-at-stake” design, trolls are discouraged from malicious 
+behavior. Valuable contributions will fuel the growth of the platform, increase the value of the SPN token, and 
+compensate users for their merits in the form of SPN rewards.
+
+4. Machine Learning: Machine learning is a powerful tool that can be used to combat the spread of 
+misinformation. We will use cutting-edge machine learning models to perform stance detection in order to 
+determine whether headline claims are supported by evidence, specifically other articles posted on the Sapien 
+platform and on the Internet. Using these tools we will be able to produce a probability that a headline claim is 
+false. This probability can be displayed to users to help inform their judgment and to encourage them to further 
+scrutinize the sources of an article.
+
+ Undoubtedly, there will be users who attempt to manipulate the system for personal gain. In addition to 
+freezing all funds and banning any users attempting to “game” the system, users will be able to flag fake or 
+stolen content. The Sapien team will have a minimum involvement in determining what material is protected 
+by free speech. While illegal or stolen content will immediately result in a ban from Sapien, punishments for 
+reposting or posting questionable material will ultimately rest in the hands of the Sapien community.
+
+Use Case II: Unified Media Portal
+Problem: As advertisements masquerading as insightful articles have become rampant, traditional, quality journalism 
+has struggled to survive. Many news sites have turned to paywalls, where users must pay to access articles. With 
+so many diverse feeds of information at their disposal, the modern internet user may find it hard to justify paying a 
+subscription to access a single source of news. SPN provides a unified solution, allowing users to access a wide range 
+of quality content.
+
+
+
+31
+
+Solution: Our unified media portal will consolidate a diverse feed of content in one place for our users. Users can 
+subscribe to quality content from media publications. Thanks to the Blockchain, users can pay publications directly 
+using our cryptocurrency with 0 transaction fees. Links on the platform will drive organic traffic back to the company's 
+website.
+
+1. Premium Content: The creator of a branch can set a reasonable price, either to access a single piece of content 
+or monthly subscriptions. A Sapien user can subscribe to a creator’s premium branch with the expectation 
+that they will receive consistent quality content. With SPN, we are enabling direct transactions between users 
+and content creators who believe their effort to create quality original content comes at an additional cost. 
+Moreover, it would also be very simple for a multitude of services to emerge that cater to different interests. 
+For example, services similar to Netflix could easily exist on the Sapien platform with à la carte show selection.
+
+ Premium content will only be available to users who have staked at least $20 worth of SPN in total over a 
+period of 1 year. For users found guilty of leaking content, 100% of their SPN will be frozen, Sapien account will 
+be banned, and IP address permanently blacklisted.
+
+2. Subscription	Service: The Sapien platform will be in a position to address the subscription service problem 
+within the crypto community. As of now, there is not a platform that allows creators to sell their content 
+to the community with subscriptions. Monthly and yearly fees are a huge part of the community but to pay 
+in cryptocurrency requires the creator to manually handle each and every transaction. Through the Sapien 
+platform, creators can set up recurring payment plans for their members who can pay this fee using the SPN 
+token. The subscription fee will be automatically charge to the consumer and be paid for via SPN in their 
+Sapien wallet. This allows creators to solely focus on making premium content for their members.
+
+3. Media	Publications: Traditional media publishers like NY times have long struggled in being able to monetize 
+their content using micropayments, primarily as a result of transaction fees with traditional modes of payment. 
+Mobile applications have attempted to aggregate content from multiple publishers–often to the detriment of 
+the publisher’s digital revenue streams. 
+
+ The Sapien platform will offer publishers the opportunity to introduce micropayments via cryptocurrency, 
+enabling consumers to access premium content at a very granular level. This will enable publishers to get away 
+from the blanket paywall model that has failed with consumers.  However, a micropayment model, especially 
+one where the SPN wallet would be integrated into a browser (e.g. Chrome plugin), would make shopping for 
+content seamless.
+
+ Augmenting crypto-micropayments can be a mobile application, which could aggregate all of the consumer’s 
+purchases within one app. But in order for the publisher to not cannibalize their existing advertising revenues, 
+users would be redirected to the publisher site to complete the reading experience. This would provide 
+users with an enhanced user experience, while preserving current revenue streams and potentially accretive 
+revenues through micropayment sales. The mobile app would serve not only as a viewport into content, but 
+double as a Sapien Media Wallet. Over time, additional features, interesting to publishers and consumers alike, 
+such as fake news filter and community authoring could be introduced.
+
+Use Case III: Tokenizing Virtual Goods
+Problem: Although virtual goods clearly have real value, as shown by the huge annual sum spent on things such as 
+in-app purchases and cosmetic enhancements in video games, the true value of these virtual items has remained 
+nebulous. A marketplace where such virtual items can be exchanged for tokens more firmly cements the exchange 
+value of these commodities. 
+
+
+
+32
+
+The rapid expansion of the digital economy has created a burgeoning supply of virtual goods. Most of these virtual 
+goods are present in isolated markets, and are therefore unable to be exchanged with other such goods. Virtual 
+goods now represent a multi-billion dollar industry annually, despite the severe limitations in this sector due to 
+the seemingly unexchangeable nature of these goods. By creating a single market for virtual goods, we hope to 
+dramatically increase the volume of transactions in this space, simultaneously providing value to both consumers and 
+content creators. We believe that such a marketplace need not be restricted to common virtual goods such as those 
+present in video games. In the modern world, information is truly the most valuable commodity and thus any quality 
+content has a place on our marketplace, whether it be an article, video, or virtual item.
+
+Solution: We will create a marketplace in which virtual goods can be exchanged along with physical goods, services, 
+and premium content. In addition to creating a marketplace for users to purchase virtual goods, we hope to create 
+a platform allowing users to create and sell their own virtual items such as cosmetic enhancements or entirely new 
+features on the Sapien platform. We believe that the extensible and decentralized nature of Blockchain applications 
+will not only allow the community to influence the direction of the platform by voicing their opinions but will also 
+allow users to contribute to the development of the application by creating self-contained features. In order to allow 
+content creators to place their content on the Sapien platform, we will create an API, establishing all of the necessary 
+infrastructure to allow content creators to sell their content. Content creators will be able to establish all relevant 
+parameters, such as the price that they are willing to sell their content for, or whether they are willing to accept other 
+offers for their content.
+
+
+
+33
+
+PLATFORM FEATURES
+
+How to Register
+To combat manipulation, we require the following to open a new account:
+
+ - Full name
+
+ - Private username
+
+ - Email
+
+ - Password
+
+ - Verified phone number
+
+ - Google Recaptcha
+
+After getting verified, each user will have an initial amount of SPN token deposited to their Sapien digital wallet. The 
+quantity of SPN tokens will depend on how early the user registers.
+
+How to Qualify for Platform Payouts
+
+SOCIAL ACTION
+MINIMUM STAKED SPN PER 
+
+ACTION
+MAXIMUM STAKED SPN PER 
+
+ACTION
+
+Voting 1 10
+Posting 10 100
+
+Commenting 5 50
+
+These are the initial staked SPN token ranges required to receive rewards from the Sapien platform. As the platform 
+grows, the requirements will be adjusted in the best interest of the platform and users.
+
+Reputation
+In order to provide a more accurate representation of the value of a contribution in the Sapien network, user votes 
+will be weighted in proportion to the user’s perceived value within a community. This is captured by their reputation 
+score in that community, which changes as a their contributions are voted on. Reputation is branch specific and as a 
+user contributes on Sapien they will accumulate various reputation scores that reflect their expertise across a broad 
+range of subjects. 
+
+Backfeed Protocol
+Sapien’s reputation system expands upon the Backfeed Protocol.3 As our partner, DaoStack will enable the 
+infrastructure for collaborative creation and distribution of value. The protocol provides the framework to create a 
+Proof of Value mechanism in the Sapien Network. This protocol enables reputation to flow within a decentralized 
+network, reflecting the value that a user provides to a community. Reputation scores are linked to the users who have 
+earned them and cannot be transferred between users. Reputation scores are affected by two distinct mechanisms. 
+Reputation can be earned through contributions or the evaluation of another user’s contributions. Within Sapien, 
+
+3 https://backfeed.cc/
+
+
+
+34
+
+a contribution can be a post, comment, DAP4 proposal, or marketplace transaction. Contributions are evaluated 
+by community voting, which requires SPN to be staked. A user must stake a portion of their reputation in order to 
+make an evaluation, which can be recouped when the contribution is evaluated positively by other users, but may be 
+lost. Reputation facilitates the distribution of value throughout the constituent communities of Sapien according to 
+their respective values. A user’s reputation is bounded between 100 and -100, so no user will have disproportionate 
+influence within a community, enabling Sapien to maintain a democratic user ecosystem. Any user with less than 
+equal to 0 reputation will have no weight in evaluating the contributions of other users.
+
+Voting Mechanisms
+Posts can be voted on by staking a variable amount of SPN, up to a fixed limit. In the case that 0 SPN is staked, a vote 
+will count towards visibility but not toward the payout pool or reputation. SPN can only be staked for voting for the 
+duration of the reward window, which is set at one week. After the completion of the reward window, all payouts 
+generated by the post will be distributed to users. After the reward window has passed, posts and comments can 
+still be voted on and votes will count toward visibility but no longer contribute to the payout pool or reputation. The 
+amount of staked SPN that can be used for posting, commenting, and voting is limited by a user’s capacity, which is 
+determined by their total amount of staked SPN. Only staked votes will influence reputation.
+
+Posts can be affected positively (upvote) or negatively (downvote). In order to be more resilient to collusive voting, 
+the reputation change and payout are proportional to the median rather than the mean of the reputation scores of 
+users who have voted on a post, weighted by stake. In order to stake a larger amount of SPN when voting, a user 
+must stake a larger amount of reputation as well. The evaluation procedure for a single contribution is shown below.
+
+4 Democratized Autonomous Platform
+
+Ex. 1:  I stake 1 SPN (by pressing the upvote button) on a new post, which is locked for the duration of the voting 
+window. After the reward window has closed, if the post did well, I receive more than 1 SPN back and can use 
+that 1 SPN to vote on something else. If I have maximum voting power, I can stake up to 10 SPN on the post by 
+pressing another button. If I vote with max voting power (currently limited to a maximum of 10 SPN), my vote 
+counts for more in terms of visibility and I will receive a proportionally greater reward if the post does well when 
+the voting window closes. 
+
+
+
+35
+
+The reputation score will be embedded into the SPN token. Thus, reputation can be extended outside of the Sapien 
+ecosystem to any application utilizing SPN. Reputation serves a critical role in establishing the proof of value protocol, 
+promoting quality content and reducing the spread of fake news and trolling.
+
+Rewards for Posting, Commenting, and Voting Rewards
+
+We believe that users should be rewarded for creating quality content. In order to achieve this, we will award the 
+majority of newly minted SPN to users who post, comment, and vote on the Sapien platform. In order to receive 
+rewards for creating a post, comment, or vote, a user must first stake SPN on the platform. To create a post, comment, 
+or vote without earning rewards, no staked SPN is required; in this case, all SPN generated will go towards the 
+platform reserve.
+
+All	newly	minted	SPN	will	be	distributed	to	users	making	contributions	on	the	Sapien	platform	and	validators	who	
+verify	transactions	on	the	Blockchain.
+
+Posting & Commenting Payouts
+Post and comment payouts will occur at a fixed interval, with the creator of a post or comment receiving SPN tokens 
+proportional to the median of the reputation of users who have voted weighted by SPN staked. Posts and comments 
+can receive a minimum payout of zero. This is shown by the formula below:
+
+Where is the reputation of user   is the SPN staked on the post or comment by user x, n is the number of 
+users who have voted on the post, X is the set of users who have voted on the post, and ⍺ is an inflation factor that 
+will be adjusted to ensure that the SPN dollar value of payouts are proportional only to n and the above median.
+
+
+
+36
+
+Voting Payouts
+In order to incentivize the creation of quality content, SPN tokens will be distributed to both the creator of a post, and 
+the users who upvote the post. Ninety percent of the SPN tokens generated by a post will be rewarded to the content 
+creator and the remaining 10 percent will be distributed among the users who upvoted the post. In order to receive 
+a reward for voting, a user must stake SPN tokens. Users will need to withdraw their rewards manually.
+
+As it is more difficult to identify a quality post when it has fewer upvotes, the SPN rewarded from voting will be 
+proportional to the time at which the post is voted on. This will encourage users to browse new content and help 
+create a more dynamic feed for all users. The decay factor λ, is defined  as follows: 
+
+SPN Payout Management
+Advanced users: Rewards generated from voting, posting, commenting will be added to your digital wallet balance. 
+Staking duration must be specified, with a minimum period of one year.
+
+Novice: Automatically managed rewards with all earned SPN staked for one year.
+
+For both advanced users and novice users, the original SPN invested in voting, posting, or commenting remains on 
+the same staked schedule as before. Users will be able to toggle their user experience on the platform at any point.
+
+How We Handle Voting Manipulation
+To prevent manipulation by malicious users, only a certain fixed amount of SPN will be usable at any one time to stake 
+on posts for voting. Posts will have a window during which they may be voted on and, after this window expires, all 
+SPN tokens staked during voting will be released and restakeable.
+
+The inclusion of negative-voting will make voting manipulation more difficult, since highly reputable users or a large 
+collection of users can cancel out the votes of a colluding group. In addition, attempted vote manipulation will be 
+
+
+
+37
+
+transparent to the community, because posts that gain a large number of votes quickly will be the most visible on the 
+platform.
+
+Posts that have been flagged by a significant portion of the community will have their staked SPN temporarily frozen 
+until the community decides whether collusion has taken place. If the user is found guilty of manipulation, the original 
+staked SPN will be transferred to the platform reserve. Repeated attempts at manipulation will result in freezing all 
+of a user’s SPN tokens.
+
+Democratized Autonomous Platform (DAP) Implementation
+
+Proposal System
+SPN token holders will be able to participate in DAP voting to help influence the company roadmap and organization. 
+It is important to note that SPN tokens do not correspond to equity in the company. Our goal is to simply create the 
+infrastructure to support a democratic platform that can eventually move towards full autonomy. Our threat model 
+will employ the following three strategies to ensure equal opportunity for DAP voters:
+
+Mandatory Staking: Only SPN tokens that are staked for at least six months will count towards DAP voting. When 
+staked through the smart contract, tokens cannot be transferred. A token holder who wishes to sell SPN tokens must 
+unstake them from smart contract in order to do so. A token holder will not be able to vote on DAP proposals until 
+they stake their SPN.
+
+Vesting: Voters will initially not be able to vote using their entire SPN token supply. They will be able to vote on their 
+first proposal with 10% of the SPN tokens they have staked, and this percentage will increase every time they vote 
+on a proposal. If they do not vote on 10 consecutive proposals, their percentage of stakeable SPN tokens for DAP 
+voting will be penalized by 5%.
+
+Variable Stake Limits: Proposal creators will be able to select what percentage of staked SPN voters will be able 
+to vote with. The higher the percentage, the more powerful the proposal and higher it becomes on the core team’s 
+priority list. Lower percentage limits will increase each vote’s significance. Thus, each proposal creator should carefully 
+weigh execution speed and voter voice, depending on the nature of the proposal.
+
+Branch Autonomy
+The reputation system will ultimately enable democratic management of branches without a centralized authority. 
+Users will be able to make proposals within a branch and evaluate the proposals of other users. The Backfeed 
+protocol will ultimately enable branches to self-moderate and enact proposals democratically to determine the future 
+direction of a branch.
+
+Tribunals
+Users will be able to flag other users for inappropriate behavior within a branch, creating a tribunal. During this 
+process, a random subset of users of a branch will be selected as validators, and will need to vote to determine 
+whether the flagged user has acted inappropriately. The selected users will be notified and the next time they open 
+the Sapien platform, the will be asked to participate in the tribunal. Once consensus is reached, votes will be weighted 
+by reputation to ensure that trolls are adequately punished for acting against the values of a community.
+
+ 
+
+
+
+38
+
+TOKEN MECHANICS
+
+Staking SPN
+To stake SPN tokens, users can transfer tokens to a special smart contract with the help of ERC223. This contract 
+will manage the staked SPN so that users can interact with the Sapien platform (post, comment, etc). Users will have 
+multiple options to unstake their SPN, described in the section titled “Unstaking SPN.” As a result, users can easily 
+transfer their tokens back to their wallets with ERC223, creating more liquidity for the SPN token.
+
+Staked SPN Capacity Bonus
+If users have SPN tokens in their portfolio that have been staked for more than 6 months, these tokens will receive 
+a 15% Sapien platform capacity bonus. This capacity bonus will give 1 SPN token, that has been staked for a period 
+greater than 6 months, the platform power of 1.15 SPN tokens.
+
+Unstaking SPN
+Users can also choose to liquidate their staked SPN to unstaked SPN at any time with 0% fees after one year. This will 
+prevent large fluctuations of SPN price in the crypto markets and offer users a simple way to cash out without fees or 
+destabilizing the Sapien platform. As the Sapien platform and SPN token stability increases, the conversion fees can 
+be reduced to convert staked SPN to unstaked SPN more quickly. Platform users are encouraged to stake their SPN 
+tokens. The default staking period is one year.
+
+Advanced users: For precise control over their SPN, advanced users can see a live dashboard of all their SPN and a 
+mapping from their holdings to different staked schedules.
+
+Novice: Users will get notification when their staked SPN can be unstaked. It is at the user’s discretion if they want 
+to continue staking their tokens or withdraw their earnings.
+
+Users can unstake their SPN token immediately for a small withdrawal fee that depends on the remaining time left on 
+the staking schedule. Earlier withdrawals will be more heavily penalized than late withdrawals. Withdrawals will be 
+penalized by 0.526% per day, adjusted continuously if executed before six months, and 0.1096% per day, adjusted 
+continuously between 6 months and 12 months. Below are the fees incurred for early withdrawal:
+
+Percentage	of	SPN	Converted	after	Time	Elapsed	on	Staking	Schedule
+
+<1 month: 0%   7 months: 83.33%
+
+2 months: 16%   8 months: 86.66%
+
+3 months: 32%   9 months: 90%
+
+4 months: 48%   10 months: 93.33%
+
+5 months: 64%   11 months: 96.66%
+
+6 months: 80%   12 months: 100%
+
+
+
+39
+
+SPN Consensus Mechanism
+The Ethereum Foundation is planning to move to a proof-of-stake model in 2018 that would require validators 
+to stake their Ether in order to verify transactions on the Blockchain. Therefore, it makes sense to form the SPN 
+consensus mechanism using Proof of Stake. Our specific implementation will depend on a variety of factors, including 
+the specifics of the complementary technologies that we plan to integrate. Plasma’s proposed off-chain merkelized 
+commitments would require us to implement a tokenized PoS that relies on the robustness of the underlying root 
+chain and incentivizes SPN holders to operate in the economic interest of all token holders. This implementation 
+would require SPN to bind to Plasma smart contracts to enforce protocol. Instead of mining rewards, validators 
+participating in PoS will be rewarded transaction fees that will be proportional to the SPN the user has staked. The 
+Plasma white paper also expounds on exit strategies for block withholding attacks or Byzantine behavior that would 
+enable users to migrate to another chain or even root Ethereum chain with their tokens. If an attacker attempts to 
+submit an invalid block, any other participant within the block can submit a fraud proof on a parent Blockchain, rolling 
+back the invalid block and penalizing the attacker’s staked SPN. Similar to Ethereum’s Casper protocol, users on the 
+platform would be required to have a substantial amount of SPN staked to become validators on Sapien. The exact 
+Sapien PoS algorithm will be at the full discretion of the core developers with the intent of maximizing efficiency, 
+security, and decentralization.
+
+ 
+
+
+
+40
+
+LEADERSHIP
+
+SPN is an ambitious vision. It will be developed by experienced engineers and guided by knowledgeable advisors who 
+are eager to make a social cryptocurrency a reality.
+
+Core
+
+Ankit	Bhatia,	Co-founder	&	CEO
+
+Studied electrical engineering and computer science at UC Berkeley. Designed, developed, and pioneered 
+the Sapien platform during his junior year. Full stack JavaScript engineer who enjoys bringing great ideas to 
+life. Crypto enthusiast and investor since 2013. YCombinator SUS’17 graduate.
+
+LinkedIn:  https://www.linkedin.com/in/ankitxbhatia
+
+Robert	Giometti,	Co-founder	&	CPO
+
+Studied Mathematics and Electrical Engineering & Computer Science at UC Berkeley. Spearheaded and 
+developed many of the features, algorithms, and innovations in Sapien. Theorist who understands how 
+modern technologies will transform future societies. YCombinator SUS’17 graduate.
+
+LinkedIn:  https://www.linkedin.com/in/robert-giometti-78bb889b
+
+Matias	Dorta,	Marketing	Strategy
+
+Studied political science and marketing at American University and Florida International University. 
+Previously Director of Marketing @ Bardot, The Loft at Space, More or Less, and PromotionalPartySticks.
+com. Founder of ICO Informer and Crypto swag.
+
+AngelList: https://angel.co/matias-dorta  
+
+Aurelien Nicolas, CTO
+
+Product security expert, with experience in web, distributed systems, and crypto. White hat hacker. CTO of 
+an AI-for-enterprise startup. Researching applications of cryptography and computation integrity.
+
+LinkedIn: https://www.linkedin.com/in/aureliennicolas/
+
+
+
+41
+
+Stefan	Ionescu,	Solidity	Dev
+
+Currently working as a CTO for a startup focused on NLP. Building machine learning models for self-driving 
+cars in games and now focusing on applying the blockchain in the insurance world. Enthusiast of studying 
+neurobiology and applied psychology alongside multiple programming languages.
+
+LinkedIn:  https://www.linkedin.com/in/stefan-codrin-ionescu-205521121
+
+Advisors
+
+Christopher	Lee,	Marketing	Manager
+
+Currently working as Director of Marketing for a growing IT company. Specialist in digital lead generation. 
+Passionate about marketing strategy and new marketing technologies and platforms. Crypto enthusiast and 
+investor since 2015 and believes the surface of Blockchain technology has barely been scratched.
+
+LinkedIn: https://www.linkedin.com/in/1smartchris/
+
+Andy	Boot,	Head	of	Operations,	Europe
+
+Co-founded a Blockchain start-up in 2014, Cointemporary–the first Bitcoin gallery. Studied Communication 
+Design and Fine Arts. Blockchain enthusiast with a UX/UI Design background, particularly interested in user 
+experience for the Blockchain sphere.
+
+LinkedIn: https://angel.co/abab
+
+Oliver Dinsmore, Content Strategy
+
+Digital marketer, writer, and content creator with over 15 years of experience spreading the e-love. Created 
+6000 pieces of content and worked with over 20 global brands to provide creative solutions in marketing 
+and advertising. Founder of the naturalhigh.club
+
+LinkedIn: https://www.linkedin.com/in/oliver-dinsmore-37027811/
+
+Dr. Michaela Ulieru, Blockchain Expert
+
+Professor Mihaela Ulieru, PhD is an expert in distributed intelligent systems working with many governments 
+and organizations towards a healthier, safer, more sustainable and innovation-driven world. She founded two 
+research labs leading several global large-scale projects in collaboration with international businesses such 
+as Rockwell Automation, Daimler-Chrysler, SAP, Fanuc, BHP Billiton, Thales, NORTEL as well as government, 
+academia and nonprofit leaders. She was appointed to numerous boards among which the Science Councils 
+of Singapore, Canada and European Commission and recently to the Global Agenda Council of the World 
+Economic Forum where she championed Blockchain as one of the Top 10 technologies of 2016. She advises 
+several startups at the nexus of Blockchain and Artificial Intelligence, among which: LifeLink.com, MyBit.io, 
+and SocialCash.io.
+
+LinkedIn: https://www.linkedin.com/in/mihaelaulieru 
+
+https://www.linkedin.com/in/stefan-codrin-ionescu-205521121
+
+
+42
+
+Adnan Javed, Legal & Blockchain Advisor
+
+Adnan is a qualified Lawyer and Engineer. He has worked in the IT/Telecommunications space with 
+international businesses such as Ericsson and Nokia for the past 10 years. Three years ago he discovered 
+Bitcoin, which led him to explore Blockchain applications and use cases. He has worked on numerous 
+Blockchain projects, including large scale bespoke Blockchain projects across internet of things, finance and 
+payments sectors. He is an advisor to multiple Blockchain startups including ZenCash and ETHLend. He has 
+a keen interest in how Blockchain technology will advance in shaping all industry sectors from an adoption, 
+regulatory and policy perspective.
+
+LinkedIn: https://www.linkedin.com/in/adnan-javed
+
+Gregory Berkin, Business Strategy
+
+Gregory Berkin is the Managing Director of Concours Ventures, a Silicon Valley boutique angel group focused 
+on next generation geospatial, virtual, augmented and mixed reality (VR/AR/MR) applications for mobile 
+devices. Greg is serial entrepreneur who founded several successful startups in Silicon Valley and New York. 
+He has been an Apple software developer for over 30 years having founded one of the first educational 
+software development and publishing firms for the Apple Macintosh Computer in 1984. With a computer 
+science degree from Potsdam and an MBA from Duke University, Greg mentors, consults and advises over 
+a dozen Silicon Valley start-ups in early-stage growth, strategy, investment, IP, and development in all areas 
+of high technology.
+
+LinkedIn: https://www.linkedin.com/in/gregberkin
+
+Latif	Nathani,	Business	&	Marketing
+
+Latif was most recently the CEO of eBay India. He grew the business from under $200M GMV in 2013 to 
+nearly $500M GMV in 2016 and 5M+ customers. He exited with the sale of eBay India to Flipkart. Previously 
+Latif co-founded eMemories.com (one of the first online picture sharing services) and 2 enterprise businesses 
+at Microsoft (Systems Center and Speech Server). He also led global product marketing at Symantec and 
+named/launched Norton 360. Latif has 26 years of technology industry experience, including 15 years at 
+Microsoft. 
+
+LinkedIn: https://www.linkedin.com/in/latifn
+
+Christian	Ferri,	Blockchain	Expert
+
+Christian Ferri has been in the crypto space since its early days in 2010 and built a solid network of early 
+adopter, influencers, experts, and visionaries over the years. He founded BlockOne Ventures in 2014, one 
+of the first blockchain agencies to work on crypto related projects. Today the agency has helped companies 
+like Bancor, Token Card and many others to successfully raise funds through ICOs. In addition, BlockOne 
+Ventures delivers corporate training on Blockchain to Fortune 500, organizes a crypto event series in 
+collaboration with Draper and is managing a crypto fund for selected high-net-worth investors.
+
+LinkedIn: https://www.linkedin.com/in/ironsferri 
+
+Raghu Bala, Media Expert
+
+CEO, NetObjex Inc based in Southern California. Formerly with Yahoo, Infospace, Primedia, Source Interlink 
+Media, PwC, and with 3 successful startup exits. Wharton MBA in Finance, MS in Computer Science 
+from RPI, published author and major conferences including IoT Congress, Google IO, and more. Mr. Bala 
+has significant domain expertise in the media industry having led digital operations for over 100 brands 
+including MotorTrend, HotRod, Import Tuner, Automobile, and Slam. His responsibilities included managing 
+digital assets across multiple mediums including web, mobile, video/YouTube channels, and social media. 
+The portfolio of digital assets managed had a total visitor profile with monthly statistics of over 16M 
+unique visitors and 100M pageviews. Mr. Bala also has deep expertise in search engine advertising and 
+audience conversion from his stints at Infospace and Yahoo. Current focus areas: Decentralized computing, 
+Distributed ledgers, IoT, Cryptocurrencies.
+
+LinkedIn: https://www.linkedin.com/in/raghubala 
+
+
+
+43
+
+COMPETITIVE ANALYSIS
+
+I. Steemit
+Steemit is another social news platform that rewards content curators and creators for posting, commenting, and 
+voting. While Sapien and Steemit both share a common goal of rewarding users’ time via a decentralized Blockchain, 
+the two differ significantly in philosophy and implementation.
+
+a) Choice of Blockchain
+Steemit is built on an independent Blockchain called Steem, which has been laden with controversies from the 
+start. Steem developers unfairly “stealth” mined a large majority of Steem early onin the site’s development  while 
+giving the impression of equal opportunity.5  Sapien opts for Ethereum because of its strong community, remarkable 
+technology, maturity, and transparency. And with the second biggest coin market cap and a more organic developer 
+ecosystem, Ethereum has excited many with its potential to surpass Bitcoin. For these reasons, SPN will be built as 
+an ERC20 token on the Ethereum network. We have not just decided to throw the Blockchain haphazardly onto the 
+platform—it is an absolutely essential innovation that has enabled Sapien to have an immutable ledger capable of 
+executing smart contracts and generating token payouts for our users.
+
+b) Distribution of Power
+Secondly, Steemit has tremendous disparity in the distribution of platform power. Only individuals who have been 
+around since Steemit’s inception (also known as “whales”) have the ability to earn any substantial awards and, as such, 
+possess a disproportionate amount of Steem power, enabling these users to selectively pick which posts become 
+“winners” and “losers.” It is publically viewable that the top 247 accounts, most of which are held by developers and 
+friends, hold 87.5% of the Steem power on Steemit.6  For a site with more than 150,000 registered users, we believe 
+that this level of inequality is not feasible nor sustainable in the long run. Sapien intends to learn from the innovations 
+and shortcomings of Steemit to create a democratized social news platform. Steemit’s idea behind decaying and 
+regenerative voting power was notable, as was its implementation of Zipf’s Law to fairly reward long-tail posts. To 
+mitigate any possible disparity within Sapien, the largest SPN holder will have the exact same voting power as a 
+newly registered user. To minimize manipulation, voting power will instead be acquired as a function of how much 
+reputation a user has earned through quality contributions on the platform.
+
+c) Barriers To Entry
+Lastly, Steemit faces significant obstacles to appealing to a broader market. Crypto economics are already challenging 
+for the non-technical consumer. Steem further complicates this with three different Steem tokens: Steem Dollars, 
+Steem Power, and Steem. Not only is it surprisingly difficult to understand the use cases of each, but the entire 
+endeavor seems to discourage crypto novices from joining Steemit. The average user should not be required to have 
+knowledge of crypto mechanics or how to optimize their token portfolio to maximize rewards. Our goal with Sapien 
+will be to continually develop two parallel user experiences: one for the novice and one for the advanced user. For the 
+novice, Sapien will automagically manage wallets, addresses, and two-factor authentication with a usability similar to 
+that of Coinbase. Advanced users will have direct and full access to their wallet, along with various other metrics and 
+customizations. By differentiating these two target users, the Sapien platform and the SPN token will be in the best 
+position for adoption by the most number of people.
+
+5 https://bitcointalk.org/index.php?topic=1427230.0
+6 Distribution of Steem power can be found here: https://steemd.com/distribution
+
+
+
+44
+
+II. Synereo
+
+a) Technological
+6. Synereo's older AMP token is not an ERC20-complaint token and its total supply is fixed. This prevents the 
+
+token from taking advantage of the Ethereum Blockchain base security, the fantastic community, and continual 
+developments like Plasma and Raiden.
+
+7. Synereo intends to store too much information on the blockchain. This inherently limits its usability. Our 
+multimedia storage options include IPFS, Swarm, and FileCoin—all of which will scale nicely and improve 
+performance drastically.
+
+8. WildSpark is an extension, whereas Sapien is an entire ecosystem. Our long-term vision includes opening up a 
+developer portal to leverage the ingenuity of the open-source community where third-party applications can 
+build and monetize on our platform while prioritizing user privacy.
+
+b) Token Utility
+The biggest difference between the two is in token utility is how integral SPN will be for Sapien's decentralized 
+marketplace. Our marketplace will be powered by our token and offer users premium integrations, features, and 
+content that can't be found anywhere else. The token will let creators set their prices and consumers enjoy a variety 
+of community-sourced physical and virtual items. The Sapien Network will also let users share ad revenue in SPN 
+tokens with users.
+
+c) Philosophical
+SPN tokens will be minted proportionally to the value created on Sapien, distributing the rewards among creators 
+and curators. AMPs fixed supply makes people hesitant to give up something that is considered scarce. Essentially, 
+Synereo's offering, Wildspark, is just a crypto-tipping extension that permanently asks its users whether it's worth 
+"AMPing" something. We hope to eliminate this cognitive overhead with a sustainable secondary distribution model 
+for SPN tokens that scales with the number of users and value generated. 
+
+
+
+45
+
+RISK ANALYSIS
+
+Quantum Computing Attacks
+
+Public-Key Cryptography
+Ethereum, and consequently all ERC20 tokens, use a system involving pairs of public and private keys. In order to 
+maintain security, only the owner of tokens at a given address should know the associated private key. If anyone else 
+is able to determine the private key associated with an address, they will be able to transfer all of the tokens at that 
+address. For this reason, it is of the utmost importance that the private key remain hidden.
+
+Elliptic Curve Cryptography
+Elliptic curve cryptography is an approach to public-key cryptography based on the algebraic structure of elliptic 
+curves over finite fields. Elliptic key cryptography requires smaller keys compared to other public-key methods such 
+as RSA. Ethereum uses the Elliptic Curve Digital Signature Algorithm (ECDSA) to secure transactions.
+
+Elliptic Curve Discrete Logarithm
+Shor’s Algorithm, invented by Peter Shor in 1994, is a quantum algorithm that solves the integer factorization 
+problem, finding the prime factorization of an integer N in polynomial time. Shor’s Algorithm can be extended to 
+solve the discrete logarithm problem (DLP) in polynomial time. Solving the elliptic curve discrete logarithm problem 
+(ECDLP), which is a specific case of the discrete logarithm problem, would allow one to determine the private key 
+from a public key, thus putting the security of all addresses at risk. The security of elliptic curve cryptography is based 
+upon the intractability of the ECDLP on a classical computer. Recent work by Zalka, Proos and Kaye has led toward 
+quantum algorithms to solve the ECDLP.7 Ethereum’s Metropolis update permits users to define their own security 
+model. Toward this end we will ensure that all SPN addresses use Lamport signatures, which are currently believed 
+to be quantum resistant.
+
+Bots
+Due to the incentivized nature of the Sapien platform, we believe that we are a potential target for botting. In order to 
+reduce the risk of such manipulation, we will employ several precautionary measures. Users will be required to pass a 
+captcha in order to create their account and post or comment after long periods of inactivity. In addition, users must 
+verify either a phone number or an email address associated with their account. Accounts suspected of using bots for 
+a malicious purpose will have their SPN tokens seized and deleted promptly.
+
+Sybil Attacks
+All peer-to-peer networks are susceptible to the problem of adversaries working counter to honest participants. 
+For cryptocurrencies, one of the goals of the participants in the network is to reach a consensus via a majority vote. 
+This means that any adversary with the resources to allocate many IP addresses could influence the consensus of 
+the entire network. One of Bitcoin’s key innovations was the use of Proof-of-Work (PoW) as a way of “determining 
+representation in majority decision making” through computation. PoW requires nodes to solve a cryptographic 
+problem, which is CPU-intensive to calculate, but easy for other participants to verify. As a consequence, an attacker. 
+wishing to alter the history of the Blockchain is required to solve the PoW for their block and every subsequent 
+block that came after. As long as the number of honest nodes is greater than the number of adversary nodes, it is 
+
+7 https://arxiv.org/abs/quant-ph/0301141
+
+
+
+46
+
+probabilistically infeasible for this event to occur.
+
+Sapien will eventually migrate to a mechanism similar to the proposed Casper protocol, which is a deposit + penalty 
+PoS. In this scheme, validators will be punished for contradicting themselves.
+
+Inflation
+Excess minting of SPN within the Sapien ecosystem will result in unfair dilutions for SPN holders. As opposed to 
+traditional companies, one clear advantage of Sapien will be the ability to directly share economic growth with its 
+users. All new SPN that will be minted aims to distribute the value generated back to the content creators. To prevent 
+the devaluing of SPN, we will focus on maintaining a steady inflation rate that will closely mirror that of Ether’s. The 
+first year will have a projected inflation rate of 5%, as each new user joining the platform will be given some initial 
+SPN to use the platform. Users who register early on will be given more SPN tokens than those that register later. 
+Ethereum has plans to reduce Ether issuance before migrating to a Proof-of-Stake with the Serenity milestone. SPN 
+will follow a similar trajectory, closely emulating the inflation rate of the Blockchain it is based on. 
+
+Sapien will be well-equipped to handle fluctuations in the digital currency value. Mechanisms to increase SPN 
+inflation rate include increasing utilized SPN interest rates and increasing digital content payouts. Conversely, SPN 
+can be reduced by decreasing payouts and lowering interest rates. Even more precise control can be established 
+by burning excess SPN tokens in reserves or storing excess SPN tokens in reward pools to be distributed in a user 
+reward pool annually. All actions will be performed transparently with the intention of stabilizing, maintaining, and 
+scaling a highly valuable token.
+
+
+
+47
+
+TECHNICAL CONSIDERATIONS FOR A 
+DAPP
+
+To ensure that the integration of SPN works seamlessly for all its users, the Sapien Platform will initially be a 
+hybrid centralized-decentralized web application. While the social platform will be centralized, all SPN transactions 
+(previously outlined in the token utility section) will be decentralized and handled by the Ethereum Blockchain. As 
+Sapien and the SPN token approach stability, our team will begin decentralizing more components of the social 
+platform, as illustrated by our roadmap. To combat censorship and guarantee the web immortality of content, Sapien 
+will first transition to Swarm or IPFS (Interplanetary File System) system to store posts, comments, and media 
+without a central authority. Currently, the application is not decentralized to allow our team to better understand 
+how the token will work within the ecosystem and carefully moderate any attempts to manipulate the payout system. 
+Additionally, Vitalik Buterin has promised several improvements to Ethereum, most of which are required to scale to 
+millions of users. The Ethereum Blockchain needs to increase transaction speeds and lower prices to even entertain 
+the thought of a decentralized social news platform at the same scale as Reddit. As technological improvements are 
+made, the core development team will move the Sapien platform over to a complete DApp.
+
+Data
+Due to nature of the Blockchain, any data stored on it is both public and expensive. Therefore, it is logical for us to 
+minimize the amount of data stored on the Blockchain. Data security, redundancy, and performance will always be 
+a priority for us. To eventually support a platform that is fully decentralized, censor-resistant, and immutable we will 
+plan to use off-Blockchain storage like Filecoin or Swarm.
+
+Beta Release
+The current implementation of Sapien is built with an open source, full-stack Javascript framework called Meteor.js. 
+8 The framework is fast, cross-platform, and is equipped with many features right out of the box. Moreover, Meteor 
+is the most common framework used to build DApps. With strong community support and frequent optimizations, 
+Meteor was the perfect framework to build Sapien quickly and securely. For our chat solution, we are using a forked 
+version of Rocket.Chat, another open-source chat solution built with Meteor. Rocket.chat is highly configurable and 
+comes standard with channels, groups, video, audio support, and much more.9  Although Rocket.Chat is perfect for 
+a centralized platform, a decentralized release of Sapien will require a separate chat DApp built with the Whisper 
+communication protocol.
+
+8 https://www.meteor.com
+9 https://rocket.chat
+
+
+
+48
+
+SPN Integration
+Prior to the completion of the SPN token sale, the Sapien beta platform will have an integration of SPN on the 
+Ethereum mainnet. The Sapien platform will allow users to post, comment, and vote, powered by the SPN token. 
+Thus, immediately after the completion of the token sale, the SPN token utility can be explored by our contributors.
+
+Search
+Search is currently handled by AWS’s ElasticSearch Service.10  Elasticsearch is a secure, fast, and scalable solution 
+for indexing documents with high availability. Our team will stay up to date with any new developments for search 
+solutions that work with the Ethereum Blockchain. One such solution is a node package called Elastic Ethereum.11 
+
+Storage
+AWS S3 buckets are used to store multimedia data for posts, comments, and users. AWS S3 is an affordable and 
+scalable solution for data. Although it will suffice for Sapien, the data will be migrated over as soon as an alternative, 
+scalable solution is offered.
+
+Decentralized Release
+As the Ethereum ecosystem matures, new and powerful technologies will emerge. Currently, we have outlined several 
+technologies that can help us create a fully decentralized social platform.
+
+Blockchain
+Metropolis
+
+Metropolis provides usability improvements, such as letting recipients pay gas fees instead of senders, anonymous 
+transactions, and improvements to smart contracts. This is a major step in the development of Ethereum. By adding 
+the ability to select who pays for gas fees, Sapien will be able to more fairly implement premium content and tipping. 
+Anonymous transactions also bolster the privacy of the platform and will be used for transactions that require more 
+privacy.
+
+Sharding
+
+Ethereum has invented a novel way to scale Ethereum’s Blockchain through sharding. Sharding simplifies the way the 
+Blockchain is validated by enabling addresses to form groups that internally approve transactions and communicate 
+with other shards. As a result, Ethereum can scale more efficiently because not all nodes need to execute every 
+transaction. To reduce protocol complexity, developers do not need to do additional work to implement sharding.
+
+Off-chain
+Whisper12 
+
+Whisper is a communication protocol that enables DApps to communicate with each other. It is ideal for chat 
+applications in the Ethereum ecosystem that require secure communications between two entities. By default, all of 
+Sapien users’ communications will go through Whisper, and all extended functionality not immediately supported by 
+Whisper will be handled through centralized servers.
+
+10 https://aws.amazon.com/elasticsearch-service
+11 https://github.com/nexusdev/elastic-ethereum
+12 https://github.com/ethereum/wiki/wiki/Whisper
+
+
+
+49
+
+Raiden 13
+
+Raiden increases the scalability and performance of Ethereum-based applications. Raiden enables off-Blockchain 
+transactions that avoid the Blockchain consensus bottleneck by creating a deterministic graph layer for nodes to 
+communicate even if they are not directly connected. State channels could be essential to Sapien, as it permits faster 
+microtransactions and lower fees for all actions on the platform. The performance of SPN will scale linearly with the 
+number of users on the network, providing Sapien with the foundation to scale to millions of users.
+
+Plasma14 
+
+“Plasma is a proposed framework for incentivized and enforced execution of smart contracts which is scalable to a 
+significant amount of state updates per second (potentially billions) enabling the Blockchain to be able to represent 
+a significant amount of decentralized financial applications worldwide.” Plasma offers additional improvements that 
+unburden transactions from Ethereum’s Blockchain, which makes it possible to decentralize a social platform. If our 
+core team decides Plasma is the best approach, then a tokenized Proof-of-Stake will be chosen as the consensus 
+mechanism described in detail in the Plasma white paper. The following diagram illustrates a Sapien implementation 
+with Plasma:
+
+13 https://raiden.network
+14 Reddit Clone built on the Blockchain. http://plasma.io/plasma.pdf
+
+Lighting	Network:
+Instant Contracts and 
+
+Payments
+
+Plasma:
+Leisure and Compute 
+
+Scaling
+
+Blockchain:
+(i.e Ethereum Mainnet)
+
+
+
+50
+
+Vote	for	Comment	
+
+#2
+
+(5th Tree Depth)
+
+Comment	#1	for	
+
+Post #3
+
+(4th Tree Depth)
+
+Post #1 in Gaming 
+
+and   Technology
+
+(3rd Tree Depth)
+
+Gaming
+
+(2nd Tree Depth)
+
+Comment	#2	for	
+
+Post #3
+
+(4th Tree Depth)
+
+Post #2 in 
+
+Technology
+
+(3rd Tree Depth)
+
+Technology
+
+(2nd Tree Depth)
+
+Sapien
+
+(1st Tree Depth)
+
+Ethereum Blockchain
+
+- Smart Contracts Consensus Rules
+
+- Fraud Proofs
+
+Vote	for	Post	#3
+
+(4th Tree Depth)
+
+Post #3 in 
+
+Technology
+
+(3rd Tree Depth)
+
+Politics
+
+(2nd Tree Depth)
+
+IPFS & Swarm15 
+Sapien will transfer all multimedia (images, videos, attachments) from AWS S3 to decentralized databases. Currently, 
+the two most popular decentralized storage solutions include IPFS and Swarm. Both are content delivery protocols 
+that work with a network of cooperating nodes that store data in encrypted chunks. They also share the following 
+properties: censorship-resistance, permanent content, redundant storage, and efficient scalability. While IPFS has 
+already been released and begun building a large community, Swarm is still in the early stages of its developers 
+testnet. IPFS can potentially work with any Blockchain, whereas Swarm is part of the Ethereum ecosystem. As a 
+part of the Ethereum p2p network layer, Swarm adds monetary incentivization and the benefits of smart contracts. 
+Filecoin adds incentivization to IPFS, but it relies on its own altcoin and can only implement positive incentives. 
+Similar to Plasma and other off-chain solutions, Swarm will handle all major disputes in the root Ethereum Blockchain, 
+which will ensure that all content on Sapien is protected. Sapien will ultimately use one of these solutions for our 
+decentralized release. Rather than committing to one storage solution, our development team will continually monitor 
+the progress of both of these protocols and any new innovations. Eventually, we will utilize the most secure, robust, 
+scalable, and performative solution.
+
+15 IPFS vs. Swarm: https://github.com/ethersphere/go-ethereum/wiki/IPFS-&-SWARM
+
+
+
+51
+
+
+
+52
+
+REFERENCES
+
+Ethereum. Ethereum. https://ethereum.org.
+
+Satoshi Nakamoto. Bitcoin: A Peer-to-peer Electronic Cash System. https://bitcoin.org/bitcoin.pdf, Oct 2008.
+
+Joseph Poon and Tadge Dryja. Lightning Network. 
+https://lightning.network/lightning-network-paper.pdf, Mar 2015.
+
+Joseph Poon. Vitalik Buterin. Plasma White Paper. http://plasma.io/plasma.pdf 
+
+Vitalik Buterin. Ethereum Sharding FAQ. https://github.com/ethereum/wiki/wiki/Sharding-FAQ 
+
+Raiden Network. https://raiden.network
+
+Steem White Paper. https://steem.io/SteemWhitePaper.pdf 
+
+BlockGeeks. Smart Contracts: The Blockchain Technology That Will Replace Lawyers 
+https://blockgeeks.com/guides/smart-contracts 
+
+Meteor Web Framework. https://www.meteor.com 
+
+RocketChat Platform. https://rocket.chat 
+
+Coindesk. Metropolis: Ethereum’s Next Big Upgrade. 
+https://www.coindesk.com/metropolis-today-shifting-plans-ethereums-next-big-upgrade
+
+Github, Ethereum/Whisper. https://github.com/ethereum/wiki/wiki/Whisper
+
+IPFS. https://ipfs.io
+
+Proos, John, and Christof Zalka. “Shor’s Discrete Logarithm Quantum Algorithm for Elliptic Curves.” 
+https://arxiv.org/abs/quant-ph/0301141
+
+IPFS & Swarm. https://github.com/ethersphere/go-ethereum/wiki/IPFS-&-SWARM 
+
+Statista. “Number of Social Media Users.” 
+https://www.statista.com/statistics/251666/number-of-digital-buyers-worldwide 
+
+Boyd, Andrew W. “A Longitudinal Study of Social Media Privacy Behavior.” (2011) 
+https://www.semanticscholar.org/paper/A-Longitudinal-Study-of-Social-Media-Privacy-Behav-Boyd/95285bbb961
+87f3252a4afd3b6df07060c29c4bd?tab=abstract 
+
+Business Live. “Putting the world’s money into perspective.” 
+https://www.businesslive.co.za/fm/fm-fox/numbers/2017-07-06-infographic-puts-the-worlds-money-into-
+perspective 
+
+https://ethereum.org.
+https://bitcoin.org/bitcoin.pdf, Oct 2008. 
+https://lightning.network/lightning-network-paper.pdf, Mar 2015. 
+http://plasma.io/plasma.pdf  
+https://github.com/ethereum/wiki/wiki/Sharding-FAQ  
+ https://raiden.network 
+ https://steem.io/SteemWhitePaper.pdf  
+https://blockgeeks.com/guides/smart-contracts 
+https://www.meteor.com  
+https://rocket.chat  
+https://www.coindesk.com/metropolis-today-shifting-plans-ethereums-next-big-upgrade 
+https://github.com/ethereum/wiki/wiki/Whisper 
+https://ipfs.io 
+https://arxiv.org/abs/quant-ph/0301141
+https://github.com/ethersphere/go-ethereum/wiki/IPFS-&-SWARM  
+https://www.statista.com/statistics/251666/number-of-digital-buyers-worldwide 
+https://www.semanticscholar.org/paper/A-Longitudinal-Study-of-Social-Media-Privacy-Behav-Boyd/95285b
+https://www.semanticscholar.org/paper/A-Longitudinal-Study-of-Social-Media-Privacy-Behav-Boyd/95285b
+https://www.businesslive.co.za/fm/fm-fox/numbers/2017-07-06-infographic-puts-the-worlds-money-into-p
+https://www.businesslive.co.za/fm/fm-fox/numbers/2017-07-06-infographic-puts-the-worlds-money-into-p
+
+	Glossary
+	ERC20
+	Sapien Platform
+	Sapien Network / Ecosystem
+	Branch
+	SPN
+	Staked SPN
+	Unstaked SPN
+
+	Overview
+	SPN Token Sale
+	SPN Utility
+
+	Introduction
+	What is Sapien?
+	Core Values
+	Key Features
+	Live Beta 
+
+	Objectives
+	Establish a Proof of Value Consensus Protocol
+	Launch the first Democratized Autonomous Platform
+	Build a Robust Marketplace and Incentivize User Contributions
+	Power Future Applications on the Sapien Network
+
+	Why Contribute?
+	Product Roadmap
+	User Stories
+	Creators
+	Curators
+	Freelancers
+	Developers
+	Media Companies
+
+	Market Opportunity
+	Social Media
+	E-Commerce
+	Privacy
+	Media
+
+	Business Model
+	Marketplace
+	Buyers & Sellers
+	Sapien
+
+	Ad Platform
+	Users
+	Advertisers
+	Sapien
+
+	Extend to other Websites
+
+	Token Sale
+	Presale	
+	Allocation of Presale Funds
+	Token Sale Phase #1
+	Minimum Goal
+	How to Contribute
+	Allocation of Funds (2018 - 2022)
+	Distribution of Tokens
+	Incentivizing the Network Effect
+
+	SPN Token
+	Proposed Utilities
+	Utility I: Staked SPN to Power the Sapien Platform
+	Utility II: Reputation Network built-in the SPN token
+	Utility III: Democratized Autonomous Platform (DAP) Proposals
+	Utility IV: Content Payouts and User-to-user Tips
+	Utility V: Standardized Token for Integrated Marketplace
+	Utility VI: Ad Platform Revenue Sharing
+
+	Use Cases
+	Use Case I: Fake News
+	Use Case II: Unified Media Portal
+	Use Case III: Tokenizing Virtual Goods
+
+
+	Platform Features
+	How to Register
+	How to Qualify for Platform Payouts
+	Reputation
+	Backfeed Protocol
+
+	Voting Mechanisms
+	Rewards for Posting, Commenting, and Voting Rewards
+	Posting & Commenting Payouts
+	Voting Payouts
+	SPN Payout Management
+	How We Handle Voting Manipulation
+
+	Democratized Autonomous Platform (DAP) Implementation
+	Proposal System
+	Branch Autonomy
+	Tribunals
+
+
+	Token Mechanics
+	Staking SPN
+	Staked SPN Capacity Bonus
+
+	Unstaking SPN
+	SPN Consensus Mechanism
+
+	Leadership
+	Core
+	Advisors
+
+	Competitive Analysis
+	I. Steemit
+	a) Choice of Blockchain
+	b) Distribution of Power
+	c) Barriers To Entry
+
+	II. Synereo
+	a) Technological
+	b) Token Utility
+	c) Philosophical
+
+
+	Risk Analysis
+	Quantum Computing Attacks
+	Public-Key Cryptography
+	Elliptic Curve Cryptography
+	Elliptic Curve Discrete Logarithm
+
+	Bots
+	Sybil Attacks
+	Inflation
+
+	Technical Considerations for a Dapp
+	Data
+	Beta Release
+	SPN Integration
+	Search
+	Storage
+
+	Decentralized Release
+	Blockchain
+	Off-chain
+
+	IPFS & Swarm 
+
+	References
+

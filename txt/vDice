@@ -1,0 +1,399 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+ 
+
+October 12th, 2016 
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+vDice ICO - Whitepaper 
+ 
+ 
+
+I. ICO Technology. 
+ 
+
+II. ICO Details. 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+I. ICO Technology. 
+ 
+Outline 
+ 
+
+1. Introduction. 
+2. Design and Features. 
+3. Architecture. 
+4. Analysis. 
+5. GUI Wallet. 
+6. How to Participate. 
+
+ 
+1. Introduction 
+
+ 
+In the following document we will explain our proposal for the architecture of the vDice 
+Token (called: ‘vSlice’) and Crowdsale Smart Contract System. 
+ 
+The vDice game technology itself is live, processing bets. It can be viewed ​here​. 
+ 
+We will reuse, as much as possible, the ​standardized ​ code that exists in the Ethereum 
+ecosystem, with the aim of minimizing the implementation complexity. This will also 
+ensure system security.  
+ 
+In particular, the base of the architecture will be built upon the wallet contract and the 
+ERC20​ token contract. These have received extensive scrutiny and have been thoroughly 
+vetted by the Ethereum community.  
+ 
+Some modifications are needed in order to implement the custom logic, but the 
+abovementioned contracts will provide a solid groundwork from which to build. 
+ 
+
+2. Design and Features 
+ 
+The ‘vSlice’ Smart Contract System is a set of smart contracts which provide the 
+following features: 
+ 
+● A safe and auditable exchange of Ether (ETH) for ‘vSlice’ tokens during the creation 
+phase. 
+ 
+● Token holders will receive a share of vDice profit, proportional to the amount of tokens 
+held, in a fair and transparent way. 
+ 
+● Tokens will behave as any standard ERC20 token. 
+ 
+
+3. Architecture 
+ 
+We will achieve the objectives listed above with the following architecture: 
+ 
+
+● Manual Coin Locking 
+a) Each token holder gets an amount of token proportional to the ETH they 
+
+deposit into the Crowdsale (ICO), in the ratio of: 
+- Week 1 = 1 : 130 
+- Week 2 = 1 : 120 
+- Weeks 3 & 4 = 1 : 100 
+
+https://github.com/jamesgroton/vDice-Contract-Code
+https://github.com/ethereum/EIPs/issues/20
+
+
+ 
+
+ 
+b) The profit from vDice is sent to the token contract and is accumulated in 
+
+its balance. 
+ 
+
+c) The token contract can be in any one of these two states: 
+i. ​ Unlocked​ : tokens are freely transferable, and profit cannot 
+be withdrawn during this period of time. The length of 
+unlocked time period will be decided at contract 
+deployment: e.g 3 weeks. 
+ 
+ii. ​ Locked​ : tokens cannot be transferred. Each token holder can 
+withdraw their profit share only during this period of time. The 
+profits which are not collected can be sent/withdrawn to the wallet 
+contract. The length of the locked time period should be decided at 
+contract deployment: e.g 1 week. 
+
+ 
+4. Analysis 
+
+ 
+It’s the most simple approach for distributing vDice game profits to token holders. It’s 
+the easiest to implement. It needs few modifications to the standard ERC20 token 
+contract. This will provide maximum security. 
+ 
+It should be remembered that if a ‘vSlice’ holder fails to withdraw their profits, they will 
+loss their share of the profits during that time period. 
+ 
+Coins are perfectly transferable and fungible on exchanges. However, sending to and 
+from exchanges is prevented during the coin-locking period. 
+ 
+
+5. GUI Wallet 
+ 
+A GUI wallet will be provided with the crowdsale. This will give a safe place to store 
+tokens, receive notifications of lock-periods and a offer a simple point-and-click interface 
+to call the withdrawal function and receive your share of vDice game profits. 
+ 
+
+6. How to Participate 
+ 
+Click ​here​ for details on how to participate. 
+ 
+
+ 
+-------- 
+
+ 
+II. ICO Details. 
+ 
+Outline 
+ 
+
+1. Introduction to vDice. 
+2. How vDice Works. 
+3. The Crowdsale Object: ‘vSlice’ Token. 
+4. Crowdsale Technical Design. 
+5. Fund Utilization and Roadmap. 
+6. How to Participate. 
+
+http://crowdsale.vdice.io/
+
+
+ 
+
+7. Duration and Timing. 
+8. The ‘vSlice’ Token Distribution. 
+9. Smart Contract Security. 
+10.Disclaimer 
+
+ 
+1. Introduction to vDice 
+
+ 
+vDice is the leading blockchain-based betting game for the Ethereum network. It went 
+live on June 13th, 2016. It has processed almost 10,000 bets to-date.  
+ 
+It is a classic ‘SatoshiDICE-style’ betting game, implemented as an Ethereum Smart 
+Contract (Dapp), and exists on the Ethereum blockchain. 
+ 
+SatoshiDICE was the world’s first blockchain-betting game, built on Bitcoin’s blockchain 
+and released in April, 2012. 
+ 
+As of January 2013, SatoshiDICE had taken approximately US$ 15 million in bets. 
+ 
+ 
+
+2. How vDice Works 
+ 
+Ethereum builds and improves on the Bitcoin blockchain. In the same way, vDice builds 
+and improves on blockchain betting technology, generally.  
+ 
+Whereas SatoshiDICE was ​somewhat​  decentralised, vDice is fully decentralised.  
+ 
+vDice leverages the power of Ethereum smart contracts to build a game that has no 
+server architecture. Instead, bets are processed through an Oracle, using the 3rd party 
+services of random.org for the random number source. 
+ 
+To play, a user sends a Tx to a contract. Then the contract executes the oracle contract. 
+The oracle then calls the contract back. So there are two transactions to a contract for 
+every bet made: one is the user, the second is the oracle. 
+ 
+There is also the option for users to contribute Ether (ETH) to each betting contract. In 
+this way users can share in the success of a specific contract and increase the house. 
+ 
+The Smart Contracts are live, network tested, and processing bets on a continuous basis. 
+ 
+ 
+
+3. The Crowdsale Object: ‘vSlice’ Token 
+ 
+The object of this Crowdsale is the native token of the vDice game called; ‘vSlice’.  
+ 
+This token is tied directly the the profits of the vDice game. Holders of vSlice tokens 
+receive a share of vDice profit, proportional to the amount of tokens held, in a fair and 
+transparent way.  
+ 
+‘vSlice’ tokens behave as any standard ERC20 token. 
+ 
+People participate in the Crowdsale using BTC or ETH. It will all be resolved to Ether 
+(ETH) and the Ethereum blockchain. 
+ 
+The issuance will last 4 weeks, starting November 15th, 2016 and ending December 
+15th, 2016.  
+ 
+The ‘vSlice’ token Smart Contract will be deployed and people who contribute will 
+receive: 
+
+
+
+ 
+
+  
+- Week 1 = 1 : 130 
+- Week 2 = 1 : 120 
+- Weeks 3 & 4 = 1 : 100 
+
+ 
+for each Ether (ETH) they send, for the 1-month of the issuance. So, for example; 100 
+ETH will get 13,000 vSlice tokens, up until the cap of 700,000 ETH. There is also a small 
+pre-allocation of tokens at lower rate of 1 : 100 , up to 50K ETH limit, giving a total of 
+5M ‘vSlice’. 
+ 
+Therefore, as a meta-token on the Ethereum (ETH) blockchain, the vSlice token has a 
+maximum possible coin supply of 96M vSlice. 
+ 
+The Crowdsale Smart Contract is fully decentralised. That is, the sending of Ether (ETH) 
+to the Token Smart Contract will result in the immediate, and decentralised, issuance of 
+the contributors vSlice tokens on the Ethereum blockchain. 
+ 
+As soon as they are issued, accrued profits from the game are available. 
+ 
+
+4. Crowdsale Technical Design 
+ 
+For the full technical specifications of the Crowdsale Smart Contracts, ‘vSlice’ tokens and 
+distribution, please see Section I of this document. 
+ 
+
+5. Fund Utilization and Roadmap 
+ 
+All funds raised in this crowdsale shall be allocated for the development and marketing of 
+the vDice platform and project. ​Here​ is a full analysis of the business, operations and 
+plan for the use of funds. 
+ 
+The project will continue to push the limits of on-blockchain transaction processing; fully 
+decentralized and through an oracle. In a broader sense vDice exists to see how fast and 
+cost efficient it is possible to get on-blockchain transactions, through an oracle, using 
+Ethereum Smart Contracts. 
+ 
+The full vDice development roadmap document is presented ​here​. The development 
+roadmap as a visual graphic can be found ​here​. 
+ 
+vDice will publish the accounting of funds every 6-months, on the Ethereum blockchain. 
+This timing may be advanced or delayed when in special times. 
+ 
+
+6. How to Participate 
+ 
+Participants should visit ​crowdsale.vdice.io​ during the crowdsale period; November 15th, 
+2016 until December 15th, 2016. You can participate using Bitcoin (BTC) or Ether (ETH). 
+ 
+ 
+
+7. Duration and Timing 
+ 
+This ICO lasts for 30 days. It will begin on November 15th, 2016 and terminate on 
+December 12th, 2016. 
+ 
+
+8. The vSlice Token Distribution 
+ 
+Anyone who wants to participate in the crowdsale should have Ether (ETH) held in any 
+wallet: Ethereum Wallet, Mist, Parity UI, MyEtherWallet, Jaxx, Metamask, etc. 
+
+https://blog.vdice.io/wp-content/uploads/2016/10/vDice_Business_Plan_English.pdf
+https://blog.vdice.io/wp-content/uploads/2016/10/vDice_Development_Roadmap.pdf
+https://blog.vdice.io/wp-content/uploads/2016/10/vDice_Roadmap.jpg
+http://crowdsale.vdice.io/
+
+
+ 
+
+ 
+Once they have an Ethereum account with Ether (ETH), they simply need to send a 
+transaction with a special gas amount (it will be approx. 30,000-40,000 Gas) to the 
+‘vSlice’ address, as displayed on the website. 
+ 
+The transaction will immediately create an equivalent amount of ‘vSlice’ tokens, with an 
+exchange rate of: 
+
+- Week 1 = 1 : 130 
+- Week 2 = 1 : 120 
+- Weeks 3 & 4 = 1 : 100 
+
+ 
+in the token contract, without any other user interaction.  
+ 
+Once the transaction has been confirmed you will see your token amount on the 
+Ethereum Blockchain, and viewable through web-UI on the Crowdsale website. 
+ 
+Participants of this Crowdsale may sell ‘vSlice’ tokens as soon as they receive them, or 
+hold ‘vSlice’ for a longer term. The ‘vSlice’ belong to the owners. 
+ 
+
+9. Smart Contract Security 
+ 
+The game vDice is based on Ethereum Smart Contract (DAPP) technology. This has been 
+built using open source technology by the vDice team. 
+ 
+The vDice game code has been audited by leading blockchain technologists. Full audits of 
+the vDice game Smart Contract is available ​here​. 
+ 
+The Crowdsale too is based on Ethereum Smart Contract technology, according to 
+industry standards. The full specification of the Smart Contract code for the Crowdsale 
+and token issuance is ​here​.  
+ 
+Audits of the Smart Contract code handling the Crowdsale and token distribution is ​here​. 
+ 
+
+10.Disclaimer 
+ 
+vSlice is the native token of the vDice blockchain Dapp. It is not or cannot be deemed to 
+be any kind of equities of any real-world company. This Initial Crowd-Offering is about 
+products, not equities. The blockchain industry is a new industry and may contain 
+technological, policy and market risks. 
+
+https://blog.vdice.io/vdice-game-smart-contract-audits/
+https://blog.vdice.io/specification-of-the-smart-contract-code/
+https://blog.vdice.io/crowdsale-smart-contract-code-audits/
+

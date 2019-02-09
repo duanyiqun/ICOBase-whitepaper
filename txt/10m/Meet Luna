@@ -1,0 +1,1035 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Luna
+Andre Ornish, Vinay Gupta, Aella, Dr. Aeron Buchanan
+
+Draft 1 · 24 October 2017
+
+Abstract Online dating has emerged as one of the most extensive
+and still-growing online industries, but user experience remains poor due
+to two main deficiencies in currently available platforms. The first defi-
+ciency lies in the current game theoretic tactics, the rules to which users
+must adhere in order to achieve dating success: bad incentives have left
+the dating game with a severe attention imbalance and have resulted
+in issues such as poor messaging behavior, fake accounts, and misuse of
+personal data. The second deficiency lies in poor user-matching algo-
+rithms, which result in low levels of success in finding and connecting
+with a potential partner.
+
+The Luna platform introduces an entirely new approach to online
+dating to address these issues. Through the introduction of attention
+economics, Luna delivers an online dating platform which solves the at-
+tention imbalance, thereby relieving pressure on all users. Luna also
+introduces an innovative use of machine learning compatibility calcula-
+tions to achieve superior matches between users.
+
+To efficiently deliver this new economic mechanism, Luna employs a
+queueing system built upon distributed ledger technology and includes
+novel features to maximize user trust. This document sets out in detail
+both the current issues faced by online dating platforms and Luna’s
+solution, which includes its innovative system of incentives, its use of
+machine learning algorithms, and its use of blockchain to deliver a high
+level of user satisfaction.
+
+1
+
+
+
+Contents
+
+Foreword 3
+
+1 Introduction 6
+
+2 Market Context and Problems 6
+
+3 Luna’s Strategy 8
+3.1 Messaging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+3.1.1 Receiving . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+3.1.2 Sending . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+3.1.3 Replying and Follow Up . . . . . . . . . . . . . . . . . . . . . 10
+3.1.4 Mutual Messaging . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+3.2 Data Processing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+3.2.1 Sorting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+3.2.2 Profiling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+3.2.3 Identity Verification and Moderation . . . . . . . . . . . . . . 12
+3.2.4 Meeting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+3.3 Financial Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+3.3.1 User Goals . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+3.3.2 Approach and Revenue . . . . . . . . . . . . . . . . . . . . . 14
+
+4 Luna’s Technology 15
+4.1 Machine Learning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+4.1.1 ML Features . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+4.1.2 ML Model Validation . . . . . . . . . . . . . . . . . . . . . . 17
+
+4.2 Centralization vs. Decentralization . . . . . . . . . . . . . . . . . . . 18
+4.3 Scalability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+4.4 Network Effect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+References 20
+
+2
+
+
+
+Foreword
+by Vinay Gupta
+
+Why it’s Important That We Fix Online Dating
+
+I’m a person who is usually known for chasing big, important problems: climate
+refugees, critical infrastructure, pandemic flu, environment and so on. Why, then,
+have I been lugging around an idea about how to fix online dating for a few years,
+talking about it, and trying to get people to see different ways of thinking about it?
+
+The answer is because the best things in life are free. There’s no significant
+economic or social cost to people being with the people who will, at any given time
+in their life, make them happiest. And this is essentially a search (and possibly
+scheduling) problem. Let’s deal with the search part first.
+
+Humans in traditional societies knew about inbreeding. They evolved elaborate
+ceremonies with and traditions for making sure that their kids married outside of
+the tribe, even if there were serious difficulties (like language barriers) in doing so.
+More than one agricultural society held no-holds-barred festivals in which you could
+arrive with who you liked, and leave with somebody else, and nobody was really
+allowed to give you a hard time about it.
+
+This stuff didn’t happen for no reason. It happened because getting the biolog-
+ical imperatives right mattered. Presumably the cultures which didn’t have these
+kinds of mechanism for keeping the gene pool stirred died out, or perhaps human
+instincts always settle on some kind of solution. But, one way or another, complex
+social arrangements around ensuring exogamy have always been the norm. Even
+in arranged marriage cultures like my own (about half of my cousins had arranged
+marriages) people would go hundreds of miles for a match in many cases.
+
+A lot of time and effort went into these things. Dating wasn’t just a case of
+whipping out an app, or heading down to the local bar district and hoping that
+common sense wasn’t picking up the phone tonight. No, it was a case of long
+journeys and adaptation to a foreign culture and diplomatic relations with the
+neighboring tribes, and all the rest of it. These things involved serious effort.
+
+But now the general model is to make everything as easy as possible: birth
+control and barrier contraception, no social pressure to make relationships lasting
+until quite late in life (or ever), and in some lucky countries social care systems
+so good that single parents don’t have lives any harder than married parents all
+contribute to a general sense that sex and relationships are driven by convenience
+rather than being in some sense the centre of life. We have basically de-labored the
+process, and the results don’t seem to be making people happy. I’m not comparing
+that level of happiness with some imaginary “good old days” — just noting that,
+on average, the entire thing is filled with angst.
+
+So why do I think the blockchain can help?
+The answer is twofold. Firstly, there is the agency problem. If you are on a
+
+dating site that gets paid when you see advertising as you search profiles, you are
+going to see a lot of profiles. They might withhold useful search features or pair
+you with a lot of people you won’t like, but who aren’t quite so obnoxious that
+you put the site down, and just feed you a smattering of great people to keep you
+interested. Or they might have seas of appealing bots whose job is to keep you
+
+3
+
+
+
+clicking, while delightful real people are just out of reach, tucked away in a corner
+of the database their algorithms just won’t quite allow you to see. And then there’s
+the actual performance of these systems — you’ll find a lot more analysis about
+this in the whitepaper, but the results are quite discouraging. The bottom line is
+that these sites don’t work directly for the best interests of their users — there’s
+always a split motive, and this particular aspect of our lives is too important to let
+the agency problem interfere with our happiness. If there is to be machine help for
+people to find partners, the machines have to be working strictly on behalf of the
+people they are connecting, not hiding their algorithmic intentions behind complex
+veils made to sell advertising.
+
+The second problem is more subtle.
+Dating sites bake in all kinds of hidden assumptions. Take age: does it really
+
+matter, past the age of legal consent? Hard to know. For a very long time, asking
+people their age was considered impolite. Now, it’s right up there, front and centre.
+Does that make for more or less successful relationships? How could we know? How
+could we watch? How could we measure?
+
+Same thing for photographs. Of course looks matter, but are we selecting for nice
+looking people, or good photographers? Maybe dating people who are really good
+at selfies does genuinely result in better relationships — or maybe not! The bottom
+line is that we can’t really tell, because all of this useful data is locked away inside
+of the matching engines of the data sites. OkCupid’s blog series on what they’d
+learned from their data is absolutely fascinating, but it leaves me wanting more:
+much more! How could we design matching engines which genuinely produced
+human happiness? The answer would require data: both big, and open, and we
+would need to know something about the long term outcomes of various matches
+made, sometimes decades before. An algorithm which produces 5 brilliant years,
+then a string of massive ugly divorces might be suboptimal for reasons we can’t
+possibly guess right now — and if that seems like an improbable outcome, let’s
+remember that computers can recognize images better than people now. Maybe
+they can recognize compatibility too.
+
+But for us to ever find out, we are going to require an open data ecosystem around
+computer dating. Blockchain is an integral part of that — it’s what pays the bills
+to do the science and, in the case of Luna, it nicely and accurately solves one of
+the key problems in the computer dating arena: cut-and-paste messages spammed
+over huge numbers of people, resulting in an ever-lower number of good quality
+genuinely interested messages, hidden in an ever larger sea of dating spam. Just
+getting rid of that dynamic once and for all would be a great result, but I think
+that Luna offers far, far more.
+
+By establishing the decentralized paradigm in dating, Luna helps to remake dat-
+ing culture. Luna is not a service or a place, like Tinder or a bar. Luna is a method,
+and a method which can be continually improved using techniques like A/B testing,
+until it is genuinely producing better lives for people. Because blockchain techniques
+allow for sophisticated tools to be developed to align economic interests between
+(say) search algorithm designers and individual users, or between users and other
+users who don’t like spam (i.e. everybody), the possibility exists to not only solve
+the questionable agency of the current generation of dating app providers, but to
+
+4
+
+
+
+create positive agency to do something really, really new.
+We could pay the best people in the world to design algorithms to match other
+
+people, and make them happy.
+Luna doesn’t start with algorithm markets. Designing the necessary markets and
+
+mechanisms to genuinely reward people for doing the necessary science to get more
+optimal online matching is an uphill job, and the Luna team know that. So they’re
+starting small: a token economy for dating.
+
+What does this token do? It streamlines attention: messages sit in an inbox, and
+the messages that people paid most to send sit at the top of the inbox, with some
+modifiers which will be A/B tested along the way. That doesn’t seem like a big deal,
+but it is. Once that flow of value is established — that these messages matter, that
+they are indeed precious cargo — economic incentive mechanisms can be designed to
+help people better target their search. Once the option of just spamming messages
+over half the site is gone, once you can’t right swipe on everybody, the market exists
+for the design of algorithms which help you spend your time and energy talking to
+the people who are most likely to find you the person they wanted to meet.
+
+We can’t climb that hill towards genuinely better matching without an underlying
+tokenized economy to pay for the research, and we can’t get better results without
+that research.
+
+So, phase one, tokenize all the things, and use the simple brute force method of
+charging fees for communication to prune spam. To keep the system fair, the fees
+go to the person you’re communicating with (minus a fee). Then, later, offer ways
+to take commission on introducing people using a variety of matching algorithms,
+ideally in a competitive array, and use that mechanism not just to prune the bad
+messages, but to actively steer and guide people towards each other based on criteria
+they might never consciously be able to articulate, but that sophisticated machine
+learning algorithms may able to sense. This is a big, bold, long term vision, but
+it’s a good one.
+
+If computers are good at anything, it is search. We aim to establish a market
+which sets up the right conditions to train them to do something important and
+something new: to train them to search for love.
+
+5
+
+
+
+1 Introduction
+
+Luna is designed to mitigate the underlying inequality in the attention economy
+of online dating. It addresses the two main deficiencies that can be observed in
+existing dating websites and apps which cause low user satisfaction, namely the
+imbalance in messaging traffic and the misalignment of incentives and rewards.
+According to the MIT Technology Review, online dating is changing the nature
+of society. “People who meet online tend to be complete strangers. . . And when
+people meet in this way, it sets up social links that were previously nonexistent.”[1]
+Luna employs blockchain to normalize the attention distribution which streamlines
+interactions between Luna users and helps to avoid users wasting their own and
+each other’s time sending messages which will never be read, or reading messages
+which will never be replied to. This wasted effort and time can be reclaimed by
+incentivizing productive behaviors on behalf of both the senders and readers of
+dating messages.
+
+2 Market Context and Problems
+
+Since its inception in the 1990s the online dating industry has steadily grown, both
+in online sites and mobile apps. Today, online dating is the second most common
+way for heterosexual couples to meet; for homosexual couples, it is by far the most
+popular (Figure 1). In 2015, 50 million users of online dating sites and apps were
+registered in the US alone [2] and over 91 million worldwide [3]; the number of
+online dating users among young adults tripled from 2013 to 2016 [5]. The industry
+thus commands a considerable share of the online market: the top grossing app on
+iOS, Tinder, is valued at 3 billion dollars, with a paying user rate as high as 24%
+of its total of 50 million users [2, 6].
+
+Figure 1: The way people meet their partners has changed dramatically in recent years [7].
+
+6
+
+
+
+Despite the scope and popularity of online dating platforms, most of the available
+services suffer from fundamental challenges that compromise user experience and
+deter would-be users. The primary challenge is that of message imbalances resulting
+from attention inequality between users of varying attractiveness. Many users thus
+have a negative experience of receiving either far too many messages (if they are
+considered to be at the top end of the attractiveness scale), or far too few (if they
+are perceived to be lower down the scale). On the online dating website OkCupid,
+some users at the higher end of the scale receive over 28 times as many messages
+as someone on the lower end of the spectrum [8]. In an experiment conducted by
+British data journalist Jon Millward, fictitious female users with profile pictures at
+the top end of the attractiveness scale received 120–230 messages per week, 17 times
+as many as fictitious male users, and also 17 times as many as fictitious female users
+at the lower end of the attractiveness scale [9]. On Tinder, a male user considered
+to be of only average attractiveness can expect to be swiped left (i.e. ignored) by
+over 99% of women [7].
+
+Figure 2 illustrates this imbalance through Tinder’s ranking of male and female
+“income inequality” (with “income” in this case correlating to the number of “likes”)
+as compared to that of the world’s leading nations — the higher the Gini coefficient,
+the higher the inequality.
+
+Unsurprisingly, male users considerably outnumber female users on all common
+dating sites and apps. OkCupid has 1.5 male users registered for every female
+user on the site [11], and a recent study by GlobalWebIndex found that nearly
+two thirds of users on all location-based dating apps were male [12]. In addition
+there is a marked discrepancy in attention and perseverance between the genders,
+as a result of which female users are 2.5 times more likely to report dating site
+harassment than male users [13].
+
+Figure 2: The Tinder economy has a higher Gini coefficient than 95.1% of the countries in
+the world [7].
+
+7
+
+
+
+The resulting problem creates a negative feedback loop — a small population
+of popular (mainly female) users, and a large population of unpopular (mainly
+male) users results in low response rates. These incentivize messaging strategies
+characterized by a proliferation of low-quality, low-investment messages sent to a
+high number of users in the hope of eliciting a response, which in turn exacerbates
+the messaging imbalance. In addition, these messages tend to be depersonalized,
+often cut-and-paste, and as a result alienate their recipients. A recent poll initiated
+by Luna on Twitter found that as many as 45% of users who had quit a dating app
+reported doing so due to this messaging imbalance [14].
+
+The online dating industry has responded to this known issue with a number
+of different systems launched through sites such as Coffee Meets Bagel (2012) or
+Bumble (2014), though none of them with a perfect solution: presenting limited
+matches can be frustrating and encourages fake profiles [15], and requiring women
+to initiate contact limits dynamics preferred by passive women and active men [16].
+Some platforms have sought a solution by providing spinoff apps available only
+to those who reach specific criteria, such as celebrity status, high income, or high
+intelligence, but these apps release only a little of the pressure, and have in addition
+the effect of designating the average user as subpar in comparison [17].
+
+As a result, the demand for a better experience remains high among the vast ma-
+jority of online dating site users. By correctly managing the imbalances of attention
+and interest between users, Luna can achieve a better experience for everyone.
+
+3 Luna’s Strategy
+
+The online dating app Luna addresses these challenges by means of a system that
+acknowledges the attention inequality that informs user behavior specifically with
+regard to messaging: it makes use of economic theories and behaviors by introducing
+a system of incentives, and generates revenue in line with this system (§ 4.2). The
+token essentially acts as an invisible hand within an information-rich marketplace.
+
+Luna’s fuel is its QRC-20 token, the Star. Stars are the means for all in-app
+transactions between users. Luna endeavors to provide new users the ability to pur-
+chase tokens in several different ways, such as in-app credit card transactions with
+a licensed third-party API, on secondary exchanges, or by earning them through
+their interactions on and with the Luna app. Luna’s reserve pool is used to provide
+liquidity and rewards to users, for example for verifying real-world encounters or
+providing compatibility feedback. A portion of funds raised may be used to ensure
+Stars are listed on exchanges.
+
+Luna thus has the ability to encourage growth of the ecosystem. Tokens also
+provide greater user control: users do not require Luna’s authorization to buy or
+sell, or withdraw tokens to an exchange. Furthermore, the token system allows for
+an exchange or secondary market to form, allowing users be compensated fairly for
+their efforts and attention by a price determined by the market, not by Luna. Luna
+anticipates a regular return of Stars through a small fee installed in the case of
+successful communication (§ 4.2), and intends to burn a percentage of these tokens
+in order to stabilize the value of tokens within the ecosystem [19].
+
+Luna’s users are able to limit the number of messages they receive per day, with
+
+8
+
+
+
+additional messages entering a queue. Stars allow for the initiation of conversations
+with users who have hit their limit by bumping messages up the queue to the
+recipient’s inbox. These Stars then transfer to the message recipient’s account.
+Users can thus earn Stars by reading, in a timely fashion, incoming conversation
+starter messages with attached Stars. This ability to earn tokens provides a strong
+incentive for new users to join Luna, and for existing users to remain active on the
+network.
+
+The use of Stars also decreases the amount of competition users face when sending
+messages. Platforms such as OkCupid have no barrier to initiating contact, and the
+ensuing result is that of mass, low-quality messaging. Introducing a small barrier—
+a requirement to attach Stars—discourages mass messaging, so that popular users
+are far less overwhelmed by spam messages. The introduction of tokens as a liquid,
+platform-discrete asset thus succeeds in addressing the issue of inequality in the
+attention economy that fundamentally compromises the conventional online dating
+experience. Moreover, the base of popular, responsive users created will increase
+the value of the platform and aid in overcoming the network effect (§ 5.4).
+
+§ 3.1 below provides a detailed description of Luna’s messaging system and the
+use of Stars, as well as further details about user data acquisition and the function
+of the app beyond messaging.
+
+3.1 Messaging
+
+To clarify the system of using Stars, the following example involves two fictitious
+Luna users, “Alice” and “Bob.”
+
+3.1.1 Receiving
+
+When Alice initially joins Luna, she can either earn some initial Stars by completing
+her user profile in detail (§ 3.2.2), or she might choose to buy Stars from an exchange.
+At sign-up she is prompted to select a daily inbox limit, and chooses to receive only
+three conversation starter messages per day. Alice will now receive a maximum
+of three first conversation starter messages from new contacts each day. If Alice
+receives fewer than three of these messages each day, her inbox functions like a
+basic inbox in that she immediately receives incoming messages. If more than three
+new contacts message Alice on any given day, the surplus messages are held in a
+queue, and each subsequent day Alice receives the first three messages in the queue.
+However, Alice may choose to “push through” additional messages from her queue
+at any time. She may select the number of messages she wishes to push, and receives
+the tokens attached to those messages.
+
+3.1.2 Sending
+
+Bob wants to send Alice a conversation starter message. If Alice has no queue in
+her inbox, Bob’s message gets delivered to Alice instantly. However, if her daily
+inbox limit of three messages has already been reached and there are thus messages
+waiting in the queue, Bob’s message would join the queue at the end and might not
+be delivered for a day or longer. At this point Bob is presented with the option to
+attach Stars to his message — the more Stars he attaches, the further the message
+
+9
+
+
+
+moves up in Alice’s queue. If Luna has determined a high rate of compatibility
+between Alice and Bob, so that Alice is likely to reply to Bob’s message, Bob
+receives a discounted rate, so needs to attach fewer Stars to push the message to
+the front of the queue than someone with a low compatibility rate.
+
+In addition, when choosing to attach Stars to his message, Bob should receive
+information such as the number of unread messages in Alice’s queue, an internally
+calculated reply quality indicator, and confirmation on whether Alice’s account is
+verified.
+
+3.1.3 Replying and Follow Up
+
+If Alice opens Bob’s message within 36 hours of receiving it in her inbox, the
+attached Stars are deposited into her account. Alice can use these Stars to bump
+her own messages to another user, or she can cash them out. She also has the
+option of donating them without friction to a partnered charity of her choice, for
+which she can earn a badge that will display on her profile.
+
+Stars are only required to bump up initial conversation starter messages — if
+Alice chooses to respond to Bob’s message, this message is free, and neither Alice
+nor Bob require any Stars to continue their conversation.
+
+Figure 3 below illustrates how the system functions in the two possible situations
+explored above.
+
+3.1.4 Mutual Messaging
+
+There will be circumstances where one user wishes to message a user who has already
+messaged them. For example, Bob messages Alice, and his message waits in her
+queue. Alice browses through users and comes upon Bob. Luna lists an indication
+on his profile that he has a sent message currently in her queue. If she wishes
+to start a conversation, she may immediately receive his message. This happens
+regardless of whether Bob also has a queue for his inbox. We intend to design the
+platform in a way that obscures, to Alice, the number of tokens attached to Bob’s
+message. This may be done by delaying the token deposits into Alice’s account, so
+that all tokens earned during the delay are deposited in bulk.
+
+3.2 Data Processing
+
+Many of the most popular dating sites, including OkCupid, Tinder, and Coffee
+Meets Bagel, provide a limited search ability, and ask users to pay to unlock the
+ability to search by more specific criteria. This means that in the pursuit of profit
+these platforms are actively restricting their users’ ability to find good matches.
+Even if a user should find a good match, their match might not be real — a study
+conducted by Sift Science on over 8 million user profiles on online dating platforms
+concluded that as many as 10% of all newly created dating profiles were fake [18].
+
+Luna intends to provide a superior experience compared to industry standards,
+aided by the use of Stars to reward user engagement and encourage submission of
+better data. It is our novel data gathering approach that should enable us to train
+algorithms better than anyone in the industry: we are closing the feedback loop by
+tying back precise post-date satisfaction data to the search algorithms. This steers
+
+10
+
+
+
+Figure 3: Luna’s token system and messaging.
+
+11
+
+
+
+away from the ‘pay to play’ model and allows users to freely access all controls
+available at all times. In addition, a system of identity verification mechanisms
+for both online and in-person meetings avoids the problem of users creating fake
+accounts.
+
+3.2.1 Sorting
+
+When searching for new contacts, Luna users can set initial filters such as age,
+gender, interests, distance, and tags (§ 3.2.2), weighed by their relative importance
+(tf-idf). Profiles of other users are then presented as ranked by compatibility, and
+can be sorted by swiping them into “pass” or “message now” folders, which can be
+easily accessed later. A compatibility score is presented as a visible percentage rate
+on all presented profiles — the compatibility calculations are discussed in further
+detail in § 5 below.
+
+3.2.2 Profiling
+
+Upon signup, Luna requires users to supply some basic data including first name,
+gender, sexual orientation, location and phone number, and to provide a picture
+of themselves. In the alpha version, users may also provide additional information
+such as the nature of the desired relationship (casual, serious, etc.), a preference for
+monogamous or nonmonogamous relationship type, and education level. Users may
+be able to select tags to apply to their profile, which are keywords to aid in searching,
+such as “dancing” or “blockchain”. Providing this information is optional; however,
+users can earn an initial fund of Stars by completing all details of their profile. We
+are enthused to explore digital footprint-based recommendations and psychometric
+profiling. Additional profiling features and mechanisms currently in development
+will be revealed upon launch. While users are free to search for matches globally,
+Luna will not allow user to set their location to a place where they are not.
+
+3.2.3 Identity Verification and Moderation
+
+Luna offers users several ways of verifying their identity to increase trust and help
+guard against scammers, bots, and catfishing. Through optional real ID verification,
+users may earn a verified ID status clearly visible through a badge on their profile.
+Users may also privately upload to Luna a unique photo or video demonstrating
+compliance to a small request such as holding up a number of fingers or reciting a
+number sequence, to be reviewed and approved within 24 hours. As an additional
+safeguard, SMS verification is used to ensure all are legitimate human users.
+
+All users will have the ability to report any message or profile for harassing,
+abusive, or obscene content. The use of ID verification in connection with machine
+learning (§ 5.1) is expected to drastically reduce the number of rule violations; those
+that do occur will be handled by an outsourced moderation team, to be expanded
+as needed. Luna will take its guidelines from jurisdictional obscenity laws, and will
+not permit users under 18 years of age.
+
+12
+
+
+
+3.2.4 Meeting
+
+In conjunction with Luna’s user ID verification, the in-person meeting verification
+and compatibility feedback polls are intended to work to form a verified trust net-
+work of Luna users. We endeavor to provide a method of co-verifying in-person
+meetings with near-field communication (NFC) by simply opening the Luna app
+and touching phones together. Once verification has been made, users are later in-
+vited to respond to a brief compatibility feedback poll. Data collected from the
+compatibility feedback poll is used to train Luna’s machine learning algorithms
+(§ 5.1). In addition, should a user feel uncomfortable about another user’s inten-
+tions during an in-person meeting, they will be able to report so in the compatibility
+feedback survey. Any user who receives too many such reports will be banned from
+the network. Policies regarding banned users are subject to change, however at this
+time we intend to allow banned users to access their accounts and withdraw their
+collected tokens to an exchange.
+
+3.3 Financial Model
+
+3.3.1 User Goals
+
+Users who engage in online dating pursue a variety of different goals. Dating plat-
+forms claim to help users achieve those goals, but if a platform’s financial incentives
+are not fully aligned with user goals, the result can be manipulation of user behav-
+ior by the platform: actions taken to maximize revenue are often at odds with the
+interests of the user.
+
+At Luna, we intend to structure the token economy in such a way that our system
+is rewarded when users achieve their goals, thus aligning our own incentives with
+those of our users and ensuring that all data, AI, and machine learning technology
+will be used to actually connect people.
+
+Users of online dating apps look for one or more of the several possible end-results:
+
+Not meeting Meeting
+
+Short term Long term Short term Long term
+
+Sexual Sexting Love letters Hook-up Romantic relationship
+
+Non-sexual Chatting Pen pals Social Friendship
+
+On most dating apps, after creating a profile, a user must go through most or all
+of the following stages to achieve one of their goals:
+
+I. Browsing profiles
+
+II. Identifying appealing profiles
+
+III. Indicating bilateral interest
+
+IV. Exchanging messages
+
+V. Arranging a date
+
+13
+
+
+
+Only after reaching stage IV or V has the user managed to actually achieve one or
+more of their goals. Successful bilateral messaging will satisfy users whose interests
+lie in the results listed in the left half of the table above (“non-meeting” results),
+and a successful date can achieve goals listed in the right side of the table (“meeting”
+results). Any satisfaction derived from any of the other stages generally exists only
+because of the potential for advancement to stages IV or V.
+
+There are a number of ways in which online dating platforms monetize user
+engagement at the different stages listed above:
+
+1. Third party advertisements
+
+a) Showing advertisements to users at Stage I is a common practice to
+incentivize the platform.
+
+2. Paid user membership
+
+a) Many platforms such as Match.com or Zoosk require a paid membership
+for users to engage at any Stage.
+
+b) Others like OkCupid and Tinder offer premium services for paying users
+to unlock extra features.
+
+3. Paid features
+
+a) Additional filtering available to premium users, such as on OkCupid
+Premium. This increases the likelihood of optimizing for Stage II.
+
+b) Access to the list of users who have already expressed interest, such as
+on OkCupid Premium. This increases likelihood of optimizing for Stage
+III by narrowing the search, though it also potentially introduces bias.
+
+c) OkCupid and Tinder also offer one-time ‘boosts’, which increase the
+paying user’s visibility to other users for a period of time. This increases
+the likelihood of achieving Stage III at the cost of introducing bias to
+the matchmaking.
+
+d) Payment for messaging matches may specifically increase likelihood of
+reaching Stage IV.
+
+In most cases companies accrue revenue at Stages I, II or III, while users do not
+achieve their goals until Stages IV or V.
+
+3.3.2 Approach and Revenue
+
+Luna intends to use a different approach to monetization by eliminating the use
+of advertisers as third parties on the platform, as well as by avoiding the use of
+subscriptions or direct paid platform features.
+
+The approach consists of two parts:
+
+1. Fees which comprise Luna’s revenue only occur in the case of successful com-
+munication.
+
+As described in § 3.1, when a user receives and reads a message boosted with
+Stars, they also receive the Stars used to boost that message. Luna intends to
+take a small fee for this transaction, but only if the recipient responds to the
+
+14
+
+
+
+message within a window of a number of days yet to be determined. If the
+recipient does not respond, or only responds after more than this number of
+days, this fee will be re-paid to the sender. The number of Stars transferred
+to the recipient, however, will remain the same, whether they respond to the
+message or not. In this way Luna’s financial incentives will be aligned with
+users’ goals at Stage IV in the exchanging of messages.
+
+2. Possibility of tipping in case of successful offline dates.
+
+Another way to provide incentive for Luna to help achieve its users’ goals is
+to allow users to tip the platform after the achievement of Stage V in the
+completion of a successful date. As described in § 3.2.4, we intend to make
+feedback polls available after dates. Once users have rated their experience,
+Luna will then allow them to choose whether to leave a tip of their choice in
+the form of Stars. As this is a voluntary option, it should have no effect on
+user feedback.
+
+Tipping a platform is an infeasible idea in the context of currently existing
+dating apps; however, the free and direct-to-user benefits of Luna may register
+to users as something more resembling the mechanisms of Wikipedia: a free,
+friendly, and user-contributed service, rather than a platform like Match.com,
+which can feel exploitative. A tipping option may thus encourage a feeling of
+alliance with Luna in the user.
+
+In this way, rather than recreating disparities which exist between the goals of
+current dating platforms and their users, Luna’s financial incentives and user goals
+will coincide in the same stages of successful messaging (Stage IV) and successful
+dating (Stage V).
+
+We anticipate, during the future development of the platform, the potential ad-
+dition of other instruments and tools that continue to use these key principles to
+align user and platform incentives at the core.
+
+4 Luna’s Technology
+
+Compatibility information used by Luna is based on user profile information, in-app
+messaging behavior, and offline post-date feedback. Luna may adopt a collabora-
+tive filtering algorithm developed by Dr. Kang Zhao. In addition, Luna may use
+advanced NLP techniques in conjunction with IBM Watson to integrate additional
+information from the contents of messages sent in-app, as well as from social media
+sources such as Twitter, if users choose to provide that information.
+
+4.1 Machine Learning
+
+Despite significant technological advances in information processing, storage, and
+retrieval, online dating has yet to optimally integrate machine learning for the
+user’s benefit. A typical ML task for online dating might be to predict the level of
+compatibility between two users from a given set of input data, thus predicting for
+example whether one user is likely to respond to another user’s message. Such a
+calculation would be based on both the recipient’s own message history and that
+
+15
+
+
+
+of other similar users as well as both users’ profile information (income, hobbies,
+and personality). Assessing the relative importance of these different features, and
+deciding how they need to be combined and weighed against each other to best
+predict the match is a task likely to be performed automatically by an ML algorithm.
+Predicting compatibility in this way is an ideal use for ML, as it is a task that
+cannot be reduced to simple rules, but depends on the interaction of many factors
+that can only be identified by extracting information from large amounts of data.
+Looking back at the fictitious users Alice and Bob from § 3.1 above, we see that
+Luna’s ML algorithm can be expected to make a prediction about whether Alice
+is going to be interested in Bob, and whether Bob would respond to a message
+from Alice. Successful predictions of compatibility will enable even more accurate
+future recommendations, and will also play into providing a more effective pricing
+mechanism in the messaging system.
+
+Recent developments of collaborative filtering algorithms extensions with external
+features, and Luna may implement Dr. Zhao’s algorithm to extend the technique
+of collaborative filtering (the most common recommender system technique) to the
+setting of online dating. In practice this means accounting for two ways in which
+online dating differs significantly from more typical recommender system settings.
+The first is that preference must be reciprocal; in Luna, both users have to like each
+other. (Such is not true in, for example, the area of movie recommendations.) The
+second is that there are certain external features which are vital; the recommender
+system needs to make sure that users are recommended only those matches which
+satisfy the bidirectional compatibility constraints of gender and sexual orientation.
+
+Building an ML model for Luna consists of a supervised machine learning task,
+since the model has to be trained based on which pairs of users have emerged as
+good or poor matches. The match between two users such as Alice and Bob can be
+measured in two ways:
+
+1. The degree of messaging activity, especially reciprocated activity, between the
+two users. This includes information like whether Alice sent an initial message
+to Bob and whether Bob responded to Alice’s message. Later, the measure of
+Alice and Bob’s compatibility can be improved by factoring in data such as
+the length of their resulting conversation, sentiment analysis of the conversa-
+tion, and indications of interactions outside Luna (e.g. through text messages,
+whether to chat or schedule a date).
+
+2. Feedback after a verified offline date. Compared to online messaging activities,
+feedback provided via the Luna app can offer much more accurate information
+on the level of compatibility, so that the ML model can be reinforced and
+updated.
+
+Taking the above factors into account, Luna may form a virtuous cycle between its
+token system and its ML model: the ML model helps to make the token system
+more efficient, determining the price of messages according to compatibility and
+the reward for providing post-date feedback; the token system in turn helps to
+contribute more and higher-quality data to further improve the ML model.
+
+The ML model will assign a higher match score to a pair of users who are predicted
+to be compatible in their tastes, and thus enjoy dates with each other. Initially
+
+16
+
+
+
+a baseline match will be determined solely by the personal profiles provided by
+users at sign-up. The selection and weight of different personal attributes will be
+underpinned by social psychology (e.g. the fact that people tend to date someone
+with a similar socioeconomic status). As more data on user behavior becomes
+available, the model will learn from it and constantly improve its predictions.
+
+4.1.1 ML Features
+
+In general, two types of data (features) will be used to help the ML model learn
+what constitutes a good match and how good matches differ from a bad ones, and
+therefore how to predict matches with a high probability of success:
+
+1. Personal profile and preference data provided by users, such as: income, edu-
+cation, body type, hobbies, the number and type of pictures provided, their
+preference for number of future children, and the text of their own personal
+description. If a user provides their social media handles, more data on their
+personality can be inferred based on their social media activity.
+
+2. The behavioral history of users on Luna, including: liking others’ profiles,
+sending messages to others, replying to others’ messages, and a user’s popu-
+larity based e.g. on number of messages received or the number of tokens users
+are willing to pay to send messages to them. An analysis of these behaviors
+can provide even better data than personal profiles can to deduce a user’s
+taste in potential partners and the user’s attractiveness to others.
+
+With both user profiles and behavior data as the input, and the level of compati-
+bility between two users as the output, the ML model will automatically learn the
+importance of these features and how to best combine them to predict compatibil-
+ity. The learning process can be implemented through different ML methods and
+optimization processes. Different ML methods, firstly those developed by Dr. Zhao,
+will be tested and evaluated before implementation.
+
+4.1.2 ML Model Validation
+
+In the first phase of the app launch we will optimize for a composite satisfaction
+metric which takes into account the following components:
+
+1. Prediction of the likelihood of a reply by a user to an initial message. In later
+versions the accuracy of this can be improved by weighting the answer with
+factors such as the length of the resulting conversation, or sentiment analysis
+applied to the conversation.
+
+2. Prediction of the likelihood of positive offline feedback, i.e. feedback obtained
+through the app after a verified in-person meeting.
+
+These measures ensure that users will have a higher compatibility rating with those
+users they themselves are likely to respond to, and with whom they are likely to
+enjoy in-person meetings and dates. It is important to us that every algorithm we
+deploy contributes to the success of our users on the platform. We are building an
+experimental framework for comparing the effect of various discovery and matching
+
+17
+
+
+
+algorithms, and will continue to assess their success strictly from a user success
+angle, taking into account the needs of various user personas.
+
+It is our strong belief that the mechanism to establish the popularity of the app
+and the success of Luna is, ultimately, long-term user satisfaction — any user who
+ceases to use the app not because of frustration with the messaging imbalance, but
+on the contrary because they have managed to find another user with whom to
+form a successful relationship, will help to encourage additional users in search of
+the same result.
+
+4.2 Centralization vs. Decentralization
+
+Current trends hail blockchain as a panacea; however, centralization remains the
+right choice for specific applications. Additionally, due to the immutability of
+blockchain and the unknown nature of the future of cryptography and code-breaking,
+it is irresponsible to publish any personal data on a blockchain. Luna users will
+therefore have control of their own private keys.
+
+Though private servers are a specific failure point for any leak or breach, there
+exist best practices to secure against attacks. In the blockchain world, privacy is
+an ever-active area of research, with many inconvenient limits. For instance, zero-
+knowledge proofs still rely on a trusted protocol wherein masterkeys are created
+and destroyed. However, once state-channels and lightning networks are known
+to be field-tested and invulnerable, Luna aims to implement these to further its
+decentralization ethos.
+
+In summary, in the initial app launch, user transactions and compatibility feed-
+back gathering should be decentralized, while the storage and processing of user-
+data will be centralised for security and optimization.
+
+4.3 Scalability
+
+It is well understood that current blockchain infrastructure is not scalable, in that
+there is a limit to the amount of total usage any blockchain can handle. As for all
+blockchain-based projects, scaling is a notable concern on Luna’s long-term tech-
+nical roadmap, as it may generate an existential risk. It needs to be noted that
+scalability is a key feature for consensus network platforms, and as such the pro-
+gression already present within the field is promising. QTUM’s design, which was
+built with scalability in mind, incorporates PoS consensus, higher TPS than e.g.
+Ethereum, Bitcoin-style UTXO, and lower transaction fees than comparable plat-
+forms. In addition to QTUM’s own design, numerous projects dedicated to the task
+of scalability, from sidechains to completely new consensus ideas. Considering this
+mass effort, it is anticipated that a solution will likely be forthcoming in the near
+future.
+
+However, in the case a scalable solution is not found to accommodate Luna’s
+growth, a backup strategy has been put into place by building the Luna platform
+in a network-agnostic manner. Should Luna approach mass adoption without a
+QTUM-compatible scaling solution in sight, it will be possible to rapidly switch
+the blockchain integration layer to use a private network which does compromise
+online scalability. Plans to future-proof the Luna platform to the maximum possible
+
+18
+
+
+
+extent are in place. This will also prove useful in the case that Ethereum ceases to
+be viable for any other unforeseeable reason.
+
+While Luna is currently built on QTUM, it is chain agnostic, and reserves the
+right to shift blockchains if the technology demands it. Should this be the case,
+users in possession of Star tokens will receive an equivalent number of Stars on the
+new chain.
+
+4.4 Network Effect
+
+In the Luna network, we expect a long tail degree distribution to occur, meaning
+that a relatively small number of users will attract most of the attention. Via our
+token mechanics these high-value users will be incentivized to spread the word and
+to become ‘cheerleaders’ of the Luna platform, which is a structural advantage in
+addressing the network effect. High-value users are key to generating a reputation
+for reliability and quality, and are significantly more effective in the spread of word-
+of-mouth awareness than lower-value users. As the only online dating app to date
+designed to selectively reward popular users, Luna anticipates little difficulty in at-
+tracting a large number of influential high-value users. In addition, Luna’s growth
+strategy aims to leverage the most well-connected individuals and their direct influ-
+encers (in line with the Barabasi paradox).
+
+19
+
+
+
+References
+[1] https://www.technologyreview.com/s/609091/first-evidence-that-online-dating-is-
+
+changing-the-nature-of-society/
+
+[2] https://www.forbes.com/sites/stevenbertoni/2017/08/31/tinder-hits-3-billion-
+valuation-after-match-group-converts-options
+
+[3] https://www.datingsitesreviews.com/article.php?story=new-report-on-dating-app-
+trends-reveals-some-surprises
+
+[4] http://www.businessinsider.com/online-dating-message-statistics-2013-7
+
+[5] http://www.pewresearch.org/fact-tank/2016/02/29/5-facts-about-online-dating/
+
+[6] http://www.businessofapps.com/data/tinder-statistics/
+
+[7] https://medium.com/@worstonlinedater/tinder-experiments-ii-guys-unless-you-are-
+really-hot-you-are-probably-better-off-not-wasting-your-2ddf370a6e9a
+
+[8] https://theblog.okcupid.com/your-looks-and-your-inbox-8715c0f1561e
+
+[9] http://jonmillward.com/blog/attraction-dating/cupid-on-trial-a-4-month-online-
+dating-experiment/
+
+[10] https://www.datingsitesreviews.com/article.php?story=women-enjoy-being-single-
+more-than-men--says-new-study
+
+[11] https://theblog.okcupid.com/a-womans-advantage-82d5074dde2d
+
+[12] https://mic.com/articles/110774/two-thirds-of-tinder-users-are-men-here-s-why
+
+[13] http://consumersresearch.org/consumer-survey-the-best-way-to-swipe-a-mate/
+
+[14] https://twitter.com/Aella_Girl/status/916069075393974274
+
+[15] https://www.yelp.com/biz/coffee-meets-bagel-san-francisco
+
+[16] https://verilymag.com/2015/10/feminist-online-dating-apps-bumble-tinder-hinge
+
+[17] https://www.theguardian.com/technology/shortcuts/2017/mar/08/from-raya-to-
+tinder-select-the-world-of-elite-dating-apps
+
+[18] https://blog.siftscience.com/2016/what-percentage-of-dating-profiles-are-fake/
+
+[19] http://vitalik.ca/general/2017/10/17/moe.html
+
+20
+
+https://www.technologyreview.com/s/609091/first-evidence-that-online-dating-is-changing-the-nature-of-society/
+https://www.technologyreview.com/s/609091/first-evidence-that-online-dating-is-changing-the-nature-of-society/
+https://www.forbes.com/sites/stevenbertoni/2017/08/31/tinder-hits-3-billion-valuation-after-match-group-converts-options
+https://www.forbes.com/sites/stevenbertoni/2017/08/31/tinder-hits-3-billion-valuation-after-match-group-converts-options
+https://www.datingsitesreviews.com/article.php?story=new-report-on-dating-app-trends-reveals-some-surprises
+https://www.datingsitesreviews.com/article.php?story=new-report-on-dating-app-trends-reveals-some-surprises
+http://www.businessinsider.com/online-dating-message-statistics-2013-7
+http://www.pewresearch.org/fact-tank/2016/02/29/5-facts-about-online-dating/
+http://www.businessofapps.com/data/tinder-statistics/
+https://medium.com/@worstonlinedater/tinder-experiments-ii-guys-unless-you-are-really-hot-you-are-probably-better-off-not-wasting-your-2ddf370a6e9a
+https://medium.com/@worstonlinedater/tinder-experiments-ii-guys-unless-you-are-really-hot-you-are-probably-better-off-not-wasting-your-2ddf370a6e9a
+https://theblog.okcupid.com/your-looks-and-your-inbox-8715c0f1561e
+http://jonmillward.com/blog/attraction-dating/cupid-on-trial-a-4-month-online-dating-experiment/
+http://jonmillward.com/blog/attraction-dating/cupid-on-trial-a-4-month-online-dating-experiment/
+https://www.datingsitesreviews.com/article.php?story=women-enjoy-being-single-more-than-men--says-new-study
+https://www.datingsitesreviews.com/article.php?story=women-enjoy-being-single-more-than-men--says-new-study
+https://theblog.okcupid.com/a-womans-advantage-82d5074dde2d
+https://mic.com/articles/110774/two-thirds-of-tinder-users-are-men-here-s-why
+http://consumersresearch.org/consumer-survey-the-best-way-to-swipe-a-mate/
+https://twitter.com/Aella_Girl/status/916069075393974274
+https://www.yelp.com/biz/coffee-meets-bagel-san-francisco
+https://verilymag.com/2015/10/feminist-online-dating-apps-bumble-tinder-hinge
+https://www.theguardian.com/technology/shortcuts/2017/mar/08/from-raya-to-tinder-select-the-world-of-elite-dating-apps
+https://www.theguardian.com/technology/shortcuts/2017/mar/08/from-raya-to-tinder-select-the-world-of-elite-dating-apps
+https://blog.siftscience.com/2016/what-percentage-of-dating-profiles-are-fake/
+http://vitalik.ca/general/2017/10/17/moe.html
+
+	Foreword
+	Introduction
+	Market Context and Problems
+	Luna's Strategy
+	Messaging
+	Receiving
+	Sending
+	Replying and Follow Up
+	Mutual Messaging
+
+	Data Processing
+	Sorting
+	Profiling
+	Identity Verification and Moderation
+	Meeting
+
+	Financial Model
+	User Goals
+	Approach and Revenue
+
+
+	Luna's Technology
+	Machine Learning
+	ML Features
+	ML Model Validation
+
+	Centralization vs. Decentralization
+	Scalability
+	Network Effect
+
+	References
+

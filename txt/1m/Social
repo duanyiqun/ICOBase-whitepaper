@@ -1,0 +1,1507 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sociall Whitepaper - v2.2
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Sociall: a secure and private decentralised social network for all 
+
+ 
+
+ 
+
+Whitepaper Version 2.2 
+
+June 2018 
+
+www.sociall.io 
+
+ 
+
+Working Document – Subject to Change 
+
+  
+
+
+
+   
+2 
+
+Table of Contents 
+
+Abstract ................................................................................................................................................... 3 
+Market ..................................................................................................................................................... 4 
+Functionality ........................................................................................................................................... 5 
+
+Wallet ................................................................................................................................................. 5 
+Features & Decentralisation ........................................................................................................... 5 
+Top Ups.......................................................................................................................................... 7 
+
+User Account ...................................................................................................................................... 8 
+Marketplace ........................................................................................................................................ 9 
+Instant Messaging ............................................................................................................................. 11 
+Mobile Applications ......................................................................................................................... 12 
+Community/Blog .............................................................................................................................. 12 
+Privacy .............................................................................................................................................. 13 
+Crowdfunding ................................................................................................................................... 13 
+Decentralisation & IPFS ................................................................................................................... 14 
+Ad-Platform ...................................................................................................................................... 15 
+Self-Governing ................................................................................................................................. 16 
+
+Technology Stack .................................................................................................................................. 17 
+Overview .......................................................................................................................................... 17 
+Frontend Application ........................................................................................................................ 17 
+API Server ........................................................................................................................................ 17 
+Authentication Server ....................................................................................................................... 18 
+Image Processing Micro-Service ...................................................................................................... 18 
+WebSockets Micro-Service .............................................................................................................. 18 
+
+Open-Source ......................................................................................................................................... 19 
+Bounties ............................................................................................................................................ 19 
+
+Security ................................................................................................................................................. 20 
+SCL ....................................................................................................................................................... 21 
+
+Details ............................................................................................................................................... 21 
+Source Code ..................................................................................................................................... 21 
+Exchanges ......................................................................................................................................... 22 
+
+Roadmap ............................................................................................................................................... 23 
+Q1 2018 ............................................................................................................................................ 23 
+Q2 2018 ............................................................................................................................................ 23 
+Q3 2018 ............................................................................................................................................ 23 
+Q4 2018 ............................................................................................................................................ 23 
+Q1 2019 ............................................................................................................................................ 23 
+Q2 2019 ............................................................................................................................................ 24 
+Q3 2019 ............................................................................................................................................ 24 
+Beyond.............................................................................................................................................. 24 
+
+Contact & Support ................................................................................................................................ 25 
+ 
+
+
+
+   
+3 
+
+Abstract 
+
+Almost 2.5 billion people on Earth use some form of social networking. Account data is 
+
+harvested and accessed by large corporations every day. Information about anyone is publicly 
+
+accessible due to user profile indexing from search engines. Mainstream social networks claim 
+
+ownership of all uploaded data and multimedia content, therefore waiving all rights over the 
+
+content. 
+
+Sociall is a new generation of networking. It is a secure and private decentralised social network 
+
+for all. Sociall encrypts all data and multimedia uploads and stores it securely all over the world, 
+
+making it completely decentralised. The platform is private and discourages search engines from 
+
+viewing user profiles or displaying them in search results. 
+
+Sociall does not claim ownership of any uploaded data or multimedia to the system. All 
+
+information belongs to the uploading user. 
+
+The platform utilises its own easy to use cryptocurrency called SCL. It is used to pay for all 
+
+goods and services rather than traditional money. Think of SCL as the native currency of the 
+
+platform instead of using multiple different currencies that usually come with conversion fees. 
+
+Sociall will supply all accounts with a decentralised wallet to securely store SCL and other 
+
+popular cryptocurrencies. All account wallets will exist within a series of smart contacts on the 
+
+Ethereum blockchain, making it completely decentralised and uncontrollable from anyone other 
+
+than the wallet’s creator. Adding SCL to an account will be a breeze as the wallet will have the 
+
+ability to convert many different forms of currency to SCL. 
+
+Sociall plans to move the entire platform to self-governing. This means that users on Sociall will 
+
+be able to assist with keeping the platform clean and safe by removing spam and offensive posts. 
+
+All users who contribute to this will be compensated in SCL. Eventually, the entire platform will 
+
+be run by the users instead of a centralised controlling entity. The users will even have the ability 
+
+to make updates and fix issues, thanks to open-source and pull-requests. 
+
+Sociall is giving the power back to the people. 
+
+
+
+   
+4 
+
+Market 
+
+Sociall will target two major markets: social and e-commerce. Both markets are multibillion-
+
+dollar industries that are currently controlled by large corporations. Sociall hopes to create a 
+
+decentralized social network paired with an online marketplace and much more. 
+
+Social media advertising spend is projected to reach more than $51 billion globally in 2018, with 
+
+this number reaching almost $77 billion by 20221. 
+
+E-commerce sales is expected to grow almost 12% in the next few years. Global retail 
+
+ecommerce sales will reach $1.915 trillion in 2016, accounting for 8.7% of total retail spending 
+
+worldwide. 71% of shoppers believe they will get a better deal online than in stores. 
+
+   
+
+ 
+ 
+ 
+ 
+ 
+
+                                                
+
+1 https://www.statista.com/outlook/220/100/social-media-advertising/worldwide 
+
+2 https://www.statista.com/statistics/278414/number-of-worldwide-social-network-users/ 
+
+3 https://www.statista.com/statistics/251666/number-of-digital-buyers-worldwide/ 
+
+Number of social media users worldwide from 2010-2021 (in billions) 2 Number of digital buyers worldwide from 2014-2021 (in billions) 3 
+
+
+
+   
+5 
+
+Functionality 
+
+Wallet 
+
+Sociall account wallets will be created through a decentralized smart-contract process where 
+
+there is no owning entity. 
+
+The setup entity, being Sociall, will not have control over any funds kept in a user’s account 
+
+wallet and will never be able to process any transactions on behalf of the user – making it 
+
+completely decentralized. 
+
+ 
+
+Sociall has plans to allow the storing and sending of other ERC20 based tokens in the near 
+
+future, along with also integrating Shapeshift for instant token-to-token trading inside the wallet. 
+
+Features & Decentralisation 
+
+The entire wallet will be built using a smart contract coded in Solidity on the Ethereum 
+
+blockchain. The smart contract will generate a user’s wallet and it will be stored in the database. 
+
+Since the wallet is generated from a smart contract, it will not have a private key, so Sociall will 
+
+not have to store private keys. Instead, the user will create a password that grants them access to 
+
+their wallet. Whenever a transaction requires signing (for a send), the user simply enters their 
+
+password and the smart contract checks if the user has access or not. A user password must first 
+
+be hashed and salted before sending to the smart-contract as it will be displayed publicly on the 
+
+blockchain. This is a far more decentralised solution than hosting and encrypting private keys 
+
+like a majority of exchange and application wallets. 
+
+Below is the flow for how a user can initiate a transaction and sign with their password. 
+
+Onboarding 
+process
+
+Prompt user to 
+create password to 
+
+access wallet
+
+Function returns 
+new wallet 
+
+address
+
+Sociall saves 
+wallet address in 
+DB for reference 
+
+only
+
+
+
+   
+6 
+
+ 
+
+Passwords must be treated like a private key. As Sociall will not be storing these passwords, if a 
+
+password is lost then access to the wallet will be lost forever. 
+
+All transactions will be paid in SCL, not ETH. No user account wallet will need to hold ETH to 
+
+make transactions/purchases. Sociall will hold an amount of ETH within the smart-contract to 
+
+pay for all transactions and will charge users a small amount of SCL (0.50%-1.10%, depending 
+
+on TXfees and Gwei prices) for the transaction.  
+
+All transaction prices will be dynamically calculated depending on the current SCL/ETH trading 
+
+pair price. For example; 
+
+Scenario 1: SCL/ETH trading pair goes up. The SCL transaction fee may be reduced as the 
+
+smart contract will be overcharging. 
+
+Scenario 2: SCL/ETH trading pair goes down. The SCL transaction fee may be increased as the 
+
+smart contract will be undercharging. 
+
+Scenario 3: SCL/ETH trading pair stays stable. The SCL transaction fee may stay the same or be 
+
+slightly adjusted according to market conditions. 
+
+Scenario 4: ETH average Gwei is increased due to a high-load network. The SCL transaction fee 
+
+may be increased as the smart contract will be undercharging. The SCL/ETH trading pair has no 
+
+effect on this scenario, although can play a part depending on market conditions. 
+
+An audit of the smart-contract will be completed by a reputable firm before pushing the code 
+
+live. Please refer to the Security section within this document for more information regarding 
+
+security and code audits. 
+
+User initiates 
+transaction
+
+User enters 
+password to 
+
+sign 
+transaction
+
+Password is 
+hashed and 
+
+salted
+
+Transaction 
+is signed, 
+
+smart-
+contract 
+
+takes % of 
+SCL as 
+TXfee
+
+SCL is sent 
+to address
+
+
+
+   
+7 
+
+Top Ups 
+
+Users on Sociall will be able to top up their account wallet with SCL by simply depositing 
+
+popular supported cryptocurrencies (such as BTC and ETH) and eventually fiat. The project will 
+
+utilize CoinPayments and Stripe for these future integrations. 
+
+This top-up process will consist of complex business logic in the background. A master wallet 
+
+consisting of SCL from the ad platform and marketplace fees will fulfil the order. 
+
+The proposed flow for topping up with BTC is below. A very similar flow will be utilized for fiat 
+
+depsoits, although a different API endpoint will be hit. 
+
+ 
+
+The final proposed flow is for attempting a top up with BTC (similar error flow for fiat) with not 
+
+enough SCL to execute the order existing within the master wallet. 
+
+ 
+
+SCL will be purchased from the master wallet at an inflated rate. The buy rate will be 
+
+approximately 5% higher than the consolidated exchange rate. 
+
+Sociall has plans to eventually implement a peer-to-peer buy/sell function for SCL directly from 
+
+the users account wallet to eliminate the need for a master wallet.  
+
+User 
+requests 
+SCL top 
+
+up in BTC
+
+API 
+checks if 
+enough 
+
+SCL exists 
+in master 
+
+wallet
+
+Enough 
+exists, API 
+
+requests 
+BTC 
+
+deposit 
+address
+
+Deposit 
+address is 
+generated 
+and sent to 
+
+user
+
+User 
+deposits 
+
+BTC
+
+SCL is 
+added to 
+
+user wallet
+
+User requests 
+SCL top up in 
+
+BTC
+
+API checks if 
+enough SCL 
+
+exists in master 
+wallet
+
+Not enough SCL 
+exists
+
+Error is displayed 
+to user
+
+
+
+   
+8 
+
+User Account 
+
+An account on Sociall can be set up in less than one minute. A user simply signs up with their 
+
+full name, email address and requested password. After the activation email is clicked, then the 
+
+final stage of onboarding begins. 
+
+Below are the steps for the onboarding process. 
+
+1. User enters basic details and accepts terms and conditions. 
+
+2. User clicks on verification email to confirm ownership of email address. 
+
+3. User is taken to the final onboarding screen where they select their interests from a 
+
+predefined list. 
+
+4. User is taken through a short-guided tour of the applications. 
+
+5. Onboarding process complete. 
+
+Once the onboarding is completed, the user may then browse the application. The user may then 
+
+also update their information from the account settings page. A temporary username is created 
+
+for them upon signup that consists of their full name and a random generated ID. A user may 
+
+update their username whenever they wish. Usernames are used to mention a user in a 
+
+post/comment, along with also being the gateway to their profile via a URL. 
+
+The URL structure for a user profile: https://sociall.io/u/[username-here] 
+
+URLs will not be publicly visitable. If a user does not have an account or is not logged in, they 
+
+will be redirected to the login/signup page before allowing to proceed to the requested user’s 
+
+profile for privacy reasons. 
+
+A SSO (single-sign-on) capabilities will be offered to third-party applications and websites that 
+
+would like to offer their users the ability to signup or login with their already existing Sociall 
+
+account.  
+
+
+
+   
+9 
+
+Marketplace 
+
+Sociall will allow the creation of “product posts” within the platform that represent goods or 
+
+services. Followers can see this post and purchase it directly with the SCL held in their account 
+
+wallet. 
+
+For example, if you wanted to sell your old laptop you could simply attach an image along with 
+
+meta data describing the item and price in SCL. Users will then be able to search multiple ways 
+
+within the marketplace for your uploaded post. 
+
+Once a user decides to purchase a marketplace item, they simply click on the “Buy” button 
+
+attached to the post. A password prompt will be displayed to the user for them to sign the 
+
+transaction. The receiving user will see a notification stating that a user has purchased their item. 
+
+The two users can continue to discuss finer details within a dedicated live chat. 
+
+All product posts can be geo-tagged so that users on Sociall can search for items within their 
+
+location that are available for local pickup if they wish. 
+
+The marketplace will have a small flat fee of 1% in SCL and will be taken from the seller after 
+
+the transaction is complete. 
+
+The marketplace will have strict rules against illegal goods and services. All of which will be laid 
+
+out in the terms and conditions of the website. All product posts that violate these terms will be 
+
+removed from the platform to ensure a safe and compliant environment. 
+
+Escrow based services and systems will be integrated in the near future to protect both buyers 
+
+and sellers. This will consist of a holding account where SCL will be stored until the buyer 
+
+receives the item and confirms. At the beginning, Sociall support staff will act as the mediators 
+
+within the transaction. Once the platform gets closer to a full self-governing model, then the 
+
+mediator role will be moved to the moderations of the platform for a further decentralised peer-
+
+to-peer marketplace experience. 
+
+  
+
+
+
+   
+10 
+
+Senario 1. An example of the proposed flow for when an item is purchased successfully, and the 
+
+item is correct: 
+
+ 
+
+Scenario 2. An example of the proposed flow for when an item is purchased, and the item is not 
+
+confirmed or is deemed to be faulty and rules the dispute in favour of the buyer. 
+
+ 
+
+Scenario 3. An example of the proposed flow for when an item is purchased, and the item is not 
+
+confirmed or is deemed to be faulty and rules the dispute in favour of the buyer. 
+
+ 
+
+ 
+
+User 
+purchases 
+
+item
+
+SCL is sent 
+to escrow 
+holding 
+account
+
+Seller posts 
+item
+
+Buyer 
+receives item 
+and confirms
+
+SCL is 
+released from 
+
+holding 
+wallet to 
+
+seller
+
+User 
+purchases 
+
+item
+
+SCL is 
+sent to 
+escrow 
+holding 
+wallet
+
+Seller 
+posts item
+
+Buyer 
+receives 
+item and 
+reports as 
+
+faulty
+
+Sociall 
+opens a 
+dispute
+
+Dispute is 
+ruled in 
+
+favour of 
+buyer
+
+SCL is 
+released 
+
+from 
+holding 
+
+and 
+returned to 
+
+buyer
+
+User 
+purchases 
+
+item
+
+SCL is 
+sent to 
+escrow 
+holding 
+wallet
+
+Seller 
+posts item
+
+Buyer 
+receives 
+item and 
+reports as 
+
+faulty
+
+Sociall 
+opens a 
+dispute
+
+Dispute is 
+ruled in 
+
+favour of 
+seller
+
+SCL is 
+released 
+
+from 
+holding 
+
+and sent to 
+seller
+
+
+
+   
+11 
+
+Instant Messaging 
+
+Instant messages are the most used feature within a social networking platform, so Sociall hopes 
+
+to make it more enjoyable for its users. 
+
+Messages within Sociall will mainly be user-to-user, with the ability to have dedicated messaging 
+
+groups for Groups and Events. 
+
+Messages will be able to consist of multimedia (images), emojis and eventually also sending of 
+
+SCL. 
+
+Messaging on Sociall will utilise WebSockets functionality with the help of the SignalR library. 
+
+Please refer to the Technology Stack section of this document for more information regarding the 
+
+technology behind this. 
+
+Sociall will soon integrate end-to-end message encryption. This ensures that only the sending 
+
+and receiving users can read what is sent, and nobody in between, not even Sociall. The database 
+
+will store encrypted messages as cypher text that is unreadable and impossible to decrypt without 
+
+access to the unique key pairs. 
+
+Here is basic example of how end-to-end message encryption will work on Sociall. Please refer 
+
+to the Roadmap section of this document for an estimated implementation date. 
+
+ 
+
+Messages on Sociall will eventually consist of more advanced functions for interaction. This 
+
+includes sending SCL to a one-on-one chat, sharing recorded audio, and much more. 
+
+ 
+
+User A 
+and User 
+B share a 
+
+unique key 
+pair
+
+User A 
+messages 
+User B
+
+Message is 
+encrypted 
+
+via key 
+pair
+
+Cypher 
+text is 
+
+stored in 
+database
+
+User B 
+recieves 
+message
+
+Message 
+derypted 
+via key 
+
+pair
+
+Readable 
+message 
+displayed 
+to User B
+
+
+
+   
+12 
+
+Mobile Applications 
+
+Sociall is currently concentrating on the first release of the web platform. Once that is complete 
+
+and all issues resolved, then the team will begin working on semi-hybrid mobile applications for 
+
+both iOS and Android. 
+
+Both applications will consist of all features within the web version and will still be able to 
+
+create transactions and access the account wallet. 
+
+iOS and Android apps will then be moved to full native applications to ensure better usability, 
+
+stability and reliable faster native SDK calls. After the native migration, advanced integrations 
+
+such as a VPN and Tor will be added, to further enhance the privacy aspect of the platform. 
+
+The web version of the application will be accessible via mobile devices as it consists of a full 
+
+responsive design. This allows Sociall users to still use the platform on the go while the mobile 
+
+applications are under development. 
+
+Please refer to the roadmap section of this document for further information and release dates. 
+
+ 
+
+Community/Blog 
+
+The Community section on Sociall is a way for all users on the platform to discover new 
+
+accounts to follow and to engage with the community. 
+
+Consider the Community section to be more of an open public blog where content rich posts can 
+
+be seen by anyone on Sociall and beyond. It is where you can create a post with images, links, 
+
+embedded multimedia (and more), and to have other users on Sociall read through it. The 
+
+Community section will have a feature-rich WYSIWYG editor to make post creation a breeze. 
+
+The Community section is the only part of Sociall that is visible to search engines. Community 
+
+posts will be indexed by search engines and it is the only section within the application that can 
+
+be visited by users who are not registered or logged in. 
+
+ 
+
+
+
+   
+13 
+
+Privacy 
+
+Sociall is a private social network that does not allow search engines to index user profiles. The 
+
+platform will soon have strict (yet simple) privacy settings for users to control who and who 
+
+cannot see their profile and personal data. 
+
+On initial launch, all profiles will be visible to other users on Sociall. In future releases (see 
+
+roadmap), users will have the ability the make their profile and posts private to those who are not 
+
+following them. Account settings will also feature a way to make all following requests manually 
+
+approvable instead of having each request automatically approved. 
+
+Here is a list of the simple settings that will exist. 
+
+- Profile Visibility 
+
+o Public. Profile and posts visible to all users on Sociall no matter who it is (besides 
+
+blocked users). 
+
+o Private. Profile and posts only visible to users who follow you. 
+
+- Following Approval 
+
+o On. All following requests must be manually approved. 
+
+o Off. All following requests are automatically approved. 
+
+ 
+
+Crowdfunding 
+
+Crowdfunding capabilities will soon be added to Sociall. They do not represent an ICO nor do 
+
+they integrate with any foreign or new token. Crowdfunds on Sociall simply represent a personal 
+
+cause such as an individual user trying to raise funds for a charity, or a family trying to raise 
+
+money for medical bills. 
+
+All crowdfunds use SCL and set a funding goal, deadline, images and other related metadata. 
+
+Sociall will take a small fee of 1% of all raised SCL. 
+
+ 
+
+
+
+   
+14 
+
+Decentralisation & IPFS 
+
+All data and multimedia uploads are stored within the encrypted decentralized storage solution 
+
+that is built and maintained by Sociall. This system integrates with a hosted database that utilizes 
+
+MongoDB sharding for further decentralisation of storage. 
+
+1. Image is sent from the client (website) up to server. 
+
+2. Image is renamed, encrypted and sent to the cloud for resizing and decryption keys are 
+
+stored inside the decentralised database solution. 
+
+3. Micro-service picks up queued image, decrypts it, resizes to 3 different sizes (if possible), 
+
+encrypts the content again and stores in a permanent store location. The image is resized 
+
+to multiple different dimensions for different display scenarios on the website. 
+
+4. The encrypted images are stored in the cloud. Since they are encrypted, the cloud cannot 
+
+access the raw data. 
+
+5. When the client (website) requests an image, the encrypted data is retrieved from the 
+
+cloud, decrypted on Sociall’s servers via the stored decryption keys, and delivered to the 
+
+client. 
+
+The above is used as a temporary solution as it is not an ideal method for a blockchain based 
+
+application. The team is already working on a solution that utilizes IPFS, a peer-to-peer 
+
+hypermedia protocol.  
+
+IPFS is a true distributed protocol that allows us to further decentralise Sociall’s storage solution. 
+
+Sociall plans on moving multimedia uploads and data storage to IPFS by 2019. The below 
+
+proposed flow is how this will be implemented successfully. The same flow will be used with 
+
+data objects too, although they will be JSON documents instead of multimedia objects (images). 
+
+  
+
+Image is 
+sent to 
+
+server for 
+uploading
+
+Server 
+processes 
+
+image
+
+Server 
+utilises 
+
+IPFS and 
+uploads
+
+IPFS 
+returns 
+unique 
+
+reference 
+hash
+
+Hash is 
+saved in 
+DB for 
+
+reference
+
+Hash is 
+used on 
+client to 
+display 
+image
+
+
+
+   
+15 
+
+Ad-Platform 
+
+The ad-platform on Sociall will consist of a semi-automatic self-serving process. Any user with a 
+
+Sociall account and a SCL balance above 0 can create and submit an ad campaign through the 
+
+platform. 
+
+All submitted campaigns will manually be revived by Sociall support staff before going live on 
+
+the network to ensure quality and compliance. As per all other functions on Sociall, this process 
+
+will eventually be moved to a self-governing model where moderators on the platform can 
+
+approve the ads. 
+
+All add fees will be paid in SCL and will be based on CPI (cost-per-impression). Basic metrics 
+
+will be displayed to the ad creator in the “Ad Manager” section, such as number of impressions, 
+
+performing interests, date/time of impressions and much more.  
+
+Ads on Sociall will sit within the news feed on different sections. Different areas will have 
+
+different pricing depending on availability and visibility. New sections may be added in the 
+
+future depending on planned features that are not within the roadmap. 
+
+Available sections include: 
+
+- Personal news feed 
+
+- Community section 
+
+- Right widget section (site-wide) 
+
+- Marketplace feed 
+
+All ads on Sociall will be formatted in a strict display manner. This means that ads will have a 
+
+short title, description, link and display image. Display image dimensions will depend on the 
+
+section that the ad is optimised for. Ads will be static, and no animations are allowed. This is to 
+
+ensure that the platform abides to the styling guidelines with nothing looking out of the ordinary.  
+
+
+
+   
+16 
+
+Self-Governing 
+
+Sociall is slowly moving the entire platform to self-governing. This means that users on Sociall 
+
+will be able to assist with keeping the platform clean and safe by removing spam and offensive 
+
+posts. 
+
+This “self-governing” feature will give the power back to the people instead of having all power 
+
+sit with the owning entity. 
+
+For example, mainstream social networks often remove posts promoting free speech or a strong 
+
+opinion regarding a certain topic. On Sociall, it’s the appointed moderators (who are not staff, 
+
+they are everyday people and users of Sociall) who decide if the post really requires deletion or 
+
+not. It’s giving the power back to the people and offering true decentralisation. 
+
+Example of the flow for an inappropriate post: 
+
+1. A particular post on Sociall is flagged by multiple users. 
+
+2. Post is displayed to moderators on Sociall for their decision. 
+
+3. 9/10 moderators deem post to be in violation of the sites terms. 
+
+4. Post is removed permanently from the database. 
+
+5. The 9 moderators are rewarded in SCL for their services. 
+
+Example of the flow for an accepted post on the platform: 
+
+1. A particular post on Sociall is flagged by multiple users. 
+
+2. Post is displayed to moderators on Sociall for their decision. 
+
+3. 9/10 moderators deem post to be within the terms and acceptable. 
+
+4. Post is then whitelisted and continues to be displayed. 
+
+5. The 9 moderators are rewarded in SCL for their services. 
+
+Users on Sociall are granted moderator privileges manually if they have a strong track record and 
+
+do not break any rules on the platform. At first, Sociall support staff will reach out to users on the 
+
+platform to see if they would like these privileges. Eventually, this role will be handed over to 
+
+already existing moderators on Sociall to further enhance the self-governing aspect and 
+
+decentralised experience on the platform. 
+
+
+
+   
+17 
+
+Technology Stack 
+
+Overview 
+
+Sociall has five applications. All applications and services run as a consolidated group to ensure 
+
+the speed and functionality. Each application is hosted individually to make sure that the 
+
+application can continue to run even if a singular service goes down. 
+
+Here is the list of all five applications that Sociall is currently running. 
+
+1. Frontend application 
+
+2. API server 
+
+3. Authentication server 
+
+4. Image processing micro-service 
+
+5. WebSockets micro-service 
+
+More micro-services will be created often to keep intense services away from the main API 
+
+server. 
+
+Frontend Application 
+
+The frontend application is developed with the most recent version of Angular. It is served via a 
+
+simple NodeJS server running ExpressJS. It sits within a complex docker image on a Linux 
+
+server. It utilises popular packages and frameworks such as NGRX and RXJS. The frontend uses 
+
+OpenID standards for authentication and communication with the Authentication server. 
+
+API Server 
+
+The Sociall API server runs on the most recent version of .NET Core. It delivers all information 
+
+from the database to the frontend application in a readable manner. It is a RESTful API service, 
+
+meaning that it’s based on representational state transfer technology. It also communicates with 
+
+all services within the Sociall ecosystem, such as the image processing micro-service and the 
+
+identity server.  
+
+ 
+
+
+
+   
+18 
+
+Authentication Server 
+
+The authentication server runs on the open-source IdentityServer. It has been slightly modified to 
+
+use the most recent version of .NET Core and to adapt to the MongoDB decentralised solution. 
+
+The authentication server is API compatible and must be for use within the frontend project. The 
+
+server issues refreshable JWTs (JSON Web Tokens) to the client for it to communicate with the 
+
+API server. The API server then checks the JWT against the authentication server to verify its 
+
+identity. 
+
+Image Processing Micro-Service 
+
+A micro-service is used to process all image uploads. This is required to compress and resize the 
+
+image to multiple different dimensions for different screensizes and placements within the 
+
+application. This is run as a separately hosted micro-service to ensure that it does not affect any 
+
+other areas of the application, since image compression equals high CPU usage. This service is 
+
+written in the most recent version of .NET Core. 
+
+WebSockets Micro-Service 
+
+WebSockets is a protocol for full-duplex communication via the HTTP protocol. This grants an 
+
+always-open connection between the server and the client. It allows a real-time connection for 
+
+Sociall’s instant messaging functionality. Sockets is a more advanced solution than traditional 
+
+API polling due to its constant server connection and lower bandwidth usage that leads to real-
+
+time client-side updates. Messages are sent to the API server for storing within the database and 
+
+at the same time synced to the sockets micro-service so that the client experiences a real-time 
+
+conversation. The sockets micro-service is built with .Net Core and utilises the open-source 
+
+SignalR library. 
+
+  
+
+
+
+   
+19 
+
+Open-Source 
+
+A majority of Sociall’s projects will be moved to open-source just after mid 2018. This includes 
+
+the API server, frontend project, and all micro-services (see Technology Stack section). 
+
+The project may eventually open some repositories up to pull-requests, although this is yet to be 
+
+confirmed. Outside developers will be able to contribute to the development of Sociall by 
+
+creating pull-requests on the public repos. If the Sociall development team reviews the request to 
+
+be of benefit to the platform, then it will be approved. These participants will not be awarded in 
+
+SCL, but instead be mentioned in the credits section on Sociall. 
+
+The identity authentication server may be partially open-sourced in the future, although it has 
+
+been advised against by the project’s security firm. 
+
+Open-sourcing a majority of Sociall’s systems displays transparency to the community. 
+
+All code repositories will be available via Sociall’s GitHub Profile - https://github.com/sociall-io 
+
+ 
+
+Bounties 
+
+The public will be encouraged to run tests on the project’s available code to find flaws in the 
+
+security, design and all other aspects. This opens to door to freelance security experts, 
+
+developers, designers and other whitehat IT experts to audit code and report issues to the lead 
+
+developers. 
+
+Bounties will be offered to findings that the support team deems as an error or bug. All finds will 
+
+be assessed manually and individually, and the payout will depend on the severity of the issue. 
+
+All finds will be paid in SCL to a user’s account wallet on Sociall. These members may also get 
+
+their names mentioned in the credits section on the platform. 
+
+ 
+
+  
+
+
+
+   
+20 
+
+Security 
+
+Of course, the most important aspect of any social networking platform is the security of its data 
+
+and authentication process. This is why Sociall is using a reputable open-source project called 
+
+IdentityServer to handle all authentication of the application. 
+
+Sociall is using a reputable third-party security firm to run audits, penetration testing, and much 
+
+more over all servers and applications that will be developed. This ensures that there are no 
+
+security vulnerabilities within Sociall’s code or development flows. A public report for this will 
+
+be available after the audits are complete. 
+
+Sociall has five applications (as per the Technology Stack section). All five will be tested to 
+
+ensure that the application is secure with no vulnerabilities. New audits and tests will be 
+
+conducted each time a new function is pushed live to the platform. 
+
+DCORP is developing and auditing the smart-contract wallet. Hosho will complete the final audit 
+
+of the code and smart contract structure before pushing it live to the blockchain. Since all wallets 
+
+exist within a smart contract on the blockchain, Sociall does not store any private keys or 
+
+passwords in the database. This makes hacking account wallets virtually impossible if the user 
+
+enters a sophisticated password. Sociall will enforce strict password criteria when the user sets 
+
+up their wallet for the first time. 
+
+All code audit reports will be publicly accessible via the project’s GitHub profile. 
+
+  
+
+
+
+   
+21 
+
+SCL 
+
+Details 
+
+The platform utilises its own easy-to-use cryptocurrency, called SCL. It is used to pay for all 
+
+goods and services rather than traditional money. Think of SCL as the native currency of the 
+
+platform instead of using multiple different currencies that usually come with conversion fees. 
+
+SCL is an ERC20 based token on the Ethereum blockchain. 
+
+Name Sociall 
+Code SCL 
+Address 0xd7631787b4dcc87b1254cfd1e5ce48e96823dee8 
+Total supply 16,714,019.66 
+Circulating supply 16,714,019.66 
+Emission rate No new coins will ever be created 
+Role of token Buy goods, services and ad spaces on Sociall 
+
+Due to the strict nature of smart contracts and project set up, no more SCL can ever be minted. 
+
+The circulating supply may slightly differ from the total supply for many reasons such as lost 
+
+tokens, locked accounts, lost private keys, and much more. This number cannot be effectively 
+
+determined, hence why the circulating supply has been listed the same as the total supply. 
+
+SCL can be stored in any ERC20 compatible wallet. 
+
+ 
+
+Source Code 
+
+The source code for SCL can be found on Etherscan. It is a compliant ERC20 contract and was 
+
+developed by Frank Bonnet. 
+
+https://etherscan.io/address/0xd7631787b4dcc87b1254cfd1e5ce48e96823dee8#code 
+
+ 
+
+
+
+   
+22 
+
+ 
+
+Exchanges 
+
+Having SCL listed on multiple exchanges is important for the liquidity and volume of the token. 
+
+The Sociall support team is constantly reaching out to large reputable exchanges and upcoming 
+
+exchanges to have SCL listed there. 
+
+The team hopes that once Sociall is out of beta and in to a public release that exchanges will see 
+
+potential in both the token and project. 
+
+SCL is currently publicly tradeable on the following exchanges. 
+
+HitBTC - https://hitbtc.com/exchange/SCL-to-BTC 
+
+Bancor - https://www.bancor.network/communities/5aead51570a04eaf69e59a88/currency 
+
+Cryptopia - https://www.cryptopia.co.nz/Exchange/?market=SCL_BTC 
+
+YoBit - https://yobit.net/en/trade/SCL/BTC 
+
+CoinExchange.io - https://www.coinexchange.io/market/SCL/BTC 
+
+Mercatox - https://mercatox.com/exchange/SCL/BTC 
+
+EtherDelta - https://etherdelta.com/#SCL-ETH 
+
+IDEX - https://idex.market/eth/scl 
+
+  
+
+
+
+   
+23 
+
+Roadmap 
+
+Below is the projects roadmap over the next year and a half. All dates and scope are subject to 
+
+change. Many variables can affect the dates specified such as revenue, priority, team resources 
+
+and size, and much more. 
+
+Q1 2018 
+
+V2.0b initial closed beta launch. Invite only access to the platform. More invites sent out 
+
+frequently as the platform becomes more stable and bug-free. Bug fixes, optimisations, and 
+
+micro-features continuously pushed to the closed beta. 
+
+Q2 2018 
+
+Preparing for open beta. Further testing and bug fixing of the closed beta. More invites sent out 
+
+to the public each week. Security audit to be completed on all code and the authentication flow to 
+
+remove any found vulnerabilities. Expanding the development team. 
+
+Q3 2018 
+
+Opening the floodgates and moving the platform to an open beta in July. Releasing the Facebook 
+
+migration tool. Releasing account deleting and data exporting. Further bug fixes and 
+
+optimisations. Taking all code repositories open-source. Post sharing capabilities. Releasing the 
+
+Community section. Adding better profile privacy settings. Building a talented in-house 
+
+marketing team. 
+
+Q4 2018 
+
+Decentralised wallet integration. Users can store/receive/send SCL securely. Starting a security 
+
+audit on the wallet feature before shipping live. Adding optional 2FA. Adding the Events and 
+
+Groups sections for public and private use. Adding the marketplace to Sociall where users can 
+
+create product posts and make purchases. Send SCL user-to-user via instant message. 
+
+Q1 2019 
+
+Allowing SCL top-ups inside the wallet with fiat. Adding more micro-features. Multilingual 
+
+capabilities. Concentrating mainly on English, Spanish, Japanese, Chinese, Korean and Hindi on 
+
+
+
+   
+24 
+
+first release, with many more to come. First release of self-governing capabilities. Adding poll 
+
+posts. Planning IPFS migration. 
+
+Q2 2019 
+
+Crowdfunding capabilities and posts to raise SCL for a specific goal or purpose. Release of iOS 
+
+and Android applications. Migrating all data and multimedia uploads to IPFS. Release of the Ad 
+
+Platform. Further language support. Business/Company/Organisation pages. 
+
+Q3 2019 
+
+End-to-end message encryption for secret chats user-to-user. Open API for third party single 
+
+sign-on capabilities and integrations into foreign websites and applications. Giphy support in 
+
+comments, messages and posts. Integrating Civic to verify identity and receive "verified" badge. 
+
+Beyond 
+
+There are many more features that the team has planned for the project. Sociall listens to the 
+
+voice of the community and would like to hear your thoughts on future integrations, additions, 
+
+features and more. Contact us at info@sociall.io if you'd like to suggest a feature or idea. 
+
+  
+
+
+
+   
+25 
+
+Contact & Support 
+
+If you have any questions about Sociall, the team, technology or anything in between, please do 
+
+not hesitate to reach out to us via any channel listed below. Sociall values the communities 
+
+feedback and consider all requests. 
+
+Website: https://sociall.io 
+
+Email: info@sociall.io 
+
+Medium/Blog: https://medium.com/@sociall.io/ 
+
+Facebook: https://www.facebook.com/sociall.io/ 
+
+Twitter: https://twitter.com/sociall_io 
+
+Instagram: https://www.instagram.com/sociall.io/ 
+
+Reddit: https://www.reddit.com/r/sociall/ 
+
+Telegram: https://t.me/sociall.io 
+
+YouTube: https://www.youtube.com/c/sociall-io 
+
+BitcoinTalk: https://bitcointalk.org/index.php?topic=2100970 
+
+GitHub: https://github.com/sociall-io 
+
+ 
+
+ 
+
+ 
+
+

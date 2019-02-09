@@ -1,0 +1,1006 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Winding Tree 
+
+Travel Distribution Without Intermediaries 
+
+Draft White Paper (FOR REVIEW; COMMENTS ARE NOW CLOSED) 
+
+Discussion: https://www.reddit.com/r/windingtree/ 
+
+windingtree.com​ (​GitHub​, ​Slack​) 
+
+Abstract 
+
+The travel industry is notoriously out of date in terms of technology adoption. Many travel 
+
+companies still rely on fax machines and phones as main communication methods, others 
+
+are struggling to connect to data sources to power their sales. This problem is especially 
+
+acute for travel startups, one of the main sources of innovation. 
+
+In this paper, we're identifying the root cause of these problems and proposing a solution 
+
+to it that has been made possible with the invention of the blockchain: a decentralized 
+
+B2B marketplace for travel. 
+
+Root Cause: Travel is an Oligopolistic Market 
+
+There are just five companies in the travel industry that control the entire market. The 
+
+two largest OTAs (Online Travel Agencies), Priceline and Expedia, control ​95% of OTA 
+
+market in the US​. The top three GDSs (Global Distribution Systems), Amadeus, Sabre and 
+
+Travelport, distributors of airline inventory, have 99% combined ​market​ ​share​ in 
+
+non-direct inventory. 
+
+http://windingtree.com/
+https://github.com/windingtree
+http://slack.windingtree.com/
+http://www.nasdaq.com/article/why-are-the-regulatory-bodies-stepping-up-to-curb-the-growing-influence-of-otas-and-what-might-be-the-implications-cm812584
+http://www.nasdaq.com/article/why-are-the-regulatory-bodies-stepping-up-to-curb-the-growing-influence-of-otas-and-what-might-be-the-implications-cm812584
+http://www.travelmarketreport.com/articles/GDS-Report-Amadeus-Travelport-See-Gains-in-Q3
+http://www.tnooz.com/article/travelport-announces-ipo-aiming-raise-480m/
+
+
+In this paper, we'll make a few generalizations because it's not our goal to dissect the 
+
+problems we're describing, but rather to give a high-level overview of them. Also, for the 
+
+sake of simplicity, we'll call the above-mentioned five companies "the intermediaries". 
+
+Because there are only five intermediaries, they lack the incentive to innovate, e.g. some 
+
+of these companies still use ​mainframe computers​ and software written decades ago. 
+
+Another problem is that these companies use their position on the market to ​extract rent​, 
+
+e.g. ​US Airways VS Sabre​. They are accused of ​overcharging their customers​ and 
+
+employing other ​dubious tactics​. 
+
+What does the status quo mean for stakeholders in these markets and ​for travelers​? 
+
+For a boutique hotel, for example, it is extremely hard to distribute their inventory. They 
+
+have to negotiate a contract to do so, while the intermediaries add their commission fee, 
+
+usually 10-25%, very often forcing the hotel into a rate-parity agreement. That is why you 
+
+see major hotel chains heavily advertising ​direct bookings​ by providing additional 
+
+amenities, but not a better price. 
+
+On the other hand, a new travel startup will find it very hard to obtain data from the 
+
+intermediaries. Negotiations are lengthy and integrations slow. In the vast majority of 
+
+cases, the intermediaries simply dismiss the request from new companies with no volume, 
+
+the case for every new startup 
+
+http://www.airlineinformation.org/opinion/ancillary-merchandising/1048-ai-editorial-airline-tech-issues-is-mainframe-legacy-solely-responsible.html
+http://www.investopedia.com/terms/r/rentseeking.asp
+http://www.tnooz.com/article/sabre-us-airways-american-airlines-gds-antitrust-lawsuit/
+http://www.forbes.com/sites/peterjreilly/2011/11/17/is-expedia-stealing-from-its-customers/#277d83046450
+http://www.geekwire.com/2016/hotel-operator-accuses-expedia-stealing-customers-misleading-ads-brazen-bait-switch/
+http://www.benedelman.org/publications/ota-bias-12jul2017.pdf
+https://www.trefis.com/stock/pcln/articles/411205/can-big-hotel-chains-really-manage-to-cut-out-the-ota-middleman-by-offering-incentives-to-direct-hotel-bookers/2017-06-20
+
+
+ 
+
+ 
+
+ 
+
+   
+
+
+
+We have ​researched these problems extensively​ and many industry professionals agree 
+
+with us that if there was real competition between the intermediaries, none of these 
+
+problems would exist. 
+
+The following illustration of how the travel ecosystem looks today is taken from William El 
+
+Kaim’s article titled ​The Coming Fourth Digital Revolution in the Travel Ecosystem​. We 
+
+present it here with slight modifications. 
+
+ 
+
+https://www.linkedin.com/pulse/travel-industrys-invisible-battle-maksim-izmaylov
+https://skift.com/2015/05/04/the-coming-fourth-digital-revolution-in-the-travel-ecosystem/
+
+
+ 
+
+ 
+
+   
+
+
+
+Solution: Blockchain-Enabled B2B Travel 
+
+Marketplace 
+
+The solution to the problems is a platform with a few simple rules for data exchange 
+
+between suppliers and buyers of travel. 
+
+The project we've been working on for the past few months is called ​Winding Tree​ and it 
+
+has the following features that aim to address current issues and enable an 
+
+unprecedented surge of innovation in the travel industry. 
+
+Here are some of the key features of the platform. Please note that we use Ethereum to 
+
+build the MVP (minimum viable product), but we might consider changing to another 
+
+public permissionless blockchain. 
+
+No Booking Fees 
+
+We believe that booking fees are a business model of the past . Winding Tree will not be 1
+
+charging suppliers any distribution fees. Regarding transaction fees, Winding Tree will 
+
+only charge a minuscule fee to incentivize miners to give computational power to the 
+
+network. These fees will be automatically calculated by the blockchain at the time of 
+
+transaction and will have no correlation with the total booking amount. 
+
+Suppliers will have the option to set a default referral commission if they wish to do so. If a 
+
+referral fee is set, any individual who refers a customer to the supplier will automatically 
+
+receive the referral amount set by the hotel – if they voluntarily decide to set one. Hotels 
+
+can also set up individual referral rates for different entities if they wish to do so. 
+
+1 OTA commission fees are not pure rent, part of their fee goes towards marketing. The problem is that the 
+marketing message in this case is in the hands of one company. At Winding Tree our goal is to allow many 
+companies to compete using different marketing strategies and messages. 
+
+http://windingtree.com/
+
+
+No Downtime 
+
+Winding Tree will be deployed on one (or several) of the public blockchain, which 
+
+guarantees its 100% uptime. 
+
+Near-real-time Transactions 
+
+Winding Tree is a fully-automated solution, with integrations directly with reservation 
+
+systems of travel suppliers. Transactions on our platform happen within a few seconds. 
+
+This time is determined by the time needed for the blockchain to mine a block. 
+
+Currently, blockchains are slower than other databases. At Winding Tree one of our 
+
+development goals is to build a state channel on top of a public blockchain in order for 
+
+participants of the network to make multiple thousands of transactions per second, which 
+
+the travel industry requires. 
+
+Bundling 
+
+We understand that travel is all about bundling. Whenever you book a trip, it’s not just a 
+
+flight or a hotel room, it’s usually a combination of multiple different segments. 
+
+With Winding Tree, bundling will be extremely simple. Whether you have a pre-existing 
+
+relationship with a provider of a service that complements yours, or whether you’d like to 
+
+establish one, our platform will help you do it in the most streamlined way, given that that 
+
+provider also uses Winding Tree. 
+
+Open Collaboration 
+
+Winding Tree code will be open-sourced and completely transparent for anyone to study 
+
+and propose changes. It's one of the first open-source projects in the travel space. 
+
+
+
+More importantly, the platform will be owned by the community and participants of the 
+
+marketplace will be able to create and vote on proposals for changing the marketplace 
+
+code by using the tools for governance of the platform that we’re currently building. 
+
+Focus on Developer Experience 
+
+In the next five years all travel firms will have to become software companies to be able to 
+
+adapt to the rapidly changing technological landscape. The rest will be obliterated from 
+
+the market just as Blackberry was made obsolete by the iPhone. 
+
+Ten years ago it was enough for a travel agency to own a phone and a notebook, but now 
+
+they have to be active on social media, understand online advertising, etc. Both suppliers 
+
+and sellers of travel will have to embrace the new reality driven by technology, that is why 
+
+our platform is built by engineers for engineers because labor cost is the top expense on a 
+
+P&L of any software company and working with legacy systems slows down software 
+
+development tremendously. 
+
+Bank-Level Security 
+
+Security of the data transacted on our marketplace is our top-priority. We use public-key 
+
+cryptography to ensure that no one but the parties immediately involved in the 
+
+transaction can see its details. 
+
+Open Consensus Mechanism 
+
+One of the most important aspects of Winding Tree is that it is a public decentralized 
+
+computing platform with the open consensus model, as opposed to the consortium model. 
+
+We are convinced that only permissionless architecture, where anyone could freely 
+
+participate in the network, will solve the problems we’ve described above. 
+
+Consortium consensus will inevitably lead to censorship. Its members will be deciding who 
+
+can or can’t access the platform, and the mere need for that process will slow the advance 
+
+
+
+of such platforms drastically. It’s worth mentioning that some of the companies in a union 
+
+like this will be able to adopt new technologies faster than others, but at the same time, 
+
+they will have to use the same standard, which will lead to the whole consortium moving 
+
+only as fast as its slowest member. 
+
+ 
+
+   
+
+
+
+New Marketplace Economy 
+
+The goal of creating Winding Tree is to facilitate travel in all of its different aspects, 
+
+making it cheaper, faster, more enjoyable for consumers and allowing the creation of new 
+
+business models in the travel industry. 
+
+In order for us to achieve this goal, some of the current business practices and models will 
+
+have to be removed or drastically changed, while some new concepts will finally be given a 
+
+fertile ground for their growth. 
+
+Fundamentally, Winding Tree is enabling the conditions for the perfect competition of 
+
+travel suppliers and provides perfect information to buyers. 
+
+Let's see how this will impact current market players and what new businesses can be 
+
+built on top of the Winding Tree platform. 
+
+
+
+ 
+
+ 
+
+   
+
+
+
+Suppliers of Travel 
+
+Forecast: ​Positive 
+
+Airlines, hotels, car rentals, cruise ships, tour and activity providers, home rentals and 
+
+B&B's will enjoy the fact that the Winding Tree marketplace has no transaction fees and 
+
+that it's extremely easy to integrate with. They will also reestablish relationship with their 
+
+customers, allowing them to provide much better service and truly differentiate on the 
+
+experience. 
+
+Winding Tree will also drastically lower barriers to entry for new players, allowing them to 
+
+easily compete with the incumbents. 
+
+Travel Agencies and Tour Operators 
+
+Forecast: ​Positive 
+
+Travel agents will enjoy easy access to data and low fees on our platform. One of our goals 
+
+is to improve the quality of the data that's currently available to travel agents. 
+
+Travel Startups 
+
+Forecast: ​Positive 
+
+Winding Tree is built with the needs of travel startups in mind. While small companies and 
+
+individual entrepreneurs are rejected by big players, our platform is open and very easy to 
+
+work with. Just download our library, read the API documentation, and you're good to go 
+
+in almost no time. 
+
+Destination Management Organizations 
+
+Forecast: ​Positive 
+
+
+
+Destination marketing organizations (or DMOs) have been sidelined in this digital age by 
+
+industry giants. They often don’t have the bandwidth or resources to stay relevant. With 
+
+Winding Tree, a DMO will be able to fully leverage their unique position in the market, in 
+
+order to provide the best traveler experience by easily accessing hotel/tour content in 
+
+their destination as well as flight availability and acting as a travel agency. 
+
+Meta-Search 
+
+Forecast: ​No Longer Necessary 
+
+The meta-search business model was created precisely because there was no data 
+
+infrastructure that allowed for easy access to supplier data. Winding Tree could eliminate 
+
+this problem and its derivative business models, while initially it will be just one of the data 
+
+sources for metasearch engines. 
+
+Aggregators 
+
+Forecast: ​Radical Business Model Change Necessary 
+
+Many intermediaries in the travel industry benefit from charging exorbitant transaction 
+
+fees because there are no alternatives, not because they deliver value. By enabling perfect 
+
+competition, Winding Tree threatens this model. 
+
+New Business Models 
+
+Winding Tree will allow for new business models to be built on top of it. Here are just a 
+
+few examples. 
+
+
+
+Travel Agent Interface 
+
+Winding Tree is just a set of APIs, so an individual travel agent won't be able to access it, 
+
+but a programmer, on the other hand, will easily be able to build an interface for travel 
+
+agents and sell it as a subscription, for example. 
+
+Easy access to the platform would mean that many more individuals and organizations will 
+
+be building these interfaces, competing on features and price, which will lead to vast 
+
+improvements in quality of these interfaces and adjacent products and services, including 
+
+back office. 
+
+Algorithm-as-a-Service 
+
+An individual software engineer could easily build an algorithm for pricing hotel rooms, for 
+
+example, and sell it as an add-on to property systems integrated with Winding Tree. 
+
+Personalization Engine 
+
+Because Winding Tree will have access to a huge body of anonymized travel data, it will be 
+
+extremely easy to build a travel personalization algorithm and sell it to travel agencies. 
+
+AI-assisted Booking 
+
+Currently, there are multiple projects that can help you book a hotel via chat or voice 
+
+interface, but all of them are only as good as the data they have in their systems. By 
+
+enabling easy access to data we will make it extremely easy to build a travel booking chat 
+
+bot. 
+
+The Ultimate Travel App 
+
+What would the ultimate travel experience look like? Imagine you receive a calendar 
+
+invite from your business partner for a meeting in another city. Ideally, there would be an 
+
+
+
+app that would immediately book the best option for traveling there, including flights, 
+
+hotels, ground transportation, etc. 
+
+The perfect travel app will also send you updates when your flight is delayed, with the 
+
+information about how it affects your whole itinerary and options to still be able to make 
+
+it to your meeting. 
+
+Thematic Travel DAOs 
+
+Thematic Travel DAOs where suppliers (hotels, airlines, cars etc.) meet demand, have 
+
+their own incentive tokens, build customer loyalty with it, local reputation etc. and charge 
+
+small fee distributed to the community. 
+
+Travelers 
+
+Forecast: ​Positive 
+
+Most importantly, the goal of the Winding Tree platform is to allow businesses to deliver 
+
+the best possible customer experience. 
+
+With all the aforementioned new business models, travel will be much more 
+
+streamlined, personalized and there will be much more choice in terms of travel 
+
+agencies that will cater to different demographics, as opposed to status-quo today, with 
+
+the same company trying to satisfy needs of business travelers, backpackers, cultural, 
+
+health and eco-tourists, etc. 
+
+With increased competition between travel agencies and suppliers, travelers will enjoy 
+
+better service at ​better prices​. 
+
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2874598
+
+
+UN Sustainable Development Goals 
+
+The Sustainable Development Goals (SDGs), officially known as Transforming our world: 
+
+the 2030 Agenda for Sustainable Development is a set of ​17 "Global Goals"​ with 169 
+
+targets between them. 
+
+Winding Tree helps to advance the travel industry towards the following goals. 
+
+ 
+
+Decent Work and Economic Growth 
+
+We believe that the current situation in the travel does not allow for innovation, but 
+
+technological innovation is one of the main drivers of economic growth. 
+
+Industry, Innovation and Infrastructure 
+
+Winding Tree goal is to improve infrastructure and enable innovation in the travel 
+
+industry. 
+
+Reduced Inequalities 
+
+Inequality, social, economic and corporate, is one of the defining features of our societies 
+
+today. Blockchain technology helps us to address these issues in the travel industry by 
+
+removing rent-seeking intermediaries and enabling competition. 
+
+https://sustainabledevelopment.un.org/?menu=1300
+
+
+Partnerships for the Goals 
+
+Last, but not least, Winding Tree is open to collaborate with any stakeholders in the 
+
+industry that share the same vision. We need your contribution, because only together we 
+
+can solve the issues described in this paper. 
+
+Another project that founders of Winding Tree are involved at is ​Travel Tech Con​, an 
+
+organization that aims to enable collaboration in the travel industry via organizing events 
+
+for travel startups and developers. 
+
+ 
+
+   
+
+http://traveltechcon.com/
+
+
+How Does Winding Tree Work 
+
+In a nutshell, Winding Tree is a set of smart contracts on Ethereum with a DAO 
+
+governance platform that allows for the holders of Líf to participate in the development of 
+
+those contracts. 
+
+Winding Tree connects suppliers (hotels, airlines, etc.) and sellers (travel agencies) to a 
+
+single marketplace. Suppliers will be able to put information about their availability and 
+
+price onto the database, where it would be easily discoverable by sellers. Sellers then have 
+
+the ability to buy that inventory and pay for it instantly. All these interactions are 
+
+designed to be performed without human intervention. 
+
+Why Blockchain? 
+
+The travel industry, as we established, is dominated by a few big players. Blockchains on 
+
+the other hand are designed to cut out the middlemen. E.g. Bitcoin is a financial system 
+
+without one central authority, such as a bank or a government, and we hve just applied a 
+
+similar logic to the travel industry. 
+
+It is important to note that ​only open, permissionless blockchains​ can reduce inequalities 
+
+and change the balance of power because private or consortium, by definition, are not 
+
+able to provide the same level of trust and security. 
+
+Connecting to Winding Tree 
+
+Winding Tree platform is built by engineers for engineers and it’s not our goal to build 
+
+user-facing interfaces for the marketplace. Instead, we encourage the creation of those 
+
+interfaces by third-party developers in order to increase competition and quality of these 
+
+products. 
+
+https://coincenter.org/files/2016-12/openmattersv1-1.pdf
+
+
+We also envision existing software products, like property management systems, travel 
+
+agent interfaces, etc. to connect to Winding Tree. 
+
+Winding Tree Transaction 
+
+Here’s how a hotel booking on Winding Tree looks like. 
+
+ 
+
+Líf Token — Winding Tree Currency 
+
+In order for the PMS from the illustration above, let’s call it PMS1, to be able to write 
+
+information into the Winding Tree database, it has to have a balance of Líf, the Winding 
+
+Tree platform cryptocurrency. The users of the platform, like travel agents or front desk 
+
+
+
+managers, do not have to know that what powers the system in the background is the líf 
+
+token, but it is beneficial for developers to understand how it works behind the scenes. 
+
+In order for PMS1 to write information onto the Index contract, and in order for the 
+
+sellers to be able to find inventory from that hotel, the PMS will have to spend a tiny 
+
+amount of líf. Once again, that’s not the platform fee, this is for incentivizing miners to 
+
+participate in the network. 
+
+Let’s say that PMS1 has a balance of 5 líf. A hotel manager would like to make available 10 
+
+rooms in the hotel from May 1 to May 31, for the price of USD $100 per room per night. 
+
+One transaction with all that information is dispatched and along with it a fee of 0.01 líf is 
+
+sent to Winding Tree. Now the hotel has its inventory on Winding Tree platform. 
+
+Now one of the employees of the travel agency (or a user of an online travel agency) 
+
+performs a search on Winding Tree via software that their software engineers had 
+
+created, let’s call it TA1 (Travel Agent 1). It also has a balance in líf, but the search query is 
+
+free, so the TA1 balance has not decreased. It is used though when the travel agent 
+
+decides to book a hotel room for one of their customers. In this case, the correct amount 
+
+of líf has to be sent to the smart contract in order to book a room. 
+
+Here is a breakdown of what is being transacted in each step: 
+
+1. PMS1: INVENTORY. Data: room availability and price, fee: 0.01 LIF. 
+
+2. TA1: SEARCH. Data: search criteria, fee: 0. 
+
+3. TA1: PURCHASE. Data: room and guest information, price: 100 LIF, fee: 0.02 LIF. 
+
+At the end of this series of transactions, the TA1 balance is decreased by 100.02 LIF and 
+
+the PMS1 spent 0.01 and gained 100 LIF, while WT has the record that confirming that 
+
+the travel agency customer has the right to stay at the hotel. 
+
+At the same time, 0.03 LIF went towards the miner that confirmed these transactions by 
+
+putting them in the next block. 
+
+
+
+Please note that the fees above are hypothetical, the actual fee amounts will be 
+
+automatically calculated by the marketplace at the time of the transaction. 
+
+The usual concern here is the volatility of the currency. We mitigate that risk by allowing 
+
+parties to convert líf to fiat currencies at the time of the transaction. 
+
+Líf Exchange 
+
+In order for PMS1 and TA1 to have Líf balances, they have to purchase it first. This can be 
+
+done automatically, so there is no need for the end users of PMS1 or TA1 to know that 
+
+they are buying and selling cryptocurrency. For them the transaction will look very simple: 
+
+100 U.S. dollars (or any other fiat currency) are sent to the WT platform from their bank 
+
+account for payment of a hotel room for a customer. The hotel will receive a payment in 
+
+their bank account as well. 
+
+But how are the tokens converted into fiat currencies? One of the most important parts of 
+
+the Winding Tree ecosystem, while most of the world still uses fiat currencies, is the Líf 
+
+Exchange. We are working with a variety of cryptocurrency exchanges in order to be able 
+
+to easily convert Líf to local currencies. The goal for the initial release is to be able to 
+
+transact in US dollars and Euro, but we will be adding other currencies as we continue 
+
+development. 
+
+While all the transactions within Winding Tree have very small fees (fraction of 1 líf), 
+
+withdrawing fiat from the system will be the subject to a fee up to 1%. 
+
+Winding Tree Block Explorer 
+
+Both PMS1 and TA1 users should now be able to verify that that transaction has been 
+
+confirmed and that the end user can enjoy her upcoming hotel stay. 
+
+
+
+Winding Tree Block Explorer is a website where they may see their (encrypted) 
+
+transactions if they know its hash. The website will also have statistics about the platform 
+
+load, Líf price, and other information. 
+
+Winding Tree DAO and Platform Governance 
+
+Winding Tree DAO smart contract is the issuer of Líf. That’s where participants of the 
+
+marketplace will buy tokens initially. Afterward, anyone will be able to sell and buy líf at 
+
+the Líf Exchange. 
+
+WT DAO has all the logic for token distribution, but the most important part of this smart 
+
+contract will be the logic that will allow Winding Tree users to create proposals for 
+
+changing the logic of the platform and vote on them. 
+
+The nature of the blockchain does not allow for changing smart contracts, but the 
+
+platform will have to evolve, the data exchange standards will have to change, we will 
+
+need new smart contracts for handling other methods of transportation, etc. 
+
+The solution is to create new smart contracts and have the WT DAO store a list of these 
+
+contract addresses. Whenever there is a need to update one of the smart contracts, any 
+
+user of the platform that has made at least 10 transactions will be able to create a 
+
+proposal for that change, with the new smart contract logic, back it up with an explanation 
+
+for the change, data to support it, etc. Other participants of the network will be able to 
+
+vote on that proposal and when it gains enough votes for the change, the DAO index will 
+
+be updated automatically within a predefined timeframe, e.g. one month. 
+
+Data Exchange Standards 
+
+Data exchange standards is one of the issues that participants of the Winding Tree 
+
+marketplace have to agree upon. The current model for developing these standards (e.g. 
+
+
+
+Open Travel Alliance or IATA) are too slow, by any adequate metric. E.g. it took IATA five 
+
+years to create NDC standard. 
+
+Winding Tree brings the open-source model of working on data exchange standards to 
+
+the travel industry. 
+
+How Will Winding Tree Make Money? 
+
+Despite not taking commission fees from transactions on our platform, there are a 
+
+number of ways for Winding Tree to be commercially successful so we can commit to its 
+
+future development. 
+
+Reports 
+
+One of the biggest problems in the travel industry is that market reports are usually out of 
+
+date. We plan on issuing regular reports with high-level insights of what’s happening in 
+
+the WT marketplace, so participating companies can make educated decisions about their 
+
+strategies. 
+
+Selling Optional Proprietary Extensions and Professional Services 
+
+One of the most obvious open-source business models for us is to build optional 
+
+extensions for the platform. We will also consult and provide technical support for larger 
+
+companies as they migrate to the Winding Tree platform. 
+
+Challenges 
+
+Winding Tree project is facing a few exciting challenges that can be divided into two 
+
+categories: technical and business. 
+
+
+
+In terms of technology, blockchains are still not capable of supporting the load that the the 
+
+entire travel industry would require. The Bitcoin blockchain can handle a maximum of 
+
+seven transactions per second, Ethereum — 10–20. The good news is that many people 
+
+are working on scaling public blockchains and these improvements are well underway. 
+
+Another issue that many bring up is the security of WT transactions. This is not a real issue 
+
+however, because all transactions will be encrypted so only the parties that are 
+
+immediately involved in a transaction will be able to see its details. 
+
+The biggest challenge by far is to educate people and organizations about the possibilities 
+
+of the Winding Tree platform and convince them to use it, but, hopefully, if Silicon Valley’s 
+
+prophecy about software eating the world is correct, we’ll see a natural and steady 
+
+growth. 
+
+   
+
+
+
+Token Generation Event 
+
+https://docs.google.com/document/d/1wkZOZCHKi3S5sHLh_i1FM2guERSQ1Uz8bh6W
+
+Esb1FWU/edit?usp=sharing 
+
+Development Plans 
+
+Depending on the total amount of funds raised, we commit to the following roadmaps. In 
+
+any case, we will put a lot of power into the hands of our contributors, so they will be able 
+
+to influence the development of the platform. Winding Tree will act as a non-profit and 
+
+provide annual reports about the fund distribution. We are also considering to 
+
+incorporate as a non-profit, as other blockchain companies have done. 
+
+$5-10M Roadmap 
+
+2017 Q2 
+
+● WT DAO & Lif token smart contract. 
+
+● Smart contract for inventory search 
+
+● Smart contracts for booking hotels 
+
+● Open source data exchange standards for hotels 
+
+● Stage one of the crowdsale: pre-sale 
+
+2017 Q3 
+
+● Smart contracts for airlines 
+
+● Open source data exchange standards for airlines 
+
+
+
+● Stage two of the crowdsale 
+
+2017 Q4 
+
+● Multisignature Líf Token 
+
+● Multisignature integration on web apps & wallets 
+
+● WT Block Explorer 
+
+● Líf exchange 
+
+2018 
+
+● Smart contracts for tours and activities, car rentals, etc. 
+
+● Public data reports published in real time 
+
+● Improve network scalability 
+
+$10-25M Roadmap 
+
+In addition to all the above, we will start the development of a state channel for 
+
+blockchains, designed specifically for travel, i.e. to handle large volumes of transactions, 
+
+with better search mechanisms and quicker payments. 
+
+We will also develop user-facing applications, e.g. an application for smartphones that 
+
+would unlock a hotel door using a confirmed B2B transaction hash. 
+
+$25-40M Roadmap 
+
+In addition to all the above, we will commit to design, develop, produce and contribute to 
+
+the development of open-source hardware for the travel industry, like POS, locks, 
+
+terminals, etc. 
+
+
+
+ 
+
+   
+
+
+
+The Team 
+
+Our team has deep expertise in software engineering, entrepreneurship, business 
+
+development in the travel industry and other fields. 
+
+Maksim Izmaylov 
+
+Maksim is a software engineer and entrepreneur. He has been working on travel projects 
+
+for more than five years. Apart from Winding Tree, Maksim cofounded ​Roomstorm​, 
+
+software solution that helps airlines to accommodate passengers from delayed and 
+
+canceled flights, and ​Travel Tech Con​, a not-for-profit organization that aims to move the 
+
+industry forward by enabling collaboration between various stakeholders in the travel 
+
+industry. 
+
+Maksim writes about travel and technology, he speaks at travel conferences about 
+
+blockchain and at blockchain conferences about travel. 
+
+Jakub Vysoky 
+
+Jakub is a software engineer and evangelist for Python programming language. He has 
+
+worked with Maksim on a multitude of software projects in the last 10 years. 
+
+Jakub is a contributor to Python, Django, and many other open-source projects. He has 
+
+deep knowledge of the travel industry API ecosystem and its problems. 
+
+Jakub is responsible for the development of the open-source data exchange standards 
+
+and Winding Tree libraries. 
+
+http://roomstorm.com/
+http://traveltechcon.com/
+
+
+Augusto Lemble 
+
+Augusto is a blockchain hacker and a full-stack software developer. He has worked on 
+
+multiple blockchain related projects for the last three years. 
+
+Augusto is specialized on decentralized and web applications, with a deep knowledge of 
+
+blockchain protocols. He is responsible for the smart contracts development and security, 
+
+also for the blockchain integration of Winding Tree libraries and services. 
+
+Pedro Anderson 
+
+Pedro leads our business development and marketing efforts. He is responsible for 
+
+expanding adoption and use of Winding Tree across the industry. 
+
+Prior to Winding Tree, Pedro was responsible for driving adoption of the Attendify app 
+
+from its formative years to a leading position in the Event Tech space. Pedro also founded 
+
+“​Firefly​” a non-profit focused on training and preparing orphans for careers in the 
+
+hospitality industry. 
+
+https://www.facebook.com/FireflyUkraine/
+

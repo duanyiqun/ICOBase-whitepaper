@@ -1,0 +1,790 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Word - IPSX Whitepaper v0.5 REVIEW updated.docx
+
+
+ 
+
+ 
+
+www.ip.sx  1 
+ 
+
+  
+
+WHITEPAPER 
+Version 0.5 
+
+E-mail: contact@ip.sx 
+Web: www.ip.sx 
+
+
+
+ 
+
+ 
+
+www.ip.sx  2 
+ 
+
+TABLE OF CONTENTS 
+IPSX ............................................................................................................................................ 3 
+
+DISCLAIMER ............................................................................................................................... 3 
+
+VISION AND CORE FEATURES .................................................................................................. 3 
+
+BACKGROUND – HOW IT ALL STARTED .................................................................................. 5 
+
+INTRODUCTION.......................................................................................................................... 5 
+
+SOLUTION: IP SHARING EXCHANGE (IPSX) ............................................................................. 6 
+
+First level: ................................................................................................................................ 6 
+
+Second level: ........................................................................................................................... 6 
+
+IPSX AS AN ECOSYSTEM .......................................................................................................... 6 
+
+ACTUAL PROBLEMS .................................................................................................................. 7 
+
+SOLUTION .................................................................................................................................. 8 
+
+OUR VISION: IPSX AND WEB 3.0 ............................................................................................... 8 
+
+TECHNICAL APPROACH .......................................................................................................... 10 
+
+Actors .................................................................................................................................... 10 
+
+Structure description: system layers: .................................................................................... 10 
+
+Logical components of the Centralizer Smart Contract: ....................................................... 11 
+
+JAVA application components: ............................................................................................. 11 
+
+AGREEMENT PROTOCOL IMPLEMENTATION .................................................................... 11 
+
+IPSX UTILITY TOKEN (IPSX) ..................................................................................................... 12 
+
+IPSX utility token creation ...................................................................................................... 12 
+
+Maximum number of tokens created during the crowdfunding period:................................. 12 
+
+FUNDING PERIOD .................................................................................................................... 13 
+
+USE OF FUNDS ........................................................................................................................ 14 
+
+THE TEAM ................................................................................................................................. 15 
+
+ 
+
+  
+
+
+
+ 
+
+ 
+
+www.ip.sx  3 
+ 
+
+IPSX 
+IPSX – a decentralized exchange for sharing IPs and a framework for building applications, on 
+top of the existing IPs shared by the community members and data centers. 
+ 
+A smart contract based, blockchain protocols and utility token incentivized mechanism of 
+sharing IPs among actors from all over the world and a framework to build applications that 
+require IPs built in a reliable and open source environment. 
+ 
+
+DISCLAIMER 
+This document is for informational purposes only and does not constitute an offer or solicitation 
+to sell shares or securities in IPSX or any related or associated company with IPSX. Any offer or 
+solicitation will be made only by means of a confidential offering memorandum and in full 
+accordance with the terms and conditions of all applicable securities and other laws existing at 
+the moment. 
+ 
+"The highest good, then which there is no higher, is God, and consequently it is immutably good, 
+hence truly eternal and truly immortal." 
+— Saint Augustine, from the book “De natura boni”, circa 405 C.E. 
+ 
+Adapting this sentence to the current social, economic, political and psychological realities of 
+mankind and relating it to the actual technological field we would obtain: 
+“The highest good, then which there is no higher, is blockchain, and consequently it is an 
+unchangeable good, hence truly eternal and truly immortal.” 
+ 
+ 
+
+VISION AND CORE FEATURES 
+ 
+- IPSX is the first truly decentralized IP Sharing Marketplace, which will create a global 
+marketplace for IPs. Combined with flexible tools (SDKs and APIs), to aid entrepreneurs and 
+developers in a fully secured and transparent environment to develop new applications on top 
+of the already existing IPs on the IPSX sharing platform. It will become a framework and a 
+marketplace for new applications that require IPs at their backbone (VPN providers, Data Mining 
+software, web crawling bots, micro tasks, etc.). 
+ 
+- Data is said to be the new resource of our times. At the backbone of Data Mining, large volumes 
+of IPs are required for the actors involved in the mining process to be able to perform tasks. By 
+substantially lowering the price of IPs and solving the IPs accessibility and availability problems, 
+IPSX is aiming to become a key building ecosystem for all the fields that require larger or smaller 
+
+
+
+ 
+
+ 
+
+www.ip.sx  4 
+ 
+
+volumes of IPs and allowing complex applications from Data Mining and other fields to become 
+more accessible to everyone.  
+ 
+- IPSX connects actors in a peer-to-peer network, enabling both data center owners and 
+individual users, that will be called "providers" to rent IPs to other users, that will be called 
+"requesters". The IPs can be used to complete different tasks requiring one or more IPs from 
+different locations. Today, IP addresses are valuable assets with a low liquidity level due to the 
+fact that there is not a simple solution to share/rent IPs based on a specific list of filters and IP 
+resources are supplied by centralized providers which are constrained by closed networks, 
+proprietary payment systems, and many other restrictions. 
+ 
+- IPSX core built-in feature set is a dedicated Ethereum-based transaction system, which 
+enables direct payments between requesters and providers, solving all the above mentioned 
+problems, increasing the liquidity of the IPs and allowing any actor that has an IP on his internet 
+connected device, to take part into a multi-billion yearly business, that otherwise would be 
+closed to home internet users. 
+ 
+- IPSX function, as the backbone of a distributed market place for IPs, can be considered an 
+Infrastructure-as-a-Service (IaaS), and also a Platform-as-a-Service (PaaS). However, IPSX will 
+reveal its true potential by adding dedicated software integrations to the ecosystem that will be 
+built on top of the existing IPs and that can use the IPs on the IPSX platform. Any interested 
+party is free to create and deploy software to the IPSX marketplace by using the SDKs and APIs 
+that will be provided by the IPSX ecosystem. 
+
+ 
+Fig. 1 - IPSX ecosystem representation 
+
+
+
+ 
+
+ 
+
+www.ip.sx  5 
+ 
+
+BACKGROUND – HOW IT ALL STARTED 
+In 2011, Sergiu Draganus along with some other friends created GeoRanker 
+(www.georanker.com), a Data Mining Platform focused on Local SEO Reporting instruments, 
+that connects to servers from more than 50.000 different locations and retrieves live ranking data 
+from Google, Yahoo, Bing, Yandex, YouTube in real time. 
+ 
+One of the major activities that followed from GeoRanker initial business model was custom Data 
+Mining for different clients from all over the world and, later on, the business model included also 
+IP sharing and renting, based on requests that came from our different type of business partners. 
+ 
+Some of the major problems encountered during the Data Mining processes, IP rental and IP 
+sharing processes, among others, were low liquidity level, good quality and high prices for IPs 
+(in order to obtain a good price/IP huge volumes of IPs need to be rented or purchased from 
+different IP providers). 
+ 
+Based on the increasing demand of IPs from the GeoRanker platform clients, the impossibility 
+to satisfy all the requests, combined with the blockchain technology and capabilities, the IPSX 
+concept was born in July 2017 and developed initially in multiple brainstorming sessions by the 
+GeoRanker team members. At that time, the team was already composed by multiple blockchain 
+early adopters, evangelists and enthusiasts, so it all came natural in creating the IPSX concept. 
+
+INTRODUCTION  
+There are about 3.5 Bln Internet users and 8.4 Bln IoT devices connected to internet according 
+to Gartner. 
+What all of them have in common above other things, are: 
+- high speed CPUs 
+- memory Chips 
+- internet Protocol Addresses called IPs. 
+ 
+There is a huge need of remote IP usage which results in a market of over 60 Bln USD with a 
+16% yearly growth rate. 
+ 
+Remote IP usage is popular among end user consumers to: 
+- improve privacy and security 
+- access geo-blocked services / media 
+- bypass national and corporate restrictions. 
+ 
+Remote IP usage is popular among business providers for building: 
+- VPN applications 
+- Data Mining; 
+- security layers 
+- other micro tasks. 
+ 
+
+
+
+ 
+
+ 
+
+www.ip.sx  6 
+ 
+
+The success of such a project is already proven by the TOR project among end users, which 
+currently has over 2.5 M daily users. 
+ 
+Main problems of TOR and other similar projects are: 
+-liabilities - you might have a problem when sharing your IP 
+-no revenue/ no economy behind the IP sharing/ IP renting processes, which generates the next 
+problem 
+-bandwidth and Speed Quality 
+-not usable for business and service providers. 
+
+SOLUTION: IP SHARING EXCHANGE (IPSX) 
+Blockchain based system fully automated, with full clearing of utility tokens associating the price 
+and distribution, based on offer and demand for IPs. 
+ 
+First level: 
+ 
+You will be able to share your device’s IP address or as a Data Center to share a full range of 
+unused IPs in order to win real-time IPSX tokens in a safe way. (All connections will be logged 
+in the blockchain).  
+As a client you would be able to access, in real time, IPs from all around the world and use them 
+for short period of times, as of 5 seconds up to a whole month. 
+ 
+Second level: 
+ 
+We will create a framework and a marketplace and allow any business and service providers to 
+build custom made applications that require large volume of IPs based on our SDK and APIs. 
+As a VPN provider, you would be able to integrate your system with our SDK to let your clients 
+choose from millions of IPs from all around the world. 
+
+IPSX AS AN ECOSYSTEM 
+The IPSX business model and use cases will fully benefit from all the advantages of the relatively 
+new technological advances. The market for IP Sharing can now be organized to an entirely new 
+system and principles, and moving from centralized and hard solutions to rent/share IPs to a 
+fully decentralized and fully automated system of renting/sharing IPs. 
+ 
+At the moment, the IP sharing market is only accessible to a few large players that understand 
+it and its needs, and that also have the technical solutions to rent/share IPs. With the 
+advancement of the blockchain technology, everyone can take part into a multibillion yearly 
+business and provide their support to a decentralized economy and generate revenue in a safe 
+and easy environment. 
+
+
+
+ 
+
+ 
+
+www.ip.sx  7 
+ 
+
+ACTUAL PROBLEMS 
+Like said earlier, IP addresses are valuable assets with a low liquidity level due to the fact that 
+there is not a simple solution to share / rent IPs based on a specific list of filters. 
+ 
+Bellow we will present some projects and solutions that approached this direction so far: 
+ 
+TOR free software project, famous for introducing the idea of Onion Routing to a wider audience. 
+In this system, users download a global list of relays and exit nodes, randomly select from that 
+list, and form onion routes from their selection. Some of the problems it faces: 
+- high lags because there are no rewards for sharing IPs 
+- no internal economy 
+- liabilities (you don’t know what actions the users are doing using your IP address). 
+ 
+
+ 
+ 
+Virtual Private Networks (VPNs) use encryption to securely transport a VPN subscriber's traffic 
+across a larger insecure network. Once the VPN has received the traffic, it is decrypted and 
+retransmitted across a different large insecure network. The retransmission can assist users in 
+circumventing access restrictions imposed by websites, and, to a lesser extent, reduce the 
+tracking of their website browsing habits. Encryption prevents the user's ISP from seeing their 
+traffic. Some of the problems faced by the VPN providers are: 
+-limited number of IPs from GeoLocations where the demand is high, thus leading to the 
+impossibility for some users to access different services (too many users use the same IP and 
+the IP is banned or restricted) 
+-the end users are required to pay a full month price even if they need the service for only a 
+couple of minutes or hours. 
+The process of IP Sharing is difficult from the perspective of matching a specific need with the 
+offering. 
+ 
+Clients for IP sharing have different needs, such as: 
+- rental Time frame 
+- number of IPs 
+- geolocation 
+
+
+
+ 
+
+ 
+
+www.ip.sx  8 
+ 
+
+- usage scope 
+- usage protocols http/smtp/VPN etc. 
+- costs of usage/duration 
+- contractual Costs / micropayments. 
+ 
+Providers also face different problems: 
+-B2C - making money by sharing phone/tablet/ISP IP – no technical solution 
+-finding clients for specific IP / IP classes - marketing issues 
+-B2B - Difficult to build IP portfolios with different IP classes 
+-renting for short periods of time 
+-contractual costs / micropayments 
+-liabilities. 
+ 
+
+SOLUTION 
+The use of BlockChain Technology advantages: 
+-integrate cross platform clients 
+-create a marketplace where the request will meet the offer for IP services 
+-sharing / renting IPs using custom filters time frame / price / GeoLocation / protocol 
+-manage micropayments using ETH protocols and smart contracts 
+-record all “transactions” (IP shares owner/ client)  in the blockchain. 
+
+OUR VISION: IPSX AND WEB 3.0 
+At the moment, as Internet users, we are being restricted in different ways, we are not allowed 
+to use services and applications due to censorship employed by various groups of interests from 
+all over the world. 
+ 
+All this comes to us in many forms. 
+Nation states monitor the Internet traffic, so they can construct different profiles of their citizens. 
+In such a context, dissent becomes dangerous, and honest political discord in some places is 
+impossible. 
+ 
+In a very similar way, Internet Service Providers and content providers have become unstoppable 
+and restless in their objective to monitor, track and profile every user across the Internet. The 
+daily Internet activity, communications and behavior of every user are gathered and sold to 
+advertisers and basically anyone willing to buy them. Such transactions occur with little to no 
+conscious consent from users and with a complete disregard and lack of respect for any notion 
+of personal privacy. 
+Access to content is being restricted by its content providers to certain areas due to Intellectual 
+Property limitations or purely because of low valuation of users from some particular locations. 
+We don’t condemn in anyway the current system and its position. However, in the actual context 
+and the new economy model that rises, we believe that this system is old and unfair to many 
+actors inside of it, and the time to change is NOW. 
+
+
+
+ 
+
+ 
+
+www.ip.sx  9 
+ 
+
+ 
+We believe that the future of economy and Internet will be a fully distributed network, enabling 
+users and actors from all sectors to securely and directly exchange content, without sharing it 
+with corporations or other middlemen and 3rd party service providers. 
+ 
+In this direction, IPSX allows all the actors to participate in the internal economy of the ecosystem 
+and provides a way of supporting the decentralized vision, shared economy and generating 
+revenues. Of course, we will support and encourage the development of other technologies, 
+many of which have gained significant traction in recent years. 
+ 
+Better data-sharing technologies are necessary, and in order to allow data sharing in an open 
+and censorship free environment, the IPs are required, as the backbone of Internet protocols. 
+Taking into account the ongoing development of IPFS, Swarm and other solutions, the time for 
+fully decentralization seems to be within reach. 
+ 
+Eventually, the blockchain networks will become more scalable, more efficient, and will include 
+a fully functional network of micropayment channels. The IoT devices will become easier to 
+integrate and communicate with, and a larger volume of IPs will be available, thus allowing free 
+internet. This concept of free internet we not only mean it in terms of upfront payment, but also 
+free of all the restrictions, censorships, privacy thieves and sensitive, personal information data 
+buyers. 
+ 
+IPSX will provide the easiest way for users from all over the world to help the Internet in becoming 
+a fully decentralized and free of the actual less fair interests of different actors, by sharing IPs in 
+an easy and totally transparent way among worldwide users and providing the fuel of truly 
+decentralization for the Internet. 
+ 
+
+ 
+Fig. 3 - internet traffic/month by area location 
+
+TECHNICAL APPROACH 
+In this section the technical approach will be presented. However, the more detailed technical 
+specifications will be released on design documentation that is currently under construction by 
+the technical team. 
+
+
+
+ 
+
+ 
+
+www.ip.sx  10 
+ 
+
+ 
+Actors 
+An actor of the IPSX system is represented by a trio which consists of: 
+- a human/bot administrator of the device that uses the IPSX system for offering or 
+
+requesting IPs. The lender of the IP is called “provider” and the user of the IP is called 
+“requester”; 
+
+- a Java Application/API that acts as an interface with the IPSX system. The JAVA 
+application will be built for all platforms and mobile devices and will run as a client on the 
+end user’s (actor) device; 
+
+- a third-party VPN Application which is used to instantiate VPN connections. 
+ 
+According to his role in instance, a user is of one of the two types: 
+- “Provider” User = a user who provides an IP or list of IPs by placing offer orders and by 
+
+instantiating a VPN server once a deal is done. 
+- “Requester” User = a user who benefits from an IP or list of IPs by placing request orders 
+
+and by instantiating a VPN client once a deal is done. 
+The identification data of a user consists of its unique IPSX wallet address. In other words, a 
+user is represented in the system by his IPSX wallet address. 
+ 
+The IPSX utility token will be a standard ERC20 token issued on ethereum blockchain, so any 
+ethereum account can be used as an identification data (ID). 
+ 
+Structure description: system layers: 
+ 
+IPSX system operates on three technological layers: 
+
+- On the Ethereum Layer, the Centralizer Smart Contracts will manage the wallets, the 
+profiles, the token balances. Also, we are analyzing the micro Raiden protocol for 
+micropayments at this layer. 
+
+- On the Application Layer, the IPSX Java App will implement the user interface and the 
+communication/synchronization with the Centralizer Smart Contract and the VPN 
+Application and it will also arrange the matching process and the deals. 
+ 
+
+Moreover, this IPSX Java App will ensure the management of the Service Layer by constant 
+communication on the IPSX pair channel between the partners of the deal. 
+
+- On the Service Layer, the VPN App is a third-party application used to instantiate VPN 
+connections between the actors. 
+ 
+ 
+ 
+
+ 
+  
+
+
+
+ 
+
+ 
+
+www.ip.sx  11 
+ 
+
+Logical components of the Centralizer Smart Contract: 
+ 
+WALLET (ID) manages the IPSX token balance of the users and has a list of records with the 
+following structure: 
+
+– Id = the IPSX wallet address of the user 
+– Balance = the number of IPSX user-owned utility tokens that are available to his use for 
+
+placing request orders or just for simple transfers 
+– Reserved = the number of IPSX user-owned tokens that are reserved for ongoing deals 
+
+and future payments and that are not available to him at a defined moment for any other 
+operations. 
+
+ 
+ 
+JAVA application components: 
+ 
+PROFILES - manages the user profiles and has a list of records with the following structure: 
+
+– Id = the IPSX wallet address of the user 
+– Info = is a complex data structure that stores information about the user, including his 
+
+rating and general preferences/ settings/ criteria/ history. 
+ 
+ORDER BOOK - manages the offer/request orders received from users via the IPSX Java App. 
+It has two main components, namely the Offer Orders List (OOL) and the Request Orders List 
+(ROL). The offer orders received from the providers will be recorded in the OOL and the request 
+orders received from the requesters will be recorded in the ROL. Both OOL and ROL have the 
+following structure as lists of records: 
+
+– Id = the IPSX wallet address of the user who placed the order 
+– Order = the details of the order. 
+
+ 
+DEAL BOOK - manages the deals between users. More precisely, it manages the deals between 
+a provider who placed an offer order and a requester who placed a request offer in the context 
+of a previously identified matching between these orders. It has a list of records with the following 
+structure: 
+
+– ProviderId = the IPSX wallet address of the user who placed the offer order and will play 
+the role of a provider on the Service Level (in other words, the IPSX wallet address of the 
+“Provider” User) 
+
+– RequesterId = the IPSX wallet address of the user who placed the request order and will 
+play the role of a requester on the Service Level (in other words, the IPSX wallet address 
+of the “Requester” User) 
+
+– Deal = the details of the deal i.e. the combined data from the offer order and request order 
+– Status = the status of the deal. This status will be changed during the life cycle of the deal 
+
+according to the status/events received from the IPSX Java Apps of the actors involved 
+in that deal, based on an agreement protocol described in the next sections. 
+
+ 
+MATCHING - a function that identifies matches between offer orders and request orders and 
+instantiates a new deal that will be further placed in the DEAL BOOK, while asking the ORDER 
+BOOK to eliminate those orders from its offer/request list. 
+ 
+ 
+AGREEMENT PROTOCOL IMPLEMENTATION  
+
+
+
+ 
+
+ 
+
+www.ip.sx  12 
+ 
+
+ 
+This is a function that generates a deal status based on the provider status and requester status 
+received (or automatically assigned in special cases) from the actors of a deal. 
+ 
+The process description is presented in the design documentation which is currently under 
+construction and will be released on a future date. 
+
+IPSX UTILITY TOKEN (IPSX) 
+IPSX is a utility token based on the Ethereum technology, issued on ERC20 protocol and it will 
+be used as a unit of exchange between the actors of the IPSX ecosystem. 
+ 
+Also, IPSX will be used for commission payments to the platform for all the details that are sealed 
+inside the IPSX ecosystem. 
+ 
+The general conditions for using IPSX will be set in the terms and conditions that are currently 
+in process of creation and review by the legal and technical departments of the IPSX team. 
+ 
+The supply of IPSX utility tokens will be limited to the pool of tokens created during project 
+funding period and no other tokens will be issued on an advanced stage of the IPSX project life 
+cycle. 
+ 
+IPSX utility token creation 
+ 
+The IPSX is a token on Ethereum platform. Its design follows widely adopted token 
+implementation standards. This makes it easy to manage using existing solutions including 
+Ethereum Wallet. 
+ 
+Maximum number of tokens created during the crowdfunding period (updated on 29th Jan 2018): 
+
+ 
+- Total: 1 800 000 000 (100%);  
+- Funding participants: 900 000 000 (50%);  
+- Incentives for early adopters and strategic partners 495 000 000 (27.5%);  
+- Bounty campaign 45 000 000 (2.5%);  
+- Team and strategic partners 360 000 000 (20%).  
+
+
+
+ 
+
+ 
+
+www.ip.sx  13 
+ 
+
+ 
+ 
+
+Sending 1 ether to the IPSX smart contract will create a predefined number of IPSX tokens based 
+on the ETH hard cap that will be set before token generation event. 
+No token creation, minting or mining after the funding period will be possible. 
+Tokens will be transferable once the funding is successfully completed (this needs to be agreed 
+on a future state). 
+ 
+Any tokens that will not be distributed during the funding period will be later on distributed to 
+the contributors proportionally to the amount contributed during the funding period. 
+ 
+
+FUNDING PERIOD 
+The funding period is the entire timeline used by the IPSX management team to secure funds for 
+the development of the IPSX ecosystem. 
+The funding period will be composed from multiple stages as follows: 
+ 
+1.Initial investment – this phase has already taken place and we, the founders of the IPSX project, 
+were the investors of this phase. We will describe on the roadmap how we used the funds from 
+this funding stage. 
+ 
+2.Private investment – this phase will start on November and will be open only to private and 
+accredited investors and also to strategic business partners.  
+There will be a minimum investment for this phase that will be revealed on a later stage and this 
+phase will be conducted on private and individual sessions.  
+ 
+3.Private pre-sale – this phase will be opened to early community members that will be willing 
+and able to pass a full KYC/AML process. Also, we are analyzing different partnerships with 
+presale platforms. 
+ 
+
+
+
+ 
+
+ 
+
+www.ip.sx  14 
+ 
+
+4.Public crowdsale – this is a very delicate phase and we will analyze it very seriously before 
+releasing any information about it.  
+As most of you know, the legal aspect is very important and sensitive on this subject and we do 
+not want to treat this in an easy and irresponsible way.  
+We will release an official position of the company on a blog post in the upcoming period. 
+
+USE OF FUNDS 
+Funds raised during the funding period will be used solely for the development and benefit of 
+the IPSX Ecosystem. 
+A more detailed distribution of the funds will be released in the upcoming days, along with the 
+new version (0.2) of the whitepaper draft, after a first round of reviews. 
+ 
+Roadmap 
+As was said earlier, the first stage of funding already took place and the team members were the 
+first ones to fund the project. 
+Below is a description of the activities that took place so far and the prevision of the future 
+milestones: 
+ 
+August 2017  
+- the details of the project were discussed between the management team and advisors. 
+
+ 
+September 2017  
+- the work on the concept started, the first draft of the ip.sx website was deployed, and 
+
+design and first developments of the website were implemented. 
+Also in September, the legal structure was defined, and the decision to establish a new company 
+in Switzerland, Zug area was taken by the management of the team. All the operations will be 
+conducted from the legal entity from Zug. 
+ 
+October 2017  
+- the developing team started working on the initial concept and design documentation; 
+- the first community manager joined the team (welcome Daniel Paraschiv) 
+- a new office was opened in Bucharest, Romania for the technical and development 
+
+departments 
+- a new office is in course of being opened in Switzerland, Zurich. 
+
+ 
+November 2017  
+- the funding period starts 
+- the legal team is analyzing the possibilities and options of running a complete legal and 
+
+fully compliant public crowdsale 
+- the website will be finalized, white paper published and community engagement will start. 
+
+ 
+Q1 2018  
+- the JAVA applications development for different platform starts. 
+
+ 
+
+
+
+ 
+
+ 
+
+www.ip.sx  15 
+ 
+
+Future steps will be detailed on the next version of the whitepaper, as at the moment we do not 
+have a complete vision of the development life cycle. 
+
+THE TEAM 
+The core team can be seen on the Team section of the IPSX web site: https://www.ip.sx/.  
+ 
+Also, the public LinkedIn profiles of all the team members can be accessed from the IPSX 
+website. 
+The team members, as well as the relationship and history between them, will be presented in a 
+blog post that will be published in the upcoming days. 
+ 
+The team is kindly asking all the interested community members to join the Slack channel for 
+keeping the pace with the project evolution and being up to date with future announcements at: 
+https://slack.ip.sx/  
+ 
+Thank you for taking the time to read these details! Please feel free to drop us a feedback on 
+george@ip.sx.  
+ 
+We will be happy to reply! 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Bucharest, 31 October 2017 
+ 
+
+George Bunea 
+CEO IPSX 
+
+Sergiu Draganus 
+Concept Architect IPSX 
+
+

@@ -1,0 +1,2158 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Word - JOYSO Whitepaper v1.20.docx
+
+
+ 
+
+JOYSO WHITEPAPER 
+Hybrid Decentralized Token Exchange 
+
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+2018.4.13 V1.20 draft 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+2 
+
+ 
+
+Modified Log 
+Item Original  Modified Page Item 
+1 ICO event commences 
+
+about March 1, 2018 08:00 
+(UTC+0) 
+ICO ends about March 21, 
+2018 08:00 (UTC+0) 
+
+ICO event commences 
+about March 1, 2018 08:00 
+(UTC+0) 
+ICO ends about March 22, 
+2018 08:00 (UTC+0) 
+
+P.35 V1.17 
+
+2.   Add 2 advisors 
+Bret Treasure and Ben 
+Hsieh 
+
+P.32 V1.17 
+
+3.  Add a partner 
+NTT Data 
+
+P.33 V1.17 
+
+4.   Add: 
+JOY token repurchasing 
+and reward plan 
+
+p.23 V1.18 
+
+5.  Update: 
+Once 100 million tokens are 
+burned, we will reward ETH 
+to all investors that are 
+holding more than 1000 
+JOY. 
+
+Update: 
+Once 100 million tokens are 
+burned, we will reward ETH 
+to all investors that are 
+holding more than specific 
+ratio of JOY.  
+
+P.23 V1.19 
+
+6.  Update: 
+The token holder will have 
+the right to vote on various 
+governance and operational 
+issues raised by JOYSO. 
+This may include voting on 
+which tokens are listed on 
+the exchange. 
+
+Update: 
+Token holders will have the 
+right to participate in various 
+campaign activities hosted 
+by JOYSO. This may 
+include discussions 
+regarding which tokens 
+shall be listed on the 
+exchange. 
+
+P.11 V1.20 
+
+7. Delete: 
+Once 100 million tokens are 
+burned, we will reward ETH 
+to all investors that are 
+holding more than specific 
+ratio of JOY. The total 
+reward will equal to 20% of 
+the trading fees minus 
+operating expense during 
+that quarter.   
+
+ P.23 V1.20 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+3 
+
+Contents 
+ 
+
+Executive Summary 4	
+
+CEX, DEX and HEX 6	
+
+JOYSO architecture 8	
+
+JOY Token 8	
+
+The ICO market 12	
+
+Security issues 13	
+
+Governance 17	
+
+Code quality and testing 17	
+
+Competition 19	
+
+Business model 23	
+
+Marketing plan 25	
+
+Team 28	
+
+Roadmap 35	
+
+Token sale 36	
+
+Application of funds 37	
+THANK YOU 38	
+
+ 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+4 
+
+Executive Summary 
+
+JOYSO suggests a hybrid design for token trading, combining the advantages of a 
+
+centralized exchange - fast and fully-featured - with the advantages of a decentralized 
+
+exchange - improved security and privacy. 
+
+This hybrid exchange  (HEX), able to handle all ERC20-compatible tokens, eliminates the 
+
+need to trust a central exchange with your private key or personal information, reducing 
+
+to a historical minimum any opportunities for hacking. It takes order placement and 
+
+order matching off-chain, substantially improving the user experience compared to 
+
+decentralized exchanges.     In brief, the benefits and innovations of the JOYSO model 
+
+are these:   
+
+l All orders are limit orders, giving users the best possible price. 
+
+l Smart matching is done off-chain, providing fast processing and one-to-many 
+
+matches. 
+
+l Smart matching eliminates security issues like front-running and makes 
+
+arbitrage by the exchange transparent. 
+
+l One-to-many matches merge multiple orders into one transaction, so gas fees 
+
+are substantially lower than in first generation decentralized exchanges. 
+
+l The exchange cannot alter the balance in a user’s account, and has no access to 
+
+the user’s assets. 
+
+l Users do not need to log on to a website; they just sign the bid or ask using their 
+
+own wallet and send ether directly to the smart contract. 
+
+l Users have the ability to cancel transactions up until they are matched and can 
+
+even lock the smart contract themselves. 
+
+l Completed trades are published on the blockchain in a transparent, traceable 
+
+way. 
+
+Compared to its competition, JOYSO has a low cost structure and offers users lower 
+
+transaction and settlement costs. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+5 
+
+The marketing strategy includes aggressive pricing (including free listing for ICOs) and 
+
+professional, targeted digital marketing. The development team comprises eleven 
+
+people and is based in Taiwan. It has deep connections with the Chinese-speaking Bitcoin 
+
+and Ethereum communities. 
+
+Wallet support currently exists for Metamask and Ledger Nano S.  The project is currently 
+
+in alpha and a beta release is scheduled for June 2018. Proof of concept has been done 
+
+on all principal functions and the team is ready to migrate the system to the Ethereum 
+
+testnet. Margin trading and cross-exchange are part of the second phase launch. 
+
+200 million JOY tokens will be issued in total; 100 million of them in an ICO event 
+
+commencing March 1st, 2018.  
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+6 
+
+CEX, DEX and HEX 
+
+Although efficient and fast, the centralized exchange(CEX) is intrinsically vulnerable to 
+
+hacking, denial of service attacks and fraudulent management. Losses to investors and 
+
+companies amount to around a billion U.S. dollars in 2017 alone. 
+
+The risks of centrally controlled exchanges are not going away and movement towards 
+
+the decentralization of trading is inexorable. 
+
+However, prototype decentralized exchanges (DEX) have so far not delivered a 
+
+satisfactory user experience, for three reasons. 
+
+The feature set of DEX has not matched that of established CEX. For example, limit orders 
+
+are generally not supported.   
+
+Secondly, the blockchain is an inefficient architecture for the rapid, iterative processes 
+
+required by a trading environment - cancellations, price queries, multiple bids and asks, 
+
+etc. 
+
+Blockchains independently verify and process every transaction in every distributed node 
+
+of the network which causes slow processing times. That latency is not just an 
+
+inconvenience, it introduces opportunities for market manipulation by miners, 
+
+exchanges and traders. 
+
+Thirdly, conducting all trading interactions on the blockchain is excessively expensive in 
+
+terms of transaction fees. Every order, modification and cancellation incurs gas fees.  
+
+For these reasons -  it’s clear to most informed observers that a hybrid solution is the way 
+
+forward. 
+
+An optimal HEX design would be a decentralized architecture in which users control 
+
+funds and a centralized database that dynamically matches market transactions. Only 
+
+when a deal is done and tokens are confirmed available, would the transaction be 
+
+published on the blockchain. Users would not relinquish control of their assets and would 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+7 
+
+have the benefit of a dynamic market where trades are processed sequentially, in near 
+
+real-time.  
+
+When trades are broadcast to the Ethereum blockchain they would be transparent and 
+
+traceable, making market manipulation by the exchange much easier to detect than is 
+
+the case with CEX. 
+
+Rather than an on-chain order book, which is slow and incurs substantial gas fees, a HEX 
+
+would centralize matching. Automated matching of orders is common in centralized 
+
+exchanges but is not practical in an on-chain environment. 
+
+The HEX would then be able to replicate the feature set of large centralized exchanges. 
+
+For example, it would permit a single order to have multiple executions - multiple buy or 
+
+sell orders in a single trade. The unfulfilled portion of an order would automatically be 
+
+re-categorized as a new, smaller orde. In addition to the efficiency dividend, this would 
+
+lessen the impact of exchanges and large ICOs on overall network performance.  
+
+Due to its distributed nature, HEX does not require a customer to log in, supply any 
+
+customer details or temporarily surrender title to a deposited sum of money. In a HEX, 
+
+ownership passes directly to the purchaser. The exchange facilitates a transaction but has 
+
+no title or access to the tokens being exchanged.  
+
+Settlement can then be done on-chain with smart contracts that cannot be altered or 
+
+interfered with. The smart contracts act as a verifiable, open source trust engine. 
+
+This is the system that JOYSO has developed and is bringing to the Ethereum blockchain. 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+8 
+
+JOYSO architecture 
+ 
+
+ 
+JOYSO Architecture 
+
+JOYSO is a hybrid architecture which combines the transaction speed of off-chain order 
+
+matching (as used in a centralized design) with the privacy and security of smart contracts 
+
+in a decentralized design. 
+
+All JOYSO orders are limit orders; i.e. an order to buy or sell a stock at a specific price or 
+
+better. 
+
+There are three main processes: 
+
+1. A trader sends instructions to JOYSO (deposit, order, cancel, etc) using a web interface 
+
+and cryptographically signs it. They send tokens from their wallet directly to the smart 
+
+contract.     
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+9 
+
+2. The matching of orders is done off-chain by the JOYSO Order Match Engine    . One-
+
+to-many matches ensures purchasers get the best price possible.      
+
+Matching takes place on JOYSO servers and are visible on the browser in real time. Orders 
+
+are processed on a first-in, first out basis and matched orders are broadcast in sequence 
+
+on the Ethereum blockchain. The matching algorithm is not open source code, akin to 
+
+centralized exchanges. However, if JOYSO were to manipulate the sequence of the 
+
+broadcast in order to conduct arbitrage for its own benefit, the changed order would be 
+
+visible on the web site, revealing the manipulation. 
+
+3. The smart contract verifies the user signatures and publishes the transaction on the 
+
+blockchain.  
+
+Until the match is made, users have the ability to lock the smart contract and request a 
+
+transaction cancellation. Later, they can withdraw funds directly if necessary. 
+
+JOYSO Administration can’t modify the content of the smart contract once the 
+
+transaction is published, so have no access to the user’s assets.     Since users have 
+
+signed the transactions themselves, and the blockchain is an open ledger, all trades are 
+
+transparent and traceable.  
+
+No-one can alter the user’s balance in a JOYSO contract without the user’s signature. And 
+
+the smart contracts, which are open source, can not publish a trade to the blockchain 
+
+unless it contains the private key of the JOYSO Admin. 
+
+The smart contact that sends the transaction acts as the ‘trust machine’, replacing the 
+
+audit normally done by a centralized exchange with a transaction verifiable on etherscan 
+
+and with open source code posted on Github..  
+
+Here’s an example. 
+
+Michael Maker wants to buy some Token X and wants to pay for them with Token Y. Tina 
+
+Taker has some Token X she’s interested to sell. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+10 
+
+1. Michael does not have to set up an account. He creates an order, signs it with 
+
+MetaMask or Ledger Nano S and sends it to JOYSO, depositing Y tokens into the JOYSO 
+
+smart contract. Once the token asset is verified, the order is added to the database, 
+
+waiting to be matched by the Order Match Engine.     As soon as the order is recorded, 
+
+Michael is at liberty to make another, as all orders are processed sequentially. He could 
+
+also place combined multiple buy/sell orders in a single order.   
+
+2. Tina Taker sees the order on the exchange and wants to trade. She sends signed 
+
+instructions to JOYSO through the web interface (she also does not need to register) and 
+
+deposits tokens.    
+
+3. When JOYSO receives her instructions, token assets are again verified, the two orders 
+
+are matched, and both users are informed. The database is updated. 
+
+4. Users don’t need to wait for the transactions to be confirmed; they can continue 
+
+trading on JOYSO. 
+
+5. JOYSO sends the matched transaction to the blockchain and both users wait for 
+
+blockchain confirmation. The order is settled and tokens can be withdrawn. 
+
+If Tina’s offer was for more Token X than Michael wanted to buy, the smart contract would 
+
+automatically register a new order for the remaining amount of her ask in the Order 
+
+Match Engine. 
+
+ 
+
+Smart matching 
+
+Compared to the one-to-one matching of orders used in most decentralized exchanges, 
+
+users will prefer JOYSO smart matching. 
+
+Tina has placed an order. She wants to sell her 100 Y tokens and seeks 10 X tokens in 
+
+exchange. If there are matching orders in the system, she may not have to spend all of 
+
+her 100 tokens. Smart matching will connect her with the best offer listed for 10 X tokens. 
+
+In a one-to-one system she could be matched with any person wanting 100 Y tokens. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+11 
+
+If the JOYSO database contains no matching order, Tina’s sell order for 100 Y tokens 
+
+automatically becomes an open buy order for 10 X tokens and has the possibility of 
+
+earning over 100 Y tokens in a future trade. 
+
+The smart contract enforces rules that deliver results as good or better than what the user 
+
+has requested. 
+
+ 
+
+JOY Token 
+
+It is planned that 200 million JOY tokens will be generated and distributed as follows: 
+
+50%  Crowdsale ICO 
+
+25%  Private placement 
+
+25%  JOYSO team 
+
+Using the JOY token will entitle users to a 50% transaction fee discount. The discount 
+
+does not apply to gas fees.  
+
+Token holders will have the right to participate in various campaign activities hosted by 
+
+JOYSO. This may include discussions regarding which tokens shall be listed on the 
+
+exchange. 
+
+Advertisers can also use the token to earn discounts. Other benefits for using JOY will be 
+
+announced in time. 
+
+See the Token Sale section for sale specifics. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+12 
+
+The ICO market 
+
+Over $7B has been raised in the ICO process in the last nine months. At the time of writing 
+
+each month sees another $1.3B raised, far ahead of the $300M a month attributed to 
+
+angel and seed-stage venture capital. 
+
+Ethereum transactions per day now exceed Bitcoin’s. Although scaling challenges remain, 
+
+the demand for ICOs on the Ethereum blockchain will continue to be strong.  
+
+During this period of intense growth in ICOs, startup companies face sharp hikes in listing 
+
+costs. What used to cost 3 bitcoins now costs many times that. 
+
+We have an opportunity to engage with and support the ICO market while also 
+
+expanding JOYSO’s reach. Our plan is to list new ERC20 tokens without listing fees. 
+
+Supporting new startups builds their liquidity, the liquidity of the exchange and our 
+
+exposure to new traders. Attracting companies at this stage of their trading history is 
+
+sensible, since post-ICO, tokens are available in most exchanges. 
+
+Customers who have a smooth experience trading through JOYSO will become repeat 
+
+customers, particularly in the present situation, where ICOs in general and decentralized 
+
+exchanges in particular are delivering such poor user experiences.   
+
+JOYSO can make this process very simple for ICOs. The applicant fills out a web form, 
+
+JOYSO Admin validates the solitariness and when the token move restrictions are lifted, 
+
+the tokens are unlocked, listed and tradable.  
+
+Post-ICO, we will work towards supporting non-ERC20 tokens and cross-exchange 
+
+trading. 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+13 
+
+Security issues 
+
+Decentralized and hybrid exchanges must rely on secure wallets to ensure safe digital 
+
+signing of their clients’ instructions. Initially, JOYSO will support MetaMask and Ledger 
+
+Nano S; two wallets used widely and well-regarded in the crypto community. 
+
+Once the order is signed, it is sent to the Order Matching Engine. Then the JOYSO Admin 
+
+will send the matched order to the smart contract, to verify the order and settle funds.  
+
+ 
+
+ 
+
+Tamper Resistance 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+14 
+
+Even if a hacker gained control of the JOYSO website, without the private key of the 
+
+JOYSO Admin, the smart contract would not execute. The contract would detect an 
+
+unverified admin account and the fraudulent transaction would fail. 
+
+In the event of the JOYSO Admin account private key being stolen, control can be quickly 
+
+regained with multi-signature authorizations. 
+
+ 
+Disaster Recovery 
+
+A user can cancel orders he has previously signed with the assistance of JOYSO 
+
+Administration. If the problem was with the JOYSO server, the user could lock his account 
+
+for a period of time, then withdraw funds directly from the smart contract without JOYSO 
+
+administrative involvement. 
+
+ 
+
+Security 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+15 
+
+The balance of this section looks at the JOYSO architecture with respect to security 
+
+threats. 
+
+1. JOYSO token contract 
+
+The token follows closely the ERC20 token standard and uses code based 
+
+on  OpenZeppelin, with these amendments: 
+
+A lock has been added to prevent malevolent token transfer. An unlock call is required 
+
+from the contract owner to transfer the locked token. 
+
+The owner will initially be set to JOYSOWallet during the distribution of pre-sale tokens. 
+
+Then manually, with the multiSig wallet, the owner will be changed to the ICO contract.  
+
+Now the tokens can only be distributed as specified in the contract’s code. Once the ICO 
+
+has ended, the contract will call the unlock function to release the token to the user. 
+
+The lock can only be set to unlock once; it cannot be reset to ‘lock’. No outside calls are 
+
+permitted in the token contract, so the possibility of a reentrancy attack does not arise. 
+
+The unlock function can be called by any user and is not derived from library code so 
+
+additional testing is required. 
+
+ 
+
+2. Crowdsale contract 
+
+This is based on the OpenZeppelin crowdsale contract. 
+
+A release function is able to unlock the JOY token contract. This function can be called by 
+
+JOYSO Admin after the ICO has ended. If for some reason Administration does not trigger 
+
+the release, the system allows for any other user to do so after a few days. 
+
+The funds will be sent directly to JOYSOWallet, so no ether can be locked in the contract. 
+
+The outside calls are (a) the unlock function and (b) transfer ether to JOYSOWallet. Both 
+
+addresses are controlled by JOYSO, so again, no possibility of a reentrancy attack. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+16 
+
+ 
+
+3. JOYSO contract 
+
+This is more complex than average contracts so we will have it independently audited 
+
+until we are satisfied it is reliable. 
+
+We also plan multiple scenario unit tests and function tests to give the broadest possible 
+
+test coverage. 
+
+JOYSO uses the library provided by OpenZeppelin; related libraries include SafeMath, 
+
+Ownable, and ERC20 token contracts are used. 
+
+Results generated by the Order Match Engine only update the balance status in the 
+
+JOYSO contract. Only normal users are able to interact with the smart contract and 
+
+signatures are required for any action. At present it is not possible to call a smart contract, 
+
+so there’s no risk of a reentrancy attack. Further, we have limited the gas that external 
+
+calls can use. An illegal execution would cause an ‘out of gas’ error that stops the 
+
+transaction.    
+
+Cancellations of orders can be seen on the blockchain. If a user can not see a cancellation 
+
+or has reason for concern, they have the ability to withdraw funds without our permission. 
+
+JOYSO is not vulnerable to front-running attacks by miners or traders because user gets 
+
+the returned results in a second, as per the CEX experience. Even though JOYSO could 
+
+theoretically front-run users by itself, users could detect that orders were not in 
+
+sequence. 
+
+4. Multi-sig wallet 
+
+We use the wallet provided by the Gnosis team, unchanged. The contract is widely used 
+
+by many well-known blockchain financial institutions including Bancor and has no 
+
+dependencies on other libraries. For this reasons it can not be frozen in the way the Parity 
+
+wallet was.     
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+17 
+
+Governance 
+
+Legally, we are constituted in Taiwan, where crypto-currency is regarded as a commodity, 
+
+not money.  
+
+We are aware of restrictions that apply to ICOs in certain countries and will prevent IP 
+
+addresses there accessing those tokens in the exchange.  
+
+We have no involvement with fiat currencies so do not envisage any governance 
+
+complications in that regard. 
+
+In terms of operational governance, much of this is handled by the JOYSO Aadmin 
+
+account.  
+
+l It sends the matched order automatically to the smart contract, confirming the 
+
+transaction and settling the funds of each counterparty. 
+
+l It broadcasts operational status changes; for example, the launch of a new 
+
+function, the blockchain’s current traffic load, system maintenance 
+
+requirements, etc. 
+
+l It is the way we manage the deployment of new smart contracts, notifying users 
+
+to withdraw funds and tokens from the old contract in a timely manner. 
+
+Code quality and testing 
+
+JOYSO use both behavior-driven development and test-driven development to ensure 
+
+product security and a quality user experience. We use the Zeppelin Solidity framework 
+
+to provide patterns for secure code that can be reused without duplication. 
+
+Performance testing is currently underway for the Order Matching Engine and trading 
+
+engine. Immediately after the ICO, we will migrate these and the smart contracts to the 
+
+Ropsten Test Network so that we can prove all functions executable. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+18 
+
+We have done proof-of-concept on the testnet for deposits, withdrawals, order matching 
+
+and order cancellations. Server-side is operational. We are currently testing the server 
+
+and working on further reducing gas costs. 
+
+There are two arms to our server security; internal server-side testing and auditing done 
+
+in the bounty program (to commence after the ICO). Face-to-face user testing and 
+
+independent auditing will be done before the application is migrated to the mainnet. 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+19 
+
+Competition 
+
+All exchanges are competition; decentralized or not. Centralized exchanges still 
+
+dominate the market and will for some time. They have the advantage of incumbency, 
+
+though history shows market share can change quickly. We believe the market will 
+
+appreciate the benefits of a hybrid architecture when they see a trustworthy, focused 
+
+solution. Below, we discuss the principal competitors in the decentralized and hybrid 
+
+exchange market segments. 
+
+ 
+
+EtherDelta 
+
+EtherDelta describes itself as a decentralized exchange, though it is more accurate to say 
+
+it’s a hybrid design. Transfers of money and trades are executed on the blockchain, in a 
+
+trustless manner. But it operates a centralized order book with encrypted orders. It claims 
+
+a million active trading accounts.     In September 2017 a number of EtherDelta users 
+
+had their private keys stolen while using the EtherDelta site. In December 2017, hackers 
+
+gained access to EtherDelta’s DNS server and were able to steal user’s money with a fake 
+
+site. These episodes demonstrate that decentralisation does not guarantee security. 
+
+Clients have been vocal on the subject of the site’s user experience. In January 2018 the 
+
+company publicly apologized to users “for all the confusion and mistakes on our site”. 
+
+ 
+
+0xProject 
+
+0x has a similar structure to EtherDelta, though it’s more of a platform than an exchange. 
+
+Like EtherDelta it decentralizes settlement and uses a centralized server to handle the 
+
+order book. 0x wants to ‘franchise’ decentralized exchanges. It shares its centralized 
+
+server with all participating exchanges in order to create a larger liquidity pool. In return 
+
+for access to improved liquidity, participating exchanges conduct all trades using 0x’s 
+
+ZRX tokens. In this way 0x increases the value of their own tokens. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+20 
+
+The lack of automated matching in 0x and EtherDelta gives rise to arbitrage, where orders 
+
+are filled to the disadvantage of those who don’t cancel their orders quickly enough 
+
+during market fluctuations. 
+
+0x allows for two kinds of orders, broadcast orders and point-to-point orders. This 
+
+introduces the near certainty that people will execute point-to-point orders to 
+
+circumvent fees charged in broadcast orders. 
+
+ 
+
+AirSwap 
+
+AirSwap is a peer-to-peer exchange network. Unlike 0x, AirSwap does not charge fees. 
+
+It’s a decentralized exchange that does not employ a centralized order book. One-to-one 
+
+trades rather than the conventional system, where bids are regularly posted and 
+
+cancelled. 
+
+Traders use an off-chain Oracle (a software agent that communicates with the 
+
+blockchain) to recommend pricing. Pricing is a critical element and it is far from clear that 
+
+this method will match the performance of a centralized order book containing more 
+
+price signals. 
+
+Rather than a finished product, the authors view AirSwap as a protocol and two APIs that 
+
+may develop into something interesting in time, though we cannot discern a business 
+
+model at present.  
+
+Because all aspects of the system are on-chain, questions remain about how quickly the 
+
+exchange will run. 
+
+ 
+
+Kyber Network 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+21 
+
+Kyber is a DEX; it does not use a centralized order book and is entirely on-chain. It 
+
+addresses the fees issue using smart contracts. Kyber holds reserves and ‘shops’ various 
+
+other exchanges to get the best rate.     There is a substantial amount of development 
+
+required to effect this, and success depends on other software which Kyber does not 
+
+control. Its ability to attract reserves is key, and providing the reserves is only attractive if 
+
+the user base is extensive. 
+
+ 
+
+IDEX (Aurora Labs) 
+
+This is a real-time HEX platform, with centralized matching and blockchain settlement. 
+
+Traders can fill multiple orders at once and cancel orders without incurring gas costs 
+
+however it does not have the sophisticated matching mechanisms that JOYSO employs. 
+
+The back-end and smart contract architecture is quite different to JOYSO’s. Gas fees will 
+
+be considerably lower for JOYSO users - one taker can match many makers in a single 
+
+transaction. We have also successfully experimented with a new method that zips the 
+
+input arguments of contract methods, further reducing the gas fee. 
+
+IDEX is part of an ambitious project to develop a completely decentralized global 
+
+banking network built around a stablecoin, an asset with price-stability characteristics. 
+
+Though we think this idea is interesting, we note that no such coin has yet proved 
+
+successful, and many have been attempted. 
+
+ 
+
+The Blocknet 
+
+Similar to IDEX, Blocknet’s exchange is part of a larger project. This system aims to enable 
+
+“open-ended communication and delivery of services between users of different 
+
+cryptocurrencies”. They describe their product as a general purpose infrastructure for 
+
+inter-blockchain services. Again, the scope of the project should not be underestimated.  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+22 
+
+Other competitors include OasisDEX and Radex. These are on-chain exchanges whose 
+
+market appeal may be limited by the slow block confirmation times their systems are 
+
+built around. 
+
+ 
+
+Bancor 
+
+Bancor conducted a very large ICO in 2017. It’s a decentralized liquidity network which 
+
+allows the exchange of Ethereum tokens without a counter-party. Token owners must 
+
+use Bancor’s token, deposit a substantial reserve, and use a price-setting function which 
+
+readjusts the current price according to the weight of purchases and sales. In theory this 
+
+will lead to price fluctuations based on actual sales rather than market sentiment.  
+
+This is a radical departure from conventional exchanges. Bancor’s smart contract is 
+
+complicated, and exchanges using the network will require considerable resources 
+
+because of the vast number of internal transactions involved. Tokens wanting to 
+
+participate must conform to Bancor’s own standards, in addition to ERC20. 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+23 
+
+Business model 
+
+Trading fee discount 
+
+Income will be generated from trading fees in ether or JOY effective from the beta launch; 
+
+May 2018. These will be set around 0.1% for order makers and 0.2% for order takers.  
+
+Our price strategy is to attract users with a 50% discount for JOY token use. We will 
+
+generate transactions and advertising by offering free and frictionless listings to ICOs. 
+
+Advertising on JOYSO through the JOYSELECT program will also be competitive, with a 
+
+50% discount for ICOs paying with JOY.  
+
+Token reduction plan  
+
+Each quarter, we will burn JOY tokens equal to 50% of our net profits, until 50% of the 
+
+total supply (100 million JOY) are destroyed. The process will be announced on the 
+
+blockchain. Eventually we will destroy 100 million JOY tokens in total, leaving 100 million 
+
+JOY tokens. 
+
+This will be our commitment to our investors.  
+
+ In the second phase 
+
+When available as part of our second phase, we expect margin trading to be very 
+
+attractive to users, as the collateral required for trading using the JOY token will be lower 
+
+than with ether. 
+
+Compared to centralized exchanges, we offer reduced settlement costs and low-cost 
+
+integration with wallets due to efficiencies in smart contracts and blockchain. We expect 
+
+to generate increasing business as word spreads through the community. 
+
+The efficiencies of the HEX exchange structure create a low cost operation with an 
+
+attractive feature set. Because we don’t store the private keys of users, we don’t require 
+
+expensive hardware and software systems to segregate/protect them. We mitigate the 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+24 
+
+higher gas fees normally associated with decentralized exchanges by zipping the input 
+
+arguments and optimizing the gas consumption.  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+25 
+
+Marketing plan 
+
+ 
+
+Target Market 
+
+People between the ages of 25 and 35  who are interested in digital currency or fintech 
+
+investment opportunities. Initial focus on select national markets. 
+
+ 
+
+Target Audience: 
+
+Market segmentation and the user experience journey  
+
+ 
+
+Positioning 
+
+JOYSO is a hybrid exchange (a HEX). It offers traders the speed and features of a 
+
+centralized exchange with the privacy and security of a decentralized network. 
+
+ 
+
+Communication points 
+
+For CEX users: 
+
+● Do you really want to give an exchange your private keys? 
+
+● Do you really want to let an exchange fully control your funds? 
+
+● USD$1B in crypto hacked/stolen in 2017 
+
+ 
+
+For DEX users: 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+26 
+
+● Why is this so hard? 
+
+● Why is this so slow? 
+
+● Why so much gas? 
+
+ 
+
+ 
+
+Channels 
+
+Based on our market research and advice, we will focus activity primarily on Taiwan, 
+
+certain Asian countries and certain English-speaking markets.  
+
+ 
+
+Because of our strong connections with early Bitcoin adopters in China and Singapore, 
+
+we believe we will connect powerfully with many overseas-based Chinese people wishing 
+
+to invest in ICOs.  
+
+ 
+
+And because of our long-term links with the Bitcoin and Ethereum communities in 
+
+Taiwan we expect to have strong advocacy there. 
+
+ 
+ 
+
+Advertising and social media 
+
+With our digital advertising partners we are implementing a comprehensive marketing 
+
+program between January and March 2018.  
+
+ 
+
+Creative content, including livery, artwork and video is currently under development in 
+
+multiple languages. 
+
+ 
+
+Twitter, Telegram, YouTube, Google AdWords and Facebook content is being prepared. 
+
+We plan a comprehensive retargeting campaign as part of the plan. 
+
+ 
+ 
+
+Community building and other promotion 
+
+Customer engagement will be through both social channels and offline gatherings. 
+
+JOYSO management has experience running education conferences and events and we 
+
+will use this to advantage. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+27 
+
+ 
+
+We will attend conferences and crypto events in the target countries where we believe 
+
+we can raise our profile through good sponsorship deals, build profile through 
+
+appearances on credible industry panels and network with potentially valuable partners. 
+
+ 
+
+We will appoint a professional public relations consultancy to target key media channels 
+
+and  opinion leaders. 
+
+ 
+Pricing 
+
+l JOYSO gas costs will be lower than decentralized exchanges 
+
+l Our 50% discount on commissions with JOY tokens makes us one of the lowest 
+
+cost exchanges 
+
+l ICOs can list with JOYSO without audit costs 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+28 
+
+Team 
+
+The team comprises eight full-time and three part-time employees. The JOYSO project 
+
+developed out of Consensus Innovation Ltd, a blockchain innovation incubator active in 
+
+Taiwan and internationally. Consensus has worked on copyright, music and financial 
+
+projects, including one with Taiwan’s largest financial institution. The core team 
+
+contributed to dodocker.com, a blockchain-based crowdfunding enterprise, and has 
+
+been working on the JOYSO project since 2017. 
+
+ 
+
+ 
+Team Introduction  
+
+宋倬榮 
+TomSoong 
+[Tso-Jung Sung] 
+CEO 
+
+ 
+
+While working at Alchip Technologies (cutting edge ASIC 
+
+solutions), Tom supervised development of the world’s first 
+
+28nm Bitcoin mining chip. In 2014 he founded AlcheMiner 
+
+and brought to market a 40nm Litecoin mining chip which 
+
+garnered 20% of Litecoin mining power. 
+
+Blockchain advisor to Taiwan’s Industrial Technology 
+
+Research Institute (ITRI), one of the world’s leading 
+
+technology research and development institutions. 
+
+Administrator of the Bitcoin Chinese Community, which has 
+
+grown to over 32,000 members, and the Taipei Ethereum 
+
+Meetup group. 
+
+Former digital integrated circuit designer at Realtek, one of 
+
+the world’s largest integrated circuit  design houses. 
+
+Tom is a successful innovator with a deep commitment to 
+
+improvements in the blockchain space. He has a B.S. and an 
+
+M.S. in Electrical Engineering from National Tsing Hua 
+
+University, the most academically successful of Taiwan’s 160 
+
+universities. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+29 
+
+高崎鈞 
+Taka  
+[Chi-Chun Kao] 
+COO 
+
+ 
+
+Taka is the former Technical Manager of the Industrial 
+
+Technology Research Institute. He has been a researcher for 
+
+the Board of Science and Technology, part of the executive 
+
+branch of the Taiwan government. In this role he was 
+
+accountable for blockchain advocacy in the public sector and 
+
+for digital policy coordination.  
+
+Over ten years at ITRI, he has project managed a diverse range 
+
+of digital and big data projects. For the past two years he has 
+
+been the principal organizer of the Taiwan Blockchain 
+
+Summit. 
+
+Technical architecture contributor to the Dodoker project, a 
+
+blockchain-based crowdfunding platform 
+
+Taka has a B.S. and M.S. in Mechanical Engineering from 
+
+National Taiwan University, one of the top ranked universities 
+
+in the world.  
+
+謝咏宸 
+Will 
+[Yung-Chen Hsieh] 
+CTO 
+
+ 
+
+Will is a PhD candidate in Computer Science at National 
+
+Taiwan University. He has been a key contributor to GCoin, a 
+
+permissioned, distributed blockchain infrastructure for 
+
+enterprise, and the first open source blockchain 
+
+implementation in Taiwan. He has also been part of the 
+
+development team for the DiQi digital token wallet platform, 
+
+which aims to improve user experience around blockchain 
+
+services. 
+
+He is active in the Ethereum Taipei Meetup community and is 
+
+a committed educator, having taught blockchain and smart 
+
+contract courses and authored many articles. He has been 
+
+responsible for smart contract development at JOYSO. 
+
+陳翊銓 
+Emn178 
+[Yi-Cyuan Chen] 
+System Architect 
+
+Yi-Cyuan is a full-stack software engineer with over ten years’ 
+
+experience in software development. He is a regular 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+30 
+
+ 
+ 
+
+contributor to many open source projects on GitHub, 
+
+including js-sha3.  
+
+His employment history includes front and back end 
+
+development, as well as settlement and clearing at Titansoft 
+
+Ltd., a global online gambling company with over 100,000 
+
+concurrent users. 
+
+He is responsible for the full stack work at JOYSO. 
+
+朱昱翰 
+John 
+[Yu-Han Chu] 
+DevOps Engineer 
+
+ 
+ 
+
+ 
+
+John is a full-stack software engineer. He built and still 
+
+operates the largest crypto-mining community in Taiwan. 
+
+Privately, he has founded four mining pools; GPUMINE ETH, 
+
+Zen, Whale and Music.  
+
+He began the GPUMING community in 2015 and it now has 
+
+over 16,000 members.  
+
+Principally, he has been doing back-end development at 
+
+JOYSO. 
+
+陳鼎元 
+Kevin 
+[Ting-Yuan Chen] 
+Legal  
+
+He graduated from National Chen-Chi University with a law 
+
+degree, Ting-Yuan has worked at Tien Heng Attorneys-at-Law 
+
+and Li & Cai Intellectual Property Office Legal Department as 
+
+arbitrators. In addition to his background in the legal industry, 
+
+Ting-Yuan has also worked in food, media, education and 
+
+manufacturing industries. He is fluent in Mandarin Chinese, 
+
+English and Japan, as he has worked in China, America and 
+
+Japan over the past decade. Ting-Yuan entered the Block 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+31 
+
+ 
+
+chain community two years ago, and is now working as our 
+
+legal specialist. 
+
+ 
+
+Advisors Introduction  
+
+周宇修 
+Clarence Chou 
+[Yu-Shiou Chou] 
+
+ 
+
+Bachelor of law, National Cheng-chi University 
+
+Master of law, National Cheng-chi University 
+
+Visiting Scholar at Columbia Law School 
+
+An-Chung Attorneys-at-Law 
+
+Li & Cai Intellectual Property Office lawyer 
+
+PILnet: the Global Network for Public Interest Law Fellow 
+
+Taiwan Association for Human Rights executive member 
+
+Amnesty International Taiwan Executive Director 
+
+Taipei Bar Association Executive Director 
+
+陳昶吾 
+Chang-Wu Chen 
+
+ 
+ 
+
+Dr. Chang-Wu Chen serves as the Chief Scientist at AMIS and 
+
+is also an Adjunct Assistant Professor at National Chengchi 
+
+University. There, he is researching the consensus protocol, 
+
+Casper; seminal in Ethereum’s transition to a Proof of Stake 
+
+system. 
+
+He is a contributor for Ethereum Research on Casper. He has 
+
+worked as a senior blockchain engineer for 21Vianet, the 
+
+largest independent data center operator in China, and was a 
+
+visiting scholar at the University of Illinois from 2015-2016. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+32 
+
+He received B.S. and Ph.D. degrees in Computer Science and 
+
+Communication Engineering from the National Central 
+
+University, Taiwan, in 2007 and 2016. His research interests 
+
+include wireless networks, network security, vehicular 
+
+networking and blockchain. 
+
+杜宏毅 
+Tony Tu 
+[Hung-Yi Tu] 
+
+ 
+ 
+
+Dr. Tu Hung-Yi has been the Chief Strategy Officer of 
+
+TAIWAN-CA Inc. since 2008. He brings expertise in strategic 
+
+planning and market development, focusing on e-business 
+
+security and new e-business fintech models. Dr. Tu has led 
+
+several national projects, such as the project to build the 
+
+Taiwan Personal Financial Information Identification Center, 
+
+the POC blockchain project for a Taiwan Automated Clearing 
+
+House, and a project to deliver e-Certifications over multiple 
+
+mobile devices for new generation financial services. 
+
+Dr. Tu served as Associate Professor in Department of 
+
+Computer Science and Information Management in 
+
+Providence University from 1993 to 2000, and received his 
+
+Ph.D. degree in Computer Sciences from Purdue University in 
+
+West Lafayette, USA. In April 2000, he joined HiTRUST Inc., a 
+
+Certification Authority company, as Senior VP - Product & 
+
+Marketing. 
+
+Dr. Tu received his Master and Bachelor degrees in Computer 
+
+Engineering from Chiao-Tung University in Taiwan, R.O.C., in 
+
+1986 and 1984 respectively. 
+
+Bret Treasure Advisor, marketing consultant and digital content creator in 
+
+the blockchain and smart contract space. White papers, 
+
+content strategies, social media and traditional channels. 
+
+Founding board member, Blockchain Australia. Immediate 
+
+past president Australian Web Industry Association and Chair 
+
+of Judging, Australian Web Awards. 
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+33 
+
+ 
+
+謝楨國 
+Ben Hsieh 
+ [JHEN-GUO SIE] 
+
+ 
+ 
+
+JHEN-GUO SIE is the general manager of NTT Data Taiwan and 
+
+is responsible for the SAP business and management of the 
+
+Taiwan and Greater China region.  
+
+NTT Data is the biggest IT servicer in Japan. To cooperate with 
+
+the development of the global blockchain, NTT established 
+
+the tactical team, focusing on financial, public and social 
+
+infrastructure, and the field of B2B service. More than 100 
+
+tactical blockchain businesses and contracts will be signed 
+
+before March, 2020. 
+
+ 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+34 
+
+ 
+
+Partner Introduction 
+
+ 
+
+ 
+
+MakerDAO 
+
+Due to large fluctuations in the cryptocurrency market, 
+
+investors demand a cryptocurrency whose value is stable 
+
+relative to fiat currency. It is our pleasure to have 
+
+MakerDAO as our strategic partner, which we plan to adopt 
+
+MakerDAO’s stable coin, Dai. The value of Dai will be stable 
+
+relative to the U.S. dollar.  
+
+ 
+
+NTT Data Corporation (株式会社エヌ・ティ・ティ・データ 
+
+Kabushiki-kaisha Enu-tī-tī Dēta) is a Japanese system 
+
+integration company and a partially-owned subsidiary of 
+
+Nippon Telegraph and Telephone (NTT). Japan Telegraph 
+
+and Telephone Public Corporation, a predecessor of NTT, 
+
+started Data Communications business in 1967. NTT, 
+
+following its privatization in 1985, spun off the Data 
+
+Communications division as NTT DATA in 1988, which has 
+
+now become the largest of the IT Services companies 
+
+headquartered in Japan. NTT DATA is a publicly traded 
+
+company, but is about 54 percent owned by NTT. Its 
+
+business areas are in national and local governments, 
+
+financial, and telecommunication sectors. According to 
+
+reports in 2012, Forbes Global 2000 recognizes NTT DATA 
+
+as the 5th largest IT Services company. 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+35 
+
+Roadmap 
+
+ 
+
+Business  Timeline Product 
+
+Concept & research 2017.9.15  
+
+ 2017.10 Project start 
+
+Official landing page 2018.1. 20 Architecture & coding 
+
+Pre-ICO 2018.2.01 Prototype demo video 
+
+ICO start 2018.3.01 Prototype release on testnet 
+
+ICO end 2018.3.21 Testing & bounty 
+
+JOYSO launch 2018.5 Product release on mainnet 
+
+ 2018.9 Service scaling  
+
+Reach $20M daily trading 
+
+volume 
+
+2018.12 Cross-centralized exchanges via 
+
+trading API 
+
+ 2019.3 Margin trade on contract 
+
+Reach $1B daily trading 
+
+volume 
+
+2019.6 Off-chain payment service 
+
+ 2019.9 Mobile payment and wallet 
+
+ 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+36 
+
+Token sale 
+
+Token sale details 
+
+Market positioning JOYSO offers traders the speed and features of a centralized 
+
+exchange with the privacy and security of a decentralized 
+
+network. 
+
+Token name and ticker JOY 
+
+Token issuer Consensus Innovation Ltd. 
+
+Token type Ethereum ERC20 
+
+Price 1 ETH = 10,000 JOY.  
+
+Total issuance Total tokens generated: 200,000,000 (100%) 
+
+Distributed for ICO：100,000,000 (50%) 
+
+Distributed for private placement：50,000,000 (25%) 
+
+Reserved by JOYSO team：50,000,000 (25%) 
+
+Purchase cap No purchase cap will be applied 
+
+Schedule ICO event commences March 1, 2018 08:00 (UTC+0)  
+
+ICO ends March 22, 2018 08:00 (UTC+0).  
+
+Handover of tokens Concurrent with smart contract exchange 
+
+Transferability Transferred upon purchase. Tradable after ICO ends  
+
+Trading 
+
+commencement 
+
+Late March, 2018 
+
+Unsold tokens All generated but unsold tokens will be released over future 
+
+years at a rate no higher than 15% per annum. 
+
+Legal advisors Clarence Chou 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+37 
+
+Application of funds 
+
+Post ICO, funds will be applied as follows:   
+
+ Application Principal tasks 
+
+35% Product 
+
+development 
+
+Development of trading engine, order match engine, smart contracts, 
+
+migration to main net, security protocols, back-end development, 
+
+wallet integrations, front-end development, mobile development, 
+
+testing, margin trading support, stable coin(Dai) testing, cross-
+
+centralized exchange development 
+
+20% Marketing  Targeted advertising 
+
+Inbound marketing 
+
+Attendance, exhibiting, sponsorship of conferences and events 
+
+Social media platform development, content creation including video 
+
+Community development and engagement on prominent platforms 
+
+Partnership promotion and offers 
+
+15% Operations DevOps environment, status monitoring and reporting, system 
+
+deployment and backup, load balance, performance tuning, issue 
+
+tracking 
+
+Customer services and support team, token auditing and listing, 
+
+market price watch and trading fee updating,   
+
+Funds settlement and operating report  
+
+10% Legal compliance  Prepare for new regulations due to the rapid changes in the digital 
+
+world. 
+
+10% Security Bounty To facilitate independent, low-cost auditing of JOYSO systems to 
+
+reach the security level of tamper resistance and disaster recovery 
+
+10% Team Reward To encourage and inspire team growth 
+
+ 
+
+  
+
+
+
+ 
+ 
+
+ 
+
+© 2018 Consensus Innovation Ltd. All rights reserved | www.css-inno.com 
+ 
+
+38 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+THANK YOU! 
+
+For information please contact us at 
+
+info@joyso.io 
+
+or join our Telegram group at 
+
+t.me/joyso_io 
+
+

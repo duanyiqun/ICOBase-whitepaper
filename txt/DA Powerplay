@@ -1,0 +1,477 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Digital Assets Power Play
+Whitepaper
+
+Technology building blocks for digital assets trading automation
+
+Nikola Jokic
+
+Digital Assets Power Play
+nikola@kip.investments
+
+Matej Ujevic
+
+Digital Assets Power Play
+matej@kip.investments
+
+Sasa Hunjak
+
+Digital Assets Power Play
+sasa@kip.investments
+
+Milovan Pasini
+
+Digital Assets Power Play
+pasini@kip.investments
+
+Boris Milovanovic
+
+Digital Assets Power Play
+boris@kip.investments
+
+Zlatko Anusic
+
+Digital Assets Power Play
+zlatko@kip.investments
+
+August 10, 2017
+
+This Whitepaper outlines the Digital Assets Power Play platform structure and building blocks.
+We will outline the design and architecture, with a high level overview of the platform including
+the backend, frontend, solution and blockchain technologies used. The Whitepaper should give
+the reader a better overview of how the platform will be designed, how will it include third party
+building blocks and enable a distributed economy.
+
+Abstract
+
+The Digital Assets Power Play (hereinafter: DA Power Play) platform provides the required building
+blocks and services to enable digital assets trading automation. The DA Power Play platform is organised
+around different stakeholders, wallets and distributed computer nodes aiming to provide a balanced
+trade-off between availability, transparency and efficient (quick) algorithm execution and digital asset
+management. The DA Power Play platform enables a new distributed economy allowing stakeholders to
+seize algorithmic trading and investment opportunities in an optimally secure and distributed fashion. As
+we are building the distributed economy ecosystem, the DA Power Play Platform will be designed as a
+combination of the Blockchain and the distributed systems architecture. We believe that such a solution
+offers the right balance of transparency, system availability and I/O throughput.
+
+• The Blockchain building component will be based upon Ethereum smart contracts – wallets, tokens
+themselves and a web 3.0 stack (swarm, ens/eth, bzz).
+
+• The distributed system components will be based upon hybrid cloud, legacy databases, Node,js, C
+language, messaging/communication protocols such as WebRTC, Whisper and IPC but also different
+data streams where applicable.
+
+Within the Whitepaper, we will outline the building blocks of the DA Power Play Platform.
+
+1
+
+mailto:nikola@kip.investments
+mailto:matej@kip.investments
+mailto:sasa@kip.investments
+mailto:pasini@kip.investments
+mailto:boris@kip.investments
+mailto:zlatko@kip.investments
+
+
+Da Power Play Whitepaper • August 2017 • v1.2
+
+I. The Introduction
+
+When we started with crypto investment strategies and developing KIP’s Eye System morethan 2 years ago, there were only a handful of crypto currencies and exchanges, withrelatively small daily trading volumes. At the time, it was possible to trade and manage
+these assets manually. However, early on, we have started to realize that volumes, the number
+of digital assets and exchanges are going to increase, requiring us to automate our trading. As
+such, we have begun to design our KIP’s Eye system to address these issues and automate our
+trading. Our current trading strategies have led us to design our own Neural Networks and
+Artificial Intelligence agents enabling us to predict future token/coin price movements with a
+great certainty and accuracy.
+
+At the time of writing (August 2017) the number of digital assets has exploded, increasing
+to over 850 and it will continue to expand to well over 2000 within the next two years. With
+such rapid growth, collecting market data (trades, order books) has become a complex task in
+itself, requiring fast data collection and storage running in TBs of data per month. Additionally,
+data needs to be parsed, processed, analysed and used for trading, and all trades and digital
+assets need to be accounted for, with correct risk controls in place. We believe that designing and
+developing such a system from scratch represents a great obstacle for most stakeholders, and once
+fully developed, difficult to replicate. Such data collection and platform service offers should be
+done on an industrial scale and presented to other market participants as a distributed economy
+where all stakeholders will benefit.
+
+In the meantime, the number of exchanges has increased to over 100 and continues to rise.
+Exchanges are facing issues of downtime due to maintenance, attacks, or even regulatory issues
+locking out trading during exchange downtime and resulting in unavailability of digital assets
+and potential losses. We also believe that the platform should address these exchange downtimes
+by offering a single API multi-exchange access. By having multi exchange access we will be able
+to address exchange downtime, liquidity issues and digital asset lockdowns. Additionally, due to
+distributed system architecture, the platform itself should be resistant to attacks, offering greater
+availability and uptime for all stakeholders.
+
+Currently, investing into top performing or portfolio-optimal digital asset strategies is a very
+complex process, and more often than not it’s hard to find an easy route into such an investment.
+By providing the building blocks for strategy design and trading automation, and by making the
+results of these strategies visible, investors will have an easier route into making a decision and
+invest into digital assets. This will allow investors to excel in their overall portfolio structure and
+returns. Smart contracts – wallets will represent a bond of trust between investors and strategy
+owners/digital assets managers.
+
+We also believe that one type or set of services is not "one size fits all", and as such will open
+building blocks to developers and third party providers, allowing them to design these additional
+building blocks and integrate them with the platform as a service. By enabling third party building
+blocks we believe that the platform will become truly scalable, allowing for numerous trading
+strategies and platform features.
+
+Current market solutions provide DIY services where the user is only a stakeholder using the
+service to create, run, and invest in strategies. There’s a need for a new distributed socioeconomic
+platform backed by new technologies and smart asset allocation. We recognise this need for
+establishing different wallet types addressing stakeholder’s needs, but also for creating different
+combinable building blocks by following Unix philosophy.
+
+2
+
+
+
+Da Power Play Whitepaper • August 2017 • v1.2
+
+Figure 1: General system architecture
+
+II. The Platform
+
+As stated the DA Power Play platform will have to address all the obstacles mentioned above by
+utilising Blockchain technologies and legacy distributed technologies.
+
+The general system architecture of the platform’s building blocks and components are shown
+on Fig. 1.
+
+The DA Power Play Platform is a distributed system in nature, having many building blocks
+and components working together, primarily Wallets, Kips Eye Platform Backend, strategy building
+blocks, an Ethereum-powered user interface node, and arbitrary amounts of additional building
+blocks built for the user interface or Kip’s Eye Platform Backend. The DA Power Play Platform
+will also allow for third party building block integration and service offers on the platform.
+
+i. Combining Blockchain and legacy technologies
+
+Due to the limitations of Ethereum technology in block time execution ( 14 seconds, or 4 seconds
+on the Kovan test network, which we are following closely, but still not quickly enough for the
+transactional requirements), and challenges in communication from the Ethereum network with
+the outside world the DA Power Play platform will be a combination of blockchains designed
+to provide financial transparency with Kip’s Eye Platform Backend and other building blocks to
+give the algorithms required processing power and tick speed in order to compete with other
+automated systems, all of this while enabling the platform user’s nodes to collect and confirm
+market data and deploy new algorithms and building blocks. We are actively investigating
+multi-chain solutions and emerging inter-chain standards.
+
+3
+
+
+
+Da Power Play Whitepaper • August 2017 • v1.2
+
+ii. Speed of execution
+
+By carefully combining in-memory data processing and collection with geolocation system distri-
+bution, we will achieve optimal speed when accessing and processing market data. In-memory
+capacity for QPS (quotes per second) is expected to be at 1 million QPS and can be further scalable.
+
+Efficient communication channels/protocols are employed on multiple levels (inter-process,
+inter-node) to allow for high-speed, real-time market and social data collection, optimisation, and
+analysis.
+
+iii. Geo Distributed nodes
+
+Developed automated trading strategies will be dockerised and deployed to the most geolocation-
+optimal server ensuring the shortest ping times for exchanges and users. Also, optimal network
+routes are prepared to have the shortest path between platform components and exchanges.
+Naturally, all these nodes will be geo redundant with a multi-site clustering relying on a hybrid
+cloud solution.
+
+iv. Wallets
+
+Wallets are Ethereum based smart contracts designed to hold and manage platform assets. The DA
+Power Play platform will provide the following wallets: Public Wallet, Strategy Wallet, Operational
+Wallet and Private Wallet. The minimum number of legally required KYC and AML procedures
+will be implemented.
+
+iv.1 The Strategy Wallets
+
+Strategy Wallet has the following functionalities:
+
+• A deposit function to receive the funds for strategies and forward them to Kip’s Eye.
+• A constantly updated list of all strategy supporters with the amount supported
+• Strategy information such as performance, assets under management, etc
+• A withdrawal function for the returning of funds to the strategy supporters
+• Definition of strategy owner’s fees for supporting their strategy
+• Domain "mystrategy.dapowerplay.eth"
+
+iv.2 The Public Wallet
+
+As the Public Wallet is designed to provide additional funding to strategy owners and to backing
+the best strategies, whilst reinvesting appreciation and provide liquidity. The Public Wallet will
+have similar functionalities as the Strategy Wallet but on a grander scale. The Public Wallet has
+the following functionalities:
+
+• A deposit function to receive funds for strategies and forward them to Kips Eye,
+• A constantly updated list of all strategy supported by Public Wallet with supported amount
+• Strategy information for all backed strategies such as performance, assets under management
+• A withdrawal function for returning funds to the Public Wallet
+• Domain publicwallet.dapowerplay.eth
+
+4
+
+
+
+Da Power Play Whitepaper • August 2017 • v1.2
+
+iv.3 The Private Wallet
+
+The Private Wallet is designed to hold digital assets for investment in Strategy Wallets. As such,
+it is crucial to obtain fast exit and entry into other strategies as well as maintaining records of
+performance (for both single strategy investments and total investments). Private Wallets will need
+to have transparency and be very responsive. You will be able to withdraw and deposit from your
+Private Wallet whenever you wish - DA Power Play will only withdraw funds with your explicit
+approval, such as when supporting strategies. The Private Wallet has the following functionalities:
+
+• Dual ownership, equally by Da Power Play and you.
+• A deposit function to receive funds from others strategies and forward them to Private
+
+Wallet,
+• Constantly updated list of all strategy supported with the supported amount
+• Overall Wallet and single strategy informations
+• A withdrawal function for returning funds to the Private Wallet
+• Domain myprivatewallet.dapowerplay.eth
+
+iv.4 The Operational Wallet
+
+The Operational Wallet will be transparent meaning that it will be publicly visible information
+showing performance, assets under management, etc. Although transparent,the Operational Wallet
+will be designed to support the costs of the operations. The Operational Wallet will have basic
+functions that will provide transparency through a domain: operationalwallet.dapowerplay.eth.
+
+v. Kip’s Eye Platform Backend
+
+In order to deploy automated investment strategies, one must obtain data, parse it and run analysis.
+To gather the required resources KIP’s Eye © will function as a hybrid cloud that comprises of
+servers across the globe that will collect, analyse, and store data, and ultimately execute strategies.
+Another requirement is to maintain high data quality and to enable fast data access and execution.
+
+The Kip’s Eye © will perform in a distributed manner, so rather than creating a single monolith,
+the system architecture is divided in to several distributed modules. Every module represents
+different tasks in creating and executing fully automated strategies.
+
+The Kip’s Eye © modules are as follows:
+
+v.1 The Collector
+
+This module is used to collect data from the exchanges, hence it is known as the Collector. Due
+to the distributed geo locations of the exchange’s servers, the aim is to provide the shortest and
+fastest route from exchanges to platform stakeholders, providing platform users with timely
+information about the state of digital assets across exchanges and alongside trades and order
+books. Additionally the Collector will analyse and parse data in order to achieve the highest data
+quality, ensuring high integrity of the data, as well as data uniformity. Data will be propagated
+through to the other modules of the system as well stored into a database where it will be used
+for further analysis and back testing.
+
+v.2 The Calculator
+
+The purpose of this second module is to calculate all required technical parameters that will be
+used in the decision making processes within every automated investment strategy. As with the
+
+5
+
+
+
+Da Power Play Whitepaper • August 2017 • v1.2
+
+Figure 2: Kip’s Eye © software Architecture
+
+Collector, the Calculator will have functions that will send calculated data through other modules
+and also store calculated data in a database for future use.
+
+v.3 The Strategist
+
+This third module will store logic of automated trading strategies, and based on the calculated
+and raw information of the state of digital assets across exchanges, it will decide what action
+should be executed. Based on these decisions, information will be pushed into the next module
+and stored in the database.
+
+v.4 The Executive
+
+Since information regarding account access keys is most valuable, it’s of the highest priority to
+protect this information with strong security measures. The fourth module will execute actions
+that were approved and validated by the Decision Maker module, hence it is called the Executive.
+Also, when actions are executed, this information will be stored in a database for backtracking
+and future analysis.
+
+6
+
+
+
+Da Power Play Whitepaper • August 2017 • v1.2
+
+v.5 The Asset manager
+
+This is a special module for surveillance and management that will provide end to end process
+stability and data integrity. Furthermore, it will provide risk control and it will be in charge of
+cancellation of tickets/actions that have already taken place, therefore optimising risk and system
+usage.
+
+v.6 The Analyst
+
+The Analyst will be in charge of reporting, back office and preparation of backtesting. This module
+will also provide strategy parameters (performance, assets under management, strategy owner’s
+fees, etc).
+
+v.7 The Backtesting
+
+The DA Power Play Platform will provide strategy validation and backtesting for all developed
+strategies. Validation and debugging will be made available for drag’n’drop strategy building
+blocks.
+
+Backtesting will be possible on available historical data per exchange. We will have several
+exchanges and historical data available, and will collect as much data for exchanges as required.
+
+v.8 The User interface node
+
+Figure 3: Desktop app with tightly coupled mobile component
+
+This is the user’s entry-point into the platform, featuring innovative modular UI, a code editor,
+node editor, and custom personal screens. Tight coupling between mobile and desktop versions
+allows for quick screen switching and creation without constantly having to use your computer,
+but also for secure user identification. The User Interface Node is fully web3 powered so you can
+create, browse and integrate favourite Dapps. The User Interface Node also features a drag’n’drop
+strategy editor.
+
+The DA Power Play Platform will utilise Electron Framework for the User Interface Node and
+webRTC for real-time comms between UI nodes. Electron is based on CSS, HTML5 and JavaScript
+, enabling customisation of UI screens based on stakeholder preferences.
+
+7
+
+
+
+Da Power Play Whitepaper • August 2017 • v1.2
+
+v.9 The Plug-and-play building blocks store
+
+The DA Power Play platform will be open to developers and third parties to develop and integrate
+their building blocks, enabling additional services on the platform. These building blocks can be
+deeply integrated with the platform, providing either API access for a programming language
+strategy designer or new building blocks for a drag’n’drop strategy designer.
+
+Swarm will be used to store data, and where applicable, display open source code for these
+building blocks.
+
+Code and libraries are developed and tested and thereafter packaged into containers with
+docker files. Once deployed, they will be available on the DA Power Play platform as a service.
+This enables the DA Power Play Platform to easily deploy and integrate third party building
+blocks with the platform.
+
+We will partner with other industry services and providers in order to have the right building
+blocks that will empower users, providing them with a powerplay over the rest of the market.
+
+The Ethereum Name Service and our own eth subdomains will be used for adding these
+building blocks, so for example, santiment.dapowerplay.eth is an example of a building block
+where payment for such services can be directly payable in DA Power Play tokens to this domain,
+rather than just a wallet address.
+
+III. The solution deployment
+
+Figure 4: Hybrid cloud architecture
+
+The DA Power Play Platform will be run on a hybrid cloud architecture that will be geo
+distributed, having redundant nodes and security. This hybrid cloud will be formed from custom
+hardware and public cloud services, providing a redundant failover mode, collocated at data
+centres, it will have implemented security and a firewall, DDOS protection, redundant networking
+through BGP, and wherever possible static tunnel (IPSec or VPN) routes to the exchanges. As the
+
+8
+
+
+
+Da Power Play Whitepaper • August 2017 • v1.2
+
+DA Power Play Platform is utilised, the architecture is scalable to allow for a future growth.
+
+IV. The conclusion
+
+By combining a proven solution, expanding it with blockchain technology enabling, having a
+scalable system architecture, and third party access to building blocks for the DA Power Play
+platform, we will "democratise" algorithmic trading and be able to build our distributed economy
+based around our stakeholders.
+
+9
+
+
+	The Introduction
+	The Platform
+	Combining Blockchain and legacy technologies
+	Speed of execution
+	Geo Distributed nodes
+	Wallets
+	The Strategy Wallets
+	The Public Wallet
+	The Private Wallet
+	The Operational Wallet
+
+	Kip's Eye Platform Backend
+	The Collector
+	The Calculator
+	The Strategist
+	The Executive
+	The Asset manager
+	The Analyst
+	The Backtesting
+	The User interface node
+	The Plug-and-play building blocks store
+
+
+	The solution deployment
+	The conclusion
+

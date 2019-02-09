@@ -1,0 +1,1735 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Page 1 of 29                                   
+ 
+
+ 
+ 
+
+ 
+A TRANSPARENT SPORTS BETTING AND GAMBLING PLATFORM BASED ON SMART 
+
+CONTRACTS ON THE ETHEREUM BLOCKCHAIN THAT RETURNS 100% OF PROFITS TO 
+
+THE DBET HOUSE CREDIT HOLDERS. 
+
+ 
+
+VERSION 0.5.2 
+
+ 
+
+ABSTRACT 
+
+ 
+ 
+
+Decent.bet is a transparent, smart contract based sports betting platform and 
+
+online casino.  Employing the Ethereum blockchain based smart contracts, 
+
+Decent.bet is aiming for mass adoption. Unlike other decentralized gambling 
+
+platforms which primarily use Ether and Bitcoin for transactions, Decent.bet 
+
+makes use of specialized ERC20 tokens – DBETs to facilitate bets on the platform 
+
+as well as buy credits in the house, known as DBET house credits.  This opens up 
+
+numerous possibilities such as community owned houses, white label solutions and 
+
+more. 
+
+ 
+
+The Decent.bet sports betting platform will make use of a trusted setup wherein 
+
+the Decent.bet addresses will provide betting lines and outcomes. All transactions 
+
+will be transparent and verifiable on the blockchain. This transparency will make 
+
+it impossible for malicious or predatory activity to take place from the outset. All 
+
+payouts, credit distributions, lottery winnings, house buy-ins, would be completely 
+
+decentralized and determined on-chain. 
+
+ 
+
+A whole host of gambling based casino games will also be available on the 
+
+Decent.bet platform – making use of off-chain state channels that are finally 
+
+verifiable on-chain. The speed and scalability would combine the user experience 
+
+of a high-end gambling platform while bringing the transparency and auditability 
+
+of the blockchain. 
+
+ 
+
+This paper discusses the functioning of the Decent.bet user-owned house model, 
+
+state channel based casino games, white label solutions, decentralized houses and 
+
+business prospects for the platform.  
+
+
+
+Page 2 of 29                                   
+ 
+
+TABLE OF CONTENTS 
+ 
+
+ 
+ 
+
+1.0 ABBREVIATIONS AND DEFINITIONS                                                         3 
+
+2.0 INTRODUCTION                                                                                            4 
+
+2.1 About Decent.bet                                                                                   4 
+
+2.2 Problems and Solutions                                                                            4 
+
+2.3 Market Analysis                                                                                        7 
+
+2.4 Limitations                                                                                                8 
+
+3.0 DBETS                                                                                                          10 
+
+4.0 THE HOUSE                                                                                                 11 
+
+4.1 DBET House Credits                                                                               11 
+
+4.2 Obtaining DBET House Credits                                                              11 
+
+4.3 DBET House Credits Exchange                                                              11 
+
+5.0 SPORTS BETTING                                                                                      12 
+
+5.1 Decent.bet API                                                                                     12 
+
+5.2 Results & Verification                                                                              12 
+
+6.0 CASINO                                                                                                        13 
+
+6.1 State Channels                                                                                       13 
+
+6.2 Slots                                                                                                        14 
+
+6.3 Mechanics                                                                                               14 
+
+6.4 Craps                                                                                                      16 
+
+6.5 Other Games                                                                                          17 
+
+7.0 WINNINGS, PAYOUTS & PROFIT DISTRIBUTION                                    18 
+
+8.0 LOTTERY                                                                                                     20 
+
+9.0 WHITE LABEL SOLUTIONS                                                                       21 
+
+9.1 Requirements                                                                                          21 
+
+9.2 White Labelled Houses                                                                           21 
+
+9.3 Initial House Buyouts                                                                              21 
+
+10.0 MULTI-PLATFORM USABILITY                                                                  22 
+
+11.0 DECENT C                                                                                                    23 
+
+12.0 CROWDSALE                                                                                              24 
+
+13.0 FUTURE POTENTIAL                                                                                  26 
+
+14.0 RISKS INVOLVED                                                                                        27 
+
+14.1 Server Downtime                                                                                  27 
+
+14.2 Trusted Data Providers                                                                         27 
+
+14.3 Ethereum Blockchain Dependence                                                      28 
+
+15.0 REFERENCES                                                                                             29 
+
+ 
+
+
+
+Page 3 of 29                                   
+ 
+
+1.0 ABBREVIATIONS AND DEFINITIONS 
+
+ 
+ 
+DBET Exchange Decentralized exchange for DBET tokens and DBET House Credits 
+
+DBETs ERC-20 Token used for placing bets on the Decent.bet platform. 
+
+DBET House Credit A DBET token entered into the House for a complete session. 
+
+House The Cumulative DBET house credits locked into a session to back all bets 
+
+placed for the associated session. 
+
+Session 3-month period of gaming whereby profits are distributed at the end of 
+
+each session. 
+
+White Label House Gaming platform supported by Decent.bet that other companies may 
+
+choose to rebrand as to make appear as if they had developed it. 
+
+
+
+Page 4 of 29                                   
+ 
+
+2.0 INTRODUCTION 
+
+ 
+
+2.1 About Decent.bet 
+
+ 
+
+Decent.bet is a transparent profit sharing sportsbook and gambling platform employing 
+
+decentralized Smart Contracts on the Ethereum blockchain.  
+
+ 
+
+Decent.bet aims to provide a long-term solution to allow users from around the world 
+
+to establish credit in the houses, DBET house credits, that provide sports betting and 
+
+gambling games while leveraging the blockchain to provide transparency, verifiability 
+
+and constant uptime, unlike other regular online casinos. This platform structure allows 
+
+users to generate returns with minimal interaction while allowing houses on the 
+
+Decent.bet platform to operate and payout DBET house credit returns in a transparent 
+
+and honest manner. 
+
+ 
+
+Decent.bet will start out with a single house operated by the Decent.bet platform and 
+
+in due time open doors to traditional casino operators to establish houses on the 
+
+platform. This essentially allows traditional casino operators to leverage blockchain 
+
+technology to provide the next generation of gambling games and sports betting to their 
+
+existing user base. 
+
+ 
+
+2.2 Problems and Solutions 
+
+ 
+ 
+
+Problem: High profit-generating gambling platforms owned by a single group/entity 
+
+with limited transparency running on dated technology stacks. 
+
+ 
+
+Traditional online casinos/sports betting platforms available in the current market, work 
+
+in a completely centralized manner and operating profits are distributed between 
+
+selected individual(s)/group(s).  
+
+ 
+
+Although this may not pose as much of a problem at the moment, with the coming shift 
+
+from centralization and tightly controlled models to a decentralized future, the current 
+
+model has a high-risk of being outdated in the coming years. Decent.bet’s vision aims 
+
+
+
+Page 5 of 29                                   
+ 
+
+to make full use of the opportunity that presents itself with the upcoming shift to 
+
+decentralization – where DBET house credit holders will have a say in how the platform 
+
+moves forward with a decentralized governance model, receive profits generated by 
+
+the platform for each session and even get to contribute to democratically selected 
+
+charitable causes. 
+
+ 
+
+With the current push for disruptive blockchain based solutions among all industries 
+
+and the obvious fit for gambling based solutions, there are a few platforms that have 
+
+been conceptualized and at times have even been implemented over the last year. 
+
+However, regardless of what stage existing platforms are at this point in time, there are 
+
+a few fundamental issues that do exist with a majority of them. 
+
+ 
+
+Problem: Blockchain based casinos providing slow, costly blockchain dependent 
+
+games without layer-2 solutions, sports betting platforms in their infancy/concept 
+
+stages and profit sharing gambling platforms with a single house model. 
+
+ 
+
+Platforms that have been built on the Ethereum Blockchain face the same problems 
+
+that all decentralized platforms built on Ethereum face right now.  Games that are 
+
+traditionally played at a quick pace, are slowed down due to the slow block times for 
+
+RNG and transactions on the blockchain in general. Although this would not be a 
+
+problem in the future with the scheduled upgrades to the Ethereum network that will 
+
+greatly improve its capacity, games right now are painfully slow and don’t replicate any 
+
+regular online casino in terms of speed and experience. This poses a significant 
+
+roadblock in convincing the masses to switch to a blockchain based platform. 
+
+ 
+
+Decent.bet being based on Ethereum blockchain faces the same problem at the 
+
+moment as these platforms, but it looks to tackle it by using off-chain state channels 
+
+for RNG and game moves after channel creation. This greatly improves the speed of 
+
+games and offers the experience of any other high-end online casino to the end-user 
+
+while being finally verifiable on-chain. State channels also lead to greatly reduced gas 
+
+costs since transactions do not happen on-chain. 
+
+ 
+
+Sports betting platforms on the other hand, pose a different problem in achieving 
+
+
+
+Page 6 of 29                                   
+ 
+
+consensus on events. The task although seemingly straightforward, turns out to be a 
+
+complex action to implement whilst keeping methods of gaming the system to a low 
+
+and reducing malicious entities from pushing the wrong outcomes to the network.  
+
+ 
+
+Keeping a 50% majority consensus could lead a single entity/group to simply purchase 
+
+50% of tokens in the network and push the wrong results.  
+
+ 
+
+Increasing the consensus requirement, to say 75%, could lead malicious parties to 
+
+constantly hold 26% or more of tokens in the network and push incorrect outcomes 
+
+making it impossible to reach a 75% consensus.  
+
+ 
+
+The decentralized crowdsourced outcome reporting problem is definitely a hard one to 
+
+tackle and one which currently has two platforms actively working on solving it– Augur 
+
+and Gnosis. They still have ways to go before being ready for use at this point in time. 
+
+However, in the future APIs provided by the two platforms would be a great resource 
+
+for betting platforms to link with, and provide accurate outcomes in, a decentralized 
+
+manner.  
+
+ 
+
+For now, Decent.bet looks to tackle this overarching issue by providing centralized 
+
+oracles for each house on the platform. The blockchain helps provide the transparency 
+
+and verifiability to make sure the houses do not try to cheat players by pushing incorrect 
+
+results to the platform. With multiple houses that spring up on the platform, users would 
+
+have a variety of different outcome and line providers to choose from. This also opens 
+
+doors to bringing in traditional sports betting platforms to adopt the technology provided 
+
+by the Decent.bet platform and in turn increase the platform's user base as a whole. 
+
+ 
+
+Apart from the two problems mentioned above, platforms that do have profit sharing 
+
+models at the moment seem to offer it in a closed manner – with a single house splitting 
+
+profits of their offered games among users holding a dividend sharing token. This may 
+
+not be a problem in itself, however for long term expansion of a platform, Decent.bet 
+
+looks to bring in the multiple house model with white labelled houses which will allow 
+
+for providers/casino operators to start their own house and have their own profit-sharing 
+
+mechanisms. 
+
+https://augur.net/
+https://gnosis.pm/
+
+
+Page 7 of 29                                   
+ 
+
+ 
+
+Decent.bet allows users to buy DBET house credits which will allow them to collect 
+
+session returns and participate in the success of the platform in a very unique and 
+
+advantageous manner. Initially, the sportsbook will make use of lines and outcomes 
+
+supplied by addresses owned by Decent.bet.  
+
+ 
+
+ 
+
+The ERC-20 standard token provided by Decent.bet will be used for all purposes within 
+
+the platform, unlike other smart contract based gambling platforms that allow bets in 
+
+Ether. 
+
+ 
+ 
+
+2.3 Market Analysis 
+
+ 
+ 
+
+Since the majority of the running block chain based gambling platforms have been 
+
+implemented only within the last year, there aren’t any data sources providing usage 
+
+statistics of the emerging market as of yet. However, statistics for online casinos are 
+
+available and would portray an acceptable representation of our target audience and 
+
+future growth potential. 
+
+ 
+
+(Ref #4) The market for online casinos as a whole was $35.97 billion USD in 2014 and 
+
+is estimated to reach $66.59 billion USD by 2020, at a CAGR of 10.81%.Additionally, 
+
+the use of mobile devices for online gambling purposes is increasing with market 
+
+growth for this industry being very geographically specific. 
+
+ 
+
+More than 80 nations have legalized online gambling and Europe has the largest online 
+
+gambling market in the world which accounts for some 47% of the entire world. 
+
+(http://www.egba.eu/facts-and-figures/market-reality) Importantly, this is something 
+
+which is just going to increase, as countries like the Netherlands adopt new online 
+
+gambling regulations which facilitate and promote growth. Additionally, in the Asia 
+
+Pacific region, the online gambling sector has not grown much, as there has been no 
+
+scope, a fact which promotes both a disadvantage and a significant opportunity to be 
+
+explored. 
+
+http://www.egba.eu/facts-and-figures/market-reality
+
+
+Page 8 of 29                                   
+ 
+
+ 
+
+Since the online gambling market allows players to use virtual money, it has reduced 
+
+the burden and risk of carrying cash as in the case of real gambling activities, and since 
+
+this can be done in the comfort of one’s home, many people are now resorting to online 
+
+gambling. Something which highlights that there is greater and greater opportunity for 
+
+this market to grow and expand in the near future as governments move to regulate 
+
+practices and enable safe, healthy growth in a market which is still in its infancy. 
+
+ 
+
+ 
+
+2.4 Limitations 
+
+ 
+ 
+ 
+
+Obtaining correct and verifiable results/outcomes for sporting events in a completely 
+
+decentralized system would require a significantly larger engineering effort, while also 
+
+opening doors up to a number of security and integrity concerns. 
+
+ 
+
+Getting to market early maximizes our potential to succeed, but requires us to use 
+
+authorized addresses to provide outcomes to the contract – which would bring an 
+
+aspect of centralization to the platform. This approach means users would have to rely 
+
+on Decent.bet to provide accurate outcomes for games, all other aspects of sports 
+
+betting – i.e. payouts, bets created, house hedges etc. are all decentralized, 
+
+transparent and verifiable – which is a large improvement over existing centralized 
+
+online gambling platforms operating today. 
+
+ 
+
+For gambling games like slots, craps and roulette that rely on instant results and game 
+
+moves to meet the user experience expectations while making sure outcomes are 
+
+verifiable on the blockchain, Decent.bet makes use of state channels between the 
+
+house and users utilizing a REST API to communicate between the user and the house.  
+
+Current competitive implementations rely on an oracle to act as an RNG to call back 
+
+results into a contract, taking much too long in terms of user experience, which 
+
+consequently will decrease the possibility of achieving mass adoption. By using state 
+
+channels that work completely off-chain and are finally verifiable on-chain – we are able 
+
+to sidestep this limitation and improve the timeliness and quality of the service. 
+
+
+
+Page 9 of 29                                   
+ 
+
+ 
+
+ 
+
+However, with the planned updates to the Ethereum blockchain such as sharding, 
+
+which would increase Ethereum’s capacity in terms of transactions per second – 
+
+Decent.bet will eventually restructure all gambling game contracts to work based on 
+
+completely on-chain solutions. 
+
+
+
+Page 10 of 29                                   
+ 
+
+3.0 DBETS 
+
+ 
+
+Decent.bet uses its own ERC-20 standard token, DBETs - for all transactions on the 
+
+platform. Unlike other platforms in the space that make use of Ether and Bitcoin for 
+
+gambling, DBETs are used for gambling along with other use cases such as purchasing 
+
+DBET house credits, buying out custom houses, purchasing lottery tickets and more. 
+
+Ether will only be accepted by the Decent.bet contracts at the time of the ICO and will 
+
+be used to fund and run the platform for the foreseeable future. 
+
+
+
+Page 11 of 29                                   
+ 
+
+4.0 THE HOUSE 
+
+ 
+
+Unlike traditional centralized casinos and online gambling platforms, Decent.bet offers 
+
+a transparent house that its users can participate in.  
+
+ 
+
+4.1 DBET House Credits 
+
+ 
+
+The house allows users to purchase DBET house credits at the start of every session 
+
+which are composed of three month periods.  Session 0 will begin with a house credit 
+
+buying period for every user during which no profit distribution will take place. From 
+
+Session 1 onwards, users will be able to redeem profits for their house credits at the 
+
+end of every session with the distribution of profit being based on the proportionality of 
+
+house credits that they have held in comparison to the total house credits bought out 
+
+from the house. 100% of all house profits will be distributed among house credit holders 
+
+of which 5% is to be reserved for a winning DBET house credit holder lottery. 
+
+ 
+
+ 
+
+4.2 Obtaining DBET House Credits 
+
+ 
+
+All DBET house credits are purchasable using DBETs and are locked up for the entire 
+
+session before they can be redeemed for profits or rolled over to the next session. 
+
+ 
+
+ 
+
+4.3 DBET House Credits Exchange 
+
+ 
+
+For liquidation purposes, Decent.bet will offer a decentralized DBET house credits 
+
+exchange which allows users to trade their house credits for DBETs at any time during 
+
+the initial 11 weeks of a session. In the event a user has any house credits in active 
+
+orders within the exchange during the profit distribution period, the house credits would 
+
+be automatically liquidated when users claim their portion of the profit distribution. 
+
+  
+
+
+
+Page 12 of 29                                   
+ 
+
+5.0 SPORTS BETTING 
+
+ 
+
+The initial offering at launch by Decent.bet is a sport betting platform with multiple 
+
+sports offerings such as; Baseball, American Football, Basketball, Ice Hockey, Tennis, 
+
+Soccer and more. 
+
+ 
+
+All games, bets and outcomes on the platform will be saved on Smart Contracts. 
+
+However, since there are issues with creating a completely decentralized sports betting 
+
+platform in terms of having the right outcomes pushed to the contract and reducing the 
+
+possibilities of different attacks and methods to game the system, Decent.bet will be 
+
+pushing the games and outcomes onto the contract using trusted addresses. Although 
+
+this brings in an aspect of centralization to the platform, all games, odds and outcomes 
+
+being pushed in would be transparent and verifiable on the blockchain. Users would be 
+
+able to immediately view incorrect outcomes on the blockchain and report them, if any 
+
+such occurrences were to happen. 
+
+ 
+
+5.1 Decent.bet API 
+
+ 
+
+The Decent.bet API will be used primarily to retrieve sports betting metadata. The API 
+
+will deliver metadata required by the front-end such as team names, league names, 
+
+event names etc., without bloating the smart contract with data that does not require 
+
+decentralization and also helping to reduce gas fees. Games on the Smart Contracts 
+
+would be identifiable by their IDs. 
+
+  
+
+5.2 Results & Verification 
+
+ 
+
+All odds and outcomes obtained by the Decent.bet backend come from multiple sports 
+
+betting feeds and line providers.  This approach reduces the chances of error while 
+
+pushing odds and outcomes to the contract. To verify any of the results, users will be 
+
+able to view the outcomes straight from the Decent.bet front-end or it's API and verifies 
+
+the results pushed into the smart contract manually on the Ethereum blockchain. If any 
+
+outcome is found to be in error users would be able to call for a correction and receive 
+
+a refund. 
+
+
+
+Page 13 of 29                                   
+ 
+
+6.0 CASINO 
+
+ 
+In addition to the sports betting platform that will be available on launch, Decent.bet will 
+
+launch a decentralized casino based on smart contracts and state channels. Slots will 
+
+be available at launch and will be followed by a series of other casino games such as 
+
+craps, roulette etc., which will be developed in line with our vision of mass adoption. 
+
+ 
+
+6.1 State Channels 
+
+ 
+
+With the current state of the Ethereum blockchain – relying on an on-chain oracle 
+
+connected to a trusted source to act as an RNG i.e. random.org or WolframAlpha , 
+
+users have to wait for a callback from a query which could take a minute or more due 
+
+to being on-chain. Furthermore, Ethereum’s current limitations in terms of transactions 
+
+per second dramatically disrupt the user experience by creating these delays which in 
+
+turn would disenfranchise a large portion of our target potential users, traditional online 
+
+gamblers, who are unaware of how blockchain gambling works.  
+
+ 
+
+This led the Decent.bet team to use an alternative method to act as an RNG and settling 
+
+games on-chain between the house and the user – state channels. State channels 
+
+make use of the blockchain to initially deposit funds into the channel contract for both 
+
+house and player before making the game available to play for the player off-chain 
+
+using a turn-based system. The user and house exchange details for a turn using 
+
+signed messages which enable final verification on-chain. 
+
+ 
+ 
+
+*** IMPLEMENTATION INFO TO BE PROVIDED IN FINAL VERSION *** 
+ 
+ 
+
+On the front-end, all users viewing closed channels would be able to reconstruct the 
+
+RNG sequence for all their games and verify validity. The advantage of using this 
+
+system is the speed at which games could be played and its scalability in comparison 
+
+to a completely on-chain solution with the current state of the Ethereum network. With 
+
+transactions only happening at the start and end of a channel contract rather than for 
+
+every move – users would save significantly in gas fees, which would otherwise cost a 
+
+significant amount of Ether over time.  
+
+
+
+Page 14 of 29                                   
+ 
+
+ 
+
+With future updates that have been proposed to Ethereum such as Casper and 
+
+sharding – Ethereum would have the capacity to process a magnitude of times larger 
+
+amount of transactions per second (~15 tx/sec currently to over 10,000+ tx/sec – Ref 
+
+#3). This would enable Decent.bet to eventually switch to a completely decentralized 
+
+solution for its casino games, whenever the proposed updates are ready. 
+
+ 
+
+6.2 Slots 
+
+ 
+ 
+
+Slot machines provide more profit for casinos than any other type of game. According 
+
+to 2016 data, slot machines accounted for more revenue than all other casino games 
+
+combined, with penny slots making up the most revenue. 
+
+ 
+
+For example, an April to September 2016 Nevada Gaming Control Board Gaming 
+
+Revenue Report (ref) shows that the “total gaming win” (the casino’s win) from slots 
+
+was $7,066,306,000 USD (about $7 billion USD) in total, and the total table games win 
+
+was $4,094,401,000 USD (about $4 billion USD). Even with sports gaming added in at 
+
+$19,236,000 USD (about $19.2 million USD), no casino game revenue even gets close 
+
+to slots. (Ref #1) 
+
+ 
+
+Slots on the Decent.bet platform will have the advantage of being verifiable and 
+
+transparent while being hosted on decentralized smart contracts. 
+
+The slots contract will allow users to create channels between them and the house for 
+
+initial deposits and final settlements. All game moves will be processed using a simple 
+
+two-way communication over a REST API at the time of launch.  
+
+ 
+
+Eventually, with a stable release of Whisper (Ref #2), Decent would switch to using the 
+
+Whisper protocol for complete decentralized communication for its state channels. 
+
+ 
+
+ 
+*** IMPLEMENTATION INFO TO BE PROVIDED IN FINAL*** 
+
+6.3 Mechanics 
+
+ 
+
+
+
+Page 15 of 29                                   
+ 
+
+At launch, Decent.bet will offer multi-line slot machines consisting of 5 reels and up to 
+
+5 lines. 
+
+ 
+
+Bet sizes for each slot spin would be multiplied by the number of lines the player would 
+
+like to play.  For example, if a user would like to spin with a bet size of 10 DBETs while 
+
+playing 5 lines, the user would have to bet 50 DBETs while increasing chances of a 
+
+payout using more lines. 
+
+ 
+
+Payouts are based on left-to-right symbol repetitions for each line, starting from 3x 
+
+symbol repetitions to 5x.  
+
+ 
+
+The payout distribution is listed below for winning combinations of different symbols for 
+
+each line. Each symbol is denoted by an alphabet – which would be substituted by their 
+
+respective symbols in the actual game. 
+
+ 
+3xA – 10 4xA - 20 5xA - 30 
+
+3xB – 20 4xB - 40 5xB - 60 
+
+3xC – 40 4xC - 80 5xC - 120 
+
+3xD – 50 4xD - 100 5xD - 150 
+
+3xE – 75 4xE - 150 5xE - 225 
+
+3xF – 150 4xF - 300 5xF - 450 
+
+3xG – 300 4xG - 600 5xG - 900 
+
+ 
+ 
+
+Slots will consist of 5 reels containing 7 different symbols each with varying frequencies 
+
+giving multiple winning combinations at different probabilities. The frequency 
+
+distribution for each symbol in each reel is given below: 
+
+ 
+
+S     R1 R2 R3 R4 R5 
+
+A 4 4 7 6 7 
+
+B 5 4 4 6 4 
+
+C 4 6 2 3 3 
+
+D 2 2 4 1 3 
+
+E 4 2 2 2 1 
+
+F 1 2 1 2 2 
+
+G 1 1 1 1 1 
+
+This gives us a distribution of 21 symbols for each reel.  
+
+
+
+Page 16 of 29                                   
+ 
+
+ 
+
+The total number of different combinations would now be 21^5 or 4,084,101 different 
+
+combinations.Based on the reels distribution listed above, the probability of a winning 
+
+combination would be 9.433165%  
+
+ 
+
+Returns to users based on different winning combinations based on the reels 
+
+distribution and payouts mentioned above would be around 93.08291%. 
+
+ 
+
+100% of the profits generated would be distributed among holders of DBET House 
+
+Credits as part of each session profit distributions.  As stated in 4.1 the 5% balance is 
+
+reserved for a single lottery drawing. The game itself will create the experience of 
+
+actually playing the slots in a casino and would be playable across multiple screen 
+
+sizes. We believe that mobile support will go a long way to increase adoption and user 
+
+retention. 
+
+ 
+
+ 
+
+6.4 Craps 
+
+ 
+ 
+
+Craps will be the second casino game on the Decent.bet platform.  The game will be 
+
+offered with one table per player due to the user experience issues that would arise on 
+
+a game with multiple players being required to push transactions into a smart contract.  
+
+ 
+
+The craps game will be user-friendly and in-line with our vision to create a platform that 
+
+is both transparent and provides a responsive user experience that will go a long way 
+
+towards increasing adoption.  
+
+ 
+
+Craps will also make use of state channels with pre-determined random numbers 
+
+making use of blended seeds and their hashes. Users will always play against the 
+
+house and will be able to choose between pass and don’t pass lines to start, before 
+
+rolling their die.  
+
+Once the die is rolled on the front-end, a random number is generated based on the 
+
+turn and its respective blended seed. It then checks for the following conditions for a 
+
+pass line bet;  
+
+
+
+Page 17 of 29                                   
+ 
+
+ 
+
+1. If the sum of the die is 7 or 11, the user wins the game. If the sum of the die is 2, 3 
+
+or 12, the house wins the game. 
+
+ 
+
+2. If the above conditions aren’t met, the previously retrieved sum is now set as the 
+
+“point”. Now, the user and the house gets to roll repeatedly until either the point or a 7 
+
+comes up. If the point comes up first, the user wins. If a 7 comes up first, the house 
+
+wins. 
+
+ 
+
+3. All user winnings are double of the amount that was bet.  
+
+ 
+
+For don’t pass line bets, the conditions are swapped between the user and house.  
+
+As with other Casino games on the platform, 100% of the profits generated would be 
+
+distributed among holders of DBET House Credits as part of each session profit 
+
+distributions. 
+
+ 
+ 
+
+6.5 Other Games 
+
+ 
+ 
+
+Over time, other casino games will be added on to the platform based on user 
+
+demand in the form of smart contracts and state channels while making use of 
+
+DBETs for all transactions. 
+
+
+
+Page 18 of 29                                   
+ 
+
+7.0 WINNINGS, PAYOUTS & PROFIT DISTRIBUTION 
+
+ 
+ 
+
+On the Decent.bet platform, users will be able to buy DBET house credits for each 
+
+session, a 3-month period. At the beginning of session 0 or the final week of any other 
+
+session, users will be able to buy-in to the house by using DBETs to purchase DBET 
+
+house credits. This essentially locks users’ DBETs into the house and allows it to be 
+
+redeemed only at the end of a session, along with profits. 
+
+ 
+
+DBET house credits will also be exchanged on the DBET house exchange in the future 
+
+for DBETs anytime during a session thereby providing liquidity. DBET house credits 
+
+can also be rolled over to the next session in the final week of the current session, 
+
+locking in a users’ DBETs for another session while allowing them to redeem profits.  
+
+ 
+
+Since smart contracts cannot automatically liquidate all DBET house credit holder’s 
+
+due to its nature, at the beginning of every session following S1, DBET house credit 
+
+holder’s will have to manually exchange their house credits to redeem their payouts. 
+
+All DBET house credit holders will be notified through the front-end and via e-mail 
+
+before each house credit buying period and at the beginning of every profit distribution 
+
+period. 
+
+ 
+
+Profits for a user during each session are calculated using the following equation -  
+
+ 
+
+𝐻𝑜𝑢𝑠𝑒 𝐶𝑟𝑒𝑑𝑖𝑡𝑠
+
+𝑇𝑜𝑡𝑎𝑙 𝐻𝑜𝑢𝑠𝑒 𝐶𝑟𝑒𝑑𝑖𝑡𝑠
+  ×  (𝑆𝑒𝑠𝑠𝑖𝑜𝑛 𝑃𝑟𝑜𝑓𝑖𝑡𝑠) 
+
+ 
+
+ 
+
+Example: if the total purchased DBET house credits equate to 10,000,000 DBET 
+
+house credits and the session profits amount to 4,000,000 DBETs – the profits split 
+
+between the users are 3,800,000 DBETs which is 95% of the profits. Again, 5% is 
+
+reserved for the session Lottery. 
+
+ 
+
+In this scenario, if a user had purchased 20,000 DBET house credits, he/she would 
+
+
+
+Page 19 of 29                                   
+ 
+
+be entitled to redeem 
+20,000
+
+10,000,000
+ × 3,800,000 for a sum of 7,600 DBETs. 
+
+ 
+
+If for any reason the session profits are zero or below at the end of a session, users 
+
+would be able to liquidate their DBET house credit holders and realize a loss. 
+
+
+
+Page 20 of 29                                   
+ 
+
+8.0 LOTTERY 
+
+ 
+
+Lotteries will take place at the end of every session after profit distribution takes place. 
+
+All DBET house credit holders with a minimum of 1,000 DBETs at the end of a session 
+
+will automatically be given an entry into the session’s lottery for every 1,000 DBETs 
+
+they own, up to a maximum of 5 entries.  The lottery does not require any manual 
+
+interaction from the user. 
+
+ 
+
+Lotteries work in a simple way; A function is called at the beginning of a session as 
+
+long as it hasn't been called yet. The function requests a random number from 
+
+random.org between 0 and the number of DBET house credit holders present in the 
+
+DBET house credit holders array for the previous house session.  
+
+ 
+
+The address present in the DBET house credit holders array at the index denoted by 
+
+the random number that's returned from random.org will be deemed as the winner of 
+
+the lottery.  
+
+ 
+
+All winnings will be automatically transferred to the winner. 
+
+ 
+ 
+ 
+
+
+
+Page 21 of 29                                   
+ 
+
+9.0 WHITE LABEL SOLUTIONS 
+
+ 
+
+In line with Decent.bet’s vision of a fast and flawless user experience for our blockchain 
+
+based gambling platform, it will offer white label solutions for other larger companies to 
+
+adapt Decent.bet’s platform & technology to create their own houses which utilize their 
+
+own custom lines and feeds. 
+
+ 
+
+9.1 Requirements 
+
+ 
+ 
+
+All outside companies looking to utilize Decent.bet for blockchain based gambling 
+
+services will be required to hold at least 2,000,000 DBETs. Vetting would take place to 
+
+ensure their track record as well as to verify compliance with appropriate regulations in 
+
+the jurisdiction they are based in.  
+
+ 
+
+9.2 White Labelled Houses 
+
+ 
+ 
+
+Outside companies that are accepted into the platform are allowed to implement their 
+
+own custom games and line feeds through the Decent.bet API. Once the API 
+
+implementation is complete, separate smart contracts are created for each provider 
+
+and users are allowed to switch between different providers from the platform.  
+
+ 
+
+9.3 Initial House Buyouts 
+
+ 
+ 
+
+Prior to the sale of white label houses to outside companies, users will have an 
+
+opportunity to purchase DBET house credits to the newly created houses. These 
+
+credits would have to be bought out by the companies at a pre-defined rate set by the 
+
+house credit holders. For example, a new house that is introduced to users has 
+
+1,000,000 credits bought in by the users. Users are now allowed to select a pre-defined 
+
+rate to sell the house to companies at. Now, in this case, say users have selected a 
+
+pre-defined rate of 1.2x, a company would have to pay 1,200,000 DBETs to all DBET 
+
+house credit holders before being able to take control of the house. This allows users 
+
+to decide which providers they would like on the platform, as well receive a financial 
+
+incentive for doing so. 
+
+
+
+Page 22 of 29                                   
+ 
+
+10.0 MULTI-PLATFORM USABILITY 
+
+ 
+
+In line with Decent.bet's vision of mass market blockchain backed digital casino, betting 
+
+front-ends will be available across multiple platforms to increase adoption and retention 
+
+rates. Decent.bet will offer both a responsive web front-end as well as native mobile 
+
+apps for both Android and iOS devices.  
+
+ 
+
+With focus on games that are flexible in terms of transaction times – a significant 
+
+limitation in Ethereum at the moment, sports betting and casino games like slots and 
+
+craps will still be able to be played with a smooth and appealing user-experience. 
+
+ 
+
+
+
+Page 23 of 29                                   
+ 
+
+11.0 DECENT C 
+
+ 
+
+Decent.bet will establish a certified 501c (3) charity called Decent C for Humanity or 
+
+Decent Charity for Humanity.  10% of the profits generated by the founders DBET 
+
+house credits will be donated to Decent C for Humanity.  The obligated amount shall 
+
+not exceed $50,000.00 per session donation. 
+
+ 
+
+The focus of the charity will be to provide support for humanity worldwide.  The 
+
+beneficiaries of the charity will be chosen in 2 ways, by the founders and by a vote 
+
+through the community. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+https://www.501c3.org/what-is-a-501c3/
+
+
+Page 24 of 29                                   
+ 
+
+12.0 CROWDSALE 
+
+ 
+
+Decent.bet will conduct a crowdsale September of 2017 offering DBET tokens to 
+
+investors before a full launch of the platform. 
+
+ 
+
+The crowdsale will be capped and 250,000,000 DBETs will be available for distribution 
+
+during the duration of the crowdsale.  The crowdsale will continue until the cap is 
+
+reached or 28 days has passed whichever comes first. At the end of the crowdsale, 
+
+any remaining tokens will be burned. 
+
+ 
+
+Also, the tokens distributed during the duration of the crowdsale will represent 70% of 
+
+the total supply of coins. The remaining 30% will be minted at the end of the crowdsale 
+
+and would be allocated as follows: 
+
+ 
+
+18% time-locked founder’s share – withdrawable after 1 year. This incentivizes the 
+
+Decent.bet team to develop the platform and remain motivated to grow token value at 
+
+a steady rate. 
+
+ 
+
+10% held by the contract that can only be used to establish the house.  This initial 
+
+deposit into the house will be accounted as a contribution by the founders entitling the 
+
+founders to the resulting DBET house credits profit. 
+
+ 
+
+2% used for bounties – Bitcointalk signature campaigns, Social media campaigns, Blog 
+
+posts, translations and more. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+Page 25 of 29                                   
+ 
+
+ 
+
+The distribution of Ether raised during the crowdsale will be used as follows: 
+
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+Development – 40% - Will be used to hire developers to the team for smart contract, 
+
+front-end, and game development to ensure Decent.bet is on schedule for 
+
+announcements on its roadmap and continues to bring in innovative ideas into the 
+
+platform. 
+
+ 
+
+Legal – 10% - Licenses, lawyer fees and other legal work/processes that are required 
+
+to run a gambling platform legally. 
+
+ 
+
+Marketing – 25% - Bringing in users through the use of marketing campaigns 
+
+online/physically that educate and convert regular online/traditional gamblers to users 
+
+of the Decent.bet platform. 
+
+ 
+
+Operations – 25% - For all other operating expenses that would be required by the 
+
+platform to ensure day to day operations and long-term growth. 
+
+
+
+Page 26 of 29                                   
+ 
+
+13.0 FUTURE POTENTIAL 
+
+ 
+ 
+
+After the completion of the crowdsale, based on the amount raised, Decent.bet will be 
+
+setting up a larger development team looking to add as many casino games onto the 
+
+platform as possible in line with its vision of mass adoption.  
+
+ 
+
+With a vast selection of casino games that will be transparent, auditable and verifiable 
+
+using the Ethereum blockchain coupled along with a 100% profit payout to DBET house 
+
+credit holders, Decent.bet will have a solid base to grow into a leading player in the 
+
+global online casino market. 
+
+ 
+
+With improvements to the current infrastructure of the Ethereum blockchain, Decent.bet 
+
+would also switch to a completely decentralized model for casino games as long as 
+
+user experience would not be affected. 
+
+ 
+
+From a sportsbook perspective, Decent.bet will be looking to add all popular sports/e-
+
+sports that cater to regions across the entire world, to establish itself as the leading 
+
+blockchain based sportsbooks globally. 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+Page 27 of 29                                   
+ 
+
+14.0 RISKS INVOLVED 
+
+ 
+
+14.1 Server Downtime 
+
+ 
+
+With state channels, Decent.bet requires a mode of communication for gambling 
+
+games to exchange data for each game move. At the time of launch, due to the lack of 
+
+stable decentralized messaging protocols – Decent.bet will have to make use of a 
+
+REST API hosted on regular cloud infrastructure to act as a mode of communication to 
+
+conduct off-chain game moves between users and the house. As with any solution that 
+
+relies on a client-server architecture, downtime could happen due to a number of 
+
+unforeseen circumstances.  
+
+ 
+
+However, with timeouts are embedded into each contract users are able to finalize and 
+
+close channels themselves after the timeout period, ensuring their funds are not held 
+
+in limbo while the servers are unable to communicate directly with users. 
+
+ 
+
+To mitigate these negative effects and keep uptime at a maximum, Decent.bet will 
+
+make use of high-end cloud infrastructure with multiple instances backed by load 
+
+balancers along with DDOS protection. All on-chain events will also be watched by 
+
+separate instances to ensure even if API servers are offline, on-chain transactions such 
+
+as closing channels could be performed by the house. Once Ethereum’s Whisper 
+
+launches a stable release, all communication between users and the house will be 
+
+switched to use Whisper rather than the REST API. 
+
+ 
+ 
+
+14.2 Trusted Data Providers  
+
+ 
+ 
+
+All sports betting odds, lines and outcomes on the Decent.bet platform will be pushed 
+
+by the addresses owned by Decent.bet. Users of the platform would have to rely on 
+
+Decent.bet to push in correct data which otherwise would lead to undesired 
+
+consequences. To prevent issues from arising in this aspect, Decent.bet will make use 
+
+of data from multiple data providers and verify all data before pushing any data on-
+
+
+
+Page 28 of 29                                   
+ 
+
+chain. However, if any mistake does arise, users would be able to report the bet, call 
+
+for a correction and receive refunds. 
+
+ 
+
+In the future, Decent.bet will look into implementing decentralized oracles that would 
+
+be incentivized to push the right results through a reward system, with punishment for 
+
+malicious activity. 
+
+ 
+
+14.3 Ethereum Blockchain Dependence 
+
+ 
+
+Since Decent.bet is a platform based on the Ethereum blockchain, it ultimately relies 
+
+on the state of the Ethereum Network for its long-term success. Any unforeseen 
+
+incident on the Ethereum Network could negatively affect Decent.bet in terms of 
+
+performance, stability, security etc.  
+
+ 
+
+Additionally, Decent.bet will also be limited by the limitations of the Ethereum Network, 
+
+may it be in terms of speed, scale or any other factor. However, with the proposed 
+
+updates that will drastically improve the state of the Ethereum Network, Decent.bet will 
+
+only be set to improve in terms of offering complete decentralized/on-chain solutions 
+
+rather than relying on layer 2 solutions like state channels for fast, verifiable gambling 
+
+games.  
+
+ 
+
+
+
+Page 29 of 29                                   
+ 
+
+15.0 REFERENCES 
+
+ 
+ 
+
+Slots statistics 
+
+http://factmyth.com/factoids/slots-account-for-more-revenue-than-all-other-casino-games-
+combined/ 
+ 
+ 
+
+Decentralized communication Protocol – Whisper 
+
+https://github.com/ethereum/wiki/wiki/Whisper 
+ 
+ 
+
+Ethereum Sharding scaling capabilities 
+
+https://github.com/ethereum/wiki/wiki/Sharding-FAQ 
+ 
+ 
+
+Global Online Gambling Market - by Type, Device, Regions - Market Size, Demand 
+
+Forecasts, Industry Trends and Updates (2014-2020) 
+
+https://www.researchandmarkets.com/research/hdl474/global_online 
+ 
+ 
+ 
+ 
+http://www.egba.eu/facts-and-figures/market-reality/) 
+
+http://factmyth.com/factoids/slots-account-for-more-revenue-than-all-other-casino-games-combined/
+http://factmyth.com/factoids/slots-account-for-more-revenue-than-all-other-casino-games-combined/
+https://github.com/ethereum/wiki/wiki/Whisper
+https://github.com/ethereum/wiki/wiki/Sharding-FAQ
+https://www.researchandmarkets.com/research/hdl474/global_online
+http://www.egba.eu/facts-and-figures/market-reality/
+

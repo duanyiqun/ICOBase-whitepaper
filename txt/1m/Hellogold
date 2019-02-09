@@ -1,0 +1,1582 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Word - HelloGold Technical Whitepaper 27-Aug-17 Final
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+1
+
+HelloGold Foundation 
+Technical Whitepaper 
+27 Aug 2017 
+ 
+ 
+  
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+2
+
+Table of Contents 
+IMPORTANT NOTICE ........................................................................................................................................ 3 
+
+WHY HELLOGOLD ............................................................................................................................................. 4 
+
+EXECUTIVE SUMMARY ..................................................................................................................................... 5 
+
+HELLOGOLD TECHNOLOGY AND USE OF BLOCKCHAIN ..................................................................................... 6 
+
+PRODUCT OVERVIEW ................................................................................................................................................ 6 
+TECHNICAL OVERVIEW .............................................................................................................................................. 7 
+PRODUCT BLOCKCHAIN ............................................................................................................................................. 8 
+TECHNICAL CAPABILITY ........................................................................................................................................... 15 
+
+EXPANSION PLANS ......................................................................................................................................... 17 
+
+DEVELOPMENT ROADMAP ....................................................................................................................................... 17 
+DEVELOPMENT FUNDS ............................................................................................................................................ 19 
+REPORTING .......................................................................................................................................................... 26 
+FURTHER INFORMATION AND CONTACT DETAILS .......................................................................................................... 26 
+
+ 
+  
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+3
+
+ 
+
+IMPORTANT NOTICE 
+
+ 
+The HelloGold Technical Whitepaper dated 27 August 2017, the HelloGold Summary Whitepaper dated 
+27 August 2017, the HelloGold Business Plan dated 27 August 2017 and the Token Sale Information 
+Sheet dated 27 August 2017 (collectively the “Token Sale Documents”) which are made available to 
+the public, form part of and are integral to the Token Sale Summary Whitepaper. The Token Sale 
+Documents should be read in conjunction with one another. Notwithstanding the foregoing, in the 
+event of any inconsistency between the Token Sale Documents, the Token Sale Information Sheet shall 
+prevail. 
+ 
+This Token Sale of The Round 1 HelloGold Tokens (HGT) is subject to the terms and conditions including 
+but not limited to the disclaimers made and the risks disclosed in the Token Sale Documents. A 
+Supporter of this Token Sale or purchaser of any HGT pursuant to this Token Sale shall be deemed to 
+have agreed to and accepted all the terms and conditions of this Token Sale set out in the Token Sale 
+Documents. 
+ 
+ If you have any question or doubt on anything contained or unaddressed in the Token Sale 
+Documents, please communicate with HelloGold Foundation (HGF) at your convenience. You shall 
+refrain from supporting the Token Sale or purchasing any HGT until you are satisfied with the 
+answers provided. 
+ 
+Please visit www.hellogold.org (the “Website”) for the Token Sale Documents. 
+  
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+4
+
+WHY HELLOGOLD 
+
+ 
+The amount of money in a person’s wallet should not be a barrier to his ability to access financial 
+products that the rich enjoy. HelloGold wants to remove affordability and accessibility from the 
+equation through the democratisation and digitisation of gold-based savings and financing. 
+ 
+I worked in Asia in 1997 during the Asian financial crisis and I saw at first-hand how “bad things can 
+happen to good people” at no fault of their own. As a result of the 1997 crisis, the man in the street 
+saw their domestic currencies hit by extreme devaluation – in the case of both the Thai baht and the 
+Malaysian ringgit, this was in excess of 50%; in Indonesia, the rupiah went from 2,600 to the dollar 
+to over 14,000 to the dollar. For someone who was earning the equivalent of US$1,500 a month, he 
+woke up one morning earning the equivalent of $700 a month with a devastating effect on how he 
+could provide for his family. The inequitable impact of these events on the people who were least 
+able to fend themselves and their families left a lasting impression in my mind. They suffered 
+disproportionately through no fault of their own, other than the simple, unavoidable fact that they 
+were financially excluded from the products that were available to protect the more affluent. 
+ 
+Fast forwarding to 2010 and up to 2015, I was the Chief Financial Officer at the World Gold Council 
+where I was also the principal accounting officer for the world’s largest private gold fund with 
+US$30b AUM. I saw how High Net Worth Investors and funds alike had the ability to use gold both to 
+protect their wealth and as a form of collateral to get better financing deals. 
+ 
+With the help of technology, the digitisation of gold will enable everyone, everywhere to enjoy these 
+same features that gold offers to the wealthy. With HelloGold’s gold-backed token everyone will 
+only need the equivalent of a fraction of a dollar to save through gold (ERC20 tokens work to 18dp). 
+And once they save enough in gold, they will be able to pledge it as collateral to borrow at lower 
+interest rates and without the need for credit history. In short, everyone can save, and everyone can 
+have access to affordable financing. Democratisation through digitisation. 
+ 
+At HelloGold we have started this journey. Our App already enables ordinary Malaysians to buy 
+physical investment-grade gold starting with as little as RM1. And we have partnered with Aeon 
+Credit to develop the gold-backed lending proposition.  
+ 
+Moving forward, the launch of HelloGold’s digital gold-backed token (GBT) will enable us to take our 
+offer to another level. It will allow us to accelerate financial inclusion across the world. HelloGold 
+wants technology to truly democratise gold - to empower every man, woman and child with financial 
+products to overcome the fundamental financial challenges that remain prevalent in many emerging 
+markets, both in Asia and elsewhere.  
+ 
+HelloGold is launching the Token Sale of HelloGold Tokens (HGT) to support the accelerated 
+development and the marketing of our financial inclusion agenda. I hope that you will find this 
+project worthy of your support. 
+ 
+Robin Lee 
+CEO HelloGold 
+  
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+5
+
+EXECUTIVE SUMMARY 
+
+ 
+HelloGold has developed and launched a product to enable low to medium income customers to buy 
+and sell gold, anytime, anywhere. The System has customer mobile applications (native Android and 
+iOS) communicating with a backend built with 2 parts, a core Central Web Service (Ruby) and Agent 
+(Go). The current database uses Postgres technology. 
+ 
+Relevant parts of the backend are being migrated to Ethereum smart contracts to improve 
+transparency and security for the customer gold transactions, as well as increasing access to the 
+HelloGold system. HelloGold is using Ethereum as it is currently the most widely accepted platform 
+that offers all the benefits of a blockchain and multiple source language implementations that 
+encourage integration. Ethereum will handle only the parts needing consensus, transparency and 
+accountability. Other services will continue to be provided using existing technology. HelloGold is 
+using blockchain technology with a number of reconfigurable contracts that can be combined to 
+perform the necessary functions in such a way as to allow new capabilities to be added while 
+retaining the integrity of the entire system. 
+ 
+The Ethereum blockchain will be run on a private network to avoid paying infrastructure fees per 
+transaction, reduce transaction latency and avoid the risk of independent developers adding their 
+own contracts onto the HelloGold Blockchain. 
+ 
+HelloGold is now developing the blockchain elements, as opposed to leading with the smart 
+contracts, as the requirements and areas that need to maintain flexibility are clearer having iterated 
+using traditional technologies. The smart contracts are being prototyped and the test infrastructure 
+is in place. Next comes the integration with the current system which will be balanced between 
+immediate needs of the business and getting the blockchain to the market in a timely manner. 
+ 
+HelloGold plans to develop this platform to enable HelloGold customers to switch from HelloGold 
+customer gold to cryptocurrency tokens, backed by investment grade gold (Gold Backed Tokens - 
+GBT). These tokens will be based on Ethereum ERC20 tokens so they can complete the calculation 
+features required and make the gold tradeable on exchanges, outside the HelloGold system. As the 
+GBT will be fully backed by 1g of physical, investment grade (99.99%) gold, vaulted with HelloGold’s 
+vaulting provider, they should track the price of 1g gold. Critically, these blockchain elements will 
+provide liquidity via smart contracts, forming the basis to convert value between fiat, gold and 
+cryptocurrency, enabling gold as a form of value exchange. 
+ 
+Subject to a successful Token Sale of HGT by the HelloGold Foundation (HGF), it is envisaged that 
+HGF will give grants to HelloGold to support the development of HelloGold in the following ways: 
+
+1. Market expansion 
+2. Product improvement and technical development 
+3. Tech team expansion – required to implement 1. and 2. 
+
+Depending on the level of funds raised by HGF, HelloGold will be able to accelerate the market and 
+product (functionality) expansion plans with a larger tech team. 
+ 
+  
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+6
+
+HELLOGOLD TECHNOLOGY AND USE OF BLOCKCHAIN 
+
+ 
+ 
+
+PRODUCT OVERVIEW 
+
+ 
+HelloGold has developed a product to enable low and median income customers to buy and sell 
+gold, anytime, anywhere, using a mobile application. To do this, customers must register an account, 
+clear KYC (Know Your Customer) processes, top up the account with cash and then buy gold. Once 
+gold has been bought, customers can either physically redeem it, gift it to other HelloGold 
+users/accounts or take a loan using the gold as collateral, thereby reducing the cost of the loan. 
+Customers can sell the gold back to HelloGold at the market rate at the time of the transaction and 
+have the cash returned to them. 
+ 
+Core Product 
+ 
+
+ 
+  
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+7
+
+TECHNICAL OVERVIEW 
+
+ 
+HelloGold is currently using proven technology to deliver the core product of buying and selling gold. 
+The System has mobile applications (native Android and iOS) communicating with a backend built 
+with 2 parts, a core Central Web Service (Ruby) and Agent (Go). The current database uses Postgres 
+technology. HelloGold intend to migrate parts of the backend to Ethereum smart contracts to 
+improve transparency and security. In the future this will provide the basis for a gold backed 
+cryptocurrency. 
+ 
+Current HelloGold System 
+ 
+
+ 
+ 
+Mobile Applications 
+Two Native Mobile applications have been built for Android and iOS respectively. Native has been 
+used for speed, responsiveness, customer familiarity and to some extent better security due to 
+compiled binaries. The mobile application enables the following functionality: 
+
+1. Set up account (registering, clearing KYC) 
+2. Top Up “e-wallet” (add cash to HelloGold account) 
+3. Buy/Sell gold 
+4. Physically redeem gold 
+5. Apply for gold backed loan 
+6. Gift gold (remit gold to other people) 
+7. Cash withdrawal 
+
+ 
+Backend 
+HelloGold’s core system is built on Ruby-on-Rails and Go with a Postgres database backend. Ruby is 
+used for the CWS to give us faster time to market by exploiting the rich pool of available RoR 
+developers. Go is used to build the other components for connecting to other source systems due to 
+the rich tools for integration with the additional benefit of easily moving our solution to the 
+blockchain world as the Ethereum platform is built on Go. The 2 core components of HelloGold’s 
+System are: 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+8
+
+ 
+1. Central Web Service (CWS): Built on Ruby-on-Rails (RoR), CWS provides the core interface 
+
+for HelloGold’s mobile applications and potentially third party applications. For resilience 
+purposes, CWS functions merely as an app server in which it does not interface directly with 
+any external parties but merely responds to requests via the APIs that it connects to and 
+delegating the integration to external parties via Agent (described below). Some of the core 
+functions of CWS are: 
+- Customer data including KYC (anti-money laundering system) 
+- Transaction functions such as customer buy, sell gold and transaction history 
+- Account Management 
+- Provide the mobile interfaces to Agent functions such as Top Up and gold redemption  
+- Calculation and charging of fees (Fee Engine) 
+- End of Day Customer, Accounting, Management Report generation 
+- Management panels (front-end) for customer support, accounting reporting.  
+
+ 
+2. Agent: Built on Go, Agent provides the core functions by integrating with external third party 
+
+service APIs such as payment gateway, currency exchange rates and gold bullion agent. 
+Using a purely micro-services architecture that promotes Agile development, the Agent can 
+be upgraded by bringing on additional services as required. Another benefit is that should an 
+external service fails, the Agent will handle it while ensuring that customer activity will not 
+be impacted. Key functions are: 
+- Cash functions – including Top Up and withdrawal 
+- Gold function – pricing, redemption 
+- Treasury – buy/sell gold 
+- International currency transfer including exchange rates 
+- UN Consolidated List – KYC search for banned customers 
+
+ 
+Database 
+The current implementation uses the Postgres database, a traditional Relational Database 
+Management System (RDBMS) for storing confidential client related data. The traditional database 
+model has been developed prior to the implementation of the blockchain to test the feasibility of 
+our approach and to ensure that the System could be responsive to changes. As the major business 
+and technical principles are now clearer, the relevant parts of the System can be migrated onto the 
+Blockchain whilst maintaining some flexibility to deal with future product changes. 
+ 
+Testing 
+HelloGold completes internal testing on the product, independent from the development team. 
+Additionally, HelloGold runs security audits on the product/System prior to any major release. The 
+System is set up with back-up capability/redundancy, which is tested on a regular basis. 
+ 
+ 
+
+PRODUCT BLOCKCHAIN 
+
+ 
+HelloGold will use Ethereum blockchain smart contracts to provide additional security and 
+transparency for the customer gold transactions, as well as increasing access to the HelloGold 
+system. 
+ 
+Transparency 
+By publishing the smart contracts and incorporating a blockchain explorer (transaction navigator), it 
+will be possible to review the full list of anonymised transactions and calculate the amount of gold 
+that HelloGold is holding on behalf of customers. This can be compared to the amount of gold 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+9
+
+published in the customer gold list (anonymised) and that vaulted by HelloGold’s custodian, who 
+also independently publishes the total amount of gold held. 
+ 
+Security 
+HelloGold has incorporated several security mechanisms to protect customer accounts. All 
+connections are encrypted using HTTPS. Internal API calls between the core components are secured 
+with additional secret keys and firewall rules that limit interactions between trusted systems. For 
+external facing APIs, for example APIs used by our mobile application, the API calls are further 
+secured with a combination of industry standard OAUTH and secure tokens for each mobile device. 
+The addition of a distributed record adds a further level of security from internal and external 
+attempts to alter account data without leaving an audit trail. The smart contracts are being 
+developed with best practices in mind following constant review of public audit documents. This 
+should ensure that customer accounts are true and accurate. 
+ 
+Access 
+In addition, the Ethereum smart contracts will enable HelloGold to create ERC20 based GBT, 
+tradeable on any exchange which accepts them. This will make the HelloGold platform available to 
+everyone anywhere in the world 
+ 
+HelloGold System incorporating blockchain 
+ 
+
+ 
+ 
+CWS and Client Engine 
+When the blockchain is implemented, the core of the services as provided by CWS would essentially 
+remain the same to the external applications. The key difference is that some of the functions (for 
+example, Financial Transactions, Account Management, Fee Calculation) that were originally 
+implemented within the CWS but are now implemented in the blockchain would be delegated by the 
+CWS. The Client Engine would interface to the Contract Agent for all blockchain-related transactions.  
+ 
+However, for the functions that are still implemented in CWS (for example Customer KYC Data and 
+providing the Web Panels for Customer Support and Finance), these interactions would not go 
+through the Client Engine but instead would remain within the CWS core. 
+ 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+10
+
+ETHEREUM 
+ 
+HelloGold is using Ethereum as it is currently the most widely accepted platform that offers all the 
+benefits of a blockchain (full traceability, non-repudiability etc.) and multiple source language 
+implementations that encourage integration. Ethereum will handle only the parts needing 
+consensus, transparency and accountability. Other services will continue to be provided using 
+existing technology. 
+ 
+HelloGold needs a transactional blockchain with a powerful system of smart contracts which have 
+the ability to ensure that a transaction can combine with the results of previous transactions to 
+provide auditable consistent results. To date, Ethereum is the only stable system that has achieved 
+widespread adoption. The decades of experience of our senior development team tell us to avoid 
+anything experimental to run a live system. 
+ 
+The Ethereum blockchain will be run on a private network to avoid paying infrastructure fees per 
+transaction, reduce transaction latency and avoid the risk of independent developers adding their 
+own contracts onto the HelloGold Blockchain. This means that HelloGold and the other nodes will 
+control the block times, ensuring customer gold transactions are completed efficiently. (Currently 
+the Kovan test-net seals blocks every four seconds) 
+ 
+Ether and Gas will continue to be used on the Private Net. Gas is an essential concept to ensure that 
+faulty code does not hang or throttle the throughput of the nodes. “Private Net Ether” will be either 
+mined by the nodes that require it, or distributed as needed. 
+ 
+Critically, the blockchain elements of the system will provide liquidity via smart contracts, forming 
+the basis to convert value between fiat, gold and cryptocurrency, enabling gold as a form of value 
+exchange. 
+ 
+BLOCKCHAIN DESIGN PHILOSOPHY 
+ 
+HelloGold is using blockchain technology with a number of reconfigurable contracts that can be 
+combined to perform the necessary functions in such a way as to allow new capabilities to be added 
+while retaining the integrity of the entire system. To attain this, the principle objects (the user and 
+company accounts) are designed to survive intact even when details of the business operations may 
+change, hence they were isolated into general purpose contracts. Other contracts such as Gifts, 
+Loans and the Fee Engine are designed to be able to be plugged in and changed/updated as 
+required. 
+ 
+The network as designed should be able to scale because it is not a high speed trading application 
+and therefore not transaction heavy. One account holder is expected to be transacting several times 
+per month rather than hourly/daily. By the time we find that there is a congestion issue, the warning 
+signs will have been there for some time and we will have had time to address them. 
+ 
+In any system development, we need to pull together a number of technologies as appropriate. It is 
+our firm belief that a UTXO (value transaction) blockchain has value as a tool in the appropriate 
+system. A UTXO system is not appropriate for the HelloGold system as we need smart contracts 
+which can manage transaction calculations. Things which can validly be done off chain should be 
+done off chain. Where consensus is required for auditability, it should be done on-chain or proofs 
+stored on chain. We have a consensus system of competing interests even in our systems design. 
+ 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+11
+
+HelloGold is now developing the blockchain elements, as opposed to leading with the smart 
+contracts, as the requirements and areas that need to maintain flexibility are clearer having iterated 
+on the Contract Agent (using Go). While the system that we have designed is still in the early stages, 
+we are testing it for efficiency and auditability. We are doing it with input from experienced staff in 
+each area who has to convince the others that his way is the correct way of doing something. 
+ 
+SMART CONTRACT SYSTEM 
+ 
+Smart contracts 
+
+ 
+ 
+Contract Agent 
+The Contract Agent is a Go server which acts as a firewall to prevent direct access to the Private Net 
+thereby ensuring its integrity and availability. This firewall should prevent spam attacks on the 
+Private Net (as recently occurred on the Ropsten testnet - possible because of the low cost of Ether 
+on a private net). We will also examine other schemes such as PoA (as just released in Kovan) and 
+Permissioned Blockchain implementations for further protection of the net. 
+ 
+When the HelloGold mobile app creates a transaction, the app/user signs the transactions. The 
+Contract Agent server then dispatches/submits that transaction (job) onto the Private Net. 
+ 
+Smart Contract Gateway 
+The Smart Contract Gateway manages the relationship between contracts and acts as a gateway to 
+the other contracts in the system. The main HelloGold contract has 2 functions – broker for some 
+and index of where to find the contracts for other transactions (e.g. where to find a bank contract 
+for a new currency). Additionally, the Gateway contract maintains the HelloGold gold balance. This 
+excludes client gold, but includes fees that have been charged in gold. This contract has been 
+designed as upgradeable without impacting the client account contracts (transactions). This is to 
+minimise the need to migrate the client accounts in future. 
+ 
+Bank Contracts 
+Bank contracts are a series of smart contracts, with one per country in which HelloGold operates, 
+plus functions to allow who can access and update that list. Initially this is Malaysia only, but will 
+include other countries as HelloGold expands. The contract maintains transactions relating to 
+HelloGold’s cash operations in that country, including the cash in/out functions. The record 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+12
+
+maintains HelloGold money only, not client cash. The contract accepts cash to enable buy/sell gold 
+transactions. 
+ 
+Users’ Accounts 
+Users’ Accounts processes and records customer related transactions in a series of arrays in a smart 
+contract, holding: 
+1. customer cash and gold balances 
+2. the current fee tier for transactions 
+3. a list of gifts and loans for each customer, showing status for each (open or closed) 
+ 
+Fee Tables 
+The Fee contract includes a list of tiers outlining the different fee structures that could apply to a 
+customer. Whilst this is initially consistent across all customers, flexibility has been built in to enable 
+variations in fees in future either due to promotions, variations by country, or other currently 
+unknown variables. 
+ 
+Gifting 
+Each gift creates a new smart contract based on a template, with each contract implementing the 
+movement of gold from account A to B, plus the status of that movement - complete, in progress, 
+rejected (inc timed out). The flexibility incorporated into this design will enable broader use beyond 
+pure “gifting”, i.e. anytime a transfer of gold between accounts is required. 
+ 
+Loans 
+Each loan is represented by a smart contract and comprises an agreement between customer and 
+agent. As the current structure of the loan products has not been confirmed, less has been defined 
+in these contracts beyond the ability to lock the customer gold as collateral for the duration of the 
+loan and the ability to release this collateral at the end of the term. The architecture means we can 
+create new types of loans for different environments. 
+ 
+All the smart contracts have been designed so that they can be updated without effecting the 
+balances, e.g. to allow HelloGold to add new currencies, countries, fee structures, loan products, 
+other products not yet known. Contracts include information based on what is required only, rather 
+than all information. 
+ 
+CURRENT STATUS 
+ 
+The smart contracts are being prototyped and the test infrastructure is in place. Next comes 
+planning the integration with the current system which will be balanced between immediate needs 
+of the business and getting the blockchain to the market in a timely manner. This will include a 
+migration from Postgres to smart contracts. Since HelloGold is a working business, rollout will 
+proceed cautiously with a parallel run to ensure that the system is processing transactions correctly. 
+Part of the process will be extensive validation testing and an independent security audit of the 
+contracts. Ideally we will be working in parallel by end October (2017) and completely on the 
+blockchain by end Q4 
+ 
+GOLD BACKED TOKENS 
+ 
+The current use of blockchain is to support the core product (buy/sell/store gold). HelloGold plans to 
+develop this platform to enable HelloGold customers to switch from HelloGold customer gold to 
+cryptocurrency tokens, backed by investment grade gold (GBT). These tokens will be based on 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+13
+
+Ethereum ERC20 tokens and be fully backed by 1g of physical, investment grade (99.99%) gold, 
+vaulted with HelloGold’s vaulting provider. Consequently, GBT should track the price of 1g gold. 
+GBT utilises ERC20 tokens so they can complete the calculation features required autonomously. 
+This will make the gold tradeable on exchanges that accept the tokens, outside the HelloGold 
+system. 
+ 
+Once the GBT have been developed, they will be available for direct sales, to provide a version of a 
+stable coin for crypto investors. Holders of the cryptocurrency gold backed tokens will be able to 
+switch to a physical gold account and be able to either redeem physical gold or withdraw fiat 
+currency via the existing HelloGold System. 
+ 
+HGF will pay a management fee to HelloGold to cover the management costs associated with the 
+GBT being physically backed by 99.99% investment grade gold. The management fee charged will be 
+consistent with HelloGold customer account charges. This is currently set at 2% per annum, 
+calculated daily and charged monthly. HGF anticipate that the charge will remain the same as that 
+charged to HelloGold customer accounts. Therefore, the charge may change either up or down, 
+although HelloGold does not currently anticipate this. The calculation and payment will be 
+incorporated into the GBT smart contract. This management fee will be paid in gold by HGF to 
+HelloGold. 
+ 
+Via GBT, HelloGold will create a link between fiat currency, gold, gold as a cryptocurrency and other 
+cryptocurrencies; with the ability to transfer value along through the blockchain. 
+ 
+For additional information on GBT and how they operate, please see Token Sale Information Sheet. 
+ 
+RISK MITIGATION – USING A PRIVATE NET 
+ 
+HelloGold will be running on a private blockchain - with restricted access. Transactions on the 
+Private Net will be allowed on a role based permission model. The version that the nodes are 
+running will only be upgraded as required after extensive tests. The interface between the Private 
+Net and the Live Net will be one way, as will the explorer. Should Ethereum cease to operate as a 
+public net, the Private Net can continue operation until a suitable replacement is found.  
+ 
+
+ 
+ 
+For information on HGT and GBT, please refer to Token Sale Information Sheet 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+14
+
+ 
+The Bridge Node will be a server allowing the Ethereum private network to communicate with the 
+public Ethereum network and vice versa using event logs to trigger the communication activities. 
+Such an approach is already proven to be effective by the Oraclize platform. 
+ 
+SECURITY AUDIT 
+ 
+Security audits have been run on the core product – apps, communications and backend. This will be 
+repeated on a regular basis, including prior to the blockchain deployment to ensure the integrity of 
+the smart contracts. These have been done by reputable third parties including Crysp Australia Pty 
+Ltd. 
+ 
+The smart contracts themselves will be audited via a reputable third party at the appropriate time. 
+At this time there are a number of alternatives that we are looking to complete the work. Funds will 
+be set aside to pay for these reviews as required prior to any deployment and parallel run. 
+ 
+  
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+15
+
+TECHNICAL CAPABILITY 
+
+ 
+Wykeen Seet (CTO) 
+Wykeen was previously VP at Bangkok Bank in Thailand where he led multiple projects including 
+Mobile Banking, B2B Gateway, International Remittance, and Credit Related Systems over a period 
+of 8 years. Prior to Bangkok Bank, he worked as a software engineer at Digital Applications 
+International Limited in the UK where he designed and implemented customer software 
+changes/enhancements of Warehouse Management Systems for major retail clients such as 
+Sainsburys, Tesco, & Woolworths. He has a PhD in Computer Science from the University of 
+Manchester where he completed his Master of Philosophy (MPhil) in Computer Science and received 
+a 1st class in Bachelors of Science. 
+ 
+Dave Appleton (Lead Developer) 
+Dave has more than 40 years of experience working as an engineer in the tech sector, starting from 
+his time at University of London through to being VP of Engineering at Tembusu Systems 
+immediately prior to HelloGold. At Tembusu Dave worked on a blockchain system that combined 
+auditability with anonymity. Most of Dave’s time has been spent working for startups, mostly in SE 
+Asia, including at Proteq Technologies (Singapore), being Founder/Owner of Calistra Research Labs 
+(developing advanced automated inspection systems) and Pirate 3D where he defined test 
+procedures for a crowdfunded 3D printer. Over the years, he has become proficient in many areas 
+including low level hardware and software, hardware test systems design, image processing and 
+blockchain technology. Dave has used multiple languages professionally, including C, C++, C#, Pascal, 
+Modula-2, PHP, Go, Java, SQL, various test languages, Basic, Objective-C, Assembly Language 
+(Various), Microcode and PowerBuilder; as well as Haskell, Scala, Verilog and Logo for fun. Based on 
+this experience, Dave is an active speaker at conferences and tutor/mentor to students and the tech 
+community at large, conducting classes at clubs, hackerspaces and colleges. Dave has BSc in 
+Engineering (Electronics) from University of London and MSc in Management of Technology from 
+National University of Singapore. 
+ 
+Andras Kristof (Technical Advisor) 
+Andras is an entrepreneur and digital currency technology expert. He has 20+ years of IT experience 
+building robust, scalable systems. He started working with blockchains in 2013, starting with Bitcoin, 
+then moving to Ripple and finally to Ethereum. After a successful exit from viki.com, he founded 
+Tembusu Systems in late 2013. Andras is currently CTO of Yojee in Singapore, a distributed logistics 
+platform using Ethereum and AI to make logistics more effective. Andras is the co-author of the 
+“Handbook of Digital Currency” and provides consulting services for governments, international 
+organisations and companies on blockchain topics including digital currencies, implementation 
+feasibility and security. In addition to a Masters in Computer Science from the Maharishi University 
+of Management, Andras is a Fellow at SIM University. 
+ 
+TC Wu (Head of Apps/Technical Lead) 
+TC was previously the Technical Lead for VLT Labs, where he enhanced its technical delivery 
+capabilities and team dynamics. Prior to VLT Labs, TC was the CTO of Recomn.com, a service 
+professional marketplace. In Recomn.com, he took over from an interim tech team and rebuilt both 
+the team and the technology to position the company for growth. Prior to joining the startup 
+ecosystem, he was a supply chain planning consultant for Quintiq, where he worked on the product 
+development team for demand planning, strategic planning, operations planning and workforce 
+planning. He has a Bachelor of Engineering in Electrical and Computer Systems engineering from 
+Monash University. TC is experienced in multiple modern programming languages including Ruby, 
+Python, Java, Javascript, Swift, C# and R. He is also experienced and proficient in technology 
+frameworks like Rails, Django, Scipy, Cocoa, Android and Node. 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+16
+
+ 
+Zulh Zainudin (Developer) 
+Zulh was previously a Full-Stack Web Developer at a software house in Kuala Lumpur. He was 
+involved in fast development sprint cycles; managing development across a wide range of industries 
+for international customers. Before that, he was a freelance designer and front-end developer where 
+he designed user-centric web application interfaces for businesses. Other than being deeply into 
+development, he also enjoys working in digital marketing, DevOps, infrastructure scaling & 
+serverless topics and is involved in many local community talks, conferences, and tech workshops. 
+He is a mentor, trainer and organiser for RailsGirls KL and TechLadies KL teams; building and 
+empowering woman software engineers. 
+ 
+Dan Boey (Developer) 
+Dan completed his BSc in Sound Engineering with 1st Class Honours from London Metropolitan 
+University. He then went on to complete his MSc in Computing Science at Imperial College London, 
+to which he was awarded a departmental scholarship. He has since worked as a Technical Consultant 
+for Lombard Risk in London where he helped in the design and installation of regulatory reporting 
+software for UK and international banks. Before joining HelloGold he worked for BBD Labs, a Kuala 
+Lumpur based Ruby on Rails development house, where he was lead engineer on a number of 
+projects. He has experience with Python, C++ and Java, though his current focus is on Go and Ruby-
+on-Rails. 
+ 
+Zaim Ramlan (Developer) 
+Zaim was previously a freelance Full-Stack Web and Mobile App Developer where he designed and 
+developed full-fledged, user-centric web and mobile applications for businesses and individuals. 
+Being very keen on how technology works and his constant exploration through the realm made him 
+the overall Gold Winner for his university's Computer Science Final Year Project. Apart from project 
+development, he enjoys working with User Interface and User Experience (UI/UX), performance 
+optimisation, scaling application infrastructure & building Internet of Things (IoT) and is involved in 
+tech workshops, conferences and community talks. He is also a mentor and trainer for RailsGirls KL; 
+pursuing his quest to contribute his knowledge back to the community. 
+  
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+17
+
+EXPANSION PLANS 
+
+ 
+ 
+
+DEVELOPMENT ROADMAP 
+
+ 
+BUSINESS PLAN 
+ 
+Once the core gold buy/sell/store/transfer mechanism is in place, and scale achieved (thereby 
+reducing marginal costs), there are many uses for the core functionality. The HelloGold team have 
+built a strategy to utilise the core technology and to expand its use in different markets, segments, 
+assets, products with different partners, as well as expand the types of technology used as required. 
+ 
+Not least, this includes expanding the traditional world operations to support the gold backed tokens 
+in the cryptocurrency market. HelloGold are able to immediately adapt the solutions used for the 
+core product (app) and apply these to the crypto market in conjunction with Ethereum smart 
+contracts and ERC20 tokens. 
+ 
+See next page for business roadmap 
+ 
+TECHNICAL DEVELOPMENT PLAN 
+ 
+To support the business roadmap, HelloGold has a high-level technical development plan: 
+ 
+
+ Stage Description Status 
+1. Ideation Conceptualisation and proof of concept; 
+
+create architecture, solve key technical 
+problems, set up and interactions 
+
+Complete 
+
+2. Beta version development Android v1 developed with supporting 
+backend for soft (test) launch 
+
+Complete 
+
+3. Launch: 
+a. Soft launch 
+b. Full customer launch 
+
+Soft launch designed to test usability, 
+operational processes, find bugs. 
+Customer launch by wave, ensuring 
+scalability of tech and operations 
+
+ 
+a. Complete 
+b. In progress 
+
+4. Blockchain development Blockchain 1.0 smart contracts to replace 
+transaction records and some elements of 
+processing 
+
+In testing 
+
+5. Iteration and core 
+development 
+
+Continuous improvement and 
+development to create better core 
+product, including new functionality, e.g. 
+Android v2 and iOS v1 launched based on 
+feedback/bugs identified during soft launch 
+
+In progress 
+
+6. Expansion 
+a. Geographic 
+b. Product 
+
+Add product features/functionality and 
+make changes to allow geographical 
+expansion 
+
+Not started 
+
+7. Increased automation of 
+development processes and 
+more innovative product 
+features 
+
+Adopt more automated product 
+development processes and add new 
+product features that uses more AI, 
+machine learning to optimise app usability 
+and functions 
+
+Not started 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+18
+
+Business Roadmap 
+ 
+
+ 
+ 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+19
+
+DEVELOPMENT FUNDS 
+
+ 
+Subject to a successful Token Sale of HGT by HGF, it is envisaged that HGF will give grants to 
+HelloGold to support the development of HelloGold in the following ways: 
+ 
+
+1. Market expansion 
+2. Product improvement and technical development 
+3. Tech team expansion – required to implement 1. and 2. 
+
+ 
+ 
+1. MARKET EXPANSION 
+ 
+The key drivers of HelloGold AUM are number of customers and amount of gold held by each 
+customer. The best way to increase the number of active customers is via expansion into new 
+geographic markets. The grants received from HGF (if any) will determine which markets can be 
+entered, and accelerate the entry into these markets. 
+ 
+ 
+
+ 
+
+Market expansion will require spend in 4 key areas: 
+ 
+
+1. In country teams – Set up and run in-
+country operations, including local customer 
+service and marketing (language driven) 
+
+2. Tech team – Scale up the tech team to get 
+in-house specialists and the ability to 
+respond to the challenges of both 
+development and operating in multiple 
+countries. This will include creating versions 
+of the app for different countries 
+(internationalisation inc. language, country 
+specific payment systems, changes caused 
+by different regulatory environments, 
+different cultures, partner requirements etc) 
+
+3. Marketing – Due to the mass market nature 
+of the product, country specific marketing 
+(style, content, language) is critical to 
+creating product acceptance and take up. 
+Expanding into different countries will 
+require additional headcount for digital 
+marketing (inc social media management in 
+local languages) 
+
+4. Additional overhead, particularly working 
+capital required for a larger gold float (gold 
+available for sale) 
+
+ 
+Note: HelloGold’s expansion has costs in base/local currency (not crypto) and therefore the ability to 
+accelerate our expansion and grow AUM is determined by the base currency amount 
+raised/equivalent when ETH is released. 
+  
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+20
+
+ 
+2. TECH EXPANSION PLANS 
+ 
+HelloGold has a plan to build out the functionality by sectors. 
+ 
+Year 1 
+
+Functionality Min functionality Max functionality 
+App Existing Native apps - Redesign for better UX 
+
+- Greater internationalisation/localisation 
+(parallel development for multiple countries) 
+
+- Increased security features 
+- More streamlined processes such as account 
+
+recovery, KYC, etc 
+- More product features 
+- Greater automation (e.g. KYC, redemption 
+
+and chatbots) 
+System/Backend Scale increase only - Increased security 
+
+- Additional development to support regional 
+expansion such as: 
+ Integration to regional financial 
+
+systems/regulations 
+ Region specific currency, gold unit and 
+
+fee structures, if required 
+ Other region-specific product features 
+
+- Code/System refactoring for purposes of 
+optimisations and reducing technical debt as 
+required 
+
+- More process automation of design, build, 
+test and deployment tasks 
+
+Blockchain - v1.0 smart 
+contracts 
+
+- Gold backed 
+cryptocurrency 
+(GBT) 
+
+- Explore use of alternate blockchains, or 
+modifications to Ethereum to improve 
+response times (Private Net) 
+
+- Development of document blockchain to 
+store data (user/customer data blockchain) 
+(Private blockchain) 
+
+- Explore the use of private side-chains for 
+accountability 
+
+Infrastructure Scale increase only - Improved redundancy 
+- Reduced latency 
+- Improved security 
+- Servers running across a number of 
+
+independent service providers, e.g. 
+Azure/AWS/Google cloud etc. 
+
+- More automation for better QC and 
+coordination of feature rollout across 
+different regions 
+
+Customer/Product 
+Features 
+
+- Regular saver plan 
+- Payment options* 
+- Loan product 
+- Lucky draw 
+- Remittance 
+
+- Recoverable wallets (vs current recreation of 
+keys and migration of funds) 
+
+- Big Data Analytics to support Machine 
+Learning to better tune our product offering 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+21
+
+- Gold leasing 
+- Under 18 savings 
+
+for users and for other detection algorithms 
+such as fraud detection, etc. 
+
+Testing Raw testing tools only 
+for smart contracts 
+
+- In-house automated testing functionality inc. 
+contract testing 
+
+- Publication of smart contract testing tools 
+Support/Resilience Support provided by 
+
+Dev team 
+- Round the clock support teams that monitor 
+
+and provide first-line support of common 
+issues 
+
+- High Availability active-active nodes that 
+provide maximum uptime 
+
+- Self-diagnostic health check system with the 
+ability to provide early warning alerts of 
+potential problems 
+
+ 
+*Extended payment options include debit card, bank payment systems, tenpay, alipay, mobile wallet 
+and crypto-currency exchange integration. 
+ 
+Year 2 and 3 
+The focus for 2018 and 2019 will be as per the Business Roadmap, with a focus on expanding into 
+new markets (Indonesia, China, Philippines) and new products. 
+ 
+HelloGold will develop a detailed ‘use of funds’ prior to undertaking any new financing, including but 
+not limited to the receipt of any future grants from HGF. 
+ 
+3. TEAM EXPANSION 
+ 
+HelloGold would like to be able to expand the technical team to support the development roadmap 
+both in terms of markets entered, technical features and product functions. Currently the team are 
+technical generalists who are applied to solve all the technical problems HelloGold encounters. 
+Ideally we would like to bring more capability in-house, to increase responsiveness/speed to market 
+and control/quality, and get specialists (to ensure best practice): 
+ 
+
+1. In house app developers, both Android and iOS 
+2. Systems engineers for core Ruby and Go infrastructure 
+3. Blockchain team – reduce key man risk and have ongoing smart contract development 
+4. Specialist technical in-house testing, including ability to write automated test scripts as well 
+
+as manual testing. Security testing would remain an outsourced function 
+5. Dev Ops to manage the transition from development to operations 
+6. Tech Ops team to support product operations/customer service, reducing the 
+
+time/distraction on developers (both app and systems engineers) 
+7. Business Analyst, Product Development Lead, Technical Architects and Technical Writers to 
+
+provide more streamlined development and better documentation of common 
+architecture/processes.  
+
+8. Technical marketing support. As marketing becomes increasingly technical (e.g. in app 
+analytics tools, push notifications, tracking, social media etc), the skill set required for 
+marketing becomes more technical. Rather than relying on the development team (or even 
+Tech Ops) to provide this technical support, HelloGold would like to build a team of technical 
+marketing specialists to drive the growth in AUM. 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+22
+
+BUDGET 
+ 
+HelloGold has produced an expected operating budget based on anticipated Year 1 and Year 3 
+spend. 
+ 
+HelloGold 3-Year Budget 
+ 
+
+ 
+ 
+The change in percentage of each segment between Year 1 and Year 3 reflects the relative costs of 
+expanding into new markets. 
+ 
+Team covers employment (staff) costs. HelloGold will expand our tech team and set up operational 
+and marketing staff in new markets. The team cost as a portion of total reduces over time, as 
+HelloGold will be able to benefit from scale. 
+Gold Capex is the working capital cost of buying and storing gold reserves. With increased scale, the 
+gold reserves will make up a smaller portion of total costs compared to setting up operations in new 
+markets. 
+Marketing covers direct to market activities, supporting integration with business partners, and 
+promotions. As HelloGold enters new, larger markets we will increase our marketing spend 
+accordingly. 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+23
+
+Office includes expenses used to run HelloGold offices and related administrative costs, more people 
+in more locations leads to increased spend.  
+Architecture refers to the cost of maintaining and improving tech systems, including mobile 
+development and web services. 
+Security Audit means third party auditing of HelloGold systems. 
+Non-Gold Capex covers fixed assets including computer and mobile phone hardware. 
+Other captures all other third party fees including legal services, Shariah advisory and licensing. 
+Contingency is calculated as a percentage of the total budget. Over time, HelloGold will allocate 
+more finances towards this fund (up to 10%) as the bigger expansion plan will have greater 
+uncertainty and more “unknown unknowns” which may require funds. 
+ 
+ 
+USE OF FUNDS 
+ 
+Depending on the funds raised by HGF, HelloGold will be able to accelerate the market and product 
+(functionality) expansion plans with a larger tech team. 
+ 
+
+Funds Raised Min Cap: ~USD 1,000,000 USD 5,000,000 Max Cap: ~USD 9,600,000 
+Market  
+   Thailand 
+   China 
+   Indonesia 
+   Philippines 
+ 
+
+ 
+Q1 2018 
+Q1 2019 
+Q1 2021 
+Q1 2021 
+
+ 
+Q1 2018 
+Q1 2019 
+Q1 2020 
+Q1 2020 
+
+ 
+Q1 2018 
+Q1 2018 
+Q1 2019 
+Q1 2019 
+ 
+
+Functionality 
+   App 
+ 
+
+ 
+ Existing native apps 
+ 
+
+ 
+ Redesigned native 
+
+apps for better UX 
+ Greater localisation in 
+
+each market 
+ Increased security 
+
+features 
+ More product 
+
+features 
+ 
+
+ 
+ Redesigned native 
+
+apps for better UX 
+ Greater localisation in 
+
+each market 
+ Increased security 
+
+features 
+ Even more product 
+
+features 
+ More streamlined 
+
+processes (e.g. KYC, 
+account recovery) 
+
+ Greater automation 
+(e.g. KYC, redemption 
+and chatbots) 
+
+ 
+   System  Increased security 
+
+ Scale increase only 
+ Increased security 
+ Integration to 
+
+regional financial 
+systems/ regulations 
+
+ Region specific 
+currency, gold unit 
+and fee structures, if 
+required 
+
+ Increased security 
+ Integration to regional 
+
+financial 
+systems/regulations 
+
+ Region specific 
+currency, gold unit, 
+fee structures and 
+other product 
+features, if required 
+
+ Code/System 
+refactoring 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+24
+
+Funds Raised Min Cap: ~USD 1,000,000 USD 5,000,000 Max Cap: ~USD 9,600,000 
+ More process 
+
+automation of design, 
+build, test and 
+deployment tasks 
+ 
+
+   Blockchain  v1.0 smart contracts 
+ Gold backed 
+
+cryptocurrency (GBT) 
+ Development of 
+
+document blockchain 
+to store data 
+(user/customer data 
+blockchain) (Private 
+blockchain) 
+ 
+
+ v1.0 smart contracts 
+ Gold backed 
+
+cryptocurrency (GBT) 
+ Development of 
+
+document blockchain 
+to store data 
+(user/customer data 
+blockchain) (Private 
+blockchain) 
+ 
+
+ v1.0 smart contracts 
+ Gold backed 
+
+cryptocurrency (GBT) 
+ Development of 
+
+document blockchain 
+to store data 
+(user/customer data 
+blockchain) (Private 
+blockchain) 
+
+ Explore use of 
+alternate blockchains, 
+or modifications to 
+Ethereum to improve 
+response times 
+(Private Net) 
+
+ Explore the use of 
+private side-chains for 
+accountability 
+ 
+
+Infrastructure  Improved 
+redundancy 
+
+ Improved security 
+ Scale increase  
+
+ Improved 
+redundancy 
+
+ Reduced latency 
+ Improved security 
+
+ Improved redundancy 
+ Reduced latency 
+ Improved security 
+ Servers running across 
+
+independent service 
+providers (e.g. Azure, 
+AWS, Google cloud) 
+
+ More automation for 
+better QC and 
+coordination of 
+feature rollout across 
+different regions 
+ 
+
+   Product 
+   features 
+ 
+
+ Regular saver plan 
+ Loan product 
+ Lucky draw 
+ Remittance 
+ Gold leasing 
+ Under 18 savings 
+
+ 
+
+ Regular saver plan 
+ Loan product 
+ Lucky draw 
+ Remittance 
+ Gold leasing 
+ Under 18 savings 
+ Recoverable wallets 
+
+(vs current recreation 
+of keys and migration 
+of funds) 
+
+ Chatbots 
+  
+
+ Regular saver plan 
+ Loan product 
+ Lucky draw 
+ Remittance 
+ Gold leasing 
+ Under 18 savings 
+ Recoverable wallets 
+
+(vs current recreation 
+of keys and migration 
+of funds) 
+
+ Chatbots 
+ Big Data Analytics/ 
+
+Machine Learning  
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+25
+
+Funds Raised Min Cap: ~USD 1,000,000 USD 5,000,000 Max Cap: ~USD 9,600,000 
+ Gold gift cards 
+ Jewelry redemption 
+ P2P lending 
+ 
+
+   Testing 
+ 
+
+ Raw testing tools only 
+for smart contracts 
+
+ In-house automated 
+testing functionality 
+inc. contract testing 
+ 
+
+ In-house automated 
+testing functionality 
+inc. contract testing 
+
+ Publication of smart 
+contract testing tools 
+
+ 
+   Support  Support provided by 
+
+Dev team 
+ Round the clock 
+
+support teams that 
+monitor and provide 
+first-line support of 
+common issues 
+
+ High Availability 
+active-active nodes 
+that provide 
+maximum uptime 
+ 
+
+ Round the clock 
+support teams that 
+monitor and provide 
+first-line support of 
+common issues 
+
+ High Availability 
+active-active nodes 
+that provide 
+maximum uptime 
+
+ Self-diagnostic health 
+check system with the 
+ability to provide early 
+warning alerts of 
+potential problems 
+ 
+
+Team  Blockchain 
+developers 
+
+ App developers 
+ 
+
+ Blockchain 
+developers 
+
+ App developers 
+ System engineers  
+ Technical marketing 
+
+specialists 
+ Technical testing 
+
+specialists 
+ 
+
+ Blockchain developers 
+ App developers 
+ System engineers  
+ Technical marketing 
+
+specialists 
+ Technical testing 
+
+specialists 
+ Dev ops 
+ Tech ops 
+ Business analysts 
+ Product development 
+ Technical architect 
+
+and writer 
+ 
+
+ 
+ 
+Community Support 
+As part of the Token Sale, HGF has set aside some tokens as a community fund to say thank you to 
+some of the people running unpaid services, who put in large amounts of time that the rest of the 
+community don’t see, and the rest of us taking them for granted. This will be distributed to causes 
+determined by HGF membership after the Token Sale. 
+ 
+ 
+ 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+26
+
+REPORTING 
+
+ 
+Project Plan 
+HelloGold intends to produce a written update on each fortnight on progress towards the expansion 
+goals outlined in the ‘Development Funds’, and announce when significant milestones are reached. 
+This will be in the form of a blog on Medium, covering both technical and business issues.  
+ 
+AUM reporting 
+The key metric required to measure success is AUM held by HelloGold. As outlined in the Token Sale 
+Information Sheet, it will be possible to view the amount of AUM held by HelloGold via multiple 
+mechanisms, including the publication on HelloGold website showing anonymised customer 
+balances and gold held in storage by HelloGold on behalf of customers. This information is 
+automatically updated each day and can be found at https://www.hellogold.com/how-it-works/ 
+(scroll down to Security). Once the smart contracts are live and the blockchain explorer in place 
+(securely) this will enable further direct, real time verification. Additionally, HGF will publish 
+supporting material each month to show the calculation behind endowment level and the GBT 
+released that month. 
+ 
+These updates (or links to the source) will be posted on the Token Sale channels listed below. 
+ 
+ 
+
+FURTHER INFORMATION AND CONTACT DETAILS 
+
+ 
+HGF/Token Sale channels 
+HGF can be contacted directly via the following public channels relating to Token Sale: 
+Slack channel   https://myhellogold.slack.com (Primary channel) 
+Medium   https://www.medium.com/hellogold  
+HelloGold Foundation  http://www.hellogold.org 
+Email   Foundation@hellogold.org  
+ 
+HelloGold product channels 
+HelloGold company marketing channels can also be viewed via the following links: 
+HelloGold website  https://www.hellogold.com/  
+LinkedIn   https://www.linkedin.com/company/hellogold  
+Facebook   https://www.facebook.com/myhellogold/  
+Twitter    https://twitter.com/myhellogold  
+Instagram   https://www.instagram.com/hellogold.my/  
+YouTube  https://www.youtube.com/channel/UCnRFwb_BSJJQQiAifJJ_6dw/ 
+ 
+Technology review 
+Additionally, draft smart contracts can be reviewed here: 
+https://github.com/myHelloGold/Foundation 
+ 
+Android and iOS apps are available in the Play/App store respectively. Due to the KYC/AML take on 
+process, the HelloGold app currently requires a Malaysian MyKad for identity verification and entry 
+to use the app functionality. For non-Malaysians who would like to view a demo version of the app, 
+an Android version can be https://www.hellogold.org/code-review.html including instructions on 
+how to clear the verification steps. Please note that the demo app has test accounts only and include 
+automated elements; no real cash/gold will be transacted. For iOS users, please use an Android 
+simulator on your laptop to view this APK. 
+
+
+
+HelloGold Foundation Limited. 
+Private & Confidential.  
+
+27
+
+ 
+Third party verification - external article links 
+http://thefinlab.com/#startups  
+http://www.theedgemarkets.com/en/node/302083 
+http://www.theedgemarkets.com/en/node/306225  
+http://www.nst.com.my/news/2016/12/197925/shariah-standard-gold-great-leap-islamic-finance 
+https://www.crowdfundinsider.com/2016/12/93574-hellogold-worlds-first-shariah-compliant-gold-
+fintech-platform/ 
+http://www.reuters.com/article/us-islamic-finance-gold-idUSKBN1490VH 
+http://www.theedgemarkets.com/article/aeon-credit-makes-foray-gold-product-financing 
+ 
+ 
+
+[the remainder of this page is intentionally left blank] 
+
+

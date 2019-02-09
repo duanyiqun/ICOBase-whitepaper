@@ -1,0 +1,2723 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+enhanced travel experiences 
+powered by a decentralized 
+
+P2P travel agency, optimized 
+for the millennial traveler
+
+Cool Cousin whitepaper v1.9
+
+10 April 2018
+
+
+
+2
+
+WP 01
+
+overview 4
+
+legal disclaimer 6
+
+Cool Cousin — a growing company 8
+iOS and web apps 9
+
+millennial travel habits 11
+
+operating in a huge market 12
+
+growth in numbers 13
+
+in the media 15
+
+a growing community 16
+
+growth—80% organic 19
+
+millennial travelers—Cool Cousin’s core audience 20
+
+Cool Cousin’s vision 21
+becoming the world’s largest decentralized travel agency 21
+
+redefining the role of the travel agent 21
+
+Cousins—the new and improved travel agent 22
+
+introducing the CUZ token economy 22
+
+one ecosystem comprised of two entities 22
+
+The Company 23
+
+The Community 23
+
+The Board of Representatives 23
+
+participants in the Cool Cousin community 24
+
+community governance 24
+
+business model 28
+
+fees from Cousin services 28
+
+affiliation fees 31
+
+solutions for businesses and organizations 32
+
+Cool Cousin API 34
+
+the Community Pool 36
+
+the Rewards Engine 36
+
+collecting fees for the benefit of all 37
+
+table of contents
+
+
+
+3
+
+WP 01
+
+setting up the Community Pool 38
+
+economy that creates value 38
+
+making CUZ accessible 39
+simple wallet 39
+
+removing user barriers / user experience 40
+
+technical considerations 41
+wallet 41
+
+ERC20 42
+
+Cousin identity management 42
+
+escrow 42
+
+blockchain applications in Cool Cousin 44
+
+timeline 46
+use of proceeds 47
+
+CUZ token issuance 48
+allocation 48
+
+ICO details 49
+ICO tImeline 50
+
+team 51
+founders 51
+
+team 52
+
+table of contents
+
+
+
+WP 01
+
+In this paper, Cool Cousin, a VC-backed travel company, presents its vision for CUZ - a 
+decentralized ecosystem that uses smart contracts to guarantee the direct and secure 
+exchange of knowledge and services between travelers and locals around the world, with 
+the goal of propagating fantastic travel experiences. 
+
+Use of the internet and reliance on it as a resource puts users in a precarious position, now 
+more than ever. No generation before has had access to so much information, with so little 
+ability to make good use of it. Powerful agendas, fake news, an overload of choice and the 
+financial interests of a handful of large stakeholders influence the content we’re exposed 
+to. Ultimately, we are not as free as we like to imagine. And yet, just 26 years ago, the 
+internet completely revolutionized our lives and opened up so many great opportunities 
+for consumers. 
+
+Tourism, one of the world’s largest industries with market value of over $2.3 trillion in 2016 
+alone, was one of the first to be dramatically transformed by the internet. Online booking 
+companies such as Priceline ($85B) rendered high street travel agents obsolete; Airbnb 
+(Estimated $30B) turned everyone with an extra bed into a semi-pro hotel owner; Yelp 
+($3.5B) and TripAdvisor ($5B) gave consumers a voice, amassing a bank of tens of millions of 
+reviews about every hotel, store and restaurant on the planet, cataloguing and distributing 
+the information for mass consumption. 
+
+So far so good. 
+
+Nowadays, these giant companies use scale strategies to create sophisticated networks, 
+giving consumers a false sense of variety and reality, when in fact they are in an echo 
+chamber of predetermined options. The economics of this highly centralized industry, 
+with big average purchases and high revenues per-user for low marginal costs, make it a 
+very lucrative and thus a competitive arena. Small to medium size travel companies don’t 
+stand a chance. Vast resources are used to manipulate search engine optimization and 
+tweak advertising prices. Market interests which prioritize sales over accuracy and volume 
+over personalization, taint our search results. Our feeds are filled with content we are 
+most likely to pay for, not information leading to the best personal experience for travelers. 
+
+To guarantee large numbers of active users, information has largely remained “free” - further 
+cementing a standard which nullifies competition. Ultimately, the business model that 
+upholds these companies devalues the information they offer, and travelers pay the price.
+
+These travelers, especially millennials, have become painfully aware of the biases and 
+manipulations within the travel industry. A recent article on Vice1 that demonstrates 
+
+overview
+
+4
+
+http://bit.ly/2B9ra2M
+
+
+5
+
+WP 01
+
+the ease with which someone can turn their backyard shed into the top rated London 
+restaurant on Tripadvisor, is just one in a myriad of examples that kindle such mistrust. In 
+an effort to avoid time-consuming research, people are reverting to pre-internet tactics 
+of information sourcing - from reaching out to friends to paying travel agents2. A Nielsen 
+study found that 82% of responders prefer recommendations from someone they know3, 
+and in the US, 22% of traveler used travel agents to book their trip in 2016, up from 14% in 
+20144. At the same time, 34% of millennials used a travel agent, up 19% from 2011. Those 
+who stick to surfing the web, visit an average of 28 different websites in 76 online sessions 
+over a period of 53 days5.
+
+Travel agents today focus mainly on luxury markets and business travel, charging hefty 
+premiums for the personalized service and expert information they provide6. Despite their 
+expensive services that don’t suit most travelers, over a third of millennials say they will 
+use a travel agent the next time they travel7. This internet savvy generation and the fastest 
+growing segment of travelers, is willing to pay a stranger with inbuilt biases who knows 
+nothing about them to make travel decisions for them8 - anything but spend the hours it 
+takes to find valuable intel. 
+
+Now, millenials have an optimized go-to service. Cool Cousin has established itself as an 
+alternative for travelers where they can easily access information they need by directly 
+connecting with locals - aka Cousins. Since we launched with a Beta version in July 2016, 
+more than 500K travelers have used the service to explore over 65 cities worldwide with 
+personalized trusted guides and tips received directly from Cousins. 
+
+With double-digit growth in monthly users and a community of over 1,000 Cousins, Cool 
+Cousin is ready to take its next big leap. By building a decentralized ecosystem of locals 
+and travelers around the world, powered by a new cryptocurrency called CUZ, Cool 
+Cousin is establishing the grounds for a new travel agent: our Cousins. In this ecosystem, 
+Cool Cousin is granting travelers easy access to personalized time-and-money-saving 
+services and information suited to their taste, while giving locals the opportunity to use 
+their unique knowledge as a source of income. As Airbnb enabled people with an extra 
+room to be hosts (not hoteliers) and Uber allowed car-owners to be independent transport 
+drivers, we equip city influencers with tools to offer information and services and to 
+find demand. With a growing user base and thousands of daily interactions waiting to 
+be tokenized, Cool Cousin is perfectly positioned to become a place where mainstream 
+travelers adopt cryptocurrency by taking part in our thriving global network that provides 
+superior travel services, powered by the crypto token CUZ 
+
+overview
+
+http://www.travelmarketreport.com/articles/Consumers-Continue-To-Use-Travel-Agents-Despite-Online-Push
+http://www.nielsen.com/content/dam/nielsenglobal/apac/docs/reports/2015/nielsen-global-trust-in-advertising-report-september-2015.pdf
+https://skift.com/2016/06/13/millennials-are-more-likely-to-use-travel-agent-than-any-other-u-s-demographic/
+http://www.mdgadvertising.com/blog/7-travel-marketing-trends-worth-exploring-in-2017/
+https://www.vogue.com/article/return-of-the-travel-agent-travel-designers
+http://www.travelandleisure.com/travel-tips/travel-agents/millennials-travel-agents
+https://www.travelagentcentral.com/running-your-business/studies-show-why-millennials-are-good-news-for-travel-agents
+
+
+6
+
+WP 01
+
+summary
+IMPORTANT NOTICE: PLEASE READ THE ENTIRETY OF THE “Legal Considerations, Risks 
+and Disclaimer” SCHEDULE CAREFULLY. WE RECOMMEND YOU CONSULT A LEGAL, 
+FINANCIAL, TAX OR OTHER PROFESSIONAL ADVISOR(S) OR EXPERTS FOR FURTHER 
+GUIDANCE prior to participating in the Cool Cousin token sale outlined in this White 
+Paper.
+
+Please note that this is a summary of the legal considerations, risks and disclaimers 
+schedule that can be found in the following [link], and which you must read in full 
+before: (i) making use of this White Paper and any and all information available on the 
+website(s) of Cool Cousin (the "Company”) and/or (ii) participating in the Company’s 
+token sale outlined in this White Paper (the "Token Sale”). Any undefined capitalized 
+terms below shall have the meaning set out in the "Legal Considerations, Risks and 
+Disclaimer” schedule. This summary should not be relied on in place of reading the 
+"Legal Considerations, Risks and Disclaimer” schedule in full.
+
+The "Legal Considerations, Risks and Disclaimer” schedule applies to this White Paper 
+and any and all information available on the Website. The contents of the "Legal 
+Considerations, Risks and Disclaimer” schedule outlines the terms and conditions 
+applicable to you in connection with (i) your use of this White Paper and of any and all 
+information available on the Website; and/or (ii) your participation in the Token Sale, 
+in each case in addition to any other terms and conditions that we may publish from 
+time to time relating to this White Paper, the Website and the Token Sale (such terms 
+hereinafter referred to as the "Terms”).
+
+The information set forth in the "Legal Considerations, Risks and Disclaimer” schedule 
+may not be exhaustive and does not imply any elements of a contractual relationship. 
+While we make every reasonable effort to ensure that all information: (i) in this White 
+Paper; and (ii) available on the Website (collectively referred to as the "Available 
+Information”) is accurate and up to date, such material in no way constitutes 
+professional advice.
+
+The Company does not recommend purchasing Tokens for speculative investment 
+purposes. Tokens do not entitle you to any equity, corporate governance, dividends, 
+voting or similar right or entitlement in the Company or in any of its affiliated 
+companies. Tokens are sold as digital assets, similar to downloadable software, digital 
+
+legal considerations, 
+risks and disclaimer
+
+https://www.coolcousin.com/ico/coolcousin-legal.pdf
+https://www.coolcousin.com/ico/coolcousin-legal.pdf
+https://www.coolcousin.com/ico/coolcousin-legal.pdf
+
+
+7
+
+WP 01
+
+music and the like. The Company does not recommend that you purchase Tokens 
+unless you have prior experience with cryptographic tokens, blockchain-based 
+software and distributed ledger technology and unless you have taken independent 
+professional advice.
+
+Residents of the United States of America, and citizens, nationals, residents (tax 
+or otherwise) and/or green card holders of each of the Republic of Singapore, the 
+People's Republic of China, the State of Israel, or any other jurisdiction which prohibits 
+the possession, dissemination or communication of the Available Information and/
+or prohibits participation in the Token Sale or the purchase of Tokens or any such 
+similar activity (a “Restricted Jurisdiction”) or any other Restricted Persons are not 
+permitted to participate in the Token Sale. The term "Restricted Persons" refers to any 
+firm, company, partnership, trust, corporation, entity, government, state or agency of a 
+state or any other incorporated or unincorporated body or association, association or 
+partnership (whether or not having separate legal personality) that is established and/
+or lawfully existing under the laws of a Restricted Jurisdiction.
+
+In no event shall the Company or any current or former Company Representatives be 
+liable for the Excluded Liability Matters.
+
+The Company does not make or purport to make, and hereby disclaims, any 
+representation, warranty or undertaking in any form whatsoever to any entity or 
+person, including any representation, warranty or undertaking in relation to the 
+truth, accuracy and completeness of any of the information set out in the Available 
+Information.
+
+You should carefully consider and evaluate each of the risk factors and all other 
+information contained in the Terms before deciding to participate in the Token Sale.
+
+
+
+8
+
+WP 01
+
+Cool Cousin is the closest thing to having a friend in every city in the world. The most 
+valuable source of information about a new destination is a local friend - a trusted 
+insider who knows your taste and can direct you to places that suit you. Unfortunately, 
+we don’t have a local friend in every city we visit, and online information and services 
+fail time and again to provide us with a good alternative.
+
+Founded as an antidote to the growing frustration experienced when trying to discover 
+relevant places and activities in a new city, Cool Cousin directly connects travelers to 
+like-minded locals - aka Cousins - for an open and unbiased exchange of treasured 
+local knowledge. Using the service, travelers can search through a list of Cousins in 
+over 65 destinations, and find those who are the right fit for them. Each Cousin has a 
+distinct guide to their city with their favorite neighborhood spots and local businesses, 
+available online and offline. Travelers searching for something specific, like cheap 
+tickets to a football match or a nearby bar hosting a cool local band, can also reach out 
+to their Cousins directly for personal on-demand assistance. 
+
+Cool Cousin — 
+a growing company
+
+
+
+WP 01
+
+A
+
+Choose a destination and get a local’s insider 
+
+guidance
+
+B
+
+Browse our community of locals who we call 
+
+Cousins
+
+C
+
+Filter by bio, age, photos, tags and preferences, 
+
+and connect with Cousins who suit your taste
+
+FIGURE 1
+
+9
+
+Cool Cousin — a growing company
+
+
+
+10
+
+the Cool Cousin app — web & iOS 
+Travelers using the iOS and web versions of Cool Cousin can access unique city guides 
+curated by 1,000± Cousins in 65+ cities, filter the guides by age, bio, sex and categories, 
+and reach out to their selected Cousins for tailored advice. To date, we’ve released 60 
+updates for the fully-native iOS app since it’s launch in July 2016, and launched a fully-
+responsive progressive web app in June 2017. 
+
+D
+
+Select a Cousin and get instant access to their 
+
+city guide, available online and offline as a 
+
+map or list
+
+E
+
+Get your Cousin’s personal recommendation 
+
+for the spots they love and save places from all 
+
+Cousins to curate your own list
+
+F
+
+For personalised guidance that is customized 
+
+to your needs, message your Cousin and get 
+
+advice straight from a local in the know, within 
+
+a few hours
+
+FIGURE 2
+
+WP 01 Cool Cousin — a growing company
+
+
+
+11
+
+WP 01
+
+millennial travel habits
+
+want to experience 
+places like a local
+
+35
+days travelled 29
+
+days
+travelled
+
+gen z
+
+baby boomers
+
+27
+days
+
+travelled
+
+millennials are on vacation 
+more days each year
+
+millennial average 
+yearly travel expense
+
+$4,624
+
+millennials take 
+40% more vacations 
+
+other generations
+
+2.38
+
+1.8
+
+03
+
+1.5
+
+0
+
+VACATIONS 
+EACH YEAR
+
+FIGURE 3 10
+
+Millennials, the largest living generation, are known for their increased spending 
+power and a decreased desire to purchase products, making them a considerable 
+driving force of the flourishing tourism industry. Overall, this generation spends an 
+average of 35 days of travel and 2.38 vacations each year - 24% more than Gen Z and 
+25.5% more than Boomers - and a greater percentage of their salary on experiences9. 
+For this reason, millennials are Cool Cousin’s main target audience and the service’s 
+core user base. 
+
+80%
+over
+
+of millennials
+
+Cool Cousin — a growing company
+
+https://skift.com/2017/10/02/u-s-millennials-travel-the-most-but-gen-z-is-on-the-rise/
+https://skift.com/2017/10/02/u-s-millennials-travel-the-most-but-gen-z-is-on-the-rise/
+
+
+WP 01
+
+operating in a huge market
+Travel & Tourism accounts for 10% of the world’s GDP, and 1 in every 10 jobs. When the 
+first commercial jet debuted in 1950, there were around 25 million international tourist 
+arrivals worldwide11. Today, the number has risen to 1.24 billion, generating $2.3 trillion 
+in direct revenue. In 2016 alone, Travel and Tourism indirectly contributed $7.6 trillion 
+to the global economy, or 10.6% of the world’s total GDP12.
+
+FIGURE 4 13
+
+12
+
+in direct contribution to world GDP
+
+$3.5
+TRILLION
+
+$2.3
+TRILLION$1.9
+
+TRILLION
+
+2007 2017 2027
+
+travel
+industry
+growth
+
+Cool Cousin — a growing company
+
+https://www.statista.com/statistics/262750/number-of-international-tourist-arrivals-worldwide/
+https://www.statista.com/statistics/262750/number-of-international-tourist-arrivals-worldwide/
+https://www.wttc.org/-/media/files/reports/economic-impact-research/regions-2017/world2017.pdf
+
+
+WP 01
+
+growth in numbers
+
+OUR GROWTH 
+
+With over 100K users per month, Cool Cousin has been growing in double digit 
+numbers since first introduced in 2016. Crowned by the National Geographic, New 
+York, LA Times, The Guardian and USA Today as a “must app for travelers”, Cool Cousin 
+has managed to stand out as a promising new player in the highly crowded travel 
+arena. Our distinct approach considers discovery through people the best way to get 
+personalized and more authentic experiences14.
+
+USER GROWTH
+
+Cool Cousin has seen steady user growth since its launch in Q3 2016. In Q3 and Q4 of 
+2017 the company has seen exponential growth of 220% rooted in the launch of our 
+web app and expansion to new destinations.
+
+13
+
+FIGURE 5
+
+JUL
+2017
+
+150K
+
+550K
+
+450K
+
+350K
+
+250K
+
+220% total user growth 
+in the past six months
+
+JAN
+2018
+
+JAN
+2017
+
+JUL
+2016
+
+Cool Cousin — a growing company
+
+https://www.washingtontimes.com/news/2016/nov/9/millennials-prefer-authenticity/
+
+
+WP 01
+
+GROWTH IN COUSIN-TRAVELER INTERACTIONS 
+
+In the last 6 months we have witnessed a 310% growth in the number of quality 
+interactions between Cousins and travelers: Thousands of our city guides are 
+referred to and inquiries for personalized advice are made on a daily basis. 
+
+Cousin-traveler interactions 
+grew over 310% 
+
+in the past six months
+
+FIGURE 6
+
+JUN
+2017
+
+10K
+
+31K
+
+DEC
+2017
+
+14
+
+Cool Cousin — a growing company
+
+
+
+WP 01
+
+in the press
+
+“This app is so good 
+I’m surprised it’s free”
+
+“This is the app 
+you need”
+
+“It's a ready-made itinerary from 
+a kindred spirit, rather than a tired 
+
+tourist trap top 10”
+
+“This startup might be onto something”
+
+App of the Day 
+on the Apple App Store
+
+Best 7 
+Navigation Apps
+
+Top 10 
+Apps You Need
+
+2017 Best New 
+Travel App
+
+“This app is perfect for travelers who 
+don’t have any cool Cousins of their own”
+
+15
+
+Cool Cousin — a growing company
+
+http://www.latimes.com/travel/la-tr-webbuzz-20170115-story.html
+https://www.youtube.com/watch?v=ExOyl3Tc2Mw
+https://www.pcmag.com/news/352145/need-a-travel-tip-cool-cousin-connects-you-with-locals
+https://techcrunch.com/2017/07/27/cool-cousins-social-app-for-travellers-raises-2m-round-led-by-elevator-fund/
+http://www.travelandleisure.com/travel-tips/mobile-apps/best-navigation-apps
+https://www.nationalgeographic.com/travel/travel-interests/tips-and-advice/10-best-travel-apps/
+http://www.10best.com/awards/travel/best-new-travel-app-2016/
+https://www.nytimes.com/2017/09/08/travel/local-tourist-apps.html
+
+
+WP 01
+
+a growing community
+Our community of Cousins is the beating heart of Cool Cousin - they create the content, 
+answer travelers’ questions and are the driving force of the company’s growth.They come 
+from a diverse range of backgrounds, and each one has a set of unique experiences that 
+can be unlocked in a single click. Since the company’s early days, Cool Cousin attracted 
+demand from locals who wanted to join the community and become Cousins in their 
+hometown. These numbers have steadily risen, and in 2017 alone, over 6,000 people from 
+more than 300 different cities applied to become Cousins. Such demand required the 
+optimization and streamlining of our Cousin onboarding process, enabling growth from 
+400 to 1,000 Cousins in just 6 months. Every week we onboard dozens of new Cousins and 
+open and launch a new destination every 5 days, with plans to reach 1,500 Cousins in 100 
+destinations by spring 2018. 
+
+JAN
+2018
+
+JAN
+2017
+
+OCT
+2017
+
+OCT
+2016
+
+JUL
+2017
+
+JUL
+2016
+
+APR
+2017
+
+APR
+2016
+
+50 100
+140
+
+200
+260
+
+400
+
+700
+
+250% community growth
+in the past six months
+
+1000
+
+16
+
+a new city is launched
+every 4.5 days 
+
+in the past 3 months
+
+JAN
+2018
+
+JAN
+2017
+
+OCT
+2017
+
+OCT
+2016
+
+JUL
+2017
+
+JUL
+2016
+
+APR
+2017
+
+APR
+2016
+
+1 2
+5
+
+12
+16
+
+30
+
+50
+
+65
+
+• number of cities
+
+• number of Cousins
+
+FIGURE 7
+
+FIGURE 8
+
+Cool Cousin — a growing company
+
+
+
+WP 01
+
+Apart from creating all of Cool Cousin’s content and sharing their knowledge with 
+travelers, our community of Cousins is also an important marketing channel that drives 
+Cool Cousin’s organic growth. Each Cousin grants us access to their network of thousands, 
+facilitating organic user acquisition and exposure to the Cool Cousin brand, for 0 dollars. 
+As our community grows, so does our potential organic reach, expected to double itself 
+from the current 3 million by spring 2018.
+
+17
+
+active 
+Cousins
+
+1,000
+Cousins
+in pipeline
+
+4,500
+applications 
+each month
+
+1,000
+unique 
+recommendations
+
+40,000
+
+FIGURE 9
+
+Cool Cousin — a growing company
+
+3M
+
+• number of Cousins
+
+• Cousins' organic reach
+
+0.5M 500
+
+0 0
+
+1M 1,000
+
+1.5M
+
+2M
+
+2.5M
+
+community’s network 
+— organic access 
+to 3M people
+
+JAN
+2018
+
+JAN
+2017
+
+OCT
+2017
+
+OCT
+2016
+
+JUL
+2017
+
+JUL
+2016
+
+APR
+2017
+
+APR
+2016
+
+
+
+• Pipeline
+• Available
+
+territories Cool Cousin is active in
+
+WP 01
+
+18
+
+Amsterdam
+Athens
+Austin
+Barcelona
+Belo Horizonte
+Berlin
+Boston
+Brasilia
+Brighton, UK
+Brisbane
+Bucharest
+Budapest
+Cambridge, UK
+Chicago
+Copenhagen
+Curitiba
+Dallas
+Denver
+Dublin
+Edinburgh
+Geneva
+Gothenburg
+
+Istanbul
+Jerusalem
+Kiev
+Lausanne
+Lisbon
+London
+Los Angeles
+Madrid
+Manila
+Melbourne
+Mexico City
+Miami
+Milan
+Montreal
+Moscow
+Nashville
+New York
+Ottawa
+Paris
+Portland, OR
+Porto
+Porto Alegre
+
+Prague
+Rio De Janeiro
+Rome
+San Francisco
+Sao Paulo
+Seattle
+Seoul
+Singapore
+Stockholm
+Sydney
+Taipei
+Tbilisi
+Tel-Aviv
+Toronto
+Vancouver
+Venice
+Vienna
+Washington DC
+Wellington
+Zurich
+——
+and more...
+
+FIGURE 10
+
+Cool Cousin — a growing company
+
+
+
+WP 01
+
+growth — 80% organic
+The traveler audience is one of the most difficult and expensive audiences to target. In 
+order to work around the centralized media channels that demand enormous resources, 
+we have four primary growth channels responsible for 80% of our monthly organic 
+growth: Community, content marketing, search and social media. 
+
+COMMUNITY 
+
+Our Cousins are local micro-influencers, who are highly engaged with both their local 
+community and Cool Cousin. They have an inherent interest to share their profiles, 
+creating an organic network effect. Our community has enabled Cool Cousin to 
+establish a scalable marketing channel that generates organic reach, strengthens brand 
+recognition, onboards and re-engages users. 
+
+CONTENT MARKETING 
+
+The volumes of fantastic content created by our Cousins drives organic traffic to our 
+platform and puts us in a strong position regarding search engine optimization (SEO) 
+techniques necessary for growth. This editorial content allows targeting travelers and 
+planners alike. By so doing, we can also engage with people who are just looking for 
+inspiring and playful content, reaching over 500K readers a month.
+
+SOCIAL MEDIA 
+
+Our content allows us to engage ongoingly with our followers on Facebook, Instagram and 
+twitter, with inspirational content that is highly teasing and shareable. This turns social 
+media to a significant traffic source responsible for 19% of Cool Cousin’s new users. 
+
+SEARCH 
+
+Cool Cousin is content based service with tens of thousands of recommendations for 
+restaurants, neighbourhoods, bars, parks, museums and more. Our robust reservoir of 
+quality content is ranked high by Google and therefore prioritized over bot generated 
+content. This makes organic search a scalable channel, that already plays a significant 
+part in Cool Cousin’s growth, with 21% of all new users.
+
+organic
+growth80% 22.1% direct
+
+17% community shares 9.2% search
+
+16.5% content 5.1% referrals
+
+10.4% promoted content
+
+ORGANIC ~80%
+
+PAID ~20%
+
+9% ads
+
+10.6% social media
+
+FIGURE 11
+
+19
+
+Cool Cousin — a growing company
+
+
+
+WP 01
+
+millennial travelers —
+Cool Cousin’s core audience
+Cool Cousin's core user base is comprised of 56% millennials, aged 18-35. More than 
+half of them are from the US and UK. The average traveler connects with at least three 
+Cousins from their destination of choice; they start looking at city guides an average 
+of six weeks prior to their trip and refer to the app at least once a day during their 
+trip. Travelers who use in-app messaging send an average of three messages to their 
+selected Cousins to get personalized guidance. 
+
+Cool Cousin has unique insight into what travelers want and need. User feedback and 
+data analysis of hundreds of thousands of travelers, allows us to continually optimize 
+our platform and services to provide users with the best possible product. Looking 
+forward, we’ve received strong validation of travelers’ demand for local intel, evident in 
+users’ avid utilization of the direct communication channel with Cousins: they contact 
+their Cousins prior to and during their trip to ask for advice about the best areas to 
+book accomodation, events taking place during their visit, ways to purchase tickets 
+and other personal interests. 
+
+why do travelers message Cousins?
+
+what's happening this week 
+and event tickets
+
+ask advice prior to booking 
+a flight
+
+12%
+
+accommodation advice 
+prior to an upcoming trip
+
+25% 15%
+
+travel concerns (safety, 
+transport, etc.) 
+
+16%
+
+FIGURE 12
+
+20
+
+Cool Cousin — a growing company
+
+
+
+21
+
+WP 01
+
+becoming the world’s largest 
+decentralized travel agency
+Cool Cousin is on a mission to revolutionize the travel industry by connecting travelers 
+with like-minded locals - Cousins - in every city on the planet for an unmediated 
+exchange of personalized information and customized services. By building a global 
+decentralized ecosystem of locals and travelers, powered by a new cryptocurrency 
+called CUZ, Cool Cousin is establishing the grounds for a new travel agent. Our 
+Cousins are diverse, independent agents who can monetize their hard-earned city 
+knowledge while saving travelers a great deal of time and money before and during 
+their trips. In time, Cool Cousin will emerge as a sustainable autonomous economy 
+that enables users to access relevant information and a broad range of affordable 
+commercial travel services. 
+
+travel agents are making a comeback
+Millennials are using travel agents again: one-third of Millennial travelers are active 
+users of travel agents and intend to use one again in the next two years, a number 
+that’s up 19 points from 2011 and 12 points from 201415. This tech savvy, DIY generation 
+has adopted discovery services such as Spotify and Netflix that allow easy access to 
+customized content and they are searching for customized solutions in more markets. 
+With growing paying power and a penchant for time saving, they are willing to pay an 
+expert with local knowledge for a digestible package of trustworthy and personalized 
+information. Surveys show that millennials turn to travel agents to improve the quality 
+of their travel experiences and to save them time, rather than just to handle booking; 
+they want an adviser to help them cut to the chase, and they are happy to pay for it. 
+In fact, 85% of those who used an agent reported satisfaction16 and 44% millennials 
+believe that paying a travel agent is worth it. With this in mind, it is not surprising 
+that reports show that those who have used travel agents, will do so for more than 
+50% of their future travel needs17. Our data shows that Cool Cousin users are already 
+turning to their Cousins for the very same reasons people seek out a travel agent - 
+convenience, curation and trust. 
+
+Cool Cousin's vision
+
+https://www.travelagentcentral.com/running-your-business/mmgy-travel-agent-usage-hit-six-year-high-2016
+https://www.travelagentcentral.com/running-your-business/asta-rise-travel-agent-usage-slight-pause-here-s-what-s-next
+http://www.travelmarketreport.com/articles/Travel-Agents-Are-Back-Says-A-New-MMGY-Report
+
+
+22
+
+WP 01
+
+Cousins — the new & improved travel 
+agents
+In a marketplace full of online booking and content services, specialized personal 
+knowledge about a destination is the travel agent’s most valuable asset. Such information 
+allows them to offer unique and personalized experiences to consumers seeking to avoid 
+cookie-cutter trips. Our Cousins are best qualified to offer such services: they are on the 
+ground, they know and experience their city first-hand and they have superior digital tools 
+provided by Cool Cousin to optimize and monetize their hard-earned city knowledge. 
+Pro-Cousins will be able to offer a variety of services alongside their personal city guide, 
+such as finding and booking tickets for special events, booking accommodation, making 
+restaurant reservations, building itineraries, providing concierge services and more. 
+
+introducing the CUZ token economy
+Building on the Ethereum platform, Cool Cousin is introducing an open source 
+cryptographic token named CUZ, which is created for the exchange of travel services 
+and unique local information. As our unit of account and store of value, CUZ will 
+incentivize Cousins to create content and offer services through coin exchange, while 
+allowing all members of the community to benefit from future growth. 
+
+In character, CUZ is a pure cryptocurrency of fixed supply. It is fractionally divisible and 
+long-term non inflationary. Only a small portion of the token supply will, however, become 
+liquid in the near future, as part of the CUZ supply is reserved for the Community Pool - a 
+reservoir of CUZ that rewards actions within the ecosystem. Like other cryptocurrencies, 
+units of CUZ will be expected to trade on cryptocurrency exchanges.
+
+ONE ECOSYSTEM—TWO ENTITIES 
+
+The Cool Cousin ecosystem is comprised of two entities that are interdependent and 
+tactically separated: The Company and The Community. The Company is responsible 
+for technological and business development that sustain and grow the Community, 
+while the Community creates and oversees content, services, quality assurance, 
+dispute settlements etc. The fees received from transactions will be divided between 
+the two, where Community funds will be distributed through a Rewards Engine, so as 
+to incentivise contributors that improve the ecosystem. The separation of these two 
+entities is critical for the existence of a sustainable decentralized economy, that can 
+both scale the community and assure the quality of its content and services.   
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+THE COMPANY
+
+The Company facilitates the growth and sustainability of Cool Cousin, overseeing 
+marketing, product development, technological development and business 
+development. The team consists of professionals including developers, designers, 
+and product managers, as well as experienced business and marketing leaders. The 
+Company exists in order to empower the Community to establish a valuable new 
+travel ecosystem that creates value for travelers by offering a real alternative to the 
+aforementioned problems in the centralized travel industry. In the early days, it will set 
+initial community guidelines and facilitate gradual self-governance of the Community. 
+
+THE COMMUNITY 
+
+The Community is an autonomous ecosystem consisting of Cousins, Travelers, and other 
+participants, as detailed below. Members of the Community will ultimately validate and 
+approve new content, Cousins, and Services. The Community ecosystem will be powered 
+by a Rewards Engine that rewards participants with tokens based on their contribution to 
+the network. At first, some elements of the Community will be managed by the Company, 
+including approval of new Cousins and editorial tasks. As the Community matures and 
+becomes capable of self-governing, the Company will gradually relinquish responsibilities.
+
+THE BOARD OF REPRESENTATIVES 
+
+The Board of Representatives is comprised of members of the Company and the 
+Community, acting as a tribunal as well as a representative of the different stakeholders in 
+the system. It will act as the bridge between the Community and the Company.
+
+23
+
+Cool Cousin's vision
+
+
+
+24
+
+WP 01
+
+participants in the Cool Cousin 
+community
+
+COUSINS 
+
+Locals in cities around the world can create a digital profile on the Cool 
+Cousin platform that will be accessible by travelers. Cousin profiles include 
+information about places in the city, bios and personal preferences. Cousins 
+can earn tokens for keeping their guides up-to-date, for editing their profiles, 
+answering travelers’ questions, for promoting Cool Cousin, content creation, 
+answering user questions, onboarding users and Cousins and more. Eventually, 
+Cousins will also earn tokens for platform governance actions such as dispute 
+resolution, content validation, approval of new Cousins, etc. 
+
+PRO-COUSINS 
+
+Cousins who wish to expand their services can function as travel agents, 
+offering tailored services to travelers in exchange for tokens. (See Cousin 
+Services on page 26.)
+
+USERS 
+
+Travelers can get free information from Cousins on the Cool Cousin platform, 
+or buy tokens to purchase extra layers of info and services. They can also earn 
+tokens for different levels of implicit and explicit engagement, and become 
+contributors.
+
+CONTRIBUTORS 
+
+Users can become contributors who earn CUZ tokens for actions that add 
+value to the platform, from thanking their Cousins and signing in to a spot, to 
+contributing to the growth of the community by taking photographs for spots, 
+flagging inaccuracies, onboarding new Cousins, changing bad photos, reviewing 
+recommendations and promoting Cool Cousin on other platforms, such as social 
+media. All corrections and suggestions must be approved by the Editors.
+
+Cool Cousin's vision
+
+
+
+25
+
+WP 01
+
+EDITORS 
+
+Users who have made enough content contributions that have been accepted 
+by the Community, can earn the status of Editor. Editors will validate 
+Contributors’ content corrections in exchange for CUZ tokens. The Board of 
+Representatives will have the final say on content-related disputes.
+
+BOARD OF REPRESENTATIVES 
+
+Voting power in the Board will be divided between the Company and the 
+Community, with the former given 35% and and the latter 65% of the capacity. Select 
+Cousins—20% of the most active Cousins worldwide who have been live on Cool 
+Cousin for at least 6 months, have been highly responsive to users and have updated 
+their map at least 3 times—will be able to apply to join the Board of Representatives 
+alongside members of the Company, in order to decide on matters of community 
+standards, conflict resolution, sponsored materials, and Rewards Engine policies. 
+
+BUSINESS OWNERS 
+
+In the future, business owners, AirBnB hosts and independent vendors whose 
+businesses have been recommended by a Cousin, will be able to manage 
+their pages on the platform. Promoted content and special offers will be 
+distinguished from Cousin content, and must be approved by the Community.
+
+community governance 
+The Company will work toward achieving a completely decentralized and self-
+governing Community. Decentralization gives substance to one of the key tenets of 
+Cool Cousin, namely, that there is no single source of truth when it comes to taste. 
+This concept led to the decision to shift Cool Cousin’s editorial spotlight from the 
+recommendation to the recommender. Decentralization also ensures that there is no 
+single authority that deems one recommendation more suitable than another, ensuring 
+diversity and production of content that remains untainted by financial interests. It 
+also enables a full transfer of governing authorities to the Community, thus lowering 
+overhead costs and fees. In time, members of the Community and the governing Board 
+will have the authority to judge the quality of the content and the content provider, 
+scaling the community, as well as guaranteeing that content will not be organized in a 
+hierarchy of taste and avoiding the creation of echo chambers.
+
+Cool Cousin's vision
+
+
+
+26
+
+WP 01
+
+Moreover, decentralization safeguards the Community and its underlying economy from 
+being governed by a corruptible and manipulatable authority. Such a self-governing 
+group has both administrative and ideological powers within the ecosystem. On the 
+administrative end, decision-making responsibilities are distributed amongst parties of 
+interest within the Cool Cousin Community, who play an active role to varying degrees 
+and have a stake in the CUZ economy. 
+
+Such governing responsibilities will gradually be handed to the Community as it becomes 
+more and more autonomous. Its decisions will then be deployed using smart contracts. We 
+will reach full decentralization within three years time, pending growth of the community 
+to a number that can manage its scope of tasks, and the development of technological 
+infrastructure that can handle the scale of transactions and computational capacity. In 
+most cases, the community members will be asked to cast their vote. When sensitive 
+decisions or truth are sought, as opposed to opinions, the vote will be taken to the Board of 
+Representatives. These decisions include dispute settling, changes in the Rewards Engine, 
+approving new promotional products, and adjusting community standards.
+
+The following examples demonstrate scenarios in which community members take an 
+active part in self governance of the Community, upgrading the quality of the content 
+and services they offer. The better the quality of the services and content, the more 
+users the product will draw, and the bigger the community; concurrently, the more 
+users, the greater monetization opportunities for Cousins. In many centralized network 
+companies and marketplaces, service providers can damage the community’s reputation, 
+which directly leads to a drop in traffic and revenue. By enforcing a self-governing 
+mechanism, the Community itself makes sure that all members are up to par with 
+community standards and maintain a good reputation. 
+
+EXAMPLE 1 VALIDATING CONTENT
+
+n this example, we present a scenario in which the Community assures quality standards. When a Cousin 
+
+adds a new spot to their city guide, the Community makes sure it meets content standards. This does not 
+
+mean they deem recommendations good or bad, but rather they make sure they abide by basic content 
+
+standards, from specificity, authenticity to the presentability of the spot. If the spot is deemed unsuitable, 
+
+the Community may be summoned to review whether the Cousin is a suitable member. 
+
+1
+
+Cousin adds a spot 
+
+to their map
+
+2
+
+Community votes whether the new 
+
+recommendation meets community 
+
+standards. If the vote gets four 
+
+upvotes straight or 75% majority 
+
+after 2 days, the spot gets approved
+
+3
+
+If accepted by the 
+
+community, the Cousin 
+
+and voters collect a fee
+
+X
+
+If 3 spots get rejected, the board 
+
+of representatives votes on the 
+
+continuation of the Cousins 
+
+membership of the community
+
+FIGURE 13
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+EXAMPLE 2 CHANGING FEES
+
+In this example, we present a scenario in which the Company turns to the Community with a 
+
+recommendation to change the level of commision fees, based on market analysis. Such a step impacts 
+
+the Community and therefore they are called to vote. 
+
+1
+
+The company suggests 
+
+increasing the 
+
+community pool fee
+
+2
+
+The Board of Representatives gets 
+
+one month to cast their signed votes 
+
+to the transactions smart contract
+
+V
+
+If accepted, the smart contract 
+
+updates the fees
+
+Cousin
+
+community
+contributors
+
+market
+
+transaction 
+manager 
+
+smart contract
+
+Cool Cousin
+company &
+
+platform
+
+community
+pool
+
+3rd party
+traveler
+
+market exchange
+
+contract junction
+
+fee
+
+trancsaction
+exc. fee
+
+reward
+
+service
+
+transaction 
+including fee
+
+fiat deposit
+
+contribution
+
+overview 
+of the CUZ 
+ecosystem
+
+27
+
+FIGURE 14
+
+FIGURE 15
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+business model
+Cool Cousin faces the challenge of upholding our content standards and steering clear 
+of manipulative marketing strategies, while generating profit for the Company and 
+incentivizing the Community. 
+
+Revenues from transactions will go directly to the service provider (be it the Cousin— 
+as detailed in service fees, or the Company— as detailed in affiliation fees and solutions 
+for businesses), minus commision fees that will be split between the Company and the 
+Community. In instances when the platform provides the service, ie. a feature in the 
+app or promotional product (described below), the Company will apportion a fee to the 
+Community Pool, proportionate to the product’s price. 
+
+As blockchain technology enables us to charge low transaction fees, due to the fact that 
+the decentralized network is self governing and thus demands lower sums for operations, 
+the fees will always remain significantly lower than market standards. The rate of every 
+fee will be determined, using smart contracts, in relation to each particular product. Every 
+change in the transparent smart contracts will be evaluated and decided by Board of 
+Representatives, in order to protect Community and Company interests. 
+
+The components that make up this model will be implemented prudently and gradually. 
+The Company can suggest to alter the distribution between the parties, in response 
+to Community needs or changing market rates with the approval of the Board of 
+Representatives. The interests of all parties involved are protected through transparent 
+smart contracts. The fee collected by the Company will finance its development and 
+marketing efforts, and the fee collected by the Community will go to the Community Pool 
+to be distributed through the Rewards Engine. 
+
+The following revenue streams demonstrate the prudent implementation of our 
+business model:
+
+fees from Cousin services
+A. CONCIERGE SERVICES 
+
+Pro-Cousins who offer different “concierge” services which travelers can receive in 
+exchange for the CUZ token. Concierge-like services include tailored itineraries, online 
+availability, pre-travel consulting, and more. Cousins can determine the cost for each 
+service they provide based on local community benchmarks.
+
+28
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+B. TRAVEL AGENT SERVICES 
+
+Pro-Cousins who offer services that are usually conducted by travel agents and 
+involve third party providers such as hotel booking, restaurant reservations, concert 
+tickets, transportation, etc. Travelers will be able to use CUZ to acquire these services. 
+Commision fees from third party providers range from 5% to 30%, depending on the 
+provider; hotel booking fees range between 5%-15%, tickets and travel insurance fees 
+can reach 30%. While a traditional home-based travel agent splits their commision 
+with the mediator (house agency) at rates that can reach 70%-30%, the Company 
+will receive a significantly lower fee that will be determined upon the release of these 
+features in future. Cool Cousin’s unique model enable us to lower commission rates 
+making Cousin’s services more affordable for the average traveler and guaranteeing 
+a competitive market edge that drives transactions. The company is also incentivized 
+to collaborate with future blockchain companies, as demonstrated in Ecosystem-
+Enhancing Collaborations. 
+
+A EXAMPLE OF A CUSTOM ITINERARY 
+
+Users can request from a Cousin an Art 
+
+& Culture itinerary tailored to the period 
+
+of time they’re spending in the city, their 
+
+location, their budget and their preferences. 
+
+B EXAMPLE OF COUSIN 
+ACCOMMODATION BOOKING 
+
+Cousins can book accommodation matching 
+
+the user’s needs and provide their booking 
+
+details and confirmation directly through 
+
+the in-app messaging system
+29
+
+FIGURE 16
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+C. CONTRIBUTIONS 
+
+Travelers have the option of tipping a Cousin for great information provided and 
+personal services received. Tipping is done with the CUZ token, allowing cheap 
+micro-payments. Such an endorsement and acknowledgement resembles behaviors 
+encouraged on Wikipedia or Reddit.
+
+EXAMPLE OF TIPPING A COUSIN 
+
+Users who wish to show their gratitude to a Cousin can easily send a tip directly 
+
+through the in-app messaging system
+
+FIGURE 17
+
+30
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+affiliation fees 
+The more users turn to Cool Cousin as a ‘go to’ app when traveling, the more 
+opportunities become available to insert monetizing actions to the platform. The 
+classic BM for traditional companies include: placing a “book a table” button next to 
+a restaurant recommendation or “Request an Uber” next to a location. In both cases, 
+the provider (i.e. Uber, Opentable) pays an affiliation fee to the platform, ranging 
+from $1 per transaction up to 30% of the prospective purchase, depending on the 
+volume and the product. Affiliation fees are always paid in fiat currency. In order to 
+feed the ecosystem with these fees, revenue received from third party providers will 
+be automatically converted into CUZ in the secondary market. As with any revenue 
+stream, the community pool and the company will get their respective fees (as detailed 
+under “Removing user Barriers").
+
+A AFFILIATION EXAMPLE
+
+An affiliation feature that allows users to 
+
+book a table directly from spot pages
+
+B AFFILIATION EXAMPLE
+
+An affiliation feature that allows users to 
+
+request a pickup directly from spot pages
+
+31
+
+FIGURE 18
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+solutions for businesses and 
+organizations 
+As a community-driven travel platform, Cool Cousin offers third party entities a variety 
+of products building off its superior application capabilities and assets. All Cool Cousin 
+products will be priced in tokens, however, third party partners will be able to pay for 
+those products using Fiat currency, which Cool Cousin will convert into tokens on their 
+behalf in the secondary market (as detailed under “Removing user barriers). Products 
+that will enter the ecosystem must first be approved by the Board of Representatives and 
+the Community Pool will receive the same cut from these products as it does from other 
+transactions that take place in the economy. Users will have the choice of activating 
+some of these extra layers, and unlike content created by Cousins, users will not be 
+rewarded for optimizing third party content. The following products have been proven in 
+traditional marketplaces and have already been partially tested in Cool Cousin:
+
+MUNICIPALITY PARTNERS PROGRAM 
+
+Collaborating with municipalities around the world has led to the development of a partner’s 
+program, now in beta, which allows municipalities to promote their city through Cool Cousin 
+with branded map layers containing special events, tourist services and media promotions. 
+
+32
+A MUNICIPALITY PARTNER
+
+A discount club for travelers
+
+B MUNICIPALITY PARTNER
+
+City events calendar
+
+FIGURE 19
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+EVENTS / POPUP COMMUNITIES 
+
+Social events, festivals, seminars, conferences, and other location-based and/or time-
+limited communities can add map layers to the platform. For example, a high-tech 
+conference can create a map layer that is distributed to all participants, and includes 
+conference venues, locations of interest, and nearby spots to drink and dine. Products 
+are tailored and integrated as a temporary map layer, or added as a permanent profile.
+
+EXAMPLE OF A POP-UP COMMUNITY PARTNERSHIP
+
+As part of the Cool Cousin X Tech Fest partnership, Cool Cousin offers premium content 
+
+tailored to their guests, including events and spots near the venue, special deals and more. Tech 
+
+Fest staff and contributors also create temporary Cousin profiles offered to guests alone.
+
+33
+
+FIGURE 20
+
+Cool Cousin's vision
+
+
+
+34
+
+WP 01
+
+SPECIAL OFFERS 
+
+Special offers, such as tickets to shows at discounts, time-limited promotions, etc, can 
+be made to Cousins or travelers. Our location-based community makes it particularly 
+useful to promote events on the app. 
+
+PROMOTIONAL PRODUCTS 
+
+Various brands can purchase temporary branded layers or build profiles that serve 
+as promotional space. For example, in 2017 we collaborated with bike-rental service 
+Donkey Bikes. Theycreated a map layer of all their docks in the city, which can be 
+turned on or off by users and does not disrupt user experience. Other potential 
+implementations include unique profiles built by ambassadors, which brands can offer 
+to their customers as a special offer, unlocked with a special code. Cool Cousin users 
+will not be bombarded with dozens of layers, but will rather be offered extra layers as 
+additional information upon request.
+
+A EXAMPLE OF SPECIAL OFFERS 
+FROM 3RD PARTIES
+
+In partnership with a ticket sales platform, 
+
+Cool Cousin offers Cousins and users a 
+
+special discount when purchasing event 
+
+tickets from the app using CUZ. 
+
+B EXAMPLE OF A 3RD ARTY MAP
+The brand W&S partnered with Cool Cousin, creating a special map layer of store locations 
+
+and promoting an exclusive discount to users and Cousins in the city.
+
+FIGURE 21
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+Cool Cousin API 
+The Cool Cousin applications are powered by the Cool Cousin API, which provides 
+contextual information about the different destinations, spots, recommendations, and 
+events. The data is enriched by the constant feedback fed into the API by Cousins, 
+user activity, and our editorial staff. Our data is unique and valuable because we 
+do not use crowdsourcing to determine the merits of an object, but rather, cluster 
+our Cousins and users by their own interests and interpret the data they provide 
+with their personal traits in mind. This allows our engine to personally recommend 
+Cousins, destinations, and spots to users. Our personalized data can enrich apps of 
+municipalities, hotels, conferences, and more. These app owners will pay for usage 
+with CUZ, from which the Community Pool will receive a transaction fee. Our unique 
+value proposition is personalization, and our data is as dynamic as a teeming city, so 
+any attempt to get a snapshot of it will yield stale results.
+
+FIGURE 22
+
+3rd party
+deposit CUZ
+
+3rd 
+party
+app
+
+firewall
+
+blockchain
+
+AAA
+server
+
+authentication
+authorization
+accounting
+
+Cool
+Cousin
+public
+API
+server
+
+Tx DBapp DB
+
+3rd party companies will deposit CUZ tokens in a smart contract. Any 3rd party app will send 
+
+authenticated requests to our public API. The API server will, in turn, check the balance with the 
+
+accounting server and provide appropriate services
+
+35
+
+Cool Cousin's vision
+
+
+
+36
+
+WP 01
+
+ecosystem-enhancing collaborations 
+Cool Cousin has a vested interest in collaborating with other blockchain companies 
+that complement its services, in order to further the agenda of a decentralization of 
+all services in the consumer world. The travel industry today is brimful with heavy 
+commissions and manipulations, and many new companies are being launched to bring 
+change to the market using blockchain technology. Cool Cousin sees these companies 
+as potential partners rather than competitors. Teaming up with them to promote 
+their products will lower prices across the board and offer our users better services 
+and options in travel insurance, accommodation, booking, events and more. We view 
+collaborations with blockchain-based travel companies, upon further maturation 
+of the technology, as the ultimate disruption of the industry as a whole, mutually 
+benefiting and strengthening the crypto ecosystem and leading to greater mainstream 
+implementation of the technology. 
+
+the community pool
+The Community Pool animates Cool Cousin’s internal ecosystem. Just like miners 
+on the Ethereum Blockchain receive a fee for maintaining the network, Community 
+members get a fee for improving the content, and maintaining service and community 
+standards. The Community Pool is filled by commissions from every transaction in the 
+system.The Reward Engine —a series of smart contracts—will distribute the tokens 
+from the Community Pool to those Community members who contribute to the 
+ecosystem.
+
+THE REWARDS ENGINE 
+
+The engine that distributes the tokens in the Community Pool among members of the 
+Community, in return for their various contributions. It is composed of several smart 
+contracts that are fed by blockchain oracles which approve the trustworthiness and 
+quality of these contributions. 
+
+This Rewards Engine is the beating heart of the Community. The smart contracts 
+enable the Community's organic development while maintaining its quality, and thus 
+effectively solving one of the most complex scaling problems faced today by networks 
+based on user-generated content. 
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+COLLECTING FEES FOR THE BENEFIT OF ALL 
+
+In most cases, when an organization charges fees, it does so in order to fund 
+operations and make a profit. The Community Pool, in contrast, is used for maintaining 
+public goods. The commission that accumulates in the Community Pool ultimately 
+returns to the Community to upgrade the platform making sure everyone wins: 
+travelers enjoy more valuable experiences, Cousins who provide services enjoy more 
+potential clients and the Company increases its revenue. 
+
+Financing goods that benefit everyone rather than just one individual is an essential 
+part of a governing entity, and is known as the public goods problem18. Such goods 
+include high quality photos of spots recommended, Cousins application approval, 
+quality assurance of the content, and more. To facilitate Community activity and the 
+maintenance of such “public goods” in the ecosystem, Cool Cousin will use funds from 
+the Community Pool.
+
+transaction 
+including fee
+
+fee reward contribution
+
+transaction 
+manager 
+
+smart
+contract
+
+Cousins
+
+community
+contributers
+
+community
+pool
+
+3rd party
+
+traveler
+
+fees
+
+37
+
+community pool at work
+
+FIGURE 23
+
+Cool Cousin's vision
+
+https://en.wikipedia.org/wiki/Public_good
+
+
+38
+
+WP 01
+
+SETTING UP THE COMMUNITY POOL
+
+At first, the company will allocate 21% of its initial token allocation to the Community 
+Pool, that will be distributed gradually over a period of three years. As transaction 
+volume within the community grows, the income from the transaction fees also grows 
+and refills the pool. This is intended to bootstrap the process before the transactions 
+in the system are enough to sustain the Community Pool with fees, and to remove user 
+barriers (as detailed above). 
+
+Our goal is to finance the Community Pool with minimum distortions to the market. In 
+order to remove user barriers and prevent low engagement in the early days, as well 
+as a decrease in the amount of utilized services, the Company will reduce fees. We 
+will finance these public goods in the short run, by using the initially allocated tokens 
+mentioned above, and then gradually decrease this practice in favor of a community 
+pool fee that will reach a maximum of 5%.Over the course of four years, the amount 
+of tokens awarded to the community will be distributed according to the following 
+monotonically decreasing formula: 
+
+TOTAL.CUZT = TOTAL.CUZT‐1+0.903 (TOTAL.CUZT‐1 – TOTAL.CUZT‐2)
+
+economy that creates value
+We firmly believe in the power of Blockchain technology to facilitate the establishment of 
+an organization with an autonomous community of Cousins and users. This self-governing 
+entity is responsible for the creation and sustenance of the content and services and 
+shares common financial and ideological interests with the Company. This shared interest 
+guarantees propagation and protection of the quality and quantity of the content they 
+produce, providing real value for consumers and creators, and driving perpetual growth for 
+the Company and the Community. 
+
+As a liquid and transferrable cryptocurrency, CUZ will allow content creators to grow 
+with Cool Cousin and make a living using their unique knowledge and skills. While 
+traditional online platforms based on user generated content shut their creators 
+from the company’s revenue, a blockchain-based Cool Cousin treats its community 
+members differently. Every transaction fee will be distributed between the Company 
+and the Community. CUZ tokens distributed to the Community will give its members a 
+sense of ownership of the value they help create. 
+
+Cool Cousin's vision
+
+
+
+39
+
+WP 01
+
+making CUZ accessible
+Holding a cryptocurrency can prove to be a very challenging task for a layman, let 
+alone holding it securely. Cool Cousin is a consumer-facing product, and it’ll have 
+to allow the user to use the app without having to fully wrap their heads around the 
+complexities of cryptocurrencies.
+
+After the ICO, in order encourage use and give users and third parties easy access to the 
+information and services offered by Cool Cousin, including those who do not have a digital 
+wallet, the company will accept Fiat. Once the Fiat transaction is complete, the Company will 
+then exchange it for CUZ, which will then be transferred to the Cousin’s digital wallet. .
+
+SIMPLE WALLET 
+
+By creating our own simple in-app wallet, we will be able to simulate the familiar look-and-
+feel of in-app credits. Our wallet will feature simple explanations of the different concepts, 
+allowing the curious or knowledgable user to later move their tokens to their full control. 
+The wallet will facilitate all the user-to-Cousin interactions, and allow the owner to withdraw 
+the tokens to their own held Ethereum wallet and do with it as they wish.
+
+Behind the scenes, the wallet will be held by a smart-contract, that will perform all the actions 
+and keep track of every movement on the blockchain. It will “color” CUZ tokens that were 
+handed out to new users to ensure they are used within the ecosystem and are not being 
+withdrawn,as detailed in Technical Considerations. This is meant to block adversaries from 
+abusing the Rewards Engine without contributing anything to the Cool Cousin network. 
+
+FIGURE 24
+
+Cool Cousin's vision
+
+
+
+40
+
+WP 01
+
+REMOVING USER BARRIERS / USER EXPERIENCE 
+
+While the economic development of Cool Cousin and the launch of CUZ opens up many 
+possibilities, it also creates user barriers. Users who have become accustomed to using 
+Cool Cousin for free will now need to pay (with Fiat or tokens) to use some of the new 
+features on the platform, challenging the organic growth channels that characterize the 
+company. These barriers are especially problematic for a company such as ours, facing 
+the significant challenge to increase usability and develop the organic and viral channels. 
+In order to address these challenges and clear some of these barriers out of the way for 
+users, our Rewards Engine will reward new users with tokens from the Community Pool 
+and will thus enable them to use some of the features and services. The tokens received 
+as a reward are not transferable and can only be used in exchange for services within 
+the Cool Cousin ecosystem, as they serve one purpose—to encourage usability. For this 
+reason, they will be stored in the simple wallet.
+
+For additional tokens, users will turn to the secondary marketplace. We will form 
+collaborations with exchanges to temporarily allow users and 3rd party partners to pay 
+with Fiat in order to seamlessly exchange their funds to tokens. While this process is 
+cumbersome and may include unnecessary conversions, it is a necessary and temporary 
+solution. As the market matures and cryptocurrencies become mainstream, users will be 
+more inclined to get CUZ themselves. Until then, we will bridge this gap for them.
+
+Cool Cousin's vision
+
+
+
+WP 01
+
+wallet 
+Our in-app wallet will show funds held by a smart contract, allowing the user to access 
+the tokens. Upon account creation, a hexadecimal key-pair will be generated locally on 
+the device, and an encrypted cloud backup will be made. In tandem, the keys’ balances 
+will be created in the in-app wallet smart contract. The tokens will be credited to the 
+users public key: completely locked and out of The Company's reach. Only transactions 
+signed by the user’s private key will make the contract move their funds.
+
+The smart contract will hold two balances for each address: one for “locked” tokens that 
+can only be used within the system and one for “unlocked” tokens that can be withdrawn 
+to any wallet. The purpose of this is preventing new users from selling the tokens handed 
+to them for signing in and exploiting the system without contributing anything to it.
+
+This system does not prevent collusion between Cousins and adversaries. While this 
+can happen, Cousins have to be identified (see Cousin Identity Management), approved 
+by the Community, and their privileges can be revoked. The Company will develop a 
+monitoring system that will detect irregularities and suspicious patterns, and send 
+appropriate alerts to the Community.
+
+user tries to withdraw 
+10 CUZ of locked funds
+
+user pays Cousin
+10 CUZ of locked funds
+
+user tries to withdraw 
+10 CUZ of unlocked funds
+
+smart contract smart contract smart contract
+
+A B C
+
+locked locked
+
+locked
+
+25 25
+
+175
+
+0 0
+
+230
+
+unlocked unlocked
+
+unlocked
+
+user X in-app wallet user X in-app wallet user X in-app wallet
+
+Cousin Y in-app wallet
+
++10+10
+
+-10
+-10
+
+-10
++10
+
+withdraw to
+0xAdress
+
+withdraw 10 CUZ 
+to 0xAdress
+
+pay 10 CUZ 
+to Cousin Y
+
+0xAdress
+receives 10 CUZ
+
+denial
+
+35
+unlockedlocked
+
+25
+
+approval
+
+approval
+
+FIGURE 25
+
+technical considerations 
+
+41
+
+
+
+42
+
+WP 01
+
+ERC20
+CUZ will be built on the Ethereum blockchain and comply with the ERC20 standard.
+
+Using the Ethereum blockchain will allow us to leverage the security, robustness, and 
+decentralization of a blockchain that has became synonymous with decentralized 
+applications. 
+
+Complying with standards helps make sure we're developing a token with interfaces 
+that were tested extensively. ERC20 is the de-facto standard for token issuance. It 
+facilitates owning, spending, and delegating usage of tokens by their holders.
+
+Cousin identity management
+Blockchain technology facilitates exciting new ways to validate identities and easily 
+“Know Your Customer”, as demonstrated by Civic, Cambridge Blockchain, and many 
+others. Cousins are trusted by the system and The Community to handle significant 
+financial transactions and use The Company's credit-line when making these 
+transactions. To maintain the desired level of trust, Cool Cousin will collaborate with 
+blockchain identity management companies to see through online masquerades and 
+make sure Cousins are real people who have not previously been banned from our 
+Community.
+
+When blockchain-based KYC processes reach mainstream adoption, we will be well 
+positioned to leverage it for various verifications of our Community and other needs, 
+while avoiding the privacy risks of maintaining a centralized identity repository.
+
+escrow
+Peer-to-peer deals are difficult in a trustless environment, especially when one side 
+of the deal cannot be verified digitally. Cool Cousin will make sure all Cousins are 
+trustworthy, and will remove Cousins that failed to deliver their part of a deal without 
+a solid reason. In order to be extra safe, our system will leverage smart contracts to 
+make it impractical not to respect the deal.
+
+Any funds that are meant for a purchase (flight tickets, AirBnB, etc), along with the 
+Cousin fee will be locked in a smart contract until the customer confirms a successful 
+transaction. The contract will contain a dispute settling mechanism which will allow 
+the community to hear the sides out and weigh in on how to resolve it.
+
+technical considerations 
+
+
+
+43
+
+WP 01
+
+RECEIVING SERVICES ON COOL COUSIN WILL BE MADE USING CUZ TOKENS 
+
+FOLLOWING THESE STEPS:
+
+ • The user sends a request using the Cool Cousin app
+ • The Company deploys a smart contract to the Ethereum blockchain, encapsulating 
+
+the terms and details of the deal
+
+ • The user sends the agreed upon price (including platform and community fees) to 
+the contract
+
+ • After the user confirms the transaction was successful, payment is released to the 
+Cousin and fees are transferred.
+
+ • In case of disputes:
+ » Once the contract reaches its due date, the user has limited time to file a 
+
+complaint if they did not receive full service.
+
+ » If the Cousin says the claims are false, a dispute is triggered, which is handled by the 
+Board of Representatives. The voters get to decide who gets the escrow money.
+
+technical considerations 
+
+
+
+44
+
+WP 01
+
+Cool Cousin is obsessed with blockchain technology, as it perfectly fits our vision, 
+mission and core product. Blockchain’s unique attributes enable the creation of strong 
+and secure decentralized ecosystems, enabling consumers to trust the information 
+found online and its creators without paying exorbitant premiums that are currently 
+standard in the travel industry. 
+
+We intend to use blockchain technology to get a competitive edge over traditional 
+centralized solutions , by leveraging the following attributes:
+
+DECENTRALIZATION
+
+Smart contracts allow people and software to form agreements and entities that 
+are based on transparent, known, and unchangeable rules. These features make this 
+the most suitable technology for forming autonomous organizations and financial 
+transactions between strangers.
+
+On the Cool Cousin platform, smart contracts will establish the rules: define the 
+division of power between The Company and The Community, allow The Community 
+to set it’s standards and accepts members, creating checks and balances to ensure 
+commercial interests don’t taint the content.
+
+The company will also provide smart contract templates and oracles to facilitate 
+transactions between travelers and Cousins. Providing appropriate escrow, and 
+ensuring the terms are well defined.
+
+COMPLETE TRUSTWORTHINESS
+
+Widespread knowledge of the different manipulations used by huge companies online 
+to distort search results has eroded consumer trust in the internet. Online travel 
+agencies often use dark patterns to incite urgency, pushing deals that have the largest 
+profit margins or other hidden interests, while travelers’ interest is sidelined. 
+
+This is not the case for Cool Cousin’s transparent and decentralized network. Since 
+the Community creates and approves all information, it is practically impossible for 
+Community members to collude to manipulate the network without being noticed and 
+stopped.
+
+blockchain applications 
+in Cool Cousin 
+
+
+
+45
+
+WP 01
+
+The decentralized and transparent nature of blockchain solves the trust problem. The 
+Ethereum consensus protocol ensures that no one entity with a relative advantage 
+can submit fraudulent requests, making tampering with data practically impossible. 
+Furthermore, all participants in the network are up-to-date with the latest records/
+transactions, guaranteeing full visibility and accountability. 
+
+INTERNATIONAL PAYMENTS AND MICRO-TRANSACTIONS
+
+Making concierge and travel-agent like services accessible and affordable for everyone 
+requires aggressive cost reduction.
+
+Cross-border payment is a slow and costly process. It can take three to five days 
+to complete, and can go through a couple dozen steps and intermediaries. Fees 
+accumulate at each step, and can add up to 2% to 6%. Things are worse when it comes 
+to low volume transfers, where fees can reach 10%.
+
+As opposed to these hefty fees paid by today’s e-commerce platforms, equivalent 
+actions on the blockchain are cheaper, as those who carry the computational 
+processing burden receive minor rewards for their work. Processing microtransactions 
+on the blockchain is also cheap and fast, rendering next-day wires and inexpedient 
+transaction fees obsolete.
+
+blockchain applications in Cool Cousin 
+
+
+
+46
+
+WP 01
+
+timeline
+
+iOS Beta Launch
+in Tel Aviv
+
+Pre-Seed Funding Round
+
+London Community
+and iOS App Launched
+
+50 Cities 
+
+200k Users
+
+Web app launch
+
+65+ Cities
+
+1000+ Cousins
+
+ICO Launch
+
+Token Sale
+CUZ issuance event
+
+Simple wallet launch
+
+First transactional feature
+
+Cool Cousin 3.0, incl. 
+CUZ infrastructure
+
+Board of Representatives 
+Establishment
+
+Pro Cousins Launch
+
+Android version
+
+API Launch
+
+Community Governanace 
+Implementation
+
+Mass Adoption
+
+Pop-up 
+Communities 
+
+Product launch
+
+Business partners 
+Integration
+
+Cool Cousin 4.0
+
+TLV, London, Rome
+Paris & Berlin available
+
+Best New Travel
+App Award 
+USA Today
+
+2nd Funding Round
+
+Q2 2016 Q3 2016 Q4 2016 Q1 2017 Q2 2017
+
+Q4 2017 Q4 2017Q1 2018Q2 2018Q3 2018
+
+Q4 2018 Q1 2019 Q2 2019 Q3 2019 Q4 2019
+
+2020
+
+
+
+47
+
+WP 01
+
+The funds raised during the ICO are planned to be used in accordance with the 
+roadmap to finance: 
+
+ • RESEARCH & DEVELOPMENT — costs cover all R&D processes, including 
+development and design of the product, building smart contracts, devops, apps and 
+interfaces for the web, iOS and Android. 
+
+ • MARKETING & SALES — the budget will fund the expansion of efforts in brand 
+awareness, sales, user acquisition, referral programs, content marketing, PR, 
+SEO, promotions and BTL. This included recruiting professionals, paying for ad 
+placements and more. 
+
+ • ADMINISTRATION — costs include internal company expenses, from human 
+resources dedicated to company employees and recruitment, to travel expenses, 
+adequate office space, licensing and accounting. 
+
+ • OPERATIONS — costs cover the growth and management of the global Community 
+of Cousins and the development of partnerships with complementing brands.
+
+ • LEGAL — costs include all legal expenses associated with the expansion of the 
+community in many territories around the world. 
+
+ • CONTINGENCY — a small portion (5%) of the total budget will be dedicated to 
+unknown / unexpected expenses, and will be allocated in due course. 
+
+*Excludes ICO costs
+
+** The above may change based on management decision, in 
+
+accordance with the developing market and company's specific needs
+
+45% R&D
+
+20% MARKETING
+
+15% ADMINISTRATION
+
+10% OPERATIONS
+
+3% LEGAL
+
+7% CONTINGENCY
+
+use of proceeds
+
+
+
+48
+
+WP 01
+
+In order to kickstart a vibrant community of passionate travelers and locals, the 
+distribution will be designed to offer as many people as possible the opportunity to 
+participate. The allocations are outlined below and reserve 21% of the total supply 
+for the Cool Cousin Community, which is tasked with distributing them over multiple 
+years to network participants who contribute value to the ecosystem. As a result, the 
+majority of tokens will be distributed over time to partners and the public.
+
+allocation       
+The CUZ token supply will be limited to 300,000,000 million units and allocated 
+according to the following:
+
+ • Founders and current employees will have a minimum lockup period of 24 months
+ • Advisors and early supporters will have a minimum lockup period of 9 months 
+ • Future operations pool will be vested for 4 years with 12 months cliff. The 
+
+operations pool primary goal is to support future development, global expansion, 
+partnerships, etc. 4% of the pool will remain free to support future opportunities 
+and unexpected challenges. 
+
+ • Community pool tokens will be distributed gradually over a period of several years, 
+and will be utilized as an incentive for the entire Community, as well as to remove 
+user barriers and bolster growth. 
+
+CUZ token issuance
+
+10% TEAM
+
+10% ICO ADVISORS, EARLY SUPPORTERS, BOUNTY
+
+21% COMMUNITY
+
+33% ICO
+
+26% FUTURE OPERATIONS
+
+
+
+49
+
+WP 01
+
+ICO details 
+Our ERC20 token contract, our vesting contract, and our crowdsale contract will be 
+based on OpenZeppelin - a secure and robust library that has been used to raise $4.5 
+billion, in ICOs including OmiseGO, Augur, Civic and more. Following the crowdsale, 
+the bought tokens will be distributed, the bonus vesting periods will start, and any 
+unsold tokens will be distributed proportionally to all CUZ token holders, including the 
+Cool Cousin team, advisors, early supporters, bounty participants, Community Pool 
+and future operations.
+
+SYMBOL  CUZ
+
+START DATE  WILL BE ANNOUNCED SOON
+
+TOTAL CUZ TOKEN SUPPLY  300,000,000 CUZ
+
+SOFT CAP  4,000 ETH
+
+HARD CAP  17,500 ETH
+
+EXCHANGE RATE 1 ETH = 3,770 CUZ
+
+MINIMUM PURCHASE  0.1 ETH
+
+PAYMENT METHOD  ETH
+
+PUBLIC PRE SALE
+
+ CONTRIBUTION SIZE BONUS VESTING (MONTH) RATE
+
+ 0.1—10 ETH 20% 3 4,524 CUZ/ETH 
+
+ >10—50 ETH 25% 3 4,713 CUZ/ETH
+
+ >50—100 ETH 30% 6 4,901 CUZ/ETH
+
+ >100—250 ETH 35%  6 5,090 CUZ/ETH
+
+ >250—500 ETH 40% 9 5,278 CUZ/ETH
+
+ >500 ETH 50% 9 5,655 CUZ/ETH
+
+* Only bonuses are vested in the Public Presale
+** Public Presale dates will be announced soon
+
+CUZ token issuance
+
+
+
+50
+
+WP 01
+
+PUBLIC SALE
+
+ PERIOD BONUS VESTING (MONTH) RATE
+
+ WEEK 1 15% 1.5 4,335 CUZ/ETH 
+
+ WEEK 2 10% 1 4,147 CUZ/ETH
+
+ WEEK 3 0%  — 3,770 CUZ/ETH
+
+PUBLIC SALE TERMS
+
+ • No token creation, minting or mining after the end of the ICO period
+ • Tokens received from non-whitelisted addresses will be refunded
+ • If the soft cap is not reached, funds will be returned to the participants 
+ • Upon reaching the hard cap the ICO will end immediately
+ • Bonus tokens will only be sent after their vesting period
+
+ICO timeline
+
+JAN 2018
+
+ICO announcement public pre-sale token sale
+
+APR 2018 APR 2018
+
+CUZ token issuance
+
+
+
+51
+
+WP 01
+
+founders
+
+ITAY NAGLER 
+CHIEF EXECUTIVE OFFICER
+
+Over the last 10 years, Itay has established and managed multiple innovative 
+digital projects. He was founder and CEO of creative digital agency D.tales, 
+working with international brands such as Nestle, YES, HBO and P&G; he 
+was founder and CEO of Israel’s largest video sharing site, pioneering the 
+monetization of a video platform in the days preceding YouTube. Itay is also 
+responsible for creating and selling two award-winning interactive shows 
+to over 16 territories worldwide. In 2015, Itay was Head of Strategy at V15, 
+the largest grassroots political organization in Israel’s history, leading the 
+campaign through political turmoil and rapid growth spurts. Itay specializes 
+in building large communities and has a proven track record of initiating and 
+managing digital projects with tens of millions of engaged users.
+
+ITAMAR WEIZMAN 
+CHIEF OPERATIONS OFFICER
+
+is Chief Operations Officer of Cool Cousin. He graduated from high school at 
+16 and received a BA in History from Tel Aviv University at 19, during which 
+he was the youngest ever political advisor and legislative aide to an Israeli 
+MP. Itamar has worked as a digital campaigner for Greenpeace International, 
+where he spearheaded 5 successful international campaigns that gained 
+traction in top media outlets around the world, one of which led Facebook to 
+use renewable energy to power their data centers. He was part of the launch 
+team of co-working space Mindspace and CEO of design & branding agency 
+Blue Collar, before founding V15 - Israel’s largest grassroots political campaign 
+that raised $4M in donations and recruited over 15,000 volunteers - when he 
+was 22-years-old.
+
+team
+
+https://www.linkedin.com/in/itaynagler/
+https://www.linkedin.com/in/itamarweizman/
+
+
+52
+
+WP 01
+
+NADAV SAADIA
+CHIEF MARKETING OFFICER
+
+Chief Marketing Officer of Cool Cousin. An experienced digital marketer and 
+growth hacker, he is responsible for several cutting-edge digital projects that 
+integrate new technologies with strategic content. As co-founder and CEO 
+of digital agency D.tales, he created and executed innovative projects for 
+international brands such as HBO and Nestle and initiated the first ever digital 
+interactive music festival for Israel’s largest mobile carrier Cellcom, a format that 
+has since been used by dozens of companies. A pioneer of the digital video space, 
+Nadav grew video sharing platform Flix into the largest video-centered site in 
+Israel, prior to the rise of Youtube. As Creative Director of grassroots political 
+campaign V15, Nadav created the most viral political campaign in Israel’s history, 
+gaining millions of views. 
+
+SHACHAR COTANI 
+CHIEF PRODUCT OFFICER
+
+An award-winning multidisciplinary designer, Shachar has extensive branding 
+and UI experience, giving shape to dozens of companies and products 
+around the world, from ecommerce sites to entertainment businesses. After 
+studying at Bezalel College of Art and Design and Seoul’s Hongik University, 
+Shachar worked as senior designer at leading branding agency Blue Collar, 
+and received several industry accolades for his work. As Head of Design at 
+V15, Israel’s largest grassroots political campaign, Shachar was responsible for 
+strategic design, from the campaign’s digital assets to three national printed 
+assets in a span of a couple of months, reaching millions of people. 
+
+GIL AZRIELANT 
+CHIEF TECHNOLOGY OFFICER
+
+A former officer, Gil headed the Cyber Team at 8200, the IDF Signal Intelligence 
+Unit. During his service, Gil built and led an interdisciplinary task-force to 
+solve an urgent problem, which awarded him the head of Military Intelligence 
+Directorate prize for creative thinking. He graduated Magna cum Laude with 
+a B.Sc in computer science from the the IDC, where he received a scholarship 
+for academic excellence. He was also selected to represent Israel at the Global 
+Hackathon in Seoul. Gil has been involved in blockchain technology since 2012, 
+and wrote about Ethereum for one of his advanced seminars. 
+
+team
+
+https://www.linkedin.com/in/nadavsaadia/
+https://www.linkedin.com/in/cotani/
+https://www.linkedin.com/in/gil-azrielant-88b7a1b5/
+
+
+WP 01
+
+team
+
+ 
+
+YOTAM OFEK
+HEAD OF BACK-END 
+
+DEVELOPMENT AND DEVOPS
+
+OFER FEDER
+BACK-END DEVELOPER
+
+YOTAM ARAD
+UX DESIGNER
+
+GILI NOY
+CONTENT MARKETING
+
+GUY LEVI
+HEAD OF FRONT-END 
+
+DEVELOPMENT
+
+JONATHAN BROTZEN
+QA ENGINEER
+
+DANIELLE ZILBERBERG
+HEAD OF CONTENT
+
+GUY BEN DAVID
+GROWTH MARKETING MANAGER
+
+OR CHEN
+ IOS DEVELOPER
+
+NIMROD YOELY
+FRONT-END DEVELOPER
+
+ROTEM VAHNNICH
+PARTNERSHIPS
+
+CALLUM HALE-THOMSON
+GLOBAL COMMUNITY MANAGER
+
+team
+
+https://www.linkedin.com/in/yotamofek/
+https://www.linkedin.com/in/ofer-feder-38a09044/
+https://www.linkedin.com/in/aradyotam/
+https://www.linkedin.com/in/gilinoy/
+https://www.linkedin.com/in/guy-levi-0715837b/
+https://www.linkedin.com/in/daniellezilberberg/
+https://www.linkedin.com/in/guy-ben-david-b172615a/
+https://www.linkedin.com/in/or-chen-6153b6b9/
+https://www.linkedin.com/in/rotem-vahnnich-61a61b18/
+https://www.linkedin.com/in/callumhalethomson/
+
+
+54
+
+WP 01
+
+advisors
+
+ 
+
+PETE HANCOCK
+FORMER HEAD OF NATIONAL 
+
+SALES @ YELP
+
+BÄRI� A. WILLIAMS
+OPERATIONS ADVISOR
+
+ASAF SHAVIT
+CO FOUNDER @ DIGITAL 
+
+ASSET PARTNERS
+
+ASAF MEIR
+FOUNDER & CEO 
+@ SOLIDUS LABS
+
+LIOR PROSOR
+INVESTOR, PARTNER @ 
+
+ELEVATOR FUND
+
+ORI MAGEN
+DIR. GLOBAL GROWTH 
+
+@ AUTOMATTIC • FORMER 
+GLOBAL HEAD OF GROWTH 
+
+& MARKETING @ MOOVIT
+
+team
+
+ORI GLEZER
+PARTNER @ ELEVATOR FUND
+
+ARIEL KEDEM
+PRODUCT CONSULTANT
+
+TOM BRONFELD
+PARTNER @ ELEVATOR FUND
+
+https://www.linkedin.com/in/pete-hancock/
+https://www.bariawilliams.com/ 
+https://www.linkedin.com/in/asaf-shavit-930a05141/
+https://www.linkedin.com/in/asafmeir/
+https://www.linkedin.com/in/asafmeir/
+https://www.linkedin.com/in/orimagen/
+https://www.linkedin.com/in/sebastian-stupurac-6bbb1712/
+https://www.linkedin.com/in/arielkd/
+https://www.linkedin.com/in/arielkd/
+
+
+55
+
+WP 01
+
+RON MATZKIN
+MARKET ANALYSIS EXPERT
+
+AMIR FEDER
+CRYPTO ECONOMIST
+
+ITAI ELITZUR
+PARTNER & COO 
+
+@ MARKET ACROSS
+
+STAS OSKIN
+CORE DEV & BIZ DEV @ WINGS
+
+team
+
+SEBASTIAN STUPURAC
+CO-FOUNDER @ WINGS
+
+https://www.linkedin.com/in/ron-matzkin-190b2b54/
+https://www.linkedin.com/in/amir-feder-b65b7035/
+https://www.linkedin.com/in/itai-elizur/
+https://www.linkedin.com/in/stasoskin/
+https://www.linkedin.com/in/sebastian-stupurac-6bbb1712/
+
+
+coolcousin.com/ico
+
+http://www.coolcousin.com
+http://www.coolcousin.com/ico
+http://m.onelink.me/cdc5a35
+

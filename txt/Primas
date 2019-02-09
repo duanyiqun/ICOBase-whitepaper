@@ -1,0 +1,2393 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 1 
+
+Primas 
+Next Generation Ecosystem for Valuable Content 
+
+ 
+
+ 
+
+ 
+
+ 
+
+White Paper 
+
+(version1.3.1) 
+
+
+
+ 2 
+
+Abstract 
+
+ 
+
+Primas is an open ecosystem for the publishing, recommendation and 
+
+transaction of content. This white paper describes how Primas enables the 
+
+production, selection and consumption of content, making use of the 
+
+blockchain technology, social recommendation and token incentives. 
+
+The Primas team is committed to using blockchain and other technologies to 
+
+restructure the content market, so as to solve the problem in which quality 
+
+content are hardly recognized, disseminated and paid for. Decentralized 
+
+content sourcing and recommendation mechanism brings quality content to 
+
+users. A brand-new content evaluation system ensures direct benefits to the 
+
+producers of quality content. Tamper-proof property of the blockchain provides 
+
+copyright protection for original writers. And decentralized data management 
+
+offers better protection for user’s privacy. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 3 
+
+Table of Contents 
+Next Generation Ecosystem for Valuable Content .............................................................................. 1 
+
+Abstract ................................................................................................................................................................. 2 
+
+Preface ................................................................................................................................................................... 4 
+
+Primas Team ....................................................................................................................................................... 5 
+
+Problems in Internet Content Ecosystem ............................................................................................... 6 
+
+1. Credibility Problem Due to Information Overload ................................................................ 6 
+
+2. Rampant Plagiarism and Piracy .................................................................................................... 7 
+
+3. Poor Content Quality Due to Attention Economy.................................................................. 8 
+
+4. Manipulation of Content Display by Centralized Platform ................................................ 9 
+
+5. Privacy Problem and Data Abuse ............................................................................................... 10 
+
+System Design .................................................................................................................................................. 12 
+
+Overall Architecture of the System ................................................................................................. 12 
+
+DTCP and Primas DNA ....................................................................................................................... 13 
+
+User Identity and Credit Rating ....................................................................................................... 16 
+
+Group Economy ...................................................................................................................................... 17 
+
+Content Quality Evaluation ............................................................................................................... 18 
+
+Decentralized Crawler .......................................................................................................................... 20 
+
+Decentralized Storage .......................................................................................................................... 22 
+
+Primas Token (PST) ....................................................................................................................................... 24 
+
+Use of PST ................................................................................................................................................. 25 
+
+PST Issuance ............................................................................................................................................ 26 
+
+Distribution of Additional PSTs ....................................................................................................... 27 
+
+Primas Community Governance ............................................................................................................... 29 
+
+Establishment of Primas Management Body ............................................................................. 29 
+
+Governance Structure of Primas Community ............................................................................ 29 
+
+Primas Financial Management ........................................................................................................ 34 
+
+Primas Auditing ...................................................................................................................................... 34 
+
+Development Roadmap ................................................................................................................................ 35 
+
+ICO Plan .............................................................................................................................................................. 37 
+
+Disclaimer .......................................................................................................................................................... 39 
+
+Risk Warning .................................................................................................................................................... 41 
+
+Evolution Record of This Paper ................................................................................................................ 46 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 4 
+
+Preface 
+
+ 
+
+Over the past decade, the Internet has achieved rapid development thanks to 
+
+the model of traffic economy. In this model, traffic is mainly cashed through 
+
+advertisements, and the inflow of advertisement expenses has allowed the 
+
+public to access information and services at very low or even no cost at all. 
+
+Today, along with our rapid transition from an age of information scarcity to an 
+
+age of information overload, problems brought by traffic economy also 
+
+becoming apparent. Due to information overload, public attention has become 
+
+a new kind of scare resource. In the competition for such resource, large amount 
+
+of low quality content are created and shown all over our screen to catch our 
+
+attention, and tampering and plagiarizing have been squeezing out producers 
+
+of quality content. The content ecosystem of the Internet is being severely 
+
+endangered. 
+
+How to bring quality content to the public? Who shall we trust on the Internet? 
+
+Before the advent of blockchain technology, no centralized entity could offer a 
+
+practical solution to these challenges. 
+
+By utilizing DTCP, or the Decentralized Trusted Content Protocol, giving every 
+
+digital work a Primas DNA, a digital identity registered on the Blockchain 
+
+network, Primas constructs an evaluation system for credible content, and 
+
+bring high quality content to readers through content sourcing, content 
+
+reviewing free from manipulated traffic and community incentives. At the same 
+
+time, digital contents will be turned into tradeable digital assets to bring due 
+
+benefits to their producers. 
+
+ 
+
+
+
+ 5 
+
+Primas Team 
+
+ 
+
+Primas is created by the core team of Yuanben (Chinese word for “original”), a 
+
+leading copyright service platform based on blockchain. Committed to applying 
+
+blockchain technology to digital copyright in the past year, Yuanben has gained 
+
+profound industrial recognition for its accumulation of blockchain technology 
+
+and relevant commercialization. It is also the first blockchain product in China 
+
+that has been commercialized in the field of copyright. In 2016, Yuanben 
+
+received investment from Wanxiang Blockchain and Fenbushi Capital. 
+
+Over the course of Yuanben’s development, we realized that the power of a 
+
+single team alone is not enough to drive changes across the whole industry. We 
+
+hope to create a fully independent open-source platform to benefit the content 
+
+industry as a whole. 
+
+Besides its in-depth research on blockchain technology, the core team has also 
+
+accumulated years of experience in the development and operation of mobile 
+
+browser, one of the most important functions of which is content aggregation 
+
+and intelligent recommendation. Therefore, Primas team also has in-depth 
+
+knowledge on media, big data and recommendation algorithms. 
+
+Product level application has long remained the biggest challenge in the 
+
+blockchain industry. Years of industrial and product experience of Primas team 
+
+will provide important guarantee for successful project operation. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 6 
+
+Problems in Internet Content 
+
+Ecosystem 
+
+ 
+
+We have listed problems with big impact on the Internet content sector, the 
+
+kind of which will receive prior attention from Primas. 
+
+ 
+
+1. Credibility Problem Due to Information Overload 
+
+New media enabled by the Internet has improved the efficiency of information 
+
+diffusion, to the extent that the once rare and expensive information has 
+
+become available in large amount free of any charge. The ability to filter needed 
+
+content out of the massive amount of information is now a new kind of scare 
+
+resource. 
+
+Searching, recommendation and subscription are the most common tools for 
+
+content acquisition. Whatever their forms, they all address the “searchability” 
+
+problem of information, so that disordered information is arranged in order 
+
+and become easier to retrieve and find. Though these tools make information 
+
+easier to access, they fail to deal with the credibility problem. Most information 
+
+on the Internet only consists of a URL and the information itself. The same 
+
+information may be intentionally or unintentionally distorted after several 
+
+transfers, and some distortions may even lead us to a judgment that is the 
+
+opposite of what is intended by the original information. 
+
+In real life, faced with several pieces of information with similar content, we 
+
+find it baffling to distinguish between original information that is credible and 
+
+tampered information that is falsified. 
+
+
+
+ 7 
+
+ 
+
+Solution: DTCP and Primas DNA 
+
+Primas adds a new layer, protocol and infrastructure named Decentralized 
+
+Trusted Content Protocol to the Internet to create immutable, traceable 
+
+metadata to any content. For every content registered with DTCP, Primas 
+
+generates a globally unique digital fingerprint (Primas DNA), which contains 
+
+metadatai such as author name, publishing time and content fingerprint. When 
+
+we read a piece of information, we will know for sure the author’s credit, the 
+
+accurate publication time of the original, and the modifications made after 
+
+creation. This additional metadata will enhance the value of the information 
+
+itself and may even influence our judgment on its quality. 
+
+ 
+
+2. Rampant Plagiarism and Piracy 
+
+Digital content is so easy to copy that it’s difficult to protect the rights and 
+
+interests of its owner. Driven by interests, plagiarism and piracy have been 
+
+persistently haunting the digital content industry and greatly obstructing the 
+
+healthy development of the industrial ecosystem. The first cause for such 
+
+rampancy is the difficulty in tracing content origin. Once published online, 
+
+digital content tends to be quickly spread, and it will be difficult for those 
+
+reprinting the content to find its author and source. The second cause is the lack 
+
+of a mechanism for automatic authorization. Even if the reprinting party 
+
+manages to find the original author, without a standard authorization process, 
+
+the cost of communication will be too high for large-scale authorization. The 
+
+third cause is the difficulty in presenting evidence to prove an infringement. 
+
+Many infringements are hard to detect, the cost of evidence collection is very 
+
+high, infringements have thus grown more rampant. 
+
+
+
+ 8 
+
+ 
+
+Solution: Primas DNA, Smart Contract, and Blockchain-based 
+
+Proof of Existence 
+
+Primas DNA ensures that the origin of content can be traced despite partial 
+
+tampering. Smart contract can achieve automatic authorization without human 
+
+intervention. Proof of existence based on blockchain can greatly reduce the cost 
+
+of evidence collection. 
+
+ 
+
+3. Poor Content Quality Due to Attention Economy 
+
+The concept of “free” has long been a common sense on the Internet. After a 
+
+huge number of users have been attracted using free products and services, 
+
+advertisements will then be introduced to gain revenue. Advertisement 
+
+represents the most lasting and mature business model on the Internet and 
+
+cashing content through advertisement is now the dominant method for value 
+
+realization. Advertisement is a typical result of attention economy which can 
+
+generate revenue as long as traffic is attracted. Propelled by interests, many 
+
+content producers have emerged on the Internet. Working in a pipeline, they 
+
+try to catch attention with fake titles and indecent content, steal and use other 
+
+people’s articles to gain traffic and profits. In the year of 2016 alone, reported 
+
+Wechat Media infringements totaled a shocking number of 3.5 million. These 
+
+bad behaviors, which have been driving out good ones, have seriously squeezed 
+
+the living space for producers of quality content and wreaked great havoc on 
+
+the society. 
+
+ 
+
+Solution: Primas Content Evaluation System and Incentive 
+
+Mechanism 
+
+
+
+ 9 
+
+Primas establishes a content evaluation system free of traffic manipulation to 
+
+measure content quality, and improves content quality across the whole 
+
+community by giving Primas Token reward to producers of quality content. 
+
+ 
+
+4. Manipulation of Content Display by Centralized 
+
+Platform 
+
+As mentioned above, today there are two mainstream means for obtaining 
+
+content: searching and recommendation. 
+
+Searching is the most direct way of obtaining information. Just input what you 
+
+want and you can quickly get the results from the search engine. Yet problems 
+
+also exist with search engines. Usually users only give attention to results shown 
+
+first and other information sources are thus seriously marginalized. Also, out of 
+
+commercial considerations, search engines are increasingly manipulating the 
+
+search results. On June 27, the European Union imposed a 2.44 billion Euro 
+
+antitrust fine on Google, which was accused of abusing its searching advantage 
+
+to recommend its own services in search results while downplay its 
+
+competitors. 
+
+Recommendation came into existence along with the progress of human 
+
+society. The modern content recommendation engine can collect and analyze 
+
+user’s personal preferences, predict their preferred content, and proactively 
+
+recommend it to them. This kind of engine, while greatly reducing the threshold 
+
+for information access, also brings worse problems. Using algorithms, it 
+
+recommends content that “we like” and screen away content “we dislike”. This 
+
+way the information we see tend to be narrowed to a smaller scope, trapping us 
+
+in a small “information bubble”. 
+
+
+
+ 10 
+
+Whether it is “searching” or “recommendation”, centralized entities select and 
+
+screen information using machine algorithm. On the one hand, intentional 
+
+human intervention is hardly avoidable in centralized entities. On the other 
+
+hand, large-scale application of machine algorithm will unavoidably aggravate 
+
+the Matthew Effect by which “the rich get richer”, leading content display to 
+
+follow power law distribution at an even faster rate. 
+
+ 
+
+Figure 1. Power Law Distribution, by which 20% percent of the content are dominating 
+
+ 
+
+Solution: User Self-governance 
+
+On Primas platform, users can choose groups that interest them, which will all 
+
+be under their own governance free of any control by centralized algorithm. All 
+
+other algorithms related to content display are open-sourced and transparent, 
+
+and users can also join the optimization of these algorithms. 
+
+ 
+
+5. Privacy Problem and Data Abuse 
+
+When we use search engines and content applications, large amount of our 
+
+usage data are being collected by background programs. For example, user’s 
+
+characteristics can be recorded using account registration information and data 
+
+on reading history. Mostly it is not the content producers that benefit from 
+
+these data, but the centralized platforms. With these data, user’s identity and 
+
+
+
+ 11 
+
+online habits can be easily checked, and may even be stolen by platform staff 
+
+and sold on the black market. 
+
+ 
+
+Solution: Full Protection for Data Privacy Using Blockchain 
+
+Technology 
+
+In Primas network, information that must be disclosed will be available in a 
+
+public and transparent manner, and will be recorded on Blockchain, e.g. 
+
+information on author’s name and transaction, etc. Information on user’s 
+
+browsing history and privacy will not be recorded and uploaded. 
+
+ 
+
+ 
+
+ 
+
+
+
+ 12 
+
+System Design 
+
+Overall Architecture of the System 
+
+ 
+
+Figure 2. Primas System Overall Architecture 
+
+ 
+
+Primas is built on top of the Ethereum. The key logics are implemented using 
+
+smart contract. Core data is written into blockchain, and the content data is 
+
+stored on IPFS. 
+
+At the upper layer of Blockchain is Primas Node which operates the 
+
+decentralized crawlers, calls external services and runs complex computation. 
+
+Primas Node is directly connected to Blockchain and calls smart contract to 
+
+complete key operations and to write and validate data. For example, it can 
+
+
+
+ 13 
+
+connect with Yuanben’s services to achieve accurate proof of existence, collect 
+
+electronic evidence and ensure its legal validity. Primas Node also offers Restful 
+
+API for all clients and speeds up client access with functions like distributed 
+
+data caching and indexing. 
+
+At the upper layer of Primas Node are clients directly used by users, including 
+
+Primas mobile application for Android and iOS, browser extension, etc. In 
+
+addition to using Primas clients, any entity or individual (third party 
+
+applications, Wechat Public Accounts, websites, enterprise systems, etc.) can 
+
+connect with Primas Node to join the Primas ecosystem. 
+
+ 
+
+DTCP and Primas DNA 
+
+Trust is a missing critical component to the existing content ecosystem. Primas 
+
+tries to build a new layer on top of the Internet to solve this problem. This layer 
+
+contains blockchain based infrastructure and a new protocol named 
+
+Decentralized Trusted Content Protocol, or DTCP. The aim of DTCP is to 
+
+become the standard of content metadata that utilized by the whole content 
+
+industry. By adding immutable metadata to content using blockchain, DTCP 
+
+provides another dimension of information to the content, helping us 
+
+understand it in a whole new perspective. 
+
+DTCP metadata contains properties such as the publishing time, author’s 
+
+details and original content hash that makes the content more authentic. 
+
+There’re also properties make it easier to spread such as the authorization 
+
+license, similarity fingerprint. Usability properties such as the category of the 
+
+content is also recorded in DTCP since they are important in content usage and 
+
+easy to be lost during content spreading. 
+
+For every original article published with DTCP, a “Primas DNA” will be 
+
+generated as its unique ID. Together with the content, Primas DNA will be 
+
+
+
+ 14 
+
+spread across the whole network as a guarantee for content credibility. Any 
+
+readers can conveniently verify the consistency between the content and its 
+
+DNA to make sure that what is being read is an original free of any tampering. 
+
+ 
+
+Figure 1. Primas DNA 
+
+ 
+
+Primas DNA is a proof for author’s originality. It can work with an author’s 
+
+secret key to prove his/her content ownership, and can work with block data to 
+
+prove that an article was published earlier than unauthorized reproduction. 
+
+Together they can prove the originality of the content because of the 
+
+immutability of these data. 
+
+Primas DNA is a decentralized interface for content sourcing. Despite 
+
+numerous reproductions to any places, readers can still use this DNA to track 
+
+the complete reproduction path, see authorization license of the original 
+
+content, and obtain new authorizations. 
+
+Even if DNA is lost in the process of spreading (e.g. intentionally deleted), the 
+
+
+
+ 15 
+
+original content can still be found on the blockchain based on content fragment. 
+
+Primas browser extensions and mobile clients can help users solve this problem 
+
+quickly. When a browser with such extension is used to view content, or when 
+
+Primas mobile clients are used to read shared content, all the origin-tracing 
+
+information will be shown immediately as long as the content has been 
+
+registered on Blockchain, regardless of the presence or absence of DNA. 
+
+Primas will also provide various SDKs and APIs so that any third-party websites, 
+
+platforms and mobile clients in the ecosystem can quickly acquire the functions 
+
+to generate DNA, protect content and trace its origin. Primas is committed to 
+
+adding DTCP to all quality content on the Internet and solving the problem at 
+
+its source, so as to address credibility challenges for Internet content due to the 
+
+absence of ID information. 
+
+ 
+
+
+
+ 16 
+
+ 
+
+Figure 4. Origin Tracing in an Open Ecosystem Using DNA  
+
+User Identity and Credit Rating 
+
+Every user has a unique identity in Primas network. This unique identity 
+
+ensures the construction of a credit system which is an indispensable step for 
+
+protection of original content. It is also very helpful in building quality content 
+
+community, reducing the spread of fake information and curbing irresponsible 
+
+remarks. 
+
+Primas aims to construct an open ecosystem for valuable content that covers 
+
+not only end users such as original authors and readers, but also media entities, 
+
+enterprises and other media platforms. Primas supports account namespace 
+
+which properly addresses identity issue for authors from other media 
+
+platforms. 
+
+
+
+ 17 
+
+For every account, Primas will calculate its credit rating, which will be decided 
+
+by a combination of factors such as number and quality of published content, 
+
+and number of PSTs in it. Credit rating will also be part of the indicators used 
+
+for evaluating an author’s published content. 
+
+One of the applications for credit rating is to handle content infringement. 
+
+Primas arranges a mechanism for reporting infringement, and the reports will 
+
+be processed by several verification nodes elected by the community. If 
+
+infringement is confirmed by the verification nodes, certain number of locked 
+
+PSTs will be deducted from the infringer’s account as punishment. On top of 
+
+this, adjustment will be made to the infringer’s credit rating to affect content 
+
+publishing and benefits acquisition in the future. 
+
+ 
+
+Group Economy 
+
+Due to complex dimensions involved, there are still many difficulties in 
+
+quantifying the concept of content quality and defining the quality evaluation 
+
+method. In practice, social recommendation is a method that is more efficient 
+
+than recommendation based on algorithms. Aside from introducing multi-
+
+dimensional metadata to improve information quality, Primas will establish 
+
+social groups to gather those with shared interests, shared values and shared 
+
+expectations, to further evaluate information credibility inside the system. 
+
+On Primas mobile clients, social group is the main organizational structure for 
+
+information. After content is published inside a group, whether it is original or 
+
+introduced from external sources, it will be evaluated by group members in its 
+
+further dissemination. The quality of a group is decided by content contributed 
+
+by all its members, and the rating of a group will also influence quality 
+
+evaluation of content in the group. To avoid quality deterioration, all users must 
+
+have a small PST reservation before joining a group. The minimum requirement 
+
+
+
+ 18 
+
+for PST reservation will be decided upon establishment of the group, or will be 
+
+decided by voting among group members. 
+
+Social group is also a self-governing organization, in which all members enjoy 
+
+a share of the group interests. The group receives PST reward from the system 
+
+for its development and improved quality, which will be distributed among its 
+
+members based on their per capita contributions. Any destructive or disruptive 
+
+behaviors may face unanimous resistance from all group members or even be 
+
+subject to expulsion from the group. 
+
+Traditional social groups can be very weak, as they are often easily used by some 
+
+individuals to spread fake information. The trust mechanism of Blockchain can 
+
+remedy this defect to prevent malicious information attack on the group. 
+
+Primas also applies the economic concept of incentives in social groups to 
+
+enhance their potential for self-improvement. 
+
+ 
+Figure 5. Content group governed by its own members 
+
+ 
+
+ 
+
+Content Quality Evaluation 
+
+Primas designs a completely new open system for content evaluation. Under 
+
+
+
+ 19 
+
+this system, evaluation of an article is not just the click-based computation, but 
+
+one that comprehensively measures factors such as social recommendation, 
+
+content dissemination and author’s credit to make intensive and extensive 
+
+value assessment. 
+
+Based on reader behavior intensity, interaction between readers and content 
+
+can be ranked in ascending order as click, like, review, reposting and 
+
+reproduction. The higher the intensity of reader behavior, the bigger its 
+
+contribution to content evaluation. Reposting is a better demonstration of 
+
+content value than several likes, and so is reproduction compared to reposting. 
+
+To accurately assess content quality, all the factors must be comprehensively 
+
+measured. Primas evaluation system adopts interactive indicators of like, 
+
+review, reposting and reprinting: 
+
+Vc
+t  =  ∑ ∑ αiHPjΓj
+
+ci
+t
+
+j=1
+
+3
+
+i=1
+
++  β ∑ HPjΓjSj
+
+dt
+
+j=1
+
+ 
+
+In this formula, Vc
+t is the value of content c at the time of t; α1, α2, α3 and β 
+
+respectively represent the weight of like, review, reposting and reprinting; ci
+t 
+
+is the number of the i type interactive operation at a given time window of t; 
+
+and Γj
+t is the user’s credit rating at the j th interactive operation. Similar to the 
+
+Voting Power idea of Steemiii, HPj is the value of user’s power during interactive 
+
+operation. 
+
+HPj =  PSTj {
+Cj
+
+1 + eθ−Cj
++ θ} ⁄  
+
+In this formula, PSTj is the balance of unlocked PST in user’s account at the j 
+
+th interactive operation; Cj  is the total number of user’s interactive operations 
+
+within a given time window at the time of the j th interactive operation; and θ 
+
+is a threshold. In case of frequent interactive operations within a certain period, 
+
+HP will keep decreasing and consequently the influence of this user’s operation 
+
+on content evaluation will also keep diminishing. After such frequent operation 
+
+stops, HP will recover over time. For reproduction, additional consideration 
+
+
+
+ 20 
+
+needs to be given to quality factor Si of the reproduction activity: 
+
+Si =  
+si
+
+∑ sjj
+ 
+
+si =  ∑ [
+1
+
+Ci
+∑ VCi
+
+Ci
+
+]
+
+Ca
+
+i=1
+
+⋅ CaCp
+2 
+
+Si is got after normalizing quality value si of the reprinting activity, while si 
+
+is got after calculation of content value, author number and total crawler 
+
+number involved in all the reprinting activities. In this formula, Ca is the total 
+
+number of authors while Cp is the total number of crawlers. At the same time, 
+
+si  is used to prevent cheating by an individual author or individual crawler 
+
+which may dishonestly gain reward through automatic reprinting. Since the 
+
+definition of si  includes the content value of Vc
+t , the calculation of si  is a 
+
+process of iteration. For a new reprinting activity, its value is initially set at a 
+
+small fixed number. As more reprinting take place on its basis, the quality value 
+
+will be updated continuously and will finally influence the evaluation of a new 
+
+content. 
+
+Indicators of likes, reviews and shares are measured in Primas mobile 
+
+application. Content reproduction have been difficult to measure as they all 
+
+take place outside the system. Primas has innovatively designed the 
+
+decentralized crawler system which is capable of measuring the extent of 
+
+content diffusion across the whole network and the importance of media 
+
+involved. By introducing the indicator of reproduction, Primas will make more 
+
+comprehensive and more objective assessment of content quality. 
+
+Decentralized Crawler 
+
+Primas has implemented the first decentralized crawler system on Blockchain. 
+
+Distinct from their traditional counterparts, the crawler system of Primas is 
+
+used to track all the reproductions of an article across the whole network. 
+
+
+
+ 21 
+
+Together with Primas DNA, it can provide unprecedented copyright protection 
+
+for community original authors. At the same time, it offers content origin 
+
+traceability, content reliability and certain content authentication to readers. 
+
+To help original authors track the spread of their articles on the Internet, 
+
+Yuanben has designed the Hawkeye whole-network reproduction monitor 
+
+system. Using crawler system and Natural Language Processing (NLP) 
+
+technology, we can identify reproduction of content originally published on 
+
+Blockchain across the whole network (including but not limited to Twitter, 
+
+WeChat Public Account, personal blogs, etc). Regardless of any amendments, 
+
+additions, deletions or paragraph rearrangements to the content, Hawkeye can 
+
+still find the edited and reposted articles by comparing text similarities. 
+
+Hawkeye is one of the best received core functions of Yuanben. 
+
+To bring benefits to more users, we will use Hawkeye as the basis for Primas 
+
+decentralized crawler system. Combined with community incentives, Hawkeye 
+
+will have a greatly boosted capacity, promoting content traceability and 
+
+copyright protection to a new level unseen before. 
+
+It needs to be pointed out that decentralized crawler is just an automatic tool 
+
+for tracking reproduction. For Primas, the core lies in the verification and 
+
+recording of reproduction. In addition to decentralized crawler, several other 
+
+methods can also be used to report reproduction. For example, Primas has 
+
+designed a browser extension, which, among its core functions, can help 
+
+readers trace content origin in an open environment (e.g. when a user reads an 
+
+article, the extension can give an alert using data recorded on Blockchain that 
+
+the article has been tampered). This function is also capable of marking 
+
+reproduction. If a user reads a reproduced article which is not marked as so on 
+
+blockchain, this article will be automatically submitted to blockchain for 
+
+verification and marking. This way all the browsers with this extension are 
+
+turned to nodes capable of tracking reproduction. 
+
+
+
+ 22 
+
+Also, a task scheduling system is embedded into the decentralized crawler to 
+
+minimize waste of resources caused by crawlers competing for tasks. Though 
+
+this task scheduling system can greatly reduce waste of resources, due to the 
+
+nature of decentralized system, some of the wastes are unavoidable. 
+
+ 
+
+ 
+
+Figure 6. Decentralized Crawler System tracking the spread of content  
+
+across the whole network 
+
+ 
+
+Decentralized Storage 
+
+Primas uses IPFS to store content data, including texts and images, etc. This 
+
+separation of content data from blockchain can effectively save blockchain 
+
+resources and boost blockchain processing capacity. 
+
+ 
+
+
+
+ 23 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 24 
+
+Primas Token (PST) 
+
+ 
+
+One of the circles for value flow in Primas is community incentive. In our design, 
+
+PST is an inflationary system, in which certain proportion of additional PSTs 
+
+will be issued annually. The inflation rate will decrease every year until zero. All 
+
+these additional PSTs will be included into an incentive pool to be used for 
+
+rewarding quality content, quality groups, quality recommendations and 
+
+marking of reproduction. Driven by such incentives, participants, quality 
+
+content and community quality will increase and the unit price of PST will also 
+
+rise to benefit its holders. This is a positive cycle that will in the long run 
+
+enhance the healthy progress of the community and PST holders. 
+
+In Primas system, there is no direct depletion of Tokens. however, upon some 
+
+operations (e.g. account registration, content production) that bring incentives, 
+
+some Tokens will be locked to restrict the number of allowed operations within 
+
+a period of time. Some of the locking will be permanent while most of them will 
+
+be cancelled after some time. With the expansion of Primas community, the 
+
+total number of Tokens locked within a given system time will keep rising. On 
+
+the whole, as the community develops, the amount of circulating Tokens inside 
+
+the system will keep diminishing. 
+
+Another circle for value flow in Primas is the payment required for transactions, 
+
+such as paid reprinting, the like function or other payment requirements to be 
+
+introduced in the future. For all the payment requirements, PST is need. Better 
+
+content will create more payment requirements and consequently PSTs will be 
+
+running short and gaining more value. Also, if more frequent operations are 
+
+needed (e.g. large media planning to simultaneously publish more content, 
+
+readers intending to join more groups), more PSTs need to be purchased. 
+
+ 
+
+
+
+ 25 
+
+Use of PST 
+
+Account Registration 
+
+To obtain the right to publish content, some number of PSTs in an author’s 
+
+account must be locked. Such locking is permanent and linked with the credit 
+
+system of the account. If plagiarism is reported and confirmed, some PSTs will 
+
+be deducted by the system as a punishment. Authors may unlock this portion 
+
+of PSTs at any time, but upon the unlocking, the right to publish content and 
+
+acquire benefits will be lost immediately. 
+
+Authors must also ensure that PST balance in their account is above the 
+
+minimum requirement, so that payment can be made for IPFS storage and 
+
+other charges. 
+
+ 
+
+Content Creation 
+
+For the creation of every article, some PSTs must be locked, which will be 
+
+released 7 days later. This will to some extent reduce the amount of low-quality 
+
+content in the community. Individual authors can only publish a limited 
+
+number of articles within a certain period of time. If large media entities and 
+
+enterprises need to publish more articles, they can deposit additional PSTs into 
+
+their account to realize the operation. 
+
+ 
+
+Founding and Joining Content Groups 
+
+To found or join a group, some PSTs will be locked, which will be released only 
+
+after the user disbands or leaves the group. If a user wants to create or join more 
+
+groups, more PSTs need to be purchased and put into his/her account. The 
+
+number of PSTs to be locked for joining a group will be decided by the founder 
+
+during the founding process. To achieve self-governing of a group, its members 
+
+can initiate a voting to expel a certain individual, whose PSTs locked for the 
+
+group will be transferred into the incentive pool and distributed to users with 
+
+
+
+ 26 
+
+contribution to the whole community. 
+
+ 
+
+Like, Review and Reposting of Content 
+
+Primas will generate a HP value for every account based on their respective PST 
+
+amount. Interaction with content will cost HP value, which will be recovered 
+
+over time. There is no restriction on interaction between user and content. Even 
+
+if HP is down to zero, users can still review or repost the content. However, HP 
+
+value will influence the contribution of a user’s operation to content value. The 
+
+lower the HP value, the smaller the operation’s contribution to content value, 
+
+and the less the reward going to the user. 
+
+ 
+
+Content Reproduction 
+
+If an author requires payment for reprinting his/her original content, in 
+
+addition to the cost of HP, an amount of PSTs equivalent to the required price 
+
+shall also be paid to obtain reprinting authorization. Such payment will be given 
+
+to content producer and others who have made contribution to the content, 
+
+such as reviewers and crawler operators. Also, if other users trace the content 
+
+to Primas through reproduction and also pay for reproduction, a reproduction  
+
+chain will be formed. Users on the upper end of this chain will receive a certain 
+
+proportion of PSTs paid by lower end users as channel fee. 
+
+ 
+
+PST Issuance 
+
+Initially the system will generate 100 million PSTs, of which 51 million will go 
+
+to the community during ICO stage. The specific distribution and use of other 
+
+Token are shown in detail in the ICO Plan part of this paper. 
+
+To expand the community, reward the production of quality content, and drive 
+
+the long-term healthy development of the community, PST will experience a 10 
+
+
+
+ 27 
+
+percent additional Token issuance at the first year. Starting from the second 
+
+year, additional issuance will decrease by 0.5 percent annually. All the added 
+
+PSTs will be used as reward for content quality, crawler contribution and 
+
+content recommendation, etc. 
+
+ 
+
+Distribution of Additional PSTs 
+
+Of the additional PSTs, 40 percent will go to content producers at an amount 
+
+proportional to the value contribution of their single article, so as to encourage 
+
+the publishing of quality content. 
+
+The benefits a content producer receives for an article consist of not only system 
+
+reward, but also payment for the content (e.g. paid reprinting). Out of all the 
+
+benefits (including content payment and system reward) the producer receives 
+
+for an article, 10 percent will be given to those with contributions to this article, 
+
+such as those who reprinted, reposted, recommended or reviewed it as well as 
+
+the contributing crawler operators. Such distribution will bring benefits to 
+
+every link of the content value chain. 
+
+Another 40 percent of the additional PSTs will be used to reward groups with 
+
+quality content. The groups will be ranked by their per capita value contribution 
+
+in a time unit, and these PSTs will be distributed to the groups accordingly. 
+
+Inside the group, the PSTs will be given to members based on their respective 
+
+contributions. 
+
+The remaining 20 percent of additional PSTs will be used as reward for Primas 
+
+Node operators. The assessment of Primas Node contribution covers two 
+
+aspects. The first aspect measures the contribution of crawler operation. The 
+
+PSTs will be distributed to crawler operators proportionally to the ranking of 
+
+their contribution in a time unit. This contribution assessment fully considers 
+
+two factors: reprinting number and reprinting quality, so as to prevent crawlers 
+
+
+
+ 28 
+
+from cheating with massive auto-reprinting. The other aspect measures the 
+
+foundational support services of Primas Node for the system, including the 
+
+provision of client connection and verification of reprinting, etc. Primas is 
+
+operating on Ethereum and the execution of Ethereum contract costs Gas. All 
+
+the costs of Gas in Primas are paid by Primas Node to ensure convenient 
+
+operation by client users. 
+
+Primas makes separate arrangement on reward for crawler operation to ensure 
+
+the availability of the whole community to original producers with medium or 
+
+small influence. If the reprinting rewards come solely from the returns of an 
+
+article itself, crawler operators will tend to focus on seeking reprinting for 
+
+content by famous producers, which has a bigger possibility of generating high 
+
+returns. This way the content of long tail producers will be ignored, in spite of 
+
+the high value of a single article written by them. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 29 
+
+Primas Community Governance 
+
+ 
+
+Establishment of Primas Management Body 
+
+Primas community will be managed by Primas Lab Foundation Ltd. established 
+
+in Singapore, which as its legal entity will have full authority over the 
+
+development, promotion and operation of Primas and take all related 
+
+responsibilities. To ensure openness and transparency of Primas project, 
+
+Primas sets up a top decision-making body - the Decision-making Committee - 
+
+to conduct management. Under this committee are Product Committee, 
+
+Technology Committee, Financial and HR Management Committee, and 
+
+Marketing and Public Relations Committee. The management body will consist 
+
+of developers and functional committees. Term for members of the Decision-
+
+making Committee is two years and the first committee members will include 
+
+members of Primas core team, well-known personnel of the Blockchain 
+
+industry and early-stage investors. Future members of this committee will be 
+
+chosen by community election. 
+
+ 
+
+Governance Structure of Primas Community 
+
+The governance structure of Primas community provides operation procedures 
+
+and rules for both routine work and emergency situation. 
+
+
+
+ 30 
+
+Details of organizational structure are shown in this chart: 
+
+ 
+
+Figure 7. Governance Structure of Primas Community 
+
+ 
+
+Decision-making Committee: 
+
+Functions of the Decision-making Committee include employing and 
+
+dismissing executive chief and chiefs of the functional committees, making 
+
+important decisions, and convening emergency meetings. Members of this 
+
+committee serve a term of two years. 
+
+The first members of the decision-making committee have profound industrial 
+
+experience in both Blockchain sector and business sector. Below are some brief 
+
+introductions: 
+
+ 
+
+Name Introduction 
+
+
+
+ 31 
+
+Shen Bo Founder of Fenbushi Capital, committed to investing in 
+
+Blockchain startups. 
+ 
+
+Gong 
+
+Ming 
+
+Nicknamed online as Bao zou gong qin wang (暴走恭亲王), 
+
+foundaer of CHAINB and ICOAGE, early promoter of Blockchain 
+
+community, producer of large amount of articles and information 
+
+on Blockchain, committed to promoting the advancement of 
+
+Blockchain technology and distributed ledger technology.  
+ 
+
+Matt Li  
+
+Matt has been worked in a variety of roles from consultant to COO, 
+
+within startups to large corporations, such as Accenture, MRI, and 
+
+Flashdeal Holdings. His 15 years experience covers a wide range of 
+
+activities from including system design, application consultant, 
+
+project management as well as company operation. He is always 
+
+placed a large value on innovation and new technologies adoption. 
+
+He has Master degree of Information systems from Nanyang 
+
+Technological University. Member of Singapore Computer Society 
+
+and Certification in IT Project Management (CITPM). 
+
+Shaofei 
+
+Chen 
+
+Shaofei Chen is a Subject Matter Expert in Geospatial big data 
+
+integration and modeling. In 2011, he joined Tango Analytics based 
+
+in Texas and first introduced mobile data analytics to commercial 
+
+real estate industry. He is responsible for global geospatial data 
+
+sourcing and analytics. He co-founded GeoHey, a SaaS based 
+
+Geospatial big data company. GeoHey involved in many news 
+
+distribution projects, partners include DT and Caixin.  He did his 
+
+PhD trainings in Geospatial Sciences at University of Texas at 
+
+Dallas.  
+
+ 
+
+ YUEN DON 
+
+RI  
+
+16+ years of experience in Consulting, Strategy & Program 
+
+Management, Business Planning & Operation, Consumer & 
+
+Commercial Brand & Product Marketing (Online/ Offline), 
+
+Manufacturing & Sales at leading MNC  
+
+
+
+ 32 
+
+Yu Wenbo  
+
+Doctor Yu Wenbo is the executive director of Fenbushi 
+
+Capital, and used to serve as chief scientist of Wanxiang 
+
+Blockchain Labs. 
+
+Chen 
+
+Yanfeng 
+
+CEO of Xingyun Digital Asset Trust Co.Ltd., with working 
+
+experience in the artificial intelligence enterprise 
+
+CloudMinds, whose lead investors include America’s National 
+
+Instruments and SoftBank. 
+
+Wu Peng 
+
+Expert on Internet and Blockchain product, with profound 
+
+experience in product management & operation and in-depth 
+
+research on Internet media and traffic. 
+
+Gan Lu 
+
+Expert on Blockchain technology and serial entrepreneur, 
+
+with in-depth research on cryptography, big data and 
+
+artificial intelligence. 
+
+ 
+
+At the end of their term, community voting will be held to choose 50 community 
+
+representatives based on calculated weighting of PST amount and coinage, and 
+
+another voting will follow to produce 7 core members of the Decision-making 
+
+Committee. These elected core members will make important or emergency 
+
+decisions on behalf of Primas community. During their term, they will need to 
+
+accept credit investigation and publicize their salary status. 
+
+ 
+
+Executive Chief: 
+
+Executive chief is chosen by the Decision-making Committee through election 
+
+and is responsible for daily operation and management of Primas community, 
+
+mission coordination for subordinate committees, and chairing meetings of the 
+
+
+
+ 33 
+
+Decision-making Committee. The executive chief makes work progress report 
+
+to the Decision-making Committee on a regular basis. 
+
+ 
+
+Product Committee: 
+
+The Product Committee is responsible for the overall design and planning of 
+
+the community as well as the attraction of relevant cooperation partners. 
+
+Technology Committee: 
+
+The Technology Committee, consisting of core developers, is responsible for the 
+
+development and review of bottom layer technology as well as the development 
+
+and review of product. Also the committee holds project status meeting every 
+
+week to discuss requirements and project progress. Members of this committee 
+
+need to know community dynamics and hot topics, have communications with 
+
+Token holders inside the community, and hold occasional technical seminars  
+
+ 
+
+Financial and HR Management Committee: 
+
+Financial and HR Management Committee is responsible for the use and 
+
+review of raised project fund, management of salary for developers, and 
+
+expenditure and review on daily operation costs. 
+
+ 
+
+Marketing and Public Relations Committee: 
+
+Marketing and Public Relations Committee, aiming to serve the community, is 
+
+responsible for the marketing of Primas products and services as well as the 
+
+promotion and publicity of open source project. It is also responsible for the 
+
+release of all community announcements and cooperation with the media. 
+
+
+
+ 34 
+
+ 
+
+Primas Financial Management 
+
+Primas Decision-making Committee promises that all raised digital assets will 
+
+be used for development and building of the community. 
+
+ 
+
+Primas Auditing 
+
+Due to the unique features of Token, it’s difficult for any of the current forms of 
+
+enterprises and entities to execute supervision under the existing system. To 
+
+ensure the governance of Primas and the openness and transparency of Token 
+
+usage, Primas Decision-making Committee will employ professional auditing 
+
+agency to implement auditing work. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 35 
+
+Development Roadmap 
+
+Dec. 2016 
+
+Primas project started. 
+
+ 
+
+Aug. 2017 
+
+Primas ICO 
+
+ 
+
+Solar Systems Stage - Feb. 2018 
+
+Test network launched. Community members will be invited to form an internal 
+
+test group to test and optimize the system. 
+
+2017.8 - 2017.10 
+
+Protocol layer development: account creation, content publishing and storage, 
+
+PST, content incentive, Primas Node incentive. 
+
+Application layer development: IOS & Android clients, account creation, PST 
+
+transfer, content display, content creation. 
+
+Primas Node: contract call, client connection, indexing and caching, IPFS 
+
+storage. 
+
+2017.11 - 2018.1 
+
+Protocol layer development: group creation, group incentive, incentive for 
+
+crawling and reprinting. 
+
+Application layer development: group display, content recommendation, 
+
+content interaction. 
+
+Primas Node: verification of reprinting, task scheduling, crawling and 
+
+reprinting.  
+
+
+
+ 36 
+
+ 
+
+Galaxy Stage - June, 2018 
+
+Official network launched and fully opened for use. Operation plan begins. 
+
+2018.3 - 2018.5 
+
+Protocol layer development: reporting of infringement, voting, credit rating. 
+
+Application layer development: browser plug-in, voting. 
+
+Primas Node development: connection to external services. 
+
+ 
+
+Universe Stage - Dec. 2018 
+
+Connection with cooperation partners, expansion of cooperation partnership, 
+
+and formation of ecosystem. 
+
+2018.6 - 2018.8 
+
+Personal page named after account, account bonding, third-party SDK 
+
+connection, public API, identity authentication. 
+
+2018.9 -  
+
+Introduction of cooperation partners into community and continuous 
+
+expansion of ecosystem. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 37 
+
+ICO Plan 
+
+51 percent will go to the community at ICO stage, to be used for Primas 
+
+development, operation, marketing and fund management. 
+
+20 percent will go to the founding team, early-stage investors and development 
+
+team as compensation for their endeavors, resources and technology support. 
+
+20 percent will be set aside as reserve, which will be used by the Decision-
+
+making Committee as incentive for ecosystem building. 
+
+9 percent will be used for academic research, education, promotion and legal 
+
+issues, so as to finance academic research on Primas and educational materials 
+
+for developers. 
+
+ 
+
+ 
+
+ 
+
+Primas plans to distribute 29 percent (20 percent for reserve plus 9 percent for 
+
+academic research & education) of the Token to the community in several 
+
+phases. Within 4 years, all these PSTs will be put into the community to truly 
+
+realize an open source community ecosystem. Auditing report on the use of 
+
+these PSTs will be publicized every year within the community. 
+
+Token distributed to founding team and development team will be locked for 1 
+
+
+
+ 38 
+
+year during which they cannot be put into circulation. In a period of 2 years 
+
+after the locking ends, these Token will be released linearly. Token distributed 
+
+to early-stage investors will be locked for 6 months, during which they cannot 
+
+be put into circulation. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ (Note: In the design of the governance part of this White Paper, Qtum’s governance design 
+
+and planning have been used as reference at the approval of Qtum team, to whom we 
+
+hereby express our sincere thanks.) 
+
+
+
+ 39 
+
+Disclaimer 
+
+This document is only for conveying information and does not constitute an 
+
+opinion on transaction of project shares or securities. Any proposal or request 
+
+for offer to such effect will be made under credible terms in accordance with the 
+
+permission of applicable security laws and other related laws. The above 
+
+information or analysis does not constitute any investment decision or concrete 
+
+advice. 
+
+This document does not constitute any investment proposal, investment intent 
+
+or investment solicitation on securities. This document does not constitute and 
+
+shall not be construed as a transaction offer or an invitation to transact any 
+
+form of securities, neither is it a contract or promise in any form. 
+
+All the examples of returns and profits in this document are for demonstration 
+
+purpose only or represent the industrial average, and do not constitute a 
+
+guarantee for the result of user’s participation. 
+
+Primas clearly states that users with relevant intent shall have clear knowledge 
+
+of risks on Primas platform. By making investment, investors confirm their 
+
+knowledge and acceptance of the project risks, and are willing to personally take 
+
+responsibility for all corresponding results or consequences. 
+
+Primas clearly states that it will not take responsibility for any direct or indirect 
+
+losses arising from the participation in Primas project, including: (i) reliability 
+
+of all information provided in this document; (ii) any resulting mistake, 
+
+negligence, or information inaccuracy; (iii) or any subsequent behavior. 
+
+PST is a digital Token used, besides other scenarios, on Primas platform. PST 
+
+is not an investment target and we cannot guarantee the value addition of PST, 
+
+whose value may decrease under certain conditions. Due to unpredictable 
+
+factors, targets listed in this White Paper may change. While our team will make 
+
+its best efforts to realize all targets stated in this White Paper, all individuals 
+
+
+
+ 40 
+
+and groups purchasing PST shall shoulder the risks on their own. 
+
+PST does not represent a right of ownership or control. Controlling PST does 
+
+not mean ownership of Primas or Primas applications. PST does not confer any 
+
+right on any individual to exercise participation in, control over or decision-
+
+making on Primas and Primas applications. 
+
+  
+
+
+
+ 41 
+
+ 
+
+Risk Warning 
+
+ 
+
+As a new model of investment, investment in digital asset involves various risks. 
+
+Potential investors shall discreetly assess the investment risks and their own 
+
+risk tolerance. 
+
+ Risks on Token Sales Market 
+
+The environment of Token sales market is closely associated with the situation 
+
+of the whole digital currency market. In case of sluggish overall market situation 
+
+or existence of other uncontrollable factors, the price of Token may be 
+
+underestimated over a long period of time, in spite of their own good prospect. 
+
+ Supervision Risks 
+
+Since Blockchain is still in the early stage of development, there are still no laws 
+
+and regulation across the world, including in China, that stipulate requirements 
+
+for precondition, transaction, information disclosure, and locking, etc. in the 
+
+process of ICO. Also it’s still unclear as to how the current policies will be 
+
+implemented. All these factors may bring uncertainty to project investment and 
+
+liquidity. Blockchain technology has become the main target of supervision in 
+
+major countries of the world. If there is any intervention or exertion of influence 
+
+by supervising authorities, Primas application or PST may be affected. For 
+
+example, if there is legal limitation on the use and sale of Token, PST may suffer 
+
+restriction and obstruction, or the development of Primas application and PST 
+
+may be directly terminated. 
+
+ Competition Risks 
+
+With advancement of information technology and mobile Internet, digital 
+
+assets with “Bitcoin” as a representative are gradually prospering and various 
+
+
+
+ 42 
+
+decentralized applications are continuously emerging, heating up industrial 
+
+competition. With the steady appearance and expansion of other application 
+
+platforms, the community will face constant operation pressure and certain 
+
+risks from market competition. 
+
+ Risk of Talent Loss 
+
+Primas has gathered a technical team and expert consultants with leading 
+
+advantage and profound experiences in their respective professional sectors, 
+
+including professionals with lasting engagement in the Blockchain industry and 
+
+core team with rich experience in development and operation of Internet 
+
+product. The core competitiveness of Primas in the industry lies in its stable 
+
+core team and consultant resources, the loss of which may affect stable platform 
+
+operation or its future development. 
+
+ Risk of Development Failure Due to Fund Shortage  
+
+In case of dropping price of Token raised by the founding team or prolonged 
+
+development time, the team may face a shortage of development fund and 
+
+possibly even suffer subsequent serious shortage of fund for all activities. In 
+
+such case, there will be a risk that the intended targets will not be realized. 
+
+ Risk of Private Key Loss  
+
+After the digital wallet address of PST is extracted by the buyer, the only means 
+
+to operate content contained in the address is by his/her associated secret key 
+
+(private key or wallet passcode). Users are personally responsible for protecting 
+
+the associated secret keys which will be used to sign transactions and prove 
+
+their asset ownership. Users understand and accept that if his/her private key 
+
+document or passcode are respectively lost or stolen, his/her PST associated 
+
+with his/her user account (address) or passcode will be unrecoverable and 
+
+permanently lost. The best method for secure storage of log-in document is to 
+
+store the secret key separately at one or several places and avoid using a shared 
+
+computer for this purpose. 
+
+
+
+ 43 
+
+ Risk of Hacking or Theft  
+
+There is a possibility that hackers, other entities or nations may attempt to 
+
+interrupt Primas application or PST function with any methods, including but 
+
+not limited to DoS attack, Sybil attack, guerrilla-style attack, malware attack 
+
+and homogeneity attack, etc. 
+
+ Risk of Absence of Loss Insurance  
+
+Unlike bank account or accounts with other financial institutions, Primas 
+
+account or related Blockchain network are generally without any insurance 
+
+guarantee. For losses under any conditions, no public individual or public entity 
+
+will provide insurance. 
+
+ Risks of Core Protocols  
+
+Currently Primas platform is developed on the basis of Ethereum. In case of any 
+
+defect, unexpected malfunction or attack to Ethereum, PST or Primas platform 
+
+may suffer a stop or loss of function in a manner hard to expect. 
+
+ System Risk  
+
+There are risks related to neglected critical defects in open source software or 
+
+large-scale failure of global network infrastructure. Though some of the risks 
+
+may drop over time due to bug fixes and breakthroughs in computation 
+
+bottleneck, other risks are still unpredictable, such as political factors or natural 
+
+disasters that may interrupt part of the Internet or the global Internet as a 
+
+whole. 
+
+ Risks Due to Bugs or Cryptography Development  
+
+Rapid cryptography development and advancement of science and technology 
+
+such as quantum computer may bring the risk of cracking to Primas platform, 
+
+leading to possible PST loss. 
+
+ Risks of Insufficient Attention  
+
+http://dict.youdao.com/w/quantum%20computer/#keyfrom=E2Ctranslation
+
+
+ 44 
+
+There is a possibility that Primas application may fail to be used by a large 
+
+number of individuals or entities. This means that the public do not have 
+
+enough interest in developing and improving the relevant distributed 
+
+applications. Such lack of interest may bring negative impact to PST and Primas 
+
+application. 
+
+ Risk of Poor Acceptance or User Shortage  
+
+First of all PST shall not be deemed as an investment target. Even if PST may 
+
+have some value after some time, such value can be very small if Primas is not 
+
+accepted by the market and is therefore short of users. There is a possibility that 
+
+due to any possible reasons, including but not limited to failure in business 
+
+relations or marketing strategy, Primas platform and all the future marketing 
+
+efforts supported with the raised fund may fail to achieve success. In such case, 
+
+there will be few or no follow-up supporters for the platform. Of course, this 
+
+will be very unfavorable to this project. 
+
+ Risk of Application Defect  
+
+Primas platform may fail to provide normal service due to defects caused by 
+
+known or unknown reasons (e.g. large-scale Node crash), and may even suffer 
+
+loss of user PST in a serious situation. 
+
+ Risk of Application or Product Failing to Reach Their Expectation or 
+
+Buyer’s Expectation  
+
+Primas application is still under development stage, and major changes may be 
+
+made before the launch of official version. The expectation or imagination by 
+
+PST itself or by buyers for the function or manner (including behaviors of 
+
+participants) of Primas application or PST may not be satisfied. Such situation 
+
+may be caused by any analysis mistake or change of a single design, etc. 
+
+ Other Unpredictable Risks  
+
+Token which is based on cryptography is a fully new technology that has not be 
+
+
+
+ 45 
+
+tested. In addition to risks already described in this White Paper, there are other 
+
+risks that are not yet mentioned or not anticipated by the founding team. Also, 
+
+other risks may come suddenly, or several risks mentioned above may occur in 
+
+combination. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Official Website: https://primas.io 
+
+ 
+
+Contact 
+
+E-mail: hi@primas.io 
+
+QQ Group Sectary: 3370125088 
+
+WeChat Group Sectary: primasio 
+
+  
+
+https://primas.io/
+
+
+ 46 
+
+ 
+
+Evolution Record of This Paper 
+
+ 
+
+Version Date Reviser Update 
+
+1.0 2017/7/10 Primas Executive Committee First release 
+
+1.0.1 2017/7/11 Primas Executive Committee Value assessment formula  
+
+1.1.0 2017／7/19 Primas Executive Committee Disclaimer and risk warning 
+
+1.2.0 2017/7/21 Primas Executive Committee Detailed ICO plan 
+
+1.2.1 2017/7/31 Primas Executive Committee ICO time adjustment 
+
+1.3.0 2017/12/13 Primas Executive Committee ICO plan adjustment 
+
+1.3.1 2017/12/15 Primas Executive Committee Entity change 
+
+ 
+
+i
+ http://dublincore.org/ 
+
+                                                   
+
+

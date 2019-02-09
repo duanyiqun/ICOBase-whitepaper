@@ -1,0 +1,2585 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+WHITE PAPER 
+
+DISCLAIMER 2 
+
+1. INTRODUCTION 2 
+
+2. About GoldMint 4 
+
+2.1. What is GoldMint 4 
+
+2.2. Target Market 5 
+
+3. GOLD: ITS APPLICATIONS 6 
+
+3.1. Savings storage 6 
+
+3.2. GOLD secured loans 6 
+
+3.3. GOLD Investment Returns 7 
+
+3.4. GOLD exchange for gold 9 
+
+3.5. Hedging cryptotrading risks 9 
+
+3.6. Using GOLD for ICOs 9 
+
+
+
+4. GOLD CRYPTOASSET AND MNT INTERNAL TOKEN DETAILS 10 
+
+4.1. GOLD 11 
+
+4.1.1. GOLD emission 11 
+
+4.1.1.1. ETF & ETFs for Gold 13 
+
+4.1.1.2. Gold as an Investment 14 
+
+4.1.3. GOLD buyback for fiat currencies 16 
+
+4.1.4. GOLD commission 17 
+
+4.2. MNT 18 
+
+5. GOLDMINT ARCHITECTURE 22 
+
+5.1. Custody Bot storage unit 23 
+
+5.1.1. General information 23 
+
+5.1.2. Workflow 24 
+
+5.1.3. How Custody Bot Works 24 
+
+5.1.4. Gold Inspection 25 
+
+5.1.5. Costs 26 
+
+5.2. GoldMint billing system 26 
+
+5.3. GoldMint: Application Programming Interface (API) 27 
+
+5.4. GoldMint: smart contracts 27 
+
+6. LEGAL ASPECTS 28 
+
+7. ROADMAP: OPERATIONAL 29 
+
+7.1. Business model 29 
+
+7.2. Work schedule 29 
+
+7.3. Budget 31 
+
+8. ROADMAP: TECHNICAL 32 
+
+8.1. Work schedule 33 
+
+9. TEAM 36 
+
+9.1. Project advisors 37 
+
+10. GLOSSARY 38 
+
+10.1. IPFS 38 
+
+10.2. CALL option 38 
+
+10.3. KYC 38 
+
+11. RELATED LINKS 39 
+
+!1
+
+
+
+DISCLAIMER  
+PLEASE READ THIS DISCLAIMER SECTION CAREFULLY.  
+
+CONSULT LEGAL AND FINANCIAL EXPERTS FOR 
+FURTHER GUIDANCE.  
+
+    
+The following information may be incomplete and in no way implies  
+a contractual relationship. While we make every effort to ensure that all 
+
+information in this white paper is accurate and up to date, such material in 
+no way constitutes professional advice. GoldMint PTE LTD.  neither 
+
+guarantees nor accepts responsibility for the accuracy, reliability, current 
+(as of this White Paper) or completeness of this content. Individuals 
+
+intending to invest in the platform should seek independent professional 
+advice prior to acting on any of the information contained in this paper.  
+
+    
+Citizens, residents (tax or otherwise) and green card holders of the United 
+States of America, Singapore, or other U.S. or Singapore Person are exempt 
+
+from buying MNTP tokens. The term “U.S. or Singapore Person” refers to 
+anyone who lives in the United States or Singapore or any entity that is 
+
+incorporated under United States or Singapore law. American citizens living 
+abroad can also be considered “U.S. Persons” under certain conditions. 
+
+1. INTRODUCTION 
+
+Of all the precious metals, gold is the most popular as an investment. 
+Investors generally buy gold as a way of diversifying risks, especially 
+
+through the use of futures contracts and derivatives. The gold market  
+is subject to speculation and volatility as are other markets. Compared  
+to other precious metals used for investment, gold has the most effective 
+safe haven and hedging properties among a number of countries. 
+
+Gold’s relative scarcity, its portability (you can carry small bars, coins or 
+
+jewelry), and its great demand in industrial applications, make it a highly 
+desired commodity.   Cryptocurrency has adopted some of gold’s benefits 
+
+with the creation of a bitcoin that is scarce: through the introduction of  
+a digital coin that can be easily and effortlessly transmitted and by the 
+creation of a distributed, decentralized blockchain that aids business. 
+
+Cryptocurrency also adds value by making one's transactions fast, secure 
+and transparent.  
+
+!2
+
+
+
+Recent cryptocurrency startups have succeeded in integrating physical 
+gold into the blockchain.  Gold has always been a difficult asset to move. 
+
+People would have to buy gold blocks and place them into a secure vault. 
+The process was clumsy, laborious, slow, expensive and vulnerable to 
+
+hacking, among other problems.  The blockchain makes the process quicker 
+and easier helping to protect your gold, slashing expenses, allowing the 
+
+asset to be moved effortlessly across borders, all the while shielding your 
+investment from theft and loss.  
+
+The following is the GoldMint blockchain solution for protecting — and 
+using — your gold in a way that is simple, secure and effortless.  
+
+GoldMint premises: 
+GoldMint gives you a cryptoasset (called GOLD) whose value is based on 
+
+Gold. This asset runs on a decentralized blockchain and provides the 
+following benefits:  
+
+• It serves as a type of futures contract in that there is a legal 
+agreement to buy or sell the gold at a predetermined price  
+at a specified time in the future. 
+
+• You can hedge cryptotrading risks.  
+  
+
+If you invest in gold, you’ll find that GOLD benefits you in the following 
+
+ways:  
+
+• GOLD helps you use your gold-backed investments as credible 
+collateral. 
+
+• You’ll be able to trade gold quickly and easily. 
+• You’ll gain higher returns from your gold funds as bullion prices rise. 
+
+GoldMint developers have a long history of working with gold and 
+cryptocurrency. They also possess the marketing, programming, logical, 
+
+technical, and operational skills needed to accomplish this project. 
+
+By now miners have extractef more than 60,000 tons of gold from the 
+earth, half of which finds its way into the pockets and accounts of 
+«ordinary» people. Our idea is nothing short of revolutionary: we plan  
+to convert this gold into blockchain-encrypted tokens to help owners 
+protect their valuables, to help investors move their gold rapidly and easily 
+
+from one part of the world to another, and to help companies and 
+individuals hedge their gold against market volatility.  
+
+!3
+
+
+
+We plan to move in three stages:  
+
+1. To gain access to 1% of global gold circulation (over 300 tons) by 
+launching Custody Bot automated storage facilities in pawnshops 
+
+around the world. 
+
+2. To gain access to another 5% of gold circulation by introducing 
+Custody Bot to shopping centers. 
+
+3. To gradually gain access to a final 10% of gold reserves, worth more 
+
+than $100 billion, and to develop a special version of Custody Bot 
+for popular installation.  
+
+In this way, we predict that in five to seven years, gold will be stored in, 
+traded, and invested by automated vending machines, and that our GOLD 
+
+cryptoasset will become the trading unit for these operations.  
+
+2. ABOUT GOLDMINT 
+
+2.1. WHAT IS GOLDMINT? 
+
+GoldMint runs on a blockchain ledger and works through a digitized 
+cryptoasset called GOLD  whose cryptocurrency value is based on physical 1
+
+gold. The decentralized platform uses a special blockchain that helps gold 
+owners trade, loan, invest in and, generally, use their commodities for profit.  
+
+GoldMint buys, sells and repurchases GOLD at the current market price for 
+physical gold.  The company uses exchange-traded funds (ETF) or physical 
+gold (of 999 quality) as its security. GoldMint’s gold reserves equal or 
+
+exceed its mined amounts of GOLD. 
+
+Differences between GoldMint and other gold cryptocurrency blockchains 
+include the following: 
+
+• GoldMint uses its own blockchain and altcoin, called MNT, for GOLD 
+transactions.  
+
+• GoldMint uses Proof-of-Stake where miners are doled out blocks/ 
+transactions according to the amount of MNT they have. Proof of 
+
+stake (PoS) is faster, simpler and cheaper than proof of work (PoW). 
+
+ What is GOLD1
+
+!4
+
+
+
+• Physical gold and ETFs are stored in a programmed decentralized 
+storage unit. 
+
+• Custody Bot  — GoldMint’s  innovative storage unit is programmed 2
+to automatically identify and store gold jewelry, small ingots (up to 
+100 grams) and coins, without human intervention.  
+
+The characteristics of the GOLD cryptoasset include the following: 
+
+● 100% transparency of information about all Gold owned by 
+GoldMint, disclosing the company’s gold reserves and its ability to 
+
+buy back GOLD at its current trading price.  
+
+● GoldMint uses the decentralized blockchain for smart contracts and 
+for harboring its cryptoassets 
+
+● GoldMint uses ETF  for liquidity and elasticity. ETF helps you trade 
+gold much faster than physical gold does 
+
+● A secured loan may contain gold, like jewelry or coins. GoldMint 
+helps you store this collateral in its unique Custody Bot. 
+
+● The ability to receive passive income as market price of GOLD rises. 
+● Buyback of GOLD for fiat according to the current price of GOLD. 
+● A fast user registration system and identification. 
+
+The GoldMint platform includes: 
+
+● Its own blockchain that uses GOLD and MNT cryptoassets. 
+● Programmed safe deposits — namely, Custody Bot. 
+● Application Programming Interface (API) for building application 
+
+software and for helping software components interact. 
+
+2.2. TARGET MARKET  
+
+● Crypto traders —  These participants can use GOLD for hedging 
+cryptocurrency volatility, as described in the white paper. GOLD 
+
+can also be used to convert cryptocurrency into fiat.  
+
+● Standard investors — These investors may want to buy GOLD  
+as cryptocurrency or as a type of security. 
+
+● E-commerce and self-employed individuals — GOLD can be used 
+to pay than for goods and services. Its low volatility as an asset and  
+its predictability make it an invaluable form of currency.  
+
+● Banks — GOLD cryptoassets give banks new opportunities. There is 
+free liquidity and extra earning potential from trading gold into fiat 
+
+and vice versa. The use of cryptocurrency has become a major 
+industry. Banks can profit from earning standard commissions, 
+
+commissions on gold storage, and from using the GoldMint cash 
+
+ Robotic storage unit Custody Bot2
+
+!5
+
+
+
+management system. At the same time, banks that invest in GOLD 
+
+reinforce GOLD’s reputation, which increases their profit. Banks also 
+earn commissions from participating in the GoldMint partner 
+
+program.  
+
+Today, overall cryptocurrency circulation has exceeded $700 billion a year 
+and the commissions for deposit and withdrawal are more 5%.  
+
+In case the bank sets lower commissions for GOLD buy/sell for a client, 
+most transactions (cryprocurrency deposit and withdrawal) will switch 
+
+from underground exchanges to the banks. At the same time, the 
+integration with GOLD only is necessary, while all the other 
+
+cryptocurrencies can be purchased on a cryptoexchange directly.  
+Banks also have revenues from cash management and commissions 
+charged for stored gold owned by GoldMint company. Another source of 
+
+income for banks is revenue from the partner program which includes 
+adding GOLD digital assets to the product line of the bank’s department of 
+
+wealth management. 
+
+3. GOLD: ITS APPLICATIONS 
+
+The following sections provide some applications of how you can use 
+
+GOLD cryptoassets. Of course, GOLD can be used in many other ways. In 
+some cases, you’ll want to use blockchain to protect or record your 
+
+transactions, while at other times you’ll want to connect to GoldMint’s API. 
+You’ll use customer relations logic in all other situations.  
+
+3.1. SAVINGS STORAGE  
+
+GOLD cryptoassets can be stored long-term in a special and secure storage bot with 
+
+options of either converting the gold to fiat or to some form of cryptocurrency, such as 
+
+BTC, ETH, Dash, etc. GOLD uses the current price of gold set on the LBMA Gold Price, so 
+its market value fluctuates accordingly.  
+
+!6
+
+$0.00
+
+$250
+
+$500
+
+$750
+
+$1.000
+
+$1.250
+
+$1.500
+
+$1.750
+
+01/01/198001/01/1970 01/01/1990 01/01/2000 01/01/2010
+
+
+
+3.2. GOLD SECURED LOANS 
+
+All members who have GOLD receive GoldMint partner banks credit cards, 
+
+aligned with VISA and MasterCard systems.  
+
+The GoldMint team has already launched a special bank card called 
+«Bogatstvo» (MasterCard/Maestro system) for prominent pawnshops like  
+
+«Blago» and «Fianit» which function in Russia. 
+
+Process: 
+
+1. GoldMint loan applicants transfer their GOLD as collateral  
+to a certain GoldMint application. 
+
+2. The rate of the loan is established at the time of issuance and 
+
+remains fixed through the loan period. Applicants must  consent to 
+GoldMint loan terms prior to receiving the loan. 
+
+3. Applicants are given various options for loan repayment and for 
+mode of repayment. 
+
+4. If the borrower defaults, his GOLD cryptoassets are transferred to 
+
+GoldMint. 
+
+5. Credit card limits are set according to the value of the user’s 
+GOLD. These cards can be used for payment in shops, restaurants 
+
+and cafes. Interest is accrued on unpaid credit debt. If this remains 
+unpaid, GOLD reverts to GoldMint. 
+
+3.3. DISCOUNTS ON PURCHASING  
+PHYSICAL GOLD  
+
+Process: 
+
+A customer transfers his GOLD cryptoassets to the company's trust 
+
+management for a certain number of months. It allows to acquire physical 
+gold with a solid discount which we will consider as X%.  
+Simultaneously, GoldMint uses Custody Bot to lend to parties for Y% per 
+year through pawn shops all over the world.  
+Interest on trust management is paid in GOLD.  
+The amount payable to the customer at the end of the period is the 
+following:  
+
+!7
+
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=http://fianitlombard.ru
+
+
+SUM = (1 + (X / 12) × T) × Q where the number X (i.e., x%) is set by 
+
+GoldMint based on market conditions. 
+
+  Example: As of August 2017, the parameters would be X = 10%, Y = 
+
+28% per annum, and T = 1 year. This means that GoldMint receives 
+28% per year, an annual discount 10% which the customer can use for 
+
+purchasing physical gold. 
+
+The customer’s GOLD's cryptoassets are converted into fiat or crypto 
+currency, while W% of the received amount (for example, $80) are 
+
+transferred to a pawnshop for T months at Y% per year. 
+
+A maximum 4% of the remaining GOLD will be invested on the CME Group 
+stock exchange in Q amount of CALL options with an expiration date of T 
+
+months on the Central Strike and Mini-Gold futures. Thus, GoldMint hedges 
+itself against volatility and guarantees a 100% return of funds in T months 
+with specified interest rate. 
+
+  Example:Joe buys one Gold Call Option and one Mini-Gold futures, 
+
+giving Joe a total of 1.1 ounce position of gold. Joe hoards his gold 
+(via GOLD) for T months on GoldMint and either does or does not 
+
+convert this gold in USD fiat or cryptocurrency. If he does convert in 
+USD fiat and this fiat declines, GoldMint still receives the GOLD at 
+
+current market value along with the interest accrued for interval T at 
+the rate of X. 
+
+After T months, the pawnshop that received the loan has two alternatives: 
+
+ 1. It returns the trust in full with Y%. GoldMint converts this fiat into 
+GOLD and returns the loan to the customer with X% of discount for 
+
+physical gold. 
+ 2. The pawnshop defaults on the loan. GoldMint uses the collateral 
+
+stored in its Custody Bot. It mines its corresponding value in GOLD 
+and returns the asset to the customer on the agreed date. 
+
+Note: X,Y parameters are determined by GoldMint and published on the 
+
+company’s website. 
+
+!8
+
+
+
+ 
+
+!9
+
+TRUST MANAGEMENT (TM)
+
+The investor transfers his GOLD 
+cryptoassets to the company's 
+trust management fund for X% 
+
+ROI
+
+80% are transferred to 
+a pawnshop for T months 
+
+under Y% per year. Y > X > 0
+
+GoldMint receives the pledge 
+rights from the pawnshop 
+on the contents of the cell 
+
+in CustodyBot
+
+4% of the GOLD are invested 
+to the stock exchange
+
+After T month Pawnshop completely 
+repaid the loans %
+
+CALL options are purchased 
+at the central strike in the 
+equivalent to the GOLD 
+
+cryptoassets received with 
+an expiry date of T months. 
+
+Thus, risks of the growth 
+of the price of gold are 
+
+hedged
+
+GoldMint blockchain 
+exchanges cryptoassets 
+
+to fiat money
+
+80 %
+
+4 %
+
+F
+
+%
+
+FIA
+T
+
+Has the option 
+expired in money?
+
+The option burned 
+out, the risk of price 
+
+growth was not 
+realized
+
+The risk of price growth was 
+realized. GoldMint receives 
+
+the necessary amount to buy 
+gold to pay the loan along 
+
+with the interest accrued for 
+a period of T at the rate of X.
+
+GoldMint takes the contents 
+of the CustodyBot cell, 
+
+on which the loan was issued. 
+Further, based on the received 
+
+content, GoldMint issues 
+an equal number of GOLD 
+
+cryptoassets and returns the 
+loan with customer's %.
+
+GoldMint exchanges 
+fiat money to GOLD 
+
+cryptoassets and gives 
+loan back to the client 
+
+with %
+
+%
+
+YES NO YES NO
+
+
+
+3.4. GOLD EXCHANGE FOR GOLD 
+
+GoldMint helps you convert gold into GOLD cryptoassets and reconvert 
+
+these GOLD assets into gold to facilitate border crossings. Carrying gold 
+from one country to another can be problematic and frequently results in 
+
+additional expenses and possible interrogation. By converting your gold 
+into GOLD, you not only avoid this aggravation, but you retain 100% of the 
+
+value of your gold at journey’s end. 
+All applicants need to go through GoldMint’s KYC procedure. 
+
+3.5. HEDGING CRYPTOTRADING RISKS 
+
+Commercial producers and gold workers, like miners, jewelers, or the 
+government, tend to use gold options, futures and ETF as hedging tools. 
+
+Today, a significant number of investors prefer to use gold to hedge against 
+inflation or to diversify their investments. In fact, gold has become the 
+
+common investment for all metals having a legendary history as both a 
+commodity and as coin. Like other commodities, gold depends on micro 
+
+and macro economic and political events, resulting in a value that 
+fluctuates with these events.  GoldMint helps you cushion the risk of this 
+
+volatility as well as giving you the option of taking a short position in 
+physical gold bullion, coins or mining stocks. 
+
+Here are some reasons why investors choose GoldMint: 
+
+● You can hedge your investment in gold using the GOLD token. Doing so 
+protects your gold from bear market conditions. Investors can chose to 
+
+convert any portion of their assets with this GOLD cryptoasset. 
+
+● Investors may want to invest in a minimal amount of GOLD to assess 
+whether or not they profit. 
+
+● GOLD is based on real physical gold and therefore possesses far more 
+face value credibility than other cryptocurrencies, including Bitcoin. 
+
+The gold market/gold returns look promising. GoldMint helps investors 
+
+hedge their risks and promises more for their investments. 
+
+!10
+
+
+
+3.6. USING GOLD FOR ICOS 
+
+GoldMint helps ICO who use GOLD hedge their risks in declining markets 
+
+by providing guaranteed return and value of their money. 
+
+4. GOLD CRYPTOASSET AND 
+MNT INTERNAL TOKEN DETAILS  
+
+Here’s how GoldMint uses its GOLD crypto asset and its internal MNT 
+currency. 
+
+GOLD MNT
+
+Description Cryptoasset. Cost and 
+
+buyback are 100% based  
+on LBMA price of gold.
+
+GoldMint’s cryptocurrency is 
+used to confirm GOLD 
+cryptoasset transactions.
+
+Emission Depends on how much 
+
+GOLD is needed but 
+never exceeds the total 
+cost of gold in GoldMint’s 
+reserves.
+
+Max. 10 000 000 MNT
+
+Exchange 
+rate
+
+Emission: 1 GOLD = cost 
+of 1 ounce of gold on 
+stock exchanges + 5% 
+commission for fiat-
+GOLD-fiat – no more than 
+4% 
+
+ICO: 1 MNTP (MNT pre-
+launch) = 6-8 USD  
+
+Cost will be determined by 
+the cryptocurrency 
+exchanges
+
+Buyback: 1 GOLD = cost 
+of 1 ounce of gold on 
+stock exchanges +  max. 
+5% 
+commission for fiat-
+
+GOLD-fiat – no more than 
+4% 
+
+!11
+
+
+
+Application Depends on the 
+agreement described by 
+
+GoldMint company 
+
+PoS: Amount of MNT 
+determines amount of GOLD 
+
+transactions.
+
+Features Value depends on 
+amount of gold in 
+reserves/ circulation
+
+Growth of MNT depends on 
+turnover of GOLD.
+
+Emission Amount of mined GOLD 
+depends on (a) validation 
+of deal/ details stored in 
+the blockchain and (b) on 
+authenticity and value of 
+gold inspected by 
+Custody Bot
+
+MNT is emitted once in a 
+limited supply.
+
+Destruction GOLD assets are 
+destroyed in case 
+physical GOLD is 
+withdrawn from the 
+custody / Custody Bot.
+
+MNT tokens cannot be burnt
+
+Purchase and 
+sale
+
+People who want to trade 
+GOLD for fiat or 
+cryptocurrency need to 
+undergo  
+GoldMint’s KYC 
+procedure.  
+
+Resale of GOLD occurs 
+on stock exchanges or as 
+direct transaction 
+between parties.  
+
+Goldmint platform 
+executes GOLD deals.
+
+MNTP (MNT pre-launch) is 
+
+initially released via ICO, after 
+which MNTP tokens can be 
+traded on Ethereum platform 
+for internal MNT tokens 
+
+(found only on GoldMint’s 
+platform), using a 1/1 course. 
+
+Max. MNT/MNTP tokens on 
+
+either GoldMint or Ethereum 
+can never exceed 10 000 
+000 at any given time.
+
+!12
+
+
+
+4.1. GOLD 
+
+GOLD is a crypto asset issued by GoldMint that uses the current price of 
+
+gold set on the LBMA exchange  at the time of sale. 3
+
+GOLD: Its criterion 
+
+● Equal to one ounce (31,1035 grams) of gold (999 quality) 
+● Shards into 100,000 parts. 
+● Commissions are given in GOLD. 
+
+4.1.1. GOLD EMISSION 
+
+Process: 
+
+Information is transmitted to the blockchain ledger about the number of 
+
+ounces of physical gold or ETFs owned by GoldMint. 
+
+ETF is bought on the stock exchange NYSE Arca and subsequent 
+information is publicized on GoldMint’s decentralized blockchain, making it 
+
+transparent and open to all members. Statements are received from the 
+depositary (electronic or printed). 
+
+All physical gold owned by GoldMint exists in the following forms: 
+a. Manufacturer-certified bullions  
+
+b. Gold coins 
+c. Gold jewelry 
+
+d. 999 quality granules, stamped by manufacturer 
+Physical gold is locked-up in storage and rated according to its value: 
+
+e. Moody’s -  A2 and above. 
+f. Standard & Poor's - A and above. 
+
+g. Fitch - A and above. 
+
+All ratings are confirmed by bank statements which are encoded in 
+blockchain by uploading relevant forms in IPFS  to the blockchain, thereby 4
+
+recording ownership of the gold to GoldMint. These documents let the 
+
+system check that GoldMint company owns X amount of gold. 
+
+This X is checked by an auditor from GoldMint. This number is verified each 
+month by an objective TOP 100 audit company. 
+
+Inspection confirms that the total number of GOLD cryptoassets in all 
+
+wallets (Y) is less than the total number of X ounces of gold on the balance 
+
+  http://www.lbma.org.uk3
+
+ IPFS4
+
+!13
+
+http://www.lbma.org.uk
+http://www.lbma.org.uk
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://www.nyse.com/markets/nyse-arca
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://www.moodys.com/
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://www.moodys.com/
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://www.standardandpoors.com
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://www.fitchratings.com
+
+
+sheet. 
+
+Once done, the blockchain emits X-Y = G number of GOLD cryptoassets to 
+
+the GoldMint company wallet. 
+
+GOLD users are  provided with a separate link (www.GoldMint.io/
+transparency) that contains copies of all GOLD transactions as well as the 
+
+total amount of assets that GoldMint owns. 
+
+Members can upload and edit their forms however many times and 
+whenever they wish. 
+
+If the audit results show that, the number of X is less than the number of 
+the Y, the excess amount of GOLD will be written off automatically from the 
+company wallet via the smart contract. 
+
+All GOLD records and assets are stored in the IPFS, a peer-to-peer 
+
+hypermedia protocol to make the web faster, safer, and more open. This 
+gives it a sort of immutability where users can check the records of their 
+
+transactions and gain security from knowing that these important 
+documents are locked in the blockchain ledger forever. The transparency of 
+
+the blockchain makes records open to all viewers. 
+
+4.1.1.1. ETF & ETFS FOR GOLD 
+
+ETF (Exchange Traded Funds) — An ETF, or exchange-traded fund, is a 
+
+marketable security that tracks an index, a commodity, bonds, or a basket 
+
+!14
+
+F
+
+ETFS RELEASE AND CONVERTING 
+THEM TO THE GOLD CRYPTOASSETS
+
+GoldMint transfers fiat money 
+to the bank account
+
+The bank transfers the ETF 
+to the Goldmint brokerage account
+
+The bank gives GoldMint 
+account statement
+
+GoldMint transfers the scanned 
+statement to IPFS
+
+The hash of the transferred 
+document is  stored 
+
+in the blockchain
+
+GoldMint blockchain releases 
+GOLD tokens and charges 
+
+them to the GoldMint wallet, 
+updating the GoldMint 
+
+account balance by ETF
+
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=http://www.goldmint.io/transparency
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=http://www.goldmint.io/transparency
+
+
+of assets like an index fund. Unlike mutual funds, an ETF trades like a 
+
+common stock on a stock exchange.  
+
+These types of investments have been around since 1993, but large scale 
+use began about a decade later, when investors found them to be cheaper 
+
+and better than mutual funds. Investors also discovered that ETFs offer 
+low-cost diversification, trading and arbitrage options. New ETF launches 
+
+number from several dozen to hundreds in any particular year 
+
+The three most popular ETFs  are «Spiders» (ticker (NYSEARCA:SPY)), 
+«Diamonds» (ticker (NYSEARCA:DIA)) and «Qs» or «Qubes» (ticker 
+
+(NASDAQ:QQQ)). 
+
+A similar demand for ETFs sprung up among commodity assets, 
+
+particularly gold.  In 2006, Barclay's Bank introduced ETF for gold, ETN 
+(Exchange traded notes) and ETC (Exchange traded commodities).   
+
+Top ETFs for gold can be found on ETFDB . 
+
+The commission for the management of a portfolio of gold is 0.2-0.8% per 
+
+annum, depending on the volatility of gold and the inflow / outflow of 
+investors. After analyzing the correlation between the value of gold and the 
+
+stock price of the three largest ETFs — the GLD (announced expense ratio 
+0.4% ), the IAU ( 0.25% ) and SGOL ( 0.39% ) — we estimate that the real 
+
+backlog of ETF shares in physical gold is about 0.7% (prices are taken from 
+COMEX on the LME ). Commissions and broker commissions are taken into 
+
+account in calculating our commissions for GOLD. 
+
+4.1.1.2. GOLD AS AN INVESTMENT 
+
+ 
+
+As an example, the AmsterdamGold dealer as a depiction of the European 
+market for gold. AmsterdamGold was founded by Willem Middelkoop in 
+
+2008 and quickly developed into the most successful full-service bullion 
+dealer in the Netherlands and the largest bullion storage in Europe.  
+
+Look at his prices, and you’ll see that the South African Krugerrand and 
+
+bars 1-20 grams cost the most, while gold coins like the Canadian dollar 
+that weighs 1 troy ounce, and bars 1 troy ounce- 100 grams cost the least.  
+
+In fact, some of these items may cost less than their inherent gold content, 
+since retail prices are updated less frequently than are quotes on physical 
+
+gold.  In any case, you can clearly see that markup is close to zero, leading 
+
+!15
+
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=http://etfdb.com/type/commodity/precious-metals/gold-etf/
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://finance.yahoo.com/quote/GLD%25253Fp%25253DGLD
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=http://etfdb.com/etf/GLD/
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=http://etfdb.com/etf/GLD/
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://finance.yahoo.com/quote/IAU/%25253Fp%25253DIAU
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=http://etfdb.com/etf/IAU/
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://finance.yahoo.com/quote/SGOL/%25253Fp%25253DSGOL
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=http://etfdb.com/etf/SGOL/
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=http://www.cmegroup.com/company/comex.html
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://www.lme.com/
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=http://nyse-trade.com/brokers/
+
+
+us to conclude that the spread on operations with ingots is minimal (not 
+
+more than 1%), although never disclosed by dealer. 
+
+It also seems to us that if you want to profit, your best bet would be to buy 
+bars weighing 1 troy ounce as well as coins like the gold Canadian dollar. At 
+
+the same time, you may want to buy old and freshly minted coins that were 
+never owned by anyone. 
+
+When it comes to laws of transporting gold from one country to another, 
+
+you are alright as long as you carry a small amount/ volume of gold 
+(usually up to 500-600 g), since you are not charged extra. If you want to 
+
+export/ import more than that, you usually need to hire the services of a 
+specialized cash collection company, like Brinks, to insure safe 
+transportation. Tax usually ranges 1%- 4% of the cost of the transported 
+
+goods (if the amount in question is not about industrial volumes). 
+
+4.1.2. TRADING GOLD FOR FIAT  
+
+!16
+
+The bank gives a receipt 
+that there are X ounces 
+
+of gold belonging 
+to GoldMint in its custody
+
+GoldMint transfers 
+the scanned statement 
+
+to IPFS
+
+The hash of the 
+transferred document 
+
+is stored in the blockchain
+
+GoldMint transfers fiat money 
+to the bank account
+
+GoldMint blockchain releases GOLD cryptoas-
+sets and charges them to the GoldMint wallet, 
+
+updating the GoldMint account balance
+
+BUYING BULLION AND CONVERTING THEM 
+INTO GOLD CRYPTOASSETS
+
+
+
+Applicants who want to trade GOLD for fiat need to undergo the KYC 
+
+procedure  .  5
+
+Cost of one GOLD equals one ounce of physical gold on the LBMA + 5%. 
+
+Buyers who pay with VISA/MC card or via PayPal are charged standard 
+commission for payment systems. 
+
+4.1.3. GOLD BUYBACK FOR FIAT CURRENCIES 
+
+GoldMint company guarantees any number of GOLD cryptoassets buyback 
+for fiat according to the following system: 
+
+1. Buyback price for one GOLD equals one ounce of gold of 999 quality 
+on the LBMA + Q%  (1 < Q < 5). GoldMint updates prices in real time 
+
+on its site. In case money is assessed to MC/VISA credit cards or 
+PayPal, standard commissions of these payment systems are 
+
+charged. 
+2. GOLD (that corresponds to physical gold in any of its forms) is stored 
+
+in a GoldMint wallet. This GOLD cryptoasset is transferred from the 
+GoldMint wallet to a special GoldMint account and is burnt to recieve 
+
+fiat from banks. GoldMint sends this fiat to the client. 
+See the diagram below for clarification. 
+
+Example: 
+
+John buys GOLD 
+
+ KYC5
+
+!17
+
+The user passes 
+the KYC procedure
+
+Going through 
+the KYC procedure
+
+Saving a flag indicating 
+that the user has 
+passed the KYC 
+
+procedure
+
+The user transfers 
+the fiat money 
+to the GoldMint 
+
+account
+
+ GoldMint blockchain transfers the 
+GOLD cryptoassets to the user's 
+wallet according to the current 
+
+exchange rate of an ounce of gold
+
+YESNO
+
+F
+
+BUYING GOLD CRYPTOASSETS
+FOR FIAT MONEY
+
+
+
+John bought one GOLD from GoldMint for the LBMA Gold Price value 
+
+of 1,200 USD + 5 %.  He pays 1,260 USD + rate of his merchant 
+payment system. In total, John pys about 1,285 USD. GoldMint 
+
+transfers the GOLD crypto asset to his wallet. 
+John sells GOLD 
+
+John sells 0.5 GOLD back to GoldMint. The current LMBA price is 
+1,380 USD. Buyback price is LMBA+ 3% . John receives 1,380 USD*0.5 
+
+minus his payment system’s commission, which comes to about 
+696-690 USD.  
+
+The conversion commission for fiat => GOLD => fiat is 2%. 
+
+!18
+
+The user passes 
+the KYC procedure
+
+CONVERTING GOLD CRYPTOASSETS
+TO FIAT MONEY
+
+Going through the KYC 
+procedure according to the 
+
+rules of the bank state 
+location
+
+Saving a flag indicating 
+that the user has 
+passed the KYC 
+
+procedure
+
+The user sends the GOLD 
+cryptoassets to the 
+GoldMint's account
+
+GoldMint sells ETF and 
+bullion in proportion to the 
+
+number of GOLD tokens 
+received by bank
+
+GoldMint blockchain burns 
+ETF and physical gold figures 
+
+from the balance sheet 
+proportional to the GOLD 
+
+received and burns the GOLD 
+tokens themselves
+
+GoldMint sends fiat 
+to the customer's account 
+
+in the equivalent of the 
+received GOLD  cryptoassets 
+— commission for withdrawal
+
+YESNO
+
+F
+
+F
+
+User U1 sends X cryptoassets 
+GOLD to user U2
+
+The transaction passes
+through GoldMint blockchain
+
+U2 gets 99.7%
+X GOLD
+
+U1 U2
+
+%
+
+GoldMint blockchain 
+withdraws 0.3% of X 
+
+GOLD for the transac-
+tion and transfers it to 
+
+GoldMint account
+
+TRANSACTION WITH GOLD CRYPTOASSETS
+
+
+
+4.1.4. GOLD COMMISSION 
+
+GOLD commission is Z% (no more than 0.3%), but no less than a fixed  
+Y amount of GOLD (i.e., more than 0,0025 GOLD depending on the current 
+gold price).  
+
+4.2. MNT 
+
+MNT refers to GoldMint tokens. It is used as a Proof-of-Stake (PoS) 
+consensus algorithm. The more MNT a person has, the more blocks he can 
+validate and add to the chain. Miners may get as much as 75% in GOLD 
+
+commissions for validated transactions. 
+
+● Miners who have too little computational power to validate their 
+blocks or are unable to fulfill their duties, are removed from the 
+
+White List of reliable miners and lose their rights to mine. The 
+responsibility of validating blocks goes to another member chosen 
+
+by GoldMint calculations. 
+
+● To become a validator, you simply need to download the GoldMint 
+Wallet app from the official website and launch it using your 
+GoldMint account. 
+
+● Users with a significant amount of MNT who have too little 
+computational power can rent computational power from other 
+
+miners. 
+
+● Members can own no more than 10,000, 000 MNT tokens. 
+● Owning MNT does not imply rights to participate in company 
+
+management of GoldMint nor does MNT represent a share in 
+
+company partnership. 
+
+● MNT tokens holders are allowed to vote on GoldMint platform 
+proportionate to the number of tokens they own. This means that 
+MNT holders can participate in the right to vote on changes to the 
+
+platform. 
+
+4.2.1. REWARD DISTRIBUTION 
+IN ACCORDANCE TO THE MNT AMOUNTS 
+
+Whenever any GOLD transaction is conducted, the following occurs: 
+
+● 75% of the subsequent commission in GOLD is received by the MNT 
+holders to confirm the transaction. 
+
+● The remaining 25% of that GOLD commission is spent on GoldMint 
+maintenance needs while the remainder is distributed to some or 
+
+more of the following charities (subject to change): 
+
+!19
+
+
+
+4.2.2. ICO  
+
+At ICO launch the MNTP price will be $7 which can change during the 
+crowdsale due to the changes in the exchange rate:  
+
+● ICO investors are given MNTP (MNT pre-launch) tokens that can be 
+converted to MNT after GoldMint has mined enough GOLD to 
+
+independently support its platform. 
+
+● MNTP tokens will be moved to GoldMint’s blockchain and converted 
+into MNT in a 1:1 proportion. 
+
+● ICO cap will be set in fiat 15 days before ICO. 
+● minimum cap for ICO is $150 000. If less than that is raised, the 
+
+investors recieve their funds back. 
+
+MNTP tokens are released when tokens are distributed around one month 
+after ICO starts. 
+
+MNTP Issue Size 10,000,000 MNTP tokens    
+
+150,000 MNTP tokens will be transferred  
+to the investor’s wallet following issuance.
+
+Token Option Pool Size 20% of the mined MNTP tokens (i.e., 
+2,000,000 MNTP tokens) will become the 
+«Token Option Pool» of the company.
+
+Token Option Pool 
+Issuance
+
+These MNTP option pool tokens will be 
+issued periodically every three (3) months 
+following the ICO.
+
+!20
+
+
+
+5. GOLDMINT ARCHITECTURE 
+GoldMint uses a private blockchain, called the Graphene platform. 
+
+5.1. CUSTODY BOT STORAGE UNIT 
+
+5.1.1. GENERAL INFORMATION 
+
+Custody Bot is programmed for temporary holding, inspection, long-term 
+
+storing and conveying of physical gold. It is also programmed to inspect 
+and store gold jewelry, coins or gold. 
+
+Custody Bot carries out this function on all gold given them by small banks, 
+non-credit financial institutions, and private individuals (among other 
+
+Rules No more than 100,000 MNTP option pool 
+tokens are issued per round. The amount  
+of MNTP option pool tokens issued will  
+be calculated by the following formula: 
+ 
+If LEP < CEP:  
+
+(1 – LEP / CEP) x Token Option Pool size 
+
+where: 
+
+LEP = The price of the token during the 
+latest issuance 
+
+CEP = Current MNTP price on the 
+cryptocurrency exchanges. (This is 
+calculated by checking the volume of MNTP 
+trading during the last two weeks on the 
+three largest exchanges and computing its 
+median price) 
+
+Token Option Pool size = The number  
+of tokens left in the «Token Option Pool» 
+
+If LEP >= CEP: Issuance does not occur. 
+
+MNTP tokens the team gets are not sold but 
+are meant for verifying transactions in GOLD. 
+
+!21
+
+http://docs.bitshares.org/
+http://docs.bitshares.org/
+
+
+parties), whenever GoldMint is entrusted with gold assets, gives or lends 
+
+GOLD. 
+ 
+
+!22
+
+GOLDMINT ARCHITECTURE
+
+Gold assets
+
+Commission
+
+Transaction
+
+Blockchain
+
+MNT tokens
+
+GOLD cryptoassetsMiner
+
+User 1 GOLD account
+
+Pawnshop Actor Custody Bot
+
+GOLDMINT
+
+User 2 GOLD account
+
+Hedging of risks Charity 
+organizations
+
+ETFGold bullion
+
+Blockchain
+
+Blockchain
+
+MNT
+
+%
+
+U1 U2
+
+MNT Account
+
+MNT
+
+Trust
+management
+
+Loan refund with %
+or Custody Bot
+
+contents receipt
+
+Loan repayment with %
+tand buyout of a security
+
+Pledge
+of jewelry
+
+Loan under %
+
+Loan under %
+
+Loan repayment
+with %
+
+75%
+
+12,5%
+
+PoS
+
+Trust
+management
+
+scheme
+
+
+
+The architecture: 
+
+Safe Cabinets simulate coffee vending 
+machines. Their dimensions are 1.5 meters high, 
+
+0.65 meters deep and 0.8 meters wide. On the 
+front is the output tray that looks like the tray for 
+
+CDs in the CD-ROM. Tray size is 15x20 cm. Next to 
+it is a small touch screen and a numeric keypad, 
+
+like an ATM. 
+
+Custody Bot contains: 
+
+● Gold retrieving mechanism. 
+● Gold checking mechanism — a spectrometer and scales. 
+● Individual deposit boxes — no more than 40. 
+● Linux operating computer. 
+
+The front door looks like a safe’s door. 
+
+The Airalab Core platform links Custody Bot to the blockchain. 
+
+5.1.2. WORKFLOW 
+
+5.1.3. HOW CUSTODY BOT WORKS 
+
+1. User presses the Open button. The tray slides out. The user places a 
+product in it, which gets loaded into the box. 
+
+2. The product put into the Custody Bot machine enters the spectral 
+analysis block. A manipulator forces the product onto scales where it 
+
+is weighed  twice, once in air then in liquid.  
+3. Once inspection is complete, the manipulator returns the product to 
+
+one of the compartments inside the Custody Bot. 
+
+!23
+
+
+
+4. The spectral data and weighting data are fed into a computer 
+
+installed inside the box.This measurement data is encoded on the 
+blockchain, made public to anyone who wants to see the information.  
+
+!24
+
+CUSTODY BOT
+OPERATION PRINCIPLE
+
+The user puts the jewelry 
+in Custody Bot
+
+The jewelry is stored 
+in a safe cell
+
+Spectrometer analysis
+of gold 
+
+Hydrostatic weighing
+of gold
+
+Create a record which includes 
+product identification number, 
+its parameters and value data
+
+Data transition to the 
+information system of the 
+
+Goldmint pawnshop through 
+a secured channel.
+
+Weighing the jewellery
+
+Rate of gold 
+approval
+
+Determination
+of product value
+
+Assessments 
+confirmation
+
+Transfer of measurement 
+results to a computer via 
+
+a secured hardware interface
+
+YES
+
+YES
+
+Blockchain
+
+OK
+
+999
+O
+K
+
+Return to the owner
+
+NO NO
+
+ID
+
+
+
+5. To retrieve your product: GoldMint gives you the code of your 
+
+deposit box. Enter this address on the front panel. The manipulator 
+takes out the product and places it on the tray, ready for you to take. 
+
+5.1.4. GOLD INSPECTION  
+
+Gold inspection includes: 
+
+● Visual identification of the product by an operator – coin, ingot, 
+jewelry, raw gold or gold granules 
+
+● Evaluation via spectrography using the spectrograph installed within 
+the box  
+
+● Evaluation and weighing of gold via hydrostatic weighing  
+
+Custody Bot uses the technologies of spectral analysis and hydrostatic 
+weighing to inspect the value of the gold. In the absence of a single 
+
+standard, a specialist also manually inspects the jewelry before Custody 
+Bot conducts spectral analysis. 
+
+The process of spectral analysis: 
+
+Custody Bot uses fluorescence spectroscopy, a type of electromagnetic 
+spectroscopy that analyzes fluorescence from a sample. This technique 
+
+involves using a beam of light, usually ultraviolet light, that excites the 
+electrons in molecules of certain compounds and causes them to emit light. 
+
+An analyzer crystal disperses radiation onto the gold via a detector. A 
+computer-controlled precision goniometer moves the analyzer crystal and 
+
+detector and controls the position, intensity and lengths of secondary 
+radiation waves. Concentration of the analysis is calculated by comparison 
+
+with known standard samples. 
+
+The process of hydrostatic weighing: 
+
+Hydrostatic weighing determines the density of the gold and is done by 
+weighting the item first in air then liquid and calculating the combined 
+
+private density (ρ2). Estimation of density is made by contrasting the 
+density of gold to densities of other metals. 
+ 
+The first weighing states the item’s weight (m1) and the second one 
+
+determines its volume: V=(m1-m2)/ρ2. 
+
+The density of the valuable examined is determined as following: ρ1=m1/V 
+Then it’s compared with the density of other metals. 
+
+!25
+
+
+
+5.1.5. Costs 
+
+5.2. GOLDMINT BILLING SYSTEM  
+
+GoldMint billing involves the following: 
+
+● The company accepts credit card and bank payments for GOLD 
+conversion, for fiat, as well as for buyback of GOLD. 
+
+● The company uses KYC to validate trade. All bank charges will be 
+paid for by customers with no extra charge. 
+
+● GoldMint may allow payment via PayPal and AliPay in the future. 
+
+5.3. GOLDMINT: APPLICATION  
+PROGRAMMING INTERFACE (API) 
+
+GoldMint plans to develop an Application Programming Interface (API) to 
+regulate GOLD.  This will achieve the following: 
+
+● E-commerce can use GOLD for transactions. 
+
+Component Link Cost Note
+
+Spectrometer XRF Gold Testing 
+Machine
+
+5000 — 6000$ The model may be 
+changed during 
+production
+
+Scales HY-TD series of 
+electronic 
+hydrostatic 
+laboratory 
+balance scale with 
+LED
+
+200 — 300$ The model may be 
+changed during 
+production
+
+The internal 
+manipulator
+
+2000 — 5000 $ Still to come
+
+Built-in PC, touch 
+screen, keyboard
+
+1000 — 1500$ The components 
+are ready
+
+Armored box 2000 — 7000$ Will be 
+manufactured on 
+order
+
+Installation, 
+adjustment and 
+commissioning
+
+500 — 1500$ Costs depend on 
+contractor
+
+Sum ~ 10 700 — 21 300$
+
+!26
+
+http://www.dahometerinstrument.com/sale-8474212-xrf-gold-testing-machine.html
+https://www.alibaba.com/product-detail/HY-TD-series-of-electronic-hydrostatic_60653917397.html?spm=a2700.7724838.2017115.233.tMez66
+
+
+● Local banks and Monetary Financial Institutions (MFIs) can use GOLD 
+as collateral. 
+
+●  GOLD can be used escrow for bank accounts and as financial 
+guarantees. 
+
+5.4. GOLDMINT: SMART CONTRACTS 
+
+Index Description Github links
+
+GMSC-1.1 Smart contract for initial 
+MNTP (pre-launch) token 
+
+emission
+
+GMSC-1.2 Smart contract for initial 
+MNTP (pre-launch) 
+
+tokens refund
+
+GMSC-3 Smart contract for MNTP 
+tokens purchase for ETH
+
+!27
+
+
+
+6. LEGAL ASPECTS 
+
+GoldMint PTE LTD is registered in Singapore. It owns accounts in Singapore 
+and in the European Union (E.U.). 
+
+The company fully complies with all legal and regulatory laws of the 
+operating countries. 
+
+First stage: GOLD is fixed to the current price of gold set on the London 
+
+Bullion Market Association (LBMA). Full details of this transaction are 
+downloaded to the blockchain. One GOLD is defined as a unit of digital 
+
+goods, which the company contracts to buy back from the user at a 
+predetermined price. 
+
+Later stages: Applicants go through GoldMint’s KYC procedure for selling 
+
+and buying GOLD. GoldMint invests its proceeds of sales from GOLD on 
+stocking its gold reserves for commissions (as well as for fulfilling its 
+
+fundamental purposes). These commissions are different from the 
+commissions made on GOLD transactions and are charged to a different 
+
+account. 
+
+Other details include the following: 
+
+● MNTP (MNT pre-launch) tokens are static, meaning that their 
+ownership does not give you passive income. 
+
+● Citizens of U.S.A. and Singapore are not allowed to sell MNTP 
+tokens. 
+
+● If necessary, GoldMint will reimburse any U.S.A. and Singapore 
+citizen who bought MNTP tokens with fiat. 
+
+● GoldMint may entertain the possibility of registering  its project in 
+the SEC would their project enter the American market. 
+
+● GoldMint is advised on all legal issues by its legal consultant, 
+Deloitte CIS. Topics include the following: 
+
+Assessment of Regulatory Implications, where Deloitte CIS checks to see 
+
+whether the project should be regulated by the Monetary Authority of 
+Singapore. 
+ 
+If the project requires government regulation, Deloitte CIS advises on 
+
+!28
+
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://www2.deloitte.com/ru/ru.html
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://www2.deloitte.com/ru/ru.html
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://www2.deloitte.com/ru/ru.html
+
+
+obligatory regulations and legal requirements that may include needed 
+
+registration or license types based on the targeted market and projected 
+activities. 
+ 
+Deloitte CIS keeps GoldMint informed on predicted government regulations 
+
+that may effect its organization. 
+
+GoldMint may check with the US Securities and Exchange Commission 
+(SEC) and Monetary Authority of Singapore (MAS) whether they consider 
+
+MNTP and MNT securities.  
+
+7. ROADMAP: OPERATIONAL 
+
+7.1. BUSINESS MODEL  
+
+GoldMint receives most of its revenues from: 
+
+● GOLD transfer commissions. 
+● GOLD security lending commissions. 
+● Revenue from exchanging physical gold into GOLD. 
+● Revenue from using private and franchised Custody Bots.  
+
+Most of GoldMint’s expenses come from the following: 
+
+● Legal expenses and taxes 
+● Staff – Development, marketing, business development. 
+● Fees for participating in conferences, travel. 
+● Marketing and PR 
+● Holding assets in gold – Payments for storage and management (for 
+
+ETF) 
+
+● Ethereum costs 
+● Development of Custody Bot 
+● Taxes 
+
+7.2. WORK SCHEDULE  
+
+Roadmap: 
+
+● Q 42017 and Q 12018:  Technical and legal fulfillment of the project, as 
+well as creating partnerships with business partners.  
+
+!29
+
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://www2.deloitte.com/ru/ru.html
+https://www.sec.gov/
+https://www.sec.gov/
+http://www.mas.gov.sg/
+
+
+● The second half of 2018: Mostly devoted to marketing the GOLD 
+cryptoasset and launching the manufacture of Custody Bot.  
+
+Q4 2017 Q1 2018 Q2 2018 Q3 2018
+
+MNTP tokens and 
+ICO
+
+Initial issuance 
+of MNTP (pre-
+launch) tokens 
+and their listing 
+on exchanges
+
+Study of the legal 
+part of GOLD
+
+Preparation of 
+a set of 
+documents on 
+the status of 
+GOLD as a 
+digital goods
+
+The opening of 
+legal entities 
+required to 
+operate in 
+Europe, Asia, 
+USA, Russia.
+
+Preparation of 
+documentatio
+n for GOLD - 
+as ownership 
+of gold
+
+The opening of 
+legal entities 
+required to 
+operate in the 
+rest of the 
+world
+
+Partners for the 
+supply of gold
+
+Choice of 
+partners, 
+contracts, 
+compliance of - 
+ETF.
+
+Agreements with 
+A + Banks
+
+Agreements 
+with A + 
+Banks
+
+Agreements 
+with A + Banks
+
+Partners for the 
+KYC program
+
+Seeking and 
+selecting 
+partners in 
+Europe
+
+Seeking and 
+selecting 
+partners in 
+Russia
+
+Seeking and 
+selecting 
+partners in the 
+US and Asia
+
+Seeking and 
+selecting other 
+regional 
+partners.
+
+Launching the 
+GOLD cryptoasset
+
+Start of sales 
+of  GOLD for 
+fiat and 
+buyback in 
+Europe.
+
+Home sales of 
+GOLD for fiat 
+and buyback 
+in Russia and 
+Asia.
+
+Partners for the 
+supply of physical 
+gold for GOLD
+
+Start of 
+delivery of 
+physical gold
+
+The opening of 
+regional offices
+
+Representation 
+in Europe
+
+Representation 
+in Asia
+
+Representatio
+n in the US
+
+Representatio
+n in Latin 
+America
+
+!30
+
+
+
+7.3. BUDGET  
+
+30% Marketing 
+
+35% Development 
+
+10% Team 
+
+5% Legal, registration 
+
+10% Staff expansion 
+
+10% Other 
+
+8. ROADMAP: TECHNICAL 
+
+● MNTP tokens will be found on Ethereum. 
+● Ethereum’s ERC20 interface will carry the first mined MNTP load. 
+● MNTP tokens will migrate to GoldMint’s blockchain and given a MNT 
+
+ticker. 
+
+● GoldMint’s blockchain, using the Graphene platform will be 
+launched. 
+
+Custody Bot Development 
+of a prototype 
+device
+
+Development of 
+a prototype 
+device and filing 
+patent 
+applications.
+
+Production of 
+prototypes 
+and the start 
+of operation
+
+Completion 
+and 
+preparation for 
+mass 
+production
+
+!31
+
+30%
+
+35%
+
+10%
+10%
+
+10%
+
+5%
+
+
+
+  
+
+Advantages of using GoldMint rather than Ethereum are as follows: 
+
+● Safer — GoldMint’s blockchain uses its own coins rather than Turing-
+complete smart contracts. 
+
+● Fungible — GoldMint uses Point-of-Stake (PoS), and since it relegates 
+its platform to GOLD transactions alone (rather than to additional 
+ICOs) processes your transactions faster. 
+
+● Cheaper — There is no charge for ether commissions. 
+
+The Graphene blockchain supports PoS. 
+  
+
+Graphene also allows you to use other platforms that include: 
+  
+
+●  Openledger — exchange 
+●  Rudex — exchange 
+●  Satoshi.fund — fund 
+●  Hubdsp — DSP platform 
+●  Peerplays — betting platform 
+●  Steemit / Golos.io — news platform 
+
+Qualities of the GoldMint private blockchain: 
+Transparent 
+
+● Anyone can be a miner. You just need to download a program from 
+the GoldMint repository, launch it on your device, fine-tune it and 
+
+start mining. 
+Consensus algorithm 
+
+● We use PoS as our primary mining system. 
+Miner rotation 
+
+● The amount of stakes depends on the amount of MNT a miner 
+holds. So, if a miner owns 50% MNT, he will be chosen to process 
+
+every second block. 
+Miner rewards 
+
+● A miner receives a GOLD commission from each processed block. 
+No tokens are emitted once the block is processed. 
+
+Different incentives 
+
+● Since different blocks contain varying amounts of transactions, their 
+total reward can vary from block to block. On the whole, however, 
+
+the miner’s reward correlates to his, or her, amount of MNT tokens. 
+
+● The amount of MNT is never more than 10,000,000. 
+● GoldMint’s mobile and personal wallets and apps for ETH and GOLD 
+
+can be found on www.GoldMint.io  
+
+!32
+
+https://openledger.io/
+https://rudex.org/
+https://satoshi.fund/
+https://hubdsp.com/
+https://www.peerplays.com/
+https://steemit.com/
+https://golos.io/
+http://www.goldmint.io/
+
+
+● GoldMint uses CloudFlare, a web performance and security 
+company, to protect against DDOS attacks. 
+
+8.1. WORK SCHEDULE 
+
+Q4 2017 Q1 2018 Q2 2018 Q3 2018
+
+Frontend 1. Completing 
+website content 
+2. Filling in 
+content gaps
+
+1. Completing 
+website content 
+including the 
+Transparency 
+Page 
+2. Completing 
+content gaps
+
+1. Polishing 
+functionality and 
+design 
+2. Completing 
+site content
+
+1. Polishing 
+functionality and 
+design 
+2. Completing site 
+content
+
+Custom dashboards 1. Start 
+integration of 
+KYC 
+2. Integrating 
+with the billing 
+system
+
+1. Testing buying 
+GOLD for fiat
+
+1. Complete 
+testing, fixing 
+bugs
+
+1. Complete 
+testing, fixing 
+bugs
+
+Admin dashboards 1. Auditing the 
+amount of 
+GOLD in 
+circulation 
+2. Auditing the 
+fiat in bank 
+accounts 
+3. Auditing the 
+percentage paid 
+for transactions 
+in GOLD
+
+1. Complete 
+testing, fixing 
+bugs
+
+1. Complete 
+testing, fixing 
+bugs
+
+GoldMint API 1. Developing 
+API for the iOS 
+platform, 
+Android, PHP, 
+Ruby, JavaScript
+
+1. Completing and 
+testing API 
+2. Enrolling 
+clients to help 
+with integration
+
+Mobile apps for IOS 
+and Android
+
+1. Developing the 
+interface for iOS 
+and Android 
+2. Looking into 
+buying GOLD 
+for fiat 
+3. Drawing up 
+the LMBE value 
+graphs for 
+GOLD 
+4. Authorization
+
+1. Complete 
+testing, fixing 
+bugs
+
+1. Complete 
+testing, fixing 
+bugs
+
+KYC 1. Connecting 
+the EQUITY 
+system to user 
+dashboards
+
+1. Solving 
+sharding 
+problems in 
+some countries 
+(e.g. Russia)
+
+!33
+
+https://www.cloudflare.com/ddos/
+https://translate.google.com/translate?hl=ru&prev=_t&sl=ru&tl=en&u=https://equiniti-kyc.com/
+
+
+Configuration and 
+support customer 
+helpdesk
+
+1. Selecting the 
+helpdesk system 
+2. Implementing 
+the system and 
+launching 
+customer 
+support
+
+Integration with 
+payment systems
+
+1. Consulting with 
+experts on 
+payment systems 
+and on how to 
+integrate GOLD, 
+as another mode 
+of payment on 
+par with fiat 
+
+Setting up a CRM 
+system
+
+1. Setting up the 
+Salesforce 
+system and its 
+integration into 
+the GoldMint 
+infrastructure 
+
+I/O system for fiat 1. Developing the 
+GOLD purchase 
+computerized 
+system for fiat 
+2. Developing 
+the GOLD 
+exchange 
+computerized 
+system for fiat
+
+Network security 1. Integration of 
+the DDOS 
+protection 
+system  
+2. Load testing
+
+1. Search and 
+elimination of 
+vulnerabilities in 
+system security
+
+1. Search and 
+elimination of 
+vulnerabilities in 
+system security
+
+1. Search and 
+elimination of 
+vulnerabilities in 
+system security
+
+Refinement of 
+hardware parts for 
+Custody Bot
+
+1. Building a 
+Custody Bot 
+prototype
+
+1. Debugging the 
+gold assessment 
+process
+
+1. Selecting parts 
+for Custody Bot 
+for serial 
+production
+
+1. Developing the 
+serial 
+manufacturing 
+process for 
+Custody Bot
+
+Further 
+development of 
+software for the 
+Custody Bot
+
+1. Completing 
+the software for 
+Custody Bot 
+inspection 
+program
+
+Automation control 1. Developing of 
+the software part 
+of control 
+2. Integrating 
+with exchange 
+platforms for 
+hedging
+
+!34
+
+Q4 2017 Q1 2018 Q2 2018 Q3 2018
+
+
+
+Integration with 
+companies to 
+receive GOLD as 
+payment for their 
+goods and services
+
+1. Meeting 
+technical 
+specialists to 
+discuss the 
+possibility of 
+GOLD as 
+payment 
+2. Completing 
+client 
+dashboards as 
+discussed with 
+companies
+
+1. Meeting 
+technical 
+specialists to 
+discuss the 
+possibility of 
+GOLD as 
+payment 
+2. Completing 
+client dashboards 
+as discussed with 
+companies
+
+!35
+
+Q4 2017 Q1 2018 Q2 2018 Q3 2018
+
+
+
+9. TEAM  
+GoldMint was founded in 2016 by the founders of the LOT-ZOLOTO 
+
+company. This company buys unwanted gold securities from pawnshops, 
+processes them and supplies them to jewelers.  
+
+In the first six months of 2017, turnover of LOT-ZOLOTO amounted to 50.2 
+
+million USD. The company is a marketplace leader and has an extensive 
+background in gold trading.  
+
+ 
+Cofounders of GoldMint (founders): 
+
+ •  Dmitry Plutshevsky, CEO of GoldMint.  
+ ◦ 2003 – 2009 — founder and CEO of a marketing agency 
+
+ ◦  2007 – 2009 — development director of a trading company ГК 
+«Domo» 
+
+ ◦  2009 – 2016 — founder and CEO of a company for mobile app 
+development. 
+
+ ◦  2012 – 2016 — mentor and teacher in business school Skolkovo 
+and GVA Launch Gurus  
+
+ ◦  2013 – 2016 — development director of a venture fund 
+Typhoon Digital Development 
+
+ ◦  2016 – 2017 — development director of LOT-ZOLOTO 
+
+ •  Konstantin Romanov, co-founder 
+ ◦  1992 – 1997 — Soyuzcontract First vice-president 
+
+ ◦  1997 – 1999 — Interros Vice-president 
+
+ ◦  1999 – 2004 — Rosbank Vice-president= 
+ ◦  1997 – 2004 — Norilskiy nikel CEO Advisor 
+
+ ◦  2004 – 2006 — Hi Sys trading President 
+
+ ◦  2006 — current. Vice president in Russian Fund For Service 
+Trauma 
+
+ ◦  2016-2017 CEO of  LOT-ZOLOTO 
+
+ •  Igor Ryabenkiy — Altair Capital, best business angel in Russia 
+
+!36
+
+http://www.altair.vc/
+
+
+ •  Eugeny Volfman — Investor relations management 
+
+GoldMint team members: 
+
+ •  CTO — Konstantin Pichugin, IT-development experience since 2006 
+ •  Lead blockchain programmer — Anton Akentiev, chain.cloud 
+ •  Business Development — Vyacheslav Sokoltsov 
+
+Development team (vacancies open after ICO) 
+
+ • Blockchain development — Two members 
+ • Web — Two members 
+ • Design — Outsource 
+ • Mobile Development  — Two members 
+ • Custody Bot team — Software developers and engineers - seven 
+
+members 
+
+!37
+
+
+
+9.1. PROJECT ADVISORS 
+
+ICO advisor ● Suicide Ventures — Alexei Antonov — ICO
+
+Marketing advisor ● Byzantium — Alexander Papkov — Has 
+lengthy marketing and PR experience in 
+several ICO projects.
+
+Custody Bot advisor ● Airalab — Sergei Lonshakov. Since 2014, 
+has extensive experience in linking robots 
+to public blockchains.  
+
+● Andrei Petrachenkov
+
+Science board ● Valeriy Yarosh 
+
+● Paul Bikeyev-Winter
+
+Legal advisor ● Oleg Seidak — Blackmoon Capital. Has 
+experience creating 4 found outside the 
+Russian Federation  
+
+● Artem Tolkachev (Deloitte)
+
+Business development 
+advisors
+
+● Kirill Zhukov, ex-Royal Bank of Scotland, 
+ABN AMRO and Uniastrum Head in SPB 
+
+● Dmitry Dolgov (Bankex) 
+
+● Sergey Kotyrev (UMI.CMS) 
+
+● Alexey Lazutin (Chairman of the 
+Pawnshop Association of Russia) 
+
+● Andrey Zhirnykh (CEO of LOT-ZOLOTO) 
+
+● Alexander Butmanov (Dream Team 
+Investments) 
+
+● Alexey Chuikin (CEO of Evroset) 
+
+● Serg Umansky 
+
+!38
+
+
+
+10. GLOSSARY 
+
+10.1. IPFS 
+
+InterPlanetary File System (IPFS) is a protocol designed to create a 
+
+permanent and decentralized method of storing and sharing files. It is a 
+content-addressable, peer-to-peer hypermedia distribution protocol. Nodes 
+
+in the IPFS network form a distributed file system. IPFS is an open 
+source project developed in 2014 by Protocol Labs with help from the open 
+
+source community. It was designed by Juan Benet. 
+
+10.2. CALL OPTION 
+
+Call option (call) is a contract that gives the buyer the right to buy an asset 
+
+in the future at a certain date at a specified price. 
+The contract is entered into by the buyer of the option (the option holder) 
+and the seller of the option. There is an important difference between the 
+
+buyer and the seller. The buyer of the call option is not obliged to buy the 
+asset. But the call option seller is obliged to sell the asset if the buyer 
+
+requests it. 
+The buyer pays the seller the price of the option (the option premium) at 
+
+closing. This is a fee for the right to buy an asset in the future. 
+The transaction is called “the exercise of the option”. 
+
+Exercise price (strike price) is the amount that the buyer paid for the option 
+to purchase the asset. 
+
+10.3. KYC 
+
+Know your customer (KYC) is the process of a business identifying and 
+verifying the identity of its clients. 
+
+11. RELATED LINKS 
+
+Top gold investing resources: 
+
+!39
+
+
+
+1. http://www.valuewalk.com/2016/01/the-financial-economics-of-gold-
+markets-a-survey/
+
+1. https://www.goldbroker.com/news/gold-monetary-metal-bank-accounts-
+threat-safest-asset-unsafe-world-slv-bullish-divergence-french-taxes-
+germany-manipulation-403
+
+1. https://www.dropbox.com/s/b5g57h99mwqvman/
+PWC_direct_economic_impact_of_gold.pdf?dl=0
+
+1. http://prsync.com/market-research-report-store/global-metal-coating-
+market-research-report--1582917/
+
+1. http://www.reportlinker.com/ci02374/Metals.html
+
+!40
+
+http://www.valuewalk.com/2016/01/the-financial-economics-of-gold-markets-a-survey/
+https://www.goldbroker.com/news/gold-monetary-metal-bank-accounts-threat-safest-asset-unsafe-world-slv-bullish-divergence-french-taxes-germany-manipulation-403
+https://www.dropbox.com/s/b5g57h99mwqvman/PWC_direct_economic_impact_of_gold.pdf?dl=0
+http://prsync.com/market-research-report-store/global-metal-coating-market-research-report--1582917/
+http://www.reportlinker.com/ci02374/Metals.html
+

@@ -1,0 +1,533 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Word - Hydro Whitepaper (Public)-1.16.docx
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+HYDRO 
+
+A coordination layer for decentralized exchanges 
+
+ 
+
+White Paper 
+
+ 
+
+January 2018 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+2 
+
+CONTENTS 
+
+Abstract	..........................................................................................................................................................................	3	
+
+Background	...................................................................................................................................................................	3	
+
+    Problems and Challenges	....................................................................................................................................	3	
+
+Related Work	...........................................................................................................................................................................	4	
+
+Hybrid Model	...........................................................................................................................................................................	4	
+
+Hydro Protocol	............................................................................................................................................................	5	
+
+Scope	...........................................................................................................................................................................................	6	
+
+Shared Liquidity Model	........................................................................................................................................................	6	
+
+Protocol Token (HOT)	..........................................................................................................................................................	7	
+
+DDEX	.........................................................................................................................................................................................	9	
+
+Summary	........................................................................................................................................................................	9	
+
+Appendix	.....................................................................................................................................................................................	10	
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+3 
+
+Abstract 
+
+Decentralized exchanges offer trustless non-custodial trading, improved transparency, and ability 
+
+to share order books. Despite these advantages, decentralized exchanges today account for a 
+
+negligible percentage of the overall cryptocurrency transaction volume. Reasons for lack of 
+
+adoption include high technical barrier to entry, performance and usability issues, availability, 
+
+and lack of incentives for coordination. Hydro is a middleware layer on top of an incentive 
+
+system for decentralized exchanges. 
+
+ 
+
+Background 
+
+Problems and Challenges 
+
+1. Usability and performance issues 
+
+Completely on-chain decentralized exchanges are slower and more expensive than centralized 
+
+exchanges. Empirical evidence suggests that the majority of users won’t trade away significant 
+
+degradation in performance for improved security. 
+
+2. Susceptibility to arbitrage 
+
+The off-chain maker, on-chain taker model performs better than purely on-chain exchanges. 
+
+However, they are still susceptible to arbitrage, front-running, and order collisions. 
+
+3. Technical barrier to entry 
+
+Successful exchanges are often built and run by operation focused teams, for whom the technical 
+
+difficulties of building a high performance hybrid exchange become a barrier to entry. 
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+4 
+
+Related Work 
+
+There are a multitude of projects related to decentralized exchanges. The landscape can roughly 
+
+be represented by a decision tree with a few branching points: 
+
+1. Compatibility vs Scalability 
+
+Projects such as Bitshares can offer real-time, on-chain exchange. However, standalone solutions 
+
+typically do not have the ability to trade assets on other blockchains with native efficiency. 
+
+Hydro is designed to support at least ERC20 tokens on the Ethereum network. 
+
+2. Price Discovery Mechanism 
+
+Projects such as Kyber and Airswap offload the responsibility of price discovery to reserve 
+
+managers, who themselves presumably rely on either set formulas or price oracles. Hydro is built 
+
+to power decentralized exchanges that come with built-in price discovery mechanisms(i.e limit 
+
+order matching engines). 
+
+3. Availability 
+
+Certain projects are completely reliant on future work to solve scalability and cross chain 
+
+support. This discussion is limited to the subset of projects that works without (but can still 
+
+benefit from) the arrival of technologies such as Raiden, Plasma, Cosmos, and Polkadot. 
+
+Hybrid Model 
+
+If we limit the scope of discussion to efficient, order book based solutions which work with the 
+
+Ethereum network today, one solution that works is the so called “off-chain maker, on-chain 
+
+taker/settlement” model. Etherdelta is one of the first implementations of such a hybrid model. 
+
+0x is an open protocol extracted from this model. 
+
+
+
+ 
+
+ 
+ 
+
+5 
+
+Hydro Protocol 
+
+Hydro is designed around the following assumptions: 
+
+1. Canonical order schema 
+
+The elemental unit of an exchange is an order (i.e. buy or sell x amount at y rate). Decentralized 
+
+exchanges can either use a proprietary order schema, or an openly shared one. One advantage of 
+
+having everyone use a canonical open order schema is that these orders can match against each 
+
+other, resulting in cross-exchange liquidity sharing.  
+
+    An additional concern is that the smart contracts used by decentralized exchanges have 
+
+permission to hold and transfer assets, and could potentially contain loss-inducing bugs. A 
+
+fragmented system at the order level increases the possibility of accidental loss or theft. 
+
+To help establish a canonical order schema, Hydro is built on top of the open order protocol 0x. 
+
+2. Incentive to share 
+
+An open order makes it possible to share liquidity. But it is not evident why decentralized 
+
+exchanges would want to share liquidity. Open, permission-less orders are easier to arbitrage, 
+
+and more likely to result in order collisions (more details on this later). Usability problems aside, 
+
+it is unclear why the first batch of decentralized exchanges would give up their main barrier to 
+
+entry and proactively help bootstrap potential competitors. Hydro introduces an incentive system 
+
+that encourages decentralized exchanges to cooperate and share liquidity. 
+
+3. Common Framework 
+
+Although there are thousands of cryptocurrency exchanges with wildly different operating 
+
+characteristics, they are quite similar in features and technical implementations. 
+
+
+
+ 
+
+ 
+ 
+
+6 
+
+Hydro provides a set of middleware components to lower the cost of creating hybrid 
+
+decentralized exchanges and marketplaces. 
+
+ 
+
+Scope 
+
+Hydro is a set of middleware components on top of an incentive mechanism. It resides between 
+
+the DAPP layer and the order and settlement layer of the hybrid decentralized exchange stack 
+
+(Figure 1). 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+                    (Figure 1: Hydro Protocol Scope) 
+
+ 
+
+Shared Liquidity Model 
+
+A crucial question for a decentralized exchange is “who has permission to match an order?” The 
+
+typical answers lies on two extremes: 
+
+1. Open: Anyone can match an order 
+
+
+
+ 
+
+ 
+ 
+
+7 
+
+The benefit of the open order model is that it enables the possibility of a global liquidity pool. 
+
+The drawback is that open orders can only be canceled on-chain, and thus are more susceptible 
+
+to arbitrage and order collision.  
+
+2. Closed: Only a single address (the exchange itself) can match an order 
+
+If the exchange has exclusive permission to match orders, then it can provide instant cancellation 
+
+and protection from front-running. However, this type of order cannot be shared. 
+
+Hydro takes an intermediate approach: it manages a set of permission lists, each representing an 
+
+alliance of exchanges that can share liquidity with each other. It also keeps a ledger of liquidity 
+
+provided and taken for each actor in the system. In addition, Hydro provides pool membership 
+
+and governance features, and handles the distribution of transaction fees. 
+
+ 
+
+Protocol Token (HOT) 
+
+On top of the liquidity ledger, Hydro distributes a protocol token periodically as incentive for 
+
+providing liquidity.  
+
+1. Token Distribution 
+
+Hydro distributes HOT tokens to each account in the system periodically according to the follow 
+
+formula: 
+
+(p * R) * tv / TTV 
+
+Where 
+
+p = A set percentage of tokens to distribute out of the reserve. 
+
+R = Remaining reserve of tokens 
+
+tv = Transaction volume provided during this period for current account 
+
+TTV = (Total transaction volume provided during this period by all parties) 
+
+
+
+ 
+
+ 
+ 
+
+8 
+
+2. Token Usage 
+
+Tokens issued by cryptocurrency exchanges are typically some form of membership bonus, 
+
+including reduced fees, airdrops, and VIP features. Although these tokens are technically 
+
+decentralized in terms of ownership, they are economically centralized. The worth of the typical 
+
+exchange token is completely tied to the business performance of the issuing exchange. 
+
+HOT is roughly equivalent to a decentralized version of such membership tokens. Users obtain 
+
+tokens by providing liquidity, and can choose to stake tokens to a particular liquidity pool to 
+
+obtain membership benefits. 
+
+    Note that although Hydro’s middleware layer provides the mechanism for membership 
+
+benefits, it is left to the exchanges to decide on which benefits to offer. Equilibrium will come 
+
+from competition over user loyalty. 
+
+3. Token Consumption 
+
+To prevent frequent jumping between pools and to replenish the token reserve, a frictional fee is 
+
+charged for the following actions: 
+
+a) The act of joining a new liquidity pool for exchanges costs HOT tokens. 
+
+b) For individual traders, staking HOT tokens to join a pool (in order to receive benefits) is 
+
+free, but a percentage is consumed on withdraw. 
+
+    Note the distribution mechanism does not distinguish between normal traders and market 
+
+makers. Liquidity providers receive HOT tokens in addition to what they earn from the spread. 
+
+This a beneficial side effect, as any Hydro based exchanges inherit the ability to attract liquidity 
+
+providers. 
+
+4. Justification for Existence 
+
+
+
+ 
+
+ 
+ 
+
+9 
+
+The purpose of the Hydro protocol token is to act as a force in the formation of shared liquidity 
+
+pools. The answer to “why not just use Ether” is that the value of these tokens is correlated with 
+
+the total size of the Hydro liquidity sharing network.  
+
+ 
+
+DDEX 
+
+The Hydro team is building and operating a sample implementation of such a hybrid 
+
+decentralized exchange. DDEX (Decentralized Digital Exchange) exists for the following 
+
+purposes: 
+
+1) A showcase that hybrid decentralized exchanges are (barely) possible today, and will get 
+
+better over time 
+
+2) Drive real world usage and feedback for the protocol layers 
+
+3) Bootstrap liquidity which can be used eventually in the formation of federated liquidity 
+
+pools 
+
+ 
+
+Summary 
+
+Decentralized exchange protocols inevitably will become a cornerstone of the entire blockchain 
+
+ecosystem. However, there are both technical and economical challenges on the path to 
+
+widespread user adoption. Hydro provides an incentive layer and a time-saving middleware 
+
+framework for operationally focused teams looking to build decentralized exchanges and 
+
+marketplaces today. 
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+10 
+
+Appendix 
+
+https://github.com/0xProject/whitepaper/blob/master/0x_white_paper.pdf 
+
+ 
+https://blog.0xproject.com/front-running-griefing-and-the-perils-of-virtual-settlement-part-1-
+
+8554ab283e97 
+
+ 
+hackingdistributed.com/2017/08/13/cost-of-decent/ 
+
+ 
+
+ 
+
+ 
+
+

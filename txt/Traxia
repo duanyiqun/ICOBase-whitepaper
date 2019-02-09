@@ -1,0 +1,1980 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Word - Traxia Whitepaper V2 2018-04-24.docx
+
+
+	
+	
+
+Traxia	
+USING	BLOCKCHAIN	TO	DISRUPT	TRADE	FINANCE	
+
+V2	
+	
+	
+
+Traxia	Foundation	
+Baarerstrasse	82,	Zug,	6302,	Switzerland	
+
+foundation@traxia.co	
+
+April	25th	2018	
+	
+
+	
+
+This	document	is	for	informational	purposes	only	and	does	not	constitute	an	offer	
+or	solicitation	to	sell	shares	or	securities.	Any	such	offer	or	solicitation	will	be	made	only	
+by	means	of	a	confidential	offering	memorandum	and	in	accordance	with	the	terms	of	
+all	applicable	securities	and	other	laws.	
+
+	
+	
+
+	
+	
+
+ABSTRACT	
+	
+
+There	are	over	$43	trillion	of	invoices	sitting	in	companies'	balance	sheets	waiting	
+to	be	paid.	The	Traxia	ecosystem	allows	those	short-term	assets	to	be	digitized,	tokenized	
+and	ultimately	to	be	tradeable	in	a	decentralized	market.	Traxia	envisions	a	system	where	
+Sellers	upload	their	invoice,	Buyers	approve	it	with	their	private	keys,	Issuing	Providers	
+write	it	into	a	smart	contract,	Liquidity	Providers	distribute	cash	liquidity,	Listing	providers	
+manage	the	marketplace	and	Investors	trade	the	newly	created	digital	assets.	Think	of	it	
+as	factoring	on	a	blockchain.	We	have	built	a	real	use	case	using	Liqease	Ltd	as	our	Listing	
+provider,	Porsche	as	the	Buyer,	mediaman	and	Vok	Damns	as	the	Seller	and	a	corporate	
+investor	as	the	Liquidity	Provider.	Although,	the	Ethereum	blockchain	has	been	used	in	
+this	 first	 case	 to	 issue	 the	 smart	 contract,	 Traxia	 intends	 to	 build	 upon	 the	 Cardano	
+blockchain.	 Traxia	 and	 LiqEase	 are	 the	 first	 investment	 of	 Cardano	 through	 their	
+investment	arm	Emurgo.		 	
+
+
+
+Background	 3	
+
+What	is	Trade	Finance?	 4	
+Actors	 4	
+Objects	 4	
+Terms	 5	
+
+Traditional	Trade	Finance	Products	 5	
+Factoring	 5	
+Letter	of	Credit	 6	
+Supply	Chain	Finance	(SCF)	 6	
+Securitization	 7	
+
+Market	Opportunity	for	a	blockchain	powered	solution	 9	
+The	growth	of	Factoring	 10	
+
+Traxia’s	solution:	a	decentralized	trade	finance	ecosystem	 11	
+The	Smart	Contract	 13	
+The	Actors	 13	
+
+1.	 Seller	 13	
+2.	 Buyer	 14	
+3.	 Investors	 14	
+4.	 Issuing	Provider	 14	
+5.	 Listing	Providers	 14	
+6.	 Loan	Warehousing	 15	
+7.	 Risk	management	and	3rd	party	data	providers	 15	
+
+Tokenized	access	to	the	Traxia	platform	 16	
+What	we	already	built	 17	
+Initial	Proof	of	Concept	 19	
+Traxia	and	LiqEase	 20	
+
+Business	Strategy	 20	
+Stage	1	 20	
+Stage	2	 21	
+Stage	3	 21	
+
+Product	Architecture	and	Development	Roadmap	 21	
+V1	 22	
+V2	 22	
+V3	 22	
+
+Traxia	Membership	Token	(TMT)	Sale	 23	
+Token	Demand	and	Supply	 24	
+Token	Amounts	and	Discounts	during	Pre-Sale	and	Sale	 25	
+Usage	of	Proceeds	from	Token	Sale	 25	
+
+Team	 25	
+
+Legal	 26	
+
+Works	Cited	 30	
+
+Annex	–	Technical	Details	 31	
+	 	
+
+
+
+Background	
+	
+	
+
+On	 any	 given	 day	 around	 the	world	 there	 are	 around	 $43	 trillion	 of	 accounts	
+receivable	or	accounts	payable	on	the	books	of	businesses,	of	which,	banks	only	finance	
+around	$3	trillion	of	the	total	(Kemper,	2016).	On	a	more	granular	level,	there	is	a	gap	in	
+global	 trade	 finance	of	around	$1.6	 trillion,	most	arising	 from	Asian	companies	 (Asian	
+Development	 Bank,	 2016).	 The	 International	 Chamber	 of	 Commerce	 refers	 to	 trade	
+financing	as	the	‘oil’	in	the	engine	of	international	commerce	and	highlights	the	unmet	
+demand	for	such	financing	(International	Chamber	of	Commerce,	2017).		
+
+	
+This	gap	is	a	result	of	a	misalignment	in	terms	of	the	demand	for	trade	related	
+
+credit	 and	 the	 liquidity	 of	 funds	 provided.	 It	 is	 disproportionately	 available	 to	
+multinationals	and	large	corporates	–	the	top	end	of	the	market	–	and	consistently	absent	
+in	the	SME	segment	(International	Chamber	of	Commerce,	2017).	Simply	said,	SMEs	are	
+faced	with	little	choice	but	to	accept	their	large	customer’s	payment	terms,	no	matter	
+how	onerous	they	may	be.		
+
+	
+Financial	Technology	 (FinTech)	companies	have	come	up	with	solutions	 to	 this	
+
+gap	 in	 global	 trade	 finance.	 However,	 in	 the	 absence	 of	 new	 instruments	 and	
+marketplaces	that	connect	and	bring	together	different	trade	actors,	new	ventures	have	
+been	unable	to	make	a	major	difference,	yet.	
+
+	
+The	current	trade	finance	gap	is	due	to	the	following	major	issues	(International	
+
+Monetary	Fund,	2016):		
+	
+1. Absence	of	trust	and	cooperation	between	banks	
+
+A	continuous	decline	in	correspondent	banking	relationships	has	lead	to	
+an	economic	fragility	that	has	not	been	compensated	by	the	limited	
+growth	in	open	account	financing	or	Letters	of	Credit	(L/C).	
+
+	
+2.	 Limited	transparency	due	to	a	lack	of	reliable	data	points	along	the	trade	
+
+finance	value	chain	
+In	periods	shaped	by	a	lack	of	trust	and	transparency,	trade	finance	
+actors	(private	banks,	export	credit	agencies,	and	regional	development	
+banks)	seem	to	pool	their	resources	(World	Trade	Organization,	2008)	
+which	creates	difficulties	in	terms	of	obtaining	comprehensive	and	
+reliable	data	on	those	trade	finance	transactions.	
+
+	
+3.	 Limited	Cash	Liquidity	in	the	markets	and	higher	spreads		
+
+Large	banks	have	been	reporting	on	several	occasions	that	the	lack	of	
+access	to	competitive	funding	has	made	them	to	drop	out	of	several	
+finance	trade	operations.	
+	
+
+4.	 Bureaucracy	and	endless	paperwork	
+Digitalisation	in	trade	finance	is	far	from	being	mainstream.	Providers	
+have	been	promising	digital	letters	of	credit	and	bills	of	lading	for	years,	
+
+
+
+yet	most	corporates	and	banks	still	routinely	exchange	paper	documents	
+(International	Chamber	of	Commerce,	2017)	
+	
+
+	 SMEs	account	for	more	than	one-half	of	the	world’s	GDP	and	employ	two-thirds	
+of	 the	 global	 workforce	 (World	 Economic	 Forum,	 2015).	 The	 number	 one	 barrier	 to	
+growth	faced	by	SMEs	around	the	globe	is	access	to	financing	(International	Labour	Office,	
+2015).	This	is	not	a	new	issue	and	the	2008	financial	crisis	only	worsened	the	problem.	
+Many	local	retail	banks,	who	are	often	the	primary	and	only	providers	of	SME	financing,	
+have	 lost	 their	appetite	 for	 taking	on	higher-risk	SME	 loans.	 It	 is	estimated	 that	SMEs	
+faced	in	2015	a	$2	trillion	USD	global	credit	gap	(World	Economic	Forum,	2015).	
+	
+	
+What	is	Trade	Finance?	
+	
+	
+	 Global	 and	 local	 banks	 support	 international	 trade	 through	 a	 wide	 range	 of	
+products	that	help	their	customers	manage	their	international	payments	and	associated	
+risks,	and	provide	needed	working	capital.	The	term	“trade	finance”	is	generally	reserved	
+for	 bank	 products	 that	 are	 specifically	 linked	 to	 underlying	 international	 trade	
+transactions	(exports	or	imports).	As	such,	a	working	capital	loan	not	specifically	tied	to	
+trade	is	generally	not	 included	in	this	definition.	Trade	finance	products	typically	carry	
+short-term	maturities	which	reflect	the	typical	shipping	times	and	payment	terms	of	30,	
+60	or	90	days	or	more.	(Bank	for	International	Settlement,	2014).	
+	
+Actors		
+	
+
+For	 the	 purpose	 of	 this	 whitepaper,	 we	will	 solely	 focus	 on	 the	 actors	 of	 the	
+‘financial	supply	chain’.	Financial	intermediaries,	in	a	broader	sense,	offer	services	that	
+allows	an	easier,	faster,	and	cheaper	execution	of	financial	contracts	between	originators	
+and	acceptors.		
+	
+
+This	comprises	the	gathering,	for	example	via	brokers,	rating	agencies,	or	stock	
+markets,	of	information	to	inform	investors	about	borrower	quality	and/or	risk.	In	general,	
+disintermediation	in	trade	denotes	the	omission	of	actors	within	a	supply	chain,	as	e.g.	
+intermediary	 distributors	 or	 retail	 sellers.	 But,	 disintermediation	 in	 financing	 is	 the	
+substitution	of	the	traditional	bank	intermediation	by	the	means	of	alternative	forms	of	
+intermediation	with	regards	to	liquidity	between	investors	and	parties	seeking	capital.	
+	
+	
+Objects		
+	
+
+Objects	of	finance	include	fixed	assets,	i.e.	those	assets	that	permanently	provide	
+a	basis	for	the	business	operations,	and	working	capital,	which	is	variable	on	a	day-to-day	
+basis.		
+	
+
+
+
+Production	facilities,	which	provide	the	underlying	logistic	networks,	as	well	as	the	
+equipment	 needed	 for	 customs	 clearance	 and	 the	 transport	 within	 the	 network	 are	
+considered	 fixed	 assets	within	 a	 supply	 chain.	 The	 term	working	 capital	 comprises	 all	
+current	assets	 transformable	 into	 liquid	assets	within	one	production	cycle	or	at	 least	
+within	one	year.		Circulating	assets	minus	the	short-term	liabilities	are	called	net	working	
+capital.	A	key	figure	which,	in	this	context,	is	suited	for	an	examination	of	the	cash	flow	is	
+the	cash-to-cash-cycle.	The	latter	is	calculated	as	follows:	
+	
+Cash-to-cash-cycle	=	average	turnover	period	+	period	of	receivables	-	period	of	payables	
+	
+
+The	cash-to-cash-cycle	is	the	period	of	time	needed	for	a	company	to	transform	
+the	cash	drain	resulting	from	paying	the	suppliers	into	cash	inflow	from	customers	again.	
+The	cash-to-cash-cycle	thus	is	a	key	figure	to	a	dynamic	and	holistic	treatment	of	the	net	
+working	capital	performance	both	within	the	company	and	within	the	supply	chain.	
+	
+Terms		
+	
+
+Supply	chain	finance	has	three	dimensions:	1.	The	amount	of	assets	to	be	financed	
+(volume	 of	 financing),	 2.	 The	 duration	 of	 the	 financing	 and	 3.,	 the	 capital	 cost	 rate	
+(financing	cost).	Multiplying	these	three	factors	together	gives	the	total	capital	cost	that	
+a	company	has	to	generate	at	least	for	an	investment	to	be	profitable:	
+	
+
+Capital	costs	=	Volume	*	duration	time	*	capital	cost	rate	
+	
+
+The	most	important	starting	point	for	the	optimization	of	the	financing	within	a	
+supply	chain	beyond	classical	logistics	measures	is	thus	the	capital	cost	rate.	
+	
+	
+
+Traditional	Trade	Finance	Products	
+	
+
+Many	 SMEs	 find	 it	 difficult	 to	 finance	 their	 production	 cycle,	 as	 most	 buyers	
+demand	around	60	days	to	pay	for	goods	from	the	date	of	delivery.	In	any	transaction,	a	
+seller	will	issue	an	invoice,	which	they	account	for	as	an	account	receivable.	The	buyer	
+then	accounts	for	the	invoice	in	their	accounts	payable.	Accounts	receivables	are	illiquid	
+assets	until	payment	is	received.		
+	
+Factoring	
+	
+
+Factoring	 is	a	 type	of	 supplier	 financing,	 in	which	 firms	sell	 their	 credit-worthy	
+accounts	receivables	at	a	discount	(generally	equal	to	interest	rates	plus	service	fees)	and	
+receive	immediate	cash.	Factoring	is	not	a	loan	and	there	are	no	additional	liabilities	on	
+the	 firm’s	 balance	 sheet,	 although	 it	 provides	 working	 capital	 financing.	 In	 addition,	
+factoring	 is	 often	 done	 “without	 recourse”,	 meaning	 that	 the	 factor	 purchasing	 the	
+receivables	 assumes	 the	 credit	 risk	 for	 the	 buyer’s	 ability	 to	 pay.	 Factoring	 is	 a	
+comprehensive	 financial	 service	 that	 includes	 credit	 protection,	 accounts	 receivable	
+bookkeeping,	collection	services	and	financing.	
+
+
+
+	
+	
+Letter	of	Credit		
+	
+
+One	of	the	most	common	and	standardized	forms	of	bank-intermediated	trade	
+finance	 is	 a	 letter	of	 credit	 (L/C).	 L/Cs	 reduce	payment	 risk	by	providing	a	 framework	
+under	which	a	bank	makes	(or	guarantees)	the	payment	to	an	exporter	on	behalf	of	an	
+importer	once	delivery	of	goods	is	confirmed	through	the	presentation	of	the	appropriate	
+documents.		
+	
+
+For	the	most	part,	L/Cs	represent	off-balance	sheet	commitments,	though	they	
+may	at	times	be	associated	with	an	extension	of	credit.	This	can	occur,	for	example,	if	an	
+import	 L/C	 is	 structured	 to	 allow	 the	 importer	 a	 period	 of	 time	 (known	 as	 “usance”)	
+before	repaying	the	bank	for	the	payment	it	made	on	the	importer’s	behalf.	Banks	may	
+also	help	meet	working	capital	needs	by	providing	trade	finance	 loans	to	exporters	or	
+importers.	In	this	case,	the	loan	documentation	is	linked	either	to	an	L/C	or	to	other	forms	
+of	documentation	related	to	the	underlying	trade	transaction.		
+	
+Supply	Chain	Finance	(SCF)	
+	
+
+To	avoid	confusion,	 it	 should	be	mentioned	 that	 supply	chain	 finance	 is	only	a	
+subset	of	trade	finance	and	has	been	defined	by	the	International	Chamber	of	Commerce	
+(ICC)	as	‘the	use	of	financing	and	risk	mitigation	practices	and	techniques	to	optimize	the	
+management	of	the	working	capital	and	liquidity	invested	in	supply	chain	processes	and	
+transactions.	 [Supply	 chain	 finance]	 is	 typically	 applied	 to	 open	 account	 trade	 and	 is	
+triggered	 by	 supply	 chain	 events.	 Visibility	 of	 underlying	 trade	 flows	 by	 the	 finance	
+provider(s)	 is	 a	 necessary	 component	 of	 such	 financing	 arrangements	 which	 can	 be	
+enabled	by	a	technology	platform.’	
+		
+
+Reverse	factoring	is	the	most	widely	used	form	of	financing	under	this	category	
+(PwC,	2017).	In	contrast	to	traditional	factoring	as	described	above,	reverse	factoring	is	
+initiated	by	the	buyer	and	not	by	the	seller.	The	‘factor’	is	a	financial	intermediary	and	in	
+more	detail	the	entity	that	is	providing	short-term	cash	liquidity.	The	factor	acts	on	its	
+own	 economic	 risk	 and	 advances	 a	 payment	 to	 the	 supplier	 and	 then,	 at	 the	 invoice	
+payment	due	date,	a	transaction	from	the	buyer	to	the	factor	is	initiated.	
+	
+
+	
+Figure	1 	– 	The	reverse	 factor ing	process 	 	
+
+
+
+According	to	the	paper	‘A	study	of	the	business	case	for	supply	chain	finance	
+published	by	the	Association	of	Chartered	Certified	Accountants	in	June	2014,	the	
+advantages	of	a	Reverse	Factoring	Program	for	Buyers	are	mainly	that	costs	are	reduced	
+across	the	supply	chain.	This	is	due	to	letting	suppliers	‘borrow’	against	their	customers’	
+creditworthiness	instead	of	their	own.	On	average,	80%	of	the	resulting	value	is	shared	
+between	the	suppliers	and	the	buyer,	with	varying	degrees	of	allocation	depending	on	
+whether	the	buyer	wants	to	facilitate	its	key	suppliers’	financials	(i.e.	the	largest	share	
+goes	to	supplier)	or,	instead,	take	all	the	benefits	by	extending	payment	terms.	
+Typically,	the	buyer	will	capture	35%	to	50%	of	all	savings,	while	suppliers	will	get	25%	
+to	45%.	Another	15%	goes	to	the	financial	intermediary	while	the	remaining	5%	is	for	
+the	service	provider.	
+	
+Securitization		
+	
+	
+
+	
+F igure	2 	– 	a 	 typica l 	secur it izat ion	process 	
+
+	
+Before	 discussing	 in	 detail	 on	 how	 blockchain	 may	 change	 the	 securitization	
+
+lifecycle,	a	brief	high-level	review	of	securitization	(Figure	2)	may	be	helpful.		
+	
+
+It	 begins	with	 originating	 and	 underwriting2	 of	 loans,	which	 are	 then	 serviced	
+regularly,	similar	to	traditional	bank	lending.	An	issuer	or	originator	pools	together	many	
+loans,	places	them	in	a	bankruptcy-remote	trust	or	special	purpose	vehicle	 (SPV),	and	
+structures	 the	 securities.	An	auditing	 firm	 reviews	 the	pool	 and	provides	a	pool	 audit	
+letter	 and	 an	 agreed-upon	 procedures	 letter	 covering	 the	 pool	 statistics	 provided	 to	
+investors.	Rating	agencies	may	be	asked	to	express	an	opinion	on	the	securities’	credit-
+worthiness	by	providing	a	credit	rating.		
+	
+
+The	underwriters’	task	 is	to	raise	 investment	capital.	They	work	with	a	counsel	
+and	 the	 transaction	sponsor	 to	prepare	an	offering	document.	The	underwriters	 then	
+price	and	bring	the	securities	to	market,	where	investors	make	purchases	based	on	their	
+risk-reward	preferences.		
+	
+
+
+
+Trustees	 manage	 the	 trust	 entity	 and	 represent	 investor	 interests.	 A	 servicer	
+collects	borrower	repayments,	pools	them,	and	forwards	them	to	a	trustee,	who	allocates	
+distributions	 to	 security	 holders	 based	 on	 the	 payments	 waterfall	 defined	 in	 the	
+transaction	documents.	Rating	agencies	monitor	the	securities’	performance	and	update	
+ratings	if	needed.	In	secondary	markets,	investors	continue	to	review	and	reassess	the	
+securities	based	on	performance.	Broker-dealers	make	markets	among	investors	trading	
+the	securities	and	establish	new	prices.	
+	
+
+Securitization,	 due	 its	 current	 level	 of	 complexity	 and	 the	 participation	 of	
+numerous	intermediaries,	is	mostly	used	for	larger	trade	deals	that	range	in	the	millions	
+of	US	Dollars.	Shortcomings	of	the	current	setup	and	efficiency	gaps	in	the	securitization	
+value	chain	are:	non	standardized	processes	and	dependencies	on	central	clearing	houses	
+and	custodians.		
+	
+
+In	this	context,	blockchain	can	have	a	large	impact	in	transforming	and	
+enhancing	securitization.		
+
+
+
+Market	Opportunity	for	a	blockchain	powered	solution	
+	
+
+Opportunities	for	blockchain	solutions	in	the	trade	finance	securitization	process	
+are	summarized	by	Deloitte	in	the	flow	below.	This	is	the	platform	that	Traxia	will	create	
+(Deloitte,	2017):	
+
+	
+
+	
+Figure	3: 	B lockchain 	and	Secur it izat ion	 - 	a 	poss ib le 	 look	at 	 the	 future	
+
+	
+	
+Step	1:	As	a	borrower	and	lender	agree	to	the	terms	of	a	loan,	a	new	electronic	asset	is	
+created	 on	 the	 blockchain	 and	 time-stamped.	 Ownership	 information	 and	 other	
+pertinent	 underwriting	 data,	 such	 as	 supporting	 documents	 or	 Credit	 scores,	 are	
+attached	to	the	loan	and	recorded	on	the	blockchain.	This	information	cannot	be	altered	
+without	a	new	consensus	between	the	borrower	and	loan	owner.	
+	
+Step	2:	Relevant	information	about	the	loan	is	automatically	coded	into	a	smart	contract	
+which	governs	the	automated	servicing	of	the	 loan.	As	the	borrower	makes	or	fails	to	
+make	payments,	this	history	is	added	to	the	loan-level	data	and	supports	future	servicing	
+decisions,	such	as	the	possible	need	to	engage	a	default	servicer	if	the	borrower	does	not	
+pay.	 Ownership	 rights	 of	 the	 asset	 are	 also	 automatically	 immutably	 recorded	 and	
+timestamped.	
+	
+Step	3:	 The	 sponsor/issuer	pools	 together	 loans	and	 transfers	 them	 to	an	SPV,	which	
+records	the	transfer	and	the	related	loans	on	the	blockchain.	The	‘automatable’	portion	
+of	the	transaction’s	terms,	including	its	cash-flow	model,	are	written	in	a	series	of	smart	
+contracts,	which	 the	 sponsor/issuer,	 underwriter,	 rating	 agencies,	 trustees,	 and	other	
+relevant	third	parties	verify	and	agree	to.		
+
+
+
+This	consensus	creates	a	single	governing	model	for	the	transaction.	
+	
+Rating	agencies,	investors,	and	other	relevant	stakeholders	reference	this	model	and,	if	
+desired,	also	the	underlying	 loan-level	data	to	perform	their	assessment	of	the	newly-
+created	securities.	In	addition,	relevant	portions	of	the	offering	and	legal	documents	are	
+also	 automatically	 created	 with	 smart	 contracts.	 Regulatory	 compliance	 is	 largely	
+automated,	 as	 smart	 contracts	 are	 programmed	 to	 immediately	 note	 any	 potential	
+irregularities.	
+	
+Step	4:	A	separate	smart	contract	to	service	the	securities	is	layered	on	top	of	the	SPV	
+and	the	smart	contract	developed	for	the	transaction	itself.	This	new	contract	collects	
+payments	from	loan	servicers,	references	the	cash-flow	model	specified	in	the	contract	
+governing	the	SPV,	and	distributes	payments	to	the	beneficiary	holders	of	the	security	
+with	 only	minimal	 delays	 for	 settlement.	 This	 information	 stream	 is	 related	 to	 rating	
+agencies	and	the	secondary	markets.	
+	
+Step	5:	Ratings	monitoring	software	sometime	referred	to	as	‘Oracles’	are	placed	on	the	
+blockchain	to	match	the	security	performance	with	expected	cash	flows	and	trigger	rating	
+reviews	when	discrepancies	arise.	
+	
+Step	 6:	 Trading	 or	 market	 information	 platforms	 are	 constructed	 with	 blockchain	
+technology	 to	 interoperate	with	 the	blockchains	used	 for	 the	 transactions	and	enable	
+market	makers	to	create	robust	secondary	markets	in	securitized	assets.	With	the	help	
+of	market	makers,	securities	trading	on	the	blockchain	is	near-instant	and	low	cost,	with	
+regulatory	compliance	close	to	automatic,	as	data	on	asset	ownership	is	reported	in	real-	
+time	 to	 regulators	 while	 it	 remains	 hidden	 from	 competitors.	 Large	 investors	 could	
+potentially	directly	trade	on	these	platforms	without	having	to	go	through	broker-dealers.	
+	
+Step	7:	As	the	securities	are	created	and	traded,	beneficiary	information	is	stored	and	
+updated	in	a	separate	repository,	which	acts	as	a	custodial	entity.	This	updated	
+beneficiary	information	is	referenced	to	facilitate	future	security	servicing.	To	maintain	
+confidentiality,	only	relevant	trustees	and	regulators	possess	full	access	to	this	
+information.	Less	sensitive	data	such	as	ratings	or	underlying	payments	information	
+could	be	made	available	to	other	actors.	
+	
+	
+The	growth	of	Factoring	
+	
+
+Commercial,	non-bank	factoring	enterprises	are	playing	a	large	role	in	the	US,	UK,	
+and	 China,	 and	 with	 the	 rise	 of	 FinTechs,	 non-bank	 players	 will	 have	 an	 increasingly	
+significant	impact	on	the	industry.	The	explosive	growth	of	the	industry,	especially	since	
+the	start	of	the	financial	crisis,	is	in	large	part	inspired	by	an	improved	perception	of	risk	
+globally,	 but	 also	 stemming	 from	 a	 shift	 from	 overdraft/unsecured	 credit	 facilities	 to	
+receivables-based		financing	(International	Chamber	of	Commerce,	2017).	
+	
+Combined	growth	of	national	and	international	factoring:	
+
+
+
+	
+	
+Total	factoring	volume	from	2010	to	2016:	
+
+	
+	
+
+Those	 trends	allow	Liqease	and	Traxia	 to	 tap	 into	a	massive	market	with	huge	
+growth	potential	which	is	supported	by	increasingly	favorable	macroeconomic	data	and	
+validated	by	startups	operating	in	similar	segments.			
+	
+	
+	
+Traxia’s	solution:	a	decentralized	trade	finance	ecosystem	
+	
+
+The	 vision	 of	 Traxia	 is	 to	 establish	 an	 open	 and	 decentralized	 ecosystem	 to	
+improve	trade	finance	globally.	Traxia	combines	blockchain	and	an	open,	connected	IT	
+architecture	to	create	a	new	ecosystem	for	trade	finance.	It	allows	corporates	to	create	
+smart	contracts	—	automated,	self-executing	digital	contracts	that	trigger	payments	and	
+receipts	in	real	time	as	goods	move	through	the	supply	chain.		
+	
+
+Tracking	 of	 goods	 through	 modern	 Internet	 of	 Things	 (IoT)	 solutions	 can	 further	
+eliminate	uncertainty	about	where	physical	goods	are;	blockchain	helps	to	verify	identity	
+and	ownership	and	could	 conceivably	 simplify	 compliance	and	governance,	 as	well	 as	
+reducing	manual	work	and	human	error.	The	transparency	gain	from	such	advancements	
+ultimately	leads	to	better	access	to	finance	in	several	ways:		
+
+
+
+	
+1. Trust	and	Transparency	-	an	inherent	feature	of	blockchain	technology,	further	
+
+enhanced	with	smart	contracts	
+Recording	and	confirming	a	trade	on	the	Traxia	blockchain	will	create	higher	levels	
+of	trust	in	B2B	trades.	A	Seller	and	Buyer	are	asked	to	sign	such	trade	transaction	
+using	their	private	keys	to	record	and	create	an	immutable	entry	on	a	blockchain.	
+The	 technology	 makes	 it	 seamless	 to	 assign	 privileges	 to	 data	 entries	 in	
+accordance	to	the	role	of	each	participant	such	as:	Trading	Businesses,	Investors,	
+Regulators,	 Logistic	 Providers	 etc.	 therefore	 combining	 data	 ownership	with	 a	
+new	level	of	transparency	as	needed.	Use	cases	around	IoT	and	business	process	
+automation	will	be	the	focus	of	our	next	phase.	Such	use	cases	have	the	potential	
+to	further	increase	supply	chain	transparency.		
+	
+
+2. Securitization	and	Standardization	–	the	initial	Traxia	focus,	with	LiqEase	
+developing	the	use	case		 	 	
+Securitization	can	be	attractive	to	both	bank	and	non-bank	investors.	For	banks,	
+securitization	allows	them	to	economize	on	capital	and/or	liquidity	and	reduce	US	
+dollar	funding	needs,	while	preserving	a	return	on	firms’	expertise/comparative	
+advantage	in	originating	and	managing	trade	finance	loans.	Distribution	to	outside	
+investors	can	also	free	up	counterparty	space	on	balance	sheets	and	reduce	trade	
+loan	concentrations.		
+	
+For	non-bank	investors,	direct	or	indirect	investment	in	trade	finance	assets	offers	
+a	potentially	attractive	return	relative	to	risk.	We	will	 introduce	how	Traxia	will	
+use	 blockchain	 technology	 to	 streamline	 the	 securitization	 process	 below.	
+Standardization	ranks	among	the	Top	3	challenges	of	having	more	 institutional	
+investors	entering	export	 finance	 (International	Chamber	of	Commerce,	2016).	
+The	Traxia	Ecosystem	will	provide	standardized	processes	and	products	to	make	
+the	issuance	of	a	Smart	Contract	backed	by	trade	more	seamless	with	the	support	
+of	our	technology	provider	LiqEase	Limited.				
+
+	
+3. Access	to	capital	markets	through	decentralization	
+
+Traxia	 will	 decentralizes	 trade	 finance	 technology	 and	 will	 work	 closely	 with	
+international	regulators	to	make	such	an	open	market	possible.	The	largest	global	
+banks	account	for	a	quarter	to	a	third	of	the	global	supply	of	bank-intermediated	
+trade	 finance,	 with	 local	 and	 regional	 banks	 providing	 the	 remainder	
+(International	Chamber	of	Commerce,	2017).	Such	centralization	comes	with	the	
+disadvantage	 of	 dedicated	 market	 knowledge	 that	 favours	 local	 and	 regional	
+banks.	Those	banks	on	the	other	hand	face	the	disadvantage	of	L/Cs	being	80%	
+denominated	 in	US	Dollars	which	makes	refinancing	 in	US	Dollars	a	hurdle	and	
+major	 obstacle	 for	 those	 banks	 (Bank	 for	 International	 Settlement,	 2014).	 In	
+result,	61%	of	banks	perceive	that	there	is	more	demand	than	supply	for	trade	
+finance	 (International	 Chamber	 of	 Commerce,	 2017).	 Decentralization	 has	 the	
+potential	 to	 stabilize	 the	 trade	 finance	 markets.	 New	 entrants	 such	 as	 fixed	
+
+
+
+income	funds	can	get	access	to	a	standardized	trade	finance	product	similar	to	a	
+corporate	bond.	Such	a	digital	platform	can	also	provide	credit	risk	insurers	with	
+an	additional	channel	to	sell	their	products	directly	to	SMEs.				
+
+	
+Our	 proposed	model	 for	 optimizing	 financial	 flows	 in	 supply	 chains,	 turns	 the	
+
+actors	within	 the	 supply	 chain	 into	 intermediaries	who	can	overcome	 the	problem	of	
+asymmetric	 information	between	 capital	markets	 (e.g.	 banks)	 and	 the	parties	 seeking	
+capital.	
+	
+	
+The	Smart	Contract	
+	
+
+Traxia	 creates	 a	 new	 trade	 finance	 platform	 that	 operates	 through	 smart	
+contracts	 running	 on	 a	 blockchain.	 Those	 smart	 contracts	 hold	 information	 such	 as	
+volume	 and	 duration	 of	 an	 underlying	 trade,	while	 also	 becoming	 interoperable	with	
+existing	Enterprise	Resource	Planning	(ERP)	Systems,	Payment	Networks	such	as	SWIFT,	
+[Ripple	 Settlement	 System]	 and	 others.	 Traxia	 is	 also	 a	 tool	 to	model	 and	 automate	
+business	processes	to	save	time,	costs	and	generate	a	higher	efficiency	for	corporates	
+along	their	respective	supply	chains.	
+	
+
+As	argued	by	Hans-Christian	Pfohl	and	Moritz	Gomm	in	their	paper	‘Supply	chain	
+finance:	optimizing	financial	flows	in	supply	chains’,	the	proposed	model	for	financing	the	
+supply	 chain,	 turns	 the	 actors	 within	 the	 supply	 chain	 into	 intermediaries	 who	 can	
+overcome	the	problem	of	asymmetric	information	mentioned	above.	
+	
+
+Traxia	will	 take	their	scientific	model	that	has	been	proven	successfully	using	a	
+qualitative	approach,	as	our	underlying	assumption	to	improve	cash	allocation	into	trade-
+related	 financial	 products.	 In	 a	 nutshell,	 their	 model	 assumes	 that	 the	 information	
+asymmetry	between	actors	within	the	supply	chain	and	financial	 institutions	providing	
+cash	liquidity	can	be	solved	by	making	the	supply	chain	actors	part	of	the	financial	supply	
+chain.	We	 therefore	make	 the	 B2B	 trade	 intermediaries	 (Buyers,	 Sellers)	 part	 of	 the	
+financial	supply	chain	by	letting	them	issue	the	trade	related	smart	contracts	using	our	
+technology.	 We	 therefore	 propose	 the	 following	 Actors	 to	 be	 part	 of	 the	 Traxia	
+Blockchain	Ecosystem	for	Trade	Finance.	Besides	 the	Traxia	 itself,	we	have	companies	
+engaging	 in	a	B2B	trade	which	we	call	Sellers	and	Buyers,	as	well	as	 Investors,	 Issuing	
+Providers,	 Listing	 Providers	 and	 a	 facility	 to	 warehouse	 loans	 which	 will	 be	 initially	
+provided	by	Quark	Finance	and	we	are	aiming	to	onboard	further	providers	globally.		
+	
+	
+The	Actors	
+	
+
+1. Seller	
+A	company	that	is	offering	a	product	for	sale.	In	our	ecosystem,	it	also	represents	
+the	party	that	is	looking	to	improve	its	cash	liquidity	and,	solely	or	jointly	with	the	
+Buyer,	 looking	to	 issue	a	smart	contract	representing	a	trade	obligation.	 In	the	
+Traxia	ecosystem,	these	are	often	SMEs.	
+
+	
+
+
+
+2. Buyer	
+A	company	that	is	purchasing	the	product.	In	the	Traxia	ecosystem,	the	Buyer	is	
+often	a	larger	corporation	which	generally	has	a	better	credit	rating	than	an	SME	
+Seller.		Better	ratings	can	be	used	to	mitigate	the	risk	for	the	Investors	if	the	smart	
+contract	representing	the	trade	obligation	is	jointly	issued,	which	is	similar	to	the	
+reverse	factoring	model.	In	short,	a	large	company	like	Porsche,	is	more	than	likely	
+to	pay	than	a	smaller	company	and	that	ability	to	pay	can	help	the	credit	rating	of	
+the	contract.	
+	
+3. Investors		
+A	person	or	organization	that	puts	money	into	financial	products,	assets,	etc.	with	
+the	expectation	of	achieving	a	profit.		
+	
+4. Issuing	Provider	
+Due	to	the	novelty	of	putting	trade-finance	on	a	blockchain,	Traxia	came	up	with	
+the	concept	and	role	of	the	‘Issuing	Provider,’	which	is	the	technology	provider	
+that	setups	and	maintains	the	Traxia	platform.		
+	
+The	 issuing	provider	creates	a	platform	to	streamline	the	process	of	uploading	
+and	 validating	 business	 and	 trade	 details	 by	 combining	 commonly	 used	 web	
+technologies	with	a	modern	blockchain	infrastructure	running	on	the	backend	in	
+a	manner	that	is	transparent	to	the	Buyer,	Seller	or	Investor.	The	only	exposure	
+that	the	actor	would	have	to	the	blockchain	is	the	need	to	sign	a	transaction	with	
+an	individual	private	key/passphrase	that	has	been	assigned	to	the	user.	
+	
+The	 issuing	 provider	will	 be	 responsible	 for	 the	 technical	 integration	 of	 rating	
+agencies	and	data	providers	e.g.	accessing	directly	via	Oracles	or	more	traditional	
+via	API	interfaces	as	well	as	provide	access	to	licensed	payment	gateways	to	make	
+settlement	of	fiat	currencies	possible	between	actors.			
+
+	
+To	sum	it	up,	the	Issuing	Provider:	
+-										Sets	up	and	maintains	the	technical	infrastructure	to	gather	information	
+relevant	 for	 issuing	 the	 smart	 contract	 on	 behalf	 of	 the	 Buyer	 and/or	 Seller	
+representing	a	B2B	trade	and	 including	 information	such	as	 ‘Contract	Volume’,	
+‘Contract	Currency’,	‘Contract	Duration’	etc..		
+-										Implement	standards	to	guide	Buyers	and	Sellers	through	a	due	diligence	
+process	 including	 KYC	 and	 AML	 checks	 based	 on	 Business	 Certificates,	 staff	
+Passports,	Financial	Statements,	audits,	letters	of	good	standing	etc.	
+-										Take	necessary	technical	precautions	in	terms	of	data	safety	and	
+-										Implement	the	public	key,	asymmetric	encryption	method	to	let	Buyers	and	
+Sellers	digitally	sign	their	smart	contract	and	digital	asset	issuing	transactions					
+	
+	
+5. Listing	Providers		
+A	Listing	Provider	is	a	marketplace	that	matches	investors	of	securities	with	listed	
+and	unlisted	securities.	A	 listed	security	 is	a	 financial	 instrument	 that	 is	 traded	
+through	an	exchange.	Exchanges	have	 listing	 requirements	 to	ensure	 that	only	
+
+
+
+high-quality	securities	are	traded	on	them	to	maintain	the	exchange's	reputation	
+among	investors.		
+	
+Although	there	is	increased	scrutiny	of	regulators	regarding	cryptocurrencies	and	
+increased	targeting	of	fraudulent	ICO	business	practices,	there	is	in	no	jurisdiction	
+that	has	a	dedicated	set	of	rules	and	 laws	 in	place	to	categorize	a	digital	asset	
+and/or	blockchain	token.	Also	considering	that	accounts	receivables	are	 in	 fact	
+categorized	 as	 current	 assets	 under	 international	 bookkeeping	 standards,	 it	
+seems	unlikely	to	see	a	new	set	of	rules	approaching	that	will	transform	accounts	
+receivables	into	a	security,	as	traditional	factoring	services	have	been	in	operation	
+for	 many	 years.	 In	 some	 markets,	 like	 the	 US,	 UK	 and	 Brazil,	 factoring	 is	
+unregulated,	 giving	 commercial	 factors	 an	 advantage	 over	 their	 bank	
+counterparts	in	the	traditional	factoring	field.		
+
+	
+6. Loan	Warehousing		
+Loan	Warehousing	is	the	initial	process	of	acquiring	debt	from	various	sources,	
+as	an	example,	a	bank	or	similar	institution	providing	funds	to	a	borrower	
+without	using	the	bank’s	own	capital.	In	the	Traxia	ecosystem,	debts	that	arise	
+from	B2B	trade	transactions	that	do	not	“find”	an	immediate	Liquidity	Provider	
+are	warehoused.	Our	technology	provider	LiqEase	managed	to	acquire	a	
+strategic	partner	(Quark	Finance)	to	do	exactly	that	especially	for	China	but	also	
+abroad.				
+	
+About	Quark	Finance	
+	
+Quark	Finance	is	a	leading	Chinese	financial	services	company	focused	on	
+consumer	finance	and	risk	management.	Its	principle	business	segments	are	
+personal	and	small	business	loans,	point-of-sale	installments,	and	auto	finance.	
+The	headquarters	is	in	Shanghai	and	Quark's	businesses	cover	all	major	cities	in	
+Mainland	China.	Quark	was	named	in	2016	to	the	directorship	of	the	National	
+Internet	Finance	Association	of	China	and	also	selected	as	one	of	KPMG	China's	
+Top	50	financial	technology	companies	at	the	same	year.	For	more	information,	
+please	visit	www.quarkfinance.com.	
+
+	
+The	team	around	Traxia	therefore	successfully	managed	to	close	the	assumed	
+bottleneck	for	the	ecosystem	and	showcased	that	the	team	is	able	to	deliver	and	
+execute.	Traxia	will	further	be	working	with	Creditsafe,1	a	rating	agency	whose	
+scores	are	recognized	by	major	Credit	Insurers	such	as	Euler	Hermes	and	Coface.		
+	
+7. Risk	management	and	3rd	party	data	providers		
+Data	providers	such	as	https://www.cynopsis-solutions.com	are	integrated	via	
+APIs	and	allow	us	to	conduct	Know-Your-Customer	and	Anti-Money	Laundering	
+checks.	Providers	such	as	https://www.creditsafe.com/	are	connected	to	the	
+platform	to	validate	information	provided	by	the	businesses	that	register	and	
+want	to	access	finance	through	the	Traxia	Ecosystem.	The	credit	scores	that	are	
+
+																																																								
+1	www.creditsafe.com	
+
+
+
+provided	by	Creditsafe	are	accepted	by	large	credit	insurance	companies	such	as	
+Euler	Hermes	(http://www.eulerhermes.com/Pages/default.aspx)	and	Coface	
+(http://www.coface.com/).	Allowing	only	‘high	score’	companies	to	access	
+finance	through	our	ecosystem	can	therefore	always	be	combined	with	a	trade	
+insurance	that	is	covering	up	to	100%	of	the	trade	and	therefore	reducing	the	
+risk	significantly	for	professional	investors	investing	in	those	assets	through	our	
+platform.	We	are	in	touch	and	discussions	with	further	data	providers	such	as	
+Zhima	Credit	(Ant	Financial)	in	China	and	Quark	Finance	also	has	its	own	
+database	to	better	evaluate	local	businesses	and	their	ability	to	pay.	In	essence	
+the	focus	is	on	high	quality	assets	only	to	begin	with.	This	approach	is	combined	
+with	2	party	verification	of	the	trade	and	both	Buyer	and	Seller	have	to	confirm	
+such.	Scoring	through	3rd	party	data	providers	as	well	as	insuring	the	trade	are	a	
+further	addition	to	reduce	the	risk	for	institutional	investors	investing	through	
+our	platform.		
+
+	
+	
+Tokenized	access	to	the	Traxia	platform	
+	
+Our	membership	model	is	straightforward	and	involves	two	types	of	access	a)	accessing	
+the	 ecosystem	 through	 Issuing	 and	 Listing	 services	 and	 b)	membership	 fee	 on	 a	 per	
+transaction	basis	to	be	settled	in	Traxia	Membership	Token	(TMT)	at	the	conversion	rate	
+of	when	the	Issuing	and	Listing	services	have	been	provided.	
+	
+The	following	diagram	illustrates	the	business	model:	
+	
+
+	
+	
+As	 illustrated	 in	 the	 graphic	 above,	 the	 technology	 provider	 LiqEase	 is	 providing	 the	
+services	of	Listing	and	Issuing	to	interested	Buyers	and	Sellers	to	access	the	ecosystem.	
+LiqEase	can	be	compared	to	the	Ethereum	Switzerland	GmbH	which	is	associated	to	the	
+Ethereum	Foundation	and	is	entitled	to	use	the	funds	of	the	Crowdsale	according	to	the	
+statute	of	the	Foundation.	For	establishing	the	basis	of	the	Traxia	Ecosystem,	LiqEase	as	
+
+3008.02.18
+
+Invoice 
+Volume
+
+Discount Total cost 
+of funding
+
+$ 1.000.000 6% $ 60.000
+
+$ 50.000 Investor 
+(Spread)
+
+$ 10.000
+LiqEase
+(service fee 
+due in TMT)
+
+1
+
+Issuing Service Listing Service Ecosystem Fee *)
+
+30-60% 30-60% 0-20% 
+
+$ 3.000-6.000 $ 3.000-6.000 $ 0-2.000
+
+2
+
+LiqEase places an order on a marketplace where TMT is
+traded based on the market rate and in accordance with
+the Total Service Fee which is 1% in the example. 
+
+1
+
+The Service fee is paid in TMT in accordance to the services
+provided by the company in question. 
+
+2
+
+
+
+well	as	Traxia	are	therefore	entitled	to	a	share	of	the	overall	proceeds	as	illustrated	above.	
+Whereas	Issuing	and	Listing	Fees	is	allocated	to	LiqEase	and	Ecosystem	fee	to	Traxia.		
+	
+What	we	already	built	
+	
+
+	
+Figure	4:	LiqEase	home	page	
+
+	
+Award	winning	LiqEase2	is	a	Limited	company	registered	in	Hong	Kong	since	2017	
+
+and	borne	out	of	a	project	that	begun	in	2016.	LiqEase	is	the	technology	provider	within	
+the	 Traxia	 ecosystem	 providing	 Issuing	 and	 Listing	 Services	 to	 Buyers,	 Sellers	 and	
+Investors.		
+
+LiqEase	has	thus-far	built	a	simple	and	user-friendly	Web-Interface	that	can	be	
+used	today	by	Buyers	and	Sellers	to	upload	their	invoice.	In	the	backend	LiqEase	is	running	
+a	blockchain	application	 layer	 for	various	blockchains	such	as	Ethereum	and	will	build	
+upon	Cardano	when	ready.	LiqEase	Limited	operates	as	a	Listing	provider	i.e.	running	an	
+Over-The-Counter	 market	 which	 targets	 professional	 investors	 as	 defined	 by	 the	
+regulators	in	Hong	Kong	[15].	You	can	find	out	more	about	LiqEase	at	http://liqease.co	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+																																																								
+2	Liqease	was	the	winner	of	SLUSH	Shanghai	2017	(http://www.slush.org/news/liqease-to-win-the-
+slush-shanghai-pitch-competition/)			
+
+
+
+	
+	
+	
+The	workflow	of	the	current	product	built	by	LiqEase	is	as	follows:	
+
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+
+
+	
+Figure	5:	a	simplified	version	of	LiqEase	process	(to	see	a	video	of	the	process	
+visit:	https://goo.gl/jNHuna	
+
+	
+	
+
+As	the	assets	created	on	the	platform	are	merely	a	digital	representation	of	a	real	
+trade	asset	 issued	by	the	Buyers/Sellers,	there	is	no	need	for	an	International	Security	
+Identification	Number	(ISIN).	In	addition,	there	is	no	custodian	as	the	digital	version	of	
+the	 asset	 has	 already	 been	 digitally	 signed	 by	 the	 Supplier	 and/or	 Buyer	 with	 their	
+respective	private	keys	and	recorded	on	a	blockchain.	As	the	blockchain	is	distributed,	
+this	 adds	 an	 additional	 layer	 of	 trust	 as	 compared	 to	 a	 traditional	 central	 custodian	
+safekeeping	 the	 asset.	 The	 asset	 is	 then	 listed	 on	 the	 marketplace	 instantly	 and	
+settlement	times	can	easily	be	reduced	to	minutes	rather	than	days.	
+	
+	
+Initial	Proof	of	Concept	
+	
+
+In	one	of	its	first	use	cases,	LiqEase	was	the	Issuing	Provider	and	Listing	Provider	
+for	a	Porsche	Digital	Innovation	Project	(the	Buyer)	who	listed	a	30	days	invoice	worth	
+around	$	50.000	in	total.	The	Seller	was	VOK	Dams	and	a	3rd	party	corporate	investor	was	
+the	 Liquidity	 Provider.	 The	 smart	 contract	 was	 registered	 on	 the	 Proof	 Ethereum	
+Blockchain	under	the	transaction	number:	
+http://www.proofsidechain.com/#/transaction/0x7453e318039cc04c08cfb475ec62b21
+07bc9898361138de71eef32285a7b9475.		
+	
+
+LiqEase	 is	 currently	working	 on	 another	 project	 involving	 another	German	 car	
+manufacturer,	as	well	as	on	projects	in	the	Fast-Moving	Consumer	Goods	(FMCG)	sector.	
+LiqEase	 expects	 to	 work	 on	 a	 number	 of	 different	 financing	 projects	 during	 2018.	
+Focusing	its	activity	on	the	multi-billion-dollar	trade	corridor	between	Europe	and	China.	
+	
+	
+	
+	
+	
+
+
+
+Traxia	and	LiqEase	
+	
+
+Traxia	is	a	non-profit	foundation	being	established	under	the	laws	of	Switzerland.	
+It	is	the	creator	and	initiator	of	the	blockchain	model	described	in	this	paper.	The	Traxia	
+foundation’s	 mission	 is	 to	 promote	 and	 support	 the	 Traxia	 platform	 through	
+development	and	education	and	provide	buyers,	sellers	and	investors	around	the	world	
+with	a	more	accessible,	 transparent	and	more	trustworthy	system	to	engage	 in	global	
+trade.	
+	
+
+The	Traxia	foundation	will	support	projects	like	LiqEase	and	can	invest	in	entities	
+and	projects	that	support	the	purpose	of	the	foundation	as	stated.		
+	
+
+LiqEase	 operates	 a	 for	 profit	 businesses	 and	 is	 building	 the	 gateways	 and	
+applications	to	connect	and	be	part	of	the	Traxia	ecosystem.	LiqEase	 is	an	Issuing	and	
+Listing	Provider	and	is	in	fact	the	first	successful	proof	of	concept	of	the	Traxia	ecosystem.	
+	
+
+Coming	 back	 to	 our	 initial	 assumption,	 the	 Traxia	 platform	 creates	 more	
+transparency	within	a	supply	chain	by	integrating	smart	contracts	into	business	processes	
+and	is	creating	the	basis	for	Buyers	and	Sellers	in	B2B	trade	to	become	active	participants	
+in	supply	chain	finance,	hence	improving	the	information	symmetry	between	the	supply	
+chain	and	capital	markets.	Higher	 information	transparency	between	actors,	 increases	
+the	likelihood	that	financing	can	be	provided	for	an	asset	that	is	issued	by	a	Seller/Buyer.		
+	
+
+The	development	of	LiqEase	increases	the	demand	for	the	TMT	and	improvement	
+of	 the	Smart	Contracts,	creating	higher	 levels	of	 transparency	within	 the	supply	chain	
+powered	by	the	Traxia	Foundation.		
+	
+	
+	
+Business	Strategy		
+	
+
+Our	strategy	focuses	on	creating	a	network	effect	as	our	decentralized	trust	and	
+transparency	ecosystem	enables	us	 to	do	so.	We	will	use	 the	well-known	bowling	pin	
+strategy	 i.e.	 start	 with	 a	 niche	 market,	 and	 then	 move	 to	 other	 niches	 and	 broader	
+markets.		
+	
+	
+Stage	1	
+	
+
+Focusing	on	the	supply	side	first:	Traxia	will	work	to	accepted	and	used	by	sellers	
+to	 finance	 their	 B2B	 trade.	 Establishing	 partnerships	 with	 distributors	 that	 have	 an	
+existing	relationship	with	those	suppliers	and	a	vetted	interest	in	successfully	financing	
+such	deal	can	enable	instant	scale.		
+	
+
+To	 achieve	 that,	 we	 will	 partner	 with	 distributors,	 importers	 and	 exporters	
+focusing	 on	 the	 FMCG	market	 segment	 first	 in	 particular	 the	 trade	 corridor	 between	
+Europe	 and	 China.	 We	 are	 already	 in	 positive	 talks	 with	 major	 players	 and	 working	
+
+
+
+together	 with	 a	 team	 belonging	 to	 Intermarché	 which	 in	 2016	 had	 a	 turnover	 that	
+surpassed	€30bn	USD.		
+	
+
+To	 get	 a	 head	 start	 and	 accelerate	 growth,	 the	 Loan	Warehousing	 Facility	will	
+provide	a	strategic	advantage	over	competitors	and	makes	it	possible	to	streamline	the	
+process	from	the	originating	of	the	debt	to	the	bundling	and	securitization	aspect	which	
+is	relevant	for	institutional	investors	to	deploy	their	money	efficiently.	
+	
+
+The	goal	is	to	use	the	Warehousing	as	an	entry	strategy	for	different	markets	with	
+large	 gaps	 in	 trade	 credit	 and	 traditionally	 low	 default	 rates.	 It	 will	 be	 replaced	 by	
+independent	banks	and	investors	at	a	later	stage	to	fully	decentralize	the	market.		
+	
+	
+Stage	2	
+	
+
+Educate	the	initial	client	base	and	foster	word-of-mouth	campaigns	through	the	
+creation	of	a	referral	program.		
+	
+	
+Stage	3	
+	
+
+Broader	market	adoption	by	targeting	global	investors	such	as	hedge	funds.	The	
+more	Traxia	is	recognized	as	a	reliable	ecosystem,	the	easier	it	will	be	to	expand	globally.	
+Education	will	again	be	key.	Traxia	will	need	to	show	investors	how	they	can	tap	into	a	
+new	market	of	standardized	trade	assets	on	the	basis	of	immutable	smart	contracts	that	
+is	only	accessible	through	the	Traxia	Ecosystem	and	its	partners.	
+	
+	
+	
+Product	Architecture	and	Development	Roadmap	
+	
+Concerning	our	product	development,	our	roadmap	looks	as	follows:	
+	
+
+V1	(alpha)	January	2018		
+V1	(beta)	March	2018	
+Monolith	API	(PHP),	web	clients	(Angular	4	/	Typescript)	
+	
+V2	April	2018	
+Monolith	API	(PHP),	web	clients	(Angular	4	/	Typescript)	
+	
+V3	June	/	July	2018	
+Microservice	API	(NodeJS/Typescript/GraphQL),	webclient	
+(ReactJS/Typescript/Redux),	mobileclient	(React	Native/Typescript/Redux)	
+
+	
+	
+	
+
+
+
+V1	
+	
+
+In	terms	of	architecture,	we	have	three	entities	working	together.	
+	
+
+First,	we	build	the	core	of	the	project	around	our	first	use	case	and	initial	focus	to	
+make	 the	 Traxia	 ecosystem	 viable	 i.e.	 our	 CMS,	 Liqease.com.	 This	 CMS	 has	 been	
+developed	using	robust	technologies	such	as	(PHP,	Typescript,	Angular).	The	CMS	has	a	
+monolith	architecture	API	(PHP)	and	uses	Angular	4/Typescript	as	client.	
+	
+
+Second,	we	have	 a	marketplace	where	 professional	 investors	 can	 trade	digital	
+assets	that	are	collateralized	by	invoices	and	other	relevant	contracts	in	relation	to	such	
+a	trade.	This	marketplace	is	powered	using	an	open	source	projects	(currently	proofsuite	
+and	we	are	in	close	contact	with	their	development	team	and	CTO	-	Tai	Kersten).	We	are	
+also	working	with	other	open	source	projects	for	operating	such	a	marketplace	such	as	
+e.g.	Lykke	and	are	in	touch	with	their	Singapore	team	(Zheng	Wei	Quah	and	Alan	Laubsch).	
+		
+
+Third,	the	ecosystem	will	be	powered	by	a	membership/voucher	Token	(TMT)	that	
+remunerates	 and	 incentivizes	 the	 participants	 and	 technology	 providers	 within	 the	
+ecosystem.		
+	
+V2	
+	
+
+Our	 second	 version	 will	 have	 a	 different	 approach,	 based	 on	 the	 latest	 client	
+feedback	 as	 well	 as	 the	 product	 roadmap	 and	 the	 necessary	 flexibility	 within	 that	
+roadmap.	The	key	philosophy	is	to	ease	the	process	and	make	the	platform	as	easy	to	use	
+as	possible	for	our	users.	
+	
+
+Traxia	will	also	develop	the	next	generation	of	the	CMS	and	use	a	microservice	
+API	architecture	 (NodeJS/Typescript/GraphQL)	 that	will	be	responsible	 to	organise	 the	
+different	 services	 and	 clients.	 Our	 platform	 clients	 will	 be	 web	 client	
+(ReactJS/Typescript/Redux)	and	mobile	client	(React	native/Typescript/Redux)	
+	
+
+The	 second	 version	 of	 the	 product	 will	 be	 built	 on	 the	 Cardano	 Blockchain	
+Infrastructure.	The	TMT	Token	will	be	made	available	on	Cardano	and	we	believe	a	more	
+seamless	 integration	 between	 the	 Traxia	 Ecosystem	 requiring	 TMT	 to	 pay	 for	 the	
+technical	services	provided	by	LiqEase.					
+	
+V3	
+	
+
+The	third	version	will	focus	on	the	Smart	Contracts	and	making	them	‘truly	smart’.	
+Our	focus	in	V1	and	V2	is	to	satisfy	market	demand	and	prove	that	a	blockchain-based	
+solution	is	viable	for	trade	finance.	Operating	a	stable	and	scalable	product	that	solves	
+the	trade	finance	gap	utilizing	a	blockchain	for	securitization	of	the	underlying	trade	will	
+give	us	the	necessary	fundamentals	to	evolve	the	product	over	time	and	integrate	smart	
+contracts	into	the	enterprise	systems	and	workflows.		
+	
+
+
+
+Further	details	about	the	Technology	and	Smart	Contracts	can	be	found	 in	the	
+Annex.		
+	
+	
+Traxia	Membership	Token	(TMT)	Sale	
+		
+
+To	 fund	 the	 initial	 operation	 and	 creation	 of	 the	 Traxia	 platform,	 we	 will	 be	
+offering	the	sale	of	TMT	tokens.		
+	
+
+The	supply	of	TMT	is	limited	to	a	maximum	of	max.	one	billion	(1,000,000,000)	
+tokens	in	total,	including	those	available	for	sale	during	the	Token	Sale.	The	tokens	will	
+be	generated	upon	the	token	launch	and	will	be	distributed	in	the	following	manner:	
+	
+
+70%	
+of	the	tokens	will	be	eventually	allocated	amongst	the	community.	Distributed	in	
+the	following	order	40%	+	20%	+	5%	+	5%	
+	
+20%	
+will	be	allocated	to	the	foundation	creation,	development	team,	early	backers.	
+	
+10%	
+will	 be	 allocated	 to	 treasury	 with	 the	 purpose	 of	 providing	 TMT	 Liquidity	 if	
+necessary	as	well	as	being	a	contingency	fund.	
+	
+
+	
+The	 Traxia	 crowdsale	 and	 the	 corresponding	 token	 creation	 process	 will	 be	
+
+organized	 around	 smart	 contracts	 running	 on	 the	 Ethereum	 blockchain.	 Participants	
+willing	to	support	the	development	of	the	Traxia	project	can	do	so	by	sending	Ether	(ETH)	
+and	ADA	tokens	to	the	designated	address.	By	doing	so,	they	are	purchasing	TMT	at	the	
+rate	of	1	TMT	per	US$	0.055	which	will	be	sent	to	their	ETH	wallet	after	the	sale.	Any	ADA	
+and	ETH	that	is	send	to	the	designated	address	will	be	converted	to	TMT	at	market	rate	
+of	ETH,	ADA	to	US$	each	day	during	the	sale	at	12.30	pm	(UTC+8).	ADA,	ETH	that	has	
+been	transferred	within	the	24	hours	previous	to	12	pm	(UTC+8)	on	each	given	day	during	
+the	sale	will	be	included	in	the	daily	conversion	and	TMT	distributed	to	the	ETH	address	
+that	has	been	provided	by	the	purchaser.			
+	
+
+Allocation	 Percentage		 Distribution		
+
+400,000,000	First	Token	Sale	 40%	 TMT	Token	Pre-Sale	(March	
+2018)	and	Token	Sale	in	
+March-May	2018.	Unsold	
+TMT	will	be	burned.		
+
+200,000,000	Liquidity	Pool	 20%	 Additional	 Token	 Sale	 in	 2-3	
+years’	time.	
+
+
+
+100,000,000	Treasury	 10%	 Emergency	Fund	&	Legal	Fees	
+-	These	will	be	subject	to	a	2-
+year	lock-up.		
+
+50,000,000	Bounty	Program			 5%	 Distributed	to	developers	for	
+backing	the	project	over	the	
+first	2	years	until	projected	
+profitability.		
+
+50,000,000	Advisors	 5%	 Advisor	will	be	subject	to	
+60%	locked	for	12	months;	
+40%	locked	for	24	months	
+
+200,000,000	 Team	Members,	
+Early	Backers	and	Investors		
+
+20%	 Team	member	and	Investors	
+will	be	subject	to	60%	locked	
+up	for	12	months;	40%	locked	
+up	for	24	months	
+
+	
+ 
+
+ 
+Token	Demand	and	Supply	
+	
+
+The	price	for	the	TMT	will	be	priced	by	markets	and	exchanges,	identical	to	any	
+other	token.	As	our	network	and	ecosystem	grows	—	more	Buyers	and	Sellers	 issuing	
+their	digital	assets	using	the	services	from	Issuing	and	Listing	Providers	in	the	ecosystem	
+—	the	total	amount	of	TMT	remains	fixed	to	max.	1,000,000,000	Tokens.	Such	an	upper	
+ceiling	triggers	 traditional	market	dynamics,	as	soon	as	Buyers	and	Sellers	 issue	smart	
+contracts	 representing	 their	 B2B	 trade	 obligation,	 generating	 TMT	 demand	 since	 a	
+membership	is	required	to	access	the	ecosystem.		
+	
+
+
+
+Token	Amounts	and	Discounts	during	Pre-Sale	and	Sale	
+	
+The	total	amount	of	TMT	Tokens	sold	in	will	be	400,000,000.00	in	this	first	Token	Sale.	
+The	price	for	the	TMT	will	be	reduced	during	the	pre-Sale	and	early	phases	of	the	sale	as	
+follows:	
+Phase		 Pre/Private-
+
+Sale		
+Sale	 (1st	
+round)		
+
+Sale	 (2nd	
+round)	
+
+Sale	 (3rd	
+round)	
+
+Total	sale	
+
+TMT	
+Max	
+Amount		
+
+220,000,000	 180,000,000	 Depending	
+on	
+previous	
+round3	
+
+Depending	
+on	
+previous	
+round	
+
+400,000,000	
+
+Discount		 40%		 20%		 10%	 0%	 na	
+
+Max.	
+USD	
+
+7,260,000	 7,920,000	 Depending	
+on	
+previous	
+round	
+
+Depending	
+on	
+previous	
+round	
+
+15,180,000	
+
+	
+	
+Usage	of	Proceeds	from	Token	Sale		
+	
+Business	Area	 Max.	budget	in	USD		 Portion	of	Budget	 Activities		
+Business	
+Development	&	Sales	
+
+~4,554,000	 ~30%	 Salaries	 and	 Sales	
+Related	Expenses	
+
+Smart-Contract	
+Development		
+
+~6,070,000	 ~40%	 Product	
+development	
+
+Legal	and	Compliance	 ~2,277,000	 ~15%	 Company	
+establishment,	
+Contracts,	licenses		
+
+Liquidity	Buffer		 ~2,277,000	 ~15%	 Manage	
+Uncertainty		
+
+Loan	Warehousing		 ~0	 ~0%	 Loan	Warehousing4	
+
+	
+Team		
+	
+
+The	LiqEase	core	 team	holds	deep	expertise	 in	 launching	and	executing	digital	
+projects	 successfully	 both	 independently	 and	 for	 large	 corporations.	 The	 team	 has	 a	
+variety	of	knowledge	in	various	disciplines	such	as	digital	platforms,	payments,	fintech,	
+FMCG,	supply	chain	management,	software	engineering	and	more.	Profiles	of	the	team	
+members	are	posted	on	www.traxia.co			
+	
+																																																								
+3	in	all	phases	combined	the	total	amount	of	TMT	sold	can	not	be	more	than	
+400,000,000.00	during	the	Token	Sale	from	March-May	2018	
+4	The	Loan	Warehousing	Facility	will	be	covered	through	3rd	party	investors	such	as	e.g.	
+Quark	Finance		
+
+
+
+	
+	
+Legal		
+	
+Important	Notice	
+This	document	contains	the	terms	and	conditions	(the	"Terms")	which	govern	the	Token	
+Generating	Event	("TGE")	of	the	Traxia	Foundation	("Traxia	Foundation").	In	the	TGE,	the	
+Traxia	Foundation	will	issue	[ERC20]	tokens	(the	“Traxia	Tokens”)	to	participants	making	
+contributions	in	the	course	of	the	TGE	(the	“Participants”),	which	grant	certain	rights	as	
+set	 out	 herein	 and	 in	 the	 Traxia	 Foundation's	 Whitepaper	 (the	 "Whitepaper").	
+Participants	must	read,	understand	and	consent	to	both	the	Terms	and	the	Whitepaper	
+and	 sign	 a	 pertaining	 Token	 Purchase	 Agreement,	 all	 available	 at	
+https://www.traxia.co/terms-and-conditions,	before	they	participate	in	the	TGE.		
+The	 Traxia	 Foundation	 is	 a	 foundation	 established	 under	 the	 laws	 of	 Switzerland	 and	
+registered	in	the	commercial	register	of	the	state	of	Zug;	its	legal	domicile	is	in	Zug.	The	
+projects	 which	 the	 Traxia	 Foundation	 pursues	 are	 described	 in	 detail,	 though	 not	
+comprehensively,	in	the	Whitepaper.		
+	
+No	Solicitation	
+Participants	interested	in	supporting	the	Traxia	Foundation	and	its	projects	may	do	so	by	
+acquiring	 Traxia	 Tokens	 and	 following	 the	 procedure	 set	 out	 herein	 as	well	 as	 in	 the	
+Whitepaper,	having	agreed	in	advance	to	the	Terms	and	the	Whitepaper.	
+Neither	these	Terms	nor	the	Whitepaper	do	constitute	an	offer	to	sell,	or	a	solicitation	of	
+an	offer	to	buy,	an	interest	in	any	jurisdiction	in	which	it	is	unlawful	to	make	such	an	offer	
+or	solicitation.	Neither	the	Swiss	Financial	Market	Supervisory	Authority	(FINMA),	the	U.S.	
+Securities	 and	 Exchange	 Commission	 (SEC)	 nor	 any	 other	 federal,	 state,	 or	 foreign	
+regulatory	 authority	 has	 approved	 a	 contribution	 to	 the	 Traxia	 Foundation	 or	 the	
+acquisition	 of	 the	 Traxia	 Tokens.	 Furthermore,	 the	 foregoing	 authorities	 have	 not	
+confirmed	the	accuracy	or	determined	the	adequacy	of	these	Terms,	nor	is	it	intended	
+that	 the	 foregoing	authorities	will	do	 so.	Any	 representation	 to	 the	contrary	 is	 illegal.	
+Accordingly,	Participants	will	not	be	afforded	the	protection	of	respective	laws.	
+Furthermore,	 Participants	 confirm	 that	 they	 have	 not	 been	 solicited	 to	 make	 a	
+contribution	to	the	Traxia	Foundation	or	to	acquire	Traxia	Tokens,	but	that	any	of	their	
+contributions	were	made	upon	their	own	request.	
+	
+	
+	
+Experience	and	Suitability	
+Participants	shall	only	participate	in	the	TGE	if	and	when	(i)	they	have	carefully	considered	
+and	 thoroughly	 reviewed	 the	 information	 contained	 in	 these	 Terms	 as	well	 as	 in	 the	
+Whitepaper,	 (ii)	 they	 fully	 understand	 the	 risks,	 costs,	 and	 benefits	 associated	 with	
+receiving	 Traxia	 Tokens,	 (iii)	 they	 agree	 to	 be	 bound	 by	 these	 Terms,	 and	 (ii)	 the	
+Whitepaper	and	the	Terms	are	acceptable	for	them.		
+Significant	 experience	 with,	 and	 understanding	 of,	 the	 usage	 and	 intricacies	 of	
+cryptographic	 tokens	 and	 blockchain-based	 software	 systems	 are	 essential	 for	
+Participants	 to	 participate	 in	 the	 TGE.	 The	 Participants	 bear	 the	 sole	 responsibility	 to	
+
+
+
+determine	if	the	acquisition	of	Traxia	Tokens	or	the	potential	appreciation	or	depreciation	
+in	their	value	over	time	has	tax	implications	for	the	Participants	in	their	home	jurisdictions.		
+Participants	shall	not	construe	these	Terms	as	investment,	legal,	tax,	regulatory,	financial,	
+accounting,	or	other	advice,	and	they	are	not	intended	to	provide	the	sole	basis	for	any	
+evaluation	of	a	contribution.	Prior	to	acquiring	Traxia	Tokens,	Participants	should	consult	
+with	their	own	legal,	investment,	tax,	accounting,	and	other	advisors	to	determine	(i)	the	
+potential	 benefits,	 burdens,	 and	 other	 consequences	 of	 such	 investment,	 including	
+without	 limitation	 a	 Participant’s	 financial	 situation	 and	 goals,	 and	 (ii)	 suitability	 and	
+appropriateness	of	the	acquisition,	holding	and	disposition	of	Traxia	Tokens.	Participants	
+are	entirely	responsible	for	the	financial	risk	of	their	contribution	during	the	entire	term.	
+	
+Rights	related	to	Traxia	Tokens	
+By	participating	 in	the	TGE	and	obtaining	the	Traxia	Token	 in	the	course	of	 the	 latter,	
+Participants	acquire	no	rights	whatsoever,	neither	expressed	nor	implied,	related	to	the	
+Traxia	Foundation	or	its	projects.	 In	particular,	Participants	will	have	no	influence	over	
+the	governance	of	the	Traxia	Foundation,	and	no	control	over	its	distribution,	allocation	
+and	use	of	 the	Participants’	 contributions,	which	may	 include	 covering	 costs	 incurred	
+before	 the	 TGE,	 strategic	 reserves,	 and	 awards	 for	 beneficiaries	 (including	 without	
+limitation	parties	affiliated	with	the	Traxia	Foundation,	any	related	legal	entities	or	the	
+projects)	who	in	the	Traxia	Foundation’s	view	significantly	contributed	to	the	projects.	It	
+is	 thus	 in	 the	 Traxia	 Foundation’s	 sole	 discretion	 how	 and	 to	 whom	 Participants’	
+contribution	will	be	given	in	the	context	of	its	projects;	it	will	do	so	as	it	deems	fit.		
+Participants’	contributions	 in	 the	course	of	 the	TGE	are	 final	and	non-refundable.	The	
+Participants	acknowledge	that	the	Traxia	Foundation	is	not	required	to	provide	a	refund	
+for	any	reason,	and	the	Participants	will	not	receive	money	or	other	compensation	for	
+any	Traxia	Tokens	that	are	not	used	or	remain	unused.		
+A	 participation	 in	 the	 TGE	 involves	 a	 high	 degree	 of	 risk,	 volatility,	 and	 illiquidity.	
+Participants	need	to	be	aware	that	by	participating	in	the	TGE,	their	entire	contribution	
+to	the	Traxia	Foundation	may	be	lost	for	whatever	reason,	in	particular	due	to	the	fact	
+that	the	Traxia	Foundation	and	its	project	are	still	under	development,	and	no	warranties	
+can	be	given	that	it	will	be	successfully	completed.	The	Traxia	Foundation	will	–	on	a	best	
+efforts	basis	–	take	economically	reasonable	measures	to	issue	the	Traxia	Tokens	and	to	
+release	the	project,	but	it	may	be	possible	that	the	project	launch	will	not	occur,	or	that	
+the	 Traxia	 Tokens,	 even	 if	 successfully	 developed	 and	 maintained,	 may	 not	 meet	
+Participants’	expectations	at	the	time	of	purchase.	As	a	consequence,	the	Traxia	Token	
+may	have	no	value	after	all.	Contrary	to	traditional	start-up	financings,	Participants	do	
+not	have	any	comparable	rights	at	all;	they	are	neither	shareholders	(equity	financing)	
+nor	creditors	(debt	financing),	and	they	do	not	have	any	corresponding	rights	whatsoever.	
+Furthermore,	the	Traxia	Foundation	may	at	any	given	time	cancel	the	TGE	for	whatever	
+reason	and	in	its	sole	discretion.	In	addition,	no	guarantees	can	be	given	that	the	TGE	will	
+be	 carried	 out	 or	 completed	 in	 accordance	 with	 the	 time-frame	 as	 set	 out	 in	 the	
+Whitepaper.		
+	
+Authorization	
+Participants	represent	and	warrant	that	they	are	authorized	to	acquire	and	obtain	Traxia	
+Tokens	in	their	relevant	jurisdiction,	that	they	are	not	subject	to	a	jurisdiction	where	the	
+
+
+
+distribution,	acquisition,	holding	and	resale	of	Traxia	Tokens	 is	restricted,	and	are	of	a	
+legal	age	to	be	bound	by	these	Terms.		
+They	shall	make	their	own	investigations	and	evaluations	of	the	contributions	that	will	be	
+delivered	 pursuant	 thereto,	 including	 the	merits	 and	 risks	 involved.	 Participants	 shall	
+inform	 themselves	 as	 to	 the	 legal	 requirements	 applicable	 to	 them	 in	 respect	 of	 the	
+acquisition,	holding,	and	disposition	of	the	Traxia	Tokens	upon	their	delivery,	and	as	to	
+the	 income	 and	 other	 tax	 consequences	 to	 them	 of	 such	 acquisition,	 holding,	 and	
+disposition.		They	shall	accordingly	observe	all	applicable	restrictions.	
+These	Terms	shall	not	be	used	or	relied	upon	by	any	person	who	is	subject	to	laws	which	
+for	whatever	reason	prohibit	or	restrict	the	distribution,	publication,	availability	or	use	of	
+these	 Terms	 and	 the	 Whitepaper	 or	 any	 actions	 taken	 thereunder,	 such	 as	 the	
+distribution,	acquisition,	holding	and	resale	of	Traxia	Tokens	(including	without	limitation	
+citizens	or	residents	of	the	U.S.,	Canada,	U.K.,	Singapore,	North	and	South	Korea,	Hong	
+Kong,	China).		
+With	 regard	 to	 the	aforementioned,	 including	without	 limitation	 in	 case	of	 regulatory	
+actions	against	Participants	who	acquired	Traxia	Tokens	despite	any	applicable	limitations	
+in	their	jurisdictions,	Participants	further	represent	and	warrant	that	they	will	not	hold	
+the	Traxia	Foundation,	its	affiliates,	officers,	directors,	agents,	joint	ventures,	employees,	
+advisors	and	suppliers,	now	or	 in	 the	 future,	 liable	 for	any	 losses,	 costs	or	any	direct,	
+special,	incidental,	or	consequential	damages	arising	out	of,	or	in	any	way	related	to,	the	
+TGE	or	the	Traxia	Foundation.	
+	
+Forward-Looking	Statements	
+Certain	statements	contained	in	the	Terms	or	the	Whitepaper	constitute	forward-looking	
+statements.	 Such	 forward-looking	 statements,	 including	 the	 intended	 actions	 and	
+performance	 objectives	 of	 the	 Traxia	 Foundation,	 involve	 known	 and	 unknown	 risks,	
+uncertainties,	 and	 other	 important	 factors	 that	 could	 cause	 the	 actual	 results,	
+performance,	or	achievements	of	the	Traxia	Foundation	in	its	development	of	the	project	
+to	differ	materially	from	any	future	results,	performance,	or	achievements	expressed	or	
+implied	by	such	forward-looking	statements.	No	representation	or	warranty	is	made	as	
+to	 future	 performance	 or	 such	 forward-looking	 statements.	 All	 forward-looking	
+statements	in	the	Terms	or	the	Whitepaper	speak	only	as	of	the	date	hereof.	The	Traxia	
+Foundation	expressly	disclaims	any	obligation	or	undertaking	to	disseminate	any	updates	
+or	revisions	to	any	forward-looking	statement	contained	herein	to	reflect	any	change	in	
+its	expectation	with	regard	thereto	or	any	change	in	events,	conditions,	or	circumstances	
+on	which	any	such	statement	is	based.	
+	
+	
+	
+Provision	of	Additional	Information	
+The	Traxia	Foundation	will	cooperate	with	all	law	enforcement	enquiries,	subpoenas,	or	
+requests	provided	they	are	fully	supported	and	documented	by	the	law	in	the	relevant	
+jurisdictions.	This	also	applies	to	information	requests	with	regard	to	Participants	from	
+regulatory	authorities.	
+Immediately	 upon	 first	 request,	 Participants	 shall	 provide	 to	 the	 Traxia	 Foundation	
+information	which	it	deems,	in	its	sole	discretion,	to	be	required	to	maintain	compliance	
+with	 any	 federal,	 state,	 local,	 domestic	 or	 foreign	 laws,	 regulations	 or	 policies.	 The	
+
+
+
+Participants	 acknowledge	 that	 the	 Traxia	 Foundation	 may	 refuse	 to	 distribute	 Traxia	
+Tokens	until	such	requested	information	will	be	provided.		
+	
+Limitation	of	Liability	
+Participants	 release	 the	Traxia	Foundation	and	 its	 respective	predecessors,	 successors	
+and	assigns	–	to	the	fullest	extent	permitted	by	law	–	from	all	claims,	demands,	actions,	
+damages,	 losses,	 costs	 and	 expenses	 of	 every	 kind	 and	 nature,	 known	 and	 unknown	
+(including,	but	not	limited	to,	claims	of	negligence,	actions	for	breach	of	warranty,	breach	
+of	contract,	tort),	arising	out	of	or	otherwise	in	connection	with:	(a)	their	contributions	
+to	the	Traxia	Foundation;	(b)	their	participation	in	the	Traxia	Foundation's	TGE;	(c)	their	
+rights,	 responsibilities	or	obligations	under	 these	Terms	and	the	Whitepaper;	 (d)	 their	
+violation	of	these	Terms;	or	(e)	their	violation	of	any	rights	of	any	other	person	or	entity,	
+including	in	relation	to	or	arising	out	of	disputes	between	the	Traxia	Foundation	and	them	
+or	between	them	and	other	participants	in	the	TGE,	and	the	acts	or	omissions	of	third	
+parties,	or	(f)	their	envisaged	future	use	of	the	Traxia	Token.	
+	
+Indemnification	
+Participants	 shall	 indemnify	 the	 Traxia	 Foundation	 and	 its	 respective	 predecessors,	
+successors	and	assigns	–	 to	 the	 fullest	extent	permitted	by	 law	–	 from	and	against	all	
+claims,	demands,	actions,	damages,	losses,	costs	and	expenses	(including	attorneys’	fees)	
+that	arise	out	of	or	are	otherwise	connected	with:	(a)	their	contribution	to	the	Foundation;	
+(b)	 their	 participation	 in	 the	 TGE;	 (c)	 their	 rights,	 responsibilities	 or	 obligations	under	
+these	Terms	and	the	Whitepaper;	(d)	their	violation	of	these	Terms;	or	(e)	their	violation	
+of	any	rights	of	any	other	person	or	entity.	The	Traxia	Foundation	reserves	the	right	to	
+exercise	sole	control	over	the	defense,	at	the	Participants'	expense,	of	any	claim	subject	
+to	indemnification	under	this	section.	This	indemnity	is	in	addition	to,	and	not	in	lieu	of,	
+any	 other	 indemnity	 implied	 into	 or	 set	 forth	 in	 any	 written	 agreement	 between	
+Participants	and	the	Traxia	Foundation	or	provided	by	any	applicable	laws.	
+	
+Disclaimer	of	Warranties	
+Participants	expressly	agree	that	they	obtain	Traxia	Tokens	at	their	own	risk	and	that	the	
+Traxia	 Tokens	 are	provided	on	 an	 “as	 is”	 basis	without	warranties	 of	 any	 kind,	 either	
+express	or	implied,	including	without	limitation	warranties	of	title	or	implied	warranties,	
+merchantability	or	 fitness	 for	a	particular	purpose.	Without	 limiting	 the	 foregoing,	no	
+warranty	is	given	that	the	TGE	will	be	uninterrupted,	error-free	or	fully	completed.	
+	
+Severability	
+If	any	portion	of	these	Terms	is	found	illegal	or	unenforceable,	in	whole	or	in	part,	such	
+provision	 shall,	 as	 to	 such	 jurisdiction,	 be	 ineffective	 solely	 to	 the	 extent	 of	 such	
+determination	 of	 invalidity	 or	 unenforceability	 without	 affecting	 the	 validity	 or	
+enforceability	 thereof	 in	 any	 other	 manner	 or	 jurisdiction	 and	 without	 affecting	 the	
+remaining	provisions	of	the	Terms,	which	shall	continue	to	be	in	full	force	and	effect.	
+	
+Updates	to	the	Terms	
+The	Traxia	Foundation	reserves	the	right,	at	its	sole	discretion,	to	change,	modify,	add,	or	
+remove	portions	of	the	Terms	at	any	time	during	the	TGE	by	posting	the	amended	Terms	
+on	 its	 website	 https://www.traxia.co/terms-and-conditions.	 Any	 Participant	 will	 be	
+
+
+
+deemed	 to	 have	 accepted	 such	 changes	 by	 purchasing	 Traxia	 Tokens.	 If	 at	 any	 point	
+Participants	do	not	agree	to	any	portion	of	the	then-current	version	of	the	Terms,	they	
+should	not	purchase	Traxia	Tokens.	
+	
+Governing	Law	and	Dispute	Resolution	
+These	Terms	shall	be	governed	by,	 interpreted	and	construed	 in	accordance	with	 the	
+substantive	laws	of	Switzerland,	without	giving	effect	to	its	conflict	of	laws	principles.	
+Any	 claim	 or	 dispute	 arising	 out	 of	 these	 Terms	 shall	 be	 submitted	 to	 the	 exclusive	
+jurisdiction	of	the	competent	courts	in	Zug,	Switzerland,	and	Participants	hereby	submit	
+irrevocably	to	the	jurisdiction	of	such	courts	with	the	exclusion	of	any	other	jurisdiction	
+and	formally	waive	any	and	all	claims	with	respect	thereto	including	any	claim	of	forum	
+non	conveniens.	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Works	Cited	
+	
+	
+Asian	Development	Bank.	(2016).	Retrieved	from	Asian	Development	Bank:	
+
+https://www.adb.org/news/global-trade-finance-gap-reaches-16-trillion-smes-
+hardest-hit-adb	
+
+Bank	for	International	Settlement.	(2014).	Trade	Finance:	Development	and	issues.	
+Retrieved	from	https://www.bis.org/publ/cgfs50.pdf	
+
+
+
+Deloitte.	(2017).	Applying	blockchain	in	securitization.	Retrieved	from	
+https://digitalchamber.org/assets/sfig-blockchain-report.pdf	
+
+International	Chamber	of	Commerce.	(2016).	2016	Rethinking	Trade	&	Finance.	
+Retrieved	from	
+http://store.iccwbo.org/content/uploaded/pdf/ICC_Global_Trade_and_Finance
+_Survey_2016.pdf	
+
+International	Chamber	of	Commerce.	(2017).	2017	Rethinking	Trade	Finance.	
+Retrieved	from	https://iccwbo.org/publication/2017-rethinking-trade-finance/	
+
+International	Chamber	of	Commerce.	(2017).	Rethinking	Trade	Finance.	Retrieved	from	
+https://cdn.iccwbo.org/content/uploads/sites/3/2017/06/2017-rethinking-
+trade-finance.pdf	
+
+International	Labour	Office.	(2015).	Small	and	Medium-Sized	Enterprises	and	Decent	
+and	Productive	Employment	Creation,	Report	IV.		
+
+International	Monetary	Fund.	(2016).	Recent	trends	in	correspondent	banking	
+relationships	—	further	considerations	.		
+
+Kemper,	S.	(2016).	Sandy	Kemper	keynote	at	the	FinTech	Financial	Future	Summit.	
+Retrieved	from	https://c2fo.com/zh-tw/2016/05/05/sandy-kemper-keynote-
+fintech-financial-future-summit/	
+
+PwC.	(2017).	Supply	Chain	Forum	Barometer.	Retrieved	from	
+https://www.pwc.nl/nl/assets/documents/pwc-scf-barometer.pdf	
+
+World	Economic	Forum.	(2015).	Retrieved	from	
+https://www.weforum.org/agenda/2015/10/5-steps-to-closing-the-2-trillion-
+credit-gap/	
+
+World	Economic	Forum.	(2015).	The	Future	of	Fintech:	A	Paradigm	Shift	in	Small	
+Business	Finance.		
+
+World	Trade	Organization.	(2008).	Restoring	Trade	Finance	during	a	period	of	Financial	
+Crisis.	Retrieved	from	
+https://www.wto.org/english/res_e/reser_e/ersd200916_e.pdf	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Annex	–	Technical	Details	
+	
+	
+Introduction	
+		
+
+The	smart	contract	represents	an	asset	issued	by	a	business	entity	after	a	trade	
+has	 been	 confirmed.	 By	 providing	 the	 necessary	 infrastructure,	 issuing	 and	 listing	
+
+
+
+providers	earn	TMT	tokens	for	providing	such	services.	The	tokens	TMT	and	the	smart	
+contracts	make	the	creation	of	such	an	ecosystem	therefore	viable.				
+	
+The	purpose	of	this	section	is	to		
+(1)	 Introduce	the	Traxia	Network,	provide	an	overview	of	 the	transaction	scheme	and	
+logic	and	looks	at	some	components	in	more	detail.		
+(2)	categorize	and	define	a	decentralized	liquidity	network	(DLN)	and	argue	for	Traxia	as	
+a	DLN.	
+(3)	Formalizes	verifiable	assets	and	constructs	two	scenarios,	Liquidity	Provision	and	a	
+Liquidity	Retrieval,	governed	by	the	information	written	to	and	read	from	smart	contract,	
+respectively.	
+(4)	 Discusses	 use	 cases,	 connections	 to	 other	 systems,	 and	 how	 to	make	 use	 of	 the	
+ecosystem.	
+	
+
+Our	 smart	 contracts	 provide	 liquidity	 and	 retrieval	 services	 from	 a	 network	 of	
+independent	 liquidity	 providers	 and	 payment	 service	 providers	 to	 settle	 transactions	
+through	 traditional	 channels.	 (a)	 issuers	 pay	 to	 get	 access	 to	 liquidity	 providers	 (b)	
+liquidity	providers	get	paid	through	traditional	banking	channels5	(c)	 issuing	and	listing	
+providers	earn	tokens	by	providing	the	technical	infrastructure			
+	
+
+(1) Fundamental	Components		
+The	Traxia	network	and	its	tokens	build	upon	two	unique	components:	
+	
+
+1. Decentralized	Liquidity	Network	 (DLN):	a	network	of	 independent	entities	 that	
+provision	liquidity	through	issuing	and	listing	providers.	The	Traxia	network	is	an	
+incentivized,	auditable	and	verifiable	DLN	construct.		
+
+2. Verifiable	Assets:	Liquidity	provision	requests	and	retrieval	requests	are	modeled	
+as	traditional	orders	on	the	markets	provided	by	the	Listing	Providers	within	the	
+Traxia	 network.	 Verifiable	 assets	 ensure	 that	 payments	 are	 initiated	 when	 a	
+service	has	been	legally	agreed	upon	between	a	Buyer	and	Seller.		
+
+	
+Participants	
+
+Any	 active	 business	 can	 participate	 as	 a	 client	 and	 make	 use	 of	 the	 services	
+provided.	Liquidity	Providers	need	to	hold	the	necessary	licenses	and	may	be	classified	
+as	professional	investor	in	the	jurisdiction	they	are	operating	in.		
+	
+Clients	pay	to	access	additional	liquidity	through	the	technical	infrastructure	provided	by	
+the	 Traxia	 ecosystem	 and	 its	 partners	 (Issuing	 and	 Listing	 Providers)	 within	 the	 DLN.	
+Liquidity	Providers	and	Issuers	settle	their	trade	individually.		
+	
+
+Issuing	 and	 Listing	Providers	 are	 required	 to	provide	 the	 services	 as	described	
+under	 section	 ‘Traxia’s	 Solution’.	 For	 the	 near	 future,	 the	 foundation	 is	 exclusively	
+working	and	supporting	LiqEase	to	guarantee	quality	and	compliance	since	Traxia’s	board	
+controls	LiqEase.	It	will	be	a	guided	decentralisation	process	driven	by	the	foundation	due	
+
+																																																								
+5	This	is	subject	to	change	depending	on	the	regulatory	environment.	Settling	all	transactions	on	a	
+blockchain	does	of	course	make	more	sense	from	a	efficiency	and	technology	point	of	view.		
+
+
+
+to	 the	 regulatory	 uncertainty	 and	 the	 need	 for	 guidelines	 and	 laws	 in	 the	 respective	
+jurisdictions	to	make	a	truly	decentralized	Traxia	ecosystem	feasible	and	compliant.		
+	
+
+Proof	of	issuing	needs	to	be	submitted	by	the	Issuing	Provider	to	the	Network	that	
+an	asset	has	been	generated	at	a	certain	point	 in	time.	Missing	proofs	can	be	used	to	
+impose	penalties	on	the	Issuing	Providers.		
+	
+
+Listing	 providers	 need	 to	 proof	 that	 an	 asset	 is	 verifiable,	 liquidity	 has	 been	
+provisioned	and	retrieved.					
+	
+The	Ecosystem		
+All	users	and	partners	that	are	providing	software	and	infrastructure	to	make	access	to	
+the	Traxia	network	possible,	are	defined	as	one	abstract	entity:	The	Ecosystem.		
+The	Ecosystem	acts	as	an	agent	to	manage,	validate	and	repair	potential	mistakes	within	
+the	network.		
+	
+The	Ledger	
+Our	smart	contracts	are	applied	on	top	of	a	ledger-based	technology	and	we	intend	to	
+use	Cardano	for	our	future	development.	The	Ledger	 is	accessible	by	the	users	at	any	
+given	time.	The	Traxia	DLN	can	be	implemented	and	deployed	on	top	of	any	other	ledger	
+that	allows	for	the	structure	of	the	smart	contracts	as	defined	in	this	document.		
+	
+The	Issuing	Providers		
+Issuing	Providers	offer	the	technological	infrastructure	to	make	it	seamless	and	smooth	
+for	businesses	to	issue	their	assets	using	traditional	web	technologies	in	a	combination	
+with	modern	blockchain	elements.			
+	
+The	Listing	Providers	
+Liquidity	(Supply)	and	the	Demand	for	such	is	met	at	the	markets	operated	by	the	Listing	
+Providers.	 In	 brief,	 Issuers	 and	 Liquidity	 Providers	 set	 the	prices	 for	 the	 services	 they	
+request	by	submitting	their	orders	to	the	markets.	Those	markets	provide	a	way	for	users	
+to	identify	suitable	offers	and	execute	deals.		
+	
+Smart	Contract	Overview	
+The	smart	contracts	are	the	basis	of	the	Decentralised	Liquidity	Platform.	Issuers	(Buyers,	
+Sellers)	who	make	use	of	the	smart	contract	‘template’	and	list	their	individual	assets	will	
+need	to	purchase	TMT	to	access	the	ecosystem.		
+	
+
+The	purchase	and	distribution	of	TMTon	behalf	of	the	Issuer	will	be	automatically	
+handled	by	the	smart	contract.	 (a)	verifying	the	amount	of	a	to	be	 issued	asset	 in	the	
+currency	chosen	by	Buyer	and/or	Seller	via	their	digital	signature	(b)	posting	transaction	
+and	currency	settlement	requests	to	payment	service	provider	(c)	initiate	TMT	purchase	
+order	and	distribution	in	accordance	with	the	prices	defined	between	Issuers	and	Issuing	
+and	Listing	Providers.					
+	
+
+
+
+The	 Traxia	 DLN	 can	 handle	 liquidity	 provision	 and	 retrieval	 requests	 Listing	
+Providers	and	their	markets.	Issuers	and	Issuing,	Listing	Providers	set	the	prices	for	the	
+requested	services.		
+	
+
+Issuing	 and	 Listing	 Providers	 are	 independent	 business	 entities	 that	 act	 and	
+conduct	business	on	behalf	of	themselves	and	in	their	own	best	interest.	To	some	extent	
+they	can	be	compared	to	mining	providers	where	an	offline	hardware	infrastructure	is	
+needed	but	 the	 service	 is	 completely	automatized	and	essential	 for	 the	ecosystem	 to	
+function	and	therefore	necessary	part	of	the	Traxia	ecosystem	and	network.	
+	
+
+Smart	contract	overview		
+
+Network		
+	
+at	each	time	t	in	the	Network	N:	
+
+1. For	each	new	Listing	request		
+(a) Check	if	the	asset	is	in	the	right	format		
+(b) Check	if	all	proofs	are	valid	
+(c) Discard	asset	if	any	above	fails	
+
+	
+2. For	each	new	asset	a	introduced	in	t	
+(a) Issuing	Contract	attached		
+(b) Invoice	attached		
+(c) Trade	documents	available	
+(d) Trade	contracts	available	
+(e) Discount	defined		
+(f) Maturity	defined				
+
+	
+Issuer	
+	
+at	any	time	via	Issuing	Provider	
+
+1. Submit	new	asset	generation	request		
+2. Submit	Liquidity	provision	request		
+
+	
+
+Liquidity	Provision	Market		
+	
+at	any	time	via	Listing	Provider	
+
+1. Submit	new	ask	and	bid	order	for	listed	
+asset	
+
+	
+at	any	time	t	via	Listing	Provider	
+
+1. For	each	asset		
+(a) Find	 matching	 assets	 based	 on	
+
+requirements	
+	
+on	receiving	asset	i	from	issuer	I	
+
+1. Check	 if	 token	 matches	 asset	 defined	
+upon	issuing		
+
+2. Initiate	 payment	 through	 payment	
+service	provider	
+
+		
+Liquidity	Retrieval	Market	
+	
+at	any	time	via	Listing	Provider	
+
+1. On	Maturity	of	asset	a	
+(2) payment	 through	 a	 payment	 service	
+
+provider	to	Issuer	is	initiated		
+(3) TMT	 are	 distributed	 to	 Issuing	 and	
+
+Listing	Providers	for	their	services	
+	
+
+		
+	
+Definition	of	a	Decentralized	Liquidity	Network		
+	
+
+A	 Decentralized	 Liquidity	 Network	 (DLN)	 runs	 as	 an	 autonomous	 system	 that	
+aggregates	 liquidity	 from	 various	 independent	 liquidity	 providers,	 providing	 liquidity	
+provision	 and	 retrieval	 markets	 for	 Issuers	 in	 a	 self-coordinated	 way.	 Having	 a	
+decentralized	coordination	without	trusted	parties	in	place	is	technically	feasible	through	
+
+
+
+the	use	of	protocols	to	verify	and	coordinate	operations	that	are	carried	out	by	individual	
+Issuers.				
+	
+A	DLN	is	governed	by	two	main	principles:	
+	
+
+Put(asset)	!	identifier:	Clients	execute	the	Put	request	to	issue	an	asset	under	a	
+unique	identifier.	
+
+Get(identifier)	 !	 asset:	 Clients	 execute	 the	 Get	 protocol	 to	 retrieve	 asset	
+(information)	that	is	currently	stored	using	the	identifier.	
+	
+Properties		
+	
+Integrity		
+No	attacker	can	convince	Issuers	to	accept	altered	or	falsified	assets.	
+Definition:	A	DLN	scheme	provides	asset	integrity	if:	for	any	successful	Put	execution	for	
+some	asset	 (a)	under	 identifier	 (i),	 there	 is	no	computationally-bounded	adversary	 (A)	
+that	can	convince	an	Issuer	to	accept	falsified	asset	(a’)	at	the	end	of	a	Get	execution	for	
+identifier	(i).	
+	
+Retrievability	
+	
+This	property	captures	the	requirement	that,	given	our	fault-tolerance	assumptions	of,	if	
+some	asset	has	been	successfully	stored	in	and	issuing	and	listing	providers	continue	to	
+follow	the	standards	defined	in	a	SPA	token	template,	then	users	can	eventually	retrieve	
+the	asset.	
+	
+Definition:	A	DLN	scheme	provides	retrievability	if:	for	any	successful	Put	execution	for	
+asset	under	identifier,	there	exists	a	successful	Get	execution	for	identifier	for	which	a	
+user	retrieves	the	asset.	
+	
+Publicly	verifiable		
+	
+Definition:	A	DLN	scheme	is	publicly	verifiable	if:	for	each	successful	Put,	the	network	of	
+issuing	providers	can	generate	a	proof	that	the	asset	 is	currently	being	issued.	It	must	
+convince	any	efficient	verifier,	which	only	knows	the	identifier	and	does	not	have	access	
+to	the	asset.	
+	
+Auditable		
+	
+Definition:	A	DLN	scheme	is	auditable,	if	it	generates	a	verifiable	trace	of	operation	that	
+can	be	checked	 in	the	future	to	confirm	 liquidity	was	 indeed	provisioned	for	the	right	
+duration	of	time.	
+	
+Incentive	driven	
+	
+Definition:	A	DLN	scheme	is	incentive	driven,	if:	Issuing,	Listing	and	Liquidity	Providers	are	
+rewarded	 for	 successfully	 offering	 liquidity	 and	 retrieval	 service,	 or	 penalized	 for	
+
+
+
+misbehaving,	so	that	the	Issuing	and	Listing	providers'	dominant	strategy	is	to	provide	a	
+working	technology	infrastructure	to	make	the	provision	of	liquidity	possible.	
+	
+Lifecycle	of	a	Digital	Asset	(Smart	Contract)	backed	by	a	B2B	Trade				
+	
+1.	Put:	Buyers	and	Sellers	issue	digital	assets	using	the	smart	contract	infrastructure.		
+Buyers	and	Sellers	can	issue	their	assets	by	paying	Issuing	and	Listing	Providers	in	TMT	
+tokens.	With	a	Put	request,	Buyers	and	Sellers	issue	a	digital	asset	via	an	Issuing	Provider	
+and	subsequently	trigger	a	bid	order	on	the	market	operated	by	a	Listing	Provider.	After	
+matching	 such	a	bid	order	with	a	ask	order	 from	a	Liquidity	Provider,	 the	Buyers	and	
+Sellers	send	the	digital	asset	to	the	Liquidity	Provider.	The	parties	sign	the	order	and	a	
+transaction	 is	 recorded	 on	 the	 blockchain.	 The	 pricing	 of	 such	 orders	 is	 been	 made	
+between	Issuers	and	Liquidity	Providers.			
+	
+2.	Get:	Buyers	and	Sellers	retrieve	digital	assets	using	the	smart	contract	infrastructure			
+The	Get	request	is	defined	upon	issuing	in	the	Smart	Contract	already	and	executed	in	
+accordance	with	the	maturity	of	the	digital	asset	that	has	been	defined	by	the	Issuer	upon	
+creation.	In	general	the	duration	should	not	extend	270	days	but	it	is	to	the	sole	discretion	
+of	the	Issuer	to	set	such	duration	and	maturity	date.		
+	
+Liquidity	Provision	and	Retrieval	Markets		
+Traxia	 makes	 use	 of	 markets	 that	 are	 operated	 by	 Listing	 Providers	 and	 aim	 to	 be	
+decentralized	in	the	future.	Structure	and	Design	of	those	markets	is	inherently	defined	
+by	the	requirements	of	TMT	and	the	smart	contracts	representing	a	B2B	trade.	They	are	
+created	and	adapted	around	those	given	necessities.	
+The	 Liquidity	 Provision	Market	 allows	 the	 Issuers	 to	 pay	 Listing	 Providers	 to	 list	 their	
+assets	on	their	marketplaces.	The	Liquidity	Retrieval	Market	is	an	intrinsic	requirement	
+that	is	given	by	the	smart	contract	structure	and	due	to	the	limited	duration	and	validity	
+of	any	such	listed	digital	asset	represented	by	such	smart	contract.	Issuers	and	Liquidity	
+Providers	 can	 set	 their	 own	 supply	 and	 demand	 driven	 prices	 to	 initiate	 transactions	
+based	on	available	offers	on	the	market.	
+	
+DLN	Requirements	and	Guarantees		
+To	 achieve	 integrity,	 retrievability,	 public	 verifiability	 and	 being	 incentive	 driven,	 the	
+Traxia	DLN	established	the	following	guidelines.		
+	
+Integrity:	
+A	Put	request	is	initiated	by	Buyer	and	Seller	after	both	parties	signed	such	a	request	with	
+their	individually	assigned	private	keys.	The	cryptographic	hash	resulting	from	such	action	
+is	assigned	to	the	digital	asset	and	therefore	allows	to	verify	the	 integrity	of	the	asset	
+during	the	time	of	listing.		
+	
+Retrievability:		
+Storing	 the	asset	 in	a	decentralized	way	 is	a	default	 feature	of	 the	blockchain	we	are	
+building	 on.	 The	 digital	 asset	 is	 stored	 fault	 tolerant	 on	 various	 instances	 within	 the	
+Ecosystem	and	a	user	can	therefore	increase	the	likelihood	of	recovery	if	one	instance	
+crashes	or	disconnects.			
+
+
+
+	
+Public	Verifiability	and	Auditability:		
+Issuing	Providers	are	required	to	submit	proofs	of	issuing	to	the	blockchain.	The	validity	
+of	those	blocks	can	hence	be	verified	by	any	user	in	the	Ecosystem	using	those	proofs	
+without	the	need	to	accessing	the	detailed	information	associated	with	the	issued	asset.	
+Being	stored	on	the	blockchain,	those	immutable	proofs	are	a	trace	that	can	be	audited	
+at	any	given	time.	
+	
+Incentive	Compatibility:		
+Issuing	and	Listing	providers	are	both	rewarded	for	the	services	they	are	providing.	When	
+Issuers	initiate	a	Put	request,	Issuing	Providers	are	required	to	generate	proofs	and	Listing	
+Providers	to	have	a	fully	operational	marketplace	to	list	the	asset	on	behalf	of	the	Issuer.	
+Issuing	Providers	that	do	not	create	proofs	will	be	denied	access	to	the	Listing	Provider	
+and	 are	 not	 entitled	 to	 any	 rewards.	 Listing	 Providers	 that	 don’t	 operate	 a	 working	
+marketplace	as	defined	herein	are	not	entitled	to	any	rewards.		
+	
+Confidentiality:		
+Issuers	that	desire	their	assets	to	be	private,	can	list	and	offer	those	assets	to	preselected	
+Liquidity	Providers	only.		
+	
+Trade	Validation	and	Settlement	-	Verifiable	Digital	Assets		
+Transactions	 that	 are	 traditionally	 conducted	 between	 Buyers	 and	 Sellers	 for	 the	
+exchange	of	goods	and	services	can	only	be	validated	to	a	certain	extent.	We	however,	
+need	and	require	those	transactions	and	underlying	assets	to	be	verifiable	so	that	actors	
+can	verify	the	legitimacy	of	the	asset	and	trade	between	Buyers	and	Sellers.	Verifiable	
+digital	assets	need	confirmation	via	digital	signatures	from	two	or	more	parties	and	the	
+transactions	are	transparent.	Verifiable	assets	are	a	digital	representation	that	aims	to	be	
+stored	 in	 a	 decentralized	 fashion.	 Issuing	 and	 Listing	 Services	 are	 provided	 by	
+independent	parties.	Issuing	can	be	verified	by	the	participants	of	the	Ecosystem	and	the	
+orders	and	transactions	that	are	initiated	on	a	Marketplace	operated	by	a	Listing	Provider	
+are	recorded	on	a	blockchain.			
+	
+A	verifiable	asset	can	be	issued	with	the	intent	to	receive	liquidity	and	be	retrieved	due	
+to	the	limited	amount	of	time	such	a	digital	asset	 is	valid.	 Its	existence	and	ownership	
+status	can	be	accessed	at	all	time	during	its	lifecycle	on	a	blockchain	explorer.		
+	
+Future	Work	on	Smart	Contracts		
+Users	will	be	able	to	interact	with	the	smart	contract	by	sending	transactions	to	trigger	
+specific	 functions.	 We	 aim	 to	 optimize	 those	 contracts	 to	 execute	 features	 that	 are	
+desired	by	participants	 in	 the	Traxia	ecosystem.	An	example	would	be	 the	 interaction	
+with	 a	 trusted	 Oracle	 to	 gather	 and	 verify	 data	 that	 is	 linked	 to	 the	 Issuer	 and	 the	
+underlying	collateral	of	a	trade.		
+	
+Those	 digital	 asset	 related	 contracts	 can	 have	 a	 variety	 of	 useful	 features	 such	 as	
+contracted	 issuing	and	 listing,	predefined	remuneration	schemes,	escrow	services	and	
+more	complex	operations	such	as	updating	data	associated	with	the	asset	based	on	the	
+actual	status	of	the	trade	and	supply	chain.	
+
+
+
+	
+As	mentioned	above,	our	initial	production	system	is	currently		running	on	Ethereum	and	
+an	Ethereum	Sidechain.	There	is	a	significant	work	in	progress	in	terms	of	creating	bridges	
+between	the	different	blockchains.	We	are	most	bullish	on	the	developments	of	Cardano	
+and	intend	to	base	our	entire	solution	(TMT	and	the	Smart	Contract	framework)	on	their	
+technology.	Our	overall	aim	 is	 to	use	and	bring	 the	most	advanced	 technology	 to	 the	
+Issuers	 and	 participants	 of	 the	 Traxia	 ecosystem	 and	 we	 will	 therefore	 support	 such	
+initiatives,	 as	 well.	 Depending	 on	 the	 regulatory	 environment	 it	 would	 be	 great	 to	
+integrate	into	crypto	funds	and	cross	border	payment	settlement	systems	such	as	SWIFT	
+and	others.			
+	
+This	document	provides	a	clear	path	towards	the	construction	and	establishment	of	the	
+Traxia	Ecosystem.	We	still	consider	this	work	to	be	the	initiator	for	discussion	and	further	
+research	on	potential	of	a	Decentralized	Liquidity	Network.	Our	ongoing	work	consists	of	
+adapting	our	current	system	to	the	features	and	principles	described	herein.	Operating	a	
+system	gives	us	the	opportunity	to	develop	according	to	market	demand	and	feedback.	
+Our	future	work	will	therefore	be	driven	by	the	users	and	participants	within	the	Traxia	
+Ecosystem	and	we	aim	to	make	those	works	publicly	available	by	the	end	of	2018	to	get	
+and	make	use	of	additional	feedback	from	the	community.			
+	
+
+

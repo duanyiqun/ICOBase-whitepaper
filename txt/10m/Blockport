@@ -1,0 +1,1653 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONTACT
+
+TQ
+Singel 542
+1017 AZ Amsterdam
+
+Online
+
+Email: support@blockport.io
+ 
+Website:  www.blockport.io
+
+WHITEPAPER
+V 1.0.5
+
+
+
+Blockport is a hybrid-decentralized exchange with a strong focus on user-friendliness, social trading 
+
+features and building a knowledge sharing community. 
+
+The team of Blockport firmly believes that - despite the recent developments in the world of 
+
+cryptocurrencies - there still exists an enormous knowledge gap between the high-tech blockchain world 
+
+and the majority of our society. In order to successfully share and support this fundamental technology and 
+
+paradigm shift with our society, we will build a user-friendly portal where people can safely take part in this 
+
+movement. The team of Blockport addresses five problem areas in this white paper that hinder beginner 
+
+investors to adopt cryptocurrencies as valuable investment asset. These problems include lack of liquidity, 
+
+security, transparency, usability and education.
+
+Blockport aims to develop an end-to-end trading platform that addresses these problems by effectively 
+
+combining proven technological, social and crypto economic concepts to create a completely new crypto 
+
+trading experience. Additionally, Blockport will create its own Ethereum (ERC20) based token that acts as a 
+
+functional token for members to pay for discounted trading fees and to utilize the social trading features in 
+
+the exchange environment. Members can earn these tokens by engaging on the platform.
+
+In early January 2018 the private pre-sale of the Blockport tokens (BPT) will be launched. This pre-sale round 
+
+is accessible for a selected group of participants who are aligned with Blockport’s mission and vision. 
+
+Pre-sale participants can apply for this private round by signing up on the Blockport website 
+
+(www.blockport.io). Details about the exact pre-sale launch will be communicated privately. 
+
+For participants, a certain minimum amount of ETH is mandatory to participate in the pre-sale round. 
+
+Participants will benefit from a 33% BPT bonus in the pre-sale round. 
+
+The public crowdsale round will be planned in March 2018. Exact details about the crowdsale round will be 
+
+communicated after the private pre-sale round has finished.
+
+Blockport Whitepaper  v.1.0.5
+
+EXECUTIVE SUMMARY
+
+
+
+1   INTRODUCTION             4
+
+2   CHALLENGES             5
+
+2.1   Liquidity                         6 
+
+2.2   Security                         6
+
+2.3   Transparency               7
+
+2.4   Usability                7
+
+2.5   Education                8
+
+TABLE OF CONTENTS
+
+3   THE BLOCKPORT SYSTEM        9
+
+3.1   User-Interface Design                    10 
+
+3.2   Functional Design              11
+
+    3.2.1   User-Interface              12
+
+    3.2.2   API               12
+
+    3.2.3   Internal Exchange             12
+
+    3.2.4   Wallet Operator              13
+
+    3.2.5   External Exchange             13
+
+    3.2.6   Accountant              14
+
+    3.2.7   Security Measures             14
+
+3.3   Social Design              16
+
+    3.3.1   Social Trading              16
+
+    3.3.2   Knowledge Sharing             19
+
+4   TOKEN MODEL                  20
+
+4.1   Token Utility                            21
+
+4.1.1   Trading Fees                    21
+
+4.1.2   Social Trading                    22
+
+5   TOKEN SALE                22
+
+5.1   Token Fundraising                         22
+
+5.2   Token Distribution                   23
+
+5.3   BPT Vesting Plan                   23
+
+5.4   Use of Funds                  23
+
+5.5   Blockport Token Participation        24
+
+6   ROADMAP & DEVELOPMENT       25
+
+6.1   Pre-Release (Q4 2017)                       25 
+
+6.2   First Release (Q1 2018)                 25
+
+6.3   Second Release (Q2 2018                 25
+
+6.4   Third Release (Q3 2018)                 26
+
+6.5   Fourth Release (Q4 2018)                 26
+
+6.6   Fifth Release (Q1 2019)                     26
+
+6.7   Blockport Versions                        26
+
+6.8   Motivation                                  27
+
+7   TEAM                  27
+
+7.1   Core Team                     27 
+
+7.2   Advisors                   30
+
+8   COMMUNITY & INVOLVEMENT            31 
+
+
+
+Blockport Whitepaper  v1.0.5
+
+4 // 32
+
+“A purely peer-to-peer version of electronic cash would allow online payments to be sent directly 
+
+from one party to another without going through a financial institution” are the first words of Satoshi 
+
+Nakamoto in his world famous Bitcoin paper that he released in 2008 (1). Currently, it’s impacting the 
+
+world’s dynamics of power and economics on an unprecedented level. Nakamoto’s paper was the start of 
+
+a digitally native financial system that is secure, efficient and above all, decentralized. 
+
+However, looking at the largest Bitcoin and cryptocurrency exchanges today, they mostly exist out of 
+
+centrally structured exchange entities. For example: Kraken, Bitfinex, Coinbase/GDAX, Poloniex, Bittrex, 
+
+etc. all host their clients’ funds centrally. This provides traders with agility and liquidity, but this nullifies the 
+
+fundamental trustless features of digital blockchain based assets. Moreover, most of these exchanges are 
+
+designed for professional traders and lack an intuitive interface.
+
+Despite massive growth in crypto markets, exchanges and other market intermediaries, it still is relatively 
+
+complex and hazardous to buy, sell and store digital assets. Blockport addresses these problems by 
+
+providing beginner and advanced traders, investors and institutions with a user-friendly crypto exchange 
+
+that combines best practices from both centralized and decentralized trading platforms. Our intuitive 
+
+trading platform reduces counterparty risk, transaction fees and vulnerability to fraudulent activities. We 
+
+aim to provide liquidity, security, transparency and an improved user-experience. 
+
+Blockport is not just another Bitcoin or cryptocurrency exchange. In fact, Blockport aims to accomplish 
+
+something far more interesting by tackling the key pain points of mass adoption: bridging the high-tech 
+
+blockchain world with the “real” world, by offering an intuitive user-experience, social trading, and a 
+
+knowledge sharing community. We firmly believe that these factors play a major role in the journey towards 
+
+mass adoption of cryptocurrencies as a valuable asset class.
+
+Blockport will create an Ethereum-based cryptographic token, the Blockport Token (BPT), which can be 
+
+used to mediate in a vast array of exchange activities. It provides our members with premium services, social 
+
+trading functionalities and can be used to pay trading fees.
+
+Since Blockport wishes to become one of the leading crypto trading platforms, seamless integration with 
+
+the current financial and regulatory systems is our top priority. The team of Blockport will ensure that 
+
+the product and services it offers are fully compliant with the applied regulatory and legal requirements. 
+
+Internally this means that Blockport closely works with Osborne Clarke’s lawyers to address the variation 
+
+in legal requirements in which we may operate. Externally we maintain a close relationship with the Dutch 
+
+financial regulators Authority Financial Markets (AFM) and the Dutch Central Bank (DNB) in the process of 
+
+design, development and governance of our product and services. Blockport welcomes regulatory agencies 
+
+1. INTRODUCTION
+
+ 1. Satoshi Nakamoto (2008). Bitcoin: A Peer-to-Peer Electronic Cash System.
+
+
+
+Blockport Whitepaper  v1.0.5
+
+5 // 32
+
+to engage with our team and collaboratively build a future that benefits all societal stakeholders.
+
+The company’s legal entities and the core team of Blockport are based in Amsterdam, the Netherlands. 
+
+Blockport’s team consists of five core team members and three advisors. The team is diverse in nature and 
+
+nurture. All have proven experience in the field of software engineering, financial technology and emerging 
+
+technologies such as artificial intelligence and blockchain. Additionally, the team will be supported by 
+
+experienced advisors in the fields of digital marketing, blockchain and smart contract development, 
+
+regulatory compliance and cyber security.
+
+In the next chapter we will describe a selection of challenges that arise when beginner and advanced 
+
+investors want to invest in cryptocurrencies. A short projection on how Blockport aims to address these 
+
+challenges is provided directly after every discussion and is extensively illustrated in chapter three.
+
+In this chapter we discuss five fundamental problems that impose barriers for people to invest 
+
+in cryptocurrencies. The first three problems stated below represent the technical limitations of 
+
+current centralized and decentralized exchanges that partly form the barrier for people to invest in 
+
+cryptocurrencies. 
+
+Lack of Liquidity: Makes it harder to trade and causes costs of investment to be higher because not enough 
+
+people are buying and selling assets on the exchange. 
+
+Lack of Security: The highly liquid and most used exchanges are centralized exchanges that carry their 
+
+customers’ funds and have unfortunately proven to be extremely susceptible to internal fraud and external 
+
+hacking. 
+
+Lack of Transparency: Aside from hidden liquidity costs, exchanges and especially brokers are not always 
+
+transparent about the actual commissions and fees that are associated with a trade. 
+
+The remaining two problems stated below impose non-technical barriers that limit people in trusting and 
+
+using current exchanges and broker services.
+
+Lack of Usability: The user-interface (UI) of current exchanges highly reflect that it’s built for professional 
+
+traders and tech-savvy people.
+
+2. CHALLENGES
+
+
+
+Blockport Whitepaper  v1.0.5
+
+6 // 32
+
+Lack of Education: Current solutions lack proper education and knowledge sharing functionalities that are 
+
+necessary to help beginner investors and stimulate the overall adoption of cryptocurrencies as a valuable 
+
+asset. 
+
+Collectively these five problems described above are imposing high barriers for the mainstream population 
+
+to participate in the crypto market. Therefore, Blockport will be designed to overcome these barriers 
+
+and facilitate in this exciting transition towards the new crypto economy. Blockport will achieve this by 
+
+employing best practices from a socio-technical perspective that will effectively aim to address all problems 
+
+described above.
+
+2.1   Liquidity
+
+Liquidity is an economic term used to express how easily you can buy or sell an asset without affecting the 
+
+asset’s price. Thus, when an exchange is illiquid it is difficult and therefore expensive to buy and sell assets, 
+
+because not enough traders are buying or selling on the exchange. An exchange that suffers from illiquidity 
+
+fails to provide traders with efficient pricing and fast settling of orders (2).
+
+As the adoption of blockchain technology is vastly increasing, more crypto assets are being introduced 
+
+by organizations across industries. Therefore, the need to exchange between these cryptocurrencies and 
+
+tokens is also increasing. While the current trade volume of Ethereum and Bitcoin is hundreds of millions of 
+
+U.S. dollars per day, the crypto asset class is still far less liquid than traditional markets. The main reason for 
+
+this illiquidity is that the total value of the asset class is still relatively low (3). Additionally, the fragmentation 
+
+of liquidity across many exchanges is not helping either. Exchanges around the globe have built their 
+
+own micro markets, shielded from others, which causes the overall price of crypto assets to extremely 
+
+differ between exchanges (4). This is a disadvantage for beginner investors but can be an advantage for 
+
+experienced traders. Blockport will enhance liquidity by settling the exchange of members’ assets within the 
+
+internal exchange and effectively combining the aggregated liquidity across public exchanges. 
+
+2.2   Security
+
+Despite the decentralized and trustless nature of cryptocurrencies, most of the trades happen on centralized 
+
+exchanges that have unfortunately proven to be extremely susceptible to internal fraud and external 
+
+hacking (5) . However, centralized exchanges do provide the most transparent and accessible liquidity in the 
+
+crypto market today. For this to work, these exchanges have to carry and protect their users’ funds, which 
+
+makes them susceptible to hacking. This treacherous flaw has spurred the development of (partially) 
+
+on-chain decentralized exchanges (e.g. EtherDelta, Waves & Lykke). 
+
+2. The term liquidity is extensively explained at http://www.investopedia.com/terms/l/liquidity.asp
+3. The total value of crypto assets fluctuates around $150 billion in August and September 2017, while the total value of stock markets is somewhere around $70 trillion. See 
+coinmarketcap.com and The World Bank.
+4. To learn more about fragmented market liquidity, see Multimarket Trading and Market Liquidity by B, Chowdhry & V, Nanda (2015). https://doi.org/10.1093/rfs/4.3.483
+5. Multiple exchanges have been victims to hacking such as Mt.Gox, Bitfinex, Bitstamp and Bithumb with total losses exceeding a billion U.S. dollars in value.
+
+
+
+Blockport Whitepaper  v1.0.5
+
+7 // 32
+
+In contrast to centralized exchanges, decentralized exchanges do not carry the funds of investors, but 
+
+work with a private on-chain wallet for every user. This means that a decentralized exchange leverages the 
+
+advantages of blockchain technology. However, decentralized exchanges have not yet been able to match 
+
+the liquidity of centralized exchanges (6) . The important tradeoff between security and liquidity is therefore 
+
+very desirable to overcome.
+
+Blockport will effectively balance this tradeoff by designing a hybrid system that ensures secure storage of 
+
+members’ funds by implementing a decentralized exchange architecture in combination with the integration 
+
+of external centralized public exchanges that provide liquidity when necessary. 
+
+2.3   Transparency 
+
+Since the crypto trading volume is still relatively low and trading activities are heavily fragmented over 
+
+multiple global exchanges, cryptocurrency values may extremely differ between exchanges. Therefore, it 
+
+is hard to correctly assess the actual market price of a cryptocurrency or token. For example, prices of a 
+
+Bitcoin may differ several hundreds of dollars between different exchanges (7).  Additionally, commissions 
+
+and transaction fees are often concealed. Brokers tend to show a market price that is not consistent with 
+
+the average actual market price resulting into higher commissions paid than is initially visible to people (8). 
+
+Lack of transparency of pricing and fees decreases trust in the complete crypto ecosystem and increases the 
+
+barrier to adoption for people that are new to the crypto market. 
+
+Blockport brings transparency to this ambiguous market by continuously analyzing market prices across 
+
+multiple exchanges and is therefore always able to show and provide the best market price of crypto assets.
+
+2.4   Usability 
+
+As the crypto ecosystem is vastly expanding, new points-of-purchase such as exchanges and brokers 
+
+emerge. Since the newly created asset class is relatively young and accommodates innovative blockchain 
+
+technology, the UI of current solutions in the market clearly reflect the technical approach used to build 
+
+them. Meaning that the UI is in most cases far from user-friendly. Winning over the mainstream requires a 
+
+solution that is easy to handle and that expresses trust. However, most of the established exchanges provide 
+
+a single UI that is clearly built for professional traders and tech-savvy people. Moreover, they offer a 
+
+one-size-fits-all solution for every type of user, from beginner to advanced (9). 
+
+ 
+
+6. “Unfortunately, decentralized trading platforms still lack the commodity, easy of use, and overall “user support” to attract a mainstream user base. Therefore, the liquidity 
+and market depth of these exchanges is still quite low.” (Loi Luu, CEO KyberNetwork) https://www.coindesk.com/solving-liquidity-challenge-decentralized-exchanges/
+7. While crypto assets are cross border in nature, prices differ the most between exchanges that are based  in different countries as can be seen on coinmarketcap.com.
+8. Research by Blockport reveals that most of Dutch Bitcoin brokers aren’t transparent about transaction fees due to displaying a higher Bitcoin price than the actual market 
+price. This results in actual fees fluctuating between 3% and 8% without customers being aware
+9. Typical examples of UIs made for tech-savvy people are EtherDelta and Bittrex.
+
+
+
+Blockport Whitepaper  v1.0.5
+
+8 // 32
+
+Most crypto exchange UIs show complex trading analytics and a live order book with flashing bid and ask 
+
+orders. As a result, non tech-savvy users may be overwhelmed by the vast array of features that he or she 
+
+has to master. Aside from the complex UI, there may already exist a lot of uncertainty and anxiety in people’s 
+
+minds due to the volatile nature of the crypto market. Therefore, adding more ambiguity by not taking 
+
+usability and user-friendliness into account is imposing barriers for mass market adoption. 
+
+Blockport is building a state-of-the-art hybrid exchange system while keeping an extreme focus on usability 
+
+and user-friendliness. Blockport’s user-centric design approach ensures an intuitive user experience, 
+
+tailored to address different types of users. As a result this will open up the door to the crypto economy for 
+
+everyone. 
+
+2.5   Education 
+
+As the In this new volatile market where information is highly spreaded, the need for discussion and to learn 
+
+from experts and peers is high. Exchanges and brokers alike act as gateways for accessing cryptocurrencies 
+
+and tokens. Unfortunately, they merely provide access to trading this new asset class and often lack to 
+
+provide clear knowledge to educate people about the crypto assets, economics and technology.
+
+Education and knowledge sharing is of the essence to trigger people’s intrinsic interest, engagement and 
+
+successfully facilitate the adoption of new technology (10) . Blockport recognizes its responsibility to not only 
+
+provide a state-of-the-art product but also integrate knowledge-sharing and social trading functionalities so 
+
+that our members can learn and share crypto economic knowledge. Blockport will host a knowledge base 
+
+and an interactive forum where beginners and experts can come together to share ideas and knowledge 
+
+regarding crypto investments. 
+
+Secondly, Blockport enables members to contact our customer support 24/7 through live chat and email. 
+
+Thirdly, as part of the extensive Blockport user-experience, social trading features will be build into the 
+
+system to enable members to publicly share their crypto portfolio with the Blockport community. Moreover, 
+
+members can automatically ‘copy’ this publicly shared portfolio by paying the sharing member BPT as a 
+
+reward. 
+
+ 
+
+10. Dewar and Dutton (1986) found that sufficient knowledge and available resources are required for successful adoption of radical new technologies. See Dewar, R.D. & 
+Dutton, J.E. (1986). Adoption of Radical and Incremental Innovations: An Empirical Analysis. Management Science, Vol. 32, No. 11, pp. 1422-1433. 
+
+
+
+Blockport Whitepaper  v1.0.5
+
+9 // 32
+
+The problems discussed in the previous chapter all affect the overall degree of trust to some extent, 
+
+which hinders the mainstream adoption of cryptocurrencies in our society. With a premature technology 
+
+like blockchain and smart contracting, the overall public’s level of trust is still relatively low. 
+
+Therefore, it is our mission to create a platform that functions as an intuitive portal between the current 
+
+financial system and the new digital blockchain-based economy. We will achieve this by developing an end-
+
+to-end trading platform that enables everyone to be part of this global value network. Currently, the process 
+
+of buying, selling and storing of cryptocurrencies is still highly fragmented and complex. Current crypto 
+
+initiatives are trying effortlessly to achieve the level of trust that established financial institutions possess 
+
+today. 
+
+ Although the potential of this new digital paradigm is sky-high, there still is a lot of room for improvement. 
+
+In this chapter it’s described how Blockport exactly solves the problems that are identified in chapter two 
+
+by providing a description and visualization of our hybrid-decentralized exchange platform. The solution 
+
+is explained as detailed as possible, however, developments in the crypto space are progressing so rapidly 
+
+that it is desirable and wise to leave certain lower-level specifications as open as possible in order to ensure 
+
+technological agility in the future.
+
+3. THE BLOCKPORT SYSTEM
+
+
+
+Blockport Whitepaper  v1.0.5
+
+10 // 32
+
+3.1   User-Interface Design
+
+In this section, a small selection of the Blockport UI designs is displayed below. These designs contain views 
+
+of the dashboard and trade portal. More designs are released through our communication channels.
+
+Blockport Dashboard
+
+Blockport Trade Portal
+
+
+
+Blockport Whitepaper  v1.0.5
+
+11 // 32
+
+3.2   Functional Design
+
+Although the user-experience of Blockport will feel smart and simple - all the hard work will be done in the 
+
+back-end. This section describes and visualizes the complete high-level functional design of the Blockport 
+
+exchange.
+
+
+
+Blockport Whitepaper  v1.0.5
+
+12 // 32
+
+3.2.1   User-Interface
+
+All Blockport members interact with the exchange through the user-friendly UI. As pointed out in the first 
+
+part of this whitepaper, the UI will be designed in such a way that it addresses different user profiles. These 
+
+user profiles range between beginner crypto investors and semi-advanced crypto traders. In general, the 
+
+user experience will look and feel: simple, smooth, smart and intuitive. Members will be able to switch 
+
+between a simple and advanced UI. The exact design of these two different UIs will be based on extensive 
+
+A/B testing among Blockport’s early users. 
+
+The UIs fundamental functions include: portfolio balance, market data, trade portal and account settings. 
+
+The portfolio balance shows members’ current portfolio balance and is based on real-time market data. 
+
+Buy and sell trades from fiat to crypto, crypto to crypto (11) , and crypto to fiat, can be done through the trade 
+
+portal. Additionally, the trade portal will assist members in making a correct buy or sell trade. This means 
+
+that members will be advised on the amount and price of their crypto investment to ensure transparency 
+
+and healthy investment decisions.
+
+3.2.2   API
+
+The Blockport API enables external parties to connect with the Blockport Exchange Operator and place trade 
+
+requests (1).
+
+3.2.3   Internal Exchange
+
+All trade requests (1) will run through the Governance Manager. This ensures that members’ accounts and 
+
+orders are valid and compliant with internal and external rules and constraints. The Compliance Manager 
+
+will ensure that regulatory Know Your Customer (KYC) and Anti-Money-Laundering (AML) requirements will 
+
+be updated and correctly installed in the Governance Manager and Account Settings.
+
+Besides rules and constraints, the Governance Manager will validate trade requests and lock available 
+
+funds when necessary. When a trade request is correctly validated (2), the Governance Manager will order 
+
+the Wallet Operator to lock members’ funds (3). This will allow the Internal Trade Engine to match internal 
+
+trades (4) safe and secure. To protect members from frontrunning, the matching of orders is shielded from 
+
+the outside world by using a private order book and only made public when they are completed (12). When 
+
+a trade request cannot be matched internally, the Internal Trade Engine will send the trade order (5) to the 
+
+External Trade Engine for external order matching. When a trade request can be partially filled internally, 
+
+the residual order will be send out to the External Trade Engine. Orders that are filled by the External Trade 
+
+Engine will be received and combined (9) by the Internal Trade Engine to validate the total matched order 
+
+(11). Finally, when the complete order is correctly validated, the funds will be settled in the Wallet Operator 
+
+(12) and broadcasted to the chain.
+
+11. Tradeable crypto assets are carefully selected on demand, asset characteristics, liquidity and regulations.
+12. To learn more about front-running and how it was revealed in the bancor protocol see: https://hackernoon.com/front-running-bancor-in-150-lines-of-python-with-
+ethereum-api-d5e2bfd0d798
+
+
+
+Blockport Whitepaper  v1.0.5
+
+13 // 32
+
+3.2.4   Wallet Operator
+
+Members’ funds will be settled and stored (12) in the designated blockchain wallets. The individual wallets 
+
+will be tracked in the Multi-Wallet and managed by the Wallet Operator. The Blockport Wallet Operator will 
+
+run a node for every blockchain that is supported in the exchange. This enables the effective reading and 
+
+writing of transactions to the blockchain network. Every member will be able to create a personalized 
+
+contract address via the Wallet Operator for every supported cryptocurrency or token.
+
+The crypto wallets that are used in the Blockport Exchange are basically a trustless and decentralized digital 
+
+wallet that will hold their funds in a non-custodial manor. The Blockport Wallet Operator is a manager that 
+
+links members’ wallets on multiple blockchains through the Multi-Wallet. It has custom features in order to 
+
+perform exchange activities such as funds checking, locking and settling. 
+
+In the process of setting up an order that is signed and validated by the Governance Manager, the Wallet 
+
+Operator will lock members’ funds (3) in order to ensure an atomic swap of ownership (13).  
+
+If the order fails in the process of internal or external matching, the system will automatically revert the 
+
+funds back to members’ wallets. When the order is successfully matched internally or externally, the 
+
+completed order will be settled (12) and members’ funds will be unlocked. 
+
+3.2.5   External Exchange
+
+The External Trade Engine will receive unfilled orders from the Internal Trade Engine (5) and decides how 
+
+to distribute these orders in terms of size and time. Additionally, it will execute these external trades as 
+
+efficient as possible on the External Exchanges. 
+
+The External Trade Engine will optimize its decisions based on the available liquidity and additional 
+
+transaction costs. The External Trade Engine receives the required trade information from the Analytics 
+
+Manager. Additionally, the Analytics Manager also determines the corresponding volatility risk of every 
+
+trade, which will be communicated to the Exchange Accountant. 
+
+The Exchange Manager’s job is to translate the received trade requests to actionable API orders. The 
+
+Exchange Manager will facilitate the communication with External Exchanges  through APIs. Additionally, 
+
+it communicates order state changes upstream with the Blockport Accountant, Analytics Manager and the 
+
+External Trade Engine. The Analytics Manager monitors the External Exchanges for available liquidity by 
+
+scanning their order books in real-time. Moreover, it calculates the expected transaction costs of every 
+
+supported trade pair by volume and direction. It shares this information with the External Trade Engine, 
+
+Blockport Accountant and the Blockport UI.
+
+13. Atomic cross-chain trading is one where (at least) two parties, Alice and Bob, own coins in separate cryptocurrencies, and want to exchange them without having to trust a 
+third party (centralized exchange).
+
+
+
+Blockport Whitepaper  v1.0.5
+
+14 // 32
+
+3.2.6   Accountant
+
+The Blockport Accountant is there to perform trade and trust intermediation. It tracks members’ funds 
+
+throughout the entire trade and settlement process. This functionality is important so that the exchange can 
+
+partially fill members’ orders without having to settle multiple trades. This ensures members’ order privacy, 
+
+reduces transaction costs and allows members to experience an atomic swap of funds. 
+
+In order to intermediate effectively, the Blockport Accountant will need to track and monitor all active orders 
+
+in the settlement process to cover the complete finality of a transaction cycle. This cycle will be volatile due 
+
+to possible network delays. Therefore the Blockport Accountant will measure and govern the overall risk of 
+
+settlements. It is responsible for balancing the crypto and fiat assets that are necessary to perform the real-
+
+time trades. The Analytics Manager will provide the Blockport Accountant with an ideal distribution of assets 
+
+to effectively balance Blockport’s exposure and trade flows. 
+
+Additionally, the Blockport Accountant will communicate with the Blockport Wallet Operator and the 
+
+Exchange Manager to ensure a live feed of cash positions throughout the entire Blockport Exchange. 
+
+Besides managing asset flows, the Blockport Accountant will also manage the cold storage of inactive funds 
+
+to minimize exposure. The amount of funds that will be cold stored is relatively low in the beginning, due to 
+
+low liquidity. However, when the number of active members increase - volume and liquidity will increase - 
+
+which will allow us to increase the cold storage ratio.
+
+3.2.7   Security Measures
+
+It is essential to ensure secure communication between the functional entities described above to assure a 
+
+robust system. We value our members’ trust in us and our ability to offer a high quality service. Therefore, 
+
+we take the following measures to secure our services:
+
+- We encrypt all communication over the internet allowing only HTTPS, using settings like HSTS, properly 
+
+chosen CORS settings, CSRF protection and carefully chosen SSL settings. 
+
+- We secure the API’s we build using tokens, with expiry.
+
+- We secure our cookies, using flags like ‘Secure’, ‘HttpOnly’, ‘SameSite’ and proper expiration.
+
+- In terms of secure communication between public and private nodes, we only allow carefully chosen SSL 
+
+ciphers and key exchange algorithms, while keeping tabs on developments and vulnerabilities around 
+
+information security. We also use client certificates internally to enable secure communication, even in our 
+
+private network. This means that data is not sent over an unencrypted network connection, even in our 
+
+private infrastructure.
+
+
+
+Blockport Whitepaper  v1.0.5
+
+15 // 32
+
+- We carefully choose our firewall settings and network topology, to separate and compartmentalize risks 
+
+where possible without compromising usability and testability. This enables us to allow traffic we trust, 
+
+while blocking untrusted traffic.
+
+- Additionally, we pay attention to OWASP updates, including mailing lists and other resources that enable 
+
+us to stay on top of new vulnerabilities and/or patches (think BEAST, CRIME, KRACK etc).
+
+- We do regular audits including penetration tests, load tests and code reviews with independent parties to 
+
+ensure consistent security of our platform.
+
+- We have DoS protection in place to protect us against common DoS attack strategies, and monitor our 
+
+systems continuously. We also have a schedule that allows our team to be on call 24/7, if anything happens.
+
+- We use a KMS for key rotation and organization of sensitive data.
+
+- Of course, we regularly review OWASP top 10 releases (2017) ourselves. We value consciousness of risks 
+
+inside our organization, as this is the the best structural way to reduce risks in a consistent manner.
+
+Please note that these measures are only a part of all security standards we implement in practice. We 
+
+handle a more elaborate protocol internally, but the above provides a general overview.
+
+
+
+Blockport Whitepaper  v1.0.5
+
+16 // 32
+
+3.3   Social Design
+
+3.3.1   Social Trading
+
+The Blockport social trading platform allows members to connect with other traders, discuss investment 
+
+strategies and automatically copy each other’s portfolio. This means that a beginner investor ‘Alice’ can 
+
+copy the portfolio of an experienced trader ‘Bob’. The following figure shows the functional process within 
+
+the Blockport environment when members use social trading features.
+
+1.  Shares his portfolio with other members. 
+
+2.  Beginner investor ‘Alice’ finds experienced trader ‘Bob’ on the Blockport platform and decides to follow 
+
+Bob and copy his trading activities. Alice decides on the amount of her portfolio that is allocated to copy 
+
+Bob’s portfolio. Alice pays Bob in BPT for following his portfolio. 
+
+
+
+Blockport Whitepaper  v1.0.5
+
+17 // 32
+
+3.  Bob spots a trading opportunity and makes a trade through the Trade Portal.
+
+4.  The Trade Portal sends the trade request to the Governance Manager that is going to prepare the trade.
+
+5.  The Governance Manager sends a request to the Compliance Manager to validate if Bob and his followers 
+
+have the correct credentials to make trades. 
+
+ 
+
+6.  To confirm if Bob has any followers, the Compliance Manager asks for Bob’s account settings. If Bob has 
+
+portfolio sharing enabled, the Compliance Manager will automatically receive the account settings of his 
+
+followers. 
+
+7.  Since Alice is following Bob, the Compliance Manager receives the settings of both accounts and validates 
+
+if both accounts are compliant. 
+
+8.  If both are compliant, the Governance Manager receives a ‘go’ and also receives the specifics of the 
+
+portfolio settings of Alice. These settings indicate the amount of Alice’s portfolio that is allocated to follow 
+
+Bob’s activities. 
+
+9.  The Governance Manager will accordingly lock funds in both Alice’s and Bob’s wallets.
+
+10.  The Wallet Operator confirms that the funds are locked.
+
+11.  The final trade orders for both Alice’s and Bob’s accounts are sent to the Trading Engines. 
+
+The above visualization outlines the processes that are executed when a member with portfolio followers 
+
+places an order within the Blockport Exchange. The following section shows the dynamics between Alice’s 
+
+and Bob’s portfolio’s when trading, and gives more understanding of how social trading works in practice. 
+
+When Alice decides to follow Bob, she has to set an amount of her portfolio that is going to follow Bob’s 
+
+trading activities. In this example, Alice’s portfolio consists only out of Bitcoin (BTC) and she decides to 
+
+allocate 50% of her portfolio to following Bob. Alice accepts the terms and conditions for following Bob and 
+
+automatically pays a small amount of BPT to Bob. Bob’s portfolio also consists out of 100% BTC before he 
+
+makes a trade.
+
+
+
+Blockport Whitepaper  v1.0.5
+
+18 // 32
+
+Before the trade
+
+Alice:             Bob:
+
+Bob decides to trade 40% of his BTC for Ethereum (ETH) and makes a trade through the Trade Portal. Alice 
+
+has allocated 50% of her total portfolio to follow Bob and thus her account will automatically make trades 
+
+relative to Bob’s trades so that Alice trades 20% of her total BTC for ETH.
+
+After the trade
+
+Alice:             Bob:
+
+After the trade, Bob’s portfolio has changed from 100% BTC to 60% BTC and 40% ETH. Due to the 50% of 
+
+Alice’s portfolio that wasn’t following Bob, her portfolio respectively changed to 30% BTC and 20% ETH. 
+
+This example describes the basic fundamentals of following an other member’s portfolio.
+
+50% BTC
+
+Following Bob
+
+50% BTC
+
+Not Following
+100% BTC
+
+60% BTC40% ETH50% BTC
+
+Not Following
+
+30% BTC
+
+20% ETH
+
+
+
+Blockport Whitepaper  v1.0.5
+
+19 // 32
+
+3.3.2   Knowledge Sharing
+
+The team of Blockport recognizes the responsibility to educate its members regarding all facets of 
+
+the crypto trading process. Therefore, we offer our members the following features to learn and share 
+
+knowledge with each other in our exchange environment. 
+
+Blockport will host a knowledge base where members can find information about frequently asked 
+
+questions regarding cryptocurrencies and trading. This knowledge base will act as a repository that will be 
+
+updated frequently to serve as Blockport’s first aid. Additionally, Blockport members will be able to contact 
+
+the customer support through live chat and email. This live chat functionality will be incorporated into the 
+
+exchange environment so that members can ask the Blockport customer support for instant help during the 
+
+crypto trading process.
+
+Secondly, members can ‘ask a question’ to other Blockport members on the Blockport community page. 
+
+This community page will have similarities with the worldwide known Q&A platform: Quora. This stimulates 
+
+experienced Blockport members to help each other and curate the best answer.
+
+As part of the ‘Social trading features’, we offer members that follow each other to chat with each other 
+
+and share insights about their trading strategies. This will greatly stimulate the social interaction and 
+
+engagement on the platform. High performing traders will develop an expert status and share their 
+
+knowledge and insights exclusively with their followers. 
+
+
+
+Blockport Whitepaper  v1.0.5
+
+20 // 32
+
+The Blockport Token (BPT) is an Ethereum (ERC20) based token that includes multiple functionalities 
+
+within the Blockport ecosystem. The Ethereum Blockchain is currently the biggest platform that 
+
+supports the creation of tokens and thus allows BPT to seamlessly interact with other ERC20 tokens. 
+
+Members can exchange BPT for premium services, discounted trading fees and social trading 
+
+functionalities. 
+
+Due to the creation of an internal microeconomy, the entire value of the system grows when the number 
+
+of users increases. Additionally, the value of the system increases by incentivizing members to use BPT for 
+
+the payment of trading fees and social trading functionalities. This chapter unveils the crypto economic 
+
+mechanisms and utility of BPT.
+
+The crypto economic mechanisms of BPT are visualized in the figure above and work as follows: 
+
+1. Blockport releases BPT from the reserve and sells them to members through the Token Shop. 
+
+2. Blockport will receive income in fiat or crypto for selling BPT in the Token Shop. 
+
+3. Members can buy BPT at the Token Shop at all times. Tokens are sold to members that wish to fill their 
+
+stock of BPT and are paid with fiat or cryptocurrency. This causes an upward pressure on BPT demand. 
+
+4. Blockport creates a microeconomy where members can pay other members in BPT for copying their 
+
+crypto portfolio. A large part (90%) of this fee is received by the portfolio-sharing member, and the 
+
+remaining (10%) of the fee represents the amount received by Blockport for facilitating the social trading 
+
+4. TOKEN MODEL
+
+
+
+Blockport Whitepaper  v1.0.5
+
+21 // 32
+
+service. The social trading token utility causes an upward pressure on BPT’s demand, and the social trading 
+
+fee received by Blockport causes a downward pressure on BPT’s supply.
+
+5. Members can use BPT to pay for discounted trading fees. Discounted trading fees causes an upward 
+
+pressure on BPT demand.  
+
+6. Order costs are mainly covered by income received from collected trading fees from members. Trading 
+
+fees can be paid in BPT, fiat or cryptocurrency. Additional income is received from token sales and social 
+
+trading fees. 
+
+4.1   Token Utility
+
+The Blockport Tokens are utility tokens that members can hold or consume within the exchange, and thus 
+
+derive their entire value from services provided by the Blockport platform. The tokens are not intended for 
+
+speculation and do not represent company shares or any claim in decision making of the company. BPT are 
+
+not securities and are thus not associated with future revenue streams or values other than derived from 
+
+platform usage. Members are therefore always able to earn BPT by engaging on the platform and are not 
+
+obliged to buy BPT directly on the markt. The exact functionalities of BPT within the platform are described 
+
+in detail below. 
+
+4.1.1   Trading Fees
+
+When members place an order to trade assets, they are charged with a transaction fee as a percentage of 
+
+the total order volume. This percentage covers the order costs of the internal and/or external trade and 
+
+includes the Blockport transaction fee. The transaction fee can be paid in native transaction currency or 
+
+with BPT. Members who pay transaction fees with BPT will benefit from a discount. In order to determine 
+
+the transaction fee that members pay with BPT, the conversion rate between BPT and other crypto assets 
+
+is updated frequently. The amount of discount members receive is also dependent on order size. This 
+
+approach will also properly reward all members who help grow the ecosystem. Incentivizing members to 
+
+pay for discounted trading fees with BPT ensures a healthy growth of the system’s total value. However, the 
+
+discount rate always have to conform to covering Blockport’s order costs to ensure sustainable growth such 
+
+that:
+
+Discount value <= Blockport transaction fee 
+
+
+
+Blockport Whitepaper  v1.0.5
+
+22 // 32
+
+4.1.2   Social Trading
+
+Another primary functionality of the Blockport Token is that members can reward other members who 
+
+publicly share their portfolio within the Blockport exchange environment. Blockport hereby creates a 
+
+microeconomy where members can spend their BPT to learn from other members. These ‘eToro’ inspired 
+
+functionalities include the option to follow other members’ investment strategies by copying their portfolio 
+
+decisions automatically. Members who publicly share their portfolio can earn BPT as a reward. For 
+
+beginner investors this opens up the opportunity to learn from experienced and successful crypto traders. 
+
+Additionally, it enables experienced traders to benefit from the expertise they have developed. However, 
+
+Blockport imposes a maximum amount of followers that a member can have to effectively counter market 
+
+manipulation.
+
+For people who enter the market there is a vast choice regarding crypto assets to invest in. Most crypto 
+
+assets have complex technological features which makes it hard for beginner investors to digest. There are, 
+
+at the time of writing, 1200+ crypto assets listed in the public crypto market. Therefore, the need to follow 
+
+experts - and the ability to leverage their knowledge - is high. Blockport allows members to copy other 
+
+members’ portfolios and benefit from their expertise. Spending BPT for social trading functionalities causes 
+
+an upward pressure on demand.
+
+Blockport will set up a private and public round of Token Sales in order to provide and reward early 
+
+users of the Blockport platform with BPT, which they can spend on transaction fees or social trading 
+
+functionalities. In this section an extensive description of the token sale is provided that will explain 
+
+when certain events will be planned and how Blockport is planning to use the funds that proceed from 
+
+the Token Sales. 
+
+5.1   Token Fundraising
+
+The total amount raised in the Token Sale will be communicated on the Blockport website. The total 
+
+includes both the pre-sale and crowd sale rounds. Participants in the pre-sale round are selected partners, 
+
+private investors and venture capitalists that play an important role in the development of our product 
+
+and services. These commitments may include providing reserves to ensure liquidity for the exchange, 
+
+connect the exchange with 3rd party services, promote the application or token launch and introduce 
+
+valuable assets. Participants in the pre-sale round are obliged to buy a minimum amount of ETH that will 
+
+be communicated prior to the pre-sale round. Additionally, participants in the pre-sale round receive a 33% 
+
+bonus. 
+
+5. TOKEN SALE
+
+
+
+Blockport Whitepaper  v1.0.5
+
+23 // 32
+
+The public Token Sale does not impose a minimum amount. The actual rates expressed in ETH will be 
+
+communicated on the Blockport website and Telegram Community. 
+
+The Token Sales will only accept ETH and all unsold tokens in the private and public sale will be burned. 
+
+5.2   Token Distribution
+
+A maximum amount of 69,440,000 BPT will be minted, never to be increased. The token distribution will be 
+
+as follows:
+
+- No more than 49,600,000 BPT will be minted for the Token Sale in our private and public rounds combined.
+
+Therefore, 71,4% of the total BPT supply is allocated to participants in the Token Sale rounds.
+
+- 14,3% of the total BPT supply will be reserved for the team, advisors and early seed investors.
+
+- 10% of the total BPT supply will be reserved for the company’s Token Shop.
+
+- 4,3% of the total BPT supply will be reserved for the community, services provided by 3rd parties, and 
+
+bonus allocations.
+
+5.3   BPT Vesting Plan
+
+The tokens for the team, which represent around 5-10% of the total tokens, will be fully vested in 3 years as 
+
+shown below. 
+
+Initial release: 25%
+
+After 1 year: 25%
+
+After 2 years: 25%
+
+After 3 years: 25%
+
+5.4   Use of Funds
+
+Besides our need to cover business and development costs, we also need funds for creating trade reserves 
+
+to act as a settlement buffer between the different trade elements and external exchanges. Moreover, we 
+
+need these reserves to provide operational risk intermediation. It is essential to allocate a large proportion 
+
+of the funds to a trading reserve as it guarantees the liquidity of the platform. 
+
+
+
+Blockport Whitepaper  v1.0.5
+
+24 // 32
+
+Therefore we plan to distribute the funds generated in the Token Sale rounds to:
+
+- 50% to a trading reserve that is managed by the Blockport exchange accountant.
+
+- 14,2% for the development of Blockport version 2.0 and 3.0. 
+
+- 10,4% for business operations and maintenance of the Blockport exchange.
+
+- 16,2% for marketing costs such as design, content, advertising and community building.
+
+- 9,2% for legal & regulatory compliance costs such as contracts, licenses and research. 
+
+Use of funds:
+
+9,2% Legal
+
+16,2% Marketing
+
+10,4% Operations
+
+14,2% Development
+
+50% Trading reserve
+
+Funds generated in the private round of the Token Sale will mainly be used to cover initial startup and 
+
+marketing costs to prepare for the public sale. 
+
+5.5   Blockport Token Participation
+
+The Blockport token sale is executed in two stages. The first stage is an exclusive pre-sale round for a 
+
+selected group of participants. Everyone can sign up for this round on the Blockport website, however, only 
+
+whitelisted participants will gain access. In the pre-sale, the maximum amount to be raised is set to €1M 
+
+worth of ETH. 
+
+
+
+Blockport Whitepaper  v1.0.5
+
+25 // 32
+
+The maximum ensures that there are no single parties that hold a significant large amount of tokens prior 
+
+to the public sale. The pre-sale will start the 3rd of January 2018 and will last two weeks or until the cap 
+
+is reached. In the first stage a seed investment is collected to cover the operational costs of promoting, 
+
+developing and running the Blockport exchange. Additionally, funds will be allocated to set up and promote 
+
+the launch of the second stage of the Token Sale, which is planned on the 24th of January 2018 15:00 CET. 
+
+The second stage is a public crowdsale where a maximum of 71,4% percent of all the Blockport tokens are 
+
+sold and participation is accessible to everyone. More detailed information about the second stage will be 
+
+released after the first stage (pre-sale).
+
+6. ROADMAP & DEVELOPMENT
+
+6.1   Whitepaper (Q4 2017)
+
+- Whitepaper release
+
+- Community building 
+
+- Development & Audit of token sale contracts 
+
+- Development of Alpha prototype
+
+6.2   Pre-Sale (Q1 2018)
+
+- Start of pre-sale on the 3rd of January 
+
+- Launch of Alpha prototype
+
+- Start of crowdsale on the  24th of January
+
+- Launch of Blockport 1.0 Beta in March 
+
+- Implementation of the knowledge sharing platform
+
+6.3   First release (Q2 2018)
+
+- Blockport 1.0 full release, supporting: Bitcoin, Ethereum and several other tokens
+
+- Blockport 2.0 Beta release (Exchange of Exchanges)
+
+- Social trading features 
+
+
+
+Blockport Whitepaper  v1.0.5
+
+26 // 32
+
+6.4   Second release (Q3 2018)
+
+- Blockport 2.0 full release, supporting 50+ cryptocurrencies and tokens.
+
+6.5   Third release (Q4 2018)
+
+- Blockport 3.0 Beta release, supporting 100+ cryptocurrencies and tokens.
+
+6.6   Fourth release (Q1 2019)
+
+- Blockport 3.0 full release (Hybrid-decentralized Exchange), supporting most popular cryptocurrencies and 
+
+tokens.
+
+6.7   Blockport Versions
+
+There are three different versions of the Blockport exchange planned in the development roadmap above. 
+
+Each version brings more decentralization to the Blockport exchange. 
+
+Blockport 1.0: is the first version that uses an external exchange architecture and will be integrated with 
+
+one exchange. This version will support Bitcoin, Ethereum and several ERC20 tokens. It will have the same 
+
+user-friendly look and feel as the sequent versions. This is the first commercial version of the Blockport 
+
+exchange accessible to the public. 
+
+Blockport 2.0: is the full version excluding the decentralization of members’ funds. It will be integrated with 
+
+multiple exchanges and is equipped with more complex trading algorithms. Both the knowledge sharing 
+
+platform and social trading features are implemented in this version. All popular cryptocurrencies and most 
+
+of the ERC20 tokens are supported. 
+
+Blockport 3.0: is the full version combining both the external and internal exchange architecture, which is 
+
+named as the ‘hybrid-decentralized exchange’. In this version members’ funds will be stored completely 
+
+decentralized on the blockchain. Most cryptocurrencies and tokens are supported in this version.
+
+
+
+Blockport Whitepaper  v1.0.5
+
+27 // 32
+
+6.8   Motivation
+
+The reason why Blockport starts with building a centralized exchange that extends into a decentralized 
+
+internal architecture is due to several circumstances. First of all, Blockport needs to be up and running as 
+
+fast as possible to become a healthy company generating revenue and to learn from its users, stakeholders 
+
+and the global blockchain community.
+
+Secondly, much research and development is still required to improve the speed and liquidity of 
+
+decentralized exchanges. Current decentralized solutions aren’t yet providing what’s promised. Thus, to 
+
+provide customers with fast settling of orders, a centralized mechanism to settle orders is still needed. 
+
+The hybrid set-up allows Blockport to simultaneously provide a consumer facing product and to work on 
+
+decentralized exchange technology, utilizing a best of breed approach.
+
+In release one and two, customers will not themselves hold the legal title to the cryptocurrencies. In order 
+
+to ensure the safety of our members’ funds, they will be held by Stichting Custodian Blockport (SCB) in 
+
+an ‘omnibus account’ whereby the SCB acts as legal owner of the cryptocurrencies. The assets of SCB 
+
+are legally segregated and as such protected from insolvency of Blockport Holding B.V. and Blockport 
+
+B.V. Additionally, members’ funds are always stored safely by holding funds in offline wallets as much as 
+
+possible. With the release of Blockport 3.0, the funds of our existing members are automatically migrated to 
+
+on-chain wallets. 
+
+7. TEAM
+
+7.1   Core Team
+
+Sebastiaan Lichter 
+
+Founder and Chief Product of Blockport. Sebastiaan is an innovation manager who has worked for 
+
+Independer (largest Dutch insurance platform) on the implementation of an AI-driven chatbot that 
+
+compares insurance products for clients. He also worked at the consultancy firm XL Family, where he was 
+
+involved in several innovation projects for corporate clients such as Delta Lloyd and Aegon.  
+
+Sebastiaan is a crypto investor and entrepreneur in digital technologies who’s passionate and creative 
+
+mind excels in bringing together the world of technology and business. He is specialized in IT and carries 
+
+several University degrees in the area of technology management from the University of Groningen and the 
+
+Amsterdam Business School. Besides being a hands-on entrepreneur, he is a driven athlete who trains every 
+
+day of the week and believes that having a healthy body and mind is key to success. 
+
+
+
+Blockport Whitepaper  v1.0.5
+
+28 // 32
+
+Kai Kain Bennink
+
+Founder and Chief Strategy of Blockport. Kai carries a background in business and technology from the 
+
+University of Groningen and Delft University of Technology, where he specialized in IT and emerging 
+
+technologies, such as Artificial Intelligence and Blockchain. He recently graduated at IBM where he 
+
+investigated the impact of Artificial Intelligence on the Dutch banking sector. For this project he collaborated 
+
+with the three largest traditional banks in the Netherlands: Rabobank, ABN Amro and ING. 
+
+Parallel to his academic activities, he has always been active in different sectors such as manufacturing, 
+
+(private) banking, governmental agencies and digital marketing. His strong suit is the combination of EQ and 
+
+IQ, which allows him to bring together a broad range of talented people and develop a strong sense of team 
+
+coherence to effectively achieve goals.
+
+Besides being a passionate crypto investor and blockchain enthusiast, he loves to train, spinning, cross-fit, 
+
+snowboard and wakeboard. He claims that finding the right balance between sports and work challenges is 
+
+absolutely necessary to develop and maintain a productive mind. 
+
+Zowie Langdon
+
+Partner and Chief Technology of Blockport . Zowie has over 15 years of experience in software development 
+
+and has studied software engineering and philosophy. He is an operationally skilled full stack engineer and 
+
+lover of learning. Through his companies Luminum Solutions and his involvement in Blockport, Zowie seeks 
+
+to explore and understand everything about tech, data and business.
+
+      
+
+Zowie loves open source software and has worked on various innovative applications and other large 
+
+systems for both start-ups, scale-ups and corporates. In several projects Zowie acted as lead developer and 
+
+has built scalable, high frequency systems together with his team. Just as Laurens, he strongly believes in 
+
+scalable and modular architecture to effectively build modern solutions.
+
+Spiros Mantadakis
+
+Partner and Chief Design. Spiros has a strong background in design and at early age started an innovative 
+
+media and development agency where he delivered innovative solutions for digital products, e-commerce, 
+
+cloud infrastructure and web development. For the last seven years he has operated as an entrepreneur. 
+
+During this period he has been active in several sectors ranging from digital marketing to banking and 
+
+governmental bodies with a strong focus on Customer Experience and Virtual Reality.
+
+Now Spiros is an experienced UX consultant and partner at Well Global innovations. He is responsible for 
+
+the UX/UI in multiple innovative projects, for clients such as ABN AMRO Bank, NIBC Bank and the City of 
+
+Amsterdam. He has also incorporated his knowledge of UX in projects in the Middle East. Spiros utilizes 
+
+a customer-centric design approach and uses his expertise to design sophisticated and user-friendly 
+
+applications used by many people around the globe. 
+
+
+
+Blockport Whitepaper  v1.0.5
+
+29 // 32
+
+Pascal van Steen
+
+Pascal is passionate about growth and has helped several startups raise funds to grow their business. He 
+
+was the head of growth during the Travis the Translator campaign and managed the team in their marketing 
+
+efforts to raise $80K and eventually raised $628K at the end of the campaign and getting covered in 1,200+ 
+
+publications. 
+
+As an enthusiast of new technologies, Pascal grew an interest in the blockchain environment. Since then he 
+
+has successfully helped several blockchain startups set up their marketing efforts to raise funds during their 
+
+ICOs. Pascal is an experienced marketer, having several corporate clients and startups in his portfolio. He 
+
+also regularly hosts meetups for growth marketers in Amsterdam with his community Growth Hacker Talk.
+
+Gino Taselaar
+
+Gino is a data driven growth marketer with a key specialisation in driving user growth and product adoption 
+
+within the platform economy space. He has worked as lead growth marketer at Eventerprise, the fastest-
+
+growing events platform in the world, where he applied his growth expertise to an investor-relations project, 
+
+helping the startup secure $400k in seed investment.
+
+He has also been responsible for growth at VanHack, a startup that’s disrupting the traditional model of 
+
+career-relocation and hiring, where he scaled up their 110k developer platform. On top of these projects, he 
+
+has also facilitated and overseen growth for a variety of startups in the B2B enterprise software branch.
+
+Gino is a firm believer in the blockchain technology that currently underpins the crypto-revolution, and he 
+
+has closely observed the ever-increasing intersection between it and the platform economy, as he eagerly 
+
+anticipates (and participates in) the future of money.  Next to his passion for startups, innovation and 
+
+blockchain, Gino loves organizing community events within Europe’s bustling growth-marketing community.
+
+Wesley van Heije
+
+Wesley is a creative developer that loves to combine his experience in software engineering and consultancy 
+
+to create solutions that work. As a solution architect he worked for Microsoft and Accenture in the joint 
+
+venture called Avanade. 
+
+Currently, Wesley is working for an Ethereum research and development company called Consensys, which 
+
+reflects his in-depth knowledge of Solidity and the Ethereum blockchain infrastructure. 
+
+Wesley is currently responsible for developing and testing the smart contracts that will be used for creation 
+
+and distribution of the Blockport tokens in the pre- and crowdsale.
+
+
+
+Blockport Whitepaper  v1.0.5
+
+30 // 32
+
+Thale Sonnemans
+
+Thale is a pure creative that has an instinctive touch for branding innovation so that it resonates with 
+
+the brand’s audience. In the last few years he worked for one of the largest film production companies in 
+
+Amsterdam, called Halal, and is now putting his learnings and network to work at Blockport. 
+
+7.2   Advisors
+
+Jeffrey Dorrestijn
+Founder of Magnetic Field. Digital Marketing Specialist, ex-Google.
+
+Johannes de Jong
+Head of Regulatory Osborne Clarke, Fintech Lawyer, former AFM legal counsel. 
+
+Lars Rensing
+CFO ARK.io
+
+Erik Terpstra
+API specialist, Founding Software Engineer at Blendle, Crypto trader, early adopter of blockchain 
+
+technology.
+
+Laurens Profittlich 
+Blockchain R&D and Full Stack Developer
+
+Peter Kits 
+Partner Deloitte Legal
+
+
+
+Blockport Whitepaper  v1.0.5
+
+31 // 32
+
+8. COMMUNITY & INVOLVEMENT
+
+Please join our Telegram to give us feedback on the white paper.
+
+To be part of our active community or learn more about what we do:
+
+Visit our website at   http://www.blockport.io
+
+Join our Telegram at   https://t.me/blockport
+
+Follow us on Twitter at   https://twitter.com/blockportNL
+
+Follow us on Facebook at   https://www.facebook.com/blockport/
+
+Or email at    contact@blockport.io 
+
+
+
+CONTACT
+
+TQ 
+Singel 542
+1017 AZ Amsterdam
+
+Online
+
+Email: support@blockport.io
+ 
+Website:  www.blockport.io
+
+WHITEPAPER
+V 1.0.5
+
+

@@ -1,0 +1,3669 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JANUARY 2018
+ver 2.0.0 Draft version. May be amended.
+
+WHITE PAPER
+
+https://socialmedia.market/
+
+
+2
+
+CONTENTS
+
+DISCLAIMER OF LIABILITY 
+
+1. INTRODUCTION
+1.1.  ADVANTAGES OF SOCIAMEDIA.MARKET PLATFORM
+
+1.2. ADVANTAGES OF SOCIAL MEDIA TOKEN (SMT)
+
+2. THE INFLUENCER MARKET OPPORTUNITY
+2.1. WHAT IS INFLUENCER MARKETING
+
+2.2. MARKET OVERVIEW
+
+2.3. INFLUENCER MARKETING CHALLENGES (PROBLEM DEFINITION)
+
+3. SOLUTION
+3.1. OVERVIEW
+
+3.2. ECOSYSTEM PARTICIPANT
+
+3.3. SOCIALMEDIA.MARKET FEATURES AND BENEFITS
+
+3.4. FEATURES AND BENEFITS OF SOCIALMEDIA.MARKET FOR  BRANDS
+        &  ADVERTISERS
+
+3.5. FEATURES FOR INFLUENCERS
+
+3.6. FEATURES AND BENEFITS OF SOCIALMEDIA.MARKET FOR AGENTS
+
+3.7. HOW IT WORKS?
+3.7.1.  CAMPAIGN AND SMART CONTRACT CREATION FOR ADVERTISERS
+
+3.7.2. INFLUENCER PROFILE VERIFICATION AND INTERACTION WITH   
+ BRANDS
+
+3.7.3. DECENTRALIZED DISPUTE SOLUTION
+
+3.7.4 RATING SYSTEM
+
+3.7.5. DATA SCIENCE
+
+3.6. COMPETITIVE ADVANTAGES
+
+4. PLATFORM AND TOKEN ECONOMY
+4.1. BUSINESS MODEL
+
+4.2. SOCIAL MEDIA TOKEN
+
+CONTENTS
+
+
+
+3
+
+4.3. ADOPTION 
+
+5. TECHNOLOGY OVERVIEW
+5.1 CONCEPT OF BUILDING AN APPLICATION
+
+5.2 ARCHITECTURE
+
+5.3 DOCKERIZING 
+
+5.4 ORCHESTRATION OF CONTAINERS
+
+5.5 COMMUNICATION BETWEEN SERVICES
+
+5.6 CLOUD AS A METHOD OF APPLICATION STORAGE
+
+5.7 APPLICATION DEVELOPMENT AND SUPPORT
+
+5.8 BASIC TECHNOLOGY STACK
+
+6. DEVELOPMENT AND ECOSYSTEM EXPANSION PLAN
+
+6.1. ROADMAP
+
+6.2. MARKETING STRATEGY
+
+6.3. GEOGRAPHICAL EXPANSION 
+
+6.4. REVENUE FORECAST
+
+7. TOKEN DISTRIBUTION
+7.1. OVERVIEW
+
+7.2. TOKEN SALE: PHASE #1
+
+7.3. TOKEN SALE: PHASE #2
+
+7.4. KNOW YOUR CUSTOMER (“KYC”) 
+
+7.5. USE OF FUNDS
+
+7.6. BOUNTY AND REFERRAL PROGRAMS
+
+8. TEAM
+8.1. OUR TEAM 
+
+8.2 OUR ADVISORS
+
+9. MEDIA
+
+10. CONTACTS
+
+11. RISK FACTORS
+
+12. SOURCES
+
+
+
+4
+
+DISCLAIMER OF LIABILITY
+PLEASE REVIEW CAREFULLY THE PRESENT SECTION “DISCLAIMER OF LIABILITY”. IF YOU HAVE ANY 
+
+DOUBTS AS TO WHAT ACTIONS YOU SHOULD TAKE, WE RECOMMEND THAT YOU CONSULT WITH 
+
+YOUR LEGAL, FINANCIAL, TAX OR OTHER PROFESSIONAL ADVISOR(S). No part of this Whitepaper 
+
+is to be reproduced, distributed or disseminated without including this section “Disclaimer of 
+
+Liability”.
+
+The sole purpose of this Whitepaper is to present SocialMedia.Market and SMT tokens to poten-
+
+tial token holders in connection with the proposed ICO. The information is provided for INFORMA-
+
+TION PURPOSES only. It may not be exhaustive and doesn’t imply any elements of a contractual 
+
+relationship or obligations. Despite the fact that we make every effort to ensure the accuracy, up 
+
+to date and relevance of any material in this Whitepaper, this document and materials contained 
+
+herein are not professional advice and in no way constitutes the provision of professional advice 
+
+of any kind. Further, SocialMedia.Market reserves the right to modify or update this Whitepaper 
+
+and information contained herein, at any moment and without notice. To the maximum extent 
+
+permitted by any applicable laws, regulations and rules, SocialMedia.Market doesn’t guarantee 
+
+and doesn’t accept legal responsibility of any nature, for any indirect, special, incidental, conse-
+
+quential or other losses of any kind, in tort, contract or otherwise (including but not limited to loss 
+
+of revenue, income or profits, and loss of use or data), arising from or related to the accuracy, 
+
+reliability, relevance or completeness of any material contained in this Whitepaper. Further, 
+
+SocialMedia.Market  does not make or purport to make, and hereby disclaims, any representa-
+
+tion, warranty or undertaking in any form whatsoever to any entity, person, or authority, including 
+
+any representation, warranty or undertaking in relation to the truth, accuracy and completeness 
+
+of any of the information set out in this Whitepaper. You should contact relevant independent 
+
+professional advisors before relying or making any commitments or transactions based on the 
+
+material published in this Whitepaper.
+
+This Whitepaper is not subject to any legal system and is not governed by any law. No regulatory 
+
+authority has examined or approved of any of the information set out in this Whitepaper, and no 
+
+such action has been or will be taken under the laws, regulatory requirements or rules of any 
+
+jurisdiction. The publication, distribution or dissemination of this Whitepaper does not imply that 
+
+
+
+5
+
+the applicable laws, regulatory requirements or rules have been complied with.
+
+You don’t have the right and shouldn’t buy SMT tokens if you are (i) a green card holder of the 
+
+United States of America, or (ii) a citizen or a resident (tax or otherwise) of the United States of 
+
+America, Puerto Rico, the Virgin Islands of United States, or any other possessions of the United 
+
+States of America, or person of that states, or (iii) a citizen or resident (tax or otherwise) of any 
+
+country or territory where transactions with digital tokens and/or digital currencies are prohibited 
+
+or in any other manner restricted by applicable laws. (“Person” is generally defined as a natural 
+
+person residing in the relevant state or any entity organized or incorporated under the laws of 
+
+the relevant state).  Purchased tokens cannot be offered or distributed as well as cannot be 
+
+resold or otherwise alienated by their holders to mentioned persons. It is your sole responsibility 
+
+to establish, by consulting (if necessary) your legal, tax, accounting or other professional advisors, 
+
+what requirements and limitations, if any, apply to your particular jurisdiction, and ensure that 
+
+you have observed and complied with all restrictions, at your own expense and without liability to 
+
+SocialMedia.Market.
+
+SMT tokens are not and will not be intended to constitute securities, digital currency, commodity, 
+
+or any other kind of financial instrument and have not been registered under relevant securities 
+
+regulations, including the securities laws of any jurisdiction in which a potential token holder is a 
+
+resident. This Whitepaper is not a prospectus or a proposal, and its purpose is not to serve as a 
+
+securities offer or request for investments in the form of securities in any jurisdiction. However, in 
+
+spite of the above, legislation of certain jurisdictions may, now or in future, recognize SMT tokens 
+
+as securities. SocialMedia.Market does not accept any liability for such recognition and\or any 
+
+legal and other consequences of such recognition for potential owners of SMT tokens, nor pro-
+
+vide any opinions or advice regarding the acquisition, sale or other operations with SMT tokens, 
+
+and the fact of the provision of this Whitepaper doesn’t form the basis or should not be relied 
+
+upon in matters related to the conclusion of contracts or acceptance investment decisions. This 
+
+Whitepaper doesn’t oblige anyone to enter into any contract, to take legal obligations with respect 
+
+to the sale or purchase of SMT tokens, and to accept any cryptocurrency or other form of pay-
+
+ment. Potential owners of SMT tokens are advised to contact relevant independent professional 
+
+advisors, on the above matters.
+
+Certain statements, estimates and financial information contained herein, constitute for-
+
+ward-looking statements or information. Such forward-looking statements or information involve 
+
+known and unknown risks and uncertainties, which may cause actual events or results to differ 
+
+
+
+6
+
+materially from the estimates or the results implied or expressed in such forward-looking state-
+
+ments. Further, all examples of calculation of income and profits used in this Whitepaper were 
+
+provided only for demonstration purposes or for demonstrating the industry’s averages. For 
+
+avoidance of doubt, nothing contained in this Whitepaper is or may be relied upon as a guaran-
+
+tee, promise, representation or undertaking as to the future performance of 
+
+SocialMedia.Market and/or SMT token, and/or promise or guarantee of future profit resulting 
+
+from purchase of SMT token.
+
+SMT tokens cannot be used for any purposes other than as provided in this Whitepaper, including 
+
+but not limited to, any investment, speculative or other financial purposes. SMT tokens confer no 
+
+other rights in any form, including but not limited to any ownership, distribution (including, but 
+
+not limited to, profit), redemption, liquidation, property (including all forms of intellectual proper-
+
+ty), or other financial or legal rights, other than those specifically set forth below. While the 
+
+community’s opinion and feedback can be taken into account, SMT tokens do not give any right to 
+
+participate in decision-making or any direction of business related to the SocialMedia.Market 
+
+service.
+
+English language of this Whitepaper is the primary official source of information about the SMT 
+
+tokens, any information contained herein may from time to time be translated into other lan-
+
+guages or used in the course of written or oral communications with customers, contractors, 
+
+partners etc. In the course of such translation or communication some of the information con-
+
+tained herein may be lost, corrupted or misrepresented. In the event of any conflicts or inconsist-
+
+encies between such translations and communications and this English language of Whitepaper, 
+
+the provision of this English language of Whitepaper as original document shall prevail.
+
+By continuing reading this Whitepaper, you confirm that you have read, understood, 
+
+accepted, and agreed with, the above section “Disclaimer of Liability”. 
+
+
+
+7
+
+1. INTRODUCTION
+In a world of rising digital content consumption where traditional media resources are losing their 
+
+audience daily, brands and companies are increasing their digital marketing budgets. Nonethe-
+
+less, reaching their target audience is tricky, nowadays. Recent research shows that 47% of overall 
+
+mobile and desktop internet users are now using ad-blocking software.1 This number has almost 
+
+doubled in comparison to the previous year. Furthermore, 36% of traffic2 generated by Pay-per-
+
+click (PPC) campaigns are suspected to be fraudulent or non-human. Hence, brands are seeking 
+
+new ways of advertising their products and services, discovering the power and realizing the 
+
+importance of Influencer Marketing.
+
+Recently, social media platforms like YouTube, Facebook, Instagram and Twitter have seen 
+
+explosive growth, connecting over 3.03 billion people every day3. As the amount of time spent 
+
+online rises globally, consumer behavior changes. Advertising campaigns continue to shift from 
+
+traditional to digital marketing, and consequently, offline marketing isn’t as effective as it used to 
+
+be. However, not all digital marketing strategies are effective in reaching consumers. In the past 
+
+few years companies and agencies have discovered Influencer Marketing as the strategy with the 
+
+most potential and return, with over 80% of them finding this strategy effective4.
+
+UNLIKE TRADITIONAL ADVERTISING, INFLUENCER 
+MARKETING PROVIDES BRANDS THE OPPORTUNITY
+TO GARNER CREDIBILITY AND GAIN ATTENTION
+
+Influencer Marketing has been a part of the promotional campaigns of the gaming and entertain-
+
+ment industries for years. Ultimately, digital agencies demonstrated the value of this advertising 
+
+channel to corporations and large companies. And now, even small businesses are interested in 
+
+allocating marketing budgets on popular bloggers or celebrities, who have influence over poten-
+
+tial consumer audiences. Because, unlike traditional advertising, Influencer Marketing provides 
+
+1  Source: Ad-Blocking GlobalWebIndex GWI INSIGHT REPORT /// Q3 2016
+2  Source: Millennials GlobalWebIndex.  GlobalWebIndex Q3-Q4 2015
+3  Source: Social Media Engagement GlobalWebIndex GWI INSIGHT REPORT /// Q2 2017
+4  Source: The State-of-Influencer Marketing 2017 Final-Repor © 2016 LINQIA
+
+
+
+8
+
+brands the opportunity to garner credibility and gain attention.
+
+Still, Influencer Marketing remains a complicated process for both advertisers building their 
+
+campaigns and influencers seeking a way to monetize their content. Obscure and uncertain price 
+
+determination, insecure transactions, non-compliance with executed agreements, fraud, lack of 
+
+control and unreliable analytic instruments create challenging ROI determination. This imbalance 
+
+gives the major advertising assets to digital marketing agencies and top social media celebrities. 
+
+With our core team know-how and expertise in entertainment, marketing, analysis and product 
+
+development, we have a clear vision of how to implement Blockchain and Smart Contract technol-
+
+ogy in a day-to-day solution that will resolve market needs and help develop them, exponentially. 
+
+We are building SocialMedia.Market – the first decentralized ecosystem to discover, create, 
+
+perform and analyze advertising campaigns with social media influencers across any social 
+
+network. Blockchain technology will simplify the integration between advertisers and publishers 
+
+and decrease costs for all engaged parties. SocialMedia.Market creates a completely safe and 
+
+transparent ecosystem for everyone involved in influencer marketing, opening up the opportuni-
+
+ties for brands and influencers across the globe to reach their targeted audience of get rewarded 
+
+for engaging their consumers with the content they enjoy. We will help elevate advertising mar-
+
+kets to the next level and take considerable market share very quickly as cryptocurrency and 
+
+Blockchain technology become mainstream in the next few years.
+
+SOCIALMEDIA.MARKET –  THE DECENTRALIZED ECOSYSTEM TO DISCOV-
+ER, CREATE, PERFORM AND ANALYZE ADVERTISING CAMPAIGNS WITH 
+SOCIAL MEDIA INFLUENCERS ACROSS ANY SOCIAL NETWORK
+
+Our team is inspired to popularize Blockchain and Smart Contract technologies, making them 
+
+more common in our daily life. We apply extra effort to introduce SocialMedia.Market’s platform, 
+
+globally, to millions of influencers from small and medium-sized businesses to larger corpora-
+
+tions.
+
+
+
+9
+
+1.1. ADVANTAGES OF SOCIAMEDIA.MARKET PLATFORM
+
+A short list of advantages SocialMedia.Market will provide to all parties as a service:
+
+TRANSPARENT and competitive marketplace
+
+WIDE range of social media platforms, such as: YouTube, Instagram, Facebook, Twitter, 
+etc.
+
+REDUCED operational costs and fees when working with Influencer campaigns
+
+ACCESSIBLE and easy-to-use, even for small businesses and influencers in the early 
+stage of social presence
+
+REDUCING TIME and resources being spent on influencer marketing campaigns;
+
+SMART partnership for a wide range of users with the ability to create smart contracts 
+tailored to specific needs using templates and smart tips
+
+FAIR dispute solution based on decentralized Blockchain technology
+
+ULTIMATE results, smart planning with Real-Time Analytics and Data Science 
+
+GLOBAL outreach allows project to aim for larger market share, higher diversity and 
+
+less dependency on local regulations
+
+1.2.  ADVANTAGES OF SOCIAL MEDIA TOKENS (SMT)
+
+A short list of advantages SMT will provide to all parties as a single currency:
+
+SAFE escrow transactions based on Blockchain technology 
+
+LOW-COST transactions with less operation fees
+
+SIMPLIFIED and FAST global payments 
+
+Earn REWARDS by participating in the decentralized dispute solution system
+
+Get agent commission within the platform
+
+DONATIONS METHOD for bloggers and streamers
+
+UTILITY TOOL for acquiring outstanding marketing services, premium analytics and 
+development instruments 
+
+
+
+JANUARY 2018
+ver 2.0.0 Draft version. May be amended.
+
+THE INFLUENCER 
+MARKET OPPORTUNITY2
+
+https://socialmedia.market/
+
+
+11
+
+2.1. WHAT IS INFLUENCER MARKETING?
+
+With digital and social media gaining popularity, new engagement strategies have also been 
+
+developed to help increase brand advocacy such as Influencer Marketing. Influencer Marketing, 
+
+defined, is “a form of marketing in which focus is placed on influential people rather than the 
+
+target market as a whole”. An influential person/influencer (or blogger, celebrity, opinion leader) 
+
+can be described as someone that has the power to motivate followers in the industry where 
+
+their buying decisions are concerned.
+
+The use of social media marketing has exploded over the last few years. Well-known brands and 
+
+smaller businesses truly realized the potential reach and engagement opportunity provided by 
+
+social media channels. Analysing the following statistics: consumer purchase decision, rise of 
+
+digital advertising and social media, increase in the use of ad-blockers, etc., it becomes obvious 
+
+that today’s influencers are some of the most valuable and viable media channels available. 
+
+Business can drive a more optimized, omni-channel marketing plan by utilising Influencer Market-
+
+ing, and will be more likely to reach their target audience and deliver a larger ROI.
+
+
+
+12
+
+There are many different types of influencers: from an industry blogger with great content and 
+
+good site traffic to an ordinary Twitter member with a large following. Celebrities, journalists, 
+
+analysts, thought leaders, brand journalists, platform-specific “sensations” etc., can become 
+
+influencers, too.
+
+INFLUENCER MARKETING, IS A FORM OF MARKETING IN WHICH 
+FOCUS IS PLACED ON INFLUENTIAL PEOPLE RATHER THAN THE 
+TARGET MARKET AS A WHOLE CELEBRITIES & THOUGHT LEADERS
+
+One of the main benefits of Influencer Marketing is that such promotions look like native recom-
+
+mendations from the influencers, not as paid aggressive advertising. In the recent researches 
+
+almost 92%1 of respondents admitted that they rely heavily on the opinion of an influencer or 
+
+opinion leader while deciding to buy a product. So, an influencer can deliver the message of a 
+
+brand in a natural way, improving trust.
+
+2.2. MARKET OVERVIEW
+
+1. One of the fastest growing marketing trends, expected to reach 
+
+$10B by 2020.
+
+2. The average time the user spends in social networks has grown 
+
+by almost 24% in the past 5 years2, leading to the expansion of 
+
+social networks and the growth of the ad blockers usage.
+
+3. Influencer Marketing becomes one of the most efficient ways to 
+
+attract attention to a brand. According to the recent researches 
+
+the influencer marketing ROI reaches $11.69 per $1 spent.
+
+1  Source: Social Media Engagement GlobalWebIndex  Q2 2017 
+2  Source: Social Media Engagement GlobalWebIndex  Q2 2017
+
+
+
+13
+
+SocialMedia.Market targets Influencer Marketing, one of the fastest-growing markets. Analytical 
+
+reports show an increase in almost all metrics related to Influencer Marketing. Growing exponen-
+
+tially, by recent estimates this market will turn into a $5–10 billion industry within the next 5 
+
+years1.
+
+SocialMedia.Market targets Influencer Marketing, one of the fastest-growing markets. Analytical 
+
+reports show an increase in almost all metrics related to Influencer Marketing. Growing exponen-
+
+tially, by recent estimates this market will turn into a $5–10 billion industry within the next 5 
+
+years2.
+
+Though, traditional media has only slightly declined, with TV still holding a strong position as a 
+
+medium of content consumption and brand discovery, the overall time spent by internet users 
+
+online exceeded the time spent on all traditional media combined, over the past 5 years.
+
+The longer online presence due to the expansion of mobile internet has not has a significant 
+
+impact on traditional media as some of this additional online time happens simultaneously. 
+
+Internet users tend to second-screen, or consume multimedia on any chosen device and mobile 
+
+at the same time. Altogether, these factors increased the average time spent on social media by 
+
+34 minutes and posting frequency by 50%3.
+
+1  Source: trends.google.com - https://goo.gl/qzvqG4
+2  Source: trends.google.com - https://goo.gl/qzvqG4
+3 Source: Generation_Z GlobalWeb GlobalWebIndex Q4 2016
+
+60
+
+80
+
+40
+
+20
+
+0
+
+2016 201720152014
+
+8
+14
+
+80+
+
+56
+
+Growth of Google trend index for Influencer Marketing
+
+
+
+14
+
+As previously mentioned, this shift has two important effects - higher social media consumption 
+
+and an increase in the utilization of ad-blocking. As internet users’ behaviors shift, consumer 
+
+awareness of ad-blocking increases. Alternative forms of brand promotion are set to gain trac-
+
+tion, as desktop and mobile ad-blocking tactics advance. Particularly, those forms of brand 
+
+advertising that revolve around social and mobile channels are currently immune to ad-blockers; 
+
+including Influencer Marketing, sponsored editorials and in-app advertising. 
+
+The brand discovery market still relies heavily on search engines and TV ads, although in the last 
+
+couple of years a clear trend of using social networks for marketing purposes has developed 
+
+among Millennials and Generation Z, the most active internet buyers currently. Furthermore, this 
+
+trend is predicted to continue over the next 5 years. Tending to rely on word-of-mouth and 
+
+reviews or opinions of trusted leaders or celebrities, this channel is smartly being utilized by most 
+
+marketers. And despite its complexities, more than half of companies plan to increase budgets on 
+
+Influencer Marketing in the next year.
+
+Based on this report, with 86% of marketers applying this type of marketing and 94% of those 
+
+marketers finding it to be a very effective tactic for advertising, we can emphatically conclude that 
+
+hr:min %
+
+Online TV / Streaming
+
+Online Radio / Music
+
+Online Press
+
+Social Networks / Services
+
+Other
+
+00:56
+
+00:39
+
+00:50
+
+02:04
+
+01:54
+
+15%
+
+10%
+
+13% 
+
+32% 
+
+30%
+
+Number of hours and minutes per day typically devoted to the following
+
+30%
+
+10%
+13%
+
+32%
+
+15%
+
+SHARE OF
+ONLINE
+
+MEDIA TIME
+
+49%
+
+of overall desktop and mobile 
+device owners use 
+
+ad-blocking software
+
+of internet users discover 
+products and ser vices on social 
+
+networks
+
+of people rely on the influencers' 
+opinion when making a buying 
+
+decision
+
+
+
+15
+
+marketers are predicted to increase their budgets regarding Influencer Marketing, with only 4% 
+
+planning to decrease it . Some of the most preferred social channels are Instagram, Facebook and 
+
+YouTube. Influencer blogs have also proven to be an important channel, with nearly 87% of 
+
+respondents leveraging them as tool for improving brand discovery1. The average budget per 
+
+program for most marketers is around $50,000 - $100,000, while 18% plan to increase to over 
+
+$100,000 and up to $500,0002. The top challenge for 2018 will be measuring the ROI of Influencer 
+
+Marketing campaigns. 
+
+When handled in-house, most marketers only work with a small number of influencers per 
+
+program, dedicating a good deal of time per week to each influencer as the process of managing 
+
+Influencer Marketing programs can be very time-consuming. Subsequently, as Influencer Market-
+
+ing has evolved, a variety of services aiding brands in the navigation of this emerging sector have 
+
+developed. The bulk of marketers use managed or “turn-key” services when executing their 
+
+Influencer Marketing programs, while others use self-service, SaaS platforms to automate influ-
+
+encer outreach, management, and reporting. Accordingly, identifying which Influencer Marketing 
+
+partner to work with, will be the second biggest challenge of 2018.
+
+According to an eMarketer study3, the consumer-packaged goods food industry generates the 
+
+highest return, followed by travel, beauty, alcohol and beverages, and grocery. Overall, brands 
+
+that used influencer strategies reported an average return of $11.69 for every dollar spent. 
+
+Further, 92% of consumers are more likely to trust a brand advertising using Influencer Marketing 
+
+Additionally, it is more cost-effective than paid advertising and leads to more credible brand 
+
+recommendations4. For these reasons, Influencer Marketing has arguably become the most 
+
+effective, long term marketing strategy. 
+
+1 Source: The-State-of-Influencer-Marketing-2017 Final-Report © 2016 Linqia, Inc.
+2 Source: The-State-of-Influencer-Marketing-2017 Final-Report © 2016 Linqia, Inc.
+3 Source: https://www.emarketer.com/Article/How-Big-Influencers-Influence/1012904
+4 Source: The-State-of-Influencer-Marketing-2017 Final-Report © 2016 Linqia, Inc.
+
+
+
+16
+
+OVERALL, BRANDS THAT USED INFLUENCER STRATEGIES 
+REPORTED AN AVERAGE RETURN OF $11.69 FOR EVERY DOLLAR SPENT
+
+The recent trends of digital marketing can help provide insight into the future of this field. Influ-
+
+ence Marketing, which merges relationships between influencers and content, must be a priority 
+
+for companies regarding digital marketing strategies. To easily manage and develop this relation-
+
+ship, brands must utilize automated management solutions to track the potential consumers’ 
+
+entire path to customer. By taking advantage of live video (Facebook, Twitter) features, podcasts 
+
+and the omnipresence of mobile technologies, a rebirth of journalism will occur. Accordingly, the 
+
+role of influencers will be redefined and integrated into a multi–functional relationship approach 
+
+with brands.
+
+FOR MORE DETAILS ON MARKET STATE, 
+PLEASE, READ OUR TEAM RESEARCH 
+“DIGITAL MARKETING STATE 2017”
+
+https://socialmedia.market/assets/pdf/SMM_Marketing-Research_eng.pdf
+
+
+17
+
+2.3 INFLUENCER MARKETING CHALLENGES (PROBLEM DEFINITION)
+
+Our team successfully launched more than 300 digital ad campaigns with different channels for 
+
+more than 25 brands, during the last year. Of these ad campaigns, the best results were achieved 
+
+by those supported by Influencer Marketing. However, this could be a misleading statistic as 
+
+management of sponsored content created by bloggers consumed most of our time and resulted 
+
+in unforeseen additional costs.
+
+In the current state, the influence advertising market is highly opaque and chaotic with no regula-
+
+tions and an army of agents and scammers. This causes inefficiency in pricing, while agent fees 
+
+and fraud consume a large portion of the influencer’s revenue and the brands’ marketing budg-
+
+ets.
+
+Having over a thousand closed deals with influencers we suggest that over 30% of budget is lost 
+
+to careless contractors, dishonest or fraudulent agents and staff maintenance. Influencer man-
+
+agement is time-consuming, as specified above. For instance, 52% of marketers who provide 
+
+in-house management, only work with an average of 10-25 influencers per program. 50% of 
+
+in-house program managers estimate spending more than 25 hours managing each program. 
+
+Additionally, 25% spend more than 50 hours managing each program. Working with agencies can 
+
+take up to 30% of cost, and that’s only a disclosed part. Moreover, agencies limit the pool of 
+
+Influencers they have contact with, because keeping direct contact with multiple influencers is a 
+
+resource-intensive task.
+
+In communicating with new and experienced bloggers, those with over 100K subscribers, we 
+
+discovered that they encounter similar problems. Most bloggers, instead of creating new interest-
+
+ing content which demands investment of time and money, concentrate on the monetization of 
+
+their channel. If a blogger has an active contract with an agency or manager, 10% to 50% of 
+
+payment is taken as their fee, leaving the blogger with only a small portion of what’s left after 
+
+spending on content creation and channel promotion. Additionally, influencers run into the same 
+
+scam schemes (fraudulent agents, agency managers and even advertisers) as advertisers do.
+
+Lack of standards and guidelines for Influencer campaigns introduces more difficulties in creation 
+
+of advertising activities and makes the market chaotic. In over 80% of cases, the content created 
+
+by bloggers doesn’t meet the demands of the agreements made, and greatly affects the cam-
+
+paign’s performance.
+
+
+
+18
+
+Despite the quick growth and development of this market, several unresolved problems persist:
+
+FRAUD
+Lack of ownership validation, non-compliance with agreements, fake audience 
+
+engagement and followers amount.
+
+UNCERTAIN PRICING
+Many intermediaries and risks make pricing in the market chaotic and often inade-
+
+quate, while not providing any guarantees of efficiency. 
+
+PAYMENT COMPLEXITY
+To maintain campaigns both advertisers and influencers need to operate multiple 
+
+payment methods to simplify transactions and optimize costs.  
+
+LOW ACCESSIBILITY
+A high threshold for small and medium-sized business entry, associated with risks 
+
+(high unpredictable costs)
+
+DIFFICULT TO MAINTAIN RELATIONSHIPS
+Lack of standards, average age of influencers and only direct online communication 
+
+makes communications difficult to maintain for all parties.
+
+TIME CONSUMING AND LIMITED CAMPAIGN DIVERSITY
+As demonstrated, the process of managing Influencer Marketing programs is time 
+
+consuming when handled in-house, making it a complex task to work with a large 
+
+network of Influencers. Yet, Influencers with a smaller quantity of subscribers show 
+
+higher engagement rates than top influencers. 
+
+COMPLEXITY IN SELECTION OF INFLUENCERS AND ROI ANALYSIS
+In a survey conducted by Tomoson1, more than half of the participants reported 
+
+better quality leads as a result of Influencer Marketing. Therefore, the selection of 
+
+relevant bloggers is one of the most difficult tasks for marketing managers.
+
+1 Source: https://blog.tomoson.com/influencer-marketing-study/
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+
+
+19
+
+The extensive use of mobile devices has caused digital media consumption to grow annually. This 
+
+has triggered changes in internet users’ behavior like second-screening, ad-blocking, increased 
+
+social media consumption, preferable content types etc. Consequently, marketers must adopt 
+
+and search for alternative channels to reach the consumer effectively. Despite Influencer Market-
+
+ing channel’s complexity, it is being used by most marketers, with more than half of them plan-
+
+ning to increase their budgets in the next year.
+
+SocialMedia.Market is designed to solve these problems and make Influencer Marketing accessi-
+
+ble and transparent, creating a new generation of advertising that will be more profitable for all 
+
+market participants.
+
+
+
+JANUARY 2018
+ver 2.0.0 Draft version. May be amended.
+
+THE SOLUTION3
+
+https://socialmedia.market/
+
+
+21
+
+3.1 OVERVIEW
+
+Our experience in solving difficulties and issues in creating advertising campaigns and developing 
+
+interactions with Influencers, inspired us to create SocialMedia.Market – the first decentralized 
+
+ecosystem designed to discover, create, perform and analyze advertising campaigns with social 
+
+media influencers. 
+
+Blockchain technology will simplify integration, reduce fraud and costs for all market participants. 
+
+It will create a safe and transparent, competitive marketplace that will open opportunities for 
+
+thousands of influencers and brands all over the globe, increase target audience outreach and 
+
+engage consumers in the most relevant and efficient ways. An open, agile platform will create a 
+
+new generation of advertising, accessible to millions of new, up-and-coming influencers, startups 
+
+and small businesses.
+
+SocialMedia.Market’s objective is to establish a healthy ecosystem, where:
+
+influencers can easily access sponsorship for creating high-quality content, 
+
+agencies get access to a constant stream of influencers and can concentrate their 
+
+effort on testing new strategies and strengthening their expertise, 
+
+advertisers get access to more relevant and efficient ways to engage consumers,
+
+consumers, ultimately, gain access to the high-quality content they desire,
+
+all token holders, participate in platform development and gaining access to 
+
+exclusive features and services for using and owning Social Media Token
+
+3.2 ECOSYSTEM PARTICIPANTS
+
+SocialMedia.Market ecosystem will involve the following participants: 
+
+SocialMedia.Market Platform including services and products related to it 
+
+Advertisers (brands, businesses, agencies)
+
+Influencers (or bloggers, opinion leaders)
+
+Agents
+
+Token Holders (can be either of participants or community members)
+
+
+
+22
+
+SocialMedia.Market participants interaction:
+
+SOCIALMEDIA.MARKET PLATFORM
+SocialMedia.Market platform is a decentralized ecosystem that allows advertisers to  discover, 
+
+create, perform and analyze advertising campaigns with social media influencers. Likewise it 
+
+allows influencers to join advertisers campaigns to monetize their channels and create more 
+
+engaging content.
+
+https://socialmedia.market/
+
+
+23
+
+INFLUENCER
+Influencers are individuals or sometimes small groups that carry out the influence over a certain 
+
+group of people through their online presence. Influencers possess one or more social media 
+
+channels with a certain number of followers (their circle of influence).
+
+ADVERTISERS
+Advertisers – a person, a brand, a company 
+
+or an agency that places advertisement in 
+
+the platform in order to target customers 
+
+with native advertising. 
+
+COMMUNITY MEMBERS, TOKEN HOLDERS AND AGENTS
+Any member of the community SocialMedia.Market, as well as the participant of the platform may 
+
+be the token holder and the agent of platform with the possibility of retaining of the certain 
+
+number of tokens on his or her account (more in the chapter “Token economics”). 
+
+3.3 SOCIALMEDIA.MARKET’S MAIN FEATURES AND BENEFITS
+
+SocialMedia.Market will provide the following features to all platform users:
+
+1. SECURE TRANSACTIONS 
+Delays or non-payments are problems typically associated with an Influencer’s 
+
+platform. The advertisers and influencers have very little control over payments. In 
+
+many cases, after project submission, the advertiser doesn’t receive the high-quali-
+
+
+
+24
+
+ty content agreed upon from an influencer or the influencer does not get paid. Our 
+
+Ethereum based platform uses an escrow payment system which holds the 
+
+contract fees until the set obligations are met. On project completion, the funds 
+
+are released, securing the interests of both parties involved.
+
+2. FAIR DECENTRALISED DISPUTE SOLUTION SYSTEM
+Content created by Influencers is mostly perceived subjectively. This may cause disputes and 
+
+dissatisfaction of parties with achieved results. For the most part, modern platforms do not solve 
+
+such disputes between parties. Moreover, platforms with such mechanics typically charge an 
+
+additional fee for arbitration and often favor the paying side. Our service has several preventive 
+
+measures that will allow parties to resolve disputes on their own in most cases, as well as an 
+
+arbitration system that will resolve disputes between participants with the help of independent 
+
+platform experts.
+
+3. OWNERSHIP VALIDATION
+One of the major problems contributing to most of the unforeseen costs is fraud, when a fraud-
+
+ster impersonates an Influencer by hacking into his accounts. These situations harm both parties, 
+
+Advertiser and Influencer. SocialMedia.Market applies special procedures providing a transparent 
+
+and reliable marketplace. Influencers are verified and authorized to ensure they are really who 
+
+they claim to be. Additionally, two factor authentication ensures protection and account owner-
+
+ship within the platform. 
+
+4. EASY COMMUNICATIONS AND INTERACTIONS
+Engagement and arrangement is one of the most time-consuming tasks for 
+
+both the Brand and the Influencer. At SocialMedia.Market we pay great 
+
+attention to making collaboration more simple and effective. With our power-
+
+ful CRM-system, in-platform chat app, Smart Contract templates, chat tips, 
+
+instant notifications and mobile app, organizing contacts, messages, commu-
+
+nicating and staying up-to-date will be convenient.
+
+5. SIMPLE MANAGEMENT
+ A step-by-step procedure of setting  up the ad campaign with a  smart-contract will simplify all 
+
+the stages of cooperation.
+
+
+
+25
+
+6. HIGH-QUALITY USER EXPERIENCE
+ With the trend of using mobile devices to solve everyday tasks, we understand that our platform 
+
+should be convenient and compatible with all kinds of devices. Therefore, we use progressive 
+
+technologies to make SocialMedia.Market cross platform. Brands and Influencers will be able to 
+
+utilise IOS and Android applications conveniently, staying in touch anytime, anywhere.
+
+7. ADDITIONAL WAYS TO BE REMUNERATED
+Using our Dispute Solution system platform members will be rewarded with SMTs for their active 
+
+personal engagement in dispute arbitrations. This will be available only for users who hold a 
+
+certain number of tokens in their accounts.
+
+3.4 FEATURES FOR ADVERTISERS
+
+There are many features that will make the management of Influencer Campaigns more conven-
+
+ient for brands and digital media marketing experts:
+
+1. UNLIMITED ACCESS TO INFLUENCERS ALL OVER THE WORLD
+Influencers of lower rank, also known as Tier 2 Influencers or micro-Influencers, can provide an 
+
+outstanding campaign results, and they are easier to engage with. These Influencers are especial-
+
+ly fruitful when reaching a sub-community, and their campaigns can be scaled for larger reach 
+
+while keeping a personal approach. Social Media Token will allow users to interact with Influenc-
+
+ers globally with no limitations caused by complicated payments policies.
+
+2. OPERATING COSTS OPTIMIZATION
+Managing of Influencer Marketing programs is a very time-consuming 
+
+process and Influencer Marketing platforms, or agencies require an adver-
+
+tiser to pay up to 50% commission for such services. With the help of our 
+
+services, brands can expect to reduce the costs associated with launching 
+
+Influence Marketing campaigns significantly.
+
+
+
+26
+
+3. LESS TRANSACTION FEES
+Traditional payment methods may  require high processing fees 
+
+and complicated banking and compliance procedures. Our platform 
+
+is open for advertisers all over the world making all payments low-
+
+cost and easy to proceed.
+
+4. SMART MATCHING
+One of the challenging tasks in creating a campaign is choosing the right Influencer to engage the 
+
+right audience. Our service provides the most complete database, advanced search engine and 
+
+Data Science Technologies for a quick search and selection of relevant channels for brand place-
+
+ment. Advanced filters provide a convenient means to sift through millions of profiles, focusing 
+
+only on the appropriate ones. An advertiser can either filter the database by preferred influencers 
+
+parameters or target audience characteristics. 
+
+OUR PLATFORM IS DESIGNED TO DELIVER INFLUENCERS 
+TO BUSINESSES OF ANY SIZE AND ANY BUDGET
+
+5. PRECISE TARGETING
+Influencers have a combination of popularity and expertise (perceived or real). They may have 
+
+reach, credibility or both. SocialMedia.Market implements several rank systems that will help to 
+
+determine an Influencer’s efficiency and relevance for a brand, as well as their credibility as a 
+
+partner.
+
+6. AVAILABILITY FOR SMALL AND MEDIUM BUSINESSES
+Small businesses, which value every spent dollar, encounter even more challenges when working 
+
+with Influencers. Our platform is designed to deliver Influencers to businesses of any size and any 
+
+budget. For instance, our service provides the most convenient tools and tips for marketers; 
+
+whether the brand can work with influencer for products samples only, or with a dedicated 
+
+sponsorship budget.
+
+
+
+27
+
+7. NO NEED TO BE A PRO
+For newbies in Influencer Marketing, it is rather difficult to understand which formats of advertis-
+
+ing are available with Influencers and how to use them correctly. With lots of tips and templates, 
+
+we’ll make the creation process, engagement strategy and Influencer campaigns simple and clear.
+
+8. EVERYTHING IN ONE PLACE
+Another problem that makes the creation of Influencer campaigns so time-consuming, is the 
+
+need to switch the manager’s attention between different social networks to manage campaigns 
+
+and various means of maintaining communications with the Influencers. Our platform allows you 
+
+to interact with different social networks, and communicate all in one place, whether you reach 
+
+out through our platform, social profile or email.
+
+9. POWERFUL MANAGEMENT
+Using SocialMedia.Market, clients can always see the full history of cam-
+
+paigns they’re interested in, including its source, updates, sales and specific 
+
+details. This gives brands a better opportunity to make informed decisions 
+
+about creating new campaigns and scaling influencer programs. The So-
+
+cialMedia.Market CRM-system, designed specially to manage Influencer 
+
+Marketing campaigns, provides user-friendly tools to: build campaigns, set 
+
+guidelines, create reminders, track product shipment, review content, track 
+
+posts etc.
+
+10. GUIDED ANALYTICS
+Every advertiser needs a “Guided Analytics” approach that goes beyond a simple review of trends 
+
+in sales figures to identify techniques to increase revenue. A marketer or consultant needs to 
+
+know the right sequence of questions to ask to improve sales, and where to find the answers. 
+
+With our expertise we provide our clients a detailed report with top line metrics as well as the 
+
+impact of each Influencer and the user-generated content that Influencer produced for the brand.
+
+
+
+28
+
+11. REAL-TIME DATA ANALYSIS AND ROI
+SocialMedia.Market provides real-time tracking for mentions, engagements, true reach and ROI. 
+
+For the SocialMedia.Market platform, tracking updated data triggers provide an essential and 
+
+fundamental part of the system’s functionality and competitive edge. Our campaign analytics 
+
+system provides views, reach and engagement analysis of the influencer’s campaign and allows 
+
+users to get real-time Cost Per Engagement (CPE) metrics to analyze and control real money 
+
+return on Influencer investment.
+
+12. EXCLUSIVE DATA FOR PRECISE TARGETING
+Thanks to extensive reach and data science, our system will provide advertisers with more de-
+
+tailed information about Influencers’ channels and users’ behaviours. Our Artificial Intelligence 
+
+learns from the campaigns delivered results, constantly improving Influencer identification based 
+
+on the best campaign results achieved.
+
+13. SMO (SOCIAL MEDIA OPTIMIZATION) READY
+SMO is already recognized as a crucial part of marketing alongside with SEO and SMM. Multiple 
+
+websites already utilize SMO campaigns, boosting their ranking authority from search engines. 
+
+SocialMedia.Market’s tools provided to brands are created with the latest SMO trends and allow 
+
+members to create campaigns which comply with basic optimization requirements.
+
+3.5 FEATURES FOR INFLUENCERS
+
+SocialMedia.Market is an outstanding tool with multiple features for all kinds of social media 
+
+Influencers:
+
+1. HIGH-QUALITY BUSINESS OPPORTUNITIES FOR CONTENT MONETISATION
+For beginners and minor opinion leaders, searching for ways of monetisation is a difficult and 
+
+time-consuming task. Our service will give Influencers of any size an opportunity to choose 
+
+brands, creating the most interesting and beneficial partnership.
+
+
+
+29
+
+2. NO ENTRY BARRIER
+Most Influencer platforms require specific numbers of 
+
+followers to be listed. Unlike others, SocialMedia.
+
+Market is accessible even for new Influencers in the 
+
+early stage of social presence.
+
+3. EASY ENGAGEMENTS WITH BRANDS
+Separate engagements with multiple brands adds complexity to Influencers. With the help of our 
+
+platform, Influencers will be able to communicate with brands directly and approve content they 
+
+create without a hassle, even for the different social media channels they run.
+
+4. INSTANT WORLDWIDE PAYMENTS
+Most Influencer Marketing platforms and agencies bind Influencers to wait for payouts  up to 60 
+
+days. With Social Media Token (SMT), payouts will be passed in a split second after the Smart 
+
+Contract executed  (provided that an Influencer’s account is verified and doesn’t have a history of 
+
+platform rules violation). Social Media Token will allow influencers to get paid anywhere in the 
+
+world. SMT integration with blockchain technology assets payment platforms like TenX will supply 
+
+our token with the ability for day-to-day real-world payments.
+
+5. INSIGHTS AND TIPS FOR CHANNELS DEVELOPMENT
+There is a lack of data driven tools giving Influencers insights into the audience’s interactions with 
+
+their content. Most opinion leaders don’t have a lot of experience and/or don’t understand what 
+
+kind of analytics they need to pay attention to for channel growth which, in turn, will increase the 
+
+level of monetisation. SocialMedia.Market will give bloggers complete information about their 
+
+channel and tips on how to increase the level of engagement received based on insights provided 
+
+by the platform.
+
+6. CLEAR TASK ASSIGNMENT
+Small and novice bloggers are often faced with displeasure from advertisers about marketing 
+
+content they are producing or changes in content requirements. For example, in cases where the 
+
+advertiser didn’t issue a clear task - the result may become irrelevant. SocialMedia.Market will 
+
+significantly reduce the number of cases like the one described above with the help of Smart 
+
+Contracts and fair dispute solution.
+
+
+
+30
+
+3.6 FEATURES OF SOCIALMEDIA.MARKET FOR AGENTS
+
+In addition to the above listed benefits, SocialMedia.Market will provide opportunities in extra 
+
+earnings for marketing agencies. Any agent will be able to become a partner of the platform and 
+
+receive commission in Social Media Tokens for the provision of additional services for advertisers’ 
+
+marketing campaigns or become a personal manager to Influencers. 
+
+SocialMedia.Market will be a convenient tool for searching and managing business opportunities. 
+
+With the help of service agents, one can easily manage the schedule of advertising content or 
+
+check the effectiveness of advertising campaigns using the extended set of tools, anytime and 
+
+anywhere.
+
+3.7 HOW IT WORKS?
+
+The SocialMedia.Market platform automates all business processes related to selection, creation 
+
+and management of the Influencer’s marketing activities, including the distribution of financial 
+
+means among the participants.
+
+https://beta.socialmedia.market/
+
+
+31
+
+The platform has a friendly and easy-to-use interface for Brands and Influencers to help post and 
+
+accept tasks easily. To ensure the authenticity of users, the platform will perform identity verifica-
+
+tions whenever necessary. The unique identities of Advertisers and Influencers will be based on 
+
+their addresses in the blockchain, making them difficult to forge. To protect personal data on the 
+
+account of the Advertiser and Influencer, two-factor authentication can be applied.
+
+In the following sections, we give a summary of several types of engagement scenarios with the 
+
+platform. The described features are preliminary and can be modified during platform develop-
+
+ment.
+
+3.7.1 CAMPAIGN AND SMART CONTRACT CREATION FOR ADVERTISERS
+
+The basic tools of SocialMedia.Market, like working with a social media database, will be accessi-
+
+ble for Advertisers without verification. For creating tasks and campaigns, as well as communicat-
+
+ing with Influencers, an Advertiser must pass the verification process, requiring them to provide 
+
+details on the company profile.
+
+
+
+32
+
+SocialMedia.Market’s interface1 for brands enables creation and planning of campaigns from 
+
+concept to completion. The first step in the creation of an Influencer Marketing campaign is to 
+
+prepare a task for Influencers. Some of the factors the Advertiser must consider when creating a 
+
+task: 
+
+social media channel; 
+
+start and end dates or period of campaign; 
+
+region, country or city; 
+
+campaign budget; 
+
+the necessary files and the content they want to see; 
+
+any additional information required for chosen channel and content type (for 
+
+example, YouTube video tags for better SMO) 
+
+target audience preferences for automatic Influencer selection, etc.
+
+All this information will be easily set up with the help of templates and smart tips provided by 
+
+SocialMedia.Market. 
+
+1 Interfaces presented in Beta are not final and will change with the platform growth to answer users’ needs.
+
+
+
+33
+
+In the next step, the advertiser must select an Influencer for the campaign. This step can be 
+
+completed in a couple of different ways. Making the campaign visible for all Influencers who 
+
+match the target audience and task details is the easiest way to accomplish this step. In that case, 
+
+campaigns will only be available for Influencers who have already verified their accounts on the 
+
+platform. And, if an Influencer is interested, they would send a request to join the campaign. The 
+
+second way to choose an Influencer would be to create a personal list containing preferred 
+
+Influencers using the platform’s database, advanced search engine and filters. After creating this 
+
+list, the Advertiser will be able to send the task to all Influencers on the list, even if they don’t have 
+
+an account on SocialMedia.Market. 
+
+The SocialMedia.Market goal is to provide brands, advertisers, and agencies with all the required 
+
+details on the influencers, whether they have or don’t have an account on the platform. As the 
+
+SocialMedia.Market platform gathers data on the influencers from every open source, the adver-
+
+tisers don’t have any limitations while choosing an influencer. If the advertiser chooses an influ-
+
+encer, who is not registered on the platform, the system sends the influencer a notification to 
+
+every open channel available with an invitation to sign up in the system to be able to complete 
+
+the task.
+
+ 
+
+After the influencer is chosen, the advertiser has to set up the maximum budget, they are going 
+
+to spend for the blogger-generated content. There will be notifications during the budget set up 
+
+to help the advertiser adjust the budget to match with average counter bids and selected param-
+
+eters. 
+
+
+
+34
+
+After receiving a notification about the new campaign, a blogger can accept, decline, or discuss 
+
+the terms with the advertiser. When the campaign terms are agreed upon by both parties, the 
+
+smart-contract is automatically created. The platform will utilize the smart contracts and the 
+
+escrow transactions. 
+
+After the content is created, the influencer shares a link or uploads the file with the advertising 
+
+content for the preview. After all is set and the advertiser confirms the preview, the blogger 
+
+publishes the content in their social media channels. In the most cases the platform will automati-
+
+cally check the publication of content with AI systems (you can learn all the details in the AI and 
+
+Data Science chapter). After the publication is checked, the platform automatically changes the 
+
+campaign status. If the content was approved by the advertiser and suites to the selected social 
+
+activity, the publication is automatically verified by the system. The published content should be 
+
+accessed freely on the blogger’s channel during the time, described in the contract. This time 
+
+should be no less than 30 days. If this rule is violated and content was deleted, influencer account 
+
+will be downrated (check the details in Ratings) or suspended, pending or accessible balance on 
+
+account might be locked or refunded. 
+
+3.7.2 INFLUENCER PROFILE VERIFICATION AND INTERACTION
+WITH BRANDS
+
+In order to sign up to SocialMedia.Market, the opinion leader may log in via email or profile in G+. 
+
+After the sign-up procedure it is necessary to verify and activate the channels of influence. Also, 
+
+the opinion leader may set up 2-factor authentication. Each channel of influence is being verified 
+
+separately, upon that the opinion leader receives the access to the advertising campaigns. The 
+
+verification status of each channel specified in the personal account of the influencer.
+
+Basically, the Influencer can receive a task in two ways:
+
+1. Receive a “personal” task in the SocialMedia.Market CRM system or through another 
+
+communication channel available in his public contacts, even if they weren’t previously 
+
+registered on a platform.
+
+2. Choose a task from the list of published “open” jobs by Advertisers. Moreover, the 
+
+influencer can only see the tasks that comply with characteristics of their channel.
+
+
+
+35
+
+After receiving notification, the influencer should agree with the terms and conditions of a task by 
+
+applying for it. If the job requires clarification or modification, parties should use the built-in 
+
+messenger app. Once the advertiser confirms a job, a Smart Contract is automatically created. 
+
+Within the period that is specified in the Smart Contract, the Influencer must complete the re-
+
+quired task.
+
+If the task isn’t complete within the arranged time, or prolonged at the Advertiser’s discretion, the 
+
+Smart Contract is automatically cancelled. When the Smart Contract is executed, funds are 
+
+automatically credited to the Influencer’s account.  For new and low-ranked influencers payment 
+
+holds are applied.
+
+
+
+36
+
+The post with content should remain public on the Influencer’s social media account for at least 
+
+30 days since the Smart Contract’s execution, unless otherwise stated in the Smart Contract. If 
+
+this rule is violated and content was deleted, influencer account will be downrated (check the 
+
+details in Ratings) or suspended, pending or accessible balance on account might be locked or 
+
+refunded. 
+
+3.7.3 DECENTRALIZED DISPUTE SOLUTION
+
+The evaluation of the created content is largely subjective. Consequently, this subjectivity can 
+
+cause disputes and dissatisfaction concerning the result. On SocialMedia.Market there are several 
+
+preventive measures that allow parties to resolve disputes on their own, in most cases. In all 
+
+other cases, parties can access a decentralized Dispute Solution system to resolve issues in 
+
+cooperation between participants. Depending on the reasons of dispute, the process may be 
+
+initiated by either Advertiser or Influencer. A list of contracts under dispute is available for 
+
+platform experts to review, with controversial details being disclosed during the settlement 
+
+process.
+
+Every user within the SocialMedia.Market platform, or any other person willing to become a 
+
+resolution expert, has the opportunity to participate in decentralized Dispute Solution system and 
+
+earn Social Media Tokens by voting in particular cases. To become an expert and to have the 
+
+ability to vote for resolutions, a user should be holding no less than 10000 SMTs on their account 
+
+balance. Experts will be rewarded with SMTs for their engagement in the dispute solving proce-
+
+dure. Dispute rewards will be deducted from the platform service fee reserved in every dedicated 
+
+Smart Contract. 
+
+In order to be rewarded for voting in Decentralized Dispute Solution system, user should meet 
+
+next conditions: 
+
+1) Hold certain amount of tokens on their SocialMedia.Market account
+
+2) Complete a short education course to confirm the status of resolution expert
+
+3) Choose controversy cases awaiting resolution
+
+4) Check contract agreements and marketing campaign conditions
+
+5) Review influencers’ content for compliance
+
+6) Vote for resolution on the basis of fair assessment of a dispute
+
+
+
+37
+
+After case closure, every expert voted for resolution will be rewarded by Social Media Tokens 
+
+proportionally to the contract value, taken from reserved platform service fee (further details will 
+
+be determined in Q3 2018 after Dispute Solution System testing).
+
+DISPUTE PREVENTION FEATURES:
+
+Partial payment of contracts. While creating a Smart Contract, Advertisers can evaluate every 
+
+part of the contract separately, based on total budget. Splitting the cost of the contract 
+
+between contract items will enable reasonable adjustments of the contract amount in the 
+
+case of partial fulfillment of terms by mutual agreement of the parties, without involvement 
+
+of arbitration. This feature is especially important in cases when the advertising period or 
+
+budget is limited, because it gives parties the opportunity to execute a contract with partial 
+
+payment if conditions were only partially fulfilled.
+
+Rating system affects placement price index. SocialMedia.Market will implement public 
+
+arbitration rules for parties involved in arbitration which may result in a rating adjustment. If 
+
+a user’s rating is downgraded (for example if a party often uses arbitration and loses), the 
+
+platform will apply measures on the participant in the form of additional coefficients at the 
+
+execution of Smart Contracts and restrictions in choice of participants (Advertisers and 
+
+Influencers). This process will allow participants to evaluate the reliability of potential part-
+
+ners and will increase the benefits of dispute resolution without the help of arbitration. 
+
+    3.7.4 RATING SYSTEM
+
+The reputation system is essential for establishing trust between all the parties. The 
+
+SocialMedia.Market platform is creating several rating systems for every user on the platform.
+
+Influencers are usually the popular experts in a particular field. They provide credibility, reach or 
+
+both. SocialMedia.Market implements several ranking systems that will help to determine an 
+
+influencer’s efficiency and their relevance for a brand, as well as their credibility as a partner. To 
+
+begin with, the platform is implementing Engagement Rate, as it is fundamental for choosing the 
+
+blogger. With the platform growth we are planning to implement the following:
+
+
+
+38
+
+1) Engagement Rate, which is based on the cumulative rating of the blogger’s  content
+
+and the audience engagement 
+
+2) Influencer trust rating. The trust rating consists of the following: the quantity of
+
+successful campaigns completed by the user, whether the user complied to the condi-
+
+tions of the content publishing, the average rating from the advertiser, the quantity of 
+
+disputes and the average dispute resolution. Rating affect on price index will be 
+
+determined with the platform development.
+
+3.7.5 DATA SCIENCE
+
+Our platform will use the latest technology for data collection and analysis. This will be achieved 
+
+with help of gathering data from Social Graph and Open Data as well as the data inside the 
+
+platform. With the use of Artificial Intelligence and Machine Learning, SocialMedia.Market will 
+
+provide an outstanding service to our users. 
+
+Through collecting and analysing data within the platform we can gain valuable insights on
+
+users behaviour, Influencers ROI etc. to provide this information to brands and Influencers to 
+
+help them increase ROI and engagement.
+
+BIG DATA ANALYTICS and predictive models for real-time reports. There are two types of data, 
+
+required for the analytics on the platform:
+
+1. Real-time content performance tracking and engagement metrics monitoring,
+
+including comments, likes, shares.
+
+2. User analytics complete with the segmentation by gender, age, interests, location,
+
+and income.
+
+As the APIs of social networks that provide user demographics and interests metrics are closed 
+
+for the third parties, the only way to operate this data is based on predictions on social media 
+
+usage patterns.
+
+SocialMedia.Market creates a solution that aggregates all publicly available data from various 
+
+
+
+39
+
+social networks and utilizes this data by creating business intelligence reports, as well as an input 
+
+of predictive model that allows identifying age, gender, interests, and location on the users on the 
+
+channel.closed for third parties. The only way to get the data is to make predictions based on 
+
+social media usage patterns.  
+
+SocialMedia.Market is going to build a solution that downloads all publicly available data from 
+
+social networks and use this data directly for building BI reports and as an input for predictive 
+
+models that predict gender, age, location and interests of social media users.  
+
+Artificial intelligence and machine learning for smart decisions and processes automation. 
+
+Main purposes of AI system in the platform:
+
+1. Help in finding the perfect match between Brands and Influencers for the maximum
+
+engagement rates
+
+2. Automate the process of contract compliance confirmation without communication
+
+between parties
+
+3. Helps to make the right decision about future campaigns and evolution of exposure
+
+pathway
+
+NATURAL LANGUAGE PROCESSING (NLP)
+
+NLP refers to a field of AI focusing on understanding 
+
+language, which includes reading
+
+comprehension, language translation, text summariza-
+
+tion, question answering, sentiment
+
+analysis, and text generation. This enables an opportu-
+
+nity to learn about users behaviour and learn how the 
+
+community reacts to each campaign.
+
+IMAGE RECOGNITION
+
+Images are processed by a Deep Learning algorithm 
+
+that can extract information, recognize the content of 
+
+an image and identify Brands and products.
+
+
+
+40
+
+Amazon AWS services is our preliminary choice for Machine Learning 
+
+and AI algorithms that will be implemented in SocialMedia.Market. As 
+
+AWS offers a broad array of compute options for training and inference 
+
+with powerful GPU-based instances.
+
+3.8 COMPETITIVE ADVANTAGES
+
+SocialMedia.Market has significant points and features in comparison with currently existing tools 
+
+Brands and Influencers have to leverage in the engagement process. The following table provides 
+
+SocialMedia.Market’s competitive advantage comparison. All data was gathered from public 
+
+sources and during comparison average indicators were taken into consideration.
+
+
+
+41
+
+
+
+JANUARY 2018
+ver 2.0.0 Draft version. May be amended.
+
+PLATFORM 
+AND TOKEN 
+ECONOMY4
+
+https://beta.socialmedia.market/
+
+
+43
+
+4.1. BUSINESS MODEL
+
+SocialMedia.Market business model is advertising marketplace for bloggers and advertisers with 
+
+integrated analytical tools and services based on AI and Big Data analysis. SocialMedia.Market 
+
+provides one-stop solution for finding, creating, managing and analyzing native advertising 
+
+campaigns in the content (video, audio, photo and textual) of social media influencers and their 
+
+impact on targeted audience.
+
+The platform profit generated from service fees included in contracts and transactions. As 
+
+opened global marketplace, SocialMedia.Market will attract advertisers giving them opportunity 
+
+to run multiply advertising campaigns with large number of bloggers seeking for monetizing their 
+
+content channels. SocialMedia.Market will also bring to agencies and marketers possibility to 
+
+collaborate with big groups of brands and influencers, providing them marketing services within 
+
+the platform. SocialMedia.Market will offer different ways of partnership and types of native 
+
+advertisement formats, engaging social media network audience not only in brand awareness, 
+
+but in direct sales as the main goal.
+
+Simple use case of marketing campaign created on SocialMedia.Market can be an integrated 
+
+promo content to YouTube video with tagged link to webservice or store of advertiser. Using 
+
+access to site analytics linked to advertisers’ profile it would be easy to follow audience interest in 
+
+product and reward influencer for every sale generated from this channel. For example, native 
+
+integration in video content will cost to advertiser 1000 SMT, giving to influencer additional 50 
+
+SMT for each sale made by his followers during 30 days period. SocialMedia.Market will redeem 
+
+10% fee from total contract value, unless influencer holds 5000 SMT deposit on his account. In 
+
+this case 5% fee will apply to the executed contract.
+
+
+
+44
+
+4.2. SOCIAL MEDIA TOKEN
+
+SocialMedia.Market’s platform will create a global marketplace for Advertisers and Influencer 
+
+Marketing publishers among every major social network, providing convenient and transparent 
+
+tools for interaction of any party involved. For maintaining commercial relationships between 
+
+participants, SocialMedia.Market will collect a service fee from every executed contract. The 
+
+amount of the fee may differ depending on the type of contract and complexity of interaction 
+
+between parties, but will not exceed 10% of the contract value. The obtained service fee, reduced 
+
+by operational costs and decentralized Dispute Solution rewards, forms the platform’s net profit. 
+
+All operations within the SocialMedia.Market ecosystem are executed with its effective cryptocur-
+
+rency token - Social Media Token (SMT), which ensures high standards of services and prevents 
+
+any unauthorized human intervention in the processes within the system. The Social Media Token 
+
+will create a self-driven economy, based on constant cooperation between influencers, advertis-
+
+ers, marketing agencies and agents. The token will be valuable for platform users, not only by 
+
+transactional means within the platform’s services, but also supported with exclusive features for 
+
+token holders.
+
+A user can utilize the following methods to operate the tokens:
+
+An integrated wallet on the platform’s account;
+
+Import their Ethereum wallet containing SMT tokens with private key;
+
+Link an ERC20-compatible MetaMask wallet to the account.
+
+Token holders will also have exclusive access to premium platform services. Holding a certain 
+
+amount of tokens on their accounts will grant them access to deep analytical data, exclusive 
+
+insights to audience outreach of bloggers they are willing to cooperate with, special advertising 
+
+formats, content development tools for bloggers, channel audience growth strategies and cam-
+
+paigns, exclusive advertising contracts with well-known brands and marketing consultations.
+
+Participation in the decentralized dispute solution system will not only support proper advertising 
+
+campaigns execution and grant equal rights to every user, it will guide platform development. 
+
+Voting for such resolutions will bring rewards to token holders for active personal participating. 
+
+To participate in voting, user must maintain a certain amount of tokens on his balance on a 
+
+constant basis.
+
+
+
+45
+
+Moreover, token holders may perform dedicated marketing services for platform users and 
+
+include their service fee to every executed smart contract from campaign they have helped to 
+
+create.
+
+
+
+46
+
+Сonstantly maintaining a decent amount of tokens on balance will decrease the platform’s fee for 
+
+executing campaigns.
+
+Integration within blockchain assets payment platforms like TenX, potentially can make SMT a 
+
+popular, day-to-day payment method within the social media e-commerce network and the 
+
+industry, as a whole. It can also become a convenient global donation method for bloggers and 
+
+streamers in the early stages of their channel’s content development.
+
+Every platform user, or any person willing to become an industry expert, can be a part of So-
+
+cialMedia.Market’s decentralized Dispute Solution system. Experts who have actively participated 
+
+
+
+47
+
+in the solution will be rewarded by SMT deducted from the platform service fee reserved in every 
+
+Smart Contract.
+
+In the platform’s basic model, the Ethereum blockchain technology is considered as the most 
+
+relevant for SocialMedia.Market’s needs. Therefore, Social Media Tokens are going to be operated 
+
+as ERC20 compatible tokens. However, with consistent development of SocialMedia.Market’s 
+
+platform and introduction of functionality driven by new technology solutions, there are prospec-
+
+tive plans of migrating to another convenient blockchain platform such as EOS, Tezos, Raiden, 
+
+Waves or self-developed blockchain protocol. In this case, all Social Media Tokens will be ex-
+
+changed 1-to-1 with the new platform supported token. Tokens will be exchanged automatically 
+
+after hitting users wallet on the platform (or linked one). 6 months transition period will be 
+
+applied.
+
+4.3. ADOPTION 
+
+The key goal here is to introduce a decentralized influencer marketing marketplace to the audi-
+
+ence that has little-to-no experience with the cryptocurrencies market and limited knowledge of 
+
+the blockchain technology. The SocialMedia.Market ecosystem is to be expended way beyond the 
+
+original crypto community, reaching broader audiences and focusing on advertisers and publish-
+
+ers daily operations. The SocialMedia.Market team has extensive experience in the influencer 
+
+marketing industry, creating exactly what this audience wants. We are creating an marketplace, 
+
+where the operation of the SMT token will be easy and intuitive, simplifying all the operations 
+
+within the ecosystem and ensuring superior security at the same time. We are also making sure, 
+
+that it will be extremely easy to create and maintain a cryptocurrency wallet with SMT tokens.
+
+
+
+JANUARY 2018
+ver 2.0.0 Draft version. May be amended.
+
+TECHNOLOGY 
+OVERVIEW5
+
+https://beta.socialmedia.market/
+
+
+49
+
+5.1 CONCEPT OF BUILDING AN APPLICATION
+
+Micro service architecture, relevant technologies according to specific needs, use of contem-
+
+porary frameworks and patterns only 
+
+Secure transactions with the help of blockchain and Smart contracts
+
+Service dockerizing, unique isolated environment for each service, reliable identical environ-
+
+ment for each version of the product
+
+Orchestration of containers (kubernetes), seamless and separate service deployment
+
+Two-protocol communication between services - TCP/HTTP, isolated data transferring inside 
+
+overlay net, JWT authorization between services during communication
+
+Application is deployed in the Cloud, automatic scaling of resources depending on the load, 
+
+DDoS attack protection
+
+Application development using Agile (Scrum) methodology, Continuous integration, Continu-
+
+ous Deployment, code writing standards, multilayer testing of releases (including bug testing) 
+
+during the development, distribution and deployment of services.
+
+5.2 ARCHITECTURE
+
+The application is thought to be built, based on micro-service architecture. Briefly, micro-service 
+
+architectural style is an approach in which a single application is built as a set of small services, 
+
+each of which works on a personal process and communicates with others using lightweight 
+
+mechanisms – HTTP generally. These services are built around a business’ needs and deployed 
+
+independently, using a totally automated environment. There is an absolute minimum of central-
+
+ized operation of these services. The services on their own can be written in different languages 
+
+and can use different technologies of storing data.
+
+
+
+50
+
+Arbitrage User cabinet Two factor
+authentication
+
+Rating
+system
+
+Event
+collectors
+
+service
+
+Chat
+messages Tips Analitycs service
+
+Lead
+Generator
+
+User
+balances
+
+Balance
+operations
+
+Tasks
+service
+
+RabbitMQ
+queue
+
+Smart
+contracts
+
+Source
+parsers
+
+Task state
+checker Source API
+
+Schedule
+service
+
+Report
+service
+
+Any new
+future...
+
+Commmunication layer
+(Overlay network)
+
+API gateway service
+
+RESTful
+
+Any other APPWEB APP Mobile APP
+
+SOCIAL MEDIA MARKET ARCHITECTURE
+
+Redls pub/sub
+message broker
+
+JWT service
+
+
+
+51
+
+5.3 DOCKERIZING
+
+Dockerizing and isolating of components are not new concepts in the world of calculation. Some 
+
+operation systems like Unix have been using “mature” container technologies for more than 10 
+
+years. 
+
+Docker, which appeared a bit later, has positioned itself as an instrument for simplification of the 
+
+work aimed at creating and controlling containers. Docker did not introduce a lot of new ideas, 
+
+but made containers available for an average developer and system administrator by the simplifi-
+
+cation of processes and interface standardization.
+
+Some of most attracting advantages of dockerizing are:
+
+Abstraction of host system from containerised applications
+
+Scaling simplicity
+
+Simplicity of control over dependencies and versions of applications
+
+Very easy, isolated runtime environment
+
+Redis pub/sub
+message broker
+
+Queries from other
+services through Redis
+
+Never-ending
+loop
+
+Service application
+
+Database (for example PostgreSQL)
+
+Any required
+application
+
+microservice structure
+
+
+
+52
+
+Shared layers
+
+Ability to arrange and predictability
+
+One of the first questions during the process of an application’s development, which will be 
+
+deployed in containers, is application architecture. Usually, containerised applications work better 
+
+with a service-oriented architecture.
+
+Service-oriented applications divide the system’s functionality into separate components, which 
+
+cooperate between each other through clearly defined interfaces. The container technology itself 
+
+encourages such type of elaboration, because it allows scaling independently or updating each 
+
+component.
+
+5.4 ORCHESTRATION OF CONTAINERS
+
+Orchestration — is a coordination of cooperation of several containers. Basically, you can create a 
+
+container with all the necessary processes which have already started, but this approach lacks 
+
+scaling flexibility, architecture change and creates security issues, as, in this case, the processes 
+
+are not isolated and can influence each other without limits.
+
+ Orchestration allows the building of information systems from small bricks-containers. Each 
+
+container oversees one task only, and communicates through networking ports and common 
+
+directories. If necessary, the containers in this “orchestra” can be changed: for example, if you 
+
+need to check the work of the application on a different database version.
+
+Kubernetes is an open code project meant to control the cluster of Linux containers as a single 
+
+entity. It allows for control, begins container dockerizing with a great number of hosts and keeps 
+
+the collocation of large amounts of containers, work with services and replications controlled. The 
+
+project was started by Google Company and is now supported by many other companies such as 
+
+Microsoft, RedHat, IBM and Docker.
+
+The project pursues two objectives. If you use Docker containers, you face the questions of how 
+
+to scale and bootstrap containers at a large amount of Docker hosts simultaneously, and how to 
+
+
+
+53
+
+balance them. The project offers high-level APU, which defines high-level logical grouping of 
+
+containers. Using Kubernetes, it is possible to define container pools, balance loads and set 
+
+mutual placement.
+
+When using orchestrators as the main mechanism of container control, the possibility for “seam-
+
+less” application update emerges, i.e. without real shut-down. The process of the start of each 
+
+application version is as follows: the orchestrator creates a copy of the application (service) with 
+
+new versions of the containers. After that, it checks the work status of each container and sends 
+
+back status reports. If all statuses are positive, the orchestrator changes the old stack into a new 
+
+one. Old stacks are then deleted.
+
+5.5 COMMUNICATION BETWEEN SERVICES
+
+The concept of micro-service architecture assumes that services actively communicate with each 
+
+other, like how users communicate. While executing the request, the user refers to public service 
+
+methods directly (made with the help of front application, mobile application etc.) using standard 
+
+HTTP protocol, receiving answers simultaneously. If the service needs to receive an answer from 
+
+another service(s) to form a response to a user’s request, it is done by sending a message by 
+
+means of TCP protocol in asynchronous mode. This approach leads to minimization of query(s) 
+
+overhead and elimination of dependence from the working capacity of interrogated  service. It 
+
+allows the response to a user request be as fast as possible, even if services can be in different 
+
+data centers or are unavailable.
+
+All services are based in overlay network. This sufficiently increases general application security. 
+
+Overlay-networks are used in terms of clusters, where virtual networks, used by containers, unite 
+
+several physical hosts, where Docker is started. When you start the container as a cluster (as a 
+
+part of the service), multiple networks join by default, and each of them corresponds to different 
+
+connection specifications.
+
+Communication security is provided by JWT-authorization. JSON Web Token (JWT) — is a marker, 
+
+which contains all baseline information for authentication and authorization in an encrypted way. 
+
+However, you do not need to keep user data in sessions, as the marker is self-contained.
+
+
+
+54
+
+5.6 CLOUD AS A METHOD OF APPLICATION STORAGE
+
+Cloud storage is a good way of storing data and providing access to it (including access through 
+
+the Internet) with the possibility of scaling the resources. This is the storage, which keeps data at 
+
+multiple distributed servers, which are provided for the use of clients. Cloud service providers like 
+
+Amazon Web Services or Google Cloud, own the equipment, which is connected to the net and 
+
+software, and operate it, while users allocate and use the necessary resources by means of 
+
+internet application. Cloud storage releases expenses connected to purchase and technical 
+
+service of personal storage infrastructures. It increases flexibility, provides global scalability and 
+
+allows the possibility to access the data at any time and from any place.
+
+One of the important features of cloud storing is Auto-Scaling. Auto-Scaling allows support of the 
+
+application availability at a permanently high level, and it dynamically scales the resources up-
+
+wards and downwards in an automatic mode, depending on specified criteria. Auto-Scaling can 
+
+be used for controlling groups of instances, to keep the group operational and available, and 
+
+guarantees that a required number of instances is used at any time. You can also use Auto-Scal-
+
+ing for the dynamic scaling of instances, to increase its amount during maximum load for keeping 
+
+the performance ratio and lowering the volume of used resources within off-peak periods to 
+
+reduce cost. Auto-Scaling suits applications with sustainable load pattern well and applications 
+
+where the usage level changes hourly, daily, or weekly. 
+
+The high-level of availability of the application is provided by security services from divided DDoS 
+
+attacks, such as Cloudflare, Incapsula etc. 
+
+Many cloud services offer “box” DDoS security services or on an additional basis. Generally, the 
+
+service is chosen based on specific technical needs for a specific application. For our application 
+
+we have chosen Cloudflare.
+
+CloudFlare – is a service, which allows you to create your website faster by means of caching and 
+
+makes it safer by means of filtering requests, which are like attacks. At the same time, you do not 
+
+need to introduce any specific changes to the project. It can be achieved by adding a web site 
+
+address to the service and changing NS entry for your domain.
+
+
+
+55
+
+5.7 APPLICATION DEVELOPMENT AND SUPPORT
+
+Application development is done using Agile. In search of the best Agile practices, we have Scrum 
+
+framework. 
+
+Scrum – is a framework, which is meant for development and support of complicated products. 
+
+The framework is based on the empiric method and is meant for development of high-value 
+
+products in muddy environments.
+
+Apart from controlling the software development projects, Scrum can be used in the software 
+
+support team’s work, or as an approach to controlling the program’s development and adminis-
+
+tration: Scrum of Scrums.
+
+This is a process framework, which gained extensive use in the beginning of early 90s in terms of 
+
+compound product development. Scrum is not the process or method for product development. 
+
+Rather, it refers to the possibility to use multiple processes and techniques within the unique 
+
+framework. Scrum lets us understand the effectiveness of operating processes and technical 
+
+practices for product development, and work on their constant improvement as well.
+
+5.8 BASIC TECHNOLOGY STACK
+
+PHP 7 (Symfony 3), NodeJS, RESTful, 
+
+Doctrine 2, MySQL (Galera cluster), MongoDB
+
+RabbitMQ, Redis, ZeroMQ
+
+Angular 4, Bootstrap 4, SCSS, Jade, Webpack
+
+Docker (compose, swarm, hub)
+
+Git, Bitbucket, Gitflow
+
+Rancher, Nginx, Traefik, CircleCI, Satis, Cloudflare
+
+Amazon AWS, Google Cloud, Linode, Digital ocean
+
+Jira, Confluence, Gmail, FreeIPA
+
+Centos 7, Ubuntu
+
+
+
+JANUARY 2018
+ver 2.0.0 Draft version. May be amended.
+
+DEVELOPMENT 
+AND ECOSYSTEM 
+EXPANSION PLAN6
+
+https://beta.socialmedia.market/
+
+
+57
+
+6.1 ROADMAP 
+
+The SocialMedia.Market roadmap focuses on the development of the technology, operations 
+
+infrastructure, new partnerships, and marketing initiatives. The roadmap is presented below. 
+
+Dates and activities may be subject to change.
+
+
+
+58
+
+
+
+59
+
+6.2 MARKETING STRATEGY
+
+ECOSYSTEM EXPANSION
+
+As the technology required for operating the SocialMedia.Market ecosystem at scale will be 
+
+available in Q3 2018, our focus will shift to project growth. As soon as the platform’s interface is 
+
+available, we are launching the investments in the network growth, scaling up with the further 
+
+development of the ecosystem. 
+
+The marketing budget in the amount of 38% of the raised during the token sale is going to be 
+
+distributed to the general international advertising campaign of the platform. Besides, the part of 
+
+the budget will be forwarded to the development of regional offices and marketing campaigns. 
+
+The regional advertising campaigns will be carried out by the representative offices of the regions 
+
+(more about the development in the regions and allocated budget may be read in the chapter 
+
+“Geographical Expansion plan”) under the control of the head office of SocialMedia.Market in 
+
+accordance with the guidelines of the company. The main purpose of the mission is the establish-
+
+ment, development and support of platform community in the region.
+
+The expansion of SocialMedia.Market heavily depends on influencer and advertiser engagement 
+
+within the platform. 
+
+ADVERTISERS (BRANDS AND AGENCIES)
+
+For rapid SocialMedia.Market platform evolvement it is important to attract huge brands and 
+
+advertising agencies. This will allow to bring more influencers to the platform, as they are inter-
+
+ested in cooperating with premium advertisers.  
+
+Nevertheless, it is important for further development of the SocialMedia.Market platform to shift 
+
+the main focus to the startups and small businesses. They are the basis for the future market 
+
+growth and the platform evolvement.
+
+To reach the first ad campaign turnover goal ($10M) by the end of Q3 2018, SocialMedia.Market 
+
+plans to attract more than 1000 advertisers, who will start 2 ad campaigns each with average 
+
+budget of $7000. According to the recent estimates, the average campaign budget reaches 
+
+$750001. We have reduced this sum, as SocialMedia.Market is primarily focused of startups and 
+
+1 Estimates are based on the Linqia “The State of Influencer Marketing 2017 Final Report”
+
+
+
+60
+
+small businesses.
+
+To attract brands and agencies SocialMedia.Market is going to hold the following activities:
+
+ Direct communication with brands and advertising agencies.
+
+Taking part in conferences and exhibitions. We are focused both on marketing and 
+
+blockchain events, as well as the startup, technology and business development 
+
+conferences.
+
+Educational sessions, online-seminars, creating educational content about influencer 
+
+marketing and the SocialMedia.Market platform, as well as the opportunities and 
+
+benefits of the blockchain technology and cryptocurrencies. 
+
+Partnership with leading portals, influencers, marketing and business growth  associa-
+
+tions, business schools (the biggest influencer marketing portal – InfluencerMarketing-
+
+Hub is already our partner). 
+
+There are several programs to motivate brands to use the platform during the first year. They are 
+
+focused on the ecosystem and user-retention.
+
+SocialMedia.Market will run the Social Media Early Birds program, which provides the opportunity 
+
+to run the first test ad campaign for free. This campaign will be with a fixed budget and a limited 
+
+number of influencers. The test campaign budget will be calculated based on the token sale 
+
+results. 
+
+The next step is an accumulation system of advertiser rewards in the platform’s commission – 
+
+SocialMedia Rewards. The advertiser will be able to return up to 5% of their budget for a 
+
+successful ad campaign. The percent of the return depends on the quantity of the influencers, 
+
+being engaged in the campaign, and is independent of the campaign budget. The returned funds 
+
+could be used for the next ad campaign and cannot be withdrawn from the system (there may be 
+
+changes within the motivation program, after it has been tested). The program is developed 
+
+based on the company’s experience, which shows that for a successful influencer marketing 
+
+
+
+61
+
+campaign it is important to reach at least 15 influencers.
+
+This reward system will allow to motivate advertisers to start new ad campaigns on the platform, 
+
+as well as to promote the blockchain technology and educate on the cryptocurrencies and utility 
+
+use of Social Media Token.
+
+INFLUENCERS AND AGENTS
+
+The more active influencers join the platform, the quicker the platform evolves. We are planning 
+
+to execute several global ad campaigns to boost brand awareness and ensure the constant 
+
+growth of the bloggers quantity on the platform. 
+
+As it was described in the chapter 3.7.1, while setting up the campaign and setting targeting 
+
+options the brand can choose an automatically generated pull of bloggers. When a brand opts for 
+
+this, every blogger who meets the targeting requirements will get a notification with an invitation 
+
+to join the brands campaign, as well as with the information about the motivation program. This 
+
+will be additional way to attract the new bloggers to the platform.
+
+The SocialMedia.Market Early Birds program (which is active during the first year of the platform 
+
+operations) is focused on engaging the blogger into the platform operations. It provides an 
+
+opportunity to take part in the first several campaigns without any platform fees (the quantity of 
+
+campaigns will be defined based on the token sale results).
+
+Moreover (as previously noted in the chapter 4.2), every holder of 5000 and more tokens has 
+
+access to the loyalty program, that allows to reduce the service fee.
+
+For extra influencer motivation to join the platform as well as educate influencer on how to 
+
+interact with the platform, each blogger will be offered to participate in SocialMedia.Market trial 
+
+campaign. The trial SocialMedia.Market campaign is similar to campaigns created by brands, and 
+
+introduces the influencer with the functionality of the platform, operation and interaction with 
+
+the brand. Within the trial campaign the influencer will be asked to do SocialMedia.Market pro-
+
+motional post on the influencers linked social channel within any available types of content 
+
+(review, product placement, etc.). Each participant of the campaign will receive a reward accord-
+
+
+
+62
+
+ing to the level of coverage of influencer (campaign budget will be determined upon the results of 
+
+the token sale). 
+
+The work with the community is important in order to attract and maintain interest to the plat-
+
+form among influencers. Therefore a significant part of the marketing budget will be allocated on 
+
+creation of educational content for influencers. We expect that this will provide rapid growth and 
+
+support of the community. This educational content will be dedicated not only to tips on 
+
+interaction with the platform, but also recommendations and tips for channel development, 
+
+analytics, audience engagement and etc. Training for aspiring bloggers with help of professionals 
+
+of the industry will create an additional channel of influence of the platform as well as lead to the 
+
+greater coverage and better distribution of information about the platform.
+
+6.3 GEOGRAPHICAL EXPANSION
+
+The plan for presence development in regions is based on the popularity of social networks in a 
+
+particular region and growth rate of new users1. The access to the regions complies with the 
+
+development of platform and access to social networks relevant in the particular region. Our 
+
+team’s developing experience of our own projects such as CSGO.CASH, provides us with the clear 
+
+vision of what regions the influencer marketing is the most popular type of marketing. It has also 
+
+been taken into account of this plan. 
+
+To achieve the project milestones, it will be necessary to build highly-competent international 
+
+team to develop and promote the platform in different countries. Currently, the head office of 
+
+SocialMedia.Market is located in Ukraine, Kiev, and operates an additional office in Moscow. Now 
+
+we are working on opening an office in San Francisco, USA. In accordance with the plan of spread-
+
+ing up to the regions that can be seen below, we are to open offices in each of them. This activity 
+
+will allow to carry out the search, support and interaction with local brands and influencers most 
+
+effectively, considering all the features of every single region. The local offices will work with the 
+
+local legal issues, services support in the region, training, implementing of local marketing activi-
+
+ties along with establishing of relationships with major brands and bloggers in the region as a 
+
+part of general strategy and guides of SocialMedia.Market.
+
+1 For more detailed information check Apendix 1
+
+https://csgo.cash
+
+
+63
+
+Expansion plan depending on the amount of funds raised during Token Sale.
+
+SocialMedia.Market is launching activity to deliver the research of the China, Japan and Brazil 
+
+markets by the time the service is developed and fully launched in US, UK and CIS markets. 
+
+The company will expand to new markets and add new features, reaching set budget goals during 
+
+the main token sale.
+
+The sums presented as milestones are required for research and development of new functional-
+
+ity, establishment of the company on the new markets, legal and financial regulations, hiring a 
+
+team of professionals, as well as the first two years of operation on the new market. 
+
+After these two years the branch either becomes profitable or becomes closed. 
+
+Every new country should become profitable for operations within 6-12 months from the market 
+
+entering.  
+
+
+
+64
+
+Every half of the year we are assessing the development of the company in the country, it’s 
+
+potential and are deciding on the plan for the next 6 months.  
+
+6.4 REVENUE FORECAST
+
+Based on a pessimistic growth of influencer marketing market and average cost of campaigns 
+
+launched with Influencers, we can make a rough estimation of a financial forecast. Average cost 
+
+of campaigns will rise with more bloggers and agencies join the platform.
+
+PESSIMISTIC GROWTH
+
+Forecast of a breakdown of funds raised by years in case of reaching hard cap during the main 
+
+token sale.
+
+EXPENSES BREAKDOWN, USD
+
+
+
+65
+
+Cost allocation scenarios depending on the amount of funds raised during token sale:
+
+COST ALLOCATION SCENARIOS, USD
+
+
+
+JANUARY 2018
+ver 2.0.0 Draft version. May be amended.
+
+TOKEN 
+DISTRIBUTION7
+
+https://beta.socialmedia.market/
+
+
+67
+
+7.1. OVERVIEW
+
+Social Media Tokens (SMTs) will be issued as ERC20 compatible tokens. Based on the number of 
+
+tokens distributed during both sale phases, 10% more tokens will be issued for team and 5% 
+
+platform core functionality (6 month of vesting period), and 5% for partners and advisors. This will 
+
+form the total amount of SMTs ever issued. 
+
+15% of tokens issued for team and platform core functionality will be locked for 6 month, 5% 
+
+issued for platform core functionality will be unlocked immediately after vesting period ends, 10% 
+
+of tokens issued for the team will be proportionally released during next 12 month. 4% of tokens 
+
+will be issued for advisory board. No vesting period set for it.
+
+Contributed funds will be allocated in ETH and USD in equal proportion, order to cover operation-
+
+al expenses on time.
+
+TOKEN SALE SOFT CAP: 1 600 ETH (5 000 000 SMT)
+TOKEN SALE HARD CAP: 16 000 ETH (MAX. 58 000 000 SMT)
+
+TOKEN PRICE AND BONUSES:
+
+80% 15%
+6 months 
+of vesting  period
+
+5%
+
+
+
+68
+
+7.2. TOKEN SALE: PHASE #1
+Public sale of Token Sale: Phase #1  was held 7-21 of December 2017. 7 553 358.45 SMTs were 
+
+sold during the Phase. Soft Cap successfully reached. 
+
+PRE-SALE DATES: 20 November - 7 December 2017 12:00 GMT (1:00 pm CET) 
+
+START DATE:  7 December 2017 12:00 GMT (1:00 pm CET) 
+
+END DATE:     21 December 2017 12:00 GMT (1:00 pm CET) 
+
+SOFT CAP:     Reached during Token Sale: Phase #1
+
+Token exchange rate: 1 ETH = 3000 SMTs
+
+Minimum contribution amount: 0,01 ETH / 30 SMTs 
+
+Maximum contribution amount: unlimited 
+
+Contribution methods: ETH, BTC 
+
+Bonuses: Pre-Sale: 30%, Public sale: 10%
+
+7.3. TOKEN SALE: PHASE #2
+START DATE: 9 February 2018 12:00 PM GMT (1:00 pm CET) 
+
+END DATE:    16 March 2018 12:00 PM GMT (1:00 pm CET) 
+
+PRE-SALE:      2-9 February 2018  12:00 PM GMT (1:00 pm CET) 
+
+ 
+
+Token exchange rate: 1 ETH = 2500 SMTs 
+
+Minimum contribution amount: 0,1 ETH / 250 SMTs 
+
+Maximum contribution amount: 300 ETH 
+
+Contribution methods: ETH, BTC, LTC, XRP, BCH, DASH, DOGE, ETC, NEO, XMR, ZEC 
+
+Bonuses:          Pre-Sale: 20% (min. contribution 25 ETH)                 
+
+Public Sale: Days 1-5: 15%, Days 6-20: 10%, Days 21-35: 5%                 
+
+Referral Program Bonus: Give 3%, Get  5%
+
+Distribution of tokens to the purchaser’s account located at ico.socialmedia.market (the “Web-
+
+site”) will be made in accordance with terms and conditions, provided at the Website, by the later 
+
+of: (a) within Two (2) weeks upon completion of Tokens sale, or within Two (2) weeks from the 
+
+date when Hard Cap is reached (although SocialMedia.Market may extend the delivery deadline 
+
+for additional time if necessary to address any unforeseen technical difficulties and provided that 
+
+SocialMedia.Market notify the purchaser of the same), or (b) within Two (2) weeks after the 
+
+purchaser has provided complete and accurate information required by SocialMedia.Market 
+
+(KYC), as defined in clause 7.4 below.
+
+SocialMedia.Market
+Smart Contract on GitHub
+
+https://github.com/SocialMediaMarket
+
+
+69
+
+7.4. KNOW YOUR CUSTOMER (“KYC”) 
+
+At any time within the timeframe of ICO process, or after the ICO is completed, SocialMedia.
+
+Market will send to each purchaser, request to provide information verifying her/his identity. The 
+
+purchaser will be required to provide the copy of her/his ID (passport, driving licence or national 
+
+ID card), and residence confirmation. SocialMedia.Market reserves the right, at its sole discretion, 
+
+to request the purchaser to provide additional information, including, but not limited to, address, 
+
+source of funds, or any other information in purchaser’s account (form), such as date of birth, 
+
+citizenship, country of residence. Completion of KYC is a substantial and fundamental condition 
+
+of token distribution. All purchasers are required to complete KYC procedure to SocialMedia.
+
+Market satisfaction. 
+
+7.5. USE OF FUNDS
+
+The funds raised through the token sale campaign will be allocated for all SocialMedia.Market 
+
+platform features available for all ecosystem participants, as well as strong marketing support for 
+
+fast growth in the number of the platform users, and simplification of the process of getting used 
+
+to the new tools for advertisers and bloggers.
+
+    37% RESEARCH & DEVELOPMENT
+
+Fees for this Fund will cover the costs of developing the platform, including all necessary interfac-
+
+es and applications of the platform, the development of tools for creating smart contract, the 
+
+development of blockchain solutions for the system of dispute settlement, etc. This budget 
+
+includes the extension of current R&D center up to 25 employees, as well as additional consulta-
+
+tions with the necessary experts.
+
+    38% MARKETING & EDUCATION CAMPAIGNS
+
+We have allocated the budget for attracting both advertisers and bloggers, as well as user reten-
+
+tion. You can find all about the project’s marketing initiatives in the “Marketing strategy” chapter.
+
+37% 38% 12% 8% 5%
+
+
+
+70
+
+     12% ADMINISTRATIVE & OPERATIONAL
+
+This budget is allocated to cover the expenses of the back-office, as well as the salaries of all the 
+
+employees, excluding the development center.
+
+     8% INFLUENCERS & AGENCIES BONUSES
+
+This budget is allocated separately from other marketing expenses for additional motivation 
+
+programs for bloggers and advertisers on the platform – SocialMedia.Market Early Birds, So-
+
+cialMedia Rewards.
+
+     5% LEGAL
+
+This budget is allocated to cover the legal expenses for the platform development and its roll out 
+
+in ne regions.
+
+7.6. BOUNTY AND REFERRAL PROGRAMS
+
+Referral reward to a referral link owner is 5%, based on the number of tokens purchased using 
+
+the referral link. Those who bought tokens using a reference link receive an extra 3% bonus. 
+
+Total bounty allocated for bounty campaign will be either 0.7% of the total SMT tokens sold or 
+
+560k SMT tokens, whichever is lower.
+
+https://socialmedia.market/en
+
+
+71
+
+More details: https://bitcointalk.org/index.php?topic=2321059.0.
+
+
+
+72
+
+8.1. OUR TEAM
+
+35 people now involved in the project and we are hiring more marketing specialists, blockchain 
+
+engineers and growing our development team. We are expecting to increase SocialMedia.Market 
+
+team to 50-70 people in the next 4 months. Now 40% of personnel running marketing strategies, 
+
+35% R&D team and rest is operational, administrative and support.
+
+8. TEAM
+
+DMITRY 
+SHYSHOV 
+
+CEO, FOUNDER
+
+MAKSYM
+CHURKIN 
+
+TECH LEAD
+
+YEHOR
+SHYSHOV 
+
+BDM
+
+ALEXANDRA 
+MOROZOVA
+
+CO-FOUNDER, CMO
+
+VIKTOR
+PEREKHOD 
+
+BDM
+
+OKSANA
+PODKAMENNAYA 
+
+FINANCIAL OFFICER
+
+A passionate entrepreneur, the CEO and founder of
+R.Games and Nontita Limited, operating in games.
+
+Maksym is an experienced full product modular 
+architecture specialist and Scrum master.
+
+Aleksandra has more than 7 years of experience in 
+digital marketing and worked on marketing campaigns 
+for Apple, Sony, Dell, Asus, Lenovo, Microsoft Xbox. 
+
+Viktor has more than 8 years of expertise in building 
+strategic marketing campaigns for new products and 
+identifying new business opportunities.
+
+https://www.linkedin.com/in/dmitryshyshov/
+https://www.linkedin.com/in/aleksandramorozova/
+https://www.linkedin.com/in/maksym-churkin
+https://www.linkedin.com/in/viktor-perekhod-100103b1/
+https://www.linkedin.com/in/yehorshyshov/
+
+
+73
+
+MAKSIM 
+SHEVCHENKO
+
+CREATIVE DESIGNER
+
+NIKITA
+MEDVEDEV
+
+HEAD OF SEO
+
+DIMA
+MEDVEDCHUK
+
+SOFTWARE ENGINEER
+
+ALEXEY
+IGNATOV
+
+MARKETING LEAD
+
+VICTOR
+ANDES 
+
+MARKETING EXPERT
+
+ALEXANDER 
+GRECHANYK
+
+CREATIVE DIRECTOR
+
+TAKA
+SUPHLER
+
+SINIOR FRONTEND 
+
+YEHOR
+SKLYAROV
+
+CONTENT WRITER
+
+NIKOLAY 
+KRAVCHENKO
+
+FRONTEND ENGINEER
+
+MAKSIM 
+KOVALENKO 
+
+BACK-END DEVELOPER
+
+EVHENYJ 
+YVASHKO
+
+SOFTWARE ENGINEER
+
+MAKSIM
+KRUPEC 
+
+HEAD OF PPC
+
+YAN
+BORMAN
+
+QA ENGINEER
+
+YURIY
+KOVALENKO
+
+QA ENGINEER
+
+https://www.linkedin.com/in/yurii-kovalenko-4a581614b/
+https://www.linkedin.com/in/dima-medvedchuk-10726b124/
+https://www.linkedin.com/in/maksim-kovalenko-509350148/
+https://www.linkedin.com/in/andesviktor/
+https://www.linkedin.com/in/esklyarov/
+https://www.linkedin.com/in/nikita-medvedev-sjfenix/
+https://www.linkedin.com/in/evgeniy-ivashko-54680736/
+https://www.linkedin.com/in/maksym-krupets-7a2b12102/
+https://www.linkedin.com/in/yan-bondarenko-31096016/
+https://www.linkedin.com/in/nick-kravchenko/
+https://www.linkedin.com/in/alexey-ignatov-bb053271/
+https://www.linkedin.com/in/alexander-grechanyk-6bab98121/
+https://www.linkedin.com/in/suphler/
+https://www.linkedin.com/in/max-shevchenko-5176a562/
+
+
+74
+
+OLEG
+OLEJNIK 
+
+CUSTOMER SERVICE 
+
+DMITRIY
+KUZMIN 
+
+CUSTOMER SERVICE 
+
+ALEX
+GORBACH
+
+CUSTOMER SERVICE 
+
+ROMAN
+BURIY
+
+CUSTOMER SERVICE 
+
+TATIANA
+SAPA
+
+SEO EXPERT
+
+IVAN
+BABJUK
+
+MEDIA BUYER
+
+ZLATA
+TKACHENKO 
+
+CUSTOMER SERVICE 
+
+YEVHEN
+PYLYPENKO 
+
+MEDIA BUYER
+
+ALEX
+KOBIZHSKYJ  
+
+CUSTOMER SERVICE 
+
+BOGDAN
+MOROZ
+
+PYTHON DEVELOPER
+
+NIK
+NOVIK 
+
+LEAD MEDIA BUYER
+
+https://www.linkedin.com/in/alexandr-gorbach-97580014b/
+https://www.linkedin.com/in/zlata-tkachenko-497412152/
+https://www.linkedin.com/in/nik-novik-ab2139149/
+https://www.linkedin.com/in/yevhen-pylypenko-33198b116/
+https://www.linkedin.com/in/ivan-babiuk-06a429152/
+https://www.linkedin.com/in/tatiana-sapa-848530146/
+https://www.linkedin.com/in/oleg-oliynyk-77381114b/
+https://www.linkedin.com/in/roman-buriy-6360a0157/
+https://www.linkedin.com/in/dmitriy-kuzmin-94b593157/
+https://www.linkedin.com/in/ba-mz/
+
+
+75
+
+8.2. OUR ADVISERS
+
+Keith Teare
+Executive Chair UK venture company 
+
+ACCELERATED DIGITAL VENTURES
+
+Tatsunari Ono
+CEO, Value Brain Co., Ltd. (Japan)
+
+CEO, Beducate.ltd (Hong Kong)
+
+Andrew Playford
+Senior Vice President of Operations,
+
+SONIC FOUNDRY, INC 
+
+Gabriel Zanko
+Tax Manager & Advisor 
+
+NOKIA CANADA & NOKIA CHILE
+
+Keith Teare recently advised on the successful ICOs of 
+ICOBox (4000 BTC) and Crypterium ($51mln+). 
+
+Previously he was a founder of TechCrunch and the first 
+consumer Internet Service Provider in Europe - EasyNet. 
+
+EasyNet and RealNames both achieved Unicorn status 
+during the late 1990s.
+
+Businessman who is actively engaged in investment 
+activities in real estate, equity, Airbnb operations as well as 
+
+cryptocurrency. He held Tokyo meetups of well-known 
+cryptocurrency firms such as NEO, LISK, Quantum and 
+
+Ardor.
+
+Prior to Sonic Foundry, Andrew ran operations for Think 
+New Ideas, another NASDAQ listed company that 
+
+acquired and combined digital marketing and web develop-
+ment companies. Think New Ideas was ultimately acquired 
+
+for more than $250mm. 
+
+Fintech entrepreneur-Advisor. Founder of MobileyourLife 
+and involved in the AI-Fintech space providing solutions in 
+
+the B2B space. ICO advisory in Fundraising Capital, 
+International Business Development, Crypterium, FluzFluz, 
+
+Genesis Vision
+
+http://linkedin.com/in/kteare
+https://www.linkedin.com/in/andrewplayford/
+https://www.facebook.com/tatsunari.ono.1?ref=br_rs
+https://co.linkedin.com/in/gabrielzanko
+
+
+76
+
+Alex Yastremski
+
+Legal Counsel, San Francisco, Ca
+Blockchain regulatory / compliance expert 
+
+Peter Zhalov
+Former VP Marketing & Advertising
+
+at Wargaming.net, eSports and
+blockchain enthusiastv
+
+Slavik Nenaydokh
+
+COO, Centuria Natural Foods,
+San Francisco, CA
+
+General counsel at Bitfury Group Ltd 
+Fintech counsel Bingham McCutchen LLP
+
+Head of M&A Emerging Markets, Exigen Capital 
+Principal, Delphi Software International
+
+Dima Zaitsev, PhD
+Head of International PR & Business Analytics 
+
+Department Chief , ICOBOX
+
+2017 Dima became interested in blockchain and 
+cryptocurrencies and started conducting limited-scope 
+
+market research. He has his own columns on several 
+Media Outlets in the U.S. including FXStreet.com, 
+
+CoinSpeaker.com, and others.
+
+Chafik Abdellaoui
+
+Entrepreneur, the founder ACBMC, Bizzant,
+XEDYAS IT HYBRID SOLUTIONS
+
+Contributor to Mobile Go ICO success. Chafic 
+is an accomplished business development 
+
+professional with an extensive experience in 
+eCommerce, gaming and electronic payments.
+
+https://www.linkedin.com/in/chafikabdellaouiacbmc/
+https://www.linkedin.com/in/peter-zhalov-35149225/
+https://www.linkedin.com/in/alex-yastremski-b1889514/
+https://www.linkedin.com/in/slavik-nenaydokh-7785492/
+https://www.linkedin.com/in/dima-zaitsev/
+
+
+77
+
+9. MEDIA
+
+CoinSchedule
+
+Coinhills
+
+btc2themoon
+
+and many other on SocialMedia.Market official website
+
+https://influencermarketinghub.com/influencer-marketing-evolves-via-cryptocurrency/
+http://www.nasdaq.com/article/how-blockchains-can-influence-the-influencers-cm880899
+https://www.bitbetnews.com/ico/platforma-dlja-marketing-vlijanija-socialmedia-market/.html
+https://news.bitcoin.com/pr-meet-the-new-generation-of-online-advertising-with-socialmedia-market/
+http://www.newsbtc.com/2017/10/27/blockchain-permeates-social-media-influencers-advertising-market/
+http://www.livebitcoinnews.com/meet-new-generation-online-advertising-socialmedia-market/
+http://bitcoinist.com/how-blockchain-tech-will-disrupt-influencer-marketing/
+https://themerkle.com/meet-the-new-generation-of-online-advertising-with-socialmedia-market/
+https://www.coinschedule.com/icos/e1438/socialmedia.market-.html
+https://socialmedia.market/
+
+
+78
+
+10.CONTACTS
+For all the questions or inquiries write us on 
+
+INFO@SOCIALMEDIA.MARKET
+
+Official website: 
+
+HTTPS://SOCIALMEDIA.MARKET/
+
+Join the conversation on:
+
+TELEGRAM EN BITCOIN TALK TWITTER
+
+TELEGRAM RU FACEBOOK REDDIT
+
+INSTAGRAM MEDIUM YOUTUBE
+
+https://beta.socialmedia.market/
+https://bitcointalk.org/index.php?topic=2291309.0
+https://www.facebook.com/Socialmedia.market.io/
+https://www.youtube.com/channel/UCPJ919jN8eCcVDkzbCR06nw
+https://twitter.com/SocialMedia_io
+https://t.me/joinchat/B3UENkIW3R9A6v_4KnpOZQ
+https://medium.com/socialmedia-market
+https://instagram.com/socialmedia.io
+https://www.reddit.com/r/SocialMedia_Market
+https://t.me/joinchat/B3UENkX8gcVbekGkz3IqNA
+
+
+79
+
+11. RISK FACTORS
+The purchase of SMT tokens (hereinafter referred to as the “Token” or “Tokens”) may be associat-
+
+ed with a high degree of risk. To protect the interests of Token’s potential purchasers, So-
+
+cialMedia.Market team conducted an analysis of such potential risks and outlined the result of 
+
+this analysis in this chapter of the White Paper. IMPORTANT: THE LIST OF RISK FACTORS DE-
+
+SCRIBED BELOW IS NOT EXHAUSTIVE. IN ADDITION TO THE RISKS DISCLOSED IN THIS WHITEPA-
+
+PER, THERE MAY BE EXISTING OTHER RISKS WHICH SOCIALMEDIA.MARKET TEAM AT PRESENT 
+
+CANNOT REASONABLY FORECAST. These risks can materialize in other forms of risk than those 
+
+specified here. Prior to acquiring Tokens, each potential Token purchaser is advised to carefully 
+
+review all the information and assess the risks of such purchase, including but not limited to, the 
+
+risks set forth in this Whitepaper and to decide upon purchase of Tokens based on such assess-
+
+ment.
+
+ 12.1. TECHNICAL AND TECHNOLOGICAL RISKS
+
+12.1.1. RISKS OF THE BLOCKCHAIN
+
+Tokens are released on Ethereum blockchain. In this regard, any malfunction of the Ethereum 
+
+protocol may lead to a restriction in the use of Tokens, and / or to the fact that Tokens or the 
+
+platform will function in an unforeseen manner.
+
+12.1.2. RISK OF HACKER ATTACKS ON THE PLATFORM, SMART CONTRACTS, OR TOKENS. 
+
+Tokens can be expropriated and / or stolen, by hacking Tokens, or otherwise. Hackers or other 
+
+groups or organizations may attempt to intervene in a smart contract or Tokens in various ways, 
+
+including, but not limited to, virus attacks, DDOS attacks, concerted attacks, network attacks, and 
+
+denial of service attacks, and others. In addition, since the Ethereum platform is based on open 
+
+source software, there is a risk that Ethereum smart contracts may contain intentional or uninten-
+
+tional errors or shortcomings that could adversely affect Tokens or lead to loss of Tokens, or loss 
+
+of access or control Tokens. In the event of such an error or weakness of the software, there can 
+
+be no remedy, and tokens owners are not guaranteed any compensation or compensation.
+
+
+
+80
+
+12.1.3. RISK OF HACKER ATTACK ON THE COMPUTER OF TOKENHOLDER, OR LOSS OF PASS-
+
+WORDS / OF PRIVATE KEYS. 
+
+Purchased Tokens can be stored by the tokenholder in her\his digital wallet or safe, for which a 
+
+password, a digital key or a combination of digital keys is required. Accordingly, the loss of the 
+
+necessary keys associated with such digital wallet or safe, can lead to loss of access to Tokens. In 
+
+addition, any third party that gets access to such passwords and / or private keys (by way of 
+
+getting (through hacking, or negligence of tokenholder) access to login credentials of tokenhold-
+
+ers’ hosting-wallet, or otherwise), will be able to use Tokens of the tokenholder. SocialMedia. 
+
+Market assumes no liability for such losses.
+
+12.1.4. RISK OF USING NEW TECHNOLOGIES, AND CHANGES IN TECHNOLOGY IN THE 
+
+FUTURE. Tokens and blockchain are fairly new and relatively untested technologies. Although at 
+
+the moment they have largely proven their efficiency, reliability and security, there is no 
+
+guarantee that in future these technologies do not fail in any way. Further, as technological 
+
+progress devel-ops, flaws can be found in these technologies, which flaws will prevent their 
+
+functioning in the way that they function at the moment. Finally, there is no guarantee that 
+
+these technologies will be compatible with any new technologies invented in future. In the event 
+
+of such incompatibility, use of Tokens and blockchain can be found unreasonable and stopped.
+
+12.1.5. RISK OF INCOMPATIBILITY OF THE CRYPTOWALLET SERVICE. 
+
+An electronic cryptowallet or wallet service provider that tokenholder has chosen \ will choose for 
+
+obtaining and storing Tokens, must be technically compatible with Tokens. Failure to comply with 
+
+this condition may lead to the fact that the tokenholder will not be able to get access to her\his 
+
+Tokens. Tokenholders must independently determine the fact of the compatibility of the cryptow-
+
+allet she\he registered, with the Tokens. SocialMedia.Market assumes no responsibility for any 
+
+errors related to wrong determination of the above fact.
+
+12.2.   REGULATORY RISKS
+
+12.2.1. RISK OF REGULATORY UNCERTAINTY. 
+
+Regulatory status of cryptographic tokens, digital assets and blockchain technology, is unclear or 
+
+not defined in many jurisdictions. It cannot be excluded that such technologies, and, in particular, 
+
+Tokens, will in future become subject to one or more (adopted or new) interpretations of laws (or 
+
+
+
+81
+
+other regulations), court judgments, or actions by various regulatory bodies around the world, 
+
+including, but not limited to, the imposition of restrictions on the use or possession of digital 
+
+tokens, such as Tokens. Such changes can adversely affect Tokens in various ways, including, for 
+
+example, by determining that Tokens are regulated financial instruments that require registration 
+
+or compliance with other legal requirements and procedures. SocialMedia.Market may stop 
+
+distributing Tokens, developing a platform or terminating operations in a particular jurisdiction if 
+
+the actions of regulatory authorities of the relevant jurisdiction make it illegal or not commercially 
+
+viable to proceed.
+
+12.2.2. RISK OF INABILITY TO OBTAIN, MAINTAIN OR RENEW LICENSES AND PERMITS. 
+
+As of the date of Tokens sale, there are no statutory requirements requiring SocialMedia.Market 
+
+to obtain any licenses and permits necessary for the sale of the Tokens, but the risk that such 
+
+legislative requirements may be enacted in the future cannot be ruled out. In this event, possibili-
+
+ty of sale and further use of Tokens will depend on the procedure of issuing such licenses and 
+
+permits, and on compliance with their terms. We cannot exclude that requirements of the law will 
+
+be technically or economically unachievable for SocialMedia.Market. SocialMedia.Market may 
+
+stop distribution of Tokens, develop a platform or terminate operations in a particular jurisdiction 
+
+in the event of economic, technological or other inability to obtain the required licenses or per-
+
+mits under such jurisdiction.
+
+12.2.3. THE RISK OF GOVERNMENTAL ACTION. 
+
+The industry of blocking and reversing tokens is new, and simply by virtue of novelty can be 
+
+subject to increased supervision and regulatory control, including investigations or enforcement 
+
+actions. There can be no guarantee that the government will not study the activities of the parties. 
+
+All this can be investigated, which in turn can have a significant negative impact on Tokens and / 
+
+or platform development.
+
+12.3. BUSINESS RISKS.
+
+12.3.1. RISK OF FAILURE IN DEVELOPMENT. 
+
+It cannot be excluded that for various reasons, including but not limited to, for reasons of insol-
+
+vency of business or technological strategies or business arrangements, technological problems, 
+
+
+
+82
+
+emergence of new technologies, etc., that the model that SocialMedia.Market developed and 
+
+described in this Whitepaper, will not achieve the desired functionality, be inoperative, or work in 
+
+a way different from what developers designed it for. Also, we cannot exclude the risk that for 
+
+these or different reasons, development and implementation of the model can take longer than 
+
+SocialMedia.Market predicts at the moment, and when the model is ready, it will appear to be 
+
+outdated and\or irrelevant.
+
+12.3.2. RISK OF INSUFFICIENT IMPLEMENTATION. 
+
+It cannot be excluded that, for various reasons, including, but not limited to, for reasons of 
+
+insolvency of marketing strategies, external constraints, or competitors’ actions, the model 
+
+developed by SocialMedia.Market and described in this Whitepaper model may appear to be 
+
+unpopular and\or unclaimed, lacking use and application.
+
+12.3.3. RISK OF DEPENDENCE ON THIRD PARTIES. 
+
+Even after the launch, the model developed by SocialMedia.Market and described in this Whitepa-
+
+per will rely, wholly or partially, on third parties, for adoption and implementation of certain 
+
+functions, as well as for continuing its development, maintenance and support. Though 
+
+above-mentioned third parties are carefully selected by SocialMedia.Market team, there is no 
+
+insurance or guarantee that these third parties will do their job properly, or otherwise meet users’ 
+
+needs, and this can have a significant adverse impact on the platform.
+
+12.3.4. RISK OF LOSS OF CASH. 
+
+The project described in this Whitepaper, the model developed by SocialMedia.Market, the 
+
+platform being created, as well as any funds collected within the framework of the ICO described, 
+
+are not insured. In case of failure of the project for any reason, loss of functionality of the Token 
+
+or platform, there is no private or public insurance representative to whom tokenholders can 
+
+apply for reimbursement.
+
+12.3.5. RISK OF FORCE MAJEURE. 
+
+In the future, there may be extraordinary circumstances that SocialMedia.Market cannot reasona-
+
+bly anticipate or prevent and that may be subject to restrictions or impediments to the operation 
+
+of SocialMedia.Market or Token platform.
+
+
+
+83
+
+12. SOURCES
+Ad-Blocking. Insight Report. Q3 2016. Global Web Index.
+
+Mobile Ad-Blocking. GWI Trends Q3 2016. Global Web Index.
+
+Social Media Engagement. Insight report. Q2 2017. Global Web Index.
+
+Digital vs Traditional Media Consumption, Insight Report. Q1 2017. Global Web Index.
+
+Mashable.com 3 billion social media users in the world http://mashable.com/2017/08/07/3-bil-
+
+lion-global-social-media-users/#d2TBoghVSaq1
+
+Socialmediatoday.com. 5 Predictions for the Future of Influencer Marketing. http://www.so-
+
+cialmediatoday.com/marketing/5-predictions-future-influencer-marketing
+
+Statista.com. Number of Social Media Users from 2010-2021. https://www.statista.com/statis-
+
+tics/278414/number-of-worldwide-social-network-users/
+
+Traackr.com. What is Influencer Marketing and Why Does it Matter? http://www.traackr.com/
+
+influencer-marketing
+
+Forbes.com. Why Influencer Marketing Will Explode in 2017. https://www.forbes.com/sites/
+
+ajagrawal/2016/12/27/why-influencer-marketing-will-explode-in-2017/#752645c20a90
+
+Emarketer.com Worldwide Retail Ecommerce Sales will Reach $1.915 Trillion This Year. https://
+
+www.emarketer.com/Article/Worldwide-Retail-Ecommerce-Sales-Will-Reach-1915-Trillion-This-
+
+Year/1014369
+
+
+
+

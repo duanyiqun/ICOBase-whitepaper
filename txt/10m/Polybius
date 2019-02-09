@@ -1,0 +1,224 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Polybius Token Whitepaper ENG
+
+
+POLYBIUS TOKEN WHITEPAPER
+
+
+
+1. eToken Contract as a basis for Polybius Token (PLBT)
+
+PLBT is a token issued within an eToken1 contract. The number of Polybius tokens issued during 
+the ICO equals 20,000,000 (twenty million). However, no further PLBT will be generated a�er 
+this phase of the project and all the unsold tokens will be destroyed. 
+
+eToken is an Ethereum smart contract, wri�en using Solidity2 programming language by 
+Ambisafe3. It enables issuance of tokens in Ethereum network and provides a rich set of features:
+
+1. Implementa�on of ICAP4 for mul�-layer transac�on rou�ng
+2. Account recovery for the lost key scenario
+3. Allowances
+4. Automa�c ethereum network fee refunds
+5. Integrated exchange with Ether currency
+6. Ability to set transac�on fees
+
+eToken also implements EIP205, also known as Standardized Contract API. EIP20 compa�bility 
+ensures that integra�on with exchanges and other services will be no harder than for any other 
+Ethereum-based token. 
+
+1Polybius Whitepaper
+
+eToken
+
+1h�ps://github.com/Ambisafe/etoken-docs/wiki
+2h�ps://github.com/ethereum/wiki/wiki/The-Solidity-Programming-Language
+3h�ps://www.ambisafe.co/
+4h�ps://github.com/ethereum/wiki/wiki/ICAP:-Inter-exchange-Client-Address-Protocol
+5h�ps://github.com/ethereum/EIPs/issues/20
+
+
+
+2Polybius Whitepaper
+
+System
+
+System Architecture Overview
+
+Concerns Breakdown
+
+Polybius project consists of 3 layers of so�ware responsible for different concerns, as shown 
+below:
+
+Network-level Interac�on Diagram
+
+Ethereum network provides a medium for interac�on between companies and users. Par�es 
+interact by sending transac�ons to the Polybius contract. All transac�ons are validated by 
+contract business logic and recorded in the blockchain. Contract API is open to all internet users 
+and anyone can become a user of Polybius token.
+
+Ethereum Network
+
+1. Network infrastructure
+2. Data persistence layer
+3. Consensus/enforcement of the contract logic
+4. Transac�on execu�on  
+
+1. Token issuance algorithm
+2. Account balances database
+3. Transac�on rules 
+
+eToken Contract
+
+1. User interfaces
+2. Business logic of token users
+3. Transac�on crea�on
+
+Wallet So�ware
+
+Contract
+
+Other smart contracts
+
+Ethereum Network
+
+
+
+6h�ps://github.com/ethereum/wiki/wiki/ICAP:-Inter-exchange-Client-Address-Protocol
+
+3Polybius Whitepaper
+
+System Architecture Overview
+
+System-level Interac�on Diagram
+
+The eToken protocol supports 2 primary account security models: user-side keys and hosted 
+wallet.
+
+User-side Keys
+
+In this case, private key that unlocks account is known only to end-user.
+
+Hosted Wallet
+
+In this case, financial ins�tu�on (exchange or wallet provider) is responsible for key security. Only 
+1-2 keys per ins�tu�on are used and transac�ons are routed to specific user accounts using ICAP6 
+protocol. 
+
+System
+
+User’s browser
+Regular
+
+authen�ca�on
+
+Signed
+transac�onEthereum Node
+
+Wallet
+decryp�on
+
+Encrypted wallet Signed transac�on
+
+Wallet
+Provider
+
+Ethereum
+Node
+
+Transac�on
+assembly
+
+User’s browser
+
+Wallet decryp�on
+
+Transac�on assembly
+
+Wallet Provider
+
+
+
+The dividends distribu�on process consists of two stages: ge�ng the accurate data about the 
+PLBT distribu�on among users (dividends report) and spreading the company profit among the 
+tokenholders.
+
+Dividends report
+
+To have a proof of PLBT ownership by exact addresses, Polybius will make Snapshots of Blockchain 
+prior each dividends distribu�on using a specially developed tool named Dividends Report. It 
+allows to capture the current state of tokens distribu�on among investors as on the exact block. 
+The number of the milestone block as well as an approximate date and �me of its appearance will 
+be announced in advance both, by email and at the Polybius Website. 
+
+Distribu�on of the profit 
+
+Polybius Founda�on financial management undertakes to transfer 20% of the company 
+distributable profit to the Dividends distribu�on smart contract on a yearly basis. The date of 
+dividends distribu�on will be announced in advance at Polybius Bank Website. Also users will be 
+no�fied via email twice. 
+
+In order to receive their share of dividends, users will be required to return PLBT tokens to the   
+Polybius Wallet or any other wallet which supports the dividends payment mode in case, if they 
+have been stored outside of it. The list of such wallets will be announced at the Polybius Website. 
+
+Polybius is nego�a�ng with all major exchanges regarding implementa�on of the dividends 
+accep�ng func�onality. Polybius will inform customers whenever this feature will be available at 
+any of them. 
+
+A Dividends distribu�on smart contract is designed to distribute profit among the investors 
+according to their stakes. All the payments will be made in ETH. Dividends will be sent to those 
+addresses whose PLBT token ownership will be proved by Snapshot of Blockchain.
+
+4Polybius Whitepaper
+
+Dividends Distribution
+
+
+
+

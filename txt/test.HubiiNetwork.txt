@@ -1,0 +1,1315 @@
+The Hubii Network
+A blockchain-based decentralised content
+marketplace
+Jacobo Toll-Messia, jacobo@hubii.com
+Jens Ivar Jørdre, jensivar@hubii.com
+Mark Briscombe, mark@hubii.com
+David Schlesinger, das@tripodadvisors.com
+Øyvind Pedersen Jr, oyvind@hubii.com
+September 10, 2017
+Contents
+1 Preface 2
+
+2 Introduction 3
+
+3 Current Status of the Industry 5
+3.1 Players and Their Pain Points . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+3.1.1 Content Creators . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+3.1.2 Emerging Content Distributors . . . . . . . . . . . . . . . . . . 5
+3.1.3 Content Consumers . . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+3.2 New Trends . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+4 Hubii Network 7
+4.1 Two Sided Marketplace Dynamics . . . . . . . . . . . . . . . . . . . . . 7
+4.2 Business Model Guiding Principles . . . . . . . . . . . . . . . . . . . . . 8
+4.3 Digital Rights Management . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+5 Use Cases 10
+5.1 Content Production . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+5.2 Amplifying Content Reach . . . . . . . . . . . . . . . . . . . . . . . . . 10
+5.3 Fake News Detection . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+5.4 Tipping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+5.5 Smart Crowdfunding . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+6 Road Map 13
+
+7 Feedback from Within the Industry 16
+
+8 Storage 17
+
+9 Removing Exchange Rate Risk 18
+
+10 Veri�cation of Content Rights in Hubii Smart Contracts 20
+10.1 Protecting Intellectual Property . . . . . . . . . . . . . . . . . . . . . . 20
+10.2 Rapid Consensus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+10.3 De-verifying Content . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+10.4 ’Fake News’ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+10.5 Illegal Content . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+10.6 Vulnerability to Sybil Attack . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+11 Transparency 24
+
+2
+
+
+
+12 Key Team Members 25
+
+13 Token Launch 26
+13.1 Minimum target . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+13.2 ETH volatility . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+13.3 Exchange rate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+13.4 Tokens generated . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+13.5 Launch date and time . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+13.6 Contract address . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+13.7 Gas Limit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+13.8 Refunds . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+13.9 Sale timing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+
+14 Hubiit FAQs 29
+14.1 What is a Hubiit? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+14.2 Will there be any future Hubiit token sales? . . . . . . . . . . . . . . . 29
+14.3 What currencies will be accepted to purchase Hubiits? . . . . . . . . . 29
+14.4 Why does the Hubii Network need a native token? . . . . . . . . . . . . 29
+14.5 Why are we con�dent Hubii can change the industry? . . . . . . . . . . 29
+14.6 How will Hubii hold the funds collected? . . . . . . . . . . . . . . . . . 30
+14.7 What safeguards are in place to ensure the contract is correct? . . . . . 30
+14.8 Will Hubiits be transferrable? . . . . . . . . . . . . . . . . . . . . . . . 30
+14.9 How ambitious are we? . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+14.10 Philosophy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+15 Budget Allocation 32
+
+16 Afterword 33
+
+17 Appendix 34
+17.1 Volatility of Hubiits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+
+
+
+Abstract
+
+We are consuming more content than ever; 3.6 billion people read the news, listen
+to music or podcasts and watch videos and movies online every day.
+
+Supply and demand of content is constantly growing, however the fundamental
+dynamics of the media industry are sub-optimal and a paradigm shift is required.
+
+Writers, musicians, movie-makers and producers should be able to �nd and re-
+ward each other without the need for an intermediary (i.e. a media company),
+other than the platform upon which an article or video is published.
+
+Hubii Network is a blockchain-based decentralised content marketplace that fa-
+cilitates transactions between creators, distributors and consumers by leveraging
+the power of smart contracts1. Kickstarting this marketplace is Hubii’s existing
+distribution network reaching out to over 50 million people.
+
+By replacing the middlemen with an e�cient infrastructure, content creators earn
+more, distributors pay less and consumers have more choices. Smart contracts and
+‘smart crowdfunding’, all using our native cryptocurrency, Hubiits, will shape the
+content industry of the future.
+
+1Ethereum whitepaper
+
+1
+
+https://github.com/ethereum/wiki/wiki/White-Paper
+
+
+1 Preface
+Hubii is a Norwegian startup with headquarters in Bergen and subsidiaries in the
+USA and Singapore. We have received international recognition2, 3 as a location-based
+news aggregator and established global partnerships with leading companies across
+the world4, 5.
+
+Hubii has been working between content creators and distributors (telecom opera-
+tors, OEMs, and app developers), facilitating the development of their own products
+using Hubii’s engine.
+
+This has allowed Hubii to build a distribution network reaching out to 50m users every
+day. We have 560 publishers and syndication partners around the globe.
+
+Hubii’s team has been interacting with blockchains since mid-2011, but now we have
+the right business model and technology to aggressively deliver our ambitions.
+
+This year, Hubii’s team committed to building a blockchain-based decentralised con-
+tent marketplace (speci�cally Ethereum-based), extending our content o�ering from
+text to include still images, audio and video.
+
+2Red Herring 2013
+3Red Herring 2015
+4Mozilla blog
+5Panasonic blog
+
+2
+
+http://www.redherring.com/events/red-herring-europe/2013_finalists/
+http://www.redherring.com/events/red-herring-global/2015-shortlist/
+https://blog.mozilla.org/press/2016/01/firefox-os-will-power-new-panasonic-uhd-tvs-unveiled-at-ces/
+http://shop.panasonic.com/about-us-latest-news-press-releases/ces2016-ultra-hd-tv.html
+
+
+2 Introduction
+The number of internet users will exceed 3.8Bn in 20186 and is forecast to grow at a
+steady 10% per year7. This growth is mirrored in the amount of time spent online per
+user, which is growing by 5 to 6%.8
+
+While the growing market means ever greater demand and reach for content, it is
+becoming all the more di�cult for content creators to maintain control over their cre-
+ative works and keep a fair share of the revenue generated. Another topical challenge
+is the concept of ‘fake news’ and the need to determine the provenance of content. The
+whole media industry is broken and blockchain technology will help us to �x it.
+
+By 2020 the media industry as a whole will pick up to over $2 trillion9 and it is Hubii’s
+�rm belief that the ine�ciencies in the market and industry can be solved through the
+use of blockchain technology and the application of smart contracts.
+
+Figure 1: PwC’s 2017 Global Entertainment & Media Outlook revenue forecast
+
+Hubii’s mission is to create a new leading Ethereum-based decentralised content mar-
+ketplace where creators and rightsholders can meet distribution networks and reach
+content buyers directly, all while having total con�dence in maintaining the integrity
+of their rights through the use of smart contracts.
+
+6eMarketer, April 2016
+7Internet World Stats
+8GSMA Intelligence
+9PwC’s 2017 Global Entertainment & Media Outlook
+
+3
+
+
+
+Only a proven media partner with existing relationships can do the job - and thus
+building on our knowledge and connections of the past �ve years, we introduce Hubii
+Network.
+
+4
+
+
+
+3 Current Status of the Industry
+The current status of the content industry can be analysed from many di�erent angles.
+Here we shed more light on this.
+
+3.1 Players and Their Pain Points
+The three main actors in the value chain, creators, distributors and consumers, su�er
+from di�erent pain points.
+
+3.1.1 Content Creators
+
+Content creators face the following issues :
+• They often do not get su�ciently rewarded for their work and their compensa-
+
+tion is not related to the revenue generated.
+
+• They lose control of their works once their content is published.
+
+• Separate engagements with multiple distributors add complexity to their sale
+process.
+
+• There is a lack of data driven tools giving them insights into the consumer’s
+interactions with their content.
+
+3.1.2 Emerging Content Distributors
+
+Emerging content distributors such as phone manufacturers, telecom operators and
+app developers, are embedding themselves as trusted content providers o�ering ser-
+vices to their users. This strategy is allowing them to leverage their large user base
+and o�er value-added services engaging the users for longer periods of time and con-
+sequently monetising them.
+
+They are, however, su�ering the following pain points :
+• They have to pay hefty fees to a variety of middlemen to get hold of content.
+
+This means they operate on small margins and this often pushes them to acquire
+lower quality content.
+
+• As emerging distributors, they do not have strong or well-formed content strate-
+gies.
+
+• Their content is usually second-hand or non-premium.
+
+• They require a combination of international and local content due to their user
+base.
+
+5
+
+
+
+3.1.3 Content Consumers
+
+Content consumers su�er from the following problems :
+
+• Users are hit with a constant wave of content where is it di�cult to separate
+signal from noise.
+
+• They have to use multiple platforms to get hold of di�erent types of content.
+
+• The content quality is below the desired standard.
+
+• They are exposed to hundreds of ads a day.
+
+3.2 New Trends
+The developing world is rapidly growing and is thirsty for content; Thailand with 68
+million inhabitants, Philippines with 100 million, Myanmar with 54 million, Malaysia
+with 10 million and Indonesia with 260 million inhabitants are examples of large mar-
+kets that are coming online which will not follow the technology adoption path of most
+western countries. Furthermore, they are reshaping how content consumption takes
+place. Hubii’s existing relationships in the developing world are extensive, giving us
+insight and a platform ripe for leverage.
+
+From a content point of view, we are seeing an explosion in the numbers of content-
+creating smartphone apps entering the market, across a range of areas such as enter-
+tainment, education, communication and utility. Within 5 years, 80% of the adult world
+will have an smartphone.10
+
+New business models have been opened up by the internet, and we have seen a surge
+in the number of value-added apps and services for smartphones and web.
+
+As a result, these new players have the opportunity to amplify the content reach and
+o�er services across a range of basic handsets, e�ectively catering to the needs of all
+their subscribers. Brands need to develop content which is device-agnostic, thereby
+maximising the number of customers being targeted. This approach is particularly
+e�ective when combined with localised content, tailored speci�cally to particular ge-
+ographic regions or sets of users.
+
+There is a need and space for a player that is willing to ease the existing pain points
+hereby presented, building the solution around content creators and rightholders; em-
+powering journalists, musicians and movie makers with the ability to reach out to
+millions of users in a frictionless manner and monetise their works.
+
+10GSMA Intelligence
+
+6
+
+
+
+4 Hubii Network
+Hubii Network is an Ethereum-based decentralised content marketplace where the
+production, distribution and consumption of content is re-shaped by leveraging the
+mechanisms that Ethereum o�ers.
+
+Hubii Network shall apply a market structure by nurturing and managing perfect com-
+petition11 to thrive. In other words, a market should be free of monopoly and controlled
+by individual participants.
+
+The trustless nature of cryptocurrency will allow all parties to make an exchange with-
+out the oversight or intermediation of a third party. This will reduce or even eliminate
+counterparty risk.
+
+The objective is to establish a healthy ecosystem whereby creators can de�ne their
+rules of engagement, distributors get access to a constant pool of content and con-
+sumers ultimately get hold of the content they desire.
+
+Making use of smart contracts and smart properties will allow Hubii Network to �x
+the pain points in the industry and, furthermore, apply mechanisms never seen before
+in the market. All this will be delivered whilst having full transparency, accountability
+and security over the transactions using our own cryptocurrency, Hubiits12 (HUBs).
+
+The long term goal is for the entire Hubii Network to be open source and decentralised
+in nature.
+
+4.1 Two Sided Marketplace Dynamics
+We will utilise cross-side network e�ects in our marketplace. The value for a content
+creator joining Hubii Network is a function of the number of distributors and con-
+sumers that are present. Similarly, for distributors and consumers, the value is related
+to the number of content creators publishing their work within Hubii Network. Hubii
+has proven experience building this type of market already.
+
+Demand liquidity is the single biggest challenge in any cross-side network e�ect plat-
+form, creating a chicken & egg problem; a band would not be willing to distribute their
+songs through the platform if there are not enough distributors/consumers in it. In our
+
+11Where : (1) all �rms sell an identical product, (2) all �rms are price takers, (3) all �rms have rela-
+tively small market share, (4) buyers have complete information about the product being sold and the
+prices charged by each �rm and (5) the industry is characterized by freedom of entry and exit.
+
+12Our fully featured ERC20 token
+
+7
+
+
+
+case that issue is already solved thanks to our existing distribution pipeline.
+
+We already have a large set of distribution partners, reaching out to over 50 mil-
+lion daily users, currently supplying content from Hubii. We believe this strength,
+together with the introduction of Hubiits and heavy use of smart contracts to secure
+the monetary transactions and IP rights, will act as an incentive to attract content pro-
+ducers.
+
+Furthermore, we have the possibility to enable distribution partnerships that could
+reach out to over 800 million people daily. Therefore, as the supply of content in-
+creases the marketplace could amplify its reach extremely rapidly.
+
+The go-to-market strategy will require the motivation of both creators and distrib-
+utors, using di�erent approaches. We will expand our distribution network, signing
+exclusive deals with distributors in speci�c regions for a period of time in return for
+a minimum investment commitment. The distributor must purchase content from the
+Hubii Network and promote us within that region.
+
+The Hubii Network will leverage the existing Hubii business. This product has helped
+connect content creators and distributors already. The aim is always to maximise rev-
+enue and enhance content consumption
+
+To accelerate wide adoption and integration of Hubii Network we will foster openness
+of our platform by providing RESTful API’s to the community of developers. Equally
+we will integrate with the best suppliers of various di�erent decentralised technologies
+such as e-wallets and decentralised storage solutions; We do not see value in reinvent-
+ing the wheel; we want to begin to change the world at the platform level �rst.
+
+4.2 Business Model Guiding Principles
+Hubii Network will replace a number of middleman in this industry and charge a small
+commission to the distributors. We intend for this to be a high volume, low margin
+market, which will make the content industry as a whole much more e�cient. Distrib-
+utors and ultimately customers will pay less for content, yet on the �ip side content
+makers will get paid more.
+
+Hubii will also have the potential to generate revenue through provision of liquid-
+ity for eliminating exchange rate risk as discussed later.
+
+Within our existing portfolio of distribution partners we encounter a small number of
+them who mainly want low-quality and commodity content and have a policy of not
+
+8
+
+
+
+paying for content acquisition. In these cases we might apply server-side ad stitching
+and DAI13 to monetise the content as it is being distributed.
+
+4.3 Digital Rights Management
+Any marketplace will only be successful if all sides can trust each other; the buyer has
+to know content rights are veri�ed and the creator that content will not be pirated or
+redistributed without consent.
+
+In order to protect the rights DRM14 can be applied, when necessary, to relevant audio
+and video content. Thus, distribution endpoints can only be connected to by validated
+clients. Various patented DRM schemes are available to Hubii Network through our
+partners, which support this level of security and trust. An essential feature of the
+technology is that it can query the state of the content; veri�ed or disputed. In other
+words, disputed content can be blocked at any point in the value chain.
+
+Hubii Network’s content storage, distribution, encryption and acquisition processes
+will be MPAA15 certi�ed and server-side monetisation will be based on various exist-
+ing DRM schemes.
+
+As every device in the chain would be a validated client, consumption patterns and
+related transactions can be tracked and fed back to the content creators.
+
+This data can be of high value to the creator and therefore be added to the contract as
+requirement. Since everything in the distribution chain is based on encryption a high
+degree of trust can be accomplished. In order to address potential privacy issues each
+party seller, buyer, advertiser can anonymise it’s data while maintaining transaction
+integrity.
+
+DRM will not be applied to all content. DRM can be expensive and not always useful.
+Vlogs and podcasts, for example, have little need for DRM and it could even harm their
+distribution.
+
+13Dynamic Ad Insertion
+14Digital Rights Management
+15MPAA content protection
+
+9
+
+http://www.mpaa.org/content-protection/
+
+
+5 Use Cases
+With the intention to provide tangible examples on how Hubii Network will re-shape
+content production, distribution and consumption we have included a set of use cases.
+
+Please note that the intention is to describe, from a high level perspective, how the
+main work�ow of the Use Case would take place and the use of smart properties and
+smart contracts a�ect it.
+
+5.1 Content Production
+This Use Case is applicable to Text, Audio and Video. For the purpose of this example
+we will apply it to Audio.
+
+Alice, a content creator, decides to publish her latest Podcast within Hubii Network.
+At that time Alice establishes the smart contract for the Podcast indicating when the
+Podcast is played ’X’ number of times she will get paid ’Y’ Hubiits.
+
+Bob, upon accepting the rules indicated within the smart contract, decides to distribute
+the Podcast through his network. Thus, as the Podcast is being played, when it reaches
+’X’ number of plays, ’Y’ Hubiits will be paid to Alice.
+
+Note that the content creator can track rights and usage data in real time on a global
+scale each time a �le is accessed, and get paid instantly based on the rules she has
+established within the smart contract. This will require the use of oracles16 to get real
+world data into the smart contracts.
+
+5.2 Amplifying Content Reach
+This Use Case is applicable to Text, Audio and Video. For the purpose of this example
+we will apply it to Text.
+
+A journalist, Alice, decides to publish a high quality article within Hubii Network.
+While de�ning the smart contract, Alice establishes that they will share ’X’ percentage
+of the earnings for every ’Y’ reads produced by in�uencers distributing her article through
+their social channels.
+
+A social in�uencer, Bob, upon accepting the smart contract conditions, redistributes
+the news article through his thousands of followers in di�erent social media channels.
+
+16An Oracle is a third party service which can be used to get real-world data into smart contracts
+
+10
+
+
+
+Once the article shared through the social media channels is read ’Y’ number of times,
+’X’ percent of the earnings will be automatically paid to Bob. Again, this will require
+use of oracles.
+
+It is important to note that in both examples the monetary transaction is based on
+rules that are decided by the content creator and stored within the blockchain, are
+transparent to both parties and do not require a mediator.
+
+It is possible for the Hubii Network to take a contract arbitration role if there is a
+requirement. Assume a smart contract where a creator could request a payment from
+a distributors (locked up) funds for every 1,000 impressions; using a 2-of-3 multisig
+model could allow Hubii to step in as a neutral observer to process or cancel that
+transaction if a creator and distributor were to disagree or if there was a question over
+oracle data. This would entail a slightly higher commission for Hubii Network.
+
+5.3 Fake News Detection
+This Use Case is applicable to Text, Audio and Video. For the purpose of this example
+we will apply it to Text.
+
+A journalist, Alice, publishes an article within Hubii Network and would like the facts
+to be veri�ed by the community to minimise the risk of being labelled ’Fake News’.
+
+Thus, at publishing time, Alice requests veri�cation of a set of facts within the arti-
+cle. This veri�cation is crowdsourced from within the community. According to the
+rules of the smart contract, ’X’ percent of the earnings of the article will be shared among
+the veri�ers.
+
+5.4 Tipping
+This Use Case is applicable to Text, Audio and Video. For the purpose of this example
+we will apply it to Music.
+
+A consumer, Alice, while listening to a song from her favorite band, Bob and the Do-
+ges17, decides that she would like to tip the band for their work. Alice can directly tip
+’X’ number of Hubiits to the band for that song. This could be enabled within the Hubii
+Network or a distributor platform.
+
+17A popular band comprising of Shiba Inus
+
+11
+
+
+
+5.5 Smart Crowdfunding
+This Use Case is applicable to Text, Audio and Video. In this case we will show two
+examples; one for Music and one for Movie making.
+
+ExampleA : A movie director, Alice, is seeking funding for her next Hollywood block-
+buster. She decides to announce a Smart Crowdfunding in Hubii Network whereby
+they are seeking ’X’ number of Hubiits in exchange for ’Y’ percent of the future earnings
+which will be proportionally split among the ’Z’ backers of the movie. Furthermore, back-
+ers of the project might have access to the premiere via Hubii Network.
+
+Example B : Bob and the Doges, the band, are seeking funding for their next sum-
+mer tour. They announce a Smart Crowdfunding in Hubii Network whereby would
+like to raise ’X’ number of Hubiits in exchange for ’Y’ percent of the revenue obtained
+through the tour (tickets and merchandising). Furthermore, backers of the project will
+have a discount should they attend to the concert or will be able to virtually attend to
+concert which will be streamed live via the Hubii Network.
+
+12
+
+
+
+6 Road Map
+Hubii envisions 4 major releases through our roadmap across a period of 18 months
+covering text, still images, audio and video.
+
+The following roadmap describes a timeline which will be met given we raise a fairly
+ambitious $40M through our token sale. If we do not raise this amount then the
+roadmap will not change, but timing will be much more reliant on further traditional
+investment. There will be no further token sales or token releases; if required, we shall
+seek conventional venture capital.
+
+We have determined that our scaling plans �t in with the general scaling plans of
+the Ethereum network. In the worst case, clever use of payment channels will reduce
+our load on the network and also reduce fees.
+
+This roadmap comprises technical development together with business development
+as we intend to keep on growing our distribution partnerships while the development
+of the platform takes place.
+
+Figure 2: Road Map
+
+• R1; ETA, End Q4 2017 :
+
+– A digital wallet will be implemented within the Hubii Network.
+– Transparency dashboard; all parties involved in Hubii Network can see the
+
+development of the main KPI’s a�ecting the performance of the business
+and the Hubiits cryptocurrency.
+
+– Creator and distributor dashboard for content ingestion, distribution and
+con�guration of the smart contracts.
+
+– SDK for distribution Partners.
+
+13
+
+
+
+– Textual content ingestion and distribution within the blockchain support-
+ing a set of main smart contract use Cases.
+
+– Deploy a pilot in South East Asia and Brazil for 1 month to, approximately
+15M users. Upon successful pilot, we shall deploy world-wide.
+
+• R2; ETA, End Q1 2018 :
+
+– Release of market analytics tools; forecasting and audience matching sup-
+ported by machine learning and image recognition algorithms.
+
+– Integrate with VOD streaming platforms for ingestion and distribution and
+run pilot tests.
+
+– Integrate with music streaming services for ingestion and distribution - run
+pilot tests.
+
+– Image ingestion and distribution through the blockchain supporting smart
+contract use cases.
+
+– Smart Crowdfunding; Apply crowdfunding smart contracts for music/movie
+artists and journalists where backers can obtain a return on their invest-
+ment based on the smart contract rules.
+
+– Smart contracts to manage exchange rate risk
+
+• R3; ETA, End Q2 2018 :
+
+– Audio ingestion and distribution within the blockchain; main smart con-
+tract use cases are implemented.
+
+– Deliver audio (music and podcasts) via distribution channels to music stream-
+ing services.
+
+– Paid crowdsourced content curation
+
+• R4; ETA, End Q3 2018 :
+
+– Video ingestion and distribution.
+– Deliver video via distribution channels and VOD platforms.
+– Server-side ad-stitching technology for video and audio
+– Deliver AR, VR and e-sports content through distribution
+
+• No �xed plans, dependent upon funding :
+
+14
+
+
+
+– Deprecation of our ERC20 token; All owners of ERC20 tokens would retain
+the same fraction of the new replacement cryptocurrency. This might be
+necessary to fully decentralise some unique features of the platform. How-
+ever, it is also critical that this is not done before the mechanisms have been
+fully optimised.
+
+– Fog Computing; depending on the performance and latency obtained by
+using the blockchain we will perform R&D to implement a Fog Computing
+solution to improve system response time, minimise network and internet
+latency and reduce amounts of data sent.
+
+15
+
+
+
+7 Feedback fromWithin the Industry
+This is some of the feedback we have obtained from within the Industry;
+
+“ The media industry is in turmoil, with traditional relationships be-tween creators and distributors broken and standard measures of valueunreliable. Blockchain, by disintermediating gatekeeper companies, can
+rede�ne the industry for the 21st century, put control in the hands of mak-
+ers and users, and allow a true marketplace to establish value. ”David Schlesinger, former Editor-in-Chief, Reuters
+“At Telenor we aspire to be our customers’ favourite partner in digitallife. Through engaging products and services, such as WowBox, Telenor’slifestyle app, we deliver on this ambition and give people the full bene�t of
+being connected. WowBox has reached more than 10 million users in our
+Asian markets and Hubii has been an integral part of making it the suc-
+cess that it is today, reaching out to our large user base with their global
+content distribution network.
+
+The team at Hubii has been important in creating value for our WowBox
+customers by building solutions that make content distribution more ef-
+fective and provide high value content. We wish them great success also
+in the future.
+
+It is our view that the team at Hubii really understands how to scale solu-
+tions on a global level and make content distribution more e�ective. Their
+help has been really valuable for Telenor and we wish them great success
+also in the future. ”Bjørn Thorstensen, Telenor Group, Hubii’s business partner
+
+16
+
+
+
+8 Storage
+Hubii’s current storage needs (text only) are 25GB per day. Still images add an extra
+5Gb per day which are stored in a CDN18.
+
+We foresee increasing data retention to much higher limits plus we shall add audio
+and video �les. That would easily increase the data storage needs up to Petabytes
+within a few months. This situation still does not take into consideration the stream-
+ing capabilities required to serve audio and, specially, video �les to millions of users.
+
+Fully decentralised storage systems are a work-in-progress, therefore conventional
+storage methods are unavoidable. However, there is tantalising progress. We shall
+establish early dialog with blockchain-based storage companies such as Storj, Sia, File-
+coin, Burst and Maidsafe to present and discuss our data volume requirements at each
+phase, for text, audio and video both from storage and streaming perspectives.
+
+Our ultimate goal is to use a fully ‘on-chain’ solution, but considering the existing
+limitations of these services, we have to be open minded and acknowledge we will
+have to focus on providing an optimal service to our end users.
+
+18Content delivery network
+
+17
+
+
+
+9 Removing Exchange Rate Risk
+One potential obstacle to crypto-commerce is the volatility of tokens with respect to
+user’s everyday currency (e.g. USD).19 If a user is happy to deposit and trade in Hu-
+biits, then there is no issue. However, if they do not want to be exposed to exchange
+rate risk then they might not be happy trading in Hubiits. On the Hubii Network this
+problem will be minimised with hedging contracts.
+
+If a customer deposits USD onto the platform and they want to keep their USD purchas-
+ing power static then we will hedge their risk. In order to interact with the platform
+and its smart contracts, users must use Hubiits. If they choose to interact in USD, then
+we will use their USD to purchase Hubiits, but their interaction with the platform will
+still be displayed and maintained in USD terms. They are e�ectively taking a long posi-
+tion on Hubiits behind the scenes. In order for the user to not be exposed to the Hubiits
+volatility, we will then hedge their position in the background, by opening a short on
+their behalf. In this way, the user will no longer be impacted by price �uctuations. The
+cost to service this system will depend upon the spread, trading fees and interest rate.
+Hubii can also take a fee. However, we may in fact choose to subsidise the cost until
+there is su�cient liquidity to make this extremely low cost. Token holders will lend
+their tokens into a smart contract to fund this short position and receive an interest
+rate as payment.
+
+For complex contracts, if we �nd that users are reluctant to engage with the platform
+and agree to ongoing contractual payments in Hubiits we will address this issue by in-
+tegrating easily understood two-way, automated futures contracts. This will similarly
+allow users to lock in prices in their chosen currency (e.g. USD) throughout the smart
+contract duration. Token holders will be able to stake into this system and potentially
+pro�t from price movements.
+
+These contracts will be fully decentralised in nature, except for the necessary exchange
+rate information. We will have solid liquidity partners acting as oracles for this pur-
+pose.
+
+Using these methodologies and without manual intervention, user’s balance and all
+interactions can be denoted in USD. There is a fully transparent and visible (low) cost
+to the user for this security.
+
+Hubii will keep 5% of the total produced tokens to act as a liquidity pool for such
+contracts. However, we will also allow individuals who hold tokens to stake into this
+
+19Ethereum whitepaper - see ’Financial derivatives and Stable-Value Currencies’
+
+18
+
+https://github.com/ethereum/wiki/wiki/White-Paper
+
+
+system and earn interest from users hedging and pro�t from futures trading. All of
+this will be based on competitive market pricing.
+
+19
+
+
+
+10 Veri�cation ofContentRights inHubii SmartCon-
+tracts
+
+10.1 Protecting Intellectual Property
+It is critical that we check that content uploaded by a user is actually their own intel-
+lectual property. We will develop a framework here that will decentralise this content
+veri�cation, however we must accept that, although our solution will be open-source,
+it will be semi-decentralised at �rst. The transition to a truly decentralised system is
+only possible once we deprecate our ERC20 tokens. This system will prove to be a
+di�cult optimisation problem, which will take time to prove itself. When the equity of
+the system has been demonstrated at scale we will switch to a more heavily customised
+token, or perhaps our own blockchain if it is deemed necessary.
+
+We will allow token holders to stake their tokens into smart contracts which allow
+content to be �agged as either ‘Veri�ed’ or ‘Disputed’. These users will be our net-
+work validators. ‘Veri�ed’ or ‘Disputed’ is a binary condition once achieved, but con-
+tent begins life with neither designation. We will use a system to reward validators
+for correctly verifying content, whilst simultaneously punishing an incorrect valida-
+tion. This will allow the system to rapidly converge on one truth. Tokens staked into
+the system by creators will build up a Reputation Weight as the creator submits more
+‘Veri�ed’ content. This functionality is not included in an ERC20 token; we therefore
+require a somewhat centralised solution at �rst.
+
+We also must always ensure that tokens are fungible, in other words no token has
+more value than any other. Therefore upon transfer, a token must shed its accrued
+reputation.
+
+The incentive for participating in the task of content validation is a small revenue
+share to those users who successfully validate a piece of content. The revenue share
+will be time-limited and potentially capped in value. This positive incentive is bal-
+anced by the risk associated with staking tokens against an unsuccessful validation.
+The justi�cation for this downside risk is easy to understand; if the system only ever
+rewarded token holders for validating content and never punished them when they
+were wrong, it would be rational for token holders to try and validate every piece of
+content. As such, there must be a signi�cant penalty for wrongly identifying the con-
+tent - namely, the loss of staked tokens. Our content validation system will therefore
+converge rapidly towards truth, provided that the market for staking tokens is liquid
+and the rewards and punishments su�ciently great. Any lost tokens will therefore be
+split and distributed between correct validators, further incentivising participation in
+
+20
+
+
+
+the system. Similarly, this process might limit the required value of the revenue share,
+potentially to the point whereby users will participate in content validation even when
+no revenue sharing is o�ered.
+
+10.2 Rapid Consensus
+Each piece of content will rapidly reach consensus on validity as there is a race to be
+among the veri�ers. Consequently, there is also a race to invalidate invalid content
+and steal any falsely staked tokens. Until content is validated it cannot be o�ered to
+distributors. After a consensus is determined to have been reached, content with ‘Dis-
+puted’ status, is removed from the platform. This also occurs if the content is uploaded
+to the platform, yet is not validated by anybody within a time period. At some point
+all valid content will be classed as ‘Veri�ed’. When content is veri�ed, it must remain
+veri�ed for a period of time in order for creators and validators to receive their revenue
+share. Earned funds will essentially be locked up during this period. Having reached
+and maintained ‘Veri�ed’ status for the required amount of time, another time limited
+revenue share will then begin to be diverted into a ‘e-veri�cation bounty’ fund. It is
+assumed at this point that those token holders who staked correctly were acting to
+the best of their knowledge and as such, their tokens are returned to them safely. The
+stakers will also now receive their revenue share. Any tokens staked incorrectly will
+be seized and distributed proportionally amongst the correctly staked tokens.
+
+Creators must stake a nominal quantity of tokens (or even a fraction of a token), in
+order to build a reputation on their ‘pro�le’. Eventually they will be a ‘Veri�ed’ cre-
+ator and the revenue share for validators from these users will decrease. A negative
+veri�cation can damage their reputation and move them below the ‘Veri�ed’ threshold,
+in which case the future revenue share for validators will increase again. However, it
+will be expensive for other parties to falsely attack the reputation of a creator. This is
+one reason we may later deprecate our ERC20 tokens for a new token which can carry
+a ’reputational weight’. This would allow this system to also be fully decentralised.
+
+10.3 De-verifying Content
+Now let’s imagine a case where a content creator has submitted a video of a cat on a
+skateboard and it was veri�ed for the required period of time. Let’s also assume later
+that somebody else provides public and indisputable evidence that the cat video is in
+fact their own content. There must exist a mechanism whereby content can become
+de-veri�ed. We achieve this by restarting the process again once a piece of content has
+been veri�ed, but with a couple of subtle di�erences. This time the content already
+has a ‘Veri�ed’ status and there is also a ‘De-veri�cation Bounty’. A token holder who
+believes the content should now be disputed, must have an incentive to stake their
+
+21
+
+
+
+tokens and this is access to a share of the ‘De-veri�cation Bounty’, if proven to be cor-
+rect. Once users start to stake that the content is ‘Disputed’ then users who disagree
+may wish to stake that the content is still ‘Veri�ed’, in an attempt to steal the tokens
+from the new tokens staking for ‘Disputed’. If the new batch of stakers successfully
+change the status of the content to ‘Disputed’, then the content is ‘Quarantined’ from
+the platform and any contracts on it are paused. Content must remain in ‘Quarantined’
+status for a period of time before the token holders who staked ‘Disputed’ will collect
+the ‘De-veri�cation bounty’ and share the tokens that are now staked for ‘Veri�ed’, if
+there are any. If the content never manages to reach ‘Quarantined’ status for a period
+of time then the tokens staking for ‘Validated’ are rewarded with the ‘Disputed’ tokens.
+
+Lastly, if content remains ‘Veri�ed’ for a long period of time then there will still be
+a ‘De-veri�cation Bounty’ held in reserve. It is assumed at some point in the distant
+future that the content is not going to be disputed any more and so eventually the
+bounty is returned to the content creator.
+
+10.4 ’Fake News’
+As discussed in our use cases, we can also use this system for the veri�cation of news
+and facts contained within content. This is a more challenging application to deliver as
+people can have very di�erent opinions on ‘facts’, particularly where they are political
+in nature. There may be powerful and wealthy entities willing to expend signi�cant
+e�ort and spend a lot of money to compromise this use case in particular. However,
+despite this challenge, an optimised veri�cation process can solve this.
+
+10.5 Illegal Content
+The challenge with illegal content is that it may have di�erent legality status in dif-
+ferent countries. In addition, some content may be age restricted. Country and age
+related issues can in many ways be solved at the user interface level. For overtly ille-
+gal content, a separate, yet similar, veri�cation process to that described above will be
+required. The process can resolve this issue given su�cient optimisation and perhaps
+added functionality. However, there must be a centralised system to begin with, as
+there is with all other content platforms. The intention is not to arbitrarily censor any
+content, except in �agrant violations.
+
+10.6 Vulnerability to Sybil Attack
+In order for this system to be resistant to Sybil attack, then the reward for poor veri�ca-
+tions must be small whilst the penalty for lying is large. We must also lock the bene�ts
+up for su�cient time in order to make a Sybil attack extremely expensive to maintain.
+
+22
+
+
+
+As bad actors attack the system, the potential reward for truthful people grows rapidly.
+This e�ectively skews the payo� matrix in favour of ‘defecting’, i.e. creating an incen-
+tive for bad actors to ‘change sides’ in light of the much greater potential rewards. As
+such, the system contains a natural limit beyond which Sybil attacks become uneco-
+nomic.
+
+The system must be thoroughly tested and optimised, working under all market con-
+ditions and with su�cient speed (via o�-chain transactions). It must also work even
+if the content is of extremely high value. It is critical that we trial this system for
+some time before we consider deprecating our tokens. As such, this system will be an
+open-sourced but temporarily centralised solution.
+
+23
+
+
+
+11 Transparency
+With the intention of fostering trust and transparency, the dynamics and KPI’s af-
+fecting Hubii Network will be fully visible and accessible to anyone. This way users
+will have access to live statistics of the key parameters a�ecting the trading of Hubiits
+through our Transparency Dashboard.
+
+Thus, Gross Market Volume (GMV) describing the total Hubiits being transacted within
+Hubii Network, Net Promoter Score (NPS) covering the supply and demand with cre-
+ators, distributors and consumers, Ful�llment Rate (FR) describing the fraction of cus-
+tomer demand that is met through immediate stock availability and Consumer Growth
+Rate (CGR) will be available within the Transparency Dashboard.
+
+24
+
+
+
+12 Key Team Members
+• Jacobo Toll-Messia, CEO & Founder.
+
+• Jens Ivar Jørdre, PhD, CTO.
+
+• Mark Briscombe, MPhys, Special Adviser.
+
+• Øyvind Pedersen Jr, Special Adviser.
+
+• Barbara Hüppe, PhD, Communication Director.
+
+• David Schlesinger, Former Reuters global Editor-in-Chief, Key Adviser in Jour-
+nalism Content Creation.
+
+• John Paton, Founder and former CEO of Digital First Media, Director of The
+Guardian, El Pais and Prisa, Chairman and Managing Partner of IVA Ventures.
+
+• Ash Crick, i�ix Founding CTO, Global Head of Labs, Data Intelligence and Con-
+tent Technology at i�ix; Key Adviser in Video and Content Distribution Strate-
+gies.
+
+• Hans Hvide, PhD, Professor of Economics and Finance.
+
+• Arturo Duran, former Chief Innovation O�cer for Digital First Media, Managing
+Partner of IVA Ventures.
+
+• Pablo Yabo, CoinFabrik, Blockchain Adviser.
+
+• Geraldo Maroniene, Chief Revenue O�cer at Navegg; Key Adviser in Data Man-
+agement Platform Strategies.
+
+25
+
+
+
+13 Token Launch
+Hubii Network is specifying a maximum cap of $50m USD to be raised in the token sale.
+When we talk of a USD amount, this will in reality be a �xed amount of Ether (ETH),
+set according to the price of ETH before the sale contract is deployed to the Ethereum
+network. The maximum target would allow the Hubii Network to scale quickly and
+maximise our potential to build a signi�cant network e�ect before competition arose.
+
+We will be setting a minimum target of $5m. This minimum target would still allow
+the team to develop some minimum viable products, but it is likely that extra funding
+would be needed, by more conventional venture capital routes. There will not be an-
+other token sale for Hubiits and the Hubiits generated by the token sale will be all the
+Hubiits that ever exist.
+
+The sale will be open for 2 weeks from the opening block number, which will be an-
+nounced 48 hours before the sale begins.
+
+All transactions will be treated on a �rst-come-�rst-serve basis, but also according
+to the wills of the miners who include the transactions in their block.
+
+The fraction of total generated tokens that are for sale in this project is 70%.
+
+10% of the generated tokens will be reserved for key team members and advisors.
+
+5% of the tokens will be held as a liquidity pool for the platform.
+
+5% of the tokens will be used in the �rst year in building partnerships which will be
+critical for the success of the platform.
+
+The remaining 10% of tokens will have vesting periods attached to them and will be
+used as further platform funding as well as for building partnerships. 5% will be locked
+up for exactly one year from the date of the sale. 5% will be locked up for 2 years from
+the sale date.
+
+Below is a chart showing the token splits :
+
+26
+
+
+
+Figure 3: Token splits
+
+The following �gures are based on an ETH price as of 14th July - $200
+
+13.1 Minimum target
+Fixed ETH amount TBC
+
+13.2 ETH volatility
+As the price of ETH is extremely volatile currently, and we are setting a �xed goal in
+USD, we cannot guarantee the exact number of ETH that would equate to our targets.
+As is the standard approach, we will take the ETH USD price as close as possible to
+the token sale and lock in the number of ETH to be accepted at that point. This price
+lock-in will be made public before the sale begins.
+
+13.3 Exchange rate
+The exchange rate of Hubiits to ETH will be set at 1,000.
+
+13.4 Tokens generated
+We cannot guarantee the total number of tokens to be generated by the sale, as this
+will depend upon the prevailing price of ETH in USD. However assuming the above
+�gures then we would have a minimum of 35,714,286 HUB generated and 35,714,286
+HUB per extra phase (including the tokens not for public sale).
+
+27
+
+
+
+13.5 Launch date and time
+The token sale will go live at approximately 16:00 (CET) 24th August 2017. As the sale
+timing will be determined by a block number, we cannot exactly guarantee the time.
+The exact block number for the beginning of the sale will be visible when the
+contract is deployed to the network for public audit. We will also publish this
+on the website before the sale begins.
+
+13.6 Contract address
+In order to take part in the sale a purchaser must send ETH to an address which will
+be published for public audit.
+
+13.7 Gas Limit
+Along with the contract address, a recommended gas limit to be sent as part of the
+transaction will also be published. This will ensure that nobody misses out on the sale
+due to the gas requirements of the contract.
+
+13.8 Refunds
+Any ETH that is sent before the contract begins, or after the target has been reached,
+will be rejected. However, we cannot refund the transaction gas, as this will be con-
+sumed by the miners.
+
+13.9 Sale timing
+Due to the complex situation surrounding the Bitcoin ecosystem at this time and during
+the early part of August, there is a small chance we might be forced to postpone the
+sale. This will only happen in a worst case scenario where it is di�cult for people
+to move around their bitcoin on the lead up to the actual sale.
+
+28
+
+
+
+14 Hubiit FAQs
+
+14.1 What is a Hubiit?
+A Hubiit is an ERC20 token and will be the native currency of the Hubii Network. They
+will be sold to potential users of the Hubii Network to be utilised on the platform. The
+tokens will be non-refundable. They do not represent any equity in the company. They
+will be the only way to engage with various platform features. There is no guarantee
+that Hubiits will have any particular value in the future and should be purchased only
+for their utility and not as an investment.
+
+14.2 Will there be any future Hubiit token sales?
+No, this is a one time event. Once all Hubiits are issued then no more will be generated.
+These tokens will �nd their true market value and enable the trading of the best content
+in the world. As discussed previously the number of tokens produced will depend upon
+the value of ETH at the time of the sale, as we have a �xed target in USD.
+
+14.3 What currencies will be accepted to purchase Hubiits?
+You must purchase Hubiits using ETH, sent to the smart contract as described above.
+
+14.4 Why does the Hubii Network need a native token?
+Innovation in the ecosystem has so far been very heavily focused at the protocol level.
+However, in order to drive this ecosystem forward it is time to focus on practical and
+real world usage of those protocols that have been developed. Bitcoin was, and is, a
+leading example of how a cryptocurrency can exhibit all the characteristics that are
+needed for a currency. Ethereum is a platform upon which we can build a token. All
+the parts are now in place to disrupt entire industries. The token will have utility in
+the platform’s veri�cation system and also in mitigating exchange rate risk. One other
+powerful reason for a native cryptocurrency or token to be used on the Hubii Network
+is that we can provide real time information on the media trade volume that is passing
+through the system. Also key to our choice is an intention to later deprecate our ERC20
+token as we want to fully decentralise our more unique platform features.
+
+14.5 Why are we con�dent Hubii can change the industry?
+The content industry will never be ruled by a monopoly. Furthermore there are data
+points indicating that a content agnostic platform is what consumers prefer. Blockchain
+plays a key role in maximising the e�ciency of the marketplace in the future. The
+
+29
+
+
+
+system will develop a strong and necessary network e�ect and this is why Hubii has
+aggressive plans to roll out and scale.
+
+14.6 How will Hubii hold the funds collected?
+Hubii will hold the ETH raised according to best practices, so a hardware wallet and
+multisig addresses.
+
+14.7 What safeguards are in place to ensure the contract is cor-
+rect?
+
+Hubii are employing some of the best contract creators in the space. We are also ensur-
+ing that we undertake a full audit and testing of the contract. This is key to why Hubii
+is also choosing to follow the ERC20 token standards. Details of the smart contract
+audit report will be revealed before the sale.
+
+14.8 Will Hubiits be transferrable?
+In order for the currency to �nd its own value, it is critical that Hubiits are transferable
+without any restrictions.
+
+14.9 How ambitious are we?
+We are extremely ambitious and con�dent that we can succeed in our endeavours. As
+an example of our ambition, we have suggested that we can crowdfund movies, allow-
+ing revenues to be shared back to token holders. This is not a trustless solution; you
+are relying on the people who received funding to actually make the movie and then
+distribute pro�ts back to the investors.
+
+We suggest that eventually the Hubii Network will allow funding to be released to the
+movie-makers in various stages, perhaps with investors voting to disseminate funds.
+This can help limit the risk of the movie-makers failing to deliver on their promises.
+
+However, how do we ensure that we give revenue back to the token holders? We
+enforce this by taking this revenue at source. The point-of-sale terminal at the cinema
+will automatically cash into the Hubii Network and distribute revenue live to the in-
+vestors. This would be a classic use case for payment channels. The POS20 device would
+open up a payment channel for the maximum revenue share from a single screening
+of the movie. As tickets were purchased, a small fraction of the revenue can be sent
+
+20Point of sale
+
+30
+
+
+
+directly to the investor’s fund. Once the movie is fully booked, or is closed to further
+sales, the payment channel can be closed. This means that potentially hundreds of
+microtransactions can take place for minimal cost and can be done with just two on
+chain transactions.
+
+We feel con�dent in our approach and philosophy therefore, should we raise a mini-
+mum of $15M through our token sale, we shall create a smart contract within Hubii
+Network whereby if an article published within the platform ought to win the Pulitzer
+prize, the author will be rewarded with $100,000. We expect this would add much more
+than $100,000 of value to the platform, purely in terms of publicity.
+
+14.10 Philosophy
+We believe in open source and fully decentralised solutions. This will not be immedi-
+ately possible, but we will eventually make the entire product this way. We trust that
+our network e�ect, industry support and experience will make us the default option
+amongst our competitors and clones.
+
+We will need to use the best available solutions for all aspects of the platform. There is
+no point reinventing the wheel and so we will use third parties to assist where possible.
+This could be a fully decentralised and open source storage solution, but it could also
+be an integrated digital wallet and decentralised exchange built on the best available
+service. This would give many potential bene�ts such as increased liquidity, greater
+functionality and interoperability.
+
+We want to make this platform incredibly intuitive and easy to use. We intend that
+the platform is easy for any users to interact with. Smart contracts will be simple pro-
+cesses where the user selects a template and a few simple options. Purchasing content
+or entering into a contract will be clear, easy and quick.
+
+31
+
+
+
+15 Budget Allocation
+We foresee the following allocation of funds for the development of Hubii Network.
+
+• Development Team; consisting of 14 engineers working in the development of
+Hubii Network.
+
+• Business Development Team; consisting of 6 Senior BD people establishing dis-
+tribution partnerships and focusing on content acquisition and monetisation.
+
+• Administration; Accounting and other administration costs.
+
+• Contingency; Unforeseen costs.
+
+• Community; If we raise over 50% of our target we will set up a content creation
+foundation of 0.7% of our �nances. The foundation will be a community based
+initiative.
+
+Figure 4: Funding allocation
+
+32
+
+
+
+16 Afterword
+
+“ In 2017 it is too easy to come up with examples of why online mediaand publishing is broken. It is not only ‘fake news’ and diminishing trust,nor is it only failing newspapers or creators not being compensated well.
+The fundamental model of a ‘distributor and content creator’ as a cred-
+ible source, the concept of an ‘curator’ who decides what gets published,
+creators contracted to produce a certain amount of content before a dead-
+line, the business and revenue models designed for the o�ine world. It is
+all disappearing.
+
+Instead there is Hubii Network, promising a level playing �eld for creators,
+distributors and consumers, where the crowd is incentivised to validate all
+content, where credibility of a source is earned – not purchased, and where
+the vast majority of value created goes to the active participants. We like to
+think of Hubii Network as the ‘democratisation’ of the online content mar-
+ketplace, a democracy ensured by transparency and sound marketplace
+mechanisms, by IP rights and authenticity where the ‘attention economy’
+works to the bene�t of all participants. ”
+
+33
+
+
+
+17 Appendix
+
+17.1 Volatility of Hubiits
+A deep dive into the dynamics of virtual currencies was recently carried out by economists
+Bolt and van Oordt.21 In particular the exchange rates of virtual currencies relative to
+�at currencies was found to depend on the following three components:
+
+• The use of the currency as a medium of exchange, i.e., to make payments
+
+• Investors’ buying the currency for speculative reasons, and thus e�ectively reg-
+ulating the amount of currency used to settle payments
+
+• Elements that drive future consumer adoption and merchant acceptance of the
+currency
+
+Their analysis was discussed recently in the context of the Basic Attention Token
+(BAT)22, and the conclusions equally well apply for Hubiits.
+
+A key �nding of Bolt and van Oordt’s study is that virtual currencies exchange rates
+to �at currencies increase proportionally to the volume of payments carried out with
+the virtual currency and inversely proportional to the fraction of the total amount of
+currency in circulation. In other words, the currency not held in speculative positions
+by investors. Thus with increased number of transactions the exchange rates are dom-
+inated by transactions rather than by speculative positions, a pattern that has been
+observed in seasoned virtual currencies. The analysis argues for long term price sta-
+bility in token mediated economies such as the one of Hubii Network, which aims to
+primarily be a platform for exchange of content.
+
+Core metrics describing the usage and long term trends of Hubiits will be displayed
+in a transparency dashboard implementation for the bene�t of users, merchants and
+speculators alike. The beauty of using a native token on the Hubii Network is that we
+can demonstrate the extent to which Hubiits is used to mediate trade volume on our
+network. All token holders can use the Equation of Exchange along with this infor-
+mation to estimate a fair price level for the token. It is natural that a virtual currency
+can exhibit a speculative value, as �at currencies also can, but market participants will
+be able to estimate the price level for below which there might be upwards market
+pressure.
+
+21Bolt, Wilko and van Oordt, Maarten R.C.: On the Value of Virtual Currencies (September 23, 2016).
+De Nederlandsche Bank Working Paper No. 521.
+
+22Brave Software: Basic Attention Token (BAT), Blockchain Based Digital Advertising (May 29, 2017)
+
+34
+
+http://dx.doi.org/10.2139/ssrn.2842557
+http://dx.doi.org/10.2139/ssrn.2842557
+https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
+
+
+We expect that until the market grows su�ciently for Hubiits to be primarily a medium
+of exchange (and not a speculative asset), we will have to explore ways of showing
+prices in a user’s familiar currency of choice. As described above in ’Removing ex-
+change rate risk’, we will o�er the facility for stakeholders to ’lock’ their network
+activity to some �at currencies. As we see, Bitcoin is still very volatile after 8 years
+(which is great for speculators). As such, we do not expect Hubiits volatility to be only
+short term.
+
+35
+
+
+	Preface
+	Introduction
+	Current Status of the Industry
+	Players and Their Pain Points
+	Content Creators
+	Emerging Content Distributors
+	Content Consumers
+
+	New Trends
+
+	Hubii Network
+	Two Sided Marketplace Dynamics
+	Business Model Guiding Principles
+	Digital Rights Management
+
+	Use Cases
+	Content Production
+	Amplifying Content Reach
+	Fake News Detection
+	Tipping
+	Smart Crowdfunding
+
+	Road Map
+	Feedback from Within the Industry
+	Storage
+	Removing Exchange Rate Risk
+	Verification of Content Rights in Hubii Smart Contracts
+	Protecting Intellectual Property
+	Rapid Consensus
+	De-verifying Content
+	'Fake News'
+	Illegal Content
+	Vulnerability to Sybil Attack
+
+	Transparency
+	Key Team Members
+	Token Launch
+	Minimum target
+	ETH volatility
+	Exchange rate
+	Tokens generated
+	Launch date and time
+	Contract address
+	Gas Limit
+	Refunds
+	Sale timing
+
+	Hubiit FAQs
+	What is a Hubiit?
+	Will there be any future Hubiit token sales?
+	What currencies will be accepted to purchase Hubiits?
+	Why does the Hubii Network need a native token?
+	Why are we confident Hubii can change the industry?
+	How will Hubii hold the funds collected?
+	What safeguards are in place to ensure the contract is correct?
+	Will Hubiits be transferrable?
+	How ambitious are we?
+	Philosophy
+
+	Budget Allocation
+	Afterword
+	Appendix
+	Volatility of Hubiits
+
+

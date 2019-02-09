@@ -1,0 +1,4239 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This White Paper states the current views of MVL Foundation Pte. Ltd. on the MVL Platform and related issues. MVL 
+
+Foundation Pte. Ltd. will revise this paper, if necessary, without notice. The information here is indicative only and not 
+
+legally binding on MVL Foundation Pte. Ltd. or any other parties. This paper aims to provide information. It does not 
+
+constitute, or is not intended to offer sale, solicit an offer or  recommend to purchase MVL Coins or Token, invest in 
+
+the MVL Platform or any project, property, shares or other securities of MVL Foundation Pte. Ltd. or any affiliated or 
+
+associated company in any jurisdiction. See the legal disclaimers at the end of this paper.
+
+VERSION 1.1 APRIL 2018 MVL TEAM mvlchain.io
+
+MVL
+WHITEPAPER
+
+Mass Vehicle Ledger
+
+
+
+TABLE OF CONTENTS
+
+0.  Abstract
+
+1. Introduction
+
+2. MVL Ecosystem
+
+ : Integrated Blockchain-based Mobility Ecosystem
+
+2.1. What’s the MVL Ecosystem?
+
+2.2. MVL Ecosystem’s Scope
+
+2.3. MVL Incentive System
+
+   2.3.1. New Car Phase- Beginning of Blocks (Open Trust)
+
+   2.3.2. Driving Phase - Continuous Recording on Blocks 
+
+(Revolutionary Change)
+
+   2.3.3. Non-driving Phase - Discrete Recording on Blocks 
+
+(Basis of Trust)
+
+   2.3.4. Trade Phase - Change of Ownership (New Contribu-
+
+tors)
+
+   2.3.5. Scrapped Phase - End of Blocks (Infinite Incentive)
+
+3. MVL Coin (MVL) Technology Part
+
+3.1. Structure of the MVL Platform
+
+   3.1.1. Core Layer (Blockchain Layer)
+
+   3.1.2. Service & Component Layer
+
+   3.1.3. Application Layer
+
+3.2. Basic Blockchain and Data Storage
+
+3.3. Data type in MVL Ecosystem
+
+   3.3.1. Data Managed on the Blockchain
+
+   3.3.2. External Distributed Storage
+
+3.4. MVL Data Ownership
+
+   3.4.1. Ownership of the Data on the Blockchain
+
+   3.4.2. Ownership of Data on the External Distributed Stor-
+
+age 
+
+3.5. Data Collecting
+
+   3.5.1. Registering Data of Existing Vehicle
+
+   3.5.2. Data Collecting in the Driving and Non-Driving Phase 
+
+   3.5.3. Ways to Prevent Abuse 
+
+3.6. MVL Ecosystem’s Core Components
+
+   3.6.1. MVL Account and Authority
+
+   3.6.2. Request System for Authority and Data
+
+   3.6.3. Ecosystem Data Index Server
+
+4. Economic Model of MVL Ecosystem
+
+4.1. MVL Coin (MVL) and MVL Point (MVP)
+
+4.2. MVL Pool : Reward System for MVL Ecosystem Partici-
+
+pants
+
+4.3. MVP Exchange
+
+4.4. Sales of MVP Points
+
+4.5. Issues to Consider for the Ecosystem Economic Model
+
+5. MVL Ecosystem Application Case Studies
+
+5.1. MVL Integrated Wallet Solution
+
+5.2. Rental Car Service Platform
+
+5.3. On-demand Rides, Cab, Chauffeured Rides and Chauffeur 
+
+Hiring Service
+
+5.4. Car Sharing Platform
+
+5.5. Used Car Trade Service Platform
+
+5.6. Car Repair Platform
+
+5.7. Dynamic Insurance Service
+
+5.8. Big Data Service
+
+6. Growth Plan
+
+6.1. MVL Ecosystem Growth Plan
+
+6.2. Mainnet
+
+6.3. Makers of the Ecosystem
+
+6.4. Timeline
+
+7. Conclusion
+
+8. Token Issue Event
+
+9. Team Profile
+
+10. Legal Issues
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+3
+
+0. Abstract
+
+ Over the past century, the vehicle industry has grown substantially. It has created many jobs in various fields such as the 
+
+logistics, distribution, car repair and used-car trade scene. With the rise of technology, the vehicle industry is expected to 
+
+continue its expansion. For example, we have in recent years seen the introduction of self-driving vehicles and eco-friendly 
+
+electric vehicles. But the mix of the traditional and IT-savvy vehicle market only focuses on a portion of the vehicle industry. 
+
+It fails to connect different sectors of this industry together.
+
+ 
+
+Despite the growth and developments of the vehicle industry, old problems still remain. For example, cab drivers with 
+
+discourteous service[1], unreliable mechanic shops[2], a lack of consistency and transparency on used-cars by dealers[3], 
+
+and accidents caused by reckless driving[4]. Unfortunately, new technology still struggles to address these problems 
+
+effectively. What’s worse is that it brings nuisance to the market, like the increase in customer price due to commissions 
+
+collected by transport-related online platforms.
+
+ 
+
+In the past five years, we have been in the global IT-based mobility market partnering with car rental companies and the 
+
+transportation business as a transportation booking system. We are familiar with problems that plague the vehicle indus-
+
+try and we came to understand that the struggles in the vehicle industry can be solved by connecting all the services in a 
+
+single ecosystem. To do this, we will converge vehicle-related industries and the blockchain technology.
+
+ 
+
+Mass Vehicle Ledger Ecosystem (MVL Ecosystem, pronounced as “em-buh l” Ecosystem) is a new blockchain-based eco-
+
+system created for use in the vehicle industry. Participants of the ecosystem are expected to be individuals familiar with 
+
+the vehicle industry – for example, car owners, motor vehicle manufacturers/retailers, motor vehicle repair and/or modifi-
+
+cation service providers, motor vehicle insurance companies - and their participation in the ecosystem will allow them to 
+
+upload core data relating to a specific car, including information regarding traffic accidents or repairs, into the blockchain.
+
+ 
+
+Participants who provide data related to a car will receive MVL Points (MVP), which are an element of a reward system used 
+
+to encourage contribution to the ecosystem. Participants of different roles can participate by providing accurate and trans-
+
+parent data related to vehicle management, driving, repair, transportation  service and so on. Therefore, blockchain data 
+
+will be used by used-car dealers, self-driving car makers, insurance companies and more. MVP can be used for marketing 
+
+purposes, as points will show how well businesses are doing; or can be exchanged to MVL Coin (MVL).
+
+ 
+
+MVL Coins can be traded for MVL Points (and vice versa) or used to trade with other participants in the ecosystem. This 
+
+also means that contributors will earn MVL Coins if their data is sold by providing data to others.
+
+ 
+
+Finally, MVP and MVL will be used for the blockchain’s agreement protocol (mining). We have improved the existing agree-
+
+ment process that mainly credits those with expensive mining tools (proof of work) and large capital (proof of stake)[5]. 
+
+We are practising a distributed economy, or deconomy[6], where safe drivers, friendly chauffeurs, honest mechanics and 
+
+other diligent data providers are fairly rewarded.
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+4
+
+1. Introduction
+
+ In 2015, around 1.2 billion cars are driven worldwide a day [7], a 2015-data by statista shows. Cars have become essential 
+
+in our modern day life. An estimated hundred million new cars[8] are purchased each year, which triggers boost in related 
+
+markets, such as the car parts and used-car markets. The vehicle market is also growing with technology which explains 
+
+the many ride-sharing, cab-hailing and delivery apps. The car industry will continue to create more jobs and come up with 
+
+more innovative ideas like self-driving and eco-friendly vehicles.
+
+What problems do we face in the wake of the rapid growth of the vehicle industry?
+
+ We have all encountered unpleasant cab experiences. Many of us were surprised by the expensive quotation provided 
+
+by car mechanic shops. It’s worse because we have no way of knowing how well they did their job. We also know how you 
+
+feel when you want to sell your car that you took such good care of, only to find the price is lower than what you think you 
+
+deserve. We’ve all been there. We know your pain. Technology has flooded our lives, but it’s not quite there yet, is it? Below 
+
+we will discuss the problems we want to address. 
+
+ 
+
+Building trust in the traditional used-car trade industry has always been difficult. A car owner has no way of proving that his 
+
+or her car has been highly maintained and get a good price. On the other hand, the potential buyer has no way of checking 
+
+if the repair history is accurate. This is where the dealers come in to minimize risk that comes from the lack of transpar-
+
+ency, but they are not a foolproof solution and risks still exist as dealers may not always provide transparent data of a car.
+
+ 
+
+These problems are equally applicable to businesses. For instance, when car rental companies want to sell their fleet of 
+
+vehicles, they are not able to prove that their cars have been maintained in good condition. As a result, a car’s value is de-
+
+termined by its usage and mileage, and well-used rental cars may fetch a lower price even if it has been well maintained. 
+
+They also have to compensate for the flaws inflicted by the previous owners because they can’t prove otherwise.
+
+ 
+
+Chauffeured ride providers and taxi companies face problems concerned with service quality and customer satisfaction. 
+
+Due to various economic issues, drivers have to operate for a long period of time with low pay and they will try to get as 
+
+many customers as they can which leads to careless driving and poor quality service. The return of each order is low, lead-
+
+ing to a lack of motivation to provide safe and good service. Of course, customers will not want to tip them. This vicious 
+
+cycle goes on and on.
+
+ 
+
+Many problems still exist on the individual level. No matter how small your fault is in an accident, you’ll be charged high 
+
+insurance and even if you drive safely, the insurance fee stays high. Also, the government has been executing campaigns 
+
+to reduce traffic death rate for decades, but still it is on the top of their agenda, indicating that this is an ongoing problem.
+
+ 
+
+There are many IT services related to repair, insurance, carpool and cabs that help address these issues[9]. These tools 
+
+have connected suppliers and customers, but commissions occur to prompt higher customer price. Also, users have too 
+
+many different apps to go about their business. What’s worse is that these centralized services that store data in their own 
+
+servers do not bring balance to the market. This is because when an app garners high daily users, it is only the makers who 
+
+gain high return. These platforms do not radically lift the living standards of its participants. Also, these ride services are 
+
+triggering dispute with the traditional cab services. It can do better to bring social change.
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+5
+
+By analyzing each service, we can figure out fundamental problems.
+
+Vehicle-related services are tangled up in the vehicle market because problems such as inefficient data management were 
+
+not properly addressed. How can we figure this out?
+
+ 
+
+Most existing services only connect two participants in their own centralized platform, like driver and customer, mechanic 
+
+and customer and so on. Each platform solves their own problems and there is no overall system that connects different 
+
+platforms to solve bigger problems. But the vehicle-related markets in reality are connected because they all commonly 
+
+need vehicles to operate. These markets can create an ecosystem. If we find the common enemy of these existing ser-
+
+vices, we can trace a solution. Let’s look at a big picture to find the fundamental problems.
+
+ First of all, the vehicle scene is regulation based, not incentive based. For instance, while safe driving benefits the society, 
+
+those who practice safe driving are not acknowledged. Only penalties exist for drunk driving and speeding. There is no ac-
+
+Motivate quality and safety
+
+Validate mutual trust
+
+Leverage blockchain
+
+Legacy
+
+Continuous data
+management
+
+Unlimited incentive 
+for participants
+
+Trusted interaction
+backed by data
+
+Heavy regulation Centralized services Discrete services
+
+MVL Ideology
+
+MVL Eco
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+6
+
+tual motivation for people to drive properly because all you need to do is not get caught. Government penalty brings order 
+
+to individuals on the road, but too much cost is poured into punishing those who do not heed the laws in place. Campaigns 
+
+aren’t effective. We need to bring a different program that will encourage a change. So since the MVL system collects 
+
+transparent data, it is a natural way of encouraging safe driving.
+
+ 
+
+Secondly, each service is centralized. For example, in the context of IT-based ride hailing mobile applications, although it 
+
+is the drivers and users who fuel the services’ growth, those who receive the benefits and returns of such growth are the 
+
+investors, shareholders and founders. The dedication of the drivers and customers are not properly rewarded. This does 
+
+not meet the full meaning of shared economy. The more this takes place, the less motivated the participants will be to 
+
+participate.
+
+ 
+
+Next, the separate service models are disconnected. Let’s take a look at different ride sharing app all over the world – Chi-
+
+na’s Didi, United States’ Uber, Lyft and South Korea’s Kakao T provide the same service, but operate on separate platforms. 
+
+An Uber user from the States needs to download the Kakao T application in order to book a ride in Korea. This is the case 
+
+for other vehicle-related services, like repair and car wash. Due to this disconnection, data is stored separately and points 
+
+or coupons are not usually usable across the various platforms.
+
+We want to find solutions by connecting various car-related services.
+
+ So what do we have to do to solve these problems? During the past five years, we have been in the global mobility market, 
+
+providing rides across the border between Hong Kong and Shenzhen as a transportation booking service. We also pro-
+
+vided rides for the 2018 Olympics Winter Games at Pyeongchang and more. We know the pain that exists in the vehicle 
+
+industry and as such, we hope to solve the unsolvable by connecting all vehicle related companies into a single ecosystem.
+
+ 
+
+To connect companies, individuals and drivers in vehicle market, we need to store the entire history of a vehicle. All vehicle 
+
+services, like repair and chauffeured rides, can interact with each other and provide data that keeps track of a vehicle’s 
+
+changing status. For this to happen effectively, we need to converge the vehicle ecosystem with the blockchain technology.
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+7
+
+2. MVL Ecosystem : Integrated Blockchain-based Mobility Ecosystem
+
+2.1. What’s the MVL Ecosystem?
+
+ Gathering the data of a vehicle’s lifetime is a great motive that brings separate car services into a single incentive-based 
+
+ecosystem. Separate centralized services have their own server where data is managed independently and their focus 
+
+were not to collect a vehicle’s lifetime data effectively[11]. To elaborate, repair services only collect data relating to repairs, 
+
+and GPS services only gather driving and navigational data. Also, not all the data could be proven to be accurate, unable to 
+
+gain trust from the market. Data gathered by mobile applications falls into the ownership of the makers and the contributor 
+
+were not given access to it.
+
+ MVL Ecosystem will tackle these problems by gathering all data in one centralized database and utilising blockchain 
+
+technology. With the MVL Ecosystem, we can maintain records of all activities relating to a particular vehicle for the entire 
+
+duration of its “lifetime” and ensure that such records are kept free from corruption. Only the owner will have the authority 
+
+over his or her data stored on the decentralized blockchain. In the past, a limited number of centralized services monopo-
+
+lized data, but now the power of who owns the information is distributed evenly to the people. Various participants in the 
+
+vehicle market can continue to add trustworthy data and be connected in one ecosystem.
+
+ Through the reward system, participants will receive MVL Points (MVP) in exchange for accurate and active data collecting. 
+
+Those who play their role and put in different types of data to earn MVP, which they can use to promote how well their 
+
+business is doing or exchange it to MVL Coin (MVL).  MVL can be traded with other participants in exchange for goods and 
+
+services such as gas, repairs, or car rental. All sellers of car-related goods and services will be appropriately licensed/ap-
+
+proved to sell such products and any such sale will occur within national boundaries. Now people no longer have to rely on 
+
+used-car dealers to get a good price. They have accurate data in their hands to prove a used car’s value. Now, people can 
+
+earn MVP if self-driving car makers or insurance companies purchase their vehicle data through MVL Ecosystem.
+
+ 
+
+COMPANY$
+
+$
+
+$
+
+$
+
+$
+
+Stock Owners
+
+MVL Driver
+
+MVL User
+
+Legacy
+
+MVL Ecosystem
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+8
+
+Lastly, the ecosystem uses MVL Points (MVP), which can be mainly earned by active participation, and MVL Coin (MVL), 
+
+which can be earned through the provision of goods and services within the MVL Ecosystem, to prove validity of the data 
+
+on the blockchain (agreement protocol). This solves the existing problems caused by existing agreement protocol of POW 
+
+and POS method, as this means that those who work hard will be fairly rewarded and trusted. Participants will be motivated 
+
+to fuel the growth of this MVL Ecosystem and receive rewards doing so. MVL changes the old ways where only the inves-
+
+tors and makers see the highest returns. We want to create a world where participants who persevere can share wealth 
+
+and see the distributed economy system.
+
+ 
+
+MVL Ecosystem will motivate its participants with an effective reward system of MVL Points. The MVL Ecosystem will have 
+
+a system that allows participants to evaluate each other to promote reliable data collecting.
+
+2.2. MVL Ecosystem’s Scope
+
+ The MVL Ecosystem can be used by car makers, transportation operators, used-car dealers, rental car companies, insur-
+
+ance firms, car owners, car providers, passengers and other related parties, and different rules apply to different partici-
+
+pants.
+
+ First, in the new car phase, a newly manufactured vehicle is handed over to an individual or a business owner. When data 
+
+on the new vehicle is entered into the MVL Ecosystem, it will be the first time the car will interact with other participants 
+
+in the MVL Ecosystem.
+
+ 
+
+ In the driving phase, participants drive their cars for personal use or business (e.g. driving a cab). The car owner and driver 
+
+(whether they are individuals or companies) and the passenger will be the participants in this phase.
+
+ 
+
+ In the non-driving phase, a vehicle is evaluated, fixed and maintained. Here, other participants like the insurance company 
+
+and mechanic shop who are neither the owners nor driver of the vehicle become involved. These participants upload data 
+
+to the MVL Ecosystem that is important in assessing the value of a vehicle. Gas stations or car washers can also contribute 
+
+NEW Non-driving
+
+Scrapped Used-car
+
+First Registration 
+
+Start of Data Recording
+
+Deregistration 
+
+End of Data Recording
+
+Deregistration 
+
+Registration by New Owner
+
+Customer Review
+
+Driving Data Recording
+
+Customer Reviews
+
+Repair History Data Recording 
+
+Customer Reviews
+
+Driving
+
+P P
+
+P P
+
+P
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+9
+
+data to the MVL Ecosystem in this phase.
+
+ 
+
+ The fourth phase is the used-car trade phase, where the owner of a car changes as a car is bought and sold. The own-
+
+ership of a vehicle can switch from a company, such as a car rental company, to a private individual. The MVL Ecosystem 
+
+seeks to ensure the car is accurately priced based on the data uploaded to the MVL Ecosystem in the new car, driving and 
+
+non-driving phases.
+
+ 
+
+ The final phase contemplates many transactions occurring among individuals and businesses alike. After a vehicle finds 
+
+new owners, the vehicle goes through the driving, non-driving and used-car trade phases again until it is eventually 
+
+scrapped.
+
+2.3. MVL Incentive System
+
+Mechanic Shop
+
+Private Driver
+
+Transportation
+Driver / Passenger
+
+New
+CarScrapped
+
+Non
+Driving
+
+Driving
+Used
+Car
+
+Private / Corporate
+Owner
+
+Create New Account
+& Get Points
+
+Access Customer’s
+Past Driving Data
+
+Set reasonable
+price based on
+
+driver’s data
+
+Utilize Data for
+Various Purposes
+
+& Get Points
+
+Request
+Car History Data
+
+Acquire MVL
+Certified Cars
+
+Record Driving Data
+& Get Points
+
+Car Wash, Gas Station
+& Others
+
+Give Reviews
+& Get Points
+
+Rent-a-car
+Company
+
+Give Reviews
+& Get Points
+
+Insurance
+Company
+
+Insurance
+Company
+
+Get Reviews
+& Publish Ads
+
+Private / Corporate
+Owner
+
+Private / Corporate
+Owner
+
+Used Car Dealer
+
+Life Cycle
+
+Participants
+
+Action & Incentives
+
+Record Repair Data
+& Get Points
+
+Invite Car Owners to be
+MVL Certified & Get Points
+
+Access Repair
+& Driving Data
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+10
+
+MVL Ecosystem provides customized incentive programs for different participants that contribute data to the MVL Eco-
+
+system. With this incentive program, MVL seeks to solve various problems faced by sharing the transparent data collected.
+
+2.3.1. New Car Phase- Beginning of Blocks (Open Trust)
+
+This is where the ownership of a vehicle is finalized for the first time through car and insurance registration. In the MVL 
+
+Ecosystem, participants that add a car’s serial number and owner’s account information on the blockchain will receive 
+
+MVL Points (MVP). Car sellers or dealers who encourage these acts will also be rewarded by referral codes where the new 
+
+participant inserts the code of the person that encouraged them to join.
+
+2.3.2. Driving Phase - Continuous Recording on Blocks (Revolutionary Change)
+
+The driving phase is the most essential part of the MVL Ecosystem. The vehicle’s data will be properly managed as accu-
+
+rate and consistent data regarding incidents such as an accident will be recorded. The ecosystem will reward those who 
+
+drive safely. To get their rewards, participants have to add data while using the MVL wallet application connected to the car. 
+
+This will encourage safe driving because the app will continuously track the movements of the car.
+
+ 
+
+This incentive system will be available for taxi, carpool or car-sharing vehicles, and drivers will receive rewards for safe 
+
+driving and good service. If reviews are given by customers, who will be rewarded for doing so, drivers will get an incentive 
+
+which will boost the service quality.
+
+ 
+
+If a driver borrows a car from car rental companies and adds data related to the movements of that car, he or she will re-
+
+ceive rewards too. If the car quality is well maintained, the company will also get rewards.
+
+ 
+
+Also, through data collected on the MVL wallet app, participants will know their driving behavior so the right insurance rate 
+
+will be applied to them. In other words, all participants related to a driving vehicle will be rewarded, while the government 
+
+effort to promote safe driving is accomplished.
+
+2.3.3. Non-driving Phase - Discrete Recording on Blocks (Basis of Trust)
+
+The non-driving phase is where many different participants are expected to input and upload data to the MCL Ecosystem. 
+
+From a simple vehicle evaluation to vehicle accident repair, this phase involves many activities. Data collected in this phrase 
+
+is crucial to assessing the value of a vehicle.
+
+ 
+
+For example, mechanic shops may ask for an unfair price or put records that are inaccurate. To prevent this, MVL Ecosys-
+
+tem seeks to rewards those who input concrete data and provide good service. When the customer takes his or her first 
+
+mechanic shop’s data to the second mechanic shop to get it evaluated, the first shop will be rewarded for inserting good 
+
+data, but penalized if the data is not exact. This thorough evaluation system will take place because the MVL Ecosystem 
+
+wants to be sure. If the damage scope of an accident quoted by a mechanic shop is way bigger than what the big data 
+
+analysis projects, participants and the MVL Ecosystem will be alerted.
+
+ 
+
+Participants will be able to use MVL Coin (MVL) to get fuel, car wash, vehicle parts and more. 
+
+2.3.4. Trade Phase - Change of Ownership (New Contributors)
+
+During this phase, the ownership of a vehicle changes. The used car trade market is as big as the first-hand car sales 
+
+market. But a downside of the used car trade market is that the seller is unable to prove that his or her car has been well 
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+11
+
+maintained and the buyer may have a hard time trusting the previously recorded data. Used-car dealers have stepped in 
+
+to fill the gap created by the lack of information and credibility, but this is not an ideal solution for the problem because we 
+
+still do not know if the information is accurate. In the MVL Ecosystem, trustworthy, accurate and reliable data previously 
+
+uploaded can be shared between sellers and buyers to allow them to agree upon a fair price. This does not mean used-car 
+
+dealers will lose their jobs, as they will receive rewards by encouraging new participants to join the MVL Ecosystem, recom-
+
+mending well-maintained MVL certified rides to buyers and help register vehicles for data gathering. Those who encourage 
+
+others will be acknowledged by referral codes.
+
+2.3.5. Scrapped Phase - End of Blocks (Infinite Incentive)
+
+A vehicle will repeat going through the driving, non-driving and trade phases until the vehicle is unable to operate any lon-
+
+ger and must then be scrapped. In this scrapping phase, the government, car owner and vehicle-scrapping company will be 
+
+involved and the final data for that particular vehicle being scrapped will be recorded. The vehicle will lose all of its vitality 
+
+and no more data will be inserted into a block. Existing data will then be used for research and analysis in the self-driving 
+
+industry and more. The profit earned by selling the data will be returned to the related participants.
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+12
+
+3. MVL Coin (MVL) Technology Part
+
+3.1. Structure of the MVL Ecosystem
+
+The MVL Ecosystem consists of three layers: Core, Service & Component and Application.
+
+3.1.1. Core Layer (Blockchain Layer)
+
+In the core layer, all data collected during a vehicle’s lifetime will be uploaded and stored in an external distributed stor-
+
+age. This external distributed storage is a required for more storage space. Driving, accident and repair data are import-
+
+ant data which can be used when purchasing used-cars or handling car insurance. These types of data will be stored in 
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+13
+
+the blockchain so it will be free from distortion and/or damage caused by server error. Basic data of MVL’s blockchain will 
+
+be operated based on Ethereum in the beginning but we will transfer the data to our independent blockchain for storage 
+
+once we have created our mainnet.
+
+ 
+
+Also, data that takes up lots of space and are not as frequently used will also be stored in the external distributed stor-
+
+age to boost efficiency of the blockchain network. Examples of such data include photos uploaded by the mechanic, data 
+
+relating to steering or the increase in speed rate during driving will be stored in the external distributed storage, not the 
+
+blockchain network.
+
+ 
+
+In this core layer, the data will be encrypted and will be accessible only if the person who contributed that piece of data 
+
+gives permission to do so.
+
+3.1.2. Service & Component Layer     
+
+The Service & Component Layer acts as a window that allows MVL developers and third parties to access to the data in 
+
+the Core Layer so they can create decentralized application programs, or “DApps”. Services in the MVL Ecosystem will 
+
+be able to connect to the MVL blockchain only through this Service & Component Layer. When the MVL’s blockchain 
+
+network is ready after the release of the ecosystem, the heavy weight on the blockchain, such as fast transaction and 
+
+categorizing core data, will be soothed. Moreover, in this layer, API[12] will be provided in the form of SDK[13] so many 
+
+services, or DApps, can be developed on top of the MVL Ecosystem.
+
+      
+
+3.1.3. Application Layer
+
+This is where MVL data is used to create various services. All sorts of DApps will be operated here using the SDKs pro-
+
+vided in the Service & Component Layer. Therefore, the data collected by these DApps will pass through the Service & 
+
+Component Layer. The MVL team will make various services and help other developers or services by providing SDK for 
+
+major languages. This SDK will be used by third party developers to access vehicle data and use it to spur the growth of 
+
+the MVL Ecosystem.
+
+3.2. Basic Blockchain and Data Storage
+
+MVL will take two steps to create the blockchain network for data storage. In the first step, we will use the Ethereum[14] 
+
+network to store MVL data on the blockchain. But as the MVL Ecosystem is too large for the Ethereum network to fully 
+
+manage and so, we will work towards developing our independent blockchain network.
+
+ 
+
+The second is the mainnet step where miners get rewarded and get commission for agreeing and verifying data on the 
+
+blockchain. Here, participants get profit. We will create a mobility ecosystem where large volume and interaction can be 
+
+handled quickly by improving transaction speed and block production cycle.
+
+ 
+
+We will also operate an external data storage for those that get in the way of the blockchain efficiency. We will use dis-
+
+tributed storage that is free of damage due to central server error. We will use external distributed storage solution like 
+
+the InterPlanetary File System (IPFS), after improving its protocol and features. 
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+14
+
+3.3. Data Type in MVL Ecosystem
+
+The MVL Ecosystem keeps track of all vehicle data. We will distinguish between core data types that are crucial to vehicle 
+
+management, and data that is relatively less essential – this will allow us to increase the blockchain’s efficiency. Core data 
+
+will be added in the blockchain, while the supplementary data will be stored in the external distributed data storage.
+
+3.3.1. Data Managed on the Blockchain
+
+A vehicle’s major lifetime data, trade information in the ecosystem and wallet data are all stored on the main blockchain 
+
+network.
+
+3.3.1.1. Major Data of a Vehicle
+
+Major vehicle data will be stored on the blockchain. Such data includes Vehicle Identification Number (VIN)[15], owner 
+
+account information, summary data of driving, and accident and repair history.
+
+ 
+
+In the MVL Ecosystem, a vehicle is distinguished by VIN, a distinctive number given to each vehicle by the car manufac-
+
+turer which is akin to an individual’s passport number. All lifetime data and owner account information of a particular 
+
+vehicle will be linked to the VIN of that vehicle and recorded on the blockchain. Personal data will be stored separately. If 
+
+the vehicle is sold, the linked owner account will be switched to the new owner’s account.
+
+ 
+
+After the new owner is registered onto the MVL Ecosystem, all the core data collected while driving will be added to the 
+
+blockchain. This data includes driver info, driving data collected by OBD(On-board Diagnostics)[16], accident data and 
+
+repair history data.
+
+ 
+
+Repair or accident data will be uploaded by participants other than the vehicle owner to ensure transparency and reliabil-
+
+ity of data. To accomplish reliable data gathering, MVL Ecosystem will use AI-based repair evaluation and mutual verifica-
+
+tion system.
+
+ 
+
+Also, repair history data typically includes many supporting documents, videos and photos which take up too much space 
+
+on the blockchain. To maximize efficiency of the blockchain, only the summary of the data will be inserted here, while 
+
+detailed data, including the supporting documents, videos and photos, will be stored in the external distributed storage. 
+
+Summarized data will exclude sensitive information like the driver or owner’s personal information. Encrypted hash refer-
+
+Coin
+
+A wallet VIN
+
+Drive
+
+Odometer
+
+38,309 km
+
+Owner
+
+Charlie
+
+VIN
+
+Owner
+
+David
+
+VIN
+
+Owner
+
+BrianB wallet
+
+Car A Car B Car C
+
+Repair
+
+Accident
+
+Repair
+
+Blockchain
+
+Ownership
+
+Car A
+
+Ownership
+
+Car B
+
+Ownership
+
+Car C
+
+Review
+
+Taxi ride
+
+Charlie BrianDavid
+
+Repair
+
+Summary
+
+Detail
+
+Repair
+
+Summary
+
+Detail
+
+Accident
+
+Summary
+
+Detail
+
+External Distributed Storage
+
+Block
+
+B
+lo
+
+ck
+
+B
+lo
+
+ck
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+15
+
+ences will be used so users will know how to find detailed data of the summarized version after the data owner has given 
+
+authorization.
+
+3.3.1.2. Trade  Data
+
+All data related to trade in the ecosystem using the MVL Coin will be stored on the blockchain. When the owner of a car 
+
+has changed, it will be reflected here. Also, when participants use MVL Coins (MVL) to buy vehicle parts, get gas or a get a 
+
+car wash service, the transaction will be recorded on the blockchain. The movement of coins between different accounts 
+
+will be stored, while the details, like the personal info of the account owners, will be stored separately. The owner has to 
+
+authorize access so others can see the transaction details on the distributed storage.
+
+3.3.2. External Distributed Storage
+
+Data like personal information or those that require more storage space will be stored on the external distributed stor-
+
+age. These can be divided into vehicle-related data and MVL Ecosystem data.
+
+3.3.2.1. Vehicle-related Data
+
+There are various forms of vehicle-related data. Here are some of the following:
+
+1. Driving data that plot the starting and end points of each journey
+
+   · Driving data does not include personal information. Data here includes GPS[17], speed rate and steering data collect-
+
+ed by navigation systems, CAN (Controller Area Network)[18] or OBD (On-board Diagnostics) installed in the vehicle and 
+
+mobile phone connected to the car.
+
+2. Sensor data and/or videos of an accident
+
+   · Accident data will be detected and stored when a situation exceeds a certain threshold, like a sudden friction.
+
+3. Documents and photos inserted by mechanics
+
+   · Repair history data will be inserted by the mechanic. If other participants are related to the accident or repair, data will 
+
+be linked to their account.
+
+These data details how a car’s condition changes. They are stored separately to avoid overloading the blockchain.
+
+ 
+
+Vehicle data can be divided into private and public data – Public data, such as driving, accident and repair history data 
+
+will be given to the new owner of a used car from the old owner. But private data, such as the previous owner’s personal 
+
+information, will not be. MVL Ecosystem will be strict about who owns what type of vehicle data and who has access to 
+
+them.
+
+3.3.2.2. Ecosystem-related Data
+
+Any transaction data related to a vehicle or MVL Coin will be stored on the blockchain, while the related participant’s per-
+
+sonal information, job and other detailed info will be stored in the external distributed storage. Also, data that is neces-
+
+sary to maintain order in the MVL Ecosystem, such as the number of MVL Points, partnering company list, will be added 
+
+on the external distributed storage.
+
+3.4. MVL Data Ownership
+
+There are two types of data ownership – Data that is stored on the blockchain can be publicly accessed, while data on the 
+
+distributed storage is private and accessible only by the owner and other third parties authorized access by the owner. 
+
+Publicly accessible data will include summarized data of vehicles and repair data, and will not include personal data. Private 
+
+data will be encrypted on the external distributed storage, with hash references of such private data stored on the block-
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+16
+
+chain. When the owner of a car changes, the ownership of the data, excluding all personal information, will be given to the 
+
+new owner.
+
+3.4.1. Ownership of the Data on the Blockchain       
+
+Data directly related to the vehicle, such as owner’s account information and the summarized data of accidents and re-
+
+pair history, is publicly accessible on the blockchain. Anyone can see this data and use it. Data here will help participants 
+
+obtain basic information regarding the vehicle, however if they want more detailed information, they will have to obtain 
+
+authorization from the data owner to access the external distributed storage.
+
+3.4.2. Ownership of the Data on the External Distributed Storage 
+
+Data stored on the external distributed storage will be under the exclusive ownership of the car owner or driver. Data 
+
+under such exclusive ownership includes data that are uploaded while the data owner interacts with the MVL Ecosys-
+
+tem. Examples of such data include detailed driving data of any vehicle, repair history data or accident details that are 
+
+encrypted.
+
+ 
+
+Account owner basically owns his or her data related to a car even after the ride is sold to another owner. The new owner 
+
+will also own the past data of his or her car inserted by the previous owner. But the previous owner will not have access 
+
+to the newly inserted data after the car finds a new owner. Driving data will be owned by the person who is driving. This 
+
+data may be personal so it won’t be given to the new owner even after a car is sold. 
+
+3.5. Data Collecting
+
+The MVL Ecosystem aims to continuously collect trustworthy vehicle data using the MVL Points reward program to 
+
+incentivize participants. As the MVL Ecosystem aims to allow participants to add data easily and to prevent any type of 
+
+abuse, it will work towards developing an automatic data collecting program and mutual verification system, which will be 
+
+Vehicle Identification
+
+MVL Network
+
+Data Gathering
+
+GPS
+
+ACC
+
+Gyro
+
+Driving ModeQR Scan
+
+Vehicle Identification
+
+MVL Device
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+17
+
+upgraded from time to time.
+
+3.5.1. Registering Data of Existing Vehicle
+
+For the ecosystem to grow, existing vehicles have to join the platform. So MVL-certified participants will be rewarded for 
+
+inviting vehicles and its owners to join MVL. The vehicle’s residual value will be added on the blockchain and the vehicle’s 
+
+data can now be added to the ecosystem. This process will allow the ecosystem to grow quickly and create value.
+
+3.5.2. Data Collecting in the Driving and Non-driving Phase
+
+To continuously gather data on the blockchain, we need to utilize more than one device. IoT-based scanners or RFID tags 
+
+are typically used to collect data for logistics, distribution and delivery. But they are a hassle for the users as they are not 
+
+familiar with such things. Therefore, MVL wants to minimize efforts and make data collecting automatic. The MVL’s data 
+
+collective device will continue to be upgraded and make data collecting an everyday activity.
+
+3.5.2.1. Step 1: Data Collecting Using Smartphones
+
+In the MVL mobile decentralized application, there will be a wallet and navigation function to collect data of the vehicle’s 
+
+status. Trading and vehicle management data keeping functionalities will also be available. In this app, there will be a QR 
+
+code scanning feature that allows participant to register a vehicle’s identifiable info. Using the mobile phone’s GPS and 
+
+other sensor, user will be able to collect a vehicle’s driving data. This app, slated to be launched with MVL Ecosystem 
+
+opening, will be used to get rewards. This will be discussed later.
+
+3.5.2.2. Step 2: Data Collecting Using CAN or OBD Network
+
+ECU (Engine Control Unit)[19] controls a vehicle and uses CAN (Controller Area Network) to tell a car’s current status or 
+
+how it has changed. MVL uses such networks to collect data and select what is valuable to the ecosystem’s participants. 
+
+This technology calls for wireless communication, for example BLE, with the driver’s MVL app. Using the app, participants 
+
+can verify other participants and vehicles and collect data while driving.
+
+        
+
+3.5.2.3 Step 3: Data Collecting Device Installed in Vehicles       
+
+When more participants enter this ecosystem and the MVL Ecosystem is able to develop and grow, MVL hopes to even-
+
+tually be able to cooperate with car makers and integrate data collecting devices to vehicles, as this will allow participants 
+
+to collect data easily. MVL is currently in talks with car manufacturers of cars which are equipped with internet access 
+
+and trying to bring about innovative solutions.
+
+      
+
+3.5.3. Ways to Prevent Abuse
+
+To collect valuable data, active and consistent participation is the key. More the reason why we have to find solutions to 
+
+avoid abuse and malicious acts. This can tarnish the quality of data and trust among participants in the ecosystem. MVL 
+
+promotes verification process so the data are accurate as follows.
+
+3.5.3.1. Mutual Verification of Driving Record
+
+Data of nearby vehicles will be compared to check if the data is collected from a driving vehicle with GPS or vehicle-to-ve-
+
+hicle network. This way we will know how the data is being collected. Only verified data will be stored in the MVL Ecosys-
+
+tem. As more participants join this ecosystem, more reciprocally verified data will be gathered and participants who try to 
+
+misuse the system will lose their grip in the ecosystem.
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+18
+
+       
+
+3.5.3.2. Mutual Repair History Data Verification
+
+When the mechanic inserts data regarding maintenance and repair, it will be evaluated by other mechanic shops in the 
+
+ecosystem. When a mechanic works on a vehicle, he or she can look up its past records to double check whether it was 
+
+Data Validation
+
+using MVL AI Engine
+
+First Round of Repair Second Round of Repair Third Round of Repair
+
+Driving Data Validation
+
+V1 Speed
+
+V3 Speed
+
+V3 Position
+
+Vehicle1
+
+Vehicle3
+
+Vehicle2 V3 Speed
+
+V3 Speed
+
+V1 Position
+
+Cross-check
+Reference
+
+Compare
+& Verify
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+19
+
+fixed properly or not.
+
+ 
+
+When it has been verified that the current and previous mechanic have put in accurate data and provided good ser-
+
+vice, they will both be rewarded. If the next mechanic finds out the previous one was not honest by checking the record 
+
+inserted by the first mechanic, a penalty will be given. If the previous repair results and cost of repairs differ significantly 
+
+from MVL AI Engine’s estimated range, the third MVL certified mechanic shop will step in for further evaluation.
+
+3.6. MVL Platform’s Core Components
+
+Here, we will discuss the core component provided at the Service & Component Layer for various applications. Core com-
+
+ponents or other SDK and API are being used to make DApps in the ecosystem.
+
+3.6.1. MVL Account and Authority
+
+MVL Ecosystem gives one account to one individual. One account can have multiple authorized users including the user, 
+
+owner and driver of the car. Corporate accounts for transportation operator and mechanic shops will needs to be certi-
+
+fied. One company gets one account. Individual accounts will go through a different verification process from a corporate 
+
+account. These different forms of accounts will carry out different roles and will allow access to different data.
+
+       
+
+3.6.1.1. User 
+
+All participants will have the authority as a user. Users will be able to give reviews to various vehicle services in the MVL 
+
+Ecosystem and get MVP Points. User’s personal information will be encrypted. Personal information will be accessible 
+
+only if the data owner allows it.
+
+3.6.1.2. Owner
+
+If the user verifies the ownership of his or her car, the user will also have authority as an owner. The user owns the data 
+
+collected such as driving, repair and accident data, for as long as he or she owns the vehicle. When the vehicle is sold to 
+
+another owner, the ownership will be passed on. However, the previous owner will still have access to the data he or she 
+
+has gathered and get a share of the profit if the data is sold.
+
+3.6.1.3. Driver
+
+If a user has a driving license, he or she will have authority as a driver. Drivers can use their own vehicle or the vehicles 
+
+owned by others. Drivers can be employed by rental car companies. All data recorded during driving or repairing the vehi-
+
+cle which are uploaded on the MVL Ecosystem will be rewarded.
+
+ 
+
+This does not mean that drivers will receive unlimited MVP for driving – There will be limited time for driving that will be 
+
+counted for rewards. Contributing data through driving will be the most basic activity in the ecosystem and major partic-
+
+ipation.
+
+ 
+
+Information of the owners, private or business, will be stored using asymmetric encryption system  and can only be au-
+
+thorized to be read with granted access from the owners.
+
+        
+
+3.6.1.4. Mechanic
+
+The mechanic shop account owner maintains, evaluates or fixes vehicles in exchange for money. Mechanic shops who 
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+20
+
+are verified as required by local law will be able to create an account in the MVL Ecosystem and participants will be able 
+
+to add new data of what repairs were made, review the past repairs made on the vehicle and get rewarded for doing so.
+
+3.6.1.5. Other Participants
+
+Other participants include used-car dealers, car wash companies, gas station and so on. MVL intends to create more 
+
+accounts for different vehicle-related participants down the road.
+
+      
+
+3.6.2. Request System for Authority and Data
+
+In the MVL Ecosystem, publicly accessible information of participants and vehicle will be limited. Repair history or the 
+
+owner information can be accessed only during a trade or sale of the vehicle and only with the consent of the owner.
+
+ 
+
+Participants will be able to make a public request to see confidential data, subject to the data owner’s approval. For ex-
+
+ample, participant A can request for the record history of a car owned by participant B. Participant B will receive a request 
+
+via a mobile app, or in other form, and he or she will use a private key to grant access to the data. The data will be tempo-
+
+rarily accessible only to the authorized user.
+
+3.6.3. Ecosystem Data Index Server
+
+Hash reference of data will be stored on the blockchain. MVL Ecosystem has a separate index so people can see open 
+
+data from the blockchain and external distributed storage. Server of this index is accessible and easily searchable 
+
+through decentralized application using MVL API. For example, participants can use this to search used cars of certain 
+
+conditions or find taxis at a particular location. An index server is not only used as storage but also allows mechanics to 
+
+maximize use of data. This server will be an open source and DApp developers can use the data to create their own index 
+
+server.
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+21
+
+4. Economic Model of MVL Ecosystem
+
+4.1. MVL Coin (MVL) and MVL Point (MVP)
+
+MVL Ecosystem issues MVL Coin (MVL) to reward blockchain miners who manage and record vehicle data. It is also used to in-
+
+teract with other MVL participants. MVL Coin can be used to trade goods and services in the MVL Ecosystem. Participants can 
+
+pay for a car-sharing service, purchase vehicle parts, pay for repairs or gas or even buy a new vehicle. All sellers of car-related 
+
+goods and services will be appropriately licensed/approved to sell such products and any such sale will occur within national 
+
+boundaries.
+
+ 
+
+Before the MVL-developed mainnet is ready, the MVL Ecosystem will temporarily issue MVL Token that follows widely-used 
+
+Ethereum-based Token Standard (ERC20)[20]. It is designed to be used seamlessly to trade on the ecosystem. Once the 
+
+MVL-developed mainnet and MVL-made blockchain is ready, the MVL Tokens given to early users can then be exchanged to 
+
+MVL Coins.
+
+ 
+
+Before the MVL mainnet and blockchain network are ready, the only way to get MVL Coin is to purchase MVL Token from 
+
+the coin exchange market. After the MVL mainnet and blockchain network are ready later on, participants can also earn MVL 
+
+Coins through the mining system and contributing to the blockchain network. Businesses in the MVL Ecosystem can also get 
+
+MVL Coins by providing services, and car owners can get MVL Coins by allowing other participants to access his or her data. 
+
+Participants may also earn MVP by active contributions of data to the MVL Ecosystem, which may subsequently be exchanged 
+
+for MVL Coins.
+
+ 
+
+All participants will get accounts and MVPs, which shows how much they have dedicated to the platform. Participants who 
+
+have different roles will follow MVL regulations, aimed at encouraging behavior that solves problems in the vehicle market, 
+
+while doing their daily operations as always and earning points.
+
+ 
+
+MVL Points act as a barometer that show how much they have done well and how influential they are in the ecosystem. If a 
+
+service provider delivers good service and get positive remarks, it will get points. Points can be purchased by using coins up to 
+
+a point to promote business. Promoting in this ecosystem will accurately target vehicle-related businesses and customers. Of 
+
+MVL Coin MVL Point
+
+· Transferrable 
+
+· Available for trade in MVL Ecosystem
+
+· Not transferrable 
+
+· Not available for trade in MVL
+
+· Only used for exchange to coin
+
+MVL MVP
+
+* Before MVL-developed mainnet is ready, the Ecosystem will temporarily issue MVL Token that follows widely-used Ethereum-based 
+
+Token Standard (ERC20)
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+22
+
+course, MVL will create an environment where there is a limit to how much a business can be promoted using coins. This way, 
+
+ultimately hard work, good service and consistency will be the main indicator of how well a business is doing in an ecosystem.
+
+ 
+
+MVL Coins, which can be bought in the market or exchanged with MVP, can be transferred from one owner to another. But 
+
+MVP can only be gained by using MVL Coins or contributing to the ecosystem. MVP cannot be transferred to another user.
+
+4.2. MVL Pool : Reward System for MVL Ecosystem Participants
+
+The MVL Ecosystem shares profits with those who contribute to the MVL Ecosystem’s growth – The more you contribute, the 
+
+more you will be earn.
+
+ 
+
+In the MVL Ecosystem, MVL Pool will be created. This will be used to reward miners that verify transactions on the blockchain. 
+
+Mining Pool will be created on the MVL mainnet and miners will receive MVL Coins. MVL is NOT providing an arrangement 
+
+where the token holder’s tokens are collected and/or pooled, where such pooled tokens are then returned/distributed back to 
+
+the token holders. MVL contemplates each individual miner conducting mining activities separately and on his own account, to 
+
+build its mainnet and to compensate individual miners with the transaction fee generated in the ecosystem. In the beginning, 
+
+reserved tokens may be used as the fee may not be enough. There is no collection/pooling from existing token holders and 
+
+MVL does not manage any mining operations on behalf of the miners.
+
+ 
+
+Commission triggered by transactions of the ecosystem participants, such as service usage, product purchase, driving data 
+
+sales and other business models of the ecosystem, will be assigned to the MVL Pool. Profit created by MVP purchase with MVL 
+
+Coins in a bid to promote a business will also be allocated in this pool. This pool be used for those who wants to change MVL 
+
+Points to MVL Coins. A part of it will also be used to operate and expand this ecosystem.
+
+ 
+
+Such an ecosystem will bring benefits to all participants, miners and MVL Coin owners in the MVL Ecosystem. Transactions will 
+
+be recorded on the blockchain so the details of profit will be transparent.
+
+ 
+
+In the early stage of the ecosystem, the reward for miners and participants may be low. So we need to give them a reason to 
+
+become active in the ecosystem from the start. MVL Ecosystem will inject 16 percent of the total MVL Coin in the MVL Pool 
+
+Reserved
+
+Fee
+
+Data Sales
+and Commerce
+
+Revenue
+
+MVP Sales
+for Ads
+
+Reward
+for Mining
+
+Ecosystem
+Operation
+Cost
+
+MVP
+Exchange
+
+Pool
+
+Mining
+Pool
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+23
+
+over ten years. The more coins there are in the pool, the more coins people will get for points. Therefore, we will inject more 
+
+coins from the 16 percent cap in the pool in the earlier stages and fewer coins down the road. This is to help the early users to 
+
+kick off interaction in the ecosystem. Over a decade, the people will sustain transaction boosting profit which will help the MVL 
+
+Pool grow and the coins to gain high value.
+
+ 
+
+MVL aims to have a steady economy system from the start. Other blockchain based platforms, like Steemit[21], issue more 
+
+coins and causes inflation[22]. But MVL issues a fixed number of coins to reserve the value of coin.
+
+4.3. MVP Exchange
+
+MVP will be exchanged to MVL Coins based on the total amount of coins in the MVL Pool. See the formula below. Some 40 
+
+percent of the pool will be used when participants want to exchange points to coins and the exchange rate will be calculated 
+
+based on how much coins are in the MVL Pool. If the ecosystem grows, the value of the coins and the overall profit will increase 
+
+giving high returns. So we believe participants will keep points for a longer period of time and actively interact in the ecosys-
+
+tem.
+
+4.4. Sales of MVP Points
+
+Participants can use MVL Coins, whether they are purchased from the coin exchange market or earned by other means, to ex-
+
+change them for MVL Points. MVL Points can be used to show how well a service in the MVL Ecosystem is doing so businesses 
+
+can attract more customers through this ecosystem. Therefore, it is a good way of attracting potential customers or clients in 
+
+the mobility industry.
+
+ 
+
+MVL Ecosystem adapts the logarithm function for an exchange function from MVL Coins to MVL Points so that first time 
+
+buyers can purchase a sufficient amount of MVL Points with MVL Coins for promotional purposes. But as the total number 
+
+of MVPs increases, participants will need to use more and more MVL Coins to purchase the same number of MVL Points. We 
+
+want to allow hard workers to get the most credit. Business owners need a good balance of actual hard work and capital to 
+
+effectively promote themselves. 
+
+L = × × min(0.7, 1 − )PRi
+∑ PR
+
+LP RPR
+
+= f ( , , )RPR
+∑ P
+
+∑ PR
+NU PB
+
+where,
+
+∑ P :
+
+∑ :PR
+:LP
+:PRi
+:RPR
+:NU
+:PB
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+24
+
+4.5. Issues to Consider for the Ecosystem Economic Model
+
+The aforementioned point and reward system may undergo changes down the line in order to improve the system to promote 
+
+fairness and trustworthy data collecting. The regulations that we are considering are as follows – When a participant wants to 
+
+exchange MVL Coins for MVL Points, it will take a month so the MVL Ecosystem can maintain economical order. We are afraid 
+
+that there will be people who want to buy MVL Points only to sell them immediately for a higher profit. In order to prevent 
+
+this, a system that allows participants to exchange their MVL Points to MVL Coins at a certain time (such as once a month) is 
+
+set. This way, people will not be able to abuse the point-coin exchange rate. Also, participants who are retiring from the MVL 
+
+Ecosystem can make immediate exchange for one-time use only. Points will be taken away from those who put in bad data or 
+
+provide bad service. Also, we may set a threshold level of points each participants can own and a system that helps control this 
+
+is continuously being developed.
+
+ 
+
+For better data management, we might have a master node and external distributed storages to store different types of data. 
+
+We may also take votes when we want to make changes in the ecosystem to allow participants to feel as though they are 
+
+MVL POOLMining POOL
+
+Miner
+POINT
+
+COIN
+Exchange
+
+Fee
+
+Safe Driving Data
+
+Safe Driving and
+Good Service
+
+Accurate Repair Recording
+
+Give Service Review
+
+Ecosystem Operator
+
+Mechanic Ride Provider
+
+Individual Driver Passenger MVP
+
+MVL
+
+Fee
+
+Data
+
+Data Data
+
+Car Rental Company
+
+Used Car Market
+
+Mechanic Shop
+
+Insurance Company 
+
+Car Maker-Self Driving
+
+Gov’t
+
+Research
+
+Data
+
+Ads
+
+BlockChain Distributed
+Storage
+
+MVL APP
+
+Data
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+25
+
+more involved and improve any issues that may occur. All in all, we want all participants to get fair return through good gover-
+
+nance.
+
+ 
+
+Regulations and policies will be set after we get feedback from the participants during our test period of the MVL Ecosystem. 
+
+An MVL Ecosystem guide will be ready when our own independent blockchain network is ready.
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+26
+
+5.1. MVL Integrated Wallet Solution
+
+Participants can get a MVL wallet to keep coins and exchange them. They will be able to connect with navigation, vehicle man-
+
+agement, repair, fuel and taxi services and make payments through the app where participants will have access to the MVL 
+
+wallet. This app will be introduced in the early stages before the MVL mainnet is ready. We will use it to test how well driving 
+
+data, vehicle registration and other contributions can take place. When the mainnet is ready, it will be connected to the OBD 
+
+hardware device for more accurate driving data collecting. While the app helps provide data, we will not be 100% sure if the 
+
+participant is actually driving. However, with the OBD device, data will only be collected if the vehicle is moving.
+
+5.2. Rental Car Service Platform 
+
+When customers rent a car, they are asked some questions and made to sign a contract based on past statistic reports. Prac-
+
+tically, a customer’s actual driving records do not matter as reckless drivers and safe drivers typically pay the same amount. In 
+
+other words, safe drivers are paying more than they should for those who are reckless. There is no current data system that 
+
+can set fair quotation based on people’s driving records.
+
+ 
+
+5. MVL Ecosystem Application Case Studies
+
+Aggressive Driver
+with many accident record
+
+Normal Driver
+with no record of accident
+
+Insurance
+
+Fee
+
+Insurance
+
+Fee
+
+Not Certified MVL Certified
+
+Insurance
+
+Fee
+
+Insurance
+
+Fee
+
+Not Certified MVL Certified
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+27
+
+With the MVL Ecosystem, participants can use their driving data to demonstrate their driving history and rental car companies 
+
+can take these records and data into consideration and provide a customized price, which we believe will boost overall custom-
+
+er satisfaction and encourage more people to rent cars more regularly.
+
+ 
+
+Customers can also get rewards for leaving reviews and driving the vehicle while companies will also receive MVL Points for 
+
+providing good services. These rewards can be used pay for rental car leasing and spurring revenue for the company.
+
+5.3. On-demand Rides, Cab, Chauffeured Rides and Chauffeur Hiring Service
+
+Current platforms that connect customers to on-demand chauffeured rides or cabs or just chauffeurs earn a commission. 
+
+Drivers usually have get no direct rewards for driving safely and drivers get paid the same amount as those who provide a less 
+
+satisfying service. At the moment, reviews are only for references. No direct incentive is given to the service provider and the 
+
+customer.
+
+ 
+
+MVL connects with existing platforms and boost trust among their participants and motivate good behavior, such as safe driv-
+
+ing and car maintenance, through fair rewarding system and accurate data collecting. On top of that, customers, drivers and 
+
+the company gets incentive for leaving and getting positive reviews.
+
+5.4. Car Sharing Platform
+
+More Koreans are starting to prefer renting cars than purchasing them. Typically, people pay a deposit that accounts for 20-30 
+
+percent of the car price, on top of a monthly fee which recurs for a duration of one to four years. In MVL Ecosystem, long term 
+
+rental car users can sub-lease the car when they don’t use it. The data in the ecosystem can match two users whose driving 
+
+records are similar, allowing a person to sub-lease their car to someone with similar driving habits.
+
+ 
+
+Car sharing with rental cars will encourage more interaction because it will bring extra income for the participants by having 
+
+more people participate in a single activity. Drivers will get incentives through the customer’s payment or reviews and record-
+
+MVL User
+
+B CA
+
+Request
+
+MVL Network
+
+MVL Driver
+
+Accept
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+28
+
+ing driving data. Customers will be able to earn rewards for writing accurate reviews and use it to exchange for coins.
+
+5.5. Used Car Trade Service Platform
+
+MVL calls for accurate data collecting and reducing unnecessary cost. This is shown especially in the used car trade industry. 
+
+Today, obtaining reliable information on a used car’s repair history is close to impossible and we have no way of knowing how 
+
+its previous owner treated the car. This is why the seller will never be able to fully guarantee good quality and be confident 
+
+when setting a price, giving the buyer the opportunity to negotiate the price.
+
+In MVL Ecosystem, a valuation of a car is backed by the data recorded by participants. Buyers will be able to see repair history 
+
+and previous owners’ driving behavior, subject to authorization from the data owner. MVL verifies vehicles so that people can 
+
+accurately compare vehicles to buy and reduce unnecessary insurance fees. Participants will, of course, be rewarded when 
+
+successful trades occur.
+
+ 
+
+5.6. Car Repair Platform
+
+Data recorded by mechanic shops in the MVL Ecosystem plays an important role in verifying a vehicle. Rewards will be given to 
+
+mechanic shops and mechanics that upload accurate data and guarantee good quality work that meets a strict standard. Due 
+
+to high competition, mechanic shops practice dishonest practices but the ecosystem encourages accurate data recording. 
+
+MVL cuts off unhealthy competition and prohibited practices by encouraging accurate review system.
+
+5.7. Dynamic Insurance Service
+
+People who purchase vehicles need insurance. There is no data that shows how frequently accidents have occurred and how 
+
+severe the accidents were and as such, a customized and reasonable insurance rate is impossible to calculate. As a result, 
+
+despite being a good driver, individuals tend to pay insurance premiums based on a fixed rate the insurance company has set.
+
+With the MVL Ecosystem, participants can upload driving data which can be analyzed to set a customised insurance rate. By 
+
+adding more data down the road, the insurance rate can always be revised and fine-tuned. By knowing one’s driving behavior, 
+
+peripheral and supplemental insurance products and discounts can also be recommended.
+
+ 
+
+The effective setting of insurance rate may seem like a loss for the insurance company because people who drive safely will 
+
+Price Range
+
+7000
+
+10000
+
+4000
+
+7000
+
+8000
+
+6000
+
+10000
+
+4000
+
+Not Certified MVL Certified
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+29
+
+pay less insurance. But accurate data keeping will prevent people from requesting for too much insurance claim because the 
+
+rate of accidents will decrease.
+
+5.8. Big Data Service
+
+MVL Ecosystem locks participants into the ecosystem and encourage their level of interaction, while building a rich database. 
+
+Database can be used internally and externally –
+
+ 
+
+  · Internally : The database can be used internally by rental car providers, used car trading, mechanic shops and insurance 
+
+companies. For example, analysis of driver’s behavior and comparison of accident data shows how valuable a vehicle is in the 
+
+used car market. They can also be used for exact quoting for car repair. In the rental car business, a good price can be given to 
+
+safe drivers after checking their driving history. Also, insurance companies do not have to deal with people who bills excessive 
+
+insurance in cases of accidents or repairs.
+
+  · Externally : Externally, data can be used for research. Driving data will be helpful for self-driving studies. Driving data and 
+
+other traffic information can also be used to build government policies. Also, insurance company can use data to compare 
+
+insurance rates.
+
+ 
+
+Big data can be traded directly among participating individuals, companies and other third parties. Big data dealers will handle 
+
+data requesting and trading system, manage and process data to create new value to boost revenue. Buyers do not necessari-
+
+ly have to be a participant of the ecosystem.
+
+ 
+
+Profit earned from data sales will be injected to the MVL Pool and will be returned to the contributors. This will create a cycle 
+
+where people hand in good data and use them, ultimately increasing the value of the MVL Ecosystem.
+
+More
+
+Not Certified
+
+Less
+
+MVL Certified Not Certified MVL Certified
+
+Aggressive Driver
+30 years old
+
+Normal Driver
+with no record
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+30
+
+6. Growth Plan
+
+6.1. MVL Ecosystem Growth Plan
+
+Without the contribution of its participants, the MVL Ecosystem will not grow. As such, we intend to launch a mobile application 
+
+so participants can insert data and manage their MVL Points in the early testing stages until the MVL’s mainnet is made. When 
+
+the blockchain is ready, participants will be able to use MVL Points and MVL Coins to interact with more services in the MVL 
+
+Ecosystem. The MVL Ecosystem can also interact with third-party platforms and allow development of various DApps.
+
+ 
+
+More people and services will be able to grow with the MVL Ecosystem and the value created will be shared among each other.
+
+6.2. Mainnet
+
+MVL Ecosystem will hold a large size of a vehicle’s lifetime data and requests to see it. We need good resources to handle 
+
+management and transactions. We believe that Ethereum will not be able to keep up with it all and the ecosystem will slow 
+
+down at some point.
+
+ 
+
+MVL’s developer team is revving up for a mainnet in a bid to develop a more optimized environment. After the MVL token is 
+
+issued and the early MVL Ecosystem has been tested, MVL intends to develop its own mainnet in First half of 2019. MVL will 
+
+have its own blockchain network which has a mining system that will keep data safe and allows mutual verification between 
+
+the nodes to validate each block. 
+
+ 
+
+Miners will be rewarded with MVL Coins. The mining method will allow hard workers to be fairly rewarded. We want to avoid the 
+
+disadvantages of the method of PoW, which calls for many resources such as using a large amount of energy and requiring 
+
+specific machinery, and PoS, a system which allows those with many coins to have more power and get more rewards than 
+
+others. We want to do this by using both MVL Points and MVL Coins. We will use devices and tools, like mobile apps, to create a 
+
+better user experience and facilitate the input of data and earning of rewards.
+
+ 
+
+MVL is NOT providing an arrangement where the token holder’s tokens are collected and/or pooled, where such pooled tokens 
+
+are then returned/distributed back to the token holders. MVL contemplates each individual miner conducting mining activities 
+
+separately and on his own account, to build its mainnet and to compensate individual miners with the transaction fee gener-
+
+ated in the ecosystem. In the beginning, reserved tokens may be used as the fee may not be enough. There is no collection/
+
+pooling from existing token holders and MVL does not manage any mining operations on behalf of the miners.
+
+R = f ( , , T)PMVL PMVP
+where,
+
+R : Personal return possibility
+: Personally owned MVLPMVL
+: Personally owned MVPPMVP
+
+T : Continuous contribution time
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+31
+
+6.3. Makers of the Ecosystem
+
+After the mainnet is ready to go-live, participants and services that make DApps will be notified. Data of the MVL will be put to 
+
+good use and new services will be made with the help of the in-house developers and their API and SDK. For example, if MVL 
+
+is connected to a used-car trading company, MVL participants will have access to a larger data of customer base and vehicles 
+
+outside of the ecosystem. MVL developers will also introduce case studies for all sorts of connection with rental car companies 
+
+and chauffeured ride providers.
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+32
+
+6.4. Timeline
+
+Kicking off with the token issuance event, MVL will follow the timeline below to trigger interactions and dedication from the participants:
+
+2018 March - April
+· Initial Coin Offering
+
+3Q
+
+· Introduce MVL application with the functions
+
+   · 1. Wallet
+
+   · 2. Map + Navigation
+
+4Q
+
+· MVL Application update
+
+   · Car management record
+
+· Test point and stake-based mining
+
+2019
+
+2Q
+
+· Introduce MVL API and SDK
+
+· Introduce MVL payment
+
+   · A. Introduce early connected services
+
+   · B. MVL application update (Payment for Car repair, Gas station and others)
+
+3Q
+
+· Launch Rent a car/Chauffeur service platform
+
+4Q
+
+· Enhance car management record function from basic to full function including public data access
+
+· Introduce hardware for navigation and data sharing
+
+2020 2Q
+· Launch Used car trading platform
+
+3Q
+
+· Invite car makers to MVL platform
+
+1Q
+
+· Introduce Mainnet of MVL
+
+· Conversion process from Token to Coin
+
+· Introduce Point to Coin exchange function on application
+
+· MVL Application Update
+
+   · A.  Mining system official launch
+
+· Introduce OBD device v1.0
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+33
+
+7. Conclusion
+
+MVL is an experimental ecosystem. Using the blockchain, we will connect vehicle-related services and solves various problems 
+
+that currently exist in the mobility industry. The current vehicle market is not incentive-based. Each service is centralized and 
+
+disconnected from each other. The MVL Ecosystem, on the other hand, connects vehicles, rewards participants, shares profit 
+
+with decentralized services and integrates vehicle-related services and business. The MVL Ecosystem does not only connect 
+
+vehicle-related services but also motorcycles, bicycle, walking and public transportation. In the long run, futuristic mobility, like 
+
+drone taxi, self-driving vehicles and electric vehicles will also be added to the ecosystem. In this ecosystem, all participants will 
+
+have ownership of their data and grow with the ecosystem.
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+34
+
+8. Token Issue Event
+
+Tokens are issued to encourage participants to submit accurate data of driving, repairs, registration and other vehicle-related 
+
+information, using Ethereum. A total of 30 billion MVL tokens will be issued. There will be a private, pre-sale and main sale that 
+
+allows participants to purchase and get various awards accordingly. The exchange rate of each coin will be announced before the 
+
+token is issued via our official communication channels. A total of 29 percent will be given to those who participate in this token 
+
+issue event. Once the MVL mainnet is ready, 16 percent of the total issued MVL Coins will be injected into MVL Pool for point to 
+
+coin exchange over a time span of 10 years. A part of the coins will also be used for partnership with vehicle services, marketing 
+
+and promotion, development of MVL’s own blockchain, maintenance, DApp support and more. Coins will also be reserved for 
+
+MVL teammates who have been in the company for the past six years and other investors and advisers.
+
+*The graph above shows how the tokens will be distributed. But the whole number of tokens and proportion is opened to 
+
+change, if necessary.
+
+ 
+
+We will announce through : 
+
+Website : mvlchain.io 
+
+Medium : medium.com/@mvlchain
+
+Twitter : twitter.com/mvlchain
+
+Telegram_en : t.me/mvlchain_en
+
+Telegram_kr : t.me/mvlchain_kr
+
+Supporters
+
+R&D
+
+Reserve Pool
+
+Team Allocation
+
+Marketing & PR
+
+29%
+
+20%
+
+16%
+
+15%
+
+Advisor & Partner 10%
+
+10%
+
+10%  Marketing & PR 
+
+15%  Team Allocation 16%  Reserve Pool 
+
+29%  Supporters 
+20%  R&D
+
+10%  Advisor & Partner
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+35
+
+9. Team Profile
+
+Kay. Woo
+CEO
+
+· B.S. in Electrical and Computer Engineering, 
+
+Seoul National University
+
+· B.S. in Mathmatics/B.S. Economics,
+
+State University of New York Binghamton
+
+· M.A in Statistics , Columbia University
+
+· Founder of easi6
+
+Jaehwa. Han
+CTO
+
+· B.S. in Computer Science & Engineering, 
+
+Seoul National University
+
+· M.S. in Computer Science & Engineering, 
+
+Seoul National University
+
+· Programmer at TmaxData
+
+· Visiting Scholar at IBM Research, TX
+
+Woosung. Son
+CSO
+
+· B.S. in Environment Material Science,
+
+Seoul National University 
+
+· Master of Businees, KAIST 
+
+· VC at LB investment
+
+· Business Dev. at NAVER
+
+Takuya Naruse
+Global Alliance
+
+· B.S. in Psychology, Binghamton University
+
+· Founder of Mr. Workout Fitness
+
+· Founder of Ttechnica
+
+Myunkyu. Park
+Full Stack Engineer
+
+· B.S. in Computer Science & Engineering, 
+
+Seoul National University
+
+· Software Developer at Blue Pepper
+
+· Software Developer at Simplex Internet
+
+Jineok. Kim
+Full Stack Engineer
+
+· B.S. in Electrical and Computer Engineering, 
+
+Seoul National University
+
+· Software Developer at Mozzet
+
+Jiwoong. Park
+Engineer
+
+· Hansei Cyber Security High School
+
+· Software Developer at easi6
+
+Euna. Lee
+Marketing Director
+
+· B.A. in Communication,
+
+Seoul National University
+
+A.E at Mins Communication 
+
+David. Seo
+Sales Director
+
+· B.A. in Malay-Indonesian interpreting and 
+
+translation,
+
+Hankuk University of Foreign Studies
+
+· Product MGR at Sung Shin Indonesia
+
+· General Controller at Samheung Indonesia
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+36
+
+9. Team Profile
+
+Nari. Choi
+Marketing Manager
+
+· B.S. in Landscape Architecture,
+
+Seoul National University
+
+· Global Business Team at CMS Edu
+
+Jongwook. Eun
+Sales Manager
+
+· Economics, Yonsei University
+
+Bien. Hoang
+Regional Manager - Vietnam
+
+· B.A. in Communication & Corporate PR, 
+
+Drexel University & The University of Hong 
+
+Kong
+
+· Head of Marketing & PR at Viet Challenge
+
+· Business Analyst at Global Sources
+
+Joohan. Kim
+Design Director
+
+· B.A. in Visual Communication Design, 
+
+Kyonggi University
+
+· UX Design Team at the dna
+
+Younjung. Park
+Designer
+
+· B.A. in Product Design, Hongik University
+
+· Market Brand design at ACE
+
+· Product design at Doctor Noah
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+37
+
+10. Legal Issues
+
+MVL White Paper provides the description of the ecosystem. This paper does not advise investment. MVL is not responsible 
+
+for any damages, loss, debt and other monetary harm inflicted on someone who took this paper into consideration and MVL 
+
+is not obliged to compensation, indemnification or other responsibility. When someone refers to or bases this paper to make 
+
+a decision and faces monetary loss or debt, MVL Foundation Pte. Ltd. will not compensate or indemnify in any way. This paper 
+
+content is based on when it was written, meaning changes can be made in the future.
+
+ 
+
+MVL Foundation Pte. Ltd. does not make a statement on or guarantees any matter to the readers and does not have legal 
+
+responsibility. For example, this MVL paper was written based on its legitimate rights and it does not guarantee that the paper 
+
+invades a third party, has valid market value, is suitable to its reader’s certain agenda and has no error in content. The range of 
+
+responsibility is not limited to the examples provided.
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+38
+
+References
+
+1. Gamil, Jaymee T. “Another ‘rude’ cab driver in hot water.” Inquirer. Inquirer.net. 12 Jan. 2016. Web. 26 Feb. 2018. [Available: 
+
+http://newsinfo.inquirer.net/754586/another-rude-cab-driver-in-
+
+hot-water]
+
+2. Scott, Gini Graham. “Avoiding Auto Repair Scams.” Huffpost.Oath Inc. 2 Nov. 2014. Web. 26 Feb. 2018. [Available: https://
+
+www.huffingtonpost.com/gini-graham-scott/avoiding-auto-repair-
+
+scams_b_5750274.html]
+
+3. Peeters, Kris. Roon, Michel van. M. Henneveld, Rob. “Impact study of mileage fraud with used cars & Adaptability of the 
+
+Car-Pass model in other EUcountries.” Car Pass. Oct. 2010. Web. 25 Feb. 2018. [Available: https://www.car-pass.be/files/arti-
+
+cle_files/file/7/crm%20study%
+
+20final%20report.pdf]
+
+4. “Common Factors of Taxi Cab Accidents.” Samer Habbas. The Law offices of Samer Habbas. 10 Nov. 2015. Web. 26 Feb. 
+
+2018. [Available: https://www.habbaspilaw.com/common-factors-
+
+taxi-cab-accidents/]
+
+5. Young, Joseph. “Proof-of-Work vs Proof-of-Stake: merits and disadvantages.” Coinfox. Canopus Innovative Technologies 
+
+Ltd. 14 Sept. 2016. Web. 26 Feb. 2018. [Available: http://www.coinfox.info/news/reviews/6417-proof-of-work-vs-proof-of-
+
+stake-merits-and-disadvantages]
+
+6. Rushkoff, Douglas. “Throwing Rocks at the Google Bus: How Growth Became the Enemy of Prosperity.” New York: Penguin. 
+
+2016. Print.
+
+7. “Number of vehicles in use worldwide 2006-2015.” statista. Statista, Inc. 2017. Web. 26 Feb. 2018. [Available: https://www.
+
+statista.com/statistics/281134/number-of-vehicles-in-use-
+
+worldwide/]
+
+8. Scutt, David. “2016 was a record-breaking year for global car sales, and it was almost entirely driven by China.” Business 
+
+Insider. Business Insider Inc. 19 Jan. 2017. Web. 1 March 2018.  [Available: http://www.businessinsider.com/2016-was-a-re-
+
+cord-breaking-year-for-global-car-
+
+sales-and-it-was-almost-entirely-driven-by-china-2017-1]
+
+9. Nield, David. “17 gadgets and apps to make your dumb car smarter.” Popular Science. A Bonnier Corporation Company. 15 
+
+Nov. 2017. Web. 26 Feb. 2018. [Available: https://www.
+
+popsci.com/smart-car-gadgets-apps]
+
+10. “Grab battles Uber in South-East Asia.” The Economist. 9 Feb. 2017. Web. 26 Feb. 2018. [Available: https://www.econo-
+
+mist.com/news/business/21716657-grabhitch-which-offers-
+
+transport-perched-back-other-commuters-scooters-one-way]
+
+
+
+mvlchain.io MVL TEAM
+C
+
+O
+P
+
+Y
+R
+
+IG
+H
+
+T
+ 2
+
+0
+1
+
+8
+. M
+
+V
+L. A
+
+LL R
+IG
+
+H
+T
+
+S
+ R
+
+E
+S
+
+E
+R
+
+V
+E
+
+D
+
+39
+
+11. “Used car history reports may not be accurate.” Consumer Reports. June 2009. Web. 26 Feb. 2018.  [Available: https://
+
+www.consumerreports.org/cro/2012/12/don-t-rely-on-used-car-
+
+history-reports/index.htm]
+
+12. “Application Programming Interface - API.” Investopedia. Web. 26 Feb. 2018. [Available: https://www.investopedia.com/
+
+terms/t/trading-software.asp]
+
+13. “SDK (software development kit).” Gartner. Gartner, Inc. Web. 26 Feb. 2018. [Available: https://www.gartner.com/it-glossa-
+
+ry/sdk-software-development-kit]
+
+14. “Ethereum.” Ethereum. Ethereum Foundation. Web. 26 Feb. 2018. [Available: https://www.
+
+ethereum.org/]
+
+15. “What is a vehicle identification number (VIN)?” Autocheck. Experian. Web. 26 Feb. 2018.  [Available: https://www.auto-
+
+check.com/vehiclehistory/autocheck/en/vinbasics]
+
+16. “WHAT IS OBD?” OBD Solutions. OBD Solutions. Web. 26 Feb. 2018. [Available: http://www.obdsol.com/knowledgebase/
+
+on-board-diagnostics/what-is-obd/]
+
+17. “Global Positioning System.” Wikipedia. Web. 26 Feb. 2018. [Available: https://en.wikipedia.
+
+org/wiki/Global_Positioning_System]
+
+18. “Controller Area Network (CAN).” Techopedia. Techopedia Inc. Web. 26 Feb. 2018. [Available: https://www.techopedia.com/
+
+definition/32255/controller-area-network-can]
+
+19. Nice, Karim. “How car computers work.” How Stuff Work. Web. 26 Feb. 2018. [Available: https://auto.howstuffworks.com/
+
+under-the-hood/trends-innovations/car-computer1.htm]
+
+20. “ERC20 Token Standard.” The Ethereum Wiki. Web. 26 Feb. 2018. [Available: https://
+
+theethereum.wiki/w/index.php/ERC20_Token_Standard]
+
+21. “Steemit.” Steemit. Web. 26 Feb. 2018. [Available: https://steemit.com/]
+
+22. Watson, Patrick W. “Why Bitcoin Has Inflation Risk.” Forbes. 29 Jan. 2018. Web. 27 Feb. 2018. [Available: https://www.
+
+forbes.com/sites/patrickwwatson/2018/01/29/why-bitcoin-has
+
+-inflation-risk/2/#7d28f63de5ed]
+
+

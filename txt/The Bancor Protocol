@@ -1,0 +1,694 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+Bancor Protocol  
+Continuous Liquidity and Asynchronous Price 
+Discovery for Tokens through their Smart Contracts; 
+aka “Smart tokens” 
+ 
+
+ 
+ 
+ 
+
+Eyal Hertzog, Guy Benartzi & Galia Benartzi 
+ 
+April 28, 2017 
+ 
+Draft Version 0.77 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The phrase "double coincidence of wants" was coined by Jevons (1875). "The first difficulty in 
+barter is to find two persons whose disposable possessions mutually suit each other's wants. 
+There may be many people wanting, and many possessing those things wanted; but to allow of 
+an actual act of barter there must be a double coincidence, which will rarely happen."  
+
+ 
+
+
+
+ 
+
+Table of Contents 
+ 
+
+Table of Contents 1 
+
+The Bancor Protocol 2 
+
+Background 2 
+
+Introducing Smart Tokens: A Solution to the Liquidity Problem 3 
+
+A New Method for Price Discovery 3 
+
+Use-Cases for Smart Tokens 4 
+
+The Long tail of User-Generated Currencies 4 
+
+Crowdfunding a Project 4 
+
+Token-Changers 5 
+
+Decentralized Token Baskets 5 
+
+Network Tokens 5 
+
+Advantages of Smart Tokens 6 
+
+The Bancor Protocol Ecosystem 6 
+
+A Solution to the Coincidence of Wants Problem 7 
+
+Smart Token Initiation and Customization 7 
+
+The Bprotocol Foundation 8 
+
+BANCOR - The First Smart Token 8 
+
+BANCOR Crowdsale Objectives 8 
+
+Examples and Illustrations 9 
+
+Example #1: Smart Token Transaction Flows 9 
+
+Example #2: Token Changer Transaction Flows 10 
+
+Illustrative Map of a Potential BANCOR Network 11 
+
+Price Calculation Per Transaction 11 
+
+Summary 12 
+
+Acknowledgements 12 
+
+ 
+
+ 
+
+   
+
+1 
+
+
+
+ 
+
+The Bancor Protocol 
+Abstract: The Bancor protocol enables built-in price discovery  and a liquidity mechanism for 
+
+1
+
+tokens on smart-contract blockchains. These “smart tokens” hold one or more other tokens in 
+
+reserve, and enable any party to instantly purchase or liquidate the smart token in exchange for 
+
+one of its reserve tokens, directly through the smart token’s smart-contract, at a continuously 
+
+calculated price, according to a formula which balances buy and sell volumes. 
+
+ 
+
+The Bancor protocol is named in honor of the Keynesian proposal  to introduce a supranational 2
+
+reserve currency called Bancor to systematize international currency conversion after World War 
+II. 
+
+Background 
+We live in a world where anyone can publish an article, song or video, create a discussion group 
+and even run an online marketplace. We are now beginning to witness the emergence of 
+user-generated currencies. Different types of stored-value (“currencies” hereafter) have been 
+issued and circulated for centuries in the form of bank notes, bonds, equity, gift-cards, loyalty 
+points, community currencies  and others. Bitcoin was the first ​decentralized​ digital currency, 3
+followed by a wave of new cryptocurrencies that have been issued since, and recently we’ve 
+seen the rise of a new asset class of  “tokens” that are typically issued in crowdsales (“ICOs”) 
+through smart contracts.  
+ 
+However, currencies, which are essentially ​networks of value​, do not connect to each other in the 
+same way that information networks do. While the switches on Internet exchange points (IXs) 
+interlink information networks - the active traders on ​exchanges​ are effectively interlinking 
+currencies. 
+ 
+The current exchange model for currencies/assets has a critical barrier, as a certain volume of 
+trading activity is required to achieve market-liquidity. This inherent barrier makes it nearly 
+impossible for small-scale currencies (such as community currencies, loyalty-points or other 
+custom tokens) to be linked (exchangeable) to other popular currencies using a 
+market-determined exchange rate. 
+ 
+In the age of smart-contract blockchains, tokens can be automatically managed by immutable 
+code which controls their issuance and behavior. We realized this could mean allowing tokens to 
+hold balances of other tokens (i.e. “reserves”), directly through their smart contracts, that could 
+be designed by their creators and managed programmatically. These new technological 
+capabilities warrant rethinking of the possible solutions for converting one currency to another 
+and determining market prices. 
+
+1
+ ​https://en.wikipedia.org/wiki/Price_discovery  
+
+2
+ ​https://en.wikipedia.org/wiki/Bancor  
+
+3
+ ​https://en.wikipedia.org/wiki/Community_currency  
+
+2 
+
+https://blog.bancor.network/coins-are-networks-and-crowdsales-are-their-killer-app-a6ebc16bef31
+https://en.wikipedia.org/wiki/Community_currency
+https://en.wikipedia.org/wiki/Price_discovery
+https://en.wikipedia.org/wiki/Bancor
+
+
+ 
+
+Introducing Smart Tokens: A Solution to the Liquidity Problem 
+Smart tokens are standard ERC20 tokens which implement the Bancor protocol, providing 
+continuous liquidity while automatically facilitating price-discovery. The smart token’s contract 
+instantly processes ​buy​ and ​sell​ orders, which drive the price-discovery process. Due to this 
+capability, smart tokens do not need to be traded in an exchange in order to become liquid.  
+ 
+A smart token holds a balance of least one other ​reserve token​, which (currently) can be a 
+different smart token, any ERC20 standard token or Ether. Smart tokens are issued when 
+purchased and destroyed when liquidated, therefore it is always possible to purchase a smart 
+token with its reserve token, as well as to liquidate a smart token to its reserve token, at the 
+current price. 
+
+A New Method for Price Discovery 
+A smart token utilizes a novel method for price-discovery which is based on a “Constant Reserve 
+Ratio” (CRR). The CRR is set by the smart token creator, for each reserve token, and used in price 
+calculation, along with the smart token’s current supply and reserve balance, in the following way: 
+ 
+
+riceP = BalanceSupply × CRR  
+
+ 
+This calculation ensures that a constant ratio is kept between the reserve token balance and the 
+smart token’s market cap. Dividing the market cap by the supply produces the price according to 
+which the smart tokens can be purchased and liquidated through the smart-contract. The smart 
+token’s price is denominated in the reserve token and readjusted by the smart contract per each 
+purchase or liquidation, which increases or decreases the reserve balance and the smart token 
+supply (and thus the price) as detailed below. 
+ 
+When smart tokens are purchased (in any of their reserve currencies) the payment for the 
+purchase is added to the reserve balance, and based on the calculated price, ​new smart tokens 
+are issued​ to the buyer. Due to the calculation above, a purchase of a smart token with a less 
+than 100% CRR will cause its price to increase, since both the reserve balance and the supply are 
+increasing, while the latter is multiplied by a fraction. 
+ 
+Similarly, when smart tokens are liquidated, they are ​removed from the supply​ (destroyed), and 
+based on the current price, reserve tokens are transferred to the liquidator. In this case, for a 
+smart token with a CRR less than 100%, any liquidation will trigger a price decrease. 
+ 
+This asynchronous price discovery model works by constantly readjusting the current price 
+toward an equilibrium between the purchase and liquidation volumes. While in traditional 
+exchanges the price is determined by two matched orders in ​real-time​, smart token prices are 
+calculated ​over-time​, following every order.  
+ 
+The above formula calculates the current price, however, when a purchase or liquidation is 
+executed, the effective price is calculated as a function of the transaction size. The calculation 
+
+3 
+
+
+
+ 
+
+can be described as if every transaction is broken up into infinitely small increments, where each 
+increment is changing the smart token’s supply, reserve balance, and thus its price. This ensures 
+that purchasing the same amount of smart tokens in a single or multiple transactions would yield 
+the same total price. Additionally, this method ensures that the CRR will be kept constant and the 
+reserve can never be drained. Essentially, the effect of the transactions size on the price (due to 
+its changing the smart token’s supply and reserve balance) is incorporated into the effective price 
+for any transaction. The mathematical functions for calculating price per transaction size are 
+presented further in this document. 
+
+Use-Cases for Smart Tokens 
+
+The Long tail  of User-Generated Currencies 4
+
+The long tail phenomena can be observed in many different online ecosystems such as 
+publishing (blogs), videos (YouTube), discussion forums (Reddit, Facebook Groups) and more. In 
+each of these examples, the long tail has become significantly larger in scale than everything that 
+preceded it. The forming of a long tail begins as soon as the barriers to its existence are removed 
+(e.g. YouTube making it simple for anyone to upload and share user-generated videos).  
+ 
+There are many examples of user-generated-currencies, such as community currencies 
+(community oriented currencies), loyalty points (business oriented currencies), and the most 
+recent being hundreds of cryptocurrencies (protocol oriented currencies). However, the need to 
+achieve and maintain liquidity for these small or new currencies remains a significant barrier for 
+their viability. 
+ 
+Smart tokens are unique in that they can be purchased or liquidated by a single party, using the 
+calculated price, ​removing the need for two wants to be simultaneously matched​. This effectively 
+means that by using the Bancor protocol, small-scale currencies with a low expected trade 
+volume can offer continuous liquidity, thus, removing the barrier for them to be linked to the 
+global economy. 
+ 
+Enabling the long-tail of currencies is likely to bring about a new generation of creative 
+use-cases. Though it’s improbable to predict all of them, some of the more likely use-cases are 
+listed below.  
+
+Crowdfunding a Project 
+The crowdfunding space has been growing rapidly. Smart tokens can be used for crypto 
+crowdfunding initiatives, where the participants receive tokens which are liquid and 
+market-priced. For example, a musician may collect funds to record an album, which would be 
+sold online exclusively in exchange for the issued tokens. A successful album would generate 
+high demand for the tokens, driving up their price and rewarding those holding them. Many other 
+examples exist such as crowdfunding a venture capital fund or raising initial capital for a 
+credit-creating neighborhood currency. 
+
+4
+ ​https://en.wikipedia.org/wiki/Long_tail  
+
+4 
+
+https://en.wikipedia.org/wiki/Long_tail
+
+
+ 
+
+Token-Changers 
+Token-changers are smart tokens that can be used to exchange between other standard ERC20 
+tokens. Token-changers hold multiple reserves-tokens, with a total CRR of 100%. A 
+token-changer is designed to provide an exchange service between its reserve tokens (a 
+two-step action of purchasing the smart token with one reserve token, and immediately 
+liquidating it for another.) 
+ 
+Due to the price calculation formula, each time reserve token X is converted to reserve token Y -- 
+the price of X decreases, while the price of Y increases. Larger transactions would move the 
+price more sharply, however, a higher reserve balance would reduce price volatility. 
+ 
+As noted, any standard ERC20 token can be used as a reserve even if they are already traded in 
+one or more classic or decentralized exchanges. In such a scenario, a price gap may open 
+between the calculated price of a reserve token and its price in an outside exchange. This 
+situation would ​incentivize arbitrageurs to realign the price difference​, exactly as occurs when 
+price gaps open up between different exchanges, thus keeping the token-changer prices in sync 
+with the prices in which the tokens are traded in other exchanges. 
+ 
+A token-changer’s creator may set a conversion fee that would apply on each 
+purchase/liquidation. The fees are being accumulated in the reserves and thus increase the 
+smart token’s price with every token conversion taking place, increasing the smart token’s value. 
+This increase will benefit the holders of the smart token, who may have deposited the original 
+reserves when the smart token was created, or purchased it with any of its reserve token’s at any 
+time after that.  
+ 
+Popular exchanges such as MtGox and Bitfinex have been hacked with hundreds of millions of 
+dollars worth of assets stolen from their accounts. Converting one token to another using a 
+token-changer does not require depositing funds in an exchange and thus removes the 
+counterparty risk from the process. Another important benefit is that no transaction limits need to 
+be be applied, as is the case with other instant-trading solutions, due to the decentralized nature 
+of the token changer. 
+
+Decentralized Token Baskets 
+Smart tokens can be used as decentralized token-baskets, which function similar to ETFs or index 
+funds, simply by holding a portfolio of reserve tokens with a total CRR of 100%. As prices of any of 
+the reserve tokens rise or fall, so does the value of the smart token. Similar to token-changers, 
+here as well arbitrageurs are incentivized to realign the conversion rates with market prices 
+which ensures the proper ratios are kept between the reserves according to their real-time 
+market value. This enables users to directly hold asset baskets, without a financial services 
+provider intermediary.  
+
+Network Tokens 
+A collection of smart tokens that use the same reserve token form a ​network of tokens​. The 
+common reserve token can be described as a ​network token​ which captures the combined value 
+of the network. An increased demand for any of the smart tokens in the network would propel 
+
+5 
+
+
+
+ 
+
+the demand for the network token, since it is required for purchasing these tokens and then held 
+in their reserve. This would drive up the price of the network token, which ​benefits the entire 
+network​ since the value of the tokens’ reserves increases. The network-token also functions as a 
+“token for tokens”, rendering all the smart tokens in the network inter-changeable.  
+ 
+Network tokens can be useful for those who wish to roll out multiple and related, smart tokens, 
+for different purposes (e.g. Regional network of community currencies, a video game studio with 
+multiple game credits, a group of independant businesses issuing a joint loyalty program). The 
+network token model creates synergetic relationships between the member tokens, comparable 
+to the way a single successful Ethereum service would drive up the value of Ether, benefiting ​all 
+of​ ​its holders​. 
+ 
+An additional network token usecase is to interlink a set of token changers, where each of them 
+holds a 50% CRR in the network token, and 50% CRR in another standard token. This structure 
+would enable exchanging any token in the network to another, while increasing the demand for 
+the network token whenever a new token changer is created or appreciates. 
+
+Advantages of Smart Tokens 
+Smart tokens introduce multiple advantages over the traditional exchange model: 
+ 
+
+1. Continuous Liquidity​ - Since purchasing and liquidating is done through the smart 
+contract - smart tokens are always liquid, irrespective of their trading volume. 
+
+2. No Extra Fees​ - The only mandatory fees applied by a smart token are the blockchain 
+platform fees (Gas) which are relatively low. 
+
+3. No Spread​ - Since the price calculation is done algorithmically by the smart token, the 
+same price applies for purchasing and liquidating the smart tokens. 
+
+4. Predictable Price Slippage ​- Smart tokens allow pre-calculation of the precise price 
+slippage, based on the transaction size, before it is executed. 
+
+5. Lower Volatility - ​A smart token with 10% CRR (for example) is comparable to an 
+exchange with 10% of the ​entire supply​ in the order-book at all times, forming substantial 
+market depth. In a typical crypto exchange, the share of the supply in the market depth at 
+any given moment is well below 1%. The higher the CRR, the lower the volatility. The lower 
+the CRR, the more “new credit” is created relative to the original reserve amount. 
+
+The Bancor Protocol Ecosystem  
+Different parties can take take on different roles in the Bancor network ecosystem. The primary 
+forms of participation are as follows: 
+ 
+
+● End-Users ​can receive, hold, transfer, request, purchase and liquidate tokens. 
+● Smart Token Creators ​issue new, always liquid smart tokens, that may be used for 
+
+trading, token-changing, as token-baskets or as network-tokens. 
+● Asset Tokenizers​ (e.g. Tether-USD, Digix-Gold) issue ERC20 tokens representing external 
+
+assets, thus enabling smart tokens to use these assets as reserve tokens (. Existing 
+crypto-exchanges that operate under their local KYC regulations are well positioned to 
+provide asset-tokenization services.) 
+
+6 
+
+
+
+ 
+
+● Arbitrageurs​ are organically incentivized to constantly reduce gaps between prices on 
+crypto exchanges and Bancor network. Smart tokens work similarly to exchanges in that 
+purchasing an asset increases its price and selling it decreases it, so that the same 
+arbitrage mechanics and incentives apply.  
+
+A Solution to the Coincidence of Wants Problem 
+The coincidence-of-wants problem , in the current exchange model, creates a situation where 5
+
+assets are required to be traded at a certain minimal volume, or face a liquidity risk . The cause 6
+
+for this limitation is that the chance of finding a second party with opposite wants to exchange 
+with, correlates to the asset’s trading activity level. Smart tokens solve this problem through the 
+use of reserve tokens which embed market depth directly into the smart token’s contract. 
+ 
+Smart tokens are a ​technological solution​ to the ​coincidence-of-wants problem​ for ​asset 
+exchange​, rather than a labor-based solution as used in traditional (or decentralized) exchanges. 
+The current laborers in asset exchange are the professional market-makers who provide liquidity 
+and facilitate collaborative price discovery. In the domains of information exchange and trade, the 
+technologies of writing and currency replaced labor-intensive solutions (speaking and barter) with 
+technological ones, creating mass efficiencies for societies and unlocking collaboration on a 
+global and intergenerational level. The Bancor protocol proposes to similarly advance the domain 
+of asset exchange by replacing the need for labor, with a technological solution to the existing 
+coincidence-of-wants problem.  
+
+Smart Token Initiation and Customization 
+New smart tokens can be created simply by depositing an initial reserve/s and issuing the initial 
+token supply. Alternatively smart tokens can be initiated through a crowdsale, where a part of the 
+proceeds is allocated as the initial reserve.  
+
+ 
+
+   
+
+5
+ ​https://en.wikipedia.org/wiki/Coincidence_of_wants  
+
+6
+ ​https://en.wikipedia.org/wiki/Liquidity_risk  
+
+7 
+
+https://en.wikipedia.org/wiki/Coincidence_of_wants
+https://en.wikipedia.org/wiki/Liquidity_risk
+
+
+ 
+
+The Bprotocol Foundation 
+Bprotocol is a Swiss nonprofit foundation, whose core objective is the establishment of the 
+Bancor protocol as a global standard for intrinsically tradeable currencies.  
+ 
+The Bprotocol Foundation will issue BANCOR - the first smart token to be deployed using the 
+Bancor protocol, establishing the ​BANCOR network. ​The Foundation will collaborate with 
+different contractors to achieve its goals, as well as governments, businesses, academics and 
+NGOs committed to realizing collaboration potential in communities around the world. 
+
+BANCOR - The First Smart Token 
+The BANCOR network token will hold a single reserve in Ether. Other smart tokens, by using 
+BANCOR as (one of) their reserve(s), connect to the BANCOR network and become 
+exchangeable to each other using the price discovery method outlined in this paper.  
+ 
+BANCOR network forms a monetary structure where increased demand for ​any​ of the network’s 
+tokens drives up the value of the common BANCOR token, benefiting ​all​ other smart token​s 
+holding it in reserve. Naturally, it is also susceptible to downward price pressure by decreased 
+demand. 
+ 
+BANCOR network will include user-generated currencies, token-changers (forming a global 
+decentralized, highly liquid exchange), decentralized token baskets as well as and subnetworks. 
+ 
+BANCOR token will be issued in a crowdsale scheduled for May, 30, 2017. Additional details will 
+be announced in early May. 
+
+BANCOR Crowdsale Objectives 
+● A portion of the funds raised will be used as the Ether reserve for BANCOR (details on the 
+
+CRR will be outlined in the offer memorandum), enabling continuous liquidity to Ether for 
+any BANCOR holder, as well as any holder of a smart token using BANCOR as a reserve. 
+
+● A portion of the funds will be used to develop, promote and support the open-sourced, 
+blockchain-agnostic, Bancor protocol implementations, and support related technologies 
+and applications such as an open-source, user-friendly web service (desktop and mobile) 
+to provide wallet, token-conversion, new smart token creation and crowdsale solutions. 
+
+● A portion of the funds will be used to set-up and fuel the first batch of token changers for 
+popular ERC20 tokens, which function as a ​decentralized solution for token exchange 
+between all the included tokens. This model introduces key advantages, incentivizing 
+asset tokenizer​s to represent additional real-world assets as Ethereum tokens.  
+
+● A portion of the funds will be used to participate in and support innovative and promising 
+future smart token crowdsales in the BANCOR network. This includes new, 
+location-based and vertical-specific smart token initiatives such as regional token 
+networks, community currencies, crowdfunded projects and other online or offline 
+token-based ecosystems. 
+
+8 
+
+
+
+ 
+
+Examples and Illustrations 
+
+Example #1: Smart Token Transaction Flows 
+In this example, a crowdsale for a new token 
+(BANCOR) has collected 300,000 ETH.  
+ 
+300,000 BANCOR are issued at a 1:1 ratio and 
+transferred to the crowdsale participants. 
+240,000 ETH were directed towards  funding 
+the BANCOR project’s development and 
+60,000 (20% CRR) were kept in the BANCOR 
+smart contract as a reserve. 
+ 
+
+● Purchasing and liquidating BANCOR 
+becomes possible as soon as the 
+crowdsale is completed. The opening 
+price is the last crowdsale price (in this 
+example 1 ETH for the first BANCOR.)  
+
+● BANCOR liquidators get ETH from the 
+reserve of BANCOR, the liquidated 
+BANCORs are destroyed, and 
+BANCOR price decreases respectively. 
+
+● BANCOR buyers get newly minted 
+BANCORs, their payment in ETH is 
+added to the smart contract reserve 
+and the BANCOR price increases. 
+
+ 
+The ETH reserve always remains 20% of the BANCOR market cap by dictating how the current 
+price is calculated. 
+ 
+
+ 
+Link to Spreadsheet 
+
+9 
+
+https://goo.gl/3hR6e8
+
+
+ 
+
+Example #2: Token Changer Transaction Flows 
+In this example, the BNCDGX smart token is created to function as a token-changer between 
+BANCOR and DGX (Tokenized Gold), holding both in reserve with a 50% CRR each, for a total of 
+100% CRR.  
+ 
+Assuming a current market price of 1 BANCOR = 2 DGX, the contract can define the initial prices 
+as 1 BANCOR = 2 DGX = 1 BNCDGX and in this example, 10,000 BNCDGX are issued to the 
+depositors of the initial reserves. 
+ 
+
+● The opening prices are 1 BNCDGX = 1 
+BANCOR = 2 DGX as was set in the 
+contract. 
+
+● The BNCDGX can be purchased with 
+BANCOR or DGX. The BNCDGX price 
+will increase for the reserve token it 
+was purchased with (BANCOR or 
+DGX), and decrease in the uninvolved 
+reserve token (due to the increase in 
+the BNCDGX supply). 
+
+● BNCDGX can be liquidated back to 
+BANCOR or DGX, decreasing the BNCDGX price in the liquidated reserve token, and 
+increasing it in the uninvolved reserve token. 
+
+ 
+This scenario demonstrates how a 100% backed smart token with multiple reserve tokens can 
+function as a decentralized token-changer, open for anyone to use, and be organically balanced 
+by arbitrageurs. It can be described as a “decentralized ShapeShift”, as well as a “decentralized 
+token-basket,” purchasable by anyone, and organically preserving its defined holdings ratios 
+through the arbitrageurs. 
+ 
+
+ 
+Link to Spreadsheet 
+
+   
+
+10 
+
+https://goo.gl/3hR6e8
+
+
+ 
+
+Illustrative Map of a Potential BANCOR Network 
+● BANCOR - The BANCOR network token, backed by EtherETH, DGD, DGX, REP and GNT 
+
+are standard Ethereum-tokens 
+● NEW - New smart tokens created (e.g. crowdfunding campaign, a community currency, 
+
+etc.) 
+● Smart tokens hold reserves (arrows point to the reserve tokens) 
+● Token-changers are 100% backed, and hold two or more reserves 
+
+ 
+
+ 
+
+Price Calculation Per Transaction 
+The actual price of a smart token is calculated as a function of the transaction size. 
+ 
+R - Reserve Token Balance 
+S - Smart Token Supply 
+F - Constant Reserve Ratio (CRR) 
+ 
+
+●  = Smart tokens received in exchange for ​E ​(reserve tokens), given ​R​, ​S​ and ​FT  
+((1 ) )T = S + R
+
+E F − 1  
+ 
+
+●  = Reserve tokens received in exchange for ​T​ (Smart tokens), given ​R​, ​S​ and ​FE   
+
+( )  E = R √F 1 + ST − 1  
+ 
+Mathematical proof​ available  7
+ 
+
+7
+ The mathematical proof is available online at ​https://goo.gl/HXQBUr  
+
+11 
+
+https://goo.gl/HXQBUr
+https://goo.gl/HXQBUr
+
+
+ 
+
+Summary 
+The Bancor protocol standardizes smart tokens, enabling asynchronous price discovery and 
+continuous liquidity for cryptocurrencies using constant ratios of reserve tokens held through 
+smart contracts, acting as automated market makers. The Bancor protocol enables the creation 
+of hierarchical monetary systems with no liquidity risk. The BANCOR network token will be used 
+to establish the first decentralized interconnected currency exchange system which does not rely 
+on matching bid and ask orders, thus remaining liquid irrespective of its trading volume. This 
+system proposes the first technological solution for the ​Coincidence of Wants Problem​ in asset 
+exchange.  
+
+Acknowledgements 
+We would like to express our gratitude to the many people who supported us as we wrote this 
+paper. A special thanks to Meni Rosenfeld, Yehuda Levi, Amatzia Benartzi, Ron Gross, Assaf 
+Bahat, Sefi Golan, Joshua Alliance, Brian Singerman, Adi Scope, Dory Asher, Tal Keinan, Wings.ai, 
+TheFloor, Arie Ben-David from the Israel Monetary Change Movement, Scott Morris of Ithacash 
+and the entire Bancor team, Ilana, Asaf, Or, Omr, Itay and Mati. Your support and feedback were 
+truly important to us in improving this document. Thank you.  
+
+12 
+
+

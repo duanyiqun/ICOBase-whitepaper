@@ -1,0 +1,2998 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+ 
+
+1 Abstract 5 
+
+2 Introduction 7 
+2.1 The Energy Supply Chain 7 
+
+2.1.1 Generation 7 
+2.1.2 Transmission 8 
+2.1.3 Distribution 8 
+2.1.4 Retail 8 
+
+2.2 Regulated and Deregulated Markets 9 
+2.3 Existing Retailers 13 
+2.4 Challenges of Renewables 13 
+2.5 Using Ethereum in Electricity Markets 17 
+
+2.5.1 Ethereum 17 
+2.5.2 Tokens 18 
+2.5.3 Stable Tokens 18 
+2.5.4 Payment Channels 19 
+2.5.5 Proof of Stake and Casper 20 
+
+3 Value Propositions 21 
+3.1 Short Term - Energy Retailer 22 
+
+3.1.1 Lower Variable Costs 22 
+3.1.2 Eliminating Bad Debts 22 
+3.1.3 Lower Marketing Expenses 23 
+
+3.2 Long Term - Distributed Storage and Open Markets 23 
+3.2.1 Enabling Efficient Markets 23 
+3.2.2 Natively Support P2P Markets 24 
+3.2.3 Integrate ISO Wholesale Markets 24 
+
+4 Intelligent Agent 25 
+4.1 Basic Usage 26 
+4.2 Agent Registration & Key Generation 26 
+4.3 Advanced Usage 28 
+4.4 Agent Energy Trading 29 
+
+4.4.1 Day-Ahead and Real-Time Markets 29 
+4.4.2 Demand Response 32 
+4.4.3 Intelligent Economically Driven Decisions 33 
+
+4.5 Secondary Uses of the Agent 34 
+4.5.1 Storing Cryptocurrency 34 
+4.5.2 Proof-of-Stake Signing 34 
+4.5.3 Ethereum API for IoT 35 
+
+4.6 Integration and Testing 36 
+
+2 
+
+
+
+Grid+ Whitepaper v1.6 
+
+5 Tokens 37 
+5.1 The BOLT Token 37 
+
+5.1.1 BOLT Redemption 38 
+5.1.2 The Fee Vault: Karabraxos 38 
+
+5.3 The GRID Token 39 
+5.3.1 Agent Staking 39 
+5.3.2 Raiden Usage 40 
+5.3.3 GRID Redemption for Agent Devices 40 
+
+6 Business Model 41 
+6.1 Markup on Energy 41 
+6.2 Raiden Network Transaction Fees 42 
+6.3 Interest on BOLT deposits 43 
+6.4 Sales of Agents 44 
+6.5 Roadmap 44 
+
+6.5.1 Phase 1: Edison Epoch (Q4 2017 - Q2 2018) 44 
+6.5.1.1 First Utility 44 
+6.5.1.2 Agent Prototype 44 
+6.5.1.3 Establish Content Delivery Network 45 
+6.5.1.4 Updates to the Client 45 
+
+6.5.2 Phase 2: Tesla Epoch (Q2 2018 - Q1 2019) 45 
+6.5.2.1 Scalable Hardware Production 45 
+6.5.2.2 More Utilities 46 
+6.5.2.3 Raiden Hub 46 
+6.5.2.4 Better Decisions from More APIs 46 
+
+6.5.3 Phase 3: Musk Epoch (Q2 2019 and beyond) 46 
+6.5.3.1 Full Hardware Production Scalability 47 
+6.5.3.2 Agent AI Optimization 47 
+6.5.3.3 International Utilities Expansion 47 
+
+6.6 Use of Funds 47 
+6.6.1 Forming Utilities 49 
+6.6.2 Legal Work 50 
+6.6.3 Marketing 51 
+6.6.4 Product 51 
+
+7 Experience and Team 52 
+7.1 Team: 54 
+
+7.1.1 Alex Miller 54 
+7.1.2 Karl Kreder 54 
+7.1.3 Mark D’Agostino 54 
+7.1.4 Claudia Pop 55 
+7.1.5 Rachel Epstein 55 
+
+7.2 Advisors 55 
+
+3 
+
+
+
+Grid+ Whitepaper v1.6 
+
+7.2.1 Joseph Lubin 55 
+7.2.2 Jeffrey Char 55 
+7.2.3 Rikiyai Abe 56 
+7.2.4 John Lilic 56 
+7.2.5 Matt Corva 56 
+7.2.6 Igor Lilic 57 
+7.2.7 Mike Goldin 57 
+7.2.8 Bashar Lazaar 57 
+
+8 Appendix 58 
+8.1 State Channels Research 58 
+8.2 Tesla Powerwall Payback Calculations 59 
+
+ 
+
+ 
+
+  
+
+4 
+
+
+
+Grid+ Whitepaper v1.6 
+
+1 Abstract 
+In the past ten years, the cost of distributed energy resources (DERs), such as solar panels and                 
+
+wind turbines has decreased significantly. This has led to expeditious and widespread adoption.             
+
+Additionally, battery prices are rapidly decreasing, making them economically viable to           
+
+supplement variable-generation renewable-resources by storing energy for the electrical grid.          
+
+The confluence of these developments has created an emergent electrical grid, where the             
+
+means of production are less centralized, and the control systems are less likely to be strictly                
+
+top-down. The concept of independently owned and controlled DERs is known as the             
+
+transactive energy grid.  
+
+ 
+
+The transactive grid promises to increase durability of the electrical grid, while simultaneously             
+
+increasing efficiency, and enabling the adoption of more renewable energy. However, the            
+
+distributed nature of the transactive grid, poses two major challenges, primarily related to             
+
+technical control and grid administration. Both challenges can potentially be addressed using a             
+
+blockchain. The ConsenSys energy team has several years of experience building and            
+
+demonstrating proof-of-concept blockchain-based distributed energy resource management       
+
+solutions. Through this experience, ConsenSys identified the opportunity to form Grid+, which            
+
+will build natively Ethereum-based utilities in deregulated markets. Grid+ will demonstrate           
+
+production ready blockchain-based energy solutions at scale in competitive commercial          
+
+environments. In doing so, Grid+ will enable the transactive grid of the future while proving the                
+
+advantages of Ethereum over incumbent technologies. 
+
+ 
+
+Grid+ is developing a hardware and software stack to create a secure Ethereum enabled              
+
+gateway and connect Internet-of-Things (IoT) devices. The hardware gateway, or “smart energy            
+
+agent”, is an Internet-enabled, always-on appliance which will securely store cryptocurrencies           
+
+and process payments for electricity in real-time. The agent will also programmatically buy and              
+
+sell electricity on behalf of the user and intelligently manage smart loads (e.g. Tesla Powerwall               
+
+or Nest thermostat). The software stack will work in conjunction with the smart energy agent to                
+
+make payments, using a combination of Grid+ designed payment-channels and a Raiden            
+
+network hub (when available). Grid+ is developing a system architecture that allows a typical              
+
+user to leverage cryptocurrencies while remaining unaware of it’s use. Interestingly, the            
+
+implementation of a secure, always-on system, with low friction payment rails, provides a             
+
+missing piece of critical infrastructure in the broader cryptocurrency ecosystem. The Grid+            
+
+5 
+
+
+
+Grid+ Whitepaper v1.6 
+
+infrastructure has many uses beyond electricity and will be key to enabling the widespread              
+
+adoption of cryptocurrencies. 
+
+ 
+
+ 
+
+  
+
+6 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+2 Introduction 
+
+2.1 The Energy Supply Chain 
+
+Before the Grid+ system is explained in great detail, a brief introduction of the current electrical                
+
+grid, its stakeholders, and the challenges facing them will be presented. If the reader is               
+
+intimately familiar with the electrical grid, they may skip this section.  
+
+Presently, the services needed to provide electricity to the consumer can roughly be divided into               
+
+four categories: generation, transmission, distribution, and retail. 
+
+2.1.1 Generation 
+
+Generation is electricity production by large-scale energy producers. Historically these          
+
+producers have been hydrocarbon (or nuclear) based power plants. In recent years large wind              1
+
+1“International Energy Outlook 201: Chapter 5- Electricity.” ​U.S. Energy Information Administration​. 
+https://www.eia.gov/outlooks/ieo/pdf/electricity.pdf 
+
+7 
+
+
+
+Grid+ Whitepaper v1.6 
+
+and solar farms have come online. In order for these alternative-energy entities to be              2
+
+considered a “generator” they must have generation capacity greater than 1MW.   3
+
+2.1.2 Transmission 
+
+Transmission is the business of moving electricity over long distances, usually from power             
+
+plants (generators) to consumer networks (distributors). For example, in Texas there are a             4
+
+series of power lines that span over 500 miles, operate at high-voltage (~300 kV), and transport                
+
+wind power from West Texas all the way to Houston. 
+
+2.1.3 Distribution 
+
+Distribution is the movement of electricity from the transmission (high voltage) network to the              
+
+consumer. Distributors operate lower-voltage electrical lines that connect to individual consumer           
+
+households or businesses. In the event of a power outage, consumers call their distributor to               5
+
+take care of the problem (e.g. re-wiring a fallen tower). For example, AEP is the distributor in                 6
+
+central Texas. 
+
+2.1.4 Retail 
+
+Retail is the sale of electricity to the consumers. Retailers are responsible for administering and               
+
+billing consumers. Depending on your region, retailers may be known by different names (e.g.              
+
+Retail Electricity Provider, or REP, in Texas). In deregulated markets, you might refer to the               
+
+retailer as your “utility”. Examples include Green Mountain Energy and Reliant Energy. 
+
+ 
+
+2Friedman, David. “Four Charts That Show Renewable Energy is on the Rise in America.” ​U.S. Dept. of 
+Energy. ​(14 Nov. 2016) https://energy.gov/eere/articles/4-charts-show-renewable-energy-rise-america 
+3North American Renewables Registry Operating Procedures (April 2013) 
+http://www.narecs.com/wp-content/uploads/sites/2/2013/12/NAR-Operating-Procedures_April_2013.pdf 
+4“Electricity Explained- How Electricity is Delivered to Consumers.” ​U.S. Energy Information and 
+Administration.  
+https://www.eia.gov/energyexplained/index.cfm?page=electricity_delivery 
+5“Electricity Distribution.” ​Institute for Energy Research​. (2 Sept. 2014) 
+http://instituteforenergyresearch.org/electricity-distribution/ 
+6Contact AEP Texas, https://www.aeptexas.com/contact/  
+
+8 
+
+https://www.eia.gov/energyexplained/index.cfm?page=electricity_delivery
+http://instituteforenergyresearch.org/electricity-distribution/
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+Figure 1: Diagram of Electrical Grid  7
+
+2.2 Regulated and Deregulated Markets 
+
+Electricity markets in the United States can be divided into two distinct groups: regulated and               
+
+deregulated. Figure 2 shows which states fall into each category. 
+
+7 http://www.incontext.indiana.edu/2010/july-aug/images/power_fig1.gif 
+
+9 
+
+
+
+Grid+ Whitepaper v1.6 
+
+Figure 2: Electricity Markets in the U.S.​   8
+
+In regulated markets, the four entities in the energy supply chain can operate as a single,                
+
+vertically integrated monopoly. In deregulated markets, governments mandate market         9
+
+segmentation such that each role in the supply chain must be operated by a separate entity.                10
+
+Deregulated markets offer substantially more competition and are more akin to a free market              
+
+because each company must sell their services in a competitive marketplace, which is typically              
+
+run by a government-franchised non-profit Independent System Operator (ISO). In addition to            
+
+running these competitive markets, ISOs are also tasked with maintaining grid stability and             
+
+8 https://www.electricchoice.com/map-deregulated-energy-markets/ 
+9Woodcock, Robin Deliso. “Regulated and Deregulated Energy Markets, Explained.” ​Energy Smart Blog. 
+(27 June 2014) 
+https://www.energysmart.enernoc.com/regulated-and-deregulated-energy-markets-explained 
+10“Regulated and Deregulated Energy Markets.” ​Customer First Renewables. 
+http://www.customerfirstrenewables.com/resources/regulated-deregulated-energy-markets/ 
+
+10 
+
+https://www.energysmart.enernoc.com/regulated-and-deregulated-energy-markets-explained
+
+
+Grid+ Whitepaper v1.6 
+
+reliability via market signaling. This latter job is performed via a computer control system,              11
+
+which the electricity industry refers to as a Supervisory Control And Data Acquisition (SCADA)              
+
+system.  12
+
+The SCADA system is used by the ISO to create signals for real-time energy as well as services                  
+
+markets such as ramping control, frequency regulation, or voltage support. The market signals             
+
+are provided to market participants, who then bid into the market and provide the services               
+
+needed to keep the grid running at the right voltage and frequency.  
+
+In deregulated markets, electricity retailers buy electricity at wholesale prices (in 1MWh energy             
+
+increments) and then sell that electricity directly to consumers. Retailers are not responsible for              
+
+powering customers directly, but are responsible for metering and billing. In addition to paying              
+
+for generation, transmission, and distribution, consumers also pay fees to their retailer. These             
+
+costs are largely comprised of marketing, administration, and managing risk/compliance for bad            
+
+debts and customer funds. This can (and often does) add up to quite a large percentage, as                 
+
+shown by the average ​price of electricity​ in various states in Figure 3.  13
+
+11To learn more about ISOs, in particular what they do and how they operate in New England,​ see 
+https://www.iso-ne.com/about 
+12See​ generally “SCADA SYSTEMS.” http://www.scadasystems.net/ 
+13“Electric Power Monthly.” ​U.S. Energy Information and Administration. ​(29 June 2017) 
+https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a 
+
+11 
+
+https://www.eia.gov/electricity/monthly/epm_table_grapher.cfm?t=epmt_5_6_a
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+Figure 3: Residential  vs. Industrial  pricing 14 15
+
+The difference between the residential and industrial price shown above comes mostly from the              
+
+costs passed to the consumer from their retailer. This illustrates the amount by which electricity               
+
+prices can be reduced from lowering costs associated with retail operations.  
+
+14In this paper, we use “residential” and “customer” pricing interchangeably. Residential customers (e.g. 
+households) are just one kind of utility customer (as opposed to commercial) and will be the target 
+demographic of Grid+. 
+15Industrial pricing reflects wholesale + distribution costs. Thus, the wholesale rate (the rate we are 
+targeting) will be lower than these numbers. 
+
+12 
+
+
+
+Grid+ Whitepaper v1.6 
+
+2.3 Existing Retailers 
+
+Sometimes referred to as “utilities”, retailers are responsible for billing and interacting with             
+
+customers in the last mile of the energy supply chain. An energy retailer buys electricity in the                 
+
+wholesale markets, pays the distribution system operator a fee for getting the electricity to the               
+
+customer, and then bills the customer for the service at a large markup over their cost of goods                  
+
+sold. Typically only about 50% of the cost of retail electricity is used to pay for the electrical                  
+
+energy itself. The other half is tied up in administrative burden, marketing, and risk              16
+
+management associated with bad debts. Retailers are often slow to evolve and rarely welcome              
+
+new technology with open arms.   17
+
+ 
+
+When a customer signs up for a legacy utility a credit check process begins, which determines                
+
+the likelihood that the customer will default on payments. Retailers are credit facilities, as they               
+
+provide energy on credit and then bill consumers in arrears, usually on a monthly basis.               
+
+Retailers deploy complex risk assessment algorithms which take into consideration the           18
+
+percentage of potentially delinquent customers and then add the expected uncollected value            
+
+(plus a buffer) into the rest of their customers’ bills. This means customers who pay on time are                  
+
+subsidizing delinquent and non-paying customers. This is exacerbated by the fact that states             
+
+regulate how long utilities must continue to provide power to their customers even after              
+
+delinquent payments (typically 3-15 days ). 19
+
+ 
+
+2.4 Challenges of Renewables 
+
+The installation of photovoltaic (PV) arrays is hastening the grid’s decentralization and            
+
+empowering consumers to become producers (turning them into “prosumers”). Approximately          
+
+38% of residential electricity cost pays for transmission infrastructure and losses during            
+
+16“Wholesale Vs. Retail Electricity Costs.” ​ISO New England​. 
+https://www.iso-ne.com/about/what-we-do/in-depth/wholesale-vs-retail-electricity-costs 
+17St. John, Jeff. “Dispatches from the Grid Edge: Tracking the (Slow) Adoption Curves for Software in the 
+Utility and Energy Industries.” ​GTM Squared​. (13 April 2017) 
+https://www.greentechmedia.com/squared/read/tracking-the-slow-adoption-curves-for-software-in-the-utilit
+y-and-energy-in 
+18Manning, Patrick and Tim Polak.“Winning Good Customers, Losing Bad Debt.” ​Bain Brief. ​(7 April 2011) 
+http://www.bain.com/publications/articles/winning-good-customers-losing-bad-debt.aspx 
+19 “Consumer Guide: Your Rights as a Residential Electric, Gas, or Steam Customer under HEFPA.”  ​NY 
+Department of Public Service​. 
+http://www3.dps.ny.gov/W/PSCWeb.nsf/979df87f099d1063852576880061e6b3/d580f8b12cdac9f985257
+687006f395e?OpenDocument 
+
+13 
+
+
+
+Grid+ Whitepaper v1.6 
+
+transmission. When a customer installs PV modules, however, the generated power need only             20
+
+travel a few meters from source to load. Moving power from a person’s roof to their refrigerator                 
+
+is significantly more efficient than sourcing it in from a generator 150 miles away. Household PV                
+
+ownership has proven it can offer a much more efficient energy solution that can also pay for                 
+
+itself over time. Solar adoption has outpaced even the most aggressive estimates from a              
+
+decade ago, and it is not expected to slow down anytime soon. (Figure 4) 
+
+ 
+
+Figure 4: U.S. PV Installation Forecast, 2010-2022  21
+
+ 
+
+Although environmentally friendly, PVs introduce new problems for the electrical grid because            
+
+the generated power must either be stored or used immediately. Typically, generated energy is              
+
+consumed by household load and any remainder is sold back to the grid. This may seem like a                  
+
+sustainable system, but it poses serious technical challenges when deployed at scale. In some              
+
+regions, PV penetration is so high that more energy is pumped back into the grid than the grid                  
+
+can handle, resulting in a condition called overvoltage. The grid must respond by curtailing              22
+
+production to remove excess energy or risk damaging its infrastructure. Furthermore, solar            
+
+generation is intermittent and is affected by local cloud cover and weather conditions. This              
+
+20 “Electricity Explained: Factors Affecting Electricity Prices.” ​U.S. Energy Information Administration. 
+https://www.eia.gov/energyexplained/index.cfm?page=electricity_factors_affecting_prices 
+21 http://www.seia.org/research-resources/solar-market-insight-report-2017-q2 
+22Mulkern, Anne C. “A Solar Boom So Successful, It’s Been Halted.” ​Scientific American​. (20 Dec. 2013) 
+https://www.scientificamerican.com/article/a-solar-boom-so-successfull-its-been-halted/ 
+
+14 
+
+
+
+Grid+ Whitepaper v1.6 
+
+intermittency causes rapid drop-offs or increases in produced energy which must be buffered by              
+
+other energy producers to maintain grid stability.  23
+
+ 
+
+Perhaps the most well known example of the challenges that are created as a result of high                 
+
+solar penetration is the so called Duck Curve , shown in Figure 5. 24
+
+ 
+
+ 
+
+Figure 5: California’s electrical load on April 17, 2017  25
+
+ 
+
+Colloquially named for the silhouette of a duck, this curve shows two peaks in              
+
+hydrocarbon-based power production (blue line) during the morning and night. The problem is             
+
+that solar energy is only generated during the day, but the peak load demand is in the evening.                  
+
+Therefore, power plants must quickly ramp-up generation by 50% or more as sunlight wanes.              
+
+This process is inefficient and challenges the capabilities of large power plants. On some days               
+
+in California, the solar production mid-day is so high that CAISO actually pays solar              26 27
+
+generators to ​not​ produce energy. This process is known as “curtailment”.  
+
+23 Fares, Robert. “Renewable Energy Intermittency Explained: Challenges, Solutions, and Opportunities.” 
+Scientific American​. (11 March 2015) 
+https://blogs.scientificamerican.com/plugged-in/renewable-energy-intermittency-explained-challenges-sol
+utions-and-opportunities/ 
+24St. John, Jeff.“The California Duck Curve is Real, and Bigger than Expected.” ​GTM. ​(3 Nov. 2016) 
+https://www.greentechmedia.com/articles/read/the-california-duck-curve-is-real-and-bigger-than-expected 
+25 http://www.seia.org/research-resources/solar-market-insight-report-2017-q2 
+26Paulos, Bentham. “Too Much of a Good Thing?: An Illustrated Guide to Solar Curtailment on California’s 
+Grid.”​ GTM​. (3 April 2017) 
+https://www.greentechmedia.com/articles/read/An-Illustrated-Guide-to-Solar-Curtailment-in-California 
+27 California ISO, http://www.caiso.com/Pages/default.aspx 
+
+15 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+If energy storage capabilities had grown at the same rate as PV adoption, the Duck Curve                
+
+would not exist. Fortunately, breakthroughs in battery manufacturing are driving down storage            
+
+costs (Figure 6). The levelized cost of energy storage (LCOS) is now as low as $0.13USD per                 28
+
+warrantied kilowatt-hour , a figure making batteries economically viable ​now if retail energy            29
+
+were priced dynamically like wholesale energy.   30
+
+ 
+
+Figure 6: Average Price of Energy Storage  31
+
+28Mearin, Lucan. “Without Tesla’s Batteries, the Power Grid Could Fail.” ​ComputerWorld from IDG. ​(27 
+April 2015) 
+http://www.computerworld.com/article/2915338/sustainable-it/without-batteries-like-teslas-the-power-grid-
+could-eventually-break.html  
+29 Explanation of a warrantied kWh, https://www.solarquotes.com.au/blog/powerwall-2-warranty/ 
+30 Solar Quotes, https://www.solarquotes.com.au/battery-storage/comparison-table/ 
+31 https://www.solarquotes.com.au/ 
+
+16 
+
+
+
+Grid+ Whitepaper v1.6 
+
+2.5 Using Ethereum in Electricity Markets 
+
+An often overlooked aspect of public cryptocurrencies is that of ​user agency​. In short, ​user               32
+
+agency is the concept that the user is in charge of her assets at all times, and those assets are                    
+
+easily exchangeable for other assets. Users of public cryptocurrencies secure their own funds             
+
+and authorize their own transactions. Public blockchains enable consumers to make payments            
+
+using any “tokenized” asset.  
+
+ 
+
+Grid+ provides an accounting layer for the energy ecosystem by utilizing Ethereum smart             
+
+contracts. Users retain control of their own assets and can choose exactly how they are utilized                
+
+in the system. By moving the transaction logic for both energy and payments onto a trustless                
+
+architecture (blockchain + state channels), Grid+ reduces the administrative burden of           
+
+processing transactions over legacy rails (traditional payment processors typically charge fees           
+
+of 1.5 - 2.5% ). Additionally, by pushing market signals to customers, Grid+ enables customers              33
+
+to make smarter decisions about their energy usage. This lowers their own costs, while also               
+
+increasing the efficiency, robustness, and reliability of the electrical grid as a whole. 
+
+ 
+
+In this section, key terms related to the Grid+ technology stack are defined. Readers              
+
+knowledgeable about Ethereum and related concepts may skip these definitions. 
+
+2.5.1 Ethereum 
+
+Ethereum is a readable, writable, and programmable ledger accessible to any individual with an              
+
+Internet connection. Thousands of users all over the world run software (each of these users is                
+
+running a “node”) that maintain the ledger and these users are financially incentivized by the               
+
+system itself to do so. Any user (even ones not running a node) may write a program and                  
+
+upload it to Ethereum. To do so requires some amount of ether, Ethereum’s underlying              
+
+currency, be paid to the owner of the node which appends the program to the ledger. 
+
+ 
+
+The program, now uploaded to the Ethereum “blockchain” (a specific kind of ledger), will live on                
+
+for as long as at least one person continues to run an Ethereum node. The program cannot be                  
+
+changed and anyone may interact with it. A program on the ledger is called a “smart contract”, a                  
+
+term coined in 1994 by Nick Szabo to describe a piece of code capable of executing some                 
+
+32 User Agency and IoT Identity.” ​Grid+​. (30 May 2017) 
+https://blog.gridplus.io/grid-3-user-agency-and-iot-identity-ce36239b9e2b 
+33“Credit Card Processing Fees and Costs.”​ Value Penguin. 
+https://www.valuepenguin.com/what-credit-card-processing-fees-costs 
+
+17 
+
+
+
+Grid+ Whitepaper v1.6 
+
+function within a decentralized ledger. Smart contracts can be trusted by anyone to execute              34
+
+exactly as-specified in their code, and the code itself is publically visible on the ledger. Once                
+
+deployed to Ethereum, these pieces of logic cannot be tampered with, destroyed, or restricted              
+
+by any party in any way. 
+
+2.5.2 Tokens 
+
+In the context of Ethereum, smart contracts colloquially referred to as “tokens” include a              
+
+minimum set of functionality defined by a community standard called ERC-20. This standard             35
+
+exists to ensure all tokens have the same minimal functionality (e.g. ability to be transferred)               
+
+and facilitates token interoperability. 
+
+ 
+
+Tokens can represent anything. For example, Alex could issue Alex Coin, redeemable (only by              
+
+Alex) for 1 hour of his labor. Nick Johnson , one of Ethereum’s core developers, created               36
+
+BeerCoin, stating “​a person's BeerCoin is only as valuable as the recipient's belief that they're good                
+
+for the beer, should it ever be redeemed”. Tokens can also be issued and backed by fiat money                  37
+
+deposits from a trusted organization or government. Such tokens might then be redeemable for the               
+
+issued fiat currency (e.g. US dollars) by the issuing institution. Grid+ believes that fiat backed stable                
+
+tokens will enable far more commerce to be conducted using Ethereum’s rails in lieu of traditional                
+
+payment processors. 
+
+2.5.3 Stable Tokens 
+
+A problem that has plagued digital currencies since their inception is price volatility.             
+
+Cryptocurrencies (e.g. ether, bitcoin) underlying decentralized protocols (Ethereum, Bitcoin) are          
+
+not issued by central institutions. Thus, they are not backed by anything but trust that there will                 
+
+be future demand both for the protocol and its native token. This leads to rampant speculation                
+
+which, in immature markets, leads to huge slips in liquidity and large price volatility. 
+ 
+
+The future of money cannot depend on volatile assets, which is why stable tokens have               
+
+remained a popular topic of conversation. Although difficult to implement on the Bitcoin             
+
+blockchain, stable tokens are simple to issue on Ethereum since all that is needed is an                
+
+institution to back them. If a trusted counterparty has a large reserve of U.S. dollars, it can mint                  
+
+USD tokens and sell them for $1 on a currency exchange. Those minted tokens can now move                 
+
+34Szabo, Nick. “Smart Contracts.” http://w-uh.com/download/WECSmartContracts.pdf 
+35 Ethereum EIPs, ERC20, https://github.com/ethereum/eips/issues/20 
+36 Nick Johnson, https://twitter.com/nicksdjohnson?lang=en 
+37Johnson, Nick. “Introducing BeerCoin.” ​Reddit. ​(Aug. 2016) 
+https://www.reddit.com/r/ethereum/comments/4v7opj/introducing_beercoin/ 
+
+18 
+
+
+
+Grid+ Whitepaper v1.6 
+
+through the Ethereum ecosystem freely until some user chooses to redeem her tokens in              
+
+exchange for a bank wire. 
+
+2.5.4 Payment Channels 
+
+Although tokens can move from user to user (and also from user to smart contract), each one of                  
+
+these transfers (called “transactions”) require that the global Ethereum ledger be updated. A             
+
+transaction requires the requester pay ether to the node making the ledger update. Before              
+
+seeing the updated token balances, all users must wait for the next ledger update, which takes                
+
+about 15 seconds in Ethereum. 
+
+ 
+
+It is not feasible for mainstream users to create a transaction every time they want to buy                 
+
+something. Both Bitcoin and Ethereum have seen massive network congestion as a result of              38
+
+increasing popularity, but much of that traffic can be ameliorated using technology called             
+
+payment channels. 
+
+ 
+
+As an analogy, imagine you are at a bar and plan to stay there all night. If you open a new tab                      
+
+and close it out after paying for each round, you must sign multiple receipts and the bar incurs                  
+
+multiple transaction fees from their payment processor (this is why they always ask if you want                
+
+to leave a tab open). If you instead keep your tab open across several rounds, you need only                  
+
+sign one receipt at the end and you save the bar some amount in transaction fees. 
+
+ 
+
+The concept is similar in Ethereum. Instead of creating 1,000 ledger updates, one can open a                
+
+payment channel and instead pass 1,000 mathematical proofs that prove the sender can pay              
+
+some number of tokens to the receiver. These can be verified outside of Ethereum (“off-chain”)               
+
+and only one proof (typically the last one) is needed to close the channel. Thus, one thousand                 
+
+transactions can be reduced to two: one to open the channel and one to close it. Simple                 39
+
+payment channels like the ones Grid+ uses are easy to design today, but more complicated               
+
+state channels are an ongoing topic of research and experimentation. (Appendix) 
+
+38“Mempool Size.” ​Blockchain​. https://blockchain.info/charts/mempool-size?timespan=1year 
+39Miller, Alex. “A Simple Ethereum Payment Channel Implementation.” ​Grid+. ​(12 June 2017) 
+https://blog.gridplus.io/a-simple-ethereum-payment-channel-implementation-2d320d1fad93 
+
+19 
+
+
+
+Grid+ Whitepaper v1.6 
+
+2.5.5 Proof of Stake and Casper 
+
+Readers familiar with Ethereum will be well aware of the coming Casper implementation of              40
+
+“Proof-of-Stake”. Casper (and more broadly Proof-of-Stake) is a significant upgrade to the            
+
+Ethereum protocol expected to be deployed around Q1 2018. At a high level, Casper allows               
+
+users who own ether to deposit it to a smart contract and then become permissioned to update                 
+
+the ledger. If one or more of these bonded validators act out of turn or attempts to update the                   
+
+ledger in a way which violates state transition rules, those changes will be rejected by the                
+
+broader set of stakers and those fraudulent validators will lose their entire ether deposit. If               
+
+instead these validators act honestly, they earn some amount of ether commensurate with the              
+
+fees in the transactions they have processed. 
+
+ 
+
+Note that this process of “validating” transactions in Casper requires that users cryptographically             
+
+“sign” data stating that they believe the data is factual and will induce a valid update of the                  
+
+ledger. This has some security implications which will be discussed later.  
+
+ 
+
+Although the transition to Casper will not affect how Grid+ operates (in that it will not change                 
+
+Ethereum’s usability), this protocol upgrade will be referenced later for other purposes. For more              
+
+information, see Vitalik Buterin’s article on proof of stake as well as his other writings on                41
+
+Casper (in the same blog). 
+ 
+
+ 
+
+ 
+
+  
+
+40 Ethereum Research, Casper 
+https://github.com/ethereum/research/blob/master/casper4/papers/casper_paper.md 
+41Buterin, Vitalik. “A Proof of Stake Design Philosophy.” ​Medium.​ (30 Dec. 2016) 
+https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51 
+
+20 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+3 Value Propositions 
+Ethereum brings several efficiencies to the energy industry, an industry historically slow to adopt              
+
+new technology. In January two Grid+ team members, Alex Miller and Mark D’Agostino,             
+
+presented to a large group of European energy retailers at a conference hosted by Rockstart               42
+
+in Amsterdam. Alex and Mark discovered each utility had a budget set aside for innovation               
+
+projects, but most were hesitant to adopt a cutting edge technology such as Ethereum. Grid+               
+
+believes the organizational intransigence of often state-franchised monopolies offers a          
+
+competitive advantage for Grid+. 
+
+ 
+
+Grid+ can immediately introduce efficiencies to electricity retailing by leveraging the public            
+
+Ethereum blockchain. This creates incentives for consumers to invest in distributed energy            
+
+storage, which will ultimately make renewable energy production more sustainable and efficient.            
+
+There are many advantages to the proposed Grid+ system, which are broadly grouped into              
+
+short and long term value propositions. 
+
+42 Rockstart Smart Energy Accelerator, https://www.rockstart.com/accelerator/smart-energy/ 
+
+21 
+
+
+
+Grid+ Whitepaper v1.6 
+
+3.1 Short Term - Energy Retailer 
+
+Grid+ will operate as a commercial electricity retailer in deregulated markets. There are             
+
+fundamental efficiencies Ethereum offers that will help Grid+ significantly undercut costs of            
+
+incumbent utilities. Approximately 50% of a retailer’s cost are not associated with the purchase              
+
+of wholesale energy and can potentially be removed through better technology and more             
+
+efficient processes. 
+
+3.1.1 Lower Variable Costs 
+
+Billing and settlement remain a largely manual process (think spreadsheets, calls to the bank,              
+
+and paper mail) for retailers. All these processes can be automated, and likely will be at some                 
+
+point, with or without Grid+ (automation is coming for us all ). Automation will reduce overhead               43
+
+costs, allowing Grid+ to lower consumer utility bills. 
+
+ 
+
+In addition to automation (which itself is an efficiency), Grid+ also introduces the efficiency of               
+
+user agency​, which means that Grid+ do not need to process transactions itself - the Ethereum                
+
+network takes care of that. All payments are recorded automatically and moved from one smart               
+
+contract (a payment channel) to another smart contract (the fee vault, which is called              
+
+Karabraxos - more on this later), without needing traditional payment processors. Thus, the only              
+
+variable cost associated with accounting and payments will be the costs of executing smart              
+
+contracts on the network, and these costs are largely mitigated by payment channels. 
+
+3.1.2 Eliminating Bad Debts 
+
+In addition to foregoing centralized payment processing, ​user agency also allows Grid+ to             
+
+eliminate costs related to risk. Rather than pooling risk as legacy utilities do, Grid+ will require                
+
+customers to pay for their electricity in real-time via currency stored on their agent device. As                
+
+the customer uses electricity their agent (an automated, always-on appliance) will make            
+
+payments, via a payment channel, at each billing cycle in real-time (every 15 minutes or one                
+
+hour, depending on the local ISO). In addition to adding currency to their agent (either ether or                 
+
+the Grid+ stable coin, BOLT), Grid+ will require customers make a refundable deposit that can               
+
+be partially drawn-down if the agent fails to pay on time. The deposit serves two purposes. First,                 
+
+it prevents interruptions in service if connectivity is lost. Second, it provides a buffer if the agent                 
+
+runs out of funds. Grid+ customers will be notified as their deposit is consumed, and once it                 
+
+43 “Humans Need Not Apply.” ​CGP Grey​. https://www.youtube.com/watch?v=7Pq-S557XQU 
+
+22 
+
+
+
+Grid+ Whitepaper v1.6 
+
+reaches some lower threshold, the customer will be notified of service termination. Customers             
+
+will always be able to top-off deposits if their deposits get partially utilized. Real-time payments               
+
+coupled with the deposits will prevent the accumulation of bad debt in any meaningful quantity. 
+
+3.1.3 Lower Marketing Expenses 
+
+Grid+ will offer a significantly lower price of electricity compared to incumbent retailers which will               
+
+likely lower the cost of customer acquisition over time (~$150 for current retailers ). Grid+              44
+
+anticipates initially spending more on customer acquisition, than the incumbent retailers, as it             
+
+establishes its brand and presence in existing markets. However, Grid+ also anticipates            
+
+customer acquisition costs decreasing over time. Since Grid+ is able to offer substantially lower              
+
+prices, it will have much lower customer turnover, which can be as high has 30% per year for                  
+
+traditional retailers in deregulated markets.   45
+
+3.2 Long Term - Distributed Storage and Open Markets  
+
+Since customers are given nearly frictionless access to the wholesale energy markets, they will              
+
+experience market-driven price fluctuations, which will enable their agents to make smarter            
+
+decisions about consumption. As the price of storage (i.e. batteries) drops, there will eventually              
+
+come a time when, it is in a rational consumer’s economic interest to purchase a battery to                 
+
+arbitrage energy prices and provide ancillary services to the electric grid. 
+
+3.2.1 Enabling Efficient Markets 
+
+The computation and allocation of costs associated with using the distribution network introduce             
+
+some of the largest inefficiencies in today's electrical grid. Fees are billed in a non-dynamic way,                
+
+socializing the cost of the infrastructure over all market participants on a per kWh usage basis.                
+
+Presently, pricing does not consider that each customer's kWh represent different real costs due              
+
+to variations in geography, network connection topology, and time of use. This socialization of              
+
+cost disincentivizes the adoption of DERs leading to economically irrational outcomes. With the             
+
+adoption of smart-meter technology at each node in the grid, including the customer endpoints,              
+
+the data needed for computing real-time dynamic distribution costs will become available.  
+
+44Drummond, Iain and Josh Lutton. “Reducing Customer Acquisition Costs.” ​Woodland Associates​. (28 
+Feb. 2013) https://woodlawnassociates.com/electrical-potential-solar-and-competitive-electricity/ 
+45 Borràs, David and Javier Serra. “Churn Management in Utilities.” ​Arthur D. Little. ​(2015) 
+http://www.adlittle.com/downloads/tx_adlreports/ADL_Churn_management_in_utilities.pdf 
+
+23 
+
+
+
+Grid+ Whitepaper v1.6 
+
+3.2.2 Natively Support P2P Markets 
+
+Geographically and topologically segmented markets will emerge once dynamic, granular          
+
+locational marginal pricing (LMP) is implemented on the distribution grid. Once this occurs there              
+
+will be situations where customers will not want to interact with wholesale markets directly, but               
+
+rather trade energy locally. At this point customers will be able to utilize Ethereum to facilitate                
+
+the exchange of energy directly in a peer-to-peer manner, rather than clearing on a centralized               
+
+market. Trading will be limited to customers of Grid+ or other participating retailers until              
+
+regulators make accommodations for P2P markets generally. 
+
+3.2.3 Integrate ISO Wholesale Markets 
+
+The problems that are faced by retail electricity markets, namely inefficient mechanisms for             
+
+accounting and settlement, as well as counterparty risk, are also issues in the ISO-operated              
+
+wholesale markets. Unlike the retail markets, the wholesale markets include far fewer            
+
+participants, but have much larger trade sizes.  
+
+ 
+
+Wholesale markets trade what are called “forward contracts”, which is a contract promising to              
+
+deliver energy at some future time. Therefore, there are considerable counterparty risks when             
+
+interacting in a market where some participants trade forward contracts. This risk has             
+
+manifested itself a number of times and has cost market participants and consumers large              
+
+amounts of capital with the most recent large failure being the bailout of Constellation Energy.               46
+
+NASDAQ has also realized that trading of financial instruments can benefit from blockchain             
+
+technology and have developed their own platform, Linq. In the long term Grid+ anticipates              47
+
+extending the technology developed for the residential business into the ISO operated            
+
+wholesale markets, at which point there would be no distinction between retail and wholesale              
+
+markets.  
+
+ 
+
+  
+
+46Hancock, Jay . “The Messed-up Wholesale Electricity Market.” (17 Jan. 2011) 
+http://www.mresearch.com/pdfs/455.pdf 
+47“Building on the Blockchain.” ​NASDAQ​ (March 2016) 
+http://business.nasdaq.com/Docs/Blockchain%20Report%20March%202016_tcm5044-26461.pdf 
+
+24 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+4 Intelligent Agent 
+
+ 
+
+The vast majority of customers who sign up for Grid+ will have no desire to learn how                 
+
+cryptocurrencies work. Grid+ is building a seamless solution that leverages the power of the              
+
+public Ethereum network without requiring users possess a high degree of technical aptitude.             
+
+One critical piece of the system that makes this possible is the Grid+ agent device, an                
+
+always-on, Internet-aware device shown in Figure 7. 
+
+25 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+Figure 7: Grid+ Agent Prototype 
+
+ 
+
+4.1 Basic Usage 
+
+At its core, the Grid+ agent is a computer that pays for a customer’s electricity usage in real 
+
+time. After the agent is registered, the customer purchases U.S. dollar stable tokens (called 
+
+BOLT) from Grid+ with a credit card or bank transfer. Once the payment settles, these BOLT 
+
+tokens are transferred to the user’s agent. As long as the agent holds BOLT, it may read from 
+
+the household smart meter and pay for the electricity usage in real-time. A schematic of this 
+
+process is shown in Figure 8. 
+
+Figure 8: Basic agent process 
+
+ 
+
+26 
+
+
+
+Grid+ Whitepaper v1.6 
+
+A customer may get started with Grid+ by signing up, purchasing an agent, registering that 
+
+agent, and buying BOLT on the Grid+ web console. The customer does not need to do anything 
+
+else until the agent runs out of BOLT (note that Grid+ will offer an automatic-payment option).  
+
+4.2 Agent Registration & Key Generation 
+
+Before shipping agent devices, Grid+ registers the serial number from the device in the Grid+               
+
+registry contract. Only Grid+ can register devices in this contract, which ensures unsupported             48
+
+devices do not report data and cannot make transactions. After registering the device, its serial               
+
+number is mapped to an Ethereum address generated by Grid+. 
+
+ 
+
+Once delivered to the customer, the agent may be registered with a serial number found inside                
+
+the box. This maps the owner’s wallet address to the serial number, which is itself associated                
+
+with the agent’s digital identifier. The agent is capable of making digital signatures from a               49
+
+secure hardware enclave and may act autonomously while still being registered with Grid+ and              
+
+owned by the customer. 
+
+ 
+
+There is clearly a problem with the registration workflow, and it may be obvious to some of the                  
+
+more advanced crypto users. If the device signs messages with the key Grid+ generated, this               
+
+defeats the purpose of ​user agency and makes Grid+ responsible for its security. Thus, the               
+
+device must generate its own key after the user claims it.  
+
+ 
+
+The technical details of this process are based on the following two lines of Solidity (an 
+
+Ethereum programming language ) code in the Grid+ registry contract: 50
+
+ 
+
+mapping (bytes32 => address) registry; 
+
+mapping (bytes32 => address) owners; 
+
+ 
+
+The first line maps a hash of the agent device’s serial number to an address. For each issued                  
+
+agent device, Grid+ assigns a serial number and generates a setup key on the device. Grid+                
+
+then calls a function on the registry contract to whitelist the setup key. After the setup key (on                  
+
+48 Grid+, Contracts, https://github.com/GridPlus/Contracts/blob/master/Registry.sol 
+49Specifically the agent will make ECDSA (Elliptic Curve Digital Signature Algorithm) signatures using the 
+secp256k1 curve. These signatures are presently required to participate in Ethereum and the 
+corresponding cryptographic key pairs serve as the agents’ digital identities.  
+50Solidity documentation, https://solidity.readthedocs.io/en/develop/ 
+
+27 
+
+
+
+Grid+ Whitepaper v1.6 
+
+device) is registered, it is seeded with a small amount of ether and the agent is shipped to the                   
+
+user.  
+
+ 
+
+Once the user receives and boots the device for the first time, it will automatically generate a                 
+
+new key-pair and call the registry contract to replace its setup key with the new wallet key-pair.                 
+
+Only the consumer has access to the newly created private key, thus she now has ​user agency​.                 
+
+Further, to ensure utmost transparency, Grid+ has open sourced all its client code, which it               
+
+welcomes the broader community to thoroughly review.  
+
+ 
+
+The second mapping above is set by the human user claiming a device. The owner must have a                  
+
+serial number on hand and may only claim a device that was registered by Grid+. To see how                  
+
+this works in action, please explore the Grid+ demo application.   51
+
+4.3 Advanced Usage 
+
+The design of Grid+ system architecture is shown in Figure 9. 
+
+ 
+
+Figure 9: Grid+ System Architecture 
+
+For additional security, Grid+ will allow the use of a multi-signature wallet. For those unfamiliar               
+
+with this concept, it is relatively simple. In order to initiate a transaction to move funds or trigger                  
+
+51Grid+ Demo Application, https://app.gridplus.io 
+
+28 
+
+
+
+Grid+ Whitepaper v1.6 
+
+a contract, the transaction requires ECDSA signatures from more than one private key. A user               
+
+can create a 2 of 3 multisig contract account which requires at least 2 of the 3 keys to sign any                     
+
+given transaction. Grid+ plans to use a simple multisig utilizing detached signatures as             52
+
+designed by Dr. Christian Lundkvist. Under Metropolis (Ethereum’s next major update),           
+
+multi-signature wallet contracts will be able to transact as normal accounts . 53
+
+The multisig scheme prevents a hacker from gaining access to customer funds if the agent               
+
+device is hacked. The benefits of ​user agency are nullified if an attacker can connect to your wifi                  
+
+and break into your agent to move your agent’s BOLT and ether into another account. The                
+
+diagram above shows MS1, MS2, and MS3 - which all represent different private keys in a                
+
+multisig setup. This allows a user to utilize a ​vault​ setup wherein she can deposit larger sums.  
+
+Practically, this means a user is ​always in control of her funds (MS2 + MS3). In a situation                  
+
+where the agent device is stolen/destroyed, the user still maintains the ability to access her vault                
+
+(MS1 + MS2). This setup scheme allows large amounts of value to be stored - outside of the                  
+
+agent device’s hot wallet. While this setup is ​recommended​, it is not required. Multisig              
+
+transactions incur a larger transaction fee (although this may not be true in future versions of                
+
+Ethereum ) and there exists some economic trade-off between security and cost which can be              54
+
+different for each user. In a scenario where a casual user spends $50 per month on energy, she                  
+
+may be willing to store that on her agent’s hot wallet. When energy bills are in the hundreds or                   
+
+thousands of dollars, or a user wishes to store six months of electricity worth of cryptocurrency                
+
+on the agent, she may desire the additional level of security provided by a multisig account.  
+
+4.4 Agent Energy Trading 
+
+To better understand what decisions an agent makes on behalf of a user, the reader must first                 
+
+understand some of the intricacies of the electricity market. 
+
+ 
+
+It was previously stated that Independent System Operators (ISOs) manage wholesale markets            
+
+wherein producers sell electricity and utilities buy it for resale to their customers. This is a simple                 
+
+description, but it is also a gross oversimplification of how wholesale electricity markets work.              
+
+Wholesale markets have much higher degrees of complexity, largely driven by the fact that load               
+
+on the electrical grid must match, nearly exactly, the generation at any given point in time. If                 
+
+52 Christian Lundkvist, Simple-multisig, https://github.com/christianlundkvist/simple-multisig 
+53 Ethereum EIP 86, https://github.com/ethereum/EIPs/pull/208 
+54 Ethereum EIPs, Signature Abstraction, https://github.com/ethereum/EIPs/pull/208 
+
+29 
+
+
+
+Grid+ Whitepaper v1.6 
+
+generation significantly deviates from load either a high-voltage or low-voltage situation occurs,            
+
+either of which can severely damage equipment attached to the network. ISOs have created              
+
+systems that help manage the grid in a stable manner throughout the day, but prefer to use                 
+
+market mechanisms to coordinate consumers and producers in such a way as to keep the grid                
+
+balanced. To ensure this goal, ISOs have created markets in which they incentivize the              
+
+coordination of disparate interests. Three of largest markets are day-ahead, real-time, and            
+
+demand response. 
+
+ 
+
+4.4.1 Day-Ahead and Real-Time Markets 
+
+One of the mechanisms that helps to maintain the stability of the grid is the ability to forecast                  
+
+both demand and production. ISOs operate what are known as day-ahead-markets which            
+
+allows both generators and utilities to buy and sell forward contracts on electricity for one day in                 
+
+the future. These markets typically operate in 1 hour windows, such that from 1pm to 2pm on a                  
+
+given day, market participants bid on the forwards for 1pm to 2pm the following day. The                
+
+forwards market is locked in by 2pm, and the corresponding parties are then contractually              
+
+obligated to produce or consume the specified amount of energy the following day from 1pm to                
+
+2pm. This gives the generators time to plan their production to match what the market believes                
+
+will be the demand one day in advance. The ability to plan ahead helps producers manage their                 
+
+operations and supply chains in a manner that is significantly more efficient and minimizes              55
+
+drastic changes in demand on other generators in the network. This also incentivizes             
+
+consumers to try and accurately predict their consumption one day ahead because they can              
+
+mitigate price volatility in real-time markets since prices in the day-ahead markets are often less               
+
+expensive.  
+
+ 
+
+The real-time market is exactly as it sounds. It is the market for buying and selling energy in                  
+
+real-time or near real-time. Depending on the specific market there can actually be one or               
+
+multiple markets that fall within the real-time designation; such as 1 hour, 15 minutes, or 5                
+
+minutes. The difference between the real-time prices and the day-ahead prices for the Maine              
+
+interconnection on June 11th, 2017 are shown below in Figure 10. 
+
+55 Marcel Antal et al. “A System of Systems Approach for Data Centers Optimization and Integration into 
+Smart Energy Grids.” ​Science Direct.​ (24 May 2017) 
+http://www.sciencedirect.com/science/article/pii/S0167739X17310129 
+
+30 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+ 
+
+Figure 10: LMP for Maine Node 06/11/2017​  56
+
+ 
+
+How much energy will a user need tomorrow? Should she buy it in the day-ahead markets,                
+
+real-time markets, or some combination thereof? These are questions a smart agent device can              
+
+answer. Normally, this decision is made by a utility which is not strongly incentivized to optimize                
+
+costs for individual consumers. Instead, they attempt to minimize overall volatility, and socialize             
+
+the average cost of energy throughout the day over their customer base. Most utilities will               
+
+charge their customers a flat rate regardless of how much electricity their customers use, when               
+
+they use it, or how much it actually costs to buy. The flat rate is based on the average wholesale                    
+
+price plus some non-negligible markup (~30-50%).   57
+
+ 
+
+Although energy storage has many benefits and is an ideal distributed resource to be controlled               
+
+by independent smart agents in real-time, the fact remains that there does not yet exist a high                 
+
+degree of energy storage penetration in the market place. This will likely change in the near                
+
+56 https://www.iso-ne.com/isoexpress/web/charts 
+57Bohi, Douglas R. and Karen L. Palmer. “The Efficiency of Wholesale vs. Retail Competition in 
+Electricity.” ​The Electricity Journal. 
+https://www.hks.harvard.edu/hepg/Papers/Bohi_Palmer_Efficiency_1096.pdf 
+
+31 
+
+
+
+Grid+ Whitepaper v1.6 
+
+future as market incentives are updated to accommodate the burden renewables place on the              58
+
+grid. In the proposed scenario wherein residential customers have access to real-time pricing in              
+
+the wholesale market, the incentive for installing energy storage exists. Customers with energy             
+
+storage can have their agent conduct temporal energy arbitrage and generate revenue. This             
+
+can be done simply by buying electricity when it is cheap and selling it back or consuming it                  
+
+when energy is expensive. For example, if electricity is -$0.10/kWh from 6-8am (a price not               
+
+inconceivable based on Figure 10) and +$0.25/kWh from 4-6pm, a savvy arbitrageur would be              
+
+able to net +$0.35/kWh. For a Tesla Powerwall II , this would generate around $3.5 per day or                 59
+
+$1275 dollars per year, allowing the Powerwall to pay for itself within six years. (Appendix) 
+
+4.4.2 Demand Response 
+
+Although ISOs can control the generation side of the electrical grid through day-ahead and              
+
+real-time energy markets, they must employ other methods to incentivize loads and ensure grid              
+
+balance. One of these balancing techniques is called demand response. Rather than paying             
+
+generators to produce more energy, ISOs can pay consumers who have flexibility in their loads               
+
+to shut-down those loads for a short period of time. This creates a new set of opportunities for a                   
+
+customer’s agent to react to the economics of the demand response market.  
+
+ 
+
+The Nest smart-thermostat is an example of what is known as a dispatchable load. A               60
+
+customer’s agent can monitor the demand response markets and, if configured to do so, use a                
+
+Nest to turn off heating or air conditioning for a short period of time in order to earn revenue.                   
+
+The grid’s market signals for demand response can be broadcast to all nearby Grid+ agents,               
+
+which can offer bids stating they will turn off their household air conditioning if a certain price is                  
+
+paid. If enough bids are made to satisfy the ISO’s resource increment requirement (usually 100               
+
+kWh), then the aggregate bid would be broadcast into the demand response market by Grid+.               
+
+The revenue that is generated from the service could then be sent to participating agents. 
+
+ 
+
+In addition to offering services to demand response signals, a customer’s agent could also use               
+
+the Nest to intelligently control the home’s temperature based on the real-time market prices.              
+
+For example, if the price of electricity is usually highest at 7pm, the thermostat could cool the                 
+
+house 2 degrees below the set temperature of the house by say 6:30pm and then allow the                 
+
+house to rise 2 degrees above the set temperature by 7:30. This in turn saves the customer                 
+
+58Miller, Alex. “The Future of Energy Markets.” ​Grid+​. (18 May 2017) 
+https://blog.gridplus.io/gridx-the-future-of-energy-markets-da104c285363 
+59 Tesla Powerwall, https://www.tesla.com/es_ES/powerwall?redirect=no 
+60 NEST thermostat, https://nest.com/thermostat/meet-nest-thermostat/ 
+
+32 
+
+
+
+Grid+ Whitepaper v1.6 
+
+money by avoiding expected consumption of energy at peak prices. Moreover, there are also              
+
+situations wherein the real-time price of electricity can spike in excess of 3-5 times the average                
+
+electricity cost due to shortfalls in generation and/or congestion in distribution. (Figure 10) If the               
+
+agent knew that the home was already within the consumer’s pre-configured comfortable            
+
+temperature range, it could choose to forego purchasing energy for 15 minutes in anticipation              
+
+that the electricity rate will normalize in the near future.  
+
+ 
+
+As more of the user’s devices are connected to the agent, it will be able to make even more                   
+
+intelligent consumption decisions. For example, if you own a TESLA, you might normally come              
+
+home from work and start charging your car. If your agent knows that you aren’t going out                 
+
+tonight, it could defer charging the car until the early hours of the morning when electricity is                 
+
+significantly less expensive. Both Nest and Tesla provide APIs that can be used to interface               
+
+these devices with the Grid+ system. 
+
+ 
+
+It is important to highlight the value of smart devices that moderate a customer’s electricity               
+
+consumption profile. These IoT devices on their own hold valuable data, but lack the ability to                
+
+transact on a shared financial infrastructure and create an economic benefit for their owner. The               
+
+Grid+ smart energy agent is the central point of both the financial connectivity and decision               
+
+making for a customer’s collection IoT devices.  
+
+ 
+
+4.4.3 Intelligent Economically Driven Decisions 
+
+The decision-making capabilities of the agent will be further enhanced as information sharing             
+
+between customer and agent increases. For example, if your smart phone periodically            
+
+broadcasts your location to your agent, the agent would be able to figure out when you are                 
+
+leaving the house, and when you are coming back. If you stay late at work, or decide to go                   
+
+downtown on a date, your agent would know to delay cooling the house until you are on your                  
+
+way home. Say you have a conference in Portland, your agent could look at your calendar and                 
+
+determine that you will not be home for the next three days. It could then decide not to purchase                   
+
+as much energy in the day-ahead markets because it will know that you will not need to run your                   
+
+AC system.  
+
+ 
+
+Note: This could result in privacy concerns for some users, however the data that is transmitted                
+
+from the Grid+ smartphone app will be encrypted with the agent’s public key and will only be                 
+
+readable locally by the customer-controlled agent.  
+
+33 
+
+
+
+Grid+ Whitepaper v1.6 
+
+4.5 Secondary Uses of the Agent 
+
+The Grid+ agent device is integral to the Grid+ system; however, Grid+ imagines other users in                
+
+the Ethereum ecosystem will benefit from it as well. The Grid+ agent is a standalone computer                
+
+with natively integrated hardware and software for the Ethereum protocol. The agent will             
+
+maintain its own Ethereum light client, which is designed for resource-constrained computing            
+
+environments. Users will be able to utilize the agent for transaction signing in a secure               61
+
+enclave. The security topology of the Grid+ system will enable secure and robust storage of               
+
+cryptocurrency, secure signing of prepare and commit transactions in Proof-of-Stake with           
+
+Casper, and a secure cryptocurrency API for IoT devices.  
+
+4.5.1 Storing Cryptocurrency 
+
+Ever since the earliest days of Bitcoin, securely storing cryptocurrency has been a primary              
+
+concern and a challenge for many users. Although there have been a number of advances               
+
+beginning with paper wallets, multi-signature accounts, and hardware wallets, all of these            
+
+methods largely depend upon assets being stored offline to maintain security. Offline wallets             
+
+create significant friction in signature creation, and multisignature wallets introduce “social           
+
+latency”. Furthermore, physical wallets rely upon the availability of a single device or safe              
+
+storage of a single plaintext backup. Fundamentally, both the air gapped nature of incumbent              
+
+methodologies as well as the transactional friction introduced make these methods incompatible            
+
+with an efficient, frictionless economy of the future. This is most apparent when it comes to                
+
+using cryptocurrency in IoT applications such as the transactive grid.  
+
+ 
+
+Taking this into account, Grid+ proposes a new security architecture that combines all of the               
+
+state-of-the-art methods of securing cryptocurrencies into a single system. The multi-signature           
+
+system coupled with a secure hardware enclave, secure computing transaction verification,           
+
+physical second factor verification, and segregation of key storage, creates a system where             
+
+users will be able to reliably and safely store larger amounts of cryptocurrency in a               
+
+standard-setting, secure, robust, and high availability (almost always online) way. 
+
+4.5.2 Proof-of-Stake Signing  
+
+After the implementation of Casper, Ethereum stakers will need to ensure online connectivity             
+
+with near-zero downtime, or else risk a negative interest rate on deposits. Thus, many in the                
+
+61Ethereum, Light client protocol, https://github.com/ethereum/wiki/wiki/Light-client-protocol 
+
+34 
+
+
+
+Grid+ Whitepaper v1.6 
+
+space believe running instances on Azure or AWS, which have nearly 100% uptime, is the most                
+
+desirable option. But storing private keys in the cloud will put potentially billions of dollars worth                
+
+of ether at risk. 
+ 
+
+The Grid+ agent can serve the purpose of a “Casper-in-the-Box” remote signer. A user may run                
+
+the Casper protocol in AWS or Azure and pass the raw, unsigned transaction details to the                
+
+Grid+ agent device. The agent would then locally sign the staking transactions. This ensures              
+
+that private keys never leave the protection of a secure enclave, under the staker’s supervision.               
+
+Once again - this structure coincides with the Grid+ team’s strong belief in ​user agency​. Even                
+
+more interesting is to imagine using an application running on top of Ethereum to provide the                
+
+data to help secure the network. One could envision that a staker might outsource              
+
+computational jobs to Golem , or iExec , and have unsigned transactions with provable,            62 63
+
+appropriate data returned to the agent device. The agent would pay for those computations in               
+
+GNT or RLC, then sign and broadcast the transaction details constructed using purchased             
+
+computation. All data analysis is done via an Ethereum application and transactional data is              
+
+signed on a customer’s agent. Thus, the Grid+ agent can potentially secure the Ethereum              
+
+ecosystem running Casper without ever leaving the Ethereum rails.  
+
+4.5.3 Ethereum API for IoT 
+
+Although the secondary use cases may appear to only be serving a niche use case, over time                 
+
+Grid+ anticipates the agent could be game changing to cryptocurrency adoption. The initial use              
+
+case of signing processed transactions during the Casper implementation is a small one.             
+
+However, in the future the Grid+ agent can serve as a financial gateway for all IoT devices. If                  
+
+the projections for IoT enabled devices are true, these types of agent devices connected to the                
+
+Ethereum network could be of profound importance. By 2020 it is estimated there will be 20                
+
+billion connected devices that will need to transact value. The Ethereum network can serve as               64
+
+the transactional layer for a device connected world. However, having all IoT devices sign              
+
+Ethereum transactions will be inherently insecure, thus using a proxy agent to sign on behalf of                
+
+other IoT devices is a logical construct. Therefore, Grid+ is developing a RESTful API through               
+
+which other IoT devices can connect to the Grid+ agent and send or receive payments in a                 
+
+simple, secure, and permissioned way. Grid+ imagines this device will become standard as IoT              
+
+becomes ubiquitous.  
+
+62Golem Network, https://golem.network/ 
+63iExec project, http://iex.ec/ 
+64Gartner Newsroom, (7 Feb. 2017) http://www.gartner.com/newsroom/id/3598917 
+
+35 
+
+
+
+Grid+ Whitepaper v1.6 
+
+4.6 Integration and Testing 
+
+Is this all theoretical, or has Grid+ actually implemented the above designs? The Grid+ team felt                
+
+it was necessary to do real world testing prior to announcing this design pattern to the world.                 
+
+Over the past year, working in conjunction with one of the world’s largest energy companies, the                
+
+Grid+ team has deployed code onto a specific 3kWh smart-battery from a European producer.              
+
+Grid+ has proven the concept and is now rewriting much of that code in a lower level language                  
+
+for what will be a large, production deployment. Grid+ is working with some of the most                
+
+progressive energy companies in the world, and looks forward to experimenting on larger             
+
+batteries (such as the 14kWh Tesla Powerwall). It is important to note that both the Grid+ design                 
+
+and its ambitions to operate multiple retailers do ​not rely upon meaningful penetration of              
+
+distributed energy storage in any of the markets serviced by Grid+. Storage capabilities opens              
+
+up many additional revenue streams for Grid+ customers (including offering ancillary services to             
+
+the grid), but Ethereum by itself can still enable lower cost electricity via dis-intermediation and               
+
+user agency​.  
+
+36 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+5 Tokens 
+Note: This section is undergoing active structuring with leading law firms. While we do not 
+expect major rewrites, some of this section may change in the future. In the event of a change, 
+the whitepaper version number will be incremented. 
+
+Grid+ will operate with a two-token model, with each token being ERC-20 compliant. The              65
+
+BOLT token is a stable-coin, redeemable by Grid+ customers for $1 worth of energy and backed                
+
+by USD deposits. The GRID token allows Grid+ customers to purchase electricity at wholesale              
+
+price. Each GRID token may be redeemed for a certain amount of electricity at wholesale price,                
+
+with that number being a function of the total supply. 
+
+5.1 The BOLT Token 
+
+BOLT is the currency required to use the Grid+ platform. It is a stable currency, with each BOLT                  
+
+redeemable for $1 worth of energy on the Grid+ platform at all times. BOLTs are only created                 
+
+65 The Merkle, What is the ERC20 Ethereum Token Standard? 
+https://themerkle.com/what-is-the-erc20-ethereum-token-standard/ 
+
+37 
+
+
+
+Grid+ Whitepaper v1.6 
+
+when customers deposit fiat (or ether, which is sold for fiat) to Grid+ and are destroyed when                 
+
+Grid+ customers redeem BOLT for USD. These creation and destruction events are defined             
+
+according to a technical specification first proposed by a member of the Grid+ team, Alex Miller.               
+
+The customer may purchase BOLT tokens directly for her device or may purchase them for                66
+
+her own wallet and move them to her device at any time. Before an agent can pay for energy, it                    
+
+must open a payment channel with Grid+ by depositing BOLT, a process that occurs              
+
+automatically. Both energy wholesale costs and fees are taken from this BOLT deposit when the               
+
+channel is closed. 
+
+5.1.1 BOLT Redemption 
+
+Any Grid+ customer who holds BOLT is free to exchange them for fiat money at any time. This                  
+
+requires KYC (which occurs when the customer signs up for Grid+ service) as well as a fee                 
+
+associated with initiating a bank transfer. In the event of redemption, BOLTs are destroyed and               
+
+the token supply is decreased.  67
+
+5.1.2 The Fee Vault: Karabraxos 
+
+Grid+ does​ not ​collect fees directly; rather they are routed from each closed payment channel to 
+
+a smart contract known as Karabraxos, which can be found at ​karabraxos.eth ​.​ ​(Figure 11) 
+
+The main purpose of Karabraxos is for Grid+ to be transparent about the number of BOLT it is 
+
+earning and for the public to have some idea of how much liquidity will be available for usage in 
+
+Raiden when available. 
+
+ 
+
+Note that Karabraxos holds BOLT collected both from retail electricity customers ​and​ from fees 
+
+generated by the Grid+ Raiden hub. 
+
+66Ethereum EIP621, https://github.com/ethereum/EIPs/pull/621 
+67BOLT contract, https://github.com/GridPlus/contracts/blob/master/BOLT.sol; ​see also ​EIP 621, 
+https://github.com/ethereum/EIPs/pull/621 
+
+38 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+Figure 11: Artist’s conception of Karabraxos 
+
+5.3 The GRID Token 
+
+A fixed number of GRID tokens will be created once and sold in the upcoming Grid+ token sale. 
+
+Each GRID token is a credit on the Grid+ platform, redeemable at any time for electricity (in 
+
+kWh) at wholesale cost. At the time of redemption, GRID tokens are converted to a fixed 
+
+number of kWh (a function of the current supply) and assigned a timestamp by the redemption 
+
+contract. Once redeemed, GRID are taken out of supply forever via a mechanism modeled after 
+
+EIP 661.  68
+
+5.3.1 GRID redemption 
+GRID tokens are redeemed for wholesale electricity on-chain:  
+ 
+function redeem(bytes32[3] sig, uint amount) { 
+    ERC20 grid = ERC20(GRID_ADDRESS); 
+    if (!grid.provable_redeem(sig, amount)) { throw; } 
+    uint kwh = getKwh(amount); 
+    Redemption(msg.sender, amount, kwh, now); 
+
+68 https://github.com/ethereum/EIPs/issues/661 
+
+39 
+
+
+
+Grid+ Whitepaper v1.6 
+
+} 
+ 
+This function provably redeems GRID tokens using the specification outlined in EIP 662.  This 69
+
+redemption removes GRID tokens from the sender’s balance and also from the total GRID 
+
+supply. Once redeemed, a ​Redemption ​event  is emitted by the contract, linking the agent’s 70
+
+address to the number of GRID redeemed as well as the number of kWh credited through this 
+
+redemption. The ​getKwh ​function is as follows: 
+
+ 
+function getKwh(uint amount) returns (uint) { 
+    ERC20 grid = ERC20(GRID_ADDRESS); 
+    uint grid_amount = safeMul(amount, 100); 
+    uint kwh = safeDiv(safeMul(grid.initialSupply, grid_amount), 
+grid.totalSupply); 
+    if (kwh > 50000000000000000000000) { kwh = 
+50000000000000000000000; } 
+    return kwh; 
+} 
+ 
+Note that only a percentage of total electricity sold by Grid+ can be purchased at wholesale 
+
+using GRID per unit time.  
+
+ 
+
+The number of kWh received per GRID redeemed is a function of the number of GRID tokens in 
+
+existence at the time of redemption, with a ceiling of 50,000 kWh/GRID and a starting reward of 
+
+100 kWh/GRID. This ceiling is reached when the total GRID supply decreases to approximately 
+
+0.5% of the initial supply and holds until there are no more GRID left. 
+
+ 
+
+A projected redemption reward curve is shown in Figure 12 using an initial GRID supply of 
+
+200,000,000. Note that the GRID supply has not yet been finalized and this is simply an 
+
+example. 
+
+ 
+
+69 https://github.com/ethereum/EIPs/issues/662 
+70 Ethereum StackExchange, What is an event? 
+https://ethereum.stackexchange.com/questions/11228/what-is-an-event 
+
+40 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+Figure 12: Expected GRID reward 
+
+5.3.2 Applying Wholesale kWh 
+Once GRID have been redeemed and an event emitted, the Grid+ hub reads that event and 
+
+references it when billing the agent in the future. A typical bill  includes the following: 71
+
+ 
+{ 
+  price: 0.1,            // units of $/kWh 
+  wholesale_price: 0.08  // units of $/kWh 
+  amount: 1,             // units of kWh 
+} 
+ 
+
+In this simple billing example, the customer used 1 kWh of power. If the agent has recently 
+
+redeemed GRID (recorded in the ​Redemption ​ event), the wholesale price is passed to the 
+
+customer and the customer pays $0.08, with no additional markup. If a customer has no amount 
+
+of redeemed GRID associated with the agent, the customer pays the normal Grid+ price of 
+
+$0.10. 
+
+ 
+
+For example, suppose a customer has redeemed GRID and been credited 10 kWh at wholesale 
+
+price. If the above bill was issued to the agent, it would pay $0.08 and the wholesale credits 
+
+would be reduced from 10 kWh to 9 kWh (because this bill used 1 kWh). This credit (now 9 
+
+71 Note that there are other pieces of billing data irrelevant to this discussion. 
+
+41 
+
+
+
+Grid+ Whitepaper v1.6 
+
+kWh) would decrease with each subsequent bill until it hits 0 kWh, at which point the agent 
+
+would return to paying the normal Grid+ price (wholesale + markup). 
+
+  
+
+42 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+ 
+
+6 Business Model 
+Grid+ revenue will be generated from markup on wholesale energy prices, transaction fees,             
+
+interest on capital backing BOLT tokens, and sales of agents. Grid+ will drive energy prices as                
+
+low as possible and operate the energy business near-cost in the long-term (i.e. paying for               
+
+expenses, but making little-to-no profit off of the energy fees charged). 
+
+6.1 Markup on Energy 
+
+Grid+ will charge its customers for the price of energy they purchase in the wholesale market,                
+
+the fees associated with its distribution, as well as a percent markup over these latter two costs.                 
+
+Figure 13 shows the average wholesale cost of electricity in Texas over time. Note that in 2016                 
+
+roughly half of the cost of residential electricity represented the markup by retailers. 
+
+43 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+Figure 13: Wholesale vs Residential Pricing 
+
+ 
+
+Grid+ will charge 20% above the wholesale + distribution cost implying a cost of $0.068/kWh,               
+
+for the Texas market, compared to the current average retail cost of $0.115/kWh. This would               
+
+provide a customer savings of ~38%. Based on the projected number of customers during the               
+
+Tesla Epoch (see Roadmap below), this would lead to $16 to 32mm in net revenue per year                 
+
+generated from electricity sales. 
+
+ 
+
+The mandatory use of deposits results in the complete removal of bad debt expenses, which               
+
+creates a competitive advantage over incumbent retailers. The deposit model creates a            
+
+somewhat hidden virtuous cycle. Customers who are likely to default on payments will be              
+
+unwilling to post a deposit and join the Grid+ platform. Thus, high credit risk customers are                
+
+pushed onto incumbent retailers, thereby increasing Grid+’s competitive advantage over time. 
+
+6.2 Raiden Network Transaction Fees 
+
+Given its system design, Grid+ is poised to become one of the largest stable-coin issuing               
+
+entities on the public Ethereum network. Issuing large amounts of fiat tokens puts Grid+ in a                
+
+unique situation to act as a central bazaar for a great deal of commerce on the public Ethereum                  
+
+network. Grid+ anticipates the ability to operate a large fiat hub on the Raiden network with a                 
+
+44 
+
+
+
+Grid+ Whitepaper v1.6 
+
+significant amount of liquidity. With this hub established, Grid+ foresees a secondary revenue             
+
+source: charging fees on microtransactions inside the Grid+ Raiden hub. 
+
+These Raiden fees should not be conflated with Grid+ fees. The former is simply to pay for                 
+
+using the Grid+ Raiden hub to conduct commerce (outside of Grid+), while the latter is a markup                 
+
+on energy to pay for Grid+ costs. Note that no Raiden fees will be added to channels open for                   
+
+Grid+ services (i.e. Grid+ will not have double-fees). Also note that Raiden fees, like all other                
+
+fees in Grid+, go to Karabraxos (which is intended to capture ​all​ revenue streams of Grid+). 
+
+Grid+ will work to capture market share in the early days of Raiden, rather than maximize short                 
+
+term revenue generated through the hub. Therefore, the fees charged will be extremely low (on               
+
+the order of $0.0001 per tx). As of this writing, the average cost of a transaction on the Visa                   
+
+network is 2% of the transaction cost + $0.10, thus for a $10 transaction, the fee would be                  
+
+$0.30. Although one could argue that Grid+ only needs to beat Visa, the team believes it must                 72
+
+strive to beat the costs of the public Ethereum network as well. Currently, the median cost for a                  
+
+simple transfer is $0.11 on the public Ethereum network. Thus, the expected transfer fee for a                73
+
+$10 payment in the Grid+ Raiden hub will be 0.033% the cost or the Visa transaction and 0.05%                  
+
+of the public Ethereum transaction. This means Grid+ Raiden hub transactions will be             
+
+2,000-3,000 times less expensive than typical payment costs. It is not inconceivable that other              
+
+commerce will look to utilize BOLT inside of the Grid+ Raiden hub to capitalize on these                
+
+extremely low costs.  
+
+6.3 Interest on BOLT deposits 
+
+The fiat currency backing BOLT will be used by Grid+ to pay for the wholesale electricity when                 
+
+BOLT is redeemed by a consumer for electricity. Note that any time fiat is used to pay for bills, a                    
+
+corresponding number of BOLT tokens will be burned within Karabraxos. If not enough BOLT              
+
+tokens can be burned, the number of BOLT to be burned will be recorded and another burn                 
+
+event will be attempted after more fees have been collected. 
+
+ 
+
+In the time period between when the consumer buys the BOLT and the electricity is consumed,                
+
+Grid+ will invest the monies in low-risk assets such as treasury bills. Assuming that US treasury                
+
+72“Visa and Mastercard US Interchange Rates.” ​Helcim​. 
+https://www.helcim.com/us/pricing/visa-mastercard-interchange-rates/ 
+73ETH Gas Station, http://ethgasstation.info/ 
+
+45 
+
+
+
+Grid+ Whitepaper v1.6 
+
+bills will yield 1% this will generate revenues of $272,000 - $544,000 per year during the Tesla                 
+
+Epoch (Q2 2018- Q1 2019). 
+
+6.4 Sales of Agents 
+
+All Grid+ customers will require an agent device, whose estimated manufacturing cost is near              
+
+$50. This device offers substantially more functionality than a Trezor or Ledger hardware             74 75
+
+device at a lower price point. Although this is a potential revenue stream, Grid+ will sell agents                 
+
+at cost, as they are the gateway to the Grid+ platform and enable the revenue described above                 
+
+to grow. 
+
+6.5 Roadmap 
+
+The Grid+ roadmap starts by assuming relatively low battery and solar penetration and focuses              
+
+primarily on developing the smart-energy agent and its software as well as rolling out utilities in                
+
+targeted regions. In later phases, Grid+ will assume higher DER penetration. 
+
+6.5.1 Phase 1: Edison Epoch (Q4 2017 - Q2 2018) 
+
+During this period, Grid+ will establish a single utility in a targeted region and sign up 5,000+                 
+
+customers. These customers will be charged electricity at cost in order to grow the Grid+ brand.                
+
+This will also be a period of rapid improvement to Grid+ software and hardware components. 
+
+6.5.1.1 First Utility 
+
+Grid+ will begin the Edison Epoch by applying for creation of a utility in a deregulated market                 
+
+within the United States. At the time of writing this, no market has been selected, but the target                  
+
+markets have been narrowed down to a short list. 
+
+ 
+
+Grid+ will need to contract with a marketer who is familiar with marketing utilities. This sounds                
+
+like a specialised task, but it is a fairly common skill in deregulated, competitive markets               
+
+(because the churn rate is fairly high for utilities). 
+
+6.5.1.2 Agent Prototype 
+
+Before developing the software, Grid+ will need a stable hardware prototype of the agent to               
+
+ensure the development environment will remain constant. This prototype should come from a             
+
+74Trezor, https://trezor.io/ 
+75Ledger,  https://www.ledgerwallet.com/ 
+
+46 
+
+
+
+Grid+ Whitepaper v1.6 
+
+production process that is at least scalable to a few thousand devices, but need not be scalable                 
+
+to millions.  
+
+ 
+
+During this phase Grid+ will hire three hardware engineers to finalize the first production              
+
+hardware device. Karl Kreder will oversee the agent prototyping, testing, and production. 
+
+6.5.1.3 Establish Content Delivery Network 
+
+Before making upgrades to the agent device client , Grid+ needs to establish a process in               76
+
+which the agent device fetches updates from the hub. This is critical to streamlining upgrades               
+
+and enabling fast iteration. The software team, led by Alex Miller, will spend much of this phase                 
+
+developing a content delivery network (CDN) - this will mostly be on the server side. The                
+
+software team will also build the plumbing (remote logging, updates, etc.) for the client to               
+
+operate in whatever agent environment is chosen. 
+
+6.5.1.4 Updates to the Client 
+
+The Edison phase will see rapid development in the client. Grid+ will hire two additional software                
+
+engineers, primarily for development of the client. This client will have bare minimum             
+
+functionality (signup, open payment channels, withdrawals). 
+
+ 
+
+The software team will also spend more time on the REST API of the Grid+ hub, which will be                   
+
+similarly limited in functionality. The end of this phase will be marked by a v1.0 release on the                  
+
+releases page  of the Grid+ client. 77
+
+6.5.2 Phase 2: Tesla Epoch (Q2 2018 - Q1 2019) 
+
+During this period, Grid+ plans to acquire 100,000-200,000 customers in 2-4 markets and will              
+
+increase the liquidity of the BOLT token by decreasing transaction fees through the             
+
+establishment of a Raiden hub. 
+
+6.5.2.1 Scalable Hardware Production 
+
+After reaching a v1.0 of the Grid+ agent client, Grid+ will establish an improved production               
+
+process for the hardware. This process will need to scale to 100,000 devices and will require at                 
+
+least two full time manufacturing engineers to ensure Grid+ can meet production quotas. 
+
+76 Grid+ Client, https://github.com/GridPlus/client 
+77 Grid+ Client, Releases, https://github.com/GridPlus/client/releases 
+
+47 
+
+
+
+Grid+ Whitepaper v1.6 
+
+6.5.2.2 More Utilities 
+
+During the Tesla phase Grid+ will create 1-3 more utilities in targeted regions. This will ensure                
+
+the process to create utilities is scalable. Long term, Grid+ hopes to open many utilities               
+
+worldwide, and this is only possible if with a sufficiently streamlined expansion process. Grid+              
+
+will need to contract with several more marketers who are familiar with the respective local               
+
+regions. 
+
+6.5.2.3 Raiden Hub 
+
+Once Grid+ has acquired a sufficient number of customers, it will begin utilizing BOLT liquidity               
+
+(BOLTs are only created when customers make deposits) by establishing a Raiden hub. This is               
+
+both to introduce a new revenue stream (from generalized state channel fees) and also to make                
+
+Grid+ more efficient (migrating simple, custom payment channels to the Raiden network). 
+
+ 
+
+This will make Grid+ a prominent hub for stable token (USD) commerce. This will be a big step                  
+
+in facilitating mass adoption of the Ethereum network for payments. 
+
+ 
+
+Alex Miller will oversee the software team’s phased migration to the Raiden hub. Grid+ will bring                
+
+in subject-matter expertise from ConsenSys to assist in making a smooth transition. This is one               
+
+of the biggest advantages of being a ConsenSys Formation - Grid+ will have continued access               
+
+to some of the best developers in the Ethereum ecosystem. 
+
+6.5.2.4 Better Decisions from More APIs 
+
+During this phase, Grid+ will allow optional API data feeds to send encrypted information to the                
+
+agent. This will allow better decision-making and more efficient energy usage. Grid+ will need to               
+
+scale its software team to develop the client, expand the API, create an SDK, and make the web                  
+
+system more scalable. 
+
+ 
+
+The Tesla Epoch will be marked by a v2.0 release of the Grid+ client. 
+
+6.5.3 Phase 3: Musk Epoch (Q2 2019 and beyond) 
+
+This will be the final of the first three phases, during which Grid+ will globally expand its utilities                  
+
+network and sign up many more customers. At this point, Grid+ must have a scalable process in                 
+
+place to facilitate this expansion.  
+
+48 
+
+
+
+Grid+ Whitepaper v1.6 
+
+6.5.3.1 Full Hardware Production Scalability 
+
+During this phase Grid+ will need to establish a production process to allow for millions of                
+
+devices to be manufactured. This must be extremely scalable and will require a large ramp-up in                
+
+hiring hardware engineers and process managers. Because Grid+ will likely need to contract             
+
+with multiple hardware manufacturers, it is important for the agent to be built from sufficiently               
+
+commoditized parts. 
+
+6.5.3.2 Agent AI Optimization 
+
+With the client software at v2, Grid+ will now dedicate much of its software development time to                 
+
+optimizing agent decision-making by designing better artificial intelligence to leverage incoming           
+
+API data from sufficiently abstracted data feeds. This will require scaling the software team to               
+
+include data scientists and AI experts. This will likely happen in several stages and at that time                 
+
+Grid+ will likely draft an updated roadmap. 
+
+6.5.3.3 International Utilities Expansion 
+
+While Grid+ will be forming many more utilities in the U.S., it will also look to expand globally in                   
+
+targeted regions. This will require growth of the strategy team, which is overseen by Mark               
+
+D’Agostino. 
+
+6.6 Use of Funds 
+
+Funds from the token sale will be used in several ways over several Epochs detailed in the 
+
+roadmap. (Figures 14-16) It is estimated that Grid+ will spend ~$12mm through the Edison 
+
+Epoch, $36mm during the Tesla Epoch, and $52mm during the Musk Epoch. While building a 
+
+hardware and software product, Grid+ will also be required to put down deposits in order to form 
+
+utilities in every region of operation. Once a Raiden hub is established, Grid+ will likely convert 
+
+much of its ether to BOLT tokens in order to increase liquidity for stable coin commerce. 
+
+However, it will also maintain ether liquidity in the same Raiden hub. If Grid+ has excess funds 
+
+after setting up retailers in all targeted deregulated markets, it will increase both ether and BOLT 
+
+49 
+
+
+
+Grid+ Whitepaper v1.6 
+
+liquidity in its Raiden hub.
+
+ 
+Figure 14: Use of token sale funds during Edison Epoch 
+
+ 
+
+ 
+Figure 15: Use of token sale funds during Tesla Epoch 
+
+50 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+Figure 16: Use of token sale funds during Musk Epoch 
+
+6.6.1 Forming Utilities 
+
+It is contemplated that a plurality of ether accepted will go toward forming retailers in specifically                
+
+identified deregulated markets. The first utilities will likely be in Texas, California, and New              
+
+England. There are many factors that go into this decision, but the most significant ones are                
+
+smart-meter penetration, regulatory friendliness, and price of electricity - higher prices means            
+
+more room for competition (Figure 17). After starting in the US, Grid+ will seek to expand                
+
+internationally to strategic regions. Right now, the best candidates are Australia, Germany and             
+
+the UK but there are many other possibilities.  
+
+51 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+Figure 17: Regional Average Prices of Electricity in United States  78
+
+The creation of a retailer requires a large deposit, which sits in escrow. This number is greater                 
+
+than $1 million for many regions. It is important to reiterate that these funds are not be “spent”,                  
+
+but rather deposited. 
+
+6.6.2 Legal Work 
+
+Grid+ has been working closely with Matt Corva, general counsel for ConsenSys. Matt has              
+
+intimate knowledge when it comes to the tokenized ecosystem in Ethereum, having worked             
+
+closely alongside Coinbase to draft “A Securities Law Framework for Blockchain Tokens”. Matt             79
+
+78 https://www.eia.gov/electricity/monthly/ 
+79Corva, Matt. “A Securities Law Framework for Blockchain Tokens.” ​Coinbase​. (7 Dec. 2016) 
+https://www.coinbase.com/legal/securities-law-framework.pdf 
+
+52 
+
+
+
+Grid+ Whitepaper v1.6 
+
+also led all of the legal work for the Gnosis team, along with top global law firms, to structure                   
+
+their two-token utility system in a legally compliant manner. Matt plans to help put together a                
+
+legal team and provide guidance for Grid+ as it expands operations to ensure Grid+ is always                
+
+compliant with all laws pertinent to the jurisdictions in which it operates.  
+
+6.6.3 Marketing 
+
+In the short term, Grid+ plans to spend a relatively large amount on marketing to acquire its                 
+
+initial customer base. Grid+ will advertise in a highly targeted geographic region and to a highly                
+
+targeted demographic. As the brand gains more notoriety, Grid+ will move to minimal             
+
+marketing/advertising and will let its low energy prices speak for themselves.  
+
+ 
+
+Many reading this white paper can attest to the evangelistic effects of a tokenized economy.               
+
+Grid+ imagines GRID token holder-evangelists will do a better job marketing the Grid+ platform              
+
+than Grid+ can do on its own. Even those who are not GRID holders, but are Ethereum                 
+
+enthusiasts, will help push the platform because Grid+ uses the Ethereum rails from start to               
+
+finish. Adoption of Grid+ by definition means adoption for public Ethereum. Grid+ foresees a              
+
+grassroots viral marketing craze propelling Grid+ into mainstream media. 
+
+6.6.4 Product 
+
+The final area where Grid+ plans to deploy substantial resources is in the further development               
+
+of the Grid+ system. Grid+ has a working demo application and has prototyped the hardware               
+
+product, but this will be an iterative process to create and test. Grid+ will need to grow its team                   
+
+and bring together hardware specialists, software engineers, and Ethereum experts to ensure it             
+
+can build a safe, reliable, and desirable agent device. 
+
+53 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+7 Experience and Team 
+Prior to the advent of the Frontier deployment of the Ethereum public chain on July 30th 2015,                 80
+
+ConsenSys had already been building and testing applications for the energy ecosystem. The             
+
+first project began in May of 2015, which was a ConsenSys-led joint venture to construct the                
+
+TransactiveGrid. Championed by ConsenSys Enterprise partner John Lilic and senior          81
+
+technologist Dr. Christian Lundkvisk, the TransactiveGrid proved that electrical energy could be            
+
+tokenized on Ethereum and transacted across a distributed network.  
+
+ 
+
+Through the Brooklyn TransactiveGrid project of 2015, ConsenSys came to the realization that             
+
+the public Ethereum blockchain infrastructure was seriously deficient, and thus discontinued the            
+
+project in 2016. Since then, the ecosystem has experienced rapid growth in developer             
+
+infrastructure. Tools such as Truffle , MetaMask , INFURA , ​a​n​d ​MyEtherWallet allow          82 83 84 85
+
+80Ethereum Frontier Guide, https://ethereum.gitbooks.io/frontier-guide/content/ 
+81DEVCON1, TransactiveGrid, https://www.youtube.com/watch?v=kq8RPbFz5UU 
+82Truffle, http://truffle.readthedocs.io/en/latest/ 
+83MetaMask, https://metamask.io/ 
+
+54 
+
+https://infura.io/
+https://infura.io/
+https://infura.io/
+
+
+Grid+ Whitepaper v1.6 
+
+developers to rapidly prototype Ethereum applications and seamlessly integrate them into the            
+
+user’s browser.  
+
+ 
+
+Since the TransactiveGrid, the ConsenSys Energy team has been engaged in a number of              
+
+projects with various utilities around the world. ConsenSys began joint development on a             
+
+platform called Co-tricity alongside RWE Group , which was recently rebranded as Innogy.            86 87 88
+
+This joint development helped validate assumptions about the energy markets and           
+
+demonstrated the expanded roles utilities can play in a world with decentralized grid             
+
+infrastructure. 
+
+ 
+
+For the past 12 months, the ConsenSys Energy and Enterprise teams have serviced multiple              
+
+Fortune Global 50 Energy companies. ConsenSys has built models akin to the TransactiveGrid,             
+
+albeit utilizing much more scalable design patterns. During these pilot projects ConsenSys            
+
+developed two fully decentralized exchanges, one using a continuous auction model and the             
+
+other using batch/uniform pricing. ConsenSys also explored the intersection of IoT and            
+
+Ethereum, giving smart-batteries the ability to utilize ECDSA (Elliptic Curve Digital Signature            
+
+Algorithm), specifically the secp256k1 curve, by signing and broadcasting Ethereum          
+
+transactions on behalf of their owners. One Enterprise project, which involves swarms of smart              
+
+batteries, is currently in the pilot phase with code running in a production environment in the                
+
+homes of select participants in Europe. 
+
+ 
+
+The ConsenSys Enterprise group lives by the modus operandi of ‘customer led development’.             
+
+This ensures that ConsenSys enters engagements with open minds and that it learns from its               
+
+clients, who are the true subject matter experts in their industries. Many startups, especially              
+
+those in the blockchain ecosystem, fail to achieve increased efficiency by naively applying new              
+
+technology to existing industry processes. ConsenSys brings Ethereum expertise to industry           
+
+leaders and learns from their experiences. ConsenSys has spent two years working with some              
+
+of the brightest minds in the energy space, which has culminated in the formation of Grid+. The                 
+
+Grid+ team leverages experience from other ConsenSys teams, Ethereum startups, and           
+
+massive Fortune Global 50 energy companies to design a system that will fundamentally             
+
+change the way consumers interact with their energy providers.  
+
+84INFURA, https://infura.io/ 
+85MYEtherWallet, https://www.myetherwallet.com/ 
+86DEVCON2, Co-Tricity https://consensys.net/static/devcon2/cotricity/Cotricity_Master_Slides.pdf 
+87RWE Group, https://www.rwe.com/web/cms/en/8/rwe/ 
+88Innogy, https://iam.innogy.com/en/ueber-innogy 
+
+55 
+
+
+
+Grid+ Whitepaper v1.6 
+
+7.1 Team: 
+
+7.1.1 Alex Miller 
+
+Alex is a software engineer with a background in applied physics. He discovered Ethereum in               
+
+2015 when he was working for a fin-tech startup that moved ~$2 payments between users with                
+
+traditional payments infrastructure. He left that world for the greener pastures of permissionless             
+
+innovation and joined ConsenSys in 2016. He has been the technical lead on multiple Fortune               
+
+500 Enterprise energy client engagements and has a passion for developing Ethereum and IoT              
+
+infrastructure.  
+
+7.1.2 Karl Kreder 
+
+Karl recently graduated from The University of Texas at Austin, where he received his PhD in                
+
+Materials Science researching advanced battery technologies. Prior to attaining his PhD, Karl            
+
+worked at Southwest Research Institute where he started the Energy Storage System            
+
+Evaluation and Safety (EssEs) consortium which performed testing, characterization, and          
+
+research on large format lithium ion batteries for >10 kWh energy storage. The EssEs              
+
+consortium had 12 industry members from 3 continents with a budget of more than $3mm.               
+
+Before joining full time, Karl served as a subject matter expert advisor for the Energy group at                 
+
+ConsenSys. He is now the resident energy guru for all energy-based projects.  
+
+7.1.3 Mark D’Agostino 
+
+Mark has spent the past decade in management consulting, specifically focused on the financial              
+
+services industry. Prior to joining ConsenSys as a managing partner in the Enterprise group,              
+
+Mark built out Deloitte’s blockchain market offering. He has successfully delivered           
+
+Ethereum-based applications to Fortune 500 banks, global energy companies and          
+
+governments. Over his career, he has served clients such as AIG, BlackRock, Citi, GE, JPM,               
+
+Lehman Brothers, MasterCard, and Pfizer. He has been the ConsenSys lead for all Energy              
+
+consulting engagements and has worked closely with a number of utilities and global energy              
+
+companies. Mark has decided to step back from an Enterprise delivery role to spend more time                
+
+focused on product development and strategic leadership within ConsenSys.  
+
+ 
+
+56 
+
+
+
+Grid+ Whitepaper v1.6 
+
+7.1.4 Claudia Pop 
+
+Claudia is a PhD student and a teaching assistant, at Technical University of Cluj-Napoca, 
+
+Romania.  She likes exploring the computer science world, thus she went from building sumo 
+
+robots to implementing projects to digitize the local community and got involved in European 
+
+research projects. She is passionate about her teaching role at the University and always tries 
+
+to have an impact.  Besides her interest in computer science, she enjoys hiking, cooking and 
+
+singing. 
+
+ 
+
+7.1.5 Rachel Epstein 
+
+Rachel recently graduated from Cardozo Law School with a law masters degree specializing in 
+
+Intellectual Property law. While at Cardozo she worked as a researcher for Professor Aaron 
+
+Wright on a book about the legal implications of blockchain technology and assisted in providing 
+
+legal help for NYC based startups as part of the Cardozo Tech Startup Clinic. Rachel is 
+
+passionate about the legal policies developing around the implementation of blockchains and 
+
+enjoys writing about the tokenization of securities. She joined ConsenSys’s legal team in 2017. 
+
+7.2 Advisors 
+
+7.2.1 Joseph Lubin 
+
+Joe is a co-founder of Ethereum and the founder of ConsenSys. He has an academic               
+
+background in Electrical Engineering and Computer Science from Princeton University and has            
+
+research experience in the field of Robotics Learning. Joe is a former VP of Technology at                
+
+Goldman Sachs in the Private Wealth Management Division. 
+
+7.2.2 Jeffrey Char 
+
+Mr. Char is a serial entrepreneur and investor. He is Founder and CEO of J-Seed Ventures, Inc.                 
+
+and Chief Mentor of Venture Generation, a Tokyo-based venture community. He is also Director              
+
+of Corporate Venture Capital and a member of the Innovation Task Force at Tokyo Electric               
+
+Power Company (TSE: 9501). Mr. Char is also an adjunct professor who teaches             
+
+entrepreneurship at IE Business School in Spain. He founded and built several successful             
+
+57 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ventures including Sozon, an online marketing company sold to ValueCommerce (TSE Mothers:            
+
+2491), Solis, a domain registrar sold to GMO Internet (TSE: 9449), SSK Technology, an              
+
+electronics component company sold to Suzuki Manufacturing, and Pario Software, a network            
+
+security company sold to Lucent Technologies (NYSE: ALU). Prior to becoming an entrepreneur             
+
+Mr. Char was a corporate attorney in Silicon Valley and securities research analyst in Tokyo. He                
+
+studied economics at Sophia University in Tokyo and law at the University of California,              
+
+Berkeley and Harvard Law School.  
+
+7.2.3 Rikiyai Abe  
+
+Professor Abe has a degree in Electronics Engineering from the University of Tokyo and a PhD                
+
+from the University of Kyushu. Formerly, he has had roles at J-POWER, a Japan-wide              
+
+wholesale power company; and the Electric Power Research Institute (EPRI) as a visiting             
+
+researcher to the United States. Since 2008, Professor Abe has focused on Technological             
+
+Management for Innovation (TMI). Since June 2012, Professor Abe has served as Co-Chair of              
+
+the Presidential Endowed Chair at the Electric Power Network Innovation by Digital Grid, at the               
+
+University of Tokyo. Professor Abe has developed the digital grid concept, which represents a              
+
+"power Internet". He is also a Representative Director at the Digital Grid Consortium. His              
+
+interests include renewable energy, energy storage and smart grid. 
+
+ 
+7.2.4 John Lilic 
+
+John has been working at the intersection of distributed energy resource development and             
+
+blockchain technologies since 2013 with past projects that include the Brooklyn Microgrid, the             
+
+TransActive Grid, Project Exergy, collaboration with RWE/Innogy as well as helping drive            
+
+engagements and interactions with utilities and power companies around the world as they             
+
+explore Ethereum and its value proposition to the grid.  
+
+7.2.5 Matt Corva 
+
+Matt Corva is General Counsel for ConsenSys. Matt is particularly interested in the disruption              
+
+triggered by decentralizing technologies and the implications of that disruption on legacy legal             
+
+frameworks. In addition to overseeing ConsenSys legal issues, Matt frequently speaks at            
+
+conferences and educates large law firms on Ethereum and blockchain technology. Matt holds a              
+
+law degree from Washington and Lee University and is licensed to practice in New York. 
+
+58 
+
+
+
+Grid+ Whitepaper v1.6 
+
+7.2.6 Igor Lilic 
+
+Igor is a full-stack software engineer at ConsenSys, formerly a senior consultant at             
+
+ThoughtWorks, software development engineer at Amazon Web Services, OANDA, SAP and           
+
+AMD. He is the CTO and co-founder of the Enterprise group at ConsenSys and has been active                 
+
+in the crypto space since 2012. Igor wrote the Proof of Physical Address (PoPA) system and                
+
+has been integral in the delivery of most client engagements at ConsenSys. He helped structure               
+
+ConsenSys’ largest Energy delivery to date and is currently shifting focus to product             
+
+development. 
+
+7.2.7 Mike Goldin 
+
+Mike began working on applications for the Ethereum blockchain during the summer of 2015 as               
+
+an intern at ConsenSys, where he worked on the smart contract backend for Ujo Music. He                
+
+joined ConsenSys full-time after graduating from Columbia University with a degree in computer             
+
+science. He worked as a software developer and architect in the ConsenSys Enterprise group              
+
+where he built complex simulations to be used in distributed energy applications. He is now the                
+
+technical lead for ConsenSys AdTech. 
+
+7.2.8 Bashar Lazaar 
+
+Upon graduating from Babson College with a B.Sc., Bashar has focused his early career in               
+
+structuring energy projects across the Middle East and North Africa combining knowledge in             
+
+finance and renewable energies to deliver financial engineering for utility scale PV & Wind              
+
+power plant development in the MENA region. While employed at SunEdison, Bashar took a              
+
+keen interest in Ethereum’s potential implementation within the energy sector, and made a shift              
+
+to ConsenSys, where he contributed to launching its MENA operation and establishing the             
+
+Dubai office. Bashar currently serves as an advisor and financial engineer for the Grid+ team.  
+
+59 
+
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+ 
+
+8 Appendix 
+
+8.1 State Channels Research 
+
+How offchain trading will work Martin Koeppelmann 
+
+Ethereum Lightning Network and Beyond Robert McCone 
+
+State Channels Jeff Coleman 
+
+Raiden: Scaling Out With Offchain State Networks Heiko Hees 
+
+Epicenter Bitcoin: State Networks Jeff Coleman 
+
+Universal Payment Channels Jehan Tremback 
+
+60 
+
+http://altheamesh.com/blog/universal-payment-channels/
+http://forum.groupgnosis.com/t/how-offchain-trading-will-work/63
+https://www.youtube.com/watch?v=v0ZJDsRYnbA
+http://www.arcturnus.com/ethereum-lightning-network-and-beyond/
+https://www.youtube.com/watch?v=h791zjvf3uQ
+http://www.jeffcoleman.ca/state-channels/
+
+
+Grid+ Whitepaper v1.6 
+
+Scalability via State Channels Martin Koeppelmann 
+
+Ethereum: Platform Review (page 30) Vitalik Buterin 
+
+Sparky: A Lightning Network in Two Pages of Solidity Dennis Peterson 
+ 
+
+An Introduction to State Channels in Depth Ameen Soleimani 
+
+State Channels Wiki Jeff Coleman 
+
+Gamble Channels: Fast Verifiable Off-Chain Gambling Denis Peterson 
+
+Toy State Channels Jeff Coleman 
+
+Raiden Network Brainbot 
+
+Machinomy Sergey Ukustov 
+
+8.2 Tesla Powerwall Payback Calculations 
+
+ROI Overview 
+
+Total Cost  Yearly Revenue  Payback Period (Years) 
+
+14kWh Powerwall $5,500       
+
+Supporting 
+
+Hardware $700  Days/Year 365  Total Cost $7,600 
+
+Average Installation 
+
+Cost $1,400  Revenue/Day $3.50  Revenue/Year $1,277.50 
+
+ $7,600   $1,277.50   5.95 
+
+Revenue Calculations 
+
+6-8AM to Charge (Daily 
+
+Revenue)  4-6pm Peak Sale (Daily Revenue)  Combined Revenue 
+
+Energy Cost (kWh) $ (0.10)  Energy Cost (kWh) $0.15  Charge $1.40 
+
+Powerwall Size 14 kWh  Powerwall Size 14 kWh  Sell $2.10 
+
+ $1.40   $2.10  Total $3.50 
+
+61 
+
+http://www.blunderingcode.com/a-lightning-network-in-two-pages-of-solidity/
+http://static1.squarespace.com/static/55f73743e4b051cfcc0b02cf/t/57506f387da24ff6bdecb3c1/1464889147417/Ethereum_Paper.pdf
+https://github.com/machinomy/machinomy
+https://github.com/ledgerlabs/toy-state-channels/tree/master/contracts
+https://github.com/raiden-network/raiden
+http://www.blunderingcode.com/gamble-channels-fast-verifiable-off-chain-gambling/
+https://github.com/ledgerlabs/state-channels/wiki
+https://www.youtube.com/watch?v=MEL50CVOcH4
+http://de.slideshare.net/MartinKppelmann/state-channels-and-scalibility
+
+
+Grid+ Whitepaper v1.6 
+
+ 
+
+62 
+
+

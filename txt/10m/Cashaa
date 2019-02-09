@@ -1,0 +1,2147 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+“The​ ​next​ ​generation​ ​banking​ ​platform​ ​for​ ​the​ ​next​ ​billion” 
+
+ 
+
+ 
+
+  
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+PLATFORM​ ​WHITEPAPER  
+
+Version:​ ​1.1 
+
+Author:​ ​Kumar​ ​Gaurav 
+
+kumar@cashaa.com 
+
+Contributors:​ ​Alex​ ​Norta,​ ​Mikko​ ​Ohtamaa,​ ​Celestine​ ​Vettical  
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+mailto:kumar@cashaa.com
+
+
+ 
+
+Content 
+
+1.​ ​Executive​ ​Summary 3 
+
+2.​ ​The​ ​Cashaa:​ ​The​ ​next​ ​generation​ ​banking​ ​platform​ ​for​ ​the​ ​next​ ​billion 4 
+
+3.​ ​Cashaa​ ​Beta​ ​Launch:​ ​Remittance​ ​&​ ​Trading 7 
+
+4.​ ​Design​ ​Approach 10 
+
+4.1​ ​Ecosystem 11 
+
+4.2​ ​​ ​Blockchain​ ​Technology 12 
+
+5.​ ​Products 13 
+
+5.1​ ​Wallets 13 
+
+5.2​ ​Physical​ ​&​ ​Virtual​ ​cards 13 
+
+5.3​ ​Micro​ ​Lending 14 
+
+5.3​ ​Peer-to-peer​ ​exchange​ ​(Beta​ ​Tested) 15 
+
+5.5​ ​Peer​ ​to​ ​Peer​ ​Insurance​ ​(Future) 16 
+
+6.​ ​Key​ ​Milestones​ ​accomplished 17 
+
+7.​ ​Public​ ​Appreciation 18 
+
+8.​ ​Future​ ​Roadmap​ ​and​ ​Business​ ​Growth​ ​Model 20 
+
+9.​ ​Go​ ​to​ ​Market​ ​Strategy 21 
+
+9.1​ ​Strategic​ ​Partnerships 21 
+
+9.2​ ​Legal,​ ​Auditing​ ​and​ ​Regulatory​ ​Partnerships 21 
+
+10.​ ​Cashaa​ ​Tokens​ ​and​ ​Token​ ​Generation​ ​Event 22 
+
+10.1​ ​Token​ ​Functionality 23 
+
+10.1.1​ ​Benefits​ ​of​ ​CAS​ ​token 23 
+
+10.1.2​ ​Acquiring​ ​tokens 23 
+
+10.1.3​ ​Spending​ ​tokens 23 
+
+10.1.4​ ​Governance​ ​mechanism 25 
+
+10.2​ ​Token​ ​Summary 25 
+
+10.3​ ​Token​ ​Sale​ ​and​ ​Distribution​ ​Roadmap 25 
+
+10.4​ ​Token​ ​Distribution 27 
+
+10.5​ ​Token​ ​Availability​ ​​ ​&​ ​Vesting​ ​Period 27 
+
+10.6​ ​Use​ ​of​ ​​ ​Proceeds​​ ​from​ ​Token​ ​distribution 29 
+
+10.7​ ​Token​ ​Support 32 
+
+10.8​ ​Assurance 32 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+1.​ ​Executive​ ​Summary  
+ 
+
+The global financial crisis revealed significant weaknesses in the existing financial system and some of the                
+
+vulnerabilities already showed their impact on the interconnected global market. The world economy is              
+
+still struggling with slow growth rate today . Transferring money for remittance, money lending across              1
+
+international borders is still very complicated, time consuming and expensive . Existing systems running             2 3
+
+on traditional banking channels are slow and full of intermediaries, higher exchange rates, counter-party              
+
+risks,​ ​bureaucracy​ ​and​ ​extensive​ ​paperwork .  4
+
+More than 3.5 billion people are still unbanked or underbanked and have few opportunities to have a                 5 6
+
+safe and secure way to participate in the global economy. On-boarding this missing population to the                
+
+benefits of the global financial system is key in order to provide a sustainable solution for their future                  
+
+economic outlook. However, it turns out that consumers and businesses are struggling to leverage the               
+
+benefits of the Blockchain infrastructure due to poor usability, non customer centric approach and              
+
+improper​ ​legal​ ​implementation. 
+
+Cashaa built its infrastructure on the blockchain and utilizes ​artificial intelligence to power mainstream              
+adoption for financial products. It ​empowers the banked and unbanked population, facilitates low cost              
+currency exchanges, enables participation in the global economy and develops the new outlook for this               
+
+community by using open architecture​. Instead of rebuilding or riding on the rails of archaic banking                
+infrastructure, we built Cashaa to allow consumer adoption of cryptocurrencies, which let people move              
+
+money as they wish at low cost and high speed, without having to understand the technical details of                  
+
+crypto​ ​and​ ​blockchain​ ​technology,​ ​thereby​ ​making​ ​it​ ​user​ ​friendly,​ ​secure,​ ​and​ ​affordable. 
+
+This whitepaper fills the gap between the existing financial system and emerging non-user friendly              
+
+technologies by presenting a secure and simple way to use payments and banking architecture that aims                
+
+to lower financial inclusion barriers and provide financial services to the banked and unbanked. We               
+
+present the advantages of the Cashaa system, outlining its requirements and goals, along with the               
+
+architecture for its financial ecosystem. In addition, we present the results of ​Cashaa’s use case for a                 
+remittance​ ​and​ ​trading​ ​system​ ​that​ ​involved​ ​over​ ​12,770​ ​registered​ ​users​ ​from​ ​141​ ​countries. 
+ 
+
+1 ​ ​GDP​ ​growth​ ​(annual​ ​%) 
+2 ​ ​​What​ ​are​ ​the​ ​remittance​ ​fees​ ​worldwide?  
+3 ​ ​​Lending​ ​interest​ ​rate​ ​(%) 
+4 ​ ​What`s​ ​wrong​ ​with​ ​Banking​ ​and​ ​what​ ​to​ ​do​ ​about​ ​it 
+5 ​ ​​THE​ ​GLOBAL​ ​FINDEX​ ​DATABASE​ ​2014 
+6 ​ ​​Three​ ​Quarters​ ​of​ ​The​ ​World’s​ ​Poor​ ​Are​ ​“Unbanked” 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG
+https://www.finder.com/remittance-fees-global-world
+https://data.worldbank.org/indicator/FR.INR.LEND
+https://www.gsb.stanford.edu/insights/whats-wrong-banking-what-do-about-it
+http://www.worldbank.org/en/programs/globalfindex
+http://www.worldbank.org/en/news/feature/2012/04/19/three-quarters-of-the-worlds-poor-are-unbanked
+
+
+ 
+
+2.​ ​The​ ​Cashaa:​​ ​​The​ ​next​ ​generation​ ​banking​ ​platform​ ​for​ ​the​ ​next​ ​billion 
+
+The Cashaa team is building a next generation model for financial services which is based on blockchain                 
+technology and artificial intelligence which will empower devices with biometric identification systems to             
+
+solve​ ​the​ ​problems​ ​of​ ​the​ ​existing​ ​financial​ ​system​ ​for​ ​the​ ​unbanked​ ​as​ ​well​ ​as​ ​banked​ ​population . 7
+
+ 
+
+Problem​ ​1: 
+
+Having a traditional rail infrastructure, where moving money requires huge processing efforts includes             
+endless problems. One of the main reasons for friction in this current system is that information is siloed                  
+
+between the players in the industry. A meagre amount of engineering is done on the payment systems                 
+
+which are compatible across payment networks and financial institutions. Examples include FedWire ,            8
+
+CHIPS , SWIFT , consumer card payment networks, NSCC/DTCC , OCC , ACH and many others            9 10 11 12 13
+
+depending​ ​on​ ​countries . 14
+
+ 
+
+Problem​ ​2: 
+
+The recent emergence of cryptocurrency tokens showed a silver lining to save us from the legacy systems.                 
+However, it turns out that a growing number of users and businesses are struggling to leverage on the                  
+
+existing blockchain infrastructure. The primary role of blockchains was to solve coordination and             
+
+synchronization problems amongst multilateral agreements between a network of participants, but it            
+
+seems that these multiple blockchains are now giving a hard time to “real users” and have become a                  
+
+bottleneck for the mainstream adoption . Also the current attempts by others to provide blockchain              15
+
+based solutions lack the workflow needs of small and medium sized enterprises, and the applications are                
+
+not​ ​addressing​ ​the​ ​average​ ​consumer's​ ​issues​ ​and​ ​not​ ​providing​ ​legally​ ​compliant​ ​solutions​ ​to​ ​their​ ​users. 
+
+ 
+
+Vision: 
+
+We believe there should be an efficient alternative to existing payment and banking systems. Our               
+blockchain-based payments system aims to lower financial inclusion barriers and provide financial services             
+
+to the banked and unbanked. Our vision is to build the payments and banking infrastructure for the future                  
+
+7 ​ ​​Using​ ​Fingerprints​ ​to​ ​Bank​ ​the​ ​Unbanked 
+8 ​ ​Federal​ ​Reserve​ ​Bank​ ​Services 
+9 ​ ​​The​ ​Clearing​ ​House 
+10​ ​​SWIFT​ ​-​ ​The​ ​global​ ​provider​ ​of​ ​secure​ ​financial​ ​messaging​ ​services 
+11​ ​​National​ ​Securities​ ​Clearing​ ​Corporation 
+12​ ​Office​ ​of​ ​the​ ​Comptroller​ ​of​ ​the​ ​Currency 
+13​ ​​Automated​ ​Clearing​ ​House 
+14​ ​​SWIFT,​ ​CHIPS,​ ​ACH,​ ​Fedwire​ ​and​ ​Bitcoin... 
+15​ ​​The​ ​6​ ​Major​ ​Hurdles​ ​for​ ​Blockchain​ ​Adoption 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+https://www.finextra.com/blogposting/14469/using-fingerprints-to-bank-the-unbanked
+https://frbservices.org/fedwire/index.html
+https://www.theclearinghouse.org/payments/chips
+https://www.swift.com/
+http://www.dtcc.com/about/businesses-and-subsidiaries/nscc
+https://www.occ.treas.gov/
+https://en.wikipedia.org/wiki/Automated_Clearing_House
+http://unmitigatedrisk.com/?p=450
+https://news.bitcoin.com/6-major-hurdles-blockchain-adoption/
+
+
+ 
+
+on a robust AI driven blockchain infrastructure which can make the legacy system obsolete, thus creating                
+
+value​ ​for​ ​the​ ​world.​ ​​ ​Cashaa​ ​is​ ​based​ ​on​ ​4​ ​foundational​ ​principles: 
+
+1. Powering financial products for the Banked and Unbanked​: Cashaa's digital and transparent            
+services are not only attractive for the banked population, but they can also deliver financial inclusion                
+
+solutions to the 2.5 billion unbanked and 1 billion underbanked globally, thereby creating a unique               
+
+cross-border​ ​platform​ ​which​ ​can​ ​serve​ ​the​ ​entire​ ​population. 
+2. Facilitating low-cost Currency Exchanges​: Send money across borders quickly, for a small flat fee -               
+a fraction of the current costs, which today on average are 7 % . Our industry-leading technology platform                 16
+
+powered by our traders network can protect your money and offer best foreign exchange (FX) rates                17
+
+every​ ​time​ ​you​ ​utilize​ ​Cashaa. 
+3. Enabling Investments in the Global Economy: ​Cashaa products can enable its users to access the               
+global economy in a decentralised manner. They can facilitate the transfer of value across borders allowing                
+
+greater​ ​portfolio​ ​diversification​ ​with​ ​higher​ ​yields . 18
+
+4. Dedicated to the Community with an Open API: ​Create the next generation DApp to solve the                
+world's biggest financial challenges. Our developer SDK and Open API with integrated biometric and              
+
+artificial​ ​intelligence​ ​services​ ​will​ ​accelerate​ ​the​ ​growth​ ​of​ ​digital​ ​innovation. 
+ 
+
+Team: 
+
+Our team is comprised of the best, brightest and most passionate people in the industry sharing the same                  
+
+vision of making blockchain applications simple and accessible for the masses. Our team has more than                
+
+200 Years of Payments and Banking experience which is led by successful entrepreneurs who built their                
+
+companies​ ​from​ ​scratch​ ​which​ ​are​ ​now​ ​part​ ​of​ ​​Fortune​ ​Top​ ​15​ ​companies​ ​in​ ​the​ ​world​.  
+
+Proven track records of our team members give us legal and regulatory understanding, domain expertise,               
+
+emerging technologies and fulfilment of licensing requirements. Our team and advisory board includes C              
+
+suite executives from ​Fortune 100 technology and financial services companies and from ​leading             
+educational​ ​institutions​. 
+
+ 
+
+Kumar​ ​Gaurav​​ ​has​ ​received​ ​​extraordinary​ ​status​ ​​(O1)​ ​by​ ​the​ ​United​ ​States​ ​Government,​ ​is​ ​the​ ​Chairman 
+of​​ ​​Auxesis​ ​Group​,​​ ​an​ ​international​ ​speaker​ ​who​ ​ranks​ ​among​ ​the​ ​​Top​ ​100​ ​Blockchain​ ​Influencers​ ​in​ ​the 
+world​,​ ​also​ ​founded​ ​Darwinsurance​​ ​​(Acquired​ ​by​ ​Esedra)​​ ​​backed​ ​by​ ​​AIG​,​ ​and​ ​is​ ​an​ ​advisor​ ​to​ ​many​ ​incubators 
+&​ ​startups. 
+
+Celestine Vettical was founder & CEO of Perfomix which was acquired by ​Baker Hughes, GE company​.                
+VP Baker Hughes, VP ​Cognizant​. Worldwide Director ​Microsoft​, Director ​SAP​. Co-Inventor of self-service             
+mailing​ ​machines​ ​located​ ​in​ ​US​ ​Post​ ​Offices.​ ​Co-founded​ ​Paymetric​ ​​(SAP​ ​Partner)​. 
+
+16​ ​​Western​ ​Union​ ​charged​ ​$29​ ​to​ ​send​ ​$137​ ​to​ ​Nigeria.  
+17​ ​​What​ ​is​ ​Forex? 
+18​ ​​NEWS​ ​WIRE:​ ​Offshore​ ​Microfinance​ ​–​ ​The​ ​Only​ ​Legitimate​ ​High​ ​Yield​ ​Investment​ ​Program? 
+
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+https://www.reddit.com/r/Bitcoin/comments/3ftogj/western_union_charged_29_to_send_137_to_nigeria/
+https://www.fxcm.com/uk/forex/what-is-forex/
+https://www.microcapital.org/news-wire-offshore-microfinance-the-only-legitimate-high-yield-investment-program/
+
+
+ 
+
+Dominic Melo is Chief Payments officer at Cashaa and an experienced payments process flow designer               
+
+quoted as Mr. Payments by Forbes. Owns ​European E-Money Institutions ​and payments licenses for              
+South​ ​American​ ​countries.  
+
+Dr. Bernard Lietaer has been active in the realm of monetary systems for nearly 4 decades. He is the                   
+
+author of widely acclaimed books including ​The Future of Money, Money and Sustainability​, and ​New              
+Money for a New World​. Dr. Lietaer is known as the “​Architect of the Euro​” while he was at the Central                    
+Bank​ ​of​ ​Belgium.​ ​Businessweek​ ​named​ ​him​ ​“​the​ ​world’s​ ​top​ ​currency​ ​trader​”​ ​in​ ​1992.  
+
+Janina Lowisz has been popular in the industry as Blockchain Girl, worked as blockchain analyst for                
+
+major companies and co-founded Bitnation. Today she is also a ​Top 100 Global Blockchain Influencer​,               
+blockchain​ ​speaker​ ​and​ ​model. 
+
+Dr. John Henry Clippinger is a research scientist at the MIT Media Lab. He is the author of ​“​F​rom Bitcoin                    
+to Burning Man and Beyon​d: The Quest for Identity and Autonomy in a Digital Society”​, and ​“​A Crowd o                  
+One: The Future of Individual Identity”​. John is also Governance Advisor for ​Bancor Foundation and is               
+helping​ ​us​ ​to​ ​build​ ​a​ ​robust​ ​identity​ ​solution​ ​for​ ​the​ ​2.5​ ​billion​ ​unbanked​ ​people. 
+
+Prof. Dr. Alex Norta is a research member at the Faculty of Informatics at Tallinn University of                 
+
+Technology. He is the Chief Scientific Officer at ​Agrello Foundation and Chief Scientist at ​Qtum               
+Foundation​.​ ​Alex​ ​is​ ​helping​ ​Cashaa​ ​to​ ​build​ ​the​ ​AI​ ​based​ ​smart​ ​contract​ ​capabilities. 
+
+Anil Earla is Head of Information & Data Analytics, ​VISA​. With over 20 years of Fintech Experience, he is                   
+heading Digital Transformation at VISA and leading various technology teams. Anil`s strategic role is              
+
+helping​ ​Cashaa​ ​to​ ​build​ ​a​ ​scalable​ ​payments​ ​product​ ​which​ ​can​ ​serve​ ​billions​ ​of​ ​people. 
+
+Rakesh Lakhey has 15+ years of Banking experience including at ​World Bank and is proactively               
+negotiating​ ​with​ ​corporates​ ​and​ ​governments​ ​to​ ​build​ ​strong​ ​partnerships​ ​to​ ​grow​ ​Cashaa​ ​in​ ​Asia. 
+
+Simo Mcunu is an experienced banker from top South African banks such as ​First National Bank & ​Rand                  
+Merchant Bank​. He has won numerous awards for his innovations in banking and has served as                
+Chairperson​ ​of​ ​the​ ​​Junior​ ​Board​ ​in​ ​Africa's​ ​most​ ​innovative​ ​bank​​ ​ranked​ ​in​ ​2016​ ​&​ ​2017. 
+
+Richard Kastelein is the Founder & Publisher of ​Blockchain News​. Founder, The Hackitarians. Partner,              
+Crypto Assets Design Group and Director, Blockchain Partners. He also served as an Innovation Manager               
+
+for​ ​the​ ​​European​ ​Parliament​. 
+
+Mikko Ohtamaa ​is a Founder & CTO of ​Token Market​. He was also CTO for ​LocalBitcoins.com and Advisor                  
+to​ ​​FirstBlood​​ ​and​ ​many​ ​top​ ​blockchain​ ​projects.  
+
+For​ ​complete​ ​team​ ​members​ ​visit​ ​​www.cashaa.com 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+https://cashaa.com/about-us.php
+
+
+ 
+
+3.​ ​Cashaa​ ​Beta​ ​Launch:​ ​Remittance​ ​&​ ​Trading  
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+We already built and beta tested a blockchain-powered platform, which offers innovative trading and              
+money transfer services between fiat and crypto currencies. ​12,770 beta users across 141 countries tested               
+the​ ​platform​ ​transacting​ ​ ​ ​2108.23486​ ​(approx.​ ​$10​ ​M)​.  
+
+Cashaa video (The video gives an overview of cash transfer; over time, Cashaa can process payments in                 
+many​ ​other​ ​forms​ ​and​ ​does​ ​not​ ​require​ ​manual​ ​intervention​ ​or​ ​in-person​ ​settlement.) 
+
+During the trading & remittance process, the Bitcoin seller and buyer are asked to deposit their Bitcoins in                  
+
+the escrow. The seller has to deposit 100% of the coins which they have to sell, while the buyer has to put                      
+
+10% collateral which is released as soon as the process completes. The Bitcoin escrow address used in this                  
+
+test​ ​transacting​ ​​ ​ ​​2108.23486​ ​is​ ​mentioned​ ​below: 
+
+https://blockchain.info/address/18dpRDcqUbDeGUYgiA5JGBw46D1HwV5ayw​​ ​(Initial​ ​Wallet) 
+
+https://blockchain.info/address/16Z9HPAMriVDmFCqnYzXnLWVfhyxcoW8Qj​​ ​(Secondary​ ​Wallet) 
+
+Major countries where we saw the biggest adoption of our beta test include ​UK, Nigeria, India, Indonesia                 
+and Philippines​. During this beta test, we were able to test our ​Remittance and Trading product which                 
+created a win-win situation for both the cryptocurrency traders community and the money senders              
+
+community.  
+
+Compared to any other existing trading platforms, our peer to peer exchange with liquidity providing               
+
+mechanism from the remittance industry, clearinghouse messaging network and escrow system resulted            
+
+in increasing market size, higher profit margins, and better speculation opportunities for the traders with               
+
+lower security risks. We found that between and within countries, entrepreneurs could bring the              
+
+advantages of cryptocurrency to their community by using our open API to build global and local payment                 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+https://www.youtube.com/watch?v=OBkRwU_qqjk
+https://blockchain.info/address/18dpRDcqUbDeGUYgiA5JGBw46D1HwV5ayw
+https://blockchain.info/address/16Z9HPAMriVDmFCqnYzXnLWVfhyxcoW8Qj
+
+
+ 
+
+solutions. We also validated the opportunity for money transfer shops to switch their payment service               
+
+providers from traditional MTOs to Cashaa. Agents can become less expensive than their competitors, and               
+
+gain a good market share while benefiting from Cashaa’s cost-saving efficiencies. Additionally, Cashaa             
+
+validated during the beta test the relevance of providing 24/7 availability, a rating system, a tool to import                  
+
+reputations​ ​from​ ​other​ ​platforms,​ ​while​ ​introducing​ ​the​ ​security​ ​advantages​ ​of​ ​a​ ​P2P​ ​exchange.  
+
+ 
+
+Key​ ​Benefits​ ​of​ ​​ ​Beta​ ​Test: 
+
+● The Cashaa platform (the “​Platform​”) went through several iterations to be robust, and is now               
+capable​ ​of​ ​handling​ ​large​ ​transaction​ ​volumes.  
+● The Platform is upgraded with strong KYC, AML policies and compliance to make it fully compliant                
+with​ ​regulations. 
+● Advanced escrow features increase the protection of stakeholders from any manipulation, thus            
+mitigating​ ​counterparty​ ​risk​ ​so​ ​that​ ​customers​ ​can​ ​use​ ​the​ ​platform​ ​with​ ​confidence.  
+● Operational processes are enhanced to optimise our user experience by involving our community             
+in​ ​the​ ​bug​ ​bounty​ ​program​ ​through​ ​our​ ​social​ ​media​ ​and​ ​helpdesk.  
+ 
+
+Key​ ​findings​ ​for​ ​the​ ​Money​ ​Sender: 
+
+Comparison​ ​of​ ​Money​ ​Transfer​ ​over​ ​Time​ ​-​ ​Cashaa’s​ ​benefits​ ​for​ ​senders​ ​and​ ​recipients​ ​(transfer​ ​of​ ​$​ ​1000) 
+
+ Bank MTOs,​ ​CityForex Competing​ ​Startups  Cashaa 
+
+Fees​ ​incl. 
+FX​ ​charges 
+
+Average  
+
+$​ ​50-75 
+Average​ ​7% Average  
+
+$​ ​5-10 
+$1​ ​flat​ ​fee​ ​and 
+wholesale​ ​forex​ ​rate 
+
+Time Average 
+
+3-5​ ​days 
+6-48​ ​hours 24-72​ ​hours 6-48​ ​hours 
+
+Value-Add NA The​ ​unbanked 
+depend​ ​on 
+expensive​ ​and 
+outdated 
+
+services 
+
+Trying​ ​to​ ​deliver 
+part​ ​of​ ​the​ ​service, 
+but​ ​not​ ​solving​ ​the 
+Problem​ ​for 
+unbanked 
+
+community. 
+
+Serving​ ​the 
+banked​ ​and 
+unbanked​ ​by​ ​giving​ ​the 
+choice​ ​between​ ​cash, 
+bank,​ ​card​ ​and​ ​mobile 
+wallet​ ​payments​ ​on​ ​both 
+the​ ​sender​ ​and​ ​the 
+receiver`s​ ​side 
+
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+Key​ ​findings​ ​for​ ​the​ ​Trading​ ​Model: 
+
+ LocalBitcoins   
+
+ 
+
+Centralised 
+
+exchanges  
+
+Trading​ ​desks​ ​or 
+OTC 
+
+Cashaa 
+
+Currencies  Bitcoin  Multicurrency Multicurrency Multicurrency 
+
+Price​ ​Difference  
+(compared​ ​to 
+Market​ ​) 
+
+0.5-2%​ ​+​ ​Trader 
+demand​ ​(1-7%) 
+
+0​ ​-​ ​1% 1-5% 0% 
+
+Other​ ​Fee No​ ​other​ ​fee​ ​+ 
+Western Union or   
+
+international​ ​wire 
+
+Fee​ ​on​ ​deposit/ 
+withdrawal​ ​+ 
+international​ ​wire 
+
+Depends​ ​on​ ​terms​ ​+ 
+international​ ​wire 
+
+No​ ​other​ ​fee  
+(All​ ​payments​ ​settled 
+locally) 
+
+Payment​ ​Mode Cash​ ​and​ ​bank 
+account 
+
+Only​ ​bank​ ​account Only​ ​bank​ ​account Cash​ ​and​ ​bank​ ​account 
+
+Payment​ ​Type Local​ ​​ ​bank 
+transfer/ 
+
+Western​ ​Union 
+
+Local​ ​or  
+international​ ​bank 
+transfer 
+
+Local​ ​or 
+international​ ​bank 
+transfer 
+
+Local;​ ​international​ ​wire 
+not​ ​required 
+
+Liquidity Local​ ​traders​ ​deal Local​ ​traders​ ​deal Local​ ​+​ ​personal 
+sources 
+
+Local​ ​+​ ​global​ ​($​ ​600 
+Billion​ ​remittance) 
+
+Escrow Yes  Not​ ​required Not​ ​required Yes  
+
+Order​ ​Book 
+ 
+
+Local​ ​traders​ ​on 
+platform 
+
+Traders​ ​on 
+platform 
+
+Not​ ​required Local​ ​traders​ ​+​ ​deals 
+coming​ ​through​ ​people 
+who​ ​want​ ​to​ ​move 
+money​ ​from​ ​one​ ​city​ ​to 
+another 
+
+Platform​ ​ROI Fee​ ​from​ ​trader  Fee​ ​from​ ​trader Fee​ ​from​ ​trader Fee​ ​from​ ​money​ ​sender 
++​ ​algorithmic​ ​matching 
+to​ ​exploit​ ​arbitrage 
+
+Other​ ​Features NA  NA  NA  Coins​ ​linked​ ​​ ​with​ ​cards 
+are​ ​spendable 
+anywhere​ ​or 
+withdrawable​ ​in​ ​cash 
+from​ ​ATM 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+4.​ ​Design​ ​Approach 
+ 
+
+From the architectural point of view, to implement the concept, the Cashaa system is divided into five                 
+
+main component layers that help the platform to scale, maintain and add new features while maintaining                
+
+the highest level of security in a decentralized environment for the blockchain features. We also recognize                
+
+that blockchain technology enables business collaborations that require high reliability and shared, trusted             
+
+privacy​ ​to​ ​preserve​ ​immutable​ ​data​ ​repositories​ ​for​ ​smart​ ​contracts.  
+
+In order to take technical advantages and speedy time to market, Cashaa has teamed up with various                 
+
+organisations to leverage their pre-existing work such as Agrello Foundation for its AI based self aware                19
+
+contract capabilities, Auxledger for its robust infrastructure which has already onboarded 53 million             20
+
+identities and other enterprise infrastructures that would help to scale faster with the built-in capabilities               
+
+of disrupting businesses and impacting millions of people across the globe. Coinfirm which provides data               
+
+that​ ​puts​ ​entities​ ​on​ ​the​ ​safe​ ​side​ ​in​ ​terms​ ​of​ ​regulatory​ ​and​ ​fraud​ ​risk​ ​related​ ​with​ ​cryptocurrencies​ ​​. 
+
+Our design approach is focused around reflecting our vision of customer centricity and user friendly               
+
+applications​ ​while​ ​utilising​ ​the​ ​capabilities​ ​and​ ​promises​ ​of​ ​blockchain​ ​technology.  
+
+As​ ​cyber​ ​security​ ​is​ ​crucial​ ​for​ ​a​ ​fully​ ​digital​ ​service​ ​and​ ​to​ ​protect​ ​our​ ​systems,​ ​Cashaa​ ​has​ ​built​ ​systemic 
+solutions​ ​using​ ​the​ ​most​ ​advanced​ ​statistical​ ​and​ ​deep​ ​learning​ ​techniques​ ​to​ ​detect​ ​and​ ​prevent​ ​threats 
+in​ ​real-time.​ ​The​ ​integrated​ ​defense​ ​models​ ​have​ ​been​ ​successfully​ ​applied​ ​across​ ​multiple​ ​cyber​ ​sources 
+and​ ​will​ ​continue​ ​to​ ​provide​ ​intelligent​ ​protection​ ​for​ ​the​ ​company’s​ ​critical​ ​business​ ​information. 
+
+19​ ​​Agrello​ ​Foundation 
+20​ ​Auxledger 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+https://www.agrello.org/
+https://auxesisgroup.com/technology.html
+
+
+ 
+
+4.1​ ​Ecosystem 
+
+ 
+
+1. ​CASConnec​t layer is the first step for each participant to pass. Here, basic KYC checks are done by                   
+verifying their email ID and mobile number. For higher transaction slabs, users have to pass stringent                
+
+checks and have to follow a tiered KYC structure that involves OFAC, AML and other guidelines that vary                  
+
+from country to country. This layer will also interact with banks and govt initiatives to use the existing KYC                   
+
+in place. We also provide the option of biometric verification to include undocumented parts of the                
+
+population. 
+
+2. ​CASNet layer enables a blockchain-driven self-aware contract assisted by an agent for a decentralized               
+peer-to-peer (P2P) economy. It will have the matching engine and system to define fee %, margins and                 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+bonus. This layer will be using some of the high quality tech work done by our Smart Contract Advisor ​Alex                    
+Norta ​ ​and​ ​utilising​ ​the​ ​existing​ ​results​ ​achieved​ ​by​ ​​Qtum​​ ​and​ ​​Agrello​ ​Foundation. 21
+
+3. ​CASFabric is the middle layer with core components for decentralized exchange with clearinghouse              
+messaging network, fraud prevention, clock synchronization among the participants and liquidity provider            
+
+mechanism. This layer has the required admin tools allowing admin users to add new cryptocurrencies,               
+
+markets, fiat and create a trader partner contract within minutes to scale solutions, based on the industry                 
+
+adoption and maturity. The developer SDK in C#, JAVA, Python and Go will be published to develop and                  
+
+integrate​ ​it​ ​with​ ​the​ ​Cashaa​ ​platform.​ ​Currently,​ ​Cashaa​ ​has​ ​set​ ​up​ ​exchange​ ​and​ ​FX​ ​pairs​ ​APIs​ ​in​ ​​JSON. 
+
+4. Our ​CASChain layer makes the network interoperable and cryptocurrency neutral, which may             
+eventually operate through any digital currency or token which traders prefer, namely, Bitcoin, Ether,              
+
+Ripple, NEO or any ERC-20 compliant token. Blockchain nodes of aforementioned cryptocurrencies will be              
+
+enabled and integrated within CASConnect, thereby making Cashaa a partner of choice for interoperability              
+
+to​ ​grow​ ​alongside​ ​with​ ​the​ ​needs​ ​of​ ​the​ ​financial​ ​services​ ​industry.  
+
+5.​ ​​ ​​CASFiat​​ ​layer​ ​will​ ​be​ ​integrated​ ​with​ ​the​ ​banking​ ​system​ ​incorporating​ ​cash​ ​instruments​ ​in​ ​multiple 
+currencies​ ​within​ ​the​ ​network.​ ​This​ ​layer​ ​is​ ​responsible​ ​to​ ​decide​ ​the​ ​FX​ ​conversion;​ ​ensures​ ​the 
+availability​ ​of​ ​each​ ​FX​ ​value​ ​available​ ​on​ ​the​ ​platform​ ​and​ ​also​ ​assists​ ​in​ ​working​ ​with​ ​3rd​ ​party​ ​APIs​ ​such 
+as​ ​XE,​ ​Reuters​ ​easing​ ​communication​ ​with​ ​payment​ ​networks​ ​across​ ​the​ ​globe. 
+
+ 
+
+4.2​ ​​ ​Blockchain​ ​Technology  
+ 
+
+Cashaa​ ​token​ ​is​ ​implemented​ ​using​ ​Ethereum​ ​EIP-20​ ​(former​ ​ERC-20)​ ​standard.​ ​ ​ ​The​ ​token​ ​is​ ​accepted 22
+
+and​ ​traded​ ​in​ ​Cashaa’s​ ​own​ ​services,​ ​but​ ​is​ ​also​ ​compatible​ ​across​ ​different​ ​Ethereum​ ​wallets​ ​and 
+exchanges. 
+
+Cashaa’s​ ​blockchain​ ​technology​ ​stack​ ​is​ ​not​ ​limited​ ​to​ ​Bitcoin​ ​and​ ​Ethereum.​ ​When​ ​applicable,​ ​Cashaa​ ​uses 
+different​ ​blockchain​ ​technologies​ ​to​ ​decentralize​ ​its​ ​products.​ ​This​ ​will​ ​give​ ​benefits​ ​of​ ​robustness, 
+transparency,​ ​compatibility​ ​and​ ​scalability​ ​to​ ​Cashaa​ ​users. 
+
+Auxesis​ ​Group 
+
+Enterprise​ ​grade​ ​blockchain​ ​infrastructure​ ​with​ ​built-in​ ​capabilities​ ​disrupting​ ​businesses​ ​and​ ​impacting 
+millions​ ​of​ ​population​ ​across​ ​the​ ​country.​ ​The​ ​Cashaa​ ​project​ ​is​ ​aligned​ ​with​ ​AuxLedger​ ​to​ ​use​ ​this 
+technology​ ​for​ ​the​ ​identity​ ​management,​ ​compliance​ ​and​ ​banking​ ​integration. 
+
+Akash​ ​Gaurav,​ ​CEO​ ​Auxesis​ ​Group:​ ​“​We​ ​are​ ​excited​ ​to​ ​support​ ​Cashaa​ ​in​ ​India​ ​by​ ​providing​ ​AuxLedger 
+infrastructure.​ ​Together​ ​with​ ​the​ ​state​ ​Govt​ ​of​ ​India​ ​AuxLedger​ ​first​ ​implementation​ ​holds​ ​more​ ​than​ ​53 
+Million​ ​Indians​ ​till​ ​date​” 
+
+21​ ​Assoc.​ ​Prof.​ ​Alex​ ​Norta,​ ​PhD 
+ 
+22​ ​​https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md  
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+http://alexnortaphd.yolasite.com/
+http://alexnortaphd.yolasite.com/
+https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
+
+
+ 
+
+ 
+
+Agrello​ ​Foundation 
+
+Agrello​ ​project​ ​works​ ​towards​ ​creating​ ​legally​ ​binding​ ​self​ ​aware​ ​contracts​ ​based​ ​on​ ​blockchain.​ ​Cashaa 
+sees​ ​the​ ​opportunity​ ​for​ ​utilizing​ ​these​ ​for​ ​efficiency​ ​gains​ ​in​ ​decentralized​ ​trading​ ​and​ ​​ ​microfinancing 
+where​ ​the​ ​cost​ ​of​ ​engaging​ ​into​ ​a​ ​business​ ​relationship​ ​and​ ​writing​ ​agreements​ ​is​ ​high​ ​compared​ ​to​ ​the 
+transaction​ ​value.​ ​Agrello​ ​self​ ​aware​ ​contracts​ ​combined​ ​with​ ​Agrello​ ​identity​ ​and​ ​digital​ ​signature​ ​enable 
+fast​ ​and​ ​secure​ ​contract​ ​conclusion. 
+
+Agrello​ ​CEO​ ​and​ ​co-founder​ ​Hando​ ​Rand:​ ​“​We​ ​think​ ​the​ ​Cashaa​ ​project​ ​is​ ​revolutionary​ ​in​ ​Fintech,​ ​it 
+combines​ ​the​ ​potential​ ​of​ ​blockchain​ ​with​ ​vast​ ​increasing​ ​demand​ ​of​ ​P2P​ ​money​ ​transfers​ ​worldwide.​ ​We 
+see​ ​huge​ ​potential​ ​in​ ​cooperation​” 
+
+ 
+
+Qtum​ ​Foundation 
+
+Qtum​ ​combines​ ​uniquely​ ​Bitcoin​ ​functionality​ ​with​ ​the​ ​EVM​ ​in​ ​that​ ​it​ ​allows​ ​to​ ​use​ ​the​ ​UTXO​ ​protocol 
+together​ ​with​ ​SPV​ ​so​ ​that​ ​it​ ​is​ ​possible​ ​to​ ​work​ ​only​ ​with​ ​the​ ​headers​ ​of​ ​transactions.​ ​Differently​ ​to 
+Ethereum,​ ​this​ ​allows​ ​for​ ​the​ ​use​ ​of​ ​lite​ ​wallets​ ​that​ ​also​ ​run​ ​on​ ​mobile​ ​devices. 
+
+Qtum​ ​Chief​ ​Scientist​ ​Alex​ ​Norta:​ ​​“Cashaa​ ​can​ ​leverage​ ​the​ ​Qtum​ ​smart-contract​ ​system​ ​by​ ​developing 
+mobile​ ​apps​ ​and​ ​also​ ​having​ ​a​ ​performing​ ​and​ ​scalable​ ​PoS​ ​platform.​ ​​” 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+5.​ ​Products 
+As a product-driven company our focus is to solve the problems using disruptive technologies to create                
+
+products and services for simple and easy use. At Cashaa we work to build the next generation of                  
+
+consumer-centric payments and banking products on target to be the most cost-effective and innovative              
+
+available​ ​on​ ​the​ ​market.  
+
+ 
+
+5.1​ ​Wallets 
+ 
+
+Cashaa Wallet will be a one stop destination for users to use existing and other planned services. Products                  
+
+will be added as Cashaa secures the appropriate licences. For this purpose we are also partnering with                 
+
+existing institutions to leverage their licenses where required. ​Cashaa ​Wallet is an alternative to traditional               
+banking with a better way to spend, save and share your money, fee-free and straight from your mobile.                  
+
+The Cashaa App can accesses a global payments network that enables worldwide acceptance of the digital                
+
+wallet. Our digital local currency account is a gateway to widespread cryptocurrency adoption, pairing it               
+
+with​ ​access​ ​to​ ​mainstream​ ​financial​ ​services​ ​and​ ​smart​ ​new​ ​features​ ​on​ ​a​ ​simple,​ ​user-friendly​ ​platform.  
+
+The Cashaa App (called: Cashaa) will be available for free on Android or IOS shortly and is already                  
+
+accessible​ ​through​ ​our​ ​WebApp​ ​(see​ ​milestones​ ​for​ ​more​ ​details).  
+
+Some​ ​of​ ​the​ ​core​ ​functions​ ​of​ ​the​ ​app​ ​will​ ​be​ ​provide​ ​depending​ ​on​ ​regulatory​ ​framework​ ​and​ ​licences. 
+
+1. KYC​ ​for​ ​customer​ ​onboarding 
+2. Deposit,​ ​send,​ ​receive​ ​fiat​ ​money​ ​(multi-currency​ ​wallet) 
+3. Deposit,​ ​send,​ ​receive​ ​crypto​ ​assets​ ​(multi-cryptocurrency​ ​wallet) 
+4. Access​ ​microfinancing  
+5. Trading​ ​crypto​ ​assets​ ​(advanced​ ​feature) 
+6. Activate​ ​foreign​ ​value-based​ ​transactions 
+7. Tips,​ ​tools​ ​and​ ​tailored​ ​advice​ ​to​ ​reach​ ​your​ ​financial​ ​goals 
+8. Spending​ ​analytics​ ​&​ ​transaction​ ​notification  
+9. Tap-to-pay​ ​functionality​ ​on​ ​the​ ​participating​ ​3rd​ ​party​ ​mobile​ ​wallets 
+10. Security​ ​features​ ​to​ ​control​ ​the​ ​physical​ ​&​ ​virtual​ ​card​ ​​(​temporarily​ ​disable,​ ​freeze,​ ​enable-​ ​disable​ ​​ ​ATM 
+withdrawals,​ ​activate​ ​geo​ ​location​ ​based​ ​spending​ ​to​ ​prevent​ ​cloning​ ​attack,​ ​diable​ ​E​ ​commerce​ ​transactions​) 
+
+ 
+
+5.2​ ​Physical​ ​&​ ​Virtual​ ​cards 
+ 
+
+Each Cashaa Wallet includes a Cashaa prepaid card which complements the wallet. Physical prepaid cards               
+
+are the most convenient way to connect virtual assets in the finance sphere. Through our card issuance                 
+
+partnerships with global payment networks, cards can be accepted by more than 39 Million merchants as                
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+well as POS terminals, the adoption of which is growing exponentially with existing 3 Million ATMs which                 
+
+enable​ ​to​ ​withdraw​ ​cash​ ​worldwide. 
+
+Digital Indian Case Study Results: “In India Point-of-Sale transactions saw 88 percent rise, while mobile wallets                
+transactions doubled. Nearly 6.5 lakh POS machines by Public Sector Banks have been issued to merchants to benefit                  
+from​ ​low​ ​rentals​ ​to​ ​promote​ ​digital​ ​transactions”.  
+
+Some​ ​of​ ​the​ ​core​ ​functions​ ​of​ ​the​ ​card:  
+1. Real​ ​time​ ​conversion​ ​from​ ​crypto​ ​to​ ​local​ ​currency​ ​at​ ​point-of-sale 
+2. Chip-and-PIN​ ​EMV​ ​card 
+3. The​ ​ability​ ​to​ ​withdraw​ ​cash​ ​from​ ​any​ ​ATM 
+4. Accepted​ ​at​ ​merchants​ ​POS 
+*​Depending on the country, product manuals will be issued including details such as the exact fee of each                  
+service. 
+
+ 
+
+5.3​ ​Micro​ ​Lending 
+ 
+
+The World Bank reported that less than 1 in 10 people across the world’s low and mid-income population                  
+
+have a documented credit history. It recommends ​using non-financial data for judging creditworthiness             
+using the power of the peer-to-peer economy, which revolutionized the way people do business , and due                23
+
+to which the financial sector has seen some impressive advancements. Cashaa microloans are small p2p               
+
+loans that are issued by individuals on our platform. These loans can be issued by a single individual or                   
+
+aggregated across a number of individuals who contribute a portion of the total amount . CAS tokens will                 24
+
+be used to determine the credit score and are used as integral part of the system, explained in section                   
+
+11.1.  
+
+This​ ​product​ ​will​ ​serve​ ​​dual​ ​purposes​: 
+
+1. Individuals who cannot obtain credits from a bank, or users in third world countries will be able to                  
+
+borrow​ ​money​ ​to​ ​start​ ​small​ ​businesses​ ​or​ ​for​ ​individual​ ​needs. 
+2. The second purpose is to give access to new lending opportunities. The lenders are individuals who                
+
+pledge​ ​a​ ​certain​ ​amount​ ​of​ ​money​ ​to​ ​loan​ ​out​ ​a​ ​deserving​ ​entrepreneur​ ​in​ ​another​ ​country.  
+ 
+
+Global micro and SME finance markets are growing by an average of 10-15%; while the highest growth rate                  
+
+is​ ​expected​ ​in​ ​Asia​ ​Pacific,​ ​driven​ ​by​ ​developments​ ​in​ ​India​ ​and​ ​strong​ ​growth​ ​in​ ​the​ ​region . 25
+
+ 
+
+23​ ​​The​ ​Current​ ​and​ ​Future​ ​State​ ​of​ ​the​ ​Sharing​ ​Economy 
+24​ ​​Peer​ ​pressure:​ ​How​ ​peer-to-peer​ ​lending​ ​platforms​ ​are​ ​transforming​ ​the​ ​consumer​ ​lending​ ​industry 
+
+ 
+25​ ​​10–15%​ ​Growth​ ​for​ ​global​ ​Micro​ ​and​ ​SMO​ ​Finance​ ​Markets​ ​with​ ​significant​ ​regional​ ​differences  
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+http://www.cgdev.org/doc/books/rescuing/deFerranti_MIC.pdf
+https://www.brookings.edu/research/the-current-and-future-state-of-the-sharing-economy/
+https://www.pwc.com/us/en/consumer-finance/publications/peer-to-peer-lending.html
+https://www.pwc.com/us/en/consumer-finance/publications/peer-to-peer-lending.html
+https://www.responsability.com/en/10-15-growth-global-micro-and-sme-finance-markets-significant-regional-differences
+
+
+ 
+
+Case​ ​Studies​ ​for​ ​Micro​ ​Finance​ ​in​ ​India​ ​and​ ​Bangladesh: 
+
+The microfinance industry has seen tremendous growth over the past five years, growing at a 45% CAGR​[1]​.                 
+It has witnessed rapid evolution with regulatory reforms post the Andhra Pradesh crisis in 2010 to regulate                 
+
+a product, its pricing and protection of customer interest. This includes growth of regulated NBFC MFIs - a                  
+
+special class of RBI regulated entities carrying out microfinance, the formation of the first ever               
+
+self-regulatory organizations (SROs) of the RBI, also Aadhar based lending by NBFC MFIs and              
+
+transformation​ ​of​ ​some​ ​of​ ​the​ ​entities​ ​into​ ​universal​ ​and​ ​small​ ​finance​ ​banks. 
+
+The key reason for the growth of the sector has been its ability to adapt changes, showing resilience in the                    
+
+face​ ​of​ ​challenges​ ​and​ ​an​ ​ability​ ​to​ ​maintain​ ​high​ ​repayment​ ​rates​ ​of​ ​almost​ ​99.5%.  
+
+In Bangladesh, the Nobel Prize winning Grameen model of social collateral combined with a high touch                
+
+model and rigorous credit bureau discipline has helped to maintain high levels of repayment for small ticket                 
+
+sized​ ​unsecured​ ​loans . 26
+
+ 
+
+5.3​ ​Peer-to-peer​ ​exchange​ ​​(Beta​ ​Tested) 
+ 
+
+Cashaa has successfully connected a large number of individuals globally, who use the platform to trade                
+
+cryptocurrencies across the globe without without the hassle of international payments to the seller.              
+
+(​Traders from 141 countries in 97 different currencies registered during our beta test​). These traders               
+receive local fiat currency in exchange for selling and buying cryptocurrency. The Cashaa platform will be                
+
+equipped with portfolio management services which enables market analysis, allowing users to share             
+
+insights on markets, display their achievements and receive trading signals. Cashaa therefore lowers             
+
+barriers to entry in the growing FX trading market for crypto currency, and thus supports experienced and                 
+
+new traders (traders required licences in some jurisdictions). Cashaa’s peer to peer exchange even allows               
+
+traders to buy and sell cryptocurrency which is not available in their local country’s exchanges. (As an                 
+
+example, users in India can buy XRP, LTC, NEO, OMG in their local INR). This will bring balance in the entire                     
+
+crypto​ ​ecosystem​ ​and​ ​lead​ ​to​ ​systematic​ ​growth​ ​of​ ​cryptocurrency​ ​across​ ​the​ ​globe.  
+
+Core​ ​Features: 
+
+1. In-built​ ​crypto​ ​wallet  
+2. Buy​ ​and​ ​sell​ ​cryptocurrency​ ​(cash​ ​or​ ​bank​ ​account) 
+3. Genrate​ ​passcode​ ​for​ ​cash​ ​trade 
+4. Location​ ​based​ ​search  
+5. Sorting​ ​and​ ​filtering​ ​based​ ​on​ ​traders​ ​preferences  
+6. Export​ ​reviews​ ​and​ ​rating  
+7. Rate​ ​&​ ​write​ ​review​ ​for​ ​​ ​the​ ​counterparty 
+8. AI​ ​based​ ​trade​ ​actions​ ​to​ ​meet​ ​your​ ​goals​ ​while​ ​you​ ​are​ ​offline​​ ​(under​ ​development) 
+
+26​ ​Indian​ ​Microfinance​ ​Industry​ ​will​ ​continue​ ​to​ ​demonstrate​ ​sustainable​ ​growth 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+http://economictimes.indiatimes.com/small-biz/money/indian-microfinance-industry-will-continue-to-demonstrate-sustainable-growth/articleshow/58311757.cms
+
+
+ 
+
+9. Option​ ​to​ ​trade​ ​through​ ​the​ ​participating​ ​3rd​ ​party​ ​crypto​ ​wallets​ ​​(under​ ​development) 
+10. Analytics​ ​and​ ​transaction​ ​history  
+11. In-built​ ​support​ ​and​ ​chat​ ​tool 
+
+ 
+
+Trader​ ​view​ ​for​ ​a​ ​deal​ ​for​ ​buying​ ​CAS​ ​and​ ​delivering​ ​INR​ ​(Live​ ​for​ ​BTC) 
+
+ 
+
+Trader​ ​view​ ​for​ ​a​ ​deal​ ​for​ ​selling​ ​CAS​ ​and​ ​receiving​ ​GBP​ ​(Live​ ​for​ ​BTC) 
+
+ 
+
+5.5​ ​Peer​ ​to​ ​Peer​ ​Insurance​ ​(Future) 
+ 
+
+Insurance is a vital part of our everyday life and protects us from the uncertainty of life. As a fintech                    
+
+company, it is important for Cashaa to protect its users and provide access to innovative insurance                
+
+services. The founding concept is to have a more efficiently replicated method for a group of friends or                  
+
+associates as to what traditional insurance companies do for a large number of strangers. This will make                 
+
+insurance more social, cheaper and clearer, thus educating people to the social function of insurance               
+
+coverage and leveraging on business (like product construction) models of a mixed economy to provide               
+
+users​ ​with​ ​better​ ​service​ ​and​ ​better​ ​experience​ ​at​ ​a​ ​lower​ ​cost. 
+
+Our smart contract enabled insurance platform can be used for insuring the household, personal liability,               
+
+legal expenses, travel and many more. Smaller claims and deductibles will be settled by peers in the group                  
+
+while​ ​the​ ​large​ ​claims​ ​are​ ​still​ ​covered​ ​by​ ​traditional​ ​insurers,​ ​with​ ​whom​ ​the​ ​firm​ ​partners​ ​in​ ​future. 
+
+Our team already successfully built the first Italian peer to peer insurance[ ][ ] company backed by AIG[ ]                27 28 29
+
+insurance products, an American multinational insurance corporation with operations in more than 80             
+
+countries and jurisdictions. Our team’s experience will be leveraged to build this innovative product on a                
+
+blockchain. 
+
+27​ ​Wikipedia:​ ​Peer​ ​to​ ​peer​ ​Insurance 
+28​ ​​Darwinsurance 
+29​ ​AIG  
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+https://en.wikipedia.org/wiki/Peer-to-peer_insurance#Historical
+http://www.insuranceup.it/en/startup/here-is-the-first-italian-insurance-peer-to-peer-platform_1327.htm
+http://www.aig.com/
+
+
+ 
+
+6.​ ​Key​ ​Milestones​ ​accomplished 
+ 
+
+Below​ ​are​ ​key​ ​milestones​ ​accomplished​ ​by​ ​Cashaa​ ​till​ ​date:  
+
+April​ ​2016 Developed​ ​MVP​ ​BTC2BID,​ ​a​ ​P2P​ ​Concept​ ​for​ ​Bitcoin​ ​Exchange 
+
+June​ ​2016 ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​Cashaa​ ​Limited​ ​founded​ ​in​ ​London,​ ​UK  
+3000+​ ​traders​ ​joined​ ​in​ ​the​ ​first​ ​90​ ​days 
+
+Sep​ ​2016 Presented​ ​the​ ​first​ ​public​ ​demo​ ​at​ ​Google​ ​Campus,​ ​Warsaw 
+
+Oct​ ​2016 ​​ ​​ ​​ ​Partnered​ ​with​ ​Coinfirm,​ ​to​ ​integrate​ ​​ ​a​ ​strong​ ​compliance​ ​&​ ​AML​ ​solution. 
+Selected​ ​at​ ​Level​ ​39​ ​Technology​ ​Accelerator​ ​in​ ​London,​ ​Europe's​ ​Largest  
+
+Fintech​ ​Accelerator  
+
+Dec​ ​2016 Selected​ ​for​ ​Tech​ ​Crunch​ ​Disrupt,​ ​London 
+
+Jan​ ​2017 Invited​ ​by​ ​Blockchain​ ​Money,​ ​Blockchain​ ​Week,​ ​Blockchain​ ​Expo,  
+Esummit​ ​-​ ​IIT​ ​Mumbai​ ​and​ ​many​ ​events​ ​and​ ​conferences 
+
+Feb​ ​2017 Beta​ ​Launch​ ​in​ ​U.K,​ ​Nigeria,​ ​India​ ​&​ ​Indonesia 
+
+March​ ​2017 Became​ ​a​ ​Top​ ​100​ ​Most​ ​Influential​ ​​Blockchain​ ​Company​ ​in​ ​the​ ​World 
+
+May​ ​2017 Invited​ ​at​ ​Keynote​ ​in​ ​Brussels​ ​for​ ​EU​ ​Parliament​ ​event,  
+Data​ ​Cloud​ ​Congress,​ ​Monaco 
+
+June​ ​2017 Developed​ ​&​ ​tested​ ​​ ​the​ ​most​ ​cost​ ​efficient​ ​system​ ​for  
+Bank​ ​Transfer​ ​settlement​ ​between​ ​UK​ ​&​ ​India 
+
+August​ ​2017 Extensively​ ​tested​ ​for​ ​security​ ​&​ ​usability​ ​of​ ​the​ ​platform,​ ​along​ ​with  
+growing​ ​beta​ ​adoption​ ​of​ ​12770​ ​registered​ ​users​ ​from​ ​141​ ​countries  
+
+powered​ ​$10​ ​Million​ ​worth​ ​of​ ​cryptocurrency​ ​exchange  
+
+Sept​ ​2017  Team​ ​size​ ​grew​ ​from​ ​2​ ​to​ ​25​ ​in​ ​one​ ​year​ ​with​ ​top​ ​people​ ​from  
+Belgian​ ​Central​ ​Bank,​ ​MIT,​ ​IIT,​ ​Quatrro,​ ​First​ ​National​ ​Bank,​ ​Rand​ ​Merchant​ ​Bank, 
+Microsoft,​ ​SAP,​ ​World​ ​Bank,​ ​World​ ​Economic​ ​Forum,​ ​Qualcomm​ ​and​ ​many​ ​more 
+
+Oct​ ​2017 Formation​ ​of​ ​holding​ ​company​ ​in​ ​Estonia​ ​&  
+conclusion​ ​of​ ​legal​ ​preparation​ ​for​ ​token​ ​distribution 
+
+ 
+
+ 
+
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+http://rise.global/blockchain-100
+
+
+ 
+
+7.​ ​Public​ ​Appreciation 
+ 
+
+ 
+
+ 
+
+TechInAsia,​ ​25​ ​Sep​ ​2017:​ ​“​Cashaa​ ​has​ ​a​ ​proven​ ​product​ ​for​ ​remittances​ ​or 
+money​ ​transfers​ ​and​ ​digital​ ​wallet​” 
+
+ 
+
+ 
+
+ 
+
+CoinTelegraph,​ ​21​ ​Sep​ ​2017:​ ​“​Cashaa​ ​cards​ ​based​ ​solution​ ​in​ ​India​ ​to 
+facilitate​ ​the​ ​use​ ​of​ ​cryptocurrencies​ ​in​ ​a​ ​fully​ ​regulated​ ​way​” 
+
+ 
+
+ 
+
+ 
+
+Investing​ ​Channel,​ ​21​ ​July​ ​2017:​ ​​“In​ ​Cashaa,​ ​the​ ​Bitcoin​ ​part​ ​is​ ​completely​ ​in 
+the​ ​background,​ ​enabling​ ​any​ ​sender​ ​to​ ​benefit​ ​from​ ​Bitcoin​ ​in​ ​the​ ​easiest​ ​way 
+without​ ​having​ ​to​ ​know​ ​about​ ​it.” 
+
+ 
+
+ 
+
+Let`s​ ​Talk​ ​Payments,​ ​9​ ​June​ ​2017:​ ​​“Cashaa​ ​serves​ ​both​ ​the​ ​banked​ ​and 
+unbanked​ ​masses​ ​and​ ​gives​ ​the​ ​poorest​ ​the​ ​opportunity​ ​to​ ​equally​ ​benefit​ ​from 
+the​ ​advantages​ ​that​ ​bitcoin​ ​brings,​ ​without​ ​them​ ​having​ ​to​ ​know​ ​about​ ​what​ ​it 
+is.”  
+
+ 
+Coindesk,​ ​22​ ​April​ ​2017:​ ​​“There​ ​are​ ​a​ ​few​ ​features​ ​that​ ​stand​ ​out​ ​with​ ​Cashaa, 
+being​ ​able​ ​to​ ​process​ ​the​ ​whole​ ​payment​ ​chain.” 
+
+ 
+
+ 
+
+Irish​ ​Tech​ ​News,​ ​9​ ​April​ ​2017:​ ​​“Cashaa​ ​is​ ​a​ ​unique​ ​idea​ ​to​ ​leverage​ ​the 
+untapped​ ​potential​ ​of​ ​bringing​ ​together​ ​industry​ ​in​ ​a​ ​way​ ​that​ ​creates​ ​a 
+win-win​ ​model​ ​for​ ​everyone.”  
+
+ 
+
+ 
+
+BitcoinChaser,​ ​22​ ​March​ ​2017:​ ​​“Cashaa​ ​is​ ​giving​ ​cryptocurrency​ ​trading​ ​a 
+new​ ​purpose​ ​with​ ​more​ ​benefits.” 
+
+ 
+Richtopia,​ ​13​ ​March​ ​2017:​ ​​“Cashaa​ ​ranked​ ​amoung​ ​the​ ​Top​ ​100​ ​Most 
+Influential​ ​Blockchain​ ​Companies.” 
+
+ 
+
+ 
+
+Bitconnect,​ ​18​ ​January​ ​2017:​ ​​“Cashaa​ ​can​ ​disrupt​ ​LocalBitcoins​ ​and​ ​cash 
+exchanges​ ​at​ ​the​ ​same​ ​time”. 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+https://www.techinasia.com/omise-rival-cashaa-launching-ico
+https://www.techinasia.com/omise-rival-cashaa-launching-ico
+https://cointelegraph.com/news/popularity-of-crypto-debit-cards-will-encourage-mainstream-adoption
+https://cointelegraph.com/news/popularity-of-crypto-debit-cards-will-encourage-mainstream-adoption
+https://austrian.economicblogs.org/max-keiser/2017/keiser-blockchain-helps-inclusive-finance-cash/
+https://austrian.economicblogs.org/max-keiser/2017/keiser-blockchain-helps-inclusive-finance-cash/
+https://austrian.economicblogs.org/max-keiser/2017/keiser-blockchain-helps-inclusive-finance-cash/
+https://letstalkpayments.com/medici-now-cashaa/
+https://letstalkpayments.com/medici-now-cashaa/
+https://letstalkpayments.com/medici-now-cashaa/
+https://letstalkpayments.com/medici-now-cashaa/
+https://www.coindesk.com/cashaa-exploits-bitcoin-price-differentials-remittances/
+https://www.coindesk.com/cashaa-exploits-bitcoin-price-differentials-remittances/
+http://irishtechnews.ie/business-showcase-cashaa/
+http://irishtechnews.ie/business-showcase-cashaa/
+http://irishtechnews.ie/business-showcase-cashaa/
+http://bitcoinchaser.com/cashaa
+http://bitcoinchaser.com/cashaa
+https://www.rise.global/blockchain-100
+https://www.rise.global/blockchain-100
+https://bitconnect.co/bitcoin-news/412/bitconnect-connects-with-bitcoin-startup-cashaa-can-they-disrupt-localbitcoins/
+https://bitconnect.co/bitcoin-news/412/bitconnect-connects-with-bitcoin-startup-cashaa-can-they-disrupt-localbitcoins/
+
+
+ 
+
+ 
+
+ 
+
+NewsBtc,​ ​15​ ​January​ ​2017:​ ​​“A​ ​peer-to-peer​ ​marketplace​ ​designed​ ​to​ ​facilitate 
+the​ ​transfer​ ​of​ ​fiat​ ​currencies​ ​from​ ​sender​ ​to​ ​recipient​ ​in​ ​a​ ​straightforward 
+manner​ ​unlike​ ​many​ ​other​ ​blockchain-based​ ​remittance​ ​services​ ​in​ ​the​ ​recent 
+years.” 
+
+ 
+Bitcoinist,​ ​30​ ​December​ ​2016:​ ​​“​ ​Cashaa​ ​manages​ ​to​ ​solve​ ​this​ ​major​ ​problem 
+using​ ​Bitcoin’s​ ​technological​ ​‘backbone’,​ ​the​ ​blockchain.”  
+
+ 
+
+BtcManager,​ ​13​ ​October​ ​2016:​ ​​“Cashaa​ ​capitalizes​ ​on​ ​the​ ​revolutionary​ ​power 
+of​ ​blockchain​ ​technology​ ​to​ ​fuel​ ​a​ ​new​ ​normal​ ​in​ ​the​ ​cash​ ​transfer​ ​industry.” 
+
+ 
+Nasdaq,​ ​13​ ​October​ ​2016:​ ​​“Cashaa​ ​alleviates​ ​several​ ​of​ ​the​ ​challenges​ ​that 
+Bitcoin​ ​remittance​ ​companies​ ​have​ ​been​ ​facing​ ​in​ ​Africa.” 
+
+ 
+
+ 
+
+Bitcoin​ ​Magazine,​ ​13​ ​October​ ​2016:​ ​​“Cashaa’s​ ​advantage​ ​in​ ​the​ ​space​ ​lies​ ​in 
+the​ ​company’s​ ​business​ ​model​ ​while​ ​the​ ​digital​ ​currency​ ​aspect​ ​of​ ​the 
+transaction​ ​happens​ ​in​ ​the​ ​background.”  
+
+ 
+
+ 
+
+CoinTelegraph,​ ​18​ ​September​ ​2016:​ ​​“Africa​ ​will​ ​get​ ​the​ ​maximum​ ​advantage 
+through​ ​Cashaa’s​ ​system​ ​ultimately​ ​saving​ ​ordinary​ ​people​ ​billions​ ​of​ ​dollars, 
+which​ ​are​ ​currently​ ​lost​ ​in​ ​fees.”  
+
+ 
+Wprost,​ ​25​ ​August​ ​2016:​​ ​​“​Cashaa​ ​is​ ​a​ ​revolutionary​ ​system​ ​and​ ​uses​ ​a​ ​very 
+good​ ​fully​ ​peer-to-peer​ ​mechanism​ ​in​ ​which​ ​banks​ ​and​ ​credit​ ​card​ ​companies 
+are​ ​not​ ​involved,​ ​while​ ​saving​ ​a​ ​great​ ​deal​ ​of​ ​money.” 
+
+ 
+
+ 
+
+Bitcoin.com,​ ​8​ ​August​ ​2016:​ ​​“It’s​ ​as​ ​simple​ ​as​ ​opening​ ​a​ ​new​ ​Gmail​ ​account 
+for​ ​instance.​ ​Money​ ​senders​ ​are​ ​not​ ​required​ ​to​ ​know​ ​anything​ ​about​ ​wallets, 
+bitcoin,​ ​the​ ​blockchain,​ ​or​ ​other​ ​cryptocurrencies.”  
+
+ 
+
+CoinTelegraph,​ ​12​ ​July​ ​2016:​ ​​“A​ ​completely​ ​peer​ ​to​ ​peer​ ​company,​ ​where 
+peer​ ​is​ ​coming​ ​from​ ​two​ ​unique​ ​businesses.” 
+
+   
+ 
+
+ 
+
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+http://www.newsbtc.com/2017/01/15/cashaa-to-launch-its-services-in-india-and-nigeria/
+http://www.newsbtc.com/2017/01/15/cashaa-to-launch-its-services-in-india-and-nigeria/
+http://www.newsbtc.com/2017/01/15/cashaa-to-launch-its-services-in-india-and-nigeria/
+http://www.newsbtc.com/2017/01/15/cashaa-to-launch-its-services-in-india-and-nigeria/
+http://bitcoinist.com/cashaa-cost-remittances-zero/
+http://bitcoinist.com/cashaa-cost-remittances-zero/
+https://btcmanager.com/the-blockchain-of-fiat-feature-interview-with-kumar-gaurav-co-founder-and-ceo-of-cashaa/
+https://btcmanager.com/the-blockchain-of-fiat-feature-interview-with-kumar-gaurav-co-founder-and-ceo-of-cashaa/
+http://www.nasdaq.com/article/is-the-time-finally-ripe-for-bitcoin-remittances-in-africa-cm693166
+http://www.nasdaq.com/article/is-the-time-finally-ripe-for-bitcoin-remittances-in-africa-cm693166
+https://bitcoinmagazine.com/articles/is-the-time-finally-ripe-for-bitcoin-remittances-in-africa-1476387861/
+https://bitcoinmagazine.com/articles/is-the-time-finally-ripe-for-bitcoin-remittances-in-africa-1476387861/
+https://bitcoinmagazine.com/articles/is-the-time-finally-ripe-for-bitcoin-remittances-in-africa-1476387861/
+https://cointelegraph.com/news/cashaa-uber-of-money-transfers-revolutionizes-cash-remittances-to-africa
+https://cointelegraph.com/news/cashaa-uber-of-money-transfers-revolutionizes-cash-remittances-to-africa
+https://cointelegraph.com/news/cashaa-uber-of-money-transfers-revolutionizes-cash-remittances-to-africa
+https://www.wprost.pl/fintech/10020618/Jak-przelewy-miedzynarodowe-moga-dzialac-bez-oplat-Wywiad-zzalozycielem-Cashaa-Kumar-Gaurav.html
+https://www.wprost.pl/fintech/10020618/Jak-przelewy-miedzynarodowe-moga-dzialac-bez-oplat-Wywiad-zzalozycielem-Cashaa-Kumar-Gaurav.html
+https://www.wprost.pl/fintech/10020618/Jak-przelewy-miedzynarodowe-moga-dzialac-bez-oplat-Wywiad-zzalozycielem-Cashaa-Kumar-Gaurav.html
+https://www.wprost.pl/fintech/10020618/Jak-przelewy-miedzynarodowe-moga-dzialac-bez-oplat-Wywiad-zzalozycielem-Cashaa-Kumar-Gaurav.html
+https://news.bitcoin.com/cashaa-free-p2p-global-unbanked/
+https://news.bitcoin.com/cashaa-free-p2p-global-unbanked/
+https://news.bitcoin.com/cashaa-free-p2p-global-unbanked/
+https://cointelegraph.com/news/cashaa-remittance-to-go-live-using-peer-to-peer-transactions
+https://cointelegraph.com/news/cashaa-remittance-to-go-live-using-peer-to-peer-transactions
+
+
+ 
+
+8.​ ​Future​ ​Roadmap​ ​and​ ​Business​ ​Growth​ ​Model 
+ 
+
+Q4​ ​2017 1. Getting​ ​Payments​ ​License​ ​in​ ​UK​ ​and​ ​India 
+2. Distribution​ ​of​ ​CAS​ ​Tokens 
+3. Listing​ ​on​ ​major​ ​cryptocurrency​ ​exchanges  
+
+Q1​ ​2018 1. Partnering​ ​with​ ​Asian​ ​and​ ​African​ ​banks​ ​for​ ​remittance​ ​solution  
+2. Launch​ ​of​ ​Cashaa​ ​multi​ ​currency​ ​crypto​ ​exchange​ ​in​ ​India 
+3. Addition​ ​of​ ​10+​ ​legitimate​ ​and​ ​valuable​ ​cryptocurrencies​ ​​ ​on​ ​peer​ ​to​ ​peer​ ​trading 
+
+platform 
+
+Q2​ ​2018 1. Electronic​ ​Money​ ​Institution​ ​in​ ​Europe​ ​to​ ​issue​ ​IBAN​ ​(limited​ ​bank​ ​account 
+feature)​ ​to​ ​European​ ​users  
+
+2. Launch​ ​of​ ​Cashaa​ ​cards​ ​in​ ​Europe 
+3. Integration​ ​with​ ​AuxLedger 
+
+Q3​ ​2018 1. Launch​ ​of​ ​Cashaa​ ​cards​ ​in​ ​India  
+2. Establishing​ ​local​ ​payout​ ​locations​ ​in​ ​India,​ ​Philippines,​ ​Indonesia,​ ​South​ ​Africa​ ​& 
+
+Nigeria  
+
+3. Addition​ ​of​ ​10+​ ​legitimate​ ​and​ ​valuable​ ​cryptocurrencies​ ​​ ​on​ ​peer​ ​to​ ​peer​ ​trading 
+platform 
+
+Q4​ ​2018 1. License​ ​will​ ​be​ ​obtained​ ​to​ ​offer​ ​lending​ ​solution 
+2. Implementation​ ​of​ ​Agrello​ ​AI​ ​based​ ​smart​ ​contract​ ​solution  
+3. Addition​ ​of​ ​10+​ ​legitimate​ ​and​ ​valuable​ ​cryptocurrencies​ ​​ ​on​ ​peer​ ​to​ ​peer​ ​trading 
+
+platform 
+
+2019 1. Addition​ ​of​ ​P2P​ ​insurance​ ​products  
+2. Start​ ​of​ ​licensing​ ​process​ ​in​ ​United​ ​States  
+3. Addition​ ​of​ ​legitimate​ ​and​ ​valuable​ ​cryptocurrencies​ ​in​ ​each​ ​quarter  
+4. Expansion​ ​to​ ​ROW 
+
+*This Roadmap may change in terms of priorities and timeline based on changing market conditions business opportunities                 
+and​ ​threats 
+
+ 
+
+ 
+
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+9.​ ​Go​ ​to​ ​Market​ ​Strategy 
+ 
+
+9.1​ ​Strategic​ ​Partnerships 
+ 
+
+As a fast and strategic approach to reach the remote parts of Asia & Africa, partnerships are the key                   
+
+elements for the same. Several such partnerships are already under development and include the              
+
+following​ ​segments,​ ​namely,  
+
+● Partnerships with banks operating in the corridors where Cashaa successfully completed its beta             
+test to ensure a successful ‘last mile’ delivery to local bank accounts, prepaid cards and other easy ways to                   
+
+cash​ ​out​ ​at​ ​a​ ​convenient​ ​location.  
+● Partnerships with government agencies to circulate Cashaa cards. ​As an example, in India, Cashaa              
+will use Auxesis Group for the AuxLedger which has 53 Million users resulting of a State Government                 
+
+partnership. 
+
+● Partnering​ ​with​ ​agents​ ​running​ ​traditional​ ​MTO​ ​networks​ ​for​ ​Western​ ​Union,​ ​MoneyGram​ ​or​ ​Ria. 
+● Partnerships with leading global telecom companies, providing immediate opportunities to start           
+mobile​ ​banking​ ​products.  
+● Partnerships with E-Commerce platforms for payment providers to increase coin utility. ​For            
+example, a recent partnership has been signed up with one of the largest restaurant & pub search                 
+
+company​ ​in​ ​the​ ​UK. 
+● Partnering with crypto wallet providers to use their existing user base. Examples are branded              
+Bitcoin​ ​wallets​ ​such​ ​as​ ​Airbitz,​ ​with​ ​whom​ ​Cashaa​ ​concluded​ ​a​ ​partnership.  
+ 
+
+9.2​ ​Legal,​ ​Auditing​ ​and​ ​Regulatory​ ​Partnerships 
+ 
+
+The Cashaa team’s extensive banking and payments experience helps us to know the nuts and bolts of                 
+
+internal​ ​process​ ​and​ ​license​ ​requirements:  
+
+● Our team is already in negotiation with companies to acquire the e-money and banking licences to                
+save​ ​money​ ​and​ ​time. 
+● Partnerships with banks and financial institutions to leverage their licences to speed up our process               
+to go live. For example, in UK, Africa, India & EU we are leveraging our relations to use different payments                    
+
+networks.​ ​In​ ​Europe​ ​through​ ​our​ ​strategic​ ​partnerships​ ​we​ ​are​ ​going​ ​to​ ​use​ ​the​ ​Mastercard​ ​network. 
+● Working closely with auditing firms to leverage the auditability, transparency and accountability of             
+the​ ​Cashaa​ ​platform​ ​to​ ​encourage​ ​its​ ​use. 
+ 
+
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+10.​ ​Cashaa​ ​Tokens​ ​and​ ​Token​ ​Generation​ ​Event  
+ 
+
+A Token generation event (TGE) will be conducted i.e. an event in which early adopters and enthusiasts                 
+
+make​ ​contributions​ ​to​ ​a​ ​Smart​ ​Contract​ ​System​ ​for​ ​the​ ​development​ ​of​ ​the​ ​Cashaa​ ​project . 30
+
+Cashaa’s token generation event is one of the few backed by a ​unique proven platform with a team that                   
+has more than 200 Years of Payments and Banking experience and successful entrepreneurs who built their                
+
+companies from scratch which are now part of Fortune Top 15 companies​. Cashaa’s model has been                
+established with beta testing performed since February 2017. The beta test completed with 12,770              
+
+registered​ ​users​ ​from​ ​141​ ​countries. 
+
+ 
+
+The distribution of CAS tokens in connection with a Token generation event (the “Cashaa Token               
+
+generation event”) to you as a user thereof, will be subject to and governed by T&Cs - which is a                    
+
+separate document setting out the terms and conditions of the agreement as between the distributor               
+
+and you in relation to the Cashaa Token generation event . In the event of any inconsistencies between                  
+
+the T&Cs and this Whitepaper, the former shall prevail. The Distributor will be an affiliate of Cashaa, and                  
+
+all funds raised in connection with the Cashaa Token generation event will be deployed to fund Cashaa                 
+
+cryptocurrency​ ​project,​ ​businesses​ ​and​ ​operations.  
+Unless the context requires otherwise, references to “we” or “us” in connection with the Cashaa Token                
+
+generation​ ​event​ ​​ ​shall​ ​be​ ​construed​ ​as​ ​references​ ​to​ ​the​ ​Distributor.  
+ 
+
+The​ ​Cashaa​ ​Token​ ​generation​ ​event​ ​​ ​is​ ​hereby​ ​announced​ ​to​ ​start​ ​on:  
+
+November 6 2017, 1 PM London Time 9 PM Singapore Time (UTC+8)/ 2PM Munich Time and 8AM New                  
+
+York​ ​Time​ ​and​ ​is​ ​scheduled​ ​till​ ​the​ ​end​ ​on​ ​5​ ​December. 
+
+ 
+
+Official​ ​Website  
+
+www.cashaa.com 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+
+30​ ​​What​ ​is​ ​an​ ​Initial​ ​Coin​ ​Offering​ ​(ICO)? 
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+http://www.cashaa.com/
+https://bdtechtalks.com/2016/12/07/what-is-an-initial-coin-offering-ico/
+
+
+ 
+
+10.1​ ​Token​ ​Functionality 
+ 
+
+The​ ​CAS​ ​token​ ​is​ ​a​ ​key​ ​component​ ​of​ ​the​ ​system​ ​that​ ​enables​ ​trading,​ ​lending​ ​and​ ​gives​ ​access​ ​to​ ​other 
+upcoming​ ​services​ ​in​ ​the​ ​CAS​ ​ecosystem.​ ​CAS​ ​serves​ ​two​ ​main​ ​objectives:​ ​First,​ ​the​ ​token​ ​is​ ​the​ ​fuel​ ​of​ ​an 
+internal​ ​mechanism​ ​of​ ​the​ ​Cashaa​ ​ecosystem.​ ​Second,​ ​it​ ​is​ ​part​ ​of​ ​the​ ​governance​ ​component​ ​of​ ​the​ ​CAS 
+system.​ ​Each​ ​Cashaa​ ​wallet​ ​is​ ​initially​ ​equipped​ ​with​ ​a​ ​predefined​ ​amount​ ​of​ ​CAS​ ​and​ ​cannot​ ​be​ ​used 
+without​ ​a​ ​minimum​ ​CAS​ ​balance.  
+
+10.1.1​ ​Benefits​ ​of​ ​CAS​ ​token 
+● Acquiring​ ​premium​ ​services​ ​in​ ​the​ ​Cashaa​ ​ecosystem​ ​(Membership) 
+● Ability​ ​to​ ​trade​ ​cryptocurrencies​ ​anywhere​ ​in​ ​world​ ​(Trading) 
+● Lower​ ​transaction​ ​fees​ ​for​ ​the​ ​$​ ​600​ ​Billion​ ​remittance​ ​industry​ ​(Remittance) 
+● Providing​ ​the​ ​credit​ ​score​ ​for​ ​lenders​ ​(Micro​ ​Finance) 
+● Ability​ ​to​ ​participate​ ​in​ ​governing​ ​mechanism​ ​of​ ​CAS​ ​usage​ ​(Governance) 
+● Secure​ ​P2P​ ​money​ ​transfers​ ​(Escrow) 
+
+ 
+
+10.1.2​ ​Acquiring​ ​tokens 
+● Token​ ​distribution 
+● Secondary​ ​markets 
+● Rewards​ ​collection 
+
+10.1.3​ ​Spending​ ​tokens 
+
+10.1.3.1​ ​Membership  
+ 
+
+Proof​ ​of​ ​CAS​ ​​ ​ownership​ ​will​ ​be​ ​required​ ​to​ ​access​ ​Cashaa​ ​premium​ ​services​ ​for: 
+
+● Higher​ ​FX​ ​transfer​ ​(Spend,​ ​transfer​ ​and​ ​exchange​ ​an​ ​unlimited​ ​amount​ ​of​ ​money​ ​anywhere​ ​in​ ​the 
+world​ ​at​ ​the​ ​interbank​ ​exchange​ ​rate​ ​without​ ​fees.) 
+● 2X​ ​ATM​ ​allowance​ ​(Double​ ​your​ ​free​ ​monthly​ ​ATM​ ​allowance​ ​with​ ​free​ ​Cashaa​ ​premium 
+withdrawal​ ​of​ ​€400​ ​per​ ​month) 
+● Free​ ​transfer​ ​(Free,​ ​fast​ ​money​ ​transfers​ ​in​ ​available​ ​currencies​ ​to​ ​banks​ ​globally​ ​with​ ​the​ ​real 
+exchange​ ​rate)  
+● Express​ ​delivery​ ​(Card​ ​will​ ​be​ ​delivered​ ​using​ ​express​ ​shipping​ ​method​ ​for​ ​faster​ ​delivery​ ​of​ ​the 
+new​ ​cards​ ​or​ ​replacement​ ​cards)  
+● Free​ ​overseas​ ​medical​ ​insurance​ ​(Get​ ​the​ ​best​ ​medical​ ​treatment​ ​while​ ​abroad​ ​with​ ​expenses​ ​paid 
+into​ ​your​ ​Cashaa​ ​account​ ​in​ ​case​ ​of​ ​any​ ​mishappening,​ ​provided​ ​by​ ​third​ ​party​ ​partner​ ​insurance 
+company) 
+
+● Free​ ​24/7​ ​customer​ ​support 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+● Early​ ​adopter​ ​rewards​ ​and​ ​beta​ ​access 
+
+10.1.3.2​ ​Microfinance​ ​&​ ​Credit​ ​Score 
+ 
+
+CAS token holders will be able to access instant loans at low interest rates compared to non token holders,                   
+and​ ​will​ ​also​ ​be​ ​able​ ​to​ ​give​ ​loans.  
+For the borrower, CAS ownership leads to improved loan conditions, rewarding users for taking a larger                
+stake in the Cashaa system. CAS tokens can be both earned or bought, respectively improving the owner`s                 
+creditworthiness.  
+For each loan paid back in time and fulfilling any specific conditions, borrowers are rewarded with CAS, the                  
+accumulation of which improves the credit score of low credit rated individuals and small businesses               
+anywhere​ ​in​ ​the​ ​world. 
+Another​ ​way​ ​to​ ​receive​ ​improved​ ​lending​ ​conditions​ ​is​ ​via​ ​other​ ​users​ ​vouching​ ​with​ ​their​ ​own​ ​CAS​ ​tokens. 
+In this case, following a fulfilment of all repayment criteria, both the borrower and the voucher are                 
+rewarded​ ​with​ ​CAS​ ​tokens.  
+Finally, in addition to receiving paid interest rates, lenders can earn CAS tokens by providing loans as a                  
+reward for their risk. To facilitate lenders’ decision making, each user`s credit score will be available online.                 
+In case any of the involved entities fails to fulfill their duties of the lending agreement, the provided CAS                   
+tokens are confiscated by the smart contract. Furthermore, users can sell or donate their CAS tokens to                 
+other​ ​users​ ​directly,​ ​thereby​ ​improving​ ​the​ ​receiver`s​ ​credit​ ​score​ ​and​ ​losing​ ​their​ ​own. 
+ 
+ 
+10.1.3.3​ ​Trading  
+ 
+Only traders with enough CAS can participate in the trading network and are entitled to create smart                 
+
+contracts for trading. In the existing Cashaa system when a money sender puts their request to transfer                 
+
+money,​ ​a​ ​seller​ ​and​ ​buyer​ ​compete​ ​for​ ​the​ ​local​ ​fiat​ ​in​ ​exchange​ ​of​ ​cryptocurrencies.  
+For example, a money sender puts a request on our platform to transfer £1000 from London to New Delhi.                   
+
+Based on the FX and proprietary algorithm Cashaa calculates the best possible rates and gives the users                 
+
+e.g. INR 84,000. Cashaa immediately splits the lead into two parts where all crypto traders in London get                  
+
+notified and see on the platform that they have an option to receive £1000 for X BTC. In the same way,                     
+
+buyers will see their option to buy Y BTC by paying INR 84,000. To accept the deal the seller has to put                      
+
+100% of X BTC into a uniquely created escrow wallet, while the buyer has to put 10% of Y BTC into the                      
+
+escrow. The system generates two passcodes which are used by the money sender and seller in London &                  
+
+buyer and receiver in New Delhi to verify themselves respectively. In section 3 we presented the case how                  
+
+this​ ​system​ ​helps​ ​to​ ​create​ ​a​ ​win​ ​win​ ​situation​ ​for​ ​both​ ​parties. 
+Replacing the buyer escrow with CAS will allow multi cryptocurrency exchanges by removing the              
+
+dependency on the crypto which the traders respectively decided to trade. Traders will be allowed to                
+
+execute the smart contract which will hold the required CAS. As this mechanism will allow traders to buy                  
+
+and sell any cryptocurrency, it will boost the supply of cryptocurrencies in the countries where exchanges                
+
+currently do not support them, and balance it with countries where they are in surplus. Balancing the                 
+
+entire ecosystem in this way can bring a systematic growth of cryptocurrency across the globe, e.g. Cashaa                 
+
+traders​ ​in​ ​India​ ​will​ ​be​ ​able​ ​to​ ​buy​ ​LTC,​ ​NEO,​ ​BAT​ ​etc​ ​in​ ​INR. 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+10.1.4​ ​Governance​ ​mechanism 
+ 
+
+1. Governing voting system is another objective of the CAS token. The governance mechanism is              
+
+executed by stakeholders. Stakeholders are technological and business partners to Cashaa project, non             
+
+profit organizations of the industry, advisors and some token holders. Stakeholders vote on how much of                
+
+the​ ​company​ ​revenue​ ​will​ ​be​ ​used​ ​to​ ​buy​ ​the​ ​tokens​ ​from​ ​the​ ​exchange​ ​on​ ​a​ ​regular​ ​base.  
+2. CAS stakeholders can also vote on requests to update Cashaa token contracts which hold the               
+
+vesting period of company tokens. Each user’s voting depends on the proportion of owned CAS token                
+
+compared to the available tokens in market. The company will present reasons and benefits of doing so at                  
+
+Bitcointalk or other media, and a smart contract based voting will be conducted to unlock the vesting                 
+
+period.  
+
+ 
+
+10.2​ ​Token​ ​Summary 
+ 
+
+Project​ ​description The​ ​next​ ​generation​ ​banking​ ​platform​ ​for​ ​the​ ​next​ ​billion 
+
+Ticker​ ​symbol CAS 
+
+Token​ ​background CAS​ ​is​ ​built​ ​as​ ​an​ ​EIP-20​ ​(former​ ​ERC-20)​ ​token​ ​on​ ​the  
+Ethereum​ ​Blockchain 
+
+Token​ ​Sale 
+​ ​date 
+
+6th​ ​November,​ ​1700​ ​UTC​ ​until​ ​cap​ ​is​ ​reached 
+
+CAS​ ​token​ ​price $​ ​0.10 
+
+​​ ​Total​ ​percentage​ ​of​ ​all​ ​CAS  
+for​ ​token​ ​sale 
+
+51​ ​%  
+
+Hard​ ​CAP $​ ​32​ ​Million  
+
+Project​ ​Status Beta​ ​test​ ​completed​ ​successfully.  
+Upgrading​ ​for​ ​the​ ​final​ ​live​ ​platform. 
+
+Escrow​ ​of​ ​crypto​ ​Funds Secured​ ​in​ ​multi-signature​ ​escrow  
+
+​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​Accepted​ ​currencies​ ​for  
+tokens 
+
+ETH,​ ​BTC,​ ​USD,​ ​GBP,​ ​EUR  
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+10.3​ ​Token​ ​Sale​ ​and​ ​Distribution​ ​Roadmap 
+
+Announcement 13​th​​ ​October 
+ 
+
+​​ ​Know​ ​your​ ​participants​ ​(KYP) Full​ ​KYC​ ​including​ ​the​ ​identity​ ​and​ ​residency​ ​proof 
+
+​​ ​​ ​​ ​​ ​​ ​​ ​Pre-Token​ ​Sale​ ​Dates 20th​ ​-​ ​30th​ ​October 
+
+Price​ ​CAS $​ ​0.10  
+
+Pre-Token​ ​Sale  Up​ ​to​ ​100%​ ​Bonus* 
+ 
+
+Bonus​ ​Tiers: 
+Above​ ​$15K:​ ​60% 
+Above​ ​$75K:​ ​80% 
+
+Above​ ​$175K:​ ​100% 
+
+Cap:​ ​$​ ​20​ ​Million​ ​​ ​USD 
+ 
+  
+
+Min​ ​Amount​ ​per​ ​participant​ ​:​ ​$15K  
+Max​ ​Amount​ ​per​ ​participant:​ ​​ ​$3​ ​M 
+
+ 
+
+​​ ​Public​ ​Token​ ​Sale​ ​Date** ​ ​​ ​​ ​6​th​ ​​​ ​November  
+
+Tier​ ​1​ ​(24​ ​hours) 40​ ​%​ ​Bonus Min​ ​Amount​ ​per​ ​participant​ ​:​ ​$​ ​30  
+Max​ ​Amount​ ​per​ ​participant:​ ​​ ​$3000 
+
+ 
+
+Tier​ ​2​ ​(next​ ​3​ ​Days) 20​ ​%​ ​Bonus 
+ 
+
+Min​ ​Amount​ ​$​ ​30  
+No​ ​Max 
+
+Tier​ ​3​ ​(next​ ​7​ ​Days) 10​ ​%​ ​Bonus 
+ 
+
+Min​ ​Amount​ ​$​ ​30  
+No​ ​Max 
+
+Tier​ ​4  
+​ ​​ ​(until​ ​token​ ​sale​ ​end) 
+
+5​ ​%​ ​Bonus 
+ 
+
+​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​Min​ ​Amount​ ​$​ ​30  
+​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​No​ ​Max 
+
+​​ ​​ ​​ ​Token​ ​distribution  
+​​ ​​ ​(public​ ​sale) 
+
+Within​ ​30​ ​days​ ​from​ ​the​ ​end​ ​of​ ​token​ ​sale. 
+Managed​ ​by​ ​Token​ ​Market 
+
+*​ ​All​ ​bonuses​ ​will​ ​be​ ​locked​ ​until​ ​5th​ ​March​ ​2018. 
+** ​Participants will acquire CAS tokens by sending accepted cryptocurrencies as per instructions given on               
+our​ ​website​ ​(​https://www.cashaa.com​)​ ​at​ ​the​ ​start​ ​of​ ​the​ ​token​ ​sale.  
+ 
+
+ 
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+https://www.cashaa.com/
+
+
+ 
+
+10.4​ ​Token​ ​Distribution 
+ 
+
+Cashaa Limited affiliates will issue a one-time total of 1 Billion CAS, which is distributed into three                 
+categories,​ ​using​ ​an​ ​Ethereum​ ​based​ ​smart​ ​contract. 
+ 
+
+ 
+
+ 
+
+Category Allocation Description 
+ 
+
+Tokens​ ​to​ ​be 
+released​ ​to​ ​the 
+public​ ​for 
+acquisition 
+
+51% 510,000,000 CAS to be acquired by the public during         
+Cashaa’s​ ​token​ ​sale​ ​​ ​(both​ ​pre-token​ ​sale​ ​​ ​and​ ​main​ ​token​ ​sale​ ​). 
+There​ ​is​ ​a​ ​fundraising​ ​cap​ ​of​ ​​ ​$​ ​32​ ​Million​ ​USD. 
+At Cashaa, we consider it as a strong signal of trust if the community              
+owns​ ​more​ ​than​ ​half​ ​of​ ​the​ ​CAS​ ​tokens​ ​from​ ​the​ ​very​ ​beginning. 
+ 
+
+Company 24% 240,000,000 CAS will be held in reserve by Cashaa in order to fund             
+the future transactions and expand the liquidity pool required for          
+future growth and expansion. The fund will be locked by the smart            
+contract and will be governed by the CAS community based on the            
+requirement.  
+
+Community  5% 50,000,000 CAS will be used for bounty programs and community          
+initiatives to reward community members (developers, entrepreneurs       
+strategists, etc) who will expand or leverage the Cashaa network to           
+build products which makes users’ lives easier and helps the          
+mainstream​ ​adoption​ ​of​ ​blockchain​ ​technology. 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+​​ ​Team​ ​&​ ​Advisors 20% 200,000,000 CAS will be distributed to Cashaa founders, employees         
+and advisors as an incentive to ensure long-term alignment of          
+interests​ ​and​ ​commitment​ ​to​ ​the​ ​project​ ​and​ ​its​ ​future​ ​value. 
+ 
+
+ 
+ 
+
+ 
+
+10.5​ ​Token​ ​Availability​ ​​ ​&​ ​Vesting​ ​Period 
+
+Token​ ​Generation: 
+
+Tokens​ ​to​ ​be​ ​allocated​ ​during​ ​the​ ​ICO​ ​process 
+
+CAS​ ​Allocated​ ​:​ ​510​ ​Million 
+
+Immediately​ ​available​ ​after​ ​Token​ ​Sale 
+
+*All​ ​the​ ​unallocated​ ​tokens​ ​at​ ​the​ ​end​ ​of​ ​​ ​fundraise​ ​will​ ​be​ ​sent​ ​to​ ​a​ ​predefined​ ​address​ ​to​ ​burn. 
+
+ 
+
+Team: 
+
+Founders and Advisors reward for the development of the Cashaa network and their continued long term                
+alignment of the project. In order to ensure the longevity of the project and protect the integrity of the                   
+Cashaa team, their tokens will be vested. Vesting ensures the founders’ commitment to building the               
+system in the long term. Founders and the Cashaa team will have access after the 3 years of vesting with a                     
+12 months cliff, meaning that Cashaa team & company tokens will be locked in a smart contract, which                  
+would​ ​release​ ​them​ ​every​ ​12​ ​months​ ​proportionally​ ​during​ ​a​ ​period​ ​of​ ​three​ ​years​ ​as​ ​per​ ​detail​ ​below. 
+
+CAS​ ​Allocated​ ​:​ ​200​ ​Million 
+
+50​ ​Million​ ​immediately​ ​available​ ​after​ ​Token​ ​Generation 
+
+50​ ​Million​ ​locked​ ​by​ ​smart​ ​contract​ ​for​ ​12​ ​months 
+
+50​ ​Million​ ​locked​ ​by​ ​smart​ ​contract​ ​for​ ​24​ ​months 
+
+50​ ​Million​ ​locked​ ​by​ ​smart​ ​contract​ ​for​ ​36​ ​months 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+ 
+
+Community​ ​Development​ ​&​ ​Entrepreneurs​ ​Initiatives: 
+
+This part will be used for bounty programs and community initiatives to reward developers,              
+entrepreneurs, strategists and community members who want to leverage the Cashaa network, licences to              
+build​ ​products​ ​which​ ​make​ ​users`​ ​lives​ ​easier​ ​and​ ​help​ ​the​ ​mainstream​ ​adoption​ ​of​ ​blockchain​ ​technology.  
+
+CAS​ ​Allocated​ ​:​ ​50​ ​Million 
+
+15​ ​Million​ ​Immediately​ ​available​ ​after​ ​Token​ ​Generation 
+
+15​ ​Million​ ​locked​ ​by​ ​smart​ ​contract​ ​for​ ​12​ ​months 
+
+10​ ​Million​ ​locked​ ​by​ ​smart​ ​contract​ ​for​ ​24​ ​months 
+
+10​ ​Million​ ​locked​ ​by​ ​smart​ ​contract​ ​for​ ​36​ ​months 
+
+ 
+
+Company​ ​Reserve: 
+
+Held in reserve by Cashaa in order to fund the future transactions and expand liquidity pool required for                  
+future​ ​growth​ ​and​ ​expansion,​ ​strategic​ ​partnerships,​ ​market​ ​expansion​ ​and​ ​education. 
+
+CAS​ ​Allocated​ ​:​ ​240​ ​Million 
+
+60​ ​Million​ ​Immediately​ ​available​ ​after​ ​Token​ ​Generation 
+
+60​ ​Million​ ​locked​ ​by​ ​smart​ ​contract​ ​for​ ​12​ ​months 
+
+60​ ​Million​ ​locked​ ​by​ ​smart​ ​contract​ ​for​ ​24​ ​months 
+
+60​ ​Million​ ​locked​ ​by​ ​smart​ ​contract​ ​for​ ​36​ ​months 
+
+ 
+
+ 
+
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+10.6​ ​Use​ ​of​ ​Proceeds​ ​from​ ​Token​ ​distribution 
+
+The​ ​proceeds​ ​of​ ​the​ ​token​ ​distribution​ ​will​ ​be​ ​mainly​ ​used​ ​under​ ​the​ ​five​ ​categories​ ​mentioned​ ​below: 
+
+ 
+
+​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​Chart​ ​2:​ ​Token​ ​distribution​ ​proceeds​ ​usage​ ​percentage 
+
+Category  Allocation  Token​ ​distribution​ ​proceed​ ​usage​ ​description 
+
+Legal​ ​& 
+Licenses 
+
+35% Obtaining required commercial banking licenses is a strategic        
+
+move, which will give Cashaa the benefit of significant increases in           
+
+revenues from improved market share and forex transactions.        
+
+Post token distribution, Cashaa will evaluate applying for required         
+
+banking licenses across different geographies to create an even,         
+
+strong compliance and better user experience to gradually        
+
+integrate multiple currencies into the Cashaa platform. A focused         
+
+team will be set up to facilitate bank and regulatory authority           
+
+related​ ​discussions​ ​across​ ​different​ ​regions. 
+
+1) Cashaa will obtain the required license as an Authorised          
+
+Payment​ ​Institution​ ​in​ ​the​ ​UK​ ​and​ ​in​ ​India​ ​(assuming​ ​$5​ ​M​ ​sold) 
+
+2) Options to register as a Non-Banking Financial Company (NBFC)          
+
+will be explored based on the requirements of the countries to           
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+further improve efficiency and increase customer convenience       
+
+(assuming​ ​$10​ ​M​ ​sold) 
+
+3) While adding more services, further licenses in the UK, USA,           
+
+India & South Africa will be applied for, including an E-Money           
+
+license (assuming $15 M sold) and a Commercial Banking license          
+
+in​ ​Europe​ ​(assuming​ ​$20​ ​M​ ​sold)  
+
+4) Insurance product related clearance will start with insurance         
+
+groups​ ​(assuming​ ​$25​ ​M​ ​sold) 
+
+5) All the sales above $ 25 M will be spent for loan funding in the                
+
+platform​ ​as​ ​per​ ​regulatory​ ​approval 
+
+6) Additionally, Cashaa will open dialogues with regulators around         
+
+the world and become a member of related industry associations.          
+
+This will help us improve user confidence and integrate further          
+
+services,​ ​resulting​ ​in​ ​increased​ ​revenue  
+
+Technology 25% Team will be ramped up with full stack developers and focused           
+
+resources​ ​for​ ​each​ ​required​ ​areas. 
+
+This will lead to accelerated enhancement of the platform and          
+
+support tools to scale up the operations cost-effectively and         
+
+securely as we envisioned and roll out additional services over the           
+
+coming​ ​quarters. 
+
+Operations 10% Cashaa runs a lean, cost-effective start-up and will continue to do           
+
+so in the future. Being in the blockchain ecosystem and adhering           
+
+to the highest standards entails certain operational costs        
+
+associated with accounting and administrative overheads to meet        
+
+the​ ​requirements​ ​for​ ​a​ ​growing​ ​international​ ​business. 
+
+Business 
+
+Development 
+
+&​ ​Marketing 
+
+20% Partnerships will be the critical factor for the success of Cashaa,           
+
+enabling to build a strong footprint in new and existing growth           
+
+markets. Hiring a Chief Strategist and Business Development        
+
+Managers will lead our efforts and establish new corridors through          
+
+valuable​ ​partnerships.  
+
+Cashaa will also conduct a referral campaign, email campaign and          
+
+roadshows to refugees, migrants communities, community-driven      
+
+target marketing in rural and unbanked regions in developed and          
+
+developing countries. Promotion using Google Adwords, Facebook       
+
+campaigns​ ​and​ ​other​ ​means​ ​of​ ​promotion. 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+
+
+ 
+
+Customer 
+
+Support 
+
+10% Cashaa will expand its multi-channel customer support team to         
+
+include 24/7 support in all local languages where Cashaa is          
+
+operating. This will ensure high level customer experience and         
+
+detailed guidance available on each process’ steps for both money          
+
+senders​ ​and​ ​traders. 
+
+ 
+
+ 
+
+10.7​ ​Token​ ​Support 
+
+The Cashaa team is dedicated to support the participants during the token distribution process. Typically,               
+
+funds will be deposited with an escrow until the user releases the funds to the receiver. For every offer                   
+
+made, a smart contract is automatically created. Users deposit tokens to the escrow as a guarantee for a                  
+
+successful transaction. If there is a dispute in the transaction, the user will not release the funds, and can                   
+
+start the process of resolving the dispute. One of the ways to resolve such disputes will be to contact the                    
+
+Cashaa​ ​Support​ ​Team​ ​at​ ​​Tokensupport@cashaa.com​. 
+
+ 
+
+10.8​ ​Assurance​ ​&​ ​Security 
+
+Blockchain technology enables a secure, smart-contract based escrow for all transactions, along with             
+
+ensuring that everything is done so that no exploits exist within the code. TokenMarket, a Top ICO                 
+
+management platform, will manage the Token distribution and execution of smart contract to ensure the               
+
+proper security of the tokens. The smart contracts written by Token Market will also be reviewed with                 
+
+external​ ​auditor​ ​​​ ​​to​ ​ensure​ ​best​ ​security​ ​for​ ​our​ ​token​ ​sale​ ​participants. 
+
+<End> 
+
+ 
+
+Copyright​ ​2017​ ​@​ ​Cashaa​ ​Limited 
+ 
+
+mailto:Tokensupport@cashaa.com
+

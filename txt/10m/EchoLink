@@ -1,0 +1,1405 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+EchoLink - EKO  – Blockchain Based Professional Networking and 
+Recruiting Platform 
+
+ 
+Building A High-Trust Economy 
+
+ 
+Token Name: EchoLink, Symbol: EKO 
+
+ 
+Steve X. Chen* 
+EchoLink Team 
+
+Palo Alto, California, USA 
+steve@echolink.tech 
+
+GitHub: ​https://github.com/EchoLinkTech/EchoLink 
+Official Website: ​http://EchoLink.info 
+
+ 
+ 
+
+Abstract 
+ 
+We introduce a blockchain based system of verified education, skill, and career information for              
+individuals. The EchoLink System stores professional and other related information in an unalterable             
+format on blockchains. The EchoLink System supports and provides access to multiple public,             
+alliance, and private blockchains. All information is provided by trusted information authorities. The             
+system saves businesses and other entities time and financial resources in recruiting, admission,             
+vetting efforts while providing easy access to a pool of vetted candidates. The EchoLink System can                
+be further extended to provide verified information in addition situations and industries, such as              
+banking, finance, and insurance.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+Figure 1: ​Echo​ = Education + Career skills + Human capital + Opportunity; ​Link​ = Worldwide Network 
+
+ 
+  
+
+*corresponding author 
+
+https://github.com/EchoLinkTech/EchoLink
+http://echolink.info/
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+Contents 
+ 
+IMPORTANT NOTICE 4 
+ 
+DISCLAIMER OF LIABILITY 5 
+ 
+NO REPRESENTATIONS AND WARRANTIES 5 
+ 
+REPRESENTATIONS AND WARRANTIES BY YOU 5 
+ 
+CAUTIONARY NOTE ON FORWARD-LOOKING STATEMENTS 8 
+ 
+THIRD PARTY INFORMATION AND NO CONSENT OF OTHER PERSONS 9 
+ 
+TERMS USED 9 
+ 
+NO ADVICE 9 
+ 
+NO FURTHER INFORMATION OR UPDATE 9 
+ 
+RESTRICTIONS ON DISTRIBUTION AND DISSEMINATION 10 
+ 
+NO OFFER OF INVESTMENT OR REGISTRATION 10 
+ 
+RISKS AND UNCERTAINTIES 10 
+ 
+1. ​INFORMATION 12 
+
+1.1. Global Education in the Age of Internet 12 
+1.2. Demand For Talent 12 
+
+ 
+2. ​CURRENT ISSUES 12 
+ 
+3. ​OUR SOLUTION - ECHOLINK 15 
+
+3.1. Advantages of Blockchain 15 
+3.2. Economic Incentives 15 
+
+ 
+4. ​TECHNICAL IMPLEMENTATION 16 
+
+4.1. Digital Identity and Credential Creation 17 
+4.2. Off Chain Data Sources 19 
+4.3. Dynamic Blockchain Browser 19 
+4.4. Multi-Blockchain Support 20 
+
+ 
+5. ​ECONOMIC MODEL 20 
+
+5.1. Token on EchoLink System - EchoLinkToken 20 
+ 
+6. ​CONCLUSION 21 
+
+6.1. Future Work 21 
+6.2. Acknowledgements 21 
+6.3. Whitepaper Versions 21 
+
+6.4. Code Base 21 
+ 
+
+ 
+ 
+ 
+ 
+ 
+  
+
+2 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+IMPORTANT: YOU MUST READ THE FOLLOWING DISCLAIMER IN FULL BEFORE          
+CONTINUING 
+ 
+The sale of the EchoLinkToken, the exchange medium to pay fees between users and other               
+participants of the EchoLink System as detailed in this whitepaper (the “​Whitepaper​”) is only intended               
+for, made to or directed at, only persons outside the United States of America and may be acted upon                   
+only by persons outside the United States of America. Moreover, this Whitepaper is not a prospectus                
+or offer document of any sort and is not intended to constitute an offer of securities of any form, units                    
+in a business trust, units in a collective investment scheme or any other form of investment, or a                  
+solicitation for any form of investment in any jurisdiction. No regulatory authority has examined or               
+approved of any of the information set out in this Whitepaper. This Whitepaper has not been                
+registered with any regulatory authority in any jurisdiction. 
+ 
+By accessing and/or accepting possession of any information in this Whitepaper or such part thereof               
+(as the case may be), you represent and warrant to EchoLink Foundation Ltd. (Company Registration               
+No.: 201728041W) (the “​Foundation​”) that: 
+ 
+(a) you are not a citizen, resident (tax or otherwise), person domiciled in, or green card holder of                 
+
+the United States of America; 
+ 
+
+(b) you agree to be bound by the limitations and restrictions described herein; and 
+ 
+
+(c) you acknowledge that this Whitepaper has been prepared for delivery to you so as to assist                
+you in making a decision as to whether to purchase the EchoLinkTokens. 
+
+ 
+  
+
+3 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+IMPORTANT NOTICE 
+ 
+This Whitepaper in current form is being circulated by the Foundation for general information and to                
+invite investor feedback only on the EchoLink System as presently conceived, and is subject to review                
+and revision by the directors of the Foundation, the advisers, and/or legal advisers of the Foundation.                
+Please do not replicate or distribute any part of this Whitepaper without this note in accompaniment.                
+No part of this Whitepaper is intended to create legal relations between a recipient of this Whitepaper                 
+or to be legally binding or enforceable by such recipient against the Foundation. An updated version                
+of this Whitepaper may be published on a date to be determined and announced by the Foundation in                  
+due course. 
+ 
+PLEASE READ THIS SECTION AND THE FOLLOWING SECTIONS ENTITLED “DISCLAIMER OF           
+LIABILITY”, “NO REPRESENTATIONS AND WARRANTIES”, “REPRESENTATIONS AND       
+WARRANTIES BY YOU”, “CAUTIONARY NOTE ON FORWARD-LOOKING STATEMENTS”,        
+“THIRD PARTY INFORMATION AND NO CONSENT OF OTHER PERSONS”, “TERMS USED”,           
+“NO ADVICE”, “NO FURTHER INFORMATION OR UPDATE”, “RESTRICTIONS ON         
+DISTRIBUTION AND DISSEMINATION”, “NO OFFER OF INVESTMENT OR REGISTRATION”         
+AND “RISKS AND UNCERTAINTIES” CAREFULLY. 
+ 
+IF YOU ARE IN ANY DOUBT AS TO THE ACTION YOU SHOULD TAKE, YOU SHOULD               
+CONSULT YOUR LEGAL, FINANCIAL, TAX OR OTHER PROFESSIONAL ADVISOR(S). 
+ 
+The EchoLinkTokens are proprietary ERC20 Token Standard cryptographic tokens developed and           
+issued by the Foundation to function as the native utility token used in the EchoLink System network                 
+as the means of value exchange, to power the EchoLink System and incentivise the keeper nodes of                 
+the EchoLink System network. “​ERC20 Token Standard​” means the set of criteria, (including criteria              
+in relation to functions and events) developed by the Ethereum community, which has to be met in a                  
+smart contract on a blockchain in order to enable inter-operability across multiple interfaces and              
+distributed applications. 
+ 
+The EchoLinkTokens are not intended to constitute securities of any form, units in a business trust,                
+units in a collective investment scheme or any other form of investment in any jurisdiction. This                
+Whitepaper does not constitute a prospectus or offer document of any sort and is not intended to                 
+constitute an offer of securities of any form, units in a business trust, units in a collective investment                  
+scheme or any other form of investment, or a solicitation for any form of investment in any jurisdiction. 
+ 
+This Whitepaper does not constitute or form part of any opinion or any advice to acquire, sell, or any                   
+solicitation of any offer by the Foundation to acquire any EchoLinkTokens nor shall it or any part of it                   
+nor the fact of its presentation form the basis of, or be relied upon in connection with, any contract or                    
+investment decision. 
+ 
+The Foundation will deploy all proceeds from the sale of the EchoLinkTokens to support ongoing               
+development and growth of the EchoLink System network. 
+ 
+No person is bound to enter into any contract or binding legal commitment in relation to the acquisition                  
+of EchoLinkTokens and no cryptocurrency or other form of payment is to be accepted on the basis of                  
+this Whitepaper. 
+ 
+Any agreement as between the Foundation and you as a participant in the Token Sale, and in relation                  
+to any purchase of EchoLinkTokens is to be governed by only a separate document setting out the                 
+terms and conditions (the “​Token Sale Terms​”) of such agreement. In the event of any               
+inconsistencies between the Token Sale Terms and this Whitepaper, the former shall prevail. 
+ 
+No regulatory authority has examined or approved of any of the information set out in this Whitepaper.                 
+No such action has been or will be taken under the laws, regulatory requirements or rules of any                  
+jurisdiction. The publication, distribution or dissemination of this Whitepaper does not imply that the              
+applicable laws, regulatory requirements or rules have been complied with. 
+
+4 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+ 
+There are risks and uncertainties associated with the Foundation and its business and operations, the               
+EchoLinkTokens, the Token Sale, and the EchoLink System. Please refer to the section entitled              
+“Risks and Disclosures” set out at the end of this Whitepaper. 
+ 
+This Whitepaper, any part thereof and any copy thereof must not be taken or transmitted to any                 
+country where distribution or dissemination of this Whitepaper is prohibited or restricted. 
+ 
+No part of this Whitepaper is to be reproduced, distributed or disseminated without including this               
+section and the following sections entitled “Disclaimer of Liability”, “No Representations and            
+Warranties”, “Representations and Warranties By You”, “Cautionary Note On Forward-Looking          
+Statements”, “Third Party Information and No Consent of Other Persons”, “Terms Used”, “No Advice”,              
+“No Further Information or Update”, “Restrictions On Distribution and Dissemination”, “No Offer of             
+Investment Or Registration” and “Risks and Uncertainties”. 
+ 
+DISCLAIMER OF LIABILITY 
+ 
+To the maximum extent permitted by the applicable laws, regulations and rules, the Foundation shall               
+not be liable for any indirect, special, incidental, consequential or other losses of any kind, in tort,                 
+contract or otherwise (including but not limited to loss of revenue, income or profits, and loss of use or                   
+data), arising out of or in connection with any acceptance of or reliance on this Whitepaper or any part                   
+thereof by you. 
+ 
+NO REPRESENTATIONS AND WARRANTIES 
+ 
+The Foundation does not make or purport to make, and hereby disclaims, any representation,              
+warranty or undertaking in any form whatsoever to any entity or person, including any representation,               
+warranty or undertaking in relation to the truth, accuracy and completeness of any of the information                
+set out in this Whitepaper. 
+ 
+REPRESENTATIONS AND WARRANTIES BY YOU 
+ 
+By accessing and/or accepting possession of any information in this Whitepaper or such part thereof               
+(as the case may be), you represent and warrant to the Foundation as follows: 
+ 
+(a) you agree and acknowledge that the EchoLinkTokens do not constitute securities of any form,              
+
+units in a business trust, units in a collective investment scheme or any other form of                
+investment in any jurisdiction; 
+ 
+
+(b) you are not a citizen or resident of a country the laws of which prohibit or conflict with the                   
+Token Sale or your participation in the Token Sale; 
+ 
+
+(c) you agree and acknowledge that this Whitepaper does not constitute a prospectus or offer              
+document of any sort and is not intended to constitute an offer of securities of any form, units                  
+in a business trust, units in a collective investment scheme or any other form of investment in                 
+any jurisdiction, or a solicitation for any form of investment, and you are not bound to enter                 
+into any contract or binding legal commitment and no cryptocurrency or other form of payment               
+is to be accepted on the basis of this Whitepaper; 
+ 
+
+(d) you acknowledge and understand that no EchoLinkToken should be construed, interpreted,           
+classified or treated as enabling, or according any opportunity to, tokenholders to participate             
+in or receive profits, income, or other payments or returns arising from or in connection with                
+the EchoLinkTokens or the proceeds of the Token Sale, or to receive sums paid out of such                 
+profits, income, or other payments or returns; 
+
+ 
+(e) you agree and acknowledge that no regulatory authority has examined or approved of the              
+
+information set out in this Whitepaper, no action has been or will be taken under the laws,                 
+
+5 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+regulatory requirements or rules of any jurisdiction and the publication, distribution or            
+dissemination of this Whitepaper to you does not imply that the applicable laws, regulatory              
+requirements or rules have been complied with; 
+ 
+
+(f) you agree and acknowledge that this Whitepaper, the undertaking and/or the completion of             
+the Token Sale, or future trading of EchoLinkTokens on any cryptocurrency exchange, shall             
+not be construed, interpreted or deemed by you as an indication of the merits of the                
+Foundation, the EchoLinkTokens, the Token Sale, and the EchoLink System; 
+ 
+
+(g) the distribution or dissemination of this Whitepaper, any part thereof or any copy thereof, or               
+acceptance of the same by you, is not prohibited or restricted by the applicable laws,               
+regulations or rules in your jurisdiction, and where any restrictions in relation to possession              
+are applicable, you have observed and complied with all such restrictions at your own              
+expense and without liability to the Foundation; 
+ 
+
+(h) you agree and acknowledge that in the case where you wish to acquire any EchoLinkTokens,               
+EchoLinkTokens are not to be construed, interpreted, classified or treated as: 
+
+ 
+(i) any kind of currency other than cryptocurrency; 
+
+ 
+(ii) debentures, stocks or shares issued by any person or entity; 
+
+ 
+(iii) rights, options or derivatives in respect of such debentures, stocks or shares; 
+
+ 
+(iv) rights under a contract for differences or under any other contract the purpose or              
+
+pretended purpose of which is to secure a profit or avoid a loss; 
+ 
+
+(v) units in a collective investment scheme; 
+ 
+
+(vi) units in a business trust; 
+ 
+
+(vii) derivatives of units in a business trust; or 
+ 
+
+(viii) any form of investment;  
+ 
+
+(i) you are fully aware of and understand that you are not eligible to acquire any               
+EchoLinkTokens if you are a citizen, resident (tax or otherwise), person domiciled in, or green               
+card holder of the United States of America or a person who is located in the United States of                   
+America at the time of your intended purchase or purchase for of EchoLinkTokens in the               
+Token Sale; 
+ 
+
+(j) you are legally permitted to participate in the Token Sale and all actions contemplated or               
+associated with such participation, including the holding and use of EchoLinkTokens; 
+ 
+
+(k) the amounts that you use to acquire the EchoLinkTokens were not and are not directly or                
+indirectly derived from any activities that contravene the laws and regulations of any             
+jurisdiction, including anti-money laundering laws and regulations; 
+ 
+
+(l) if you are a natural person, you are of sufficient age and capacity under the applicable laws of                  
+the jurisdiction in which you reside and the jurisdiction of which you are a citizen to participate                 
+in the Token Sale; 
+ 
+
+(m) you are not obtaining or using EchoLinkTokens for any illegal purpose; 
+ 
+
+(n) none of: 
+ 
+
+6 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+(i) you; 
+ 
+
+(ii) any person controlling or controlled by you; or 
+ 
+(iii) if you are a privately-held entity, any person having a beneficial interest in you;  
+ 
+ 
+ 
+
+(o) you have a basic degree of understanding of the operation, functionality, usage, storage,             
+transmission mechanisms and other material characteristics of cryptocurrencies,        
+blockchain-based software systems, cryptocurrency wallets or other related token storage          
+mechanisms, blockchain technology, and smart contract technology; 
+ 
+
+(p) you are fully aware and understand that in the case where you wish to purchase any                
+EchoLinkTokens, there are risks associated with the Foundation and its respective           
+businesses and operations, EchoLinkTokens, the Token Sale, and the EchoLink System; 
+ 
+
+(q) you bear the sole responsibility to determine what tax implications a purchase of             
+EchoLinkTokens may have for you and agree not to hold the Foundation or any other person                
+involved in the Token Sale liable for any tax liability associated with or arising therefrom; 
+ 
+
+(r) you agree and acknowledge that the Foundation is not liable for any direct, indirect, special,               
+incidental, consequential or other losses of any kind, in tort, contract or otherwise (including              
+but not limited to loss of revenue, income or profits, and loss of use or data), arising out of or                    
+in connection with any acceptance of or reliance on this Whitepaper or any part thereof by                
+you;  
+ 
+
+(s) you waive the right to participate in a class action lawsuit or a class wide arbitration against                 
+the Foundation and/or any person involved in the Token Sale and/or with the creation and               
+distribution of EchoLinkTokens; and 
+ 
+
+(t) all of the above representations and warranties are true, complete, accurate and            
+non-misleading from the time of your access to and/or acceptance of possession this             
+Whitepaper or such part thereof (as the case may be). 
+
+ 
+CAUTIONARY NOTE ON FORWARD-LOOKING STATEMENTS 
+ 
+All statements contained in this Whitepaper, statements made in press releases or in any place               
+accessible by the public and oral statements that may be made by the Foundation or its directors,                 
+executive officers or employees acting on behalf of the Foundation (as the case may be), that are not                  
+statements of historical fact, constitute “forward-looking statements”. Some of these statements can            
+be identified by forward-looking terms such as “aim”, “target”, “anticipate”, “believe”, “could”,            
+“estimate”, “expect”, “if”, “intend”, “may”, “plan”, “possible”, “probable”, “project”, “should”, “would”,           
+“will” or other similar terms. However, these terms are not the exclusive means of identifying               
+forward-looking statements. All statements regarding the Foundation’s business strategies, plans and           
+prospects and the future prospects of the industry which the Foundation is in are forward-looking               
+statements. These forward-looking statements, including but not limited to statements as to the             
+Foundation’s prospects, future plans, other expected industry trends and other matters discussed in             
+this Whitepaper regarding the Foundation are matters that are not historic facts, but only predictions. 
+ 
+These forward-looking statements involve known and unknown risks, uncertainties and other factors            
+that may cause the actual future results, performance or achievements of the Foundation to be               
+materially different from any future results, performance or achievements expected, expressed or            
+implied by such forward-looking statements. These factors include, amongst others: 
+
+ 
+
+7 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+(a) changes in political, social, economic and stock or cryptocurrency market conditions, and the             
+
+regulatory environment in the countries in which the Foundation conducts its business and             
+operations, including the [​∙​]; 
+ 
+
+(b) the risk that the Foundation may be unable to execute or implement its business strategies               
+and future plans; 
+ 
+
+(c) changes in interest rates and exchange rates of fiat currencies and cryptocurrencies; 
+ 
+
+(d) changes in the anticipated growth strategies and expected internal growth of the Foundation             
+and the EchoLink System network; 
+ 
+
+(e) changes in the availability and fees payable to the Foundation in connection with its              
+businesses and operations or in the EchoLink System network; 
+ 
+
+(f) changes in the availability and salaries of employees who are required by the Foundation to               
+operate their respective businesses and operations; 
+ 
+
+(g) changes in preferences of users of the EchoLink System network; 
+ 
+
+(h) changes in competitive conditions under which the Foundation operates, and the ability of the              
+Foundation to compete under such conditions; 
+ 
+
+(i) changes in the future capital needs of the Foundation and the availability of financing and               
+capital to fund such needs; 
+ 
+
+(j) war or acts of international or domestic terrorism; 
+ 
+
+(k) occurrences of catastrophic events, natural disasters and acts of God that affect the             
+businesses and/or operations of the Foundation; 
+ 
+
+(l) other factors beyond the control of the Foundation; and 
+ 
+
+(m) any risk and uncertainties associated with the Foundation and its business and operations,             
+the EchoLinkTokens, the Token Sale, and the EchoLink System. 
+ 
+
+All forward-looking statements made by or attributable to the Foundation or persons acting on behalf               
+of the Foundation are expressly qualified in their entirety by such factors. Given that risks and                
+uncertainties that may cause the actual future results, performance or achievements of the             
+Foundation to be materially different from that expected, expressed or implied by the forward-looking              
+statements in this Whitepaper, undue reliance must not be placed on these statements. These              
+forward-looking statements are applicable only as of the date of this Whitepaper. 
+ 
+Neither the Foundation nor any other person represents, warrants, and/or undertakes that the actual              
+future results, performance or achievements of the Foundation will be as discussed in those              
+forward-looking statements. The actual results, performance or achievements of the Foundation may            
+differ materially from those anticipated in these forward-looking statements. 
+ 
+Nothing contained in this Whitepaper is or may be relied upon as a promise, representation or                
+undertaking as to the future performance or policies of the Foundation. 
+ 
+Further, the Foundation disclaims any responsibility to update any of those forward-looking            
+statements or publicly announce any revisions to those forward-looking statements to reflect future             
+developments, events or circumstances, even if new information becomes available or other events             
+occur in the future. 
+ 
+
+8 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+THIRD PARTY INFORMATION AND NO CONSENT OF OTHER PERSONS 
+ 
+This Whitepaper includes information obtained from various third party sources (“​Third Party            
+Information​”). None of the publishers of Third Party Information has consented to the inclusion of               
+Third Party Information in this Whitepaper and is therefore not liable for Third Party Information. While                
+the Foundation has taken reasonable action to ensure that Third Party Information have been              
+included in their proper form and context, neither the Foundation, nor its directors, executive officers,               
+and employees acting on its behalf, has independently verified the accuracy, reliability, completeness             
+of the contents, or ascertained any applicable underlying assumption, of the relevant Third Party              
+Information. Consequently, neither the Foundation nor its directors, executive officers and employees            
+acting on their behalf makes any representation or warranty as to the accuracy, reliability or               
+completeness of such information and shall not be obliged to provide any updates on the same. 
+ 
+TERMS USED 
+ 
+To facilitate a better understanding of the EchoLinkTokens being the subject of the sale conducted by                
+the Foundation, and the businesses and operations of the Foundation, certain technical terms and              
+abbreviations, as well as, in certain instances, their descriptions, have been used in this Whitepaper.               
+These descriptions and assigned meanings should not be treated as being definitive of their meanings               
+and may not correspond to standard industry meanings or usage. 
+ 
+Words importing the singular shall, where applicable, include the plural and vice versa and words               
+importing the masculine gender shall, where applicable, include the feminine and neuter genders and              
+vice versa. References to persons shall include corporations. 
+ 
+NO ADVICE 
+ 
+No information in this Whitepaper should be considered to be business, legal, financial or tax advice                
+regarding the Foundation, the EchoLinkTokens, the Token Sale, or the EchoLink System. You should              
+consult your own legal, financial, tax or other professional adviser regarding the Foundation and its               
+business and operations, the EchoLinkTokens, the Token Sale, and the EchoLink System. You             
+should be aware that you may be required to bear the financial risk of any purchase of                 
+EchoLinkTokens for an indefinite period of time. 
+ 
+NO FURTHER INFORMATION OR UPDATE 
+ 
+No person has been or is authorised to give any information or representation not contained in this                 
+Whitepaper in connection with the Foundation and its business and operations, the EchoLinkTokens,             
+the Token Sale, or the EchoLink System, if given, such information or representation must not be                
+relied upon as having been authorised by or on behalf of the Foundation. The Token Sale shall not,                  
+under any circumstances, constitute a continuing representation or create any suggestion or            
+implication that there has been no change, or development reasonably likely to involve a material               
+change in the affairs, conditions and prospects of the Foundation or in any statement of fact or                 
+information contained in this Whitepaper since the date hereof. 
+ 
+RESTRICTIONS ON DISTRIBUTION AND DISSEMINATION 
+ 
+The distribution or dissemination of this Whitepaper or any part thereof may be prohibited or restricted                
+by the laws, regulatory requirements, and rules of any jurisdiction. In the case where any restriction                
+applies, you are to inform yourself about, and to observe, any restrictions which are applicable to your                 
+possession of this Whitepaper or such part thereof (as the case may be) at your own expense and                  
+without liability to the Foundation. 
+ 
+Persons to whom a copy of this Whitepaper has been distributed or disseminated, provided access to                
+or who otherwise have the Whitepaper in their possession shall not circulate it to any other persons,                 
+reproduce or otherwise distribute this Whitepaper or any information contained herein for any purpose              
+whatsoever nor permit or cause the same to occur. 
+
+9 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+ 
+NO OFFER OF INVESTMENT OR REGISTRATION 
+ 
+This Whitepaper does not constitute a prospectus or offer document of any sort and is not intended to                  
+constitute an offer of securities of any form, units in a business trust, units in a collective investment                  
+scheme or any other form of investment, or a solicitation for any form of investment in any jurisdiction.                  
+No person is bound to enter into any contract or binding legal commitment and no cryptocurrency or                 
+other form of payment is to be accepted on the basis of this Whitepaper. 
+ 
+No regulatory authority has examined or approved of any of the information set out in this Whitepaper.                 
+No such action has been or will be taken under the laws, regulatory requirements or rules of any                  
+jurisdiction. The publication, distribution or dissemination of this Whitepaper does not imply that the              
+applicable laws, regulatory requirements or rules have been complied with. 
+ 
+RISKS AND UNCERTAINTIES 
+ 
+Prospective purchasers of EchoLinkTokens should carefully consider and evaluate all risks and            
+uncertainties associated with the Foundation and its business and operations, the EchoLinkTokens,            
+the Token Sale, and the EchoLink System, all information set out in this Whitepaper and the Token                 
+Sale Terms prior to any purchase of the EchoLinkTokens. If any of such risks and uncertainties                
+develops into actual events, the business, financial condition, results of operations and prospects of              
+the Foundation could be materially and adversely affected. In such cases, you may lose all or part of                  
+the value of the EchoLinkTokens. Please refer to the section entitled “Risks and Disclosures” set out                
+at the end of this Whitepaper. 
+  
+
+10 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+List of Figures 
+ 
+1 ECHOLink = Education + Career skills + Human capital + Opportunity; Link = Worldwide              
+
+Network . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [••] 
+2 Echo System Overview ​. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [••] 
+3 P2P Encrypted Document Storage  ​. . . . . . . . . . . . . . . . . . . . . . . . . . . . . [••] 
+4 Digital Identity Mapping  ​. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [••] 
+5 Off Chain Data Inputs Present More Information to End Users  ​. . . . . . . . . . . . . . [••] 
+6 Echo Browser: Search and Get Vetted Candidates ​. . . . . . . . . . . . . . . . . . . . . [••] 
+ 
+ 
+  
+
+11 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+ 
+1. INFORMATION 
+ 
+
+In an information society, education, skills, and work experience lead to better career             
+opportunities for individuals. Businesses increasingly seek out candidates with the right level            
+of education and real world job skills. The need for high quality employees creates              
+tremendous opportunities for people with the right education background, skills, and job            
+experiences. 
+
+ 
+1.1. Global Education in the Age of Internet 
+ 
+
+The education industry is being disrupted by the Internet. The global e-education market has              
+been growing at a [compound annual growth rate] of around 7.2% over the next decade to                
+reach approximately $325 billion by 2025.  
+ 
+The size of the e-Learning market in the United States of America (the “​U.S.​”) was over USD                 
+27 billion by 2016, owing to rising significance of these services across the region . There are                1
+
+numerous other encouraging facts about the continuing growth and adoption in this sector. 
+ 
+Easy accessibility along with improvised effectiveness due to animated learning is likely to             
+positively impact the size of the e-learning market. In addition, an increasing number of              
+internet users coupled with an escalating number of internet enabled mobile phones are             
+anticipated to propel industry demand [for e-learning] over the several upcoming years.  
+ 
+On top of academic education, the online corporate training market [in the U.S.] is expected to                
+grow by 13% per year, with 77% of U.S. companies offering online training to improve the                
+development of their ​employees​1​. ​The era of e-education is truly upon us. In addition to               
+academic training, skill training related to specific job requirements is also in demand.  
+ 
+ 
+
+1.2. Demand For Talent 
+ 
+The economy of today is based on knowledge. As such, employers are increasingly looking              
+for job candidates with a high level of skill. Be it language skills, IT skills, financial skills, or                  
+other service skills, skilled labour is highly sought after by employers. 
+ 
+Employers pay high amounts of referral bonuses or head hunting fees to acquire candidates              
+with good skills. The recruiting industry generated USD 428 billion in revenue worldwide in              
+2016 (approximately equivalent to EUR 386 billion), with the U.S., Japan and the United              
+Kingdom making up a majority of the ​revenue . ​Online job sites, such as TaskRabbit, that               2
+
+cater to employers seeking certain skill sets for specific jobs are experiencing explosive             
+growth. Employers are increasingly looking for and paying for employees with specific skill             
+sets. 
+ 
+In today’s competitive global market, employers are willing to spend a high percentage of their               
+revenue to find the right employee with the appropriate skill set(s). 
+ 
+In the case of LinkedIn​: Q3 2016 revenue was USD 960 million with 17% generated (USD                
+162 million) generated from premium account subscriptions, 18% (USD 175 million) from            
+marketing solutions, and a staggering 65% (USD 623 million) from talent ​solutions .            3
+
+1 LLP Accuracy Research. Global elearning market analysis trends industry forecast to 2025.            
+https://www.researchandmarkets.com/research/nv2b9g/global_elearning​, December 2016. 
+
+2 Staffing Industry Analysts. Global staffing market achieves 428 billion in revenue.           
+http://www2.staffingindustry.com/eng/About/Media-Center/Press-Releases/Global-Staffing-Market-Achie
+ves-428-Billion-in-Revenue​, 2017. 
+
+3 Salman Aslam. Linkedin by the numbers: Stats, demographics fun facts.          
+https://www.omnicoreagency.com/linkedin-statistics/​, 2017. 
+
+12 
+ 
+
+https://www.researchandmarkets.com/research/nv2b9g/global_elearning
+http://www2.staffingindustry.com/eng/About/Media-Center/Press-Releases/Global-Staffing-Market-Achieves-428-Billion-in-Revenue
+http://www2.staffingindustry.com/eng/About/Media-Center/Press-Releases/Global-Staffing-Market-Achieves-428-Billion-in-Revenue
+https://www.omnicoreagency.com/linkedin-statistics/
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+According to LinkedIn, its talent solutions help corporate recruiters share, find, and engage             
+the best talent. Corporate recruiter services provided by LinkedIn costs $9,000 per year per              
+seat (user login). 
+ 
+ 
+
+2. CURRENT ISSUES 
+ 
+While demand for education and training has become global, academic and training            
+institutions have nevertheless remained fragmented and isolated. Academic record         
+verification and skill verification are cumbersome processes. In the U.S. and many other             
+countries, there is no nationwide unified academic record system. 
+ 
+When it comes to job skill certification, such as IT skill certification, the process is even more                 
+fragmented. Degree certifications and grade reports can be altered, difficult to verify, or             
+non-verifiable in many situations. Employers spend a significant amount of resources           
+searching for candidates with the right skill set, and even more resources to check their               
+references and verify their academic records and skill certifications. 
+ 
+All these problems can be solved with an immutable and verifiable blockchain based system. 
+ 
+In particular, the following areas are most affected by inaccuracies in education, skill, and              
+employment history: 
+ 
+(a) Degree Inflation 
+
+ 
+Inaccurate or false education and degree information being listed on resumes in order             
+to gain employment or attain a high position in an industry. In a high profile case in                 
+2012, Scott Thompson left the employment of Yahoo! as its chief executive officer             
+after it was uncovered that he had embellished his academic credentials, ending his             
+term at the company after just 4 months.  
+ 
+
+(b) Skill Inflation 
+ 
+Certain specialised industries value and seek candidates with the right skill set. As a              
+result, many applicants who apply for jobs in such industries will claim to have the               
+requisite skills in their resumes. For example, as certain information technology skills            
+become increasingly in demand, claims of applications possessing certain information          
+technology certification in areas such as big data or artificial intelligence have            
+become more common. It is entirely up to the employer to verify such claims. In               
+situations where certification is provided by private organisations / academic          
+institutions, verification of such academic credentials can be difficult. 
+
+ 
+(c) Job Experience Inflation 
+
+ 
+Inaccuracies in job experience stated in resumes are not limited to certain sectors,             
+but are pervasive across industries. The following are some of the more well-known             
+cases that took place in recent years :  4
+
+ 
+(i) celebrity chef Robert Irvine lied about designing Price Charles and Princess           
+
+Diana’s wedding cake ; 5
+
+ 
+
+4 Business Insider. This is what happened to 10 executives who lied about their resumes.              
+https://goo.gl/qqWq8f​.  
+
+5 Shirl; Keeler Janet; Reiley Laura 17 February 2008 Montgomery, Ben; Kennedy. Tv chef spiced up his                
+past exploits. St.PetersburgTimes, 2008. 
+
+13 
+ 
+
+https://goo.gl/qqWq8f
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+(ii) an Massachusetts Institute of Technology (“​MIT​”) dean never received any          
+college degrees despite claiming to have a bachelor’s and a master’s           
+degrees; 
+ 
+
+(iii) Jeffrey Papows, president of IBM’s software maker Lotus Development,         
+fibbed about his academic and military background; 
+ 
+
+(iv) top Wall Street analyst lied about studying at MIT when he actually attended             
+Boston University. At one time, Salomon Smith Barney’s Jack Grubman          
+was Wall Street’s highest-paid analyst with a salary of $20 million per year; 
+ 
+
+(v) former University of Notre Dame head coach lied about receiving a master’s            
+degree and being a football legend in college when he never even played a              
+game; 
+
+ 
+(vi) top Norwegian bureaucrat lied about being a registered nurse and having 2            
+
+degrees. She was sentenced to 14 months in prison; and 
+ 
+
+(vii) Bausch & Lomb chief executive officer lied about his Masters in Business            
+Administration (“​MBA​”). Ronald Zarrella had to forfeit his bonus of $1 million            
+when it was revealed that he never received his MBA from New York             
+University as claimed. He commenced study of the programme, but did not            
+in fact complete it; 
+ 
+
+(viii) former Harvard University student Adam Wheeler fabricated Scholastic        
+Aptitude Test (SAT) scores, letters of recommendations, and transcripts to          
+gain admission and received $40,000 in grants. Wheeler’s true academic          
+credentials were revealed when he attempted to apply for the Rhodes and            
+Fulbright scholarships in his senior year. 
+ 
+
+(d) Cross Border Verification 
+ 
+The global number of students who study abroad continues to rise with an annual              
+increase of 10%. There were almost 5 million international students in 2014. The             
+Organization for Economic Co-operation and Development (OECD) has projected         
+that, with demographic changes, the international student population is likely to reach            
+8 million by 2025 . 6
+
+ 
+It is often difficult to ascertain information regarding degree or skill level certification             
+across borders. It is also difficult to judge the quality of education for degree holders               
+from abroad, with the exception of well-known universities. 
+ 
+
+(e) HR Verification Omission 
+ 
+According to a 2016 CareerBuilder survey, 75 percent of employers had indicated            
+that they had hired the wrong person for a position, and of those who had had a bad                  
+hire affect their business in the last year, resulted in costs of nearly $17,000 incurred               
+on average . 7
+
+ 
+Steven D. Levitt, the co-author of the book ​Freakonomics and an economics            
+professor at the University of Chicago, cites research suggesting that more than 50%             
+
+6 Suzanne Shaffer. 10 study abroad statistics for you and your student.           
+http://www.parentscountdowntocollegecoach.com/2016/12/09/study-abroad-statistics/​,  December 2016. 
+
+7 CareerBuilder. More than 1 in 4 employers do not conduct background checks of all new employees,                
+according to careerbuilder survey.    
+http://www.careerbuilder.com/share/aboutus/pressreleasesdetail.aspx?ed=12/31/2016&id=pr975&sd=11
+/17/2016​, November 17, 2016. 
+
+14 
+ 
+
+http://www.parentscountdowntocollegecoach.com/2016/12/09/study-abroad-statistics/
+http://www.careerbuilder.com/share/aboutus/pressreleasesdetail.aspx?ed=12/31/2016&id=pr975&sd=11/17/2016
+http://www.careerbuilder.com/share/aboutus/pressreleasesdetail.aspx?ed=12/31/2016&id=pr975&sd=11/17/2016
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+of job applicants lie on their resumes. Cover letters are notorious for embellishment             
+and exaggeration . 8
+
+ 
+Though many employers are performing background checks, 75 percent of such           
+employers have indicated that they had nevertheless hired the wrong person for the             
+job. These employers say a bad hire has resulted in: 
+ 
+(a) less productivity: 36 percent; 
+
+ 
+(b) compromised quality of work: 33 percent; 
+
+ 
+(c) lower employee morale: 31 percent; 
+
+ 
+(d) lost time to recruit and train another worker: 30 percent; 
+
+ 
+(e) cost to recruit and train another worker: 30 percent; and 
+
+ 
+(f) employee’s managers or co-workers had to spend excessive time assisting          
+
+bad hire: 29 ​percent​8​. 
+ 
+Most importantly, the majority of employment related verification is done after the initial             
+resume screening process or in-person interviews. Most pre-employment verification         
+processes cost between $5 to 65 per process . Considerable time and effort are invested in               9
+
+the initial resume screening and interview processes, and would be wasted should the             
+verification process discover any negative indicators. A resume screening system that offers            
+verified education, skill, and job history would be invaluable to recruiters and save businesses              
+time and financial resources. It would allow recruiters to precisely find candidates with the              
+desired education, skill, and job history / background before spending valuable time and effort              
+to engage the candidates. 
+
+ 
+ 
+
+3. OUR SOLUTION - ECHOLINK 
+ 
+EchoLink is a blockchain network that connects students, education, and training institutions            
+and industry participants. EchoLink is a blockchain based system of verified education, skill,             
+and career information for individuals. The system, EchoLink, stores professional career           
+related information in a hashed and unalterable format on public blockchains. All information             
+is provided by trusted information authorities. 
+ 
+For students​, EchoLink stores student grades, degrees, and certificates in a protected and             
+verifiable blockchain system. It provides student records to potential employers and higher            
+learning institutions in a trusted manner. 
+ 
+For academic and training institutions​, EchoLink provides them with the resources           
+required to handle (provide and receive) degree and certificate verification. 
+ 
+For businesses​, EchoLink provides a trusted source of candidate information that is not             
+alterable. Academic records and skill certificates are associated with job candidates in a             
+trusted way as they are supplied by the academic and training institutions directly, and are               
+immutable. 
+ 
+ 
+
+8 Susan M. Heathfield. Do you know who you’re hiring?         
+https://www.thebalance.com/do-you-know-who-you-re-hiring-1919148​, October 13, 2016. 
+
+9 Ryan Howard. Cost of a background check: How much should you pay?            
+http://blog.verifirst.com/blog/bid/305407/cost-of-a-background-check-how-much-should-you-pay​, June 2,   
+2017. 
+
+15 
+ 
+
+https://www.thebalance.com/do-you-know-who-you-re-hiring-1919148
+http://blog.verifirst.com/blog/bid/305407/cost-of-a-background-check-how-much-should-you-pay
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+ 
+ 
+
+3.1. Advantages of Blockchain 
+ 
+Traditionally, any kind of credential verification has depended on the issuing institution or             
+other trusted authority to confirm the authenticity of a credential. This is a time consuming and                
+costly process. If the issuing organisation has ceased to exist, records are lost and              
+unverifiable. The blockchain provides a more robust solution in the form of a distributed              
+network of recorded ledger. A blockchain cannot be easily altered or taken down, removes              
+single points of failure, and ensures that records can be verified without any organisational              
+dependency. 
+ 
+The blockchain logs transactions between parties, and can be used to verify: 
+
+ 
+(a) existence of a record; 
+
+ 
+(b) that a record has not been altered since its issuance; 
+ 
+(c) the identity of the issuing institution; 
+
+ 
+(d) ownership of the record; and 
+
+ 
+(e) that the record has not expired or been revoked. 
+ 
+This is all done on a distributed and public system. All amendments and alterations of the                
+record are also recorded in the distributed ledger, which provides a chain of evidence on the                
+record as well. 
+ 
+Once a record, in the form of a smart contract on the blockchain, has been cryptographically                
+created and recorded on the blockchain, it cannot be altered or spoofed. Any person              
+attempting to impersonate an issuing institution will not be able to execute the smart contract.               
+Decentralized key registries map keys and institutions across different industries. 
+  
+
+3.2. Economic Incentives 
+ 
+The EchoLink System operates on public blockchains, which greatly reduces the cost of             
+operating a similar system in a traditional web environment. 
+ 
+In the case of the Ethereum platform, with a properly written smart contract, the cost of                
+execution is fixed at 21,000 gas. Given that the speed of transaction confirmation is not the                
+most critical factor in the context hereto, the smart contract may be confirmed at a slower                
+pace. When confirmation of transaction is done at around 60 seconds, the cost is at around                
+USD 0.003 per record creation. For a sizable university, such as University of California,              
+Berkeley, with a graduating class of approximately 10,000 students, the cost of creating digital              
+proofs of graduation for the entire class year is approximately USD 30 per year. 
+ 
+In the case of the NEO public blockchain, with an allocation of 10 free gas per smart contract,                  
+the EchoLink System essentially runs free of charge in most situations. This greatly reduces              
+the cost of maintaining the system. The economic benefits are shared with all the participants               
+of the system.  
+ 
+For businesses in particular, our system reduces the cost of verification, which directly             
+translates into a reduction in cost of hiring. 
+ 
+For academic and training institutions​, our system removes the burden of maintaining a             
+verification system, which in most cases requires personnel and IT equipment. This amounts             
+to savings to operational costs. In addition, our system passes a portion of the fees paid by                 
+
+16 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+businesses to issuing organisations. This creates a positive economic incentive for issuing            
+organisations. 
+ 
+For students​, our system makes their credentials credible. Potential employers put greater            
+trusted in verified education, skill, and work experience. Our system injects a higher degree of               
+seriousness in employer queries, and provides students greater exposure in the job market. 
+ 
+ 
+
+4. TECHNICAL IMPLEMENTATION 
+ 
+Overview​: ​The EchoLink System consists of four major components, and offers           
+heterogeneous and multiple blockchain support: 
+ 
+(a) Digital Identity and Mapping System – translates digital identity to real world names             
+
+and well known institutions; 
+ 
+
+(b) On-chain Credential Creation System – supports batch creation and storage of           
+credentials; 
+ 
+
+(c) Off-chain Data I/O System – external data input and output from web, database,             
+feeds, etc.; and 
+ 
+
+(d) Multi-chain Data Browser for End User – intuitive interface to credential created and             
+stored on a number of heterogeneous blockchains, such as Ethereum, AntShares,           
+Metaverse, etc. 
+
+ 
+Identities of students and organisations in the EchoLink System are recorded on the             
+blockchain in the form of public encryption keys. Certificate / degree info are created and               
+stored onto the blockchain by issuing organisations directly. Certificate / degree information            
+includes the digital identity of the corresponding student. 
+ 
+All information is stored on blockchain in an encrypted format. Through the EchoLink browser,              
+users may find candidates matching certain attributes based on recorded certificate / degree             
+information. Query results will be resolved by the naming service into a user-friendly readable              
+format. Results are presented to the end user by the EchoLink browser. 
+ 
+
+ 
+ 
+
+Figure 2: Echo System Overview 
+
+17 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+ 
+It is envisaged that all certificate / degree information will be entered into the system by the                 
+relevant issuing organisations, which lends to the credibility and integrity of the certificate /              
+degree information. 
+ 
+Note​: [Reference implementation] on Ethereum. The Echo system supports NEO, Dash,           
+IOTA, and other blockchains.  
+ 
+
+4.1. Digital Identity and Credential Creation 
+ 
+The EchoLink System utilises publics key (for example, Ethereum addresses) to identify            
+entities in the EchoLink System. Each student is intended to hold a public key in the system.                 
+Each issuing organisation will also have a public key (in other words, account) in the               
+EchoLink System. 
+ 
+Credentials creation involves the issuing organisation executing a smart contract that binds            
+the issuer (for example, the academic institution) to the recipient (for example, the student)              
+along with the corresponding credentials information. The smart contract acts as a proof of              
+existence of the credentials on blockchain. Since the smart contract is executed by the issuer,               
+we can be certain of the authority of such a credential. 
+ 
+
+4.1.1. Digital Identity 
+ 
+Digital identities of the participants of the system are stored in the blockchain in the form of                 
+public keys. Students and known issuers will have a set of public keys that are recognised by                 
+the community. The public keys are used in the creation of credentials in the EchoLink               
+System. 
+ 
+The EchoLink System provides a convenient way of mapping public keys to students, known              
+issuers, and their accreditation. Business organisations pay a fee in the form of EchoLink              
+token to access the mapping information of real world identities and public keys in the               
+EchoLink System.  
+ 
+
+4.1.2. Credential Creation 
+ 
+Issuing entities create credentials by executing smart contracts that set the status of the state               
+of the smart contract. In the case of Ethereum, smart contracts with state information are               
+time-stamped and stored in the blockchain. This mechanism creates an immutable proof of             
+existence. 
+ 
+Issuing entities may include the recipient’s public key address, degree information, or even             
+hashed value of photographs and paper degree files into the blockchain. Even though the              
+blockchain can be downloaded into a node and scanned, the information contained in the              
+EchoLink System smart contract are only utilisable after resolution from the identity mapping             
+service of the EchoLink System. The state information (in other words, credential details) is              
+presented in user-friendly readable format through the EchoLink browser. 
+ 
+P2P encrypted document storage is utilised to store image and binary information            
+associated with a certain credential. Once called upon, images and other binary files can be               
+accessed by the EchoLink browser, thus providing the end user with a rich media experience               
+accustomed to business users. 
+ 
+
+18 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+ 
+ 
+
+Figure 3: P2P Encrypted Document Storage 
+ 
+One method of implementing such off chain data feed is through InterPlanetary File System              
+(“​IPFS​”) Images or files in portable document format (PDF) associated with the recipient are              
+stored on IPFS. Hashed addresses of such documents are used in the smart contract that               
+generates the credentials, thus linking additional documents to the credential. 
+ 
+
+4.1.3. Digital Identity Mapping System 
+ 
+As stated above, digital identities of the participants of the EchoLink System are stored in the                
+blockchain in the form of public keys. Since the EchoLink System is a system that is intended                 
+to provide trustworthy credentials, anonymity is not a requirement for the users of the              
+EchoLink System. On the contrary, participants of the EchoLink System should make their             
+identities known in order to respond to system queries. 
+ 
+The EchoLink System provides a mapping service to map public keys to identities of students               
+and organisations. This mapping service is related to the EchoLink browser to the end users,               
+and is transparent to the end user. Only during the presentation of query results submitted by                
+the end user, would the mapping service resolve the identities of the public keys and present                
+human-readable information to the end user. 
+ 
+
+ 
+ 
+
+Figure 4: Digital Identity Mapping 
+ 
+
+4.2. Off Chain Data Sources 
+ 
+In the EchoLink System, only digital identities of the issuing entity and the recipient are               
+required to constitute a verified credential on the blockchain. In reality, more information may              
+be provided in order for the credential to be useful the user, providing more insight. 
+ 
+
+19 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+Besides digital identities, other important information regarding a person’s credentials include           
+academic records, course work transcripts, detailed degree information, and skill certification           
+information. This information will be accessible to queries through “oracles” (in other words,             
+off chain data sources). 
+ 
+
+ 
+Figure 5: Off Chain Data Inputs Present More Information to End Users 
+
+ 
+Furthermore, through dedicated oracle services, more information sources, such as web           
+services, may be linked to the smart contract. 
+ 
+
+4.3. Dynamic Blockchain Browser 
+ 
+The primary end users of the EchoLink System are primarily intended to be business              
+organisations and recruiters. A user friendly blockchain browser would be essential to            
+business users. 
+ 
+
+ 
+ 
+
+Figure 6: Echo Browser: Search and Get Vetted Candidates 
+ 
+Ideally, the EchoLink browser would combine functionality of both a blockchain explorer and             
+an EchoLink wallet. Business users search candidates through the blockchain functionality           
+and pay fees through the wallet functionality, all in the same browser application. 
+ 
+ 
+
+4.4. Multi-Blockchain Support 
+ 
+It is envisaged that EchoLink System users will span the globe. The EchoLink System is               
+intended to serve students from various countries studying abroad. Businesses recruiting           
+internally may also use our system to find the best talent worldwide. The EchoLink System               
+will eventually need to provide support for data stored on different blockchains operating on              
+different technology platform and countries. 
+ 
+
+20 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+The EchoLink System operates through smart contracts for credential creation on various            
+blockchains. Blockchain platforms that offer support for smart contracts with Turin-complete           
+virtual machines can be used as the underlying blockchain layer for the EchoLink System. (for               
+example, Ethereum, NEO, and Dash). Although not necessary, blockchains that offer oracle            
+access to off chain data would be more compatible with EchoLink premium features, such as               
+graphical credential certificates. 
+ 
+The mechanism to establish multi-blockchain support is through the EchoLink browser. It is             
+the end user interface for smart contracts to multiple back-end blockchains. The nature of the               
+supported blockchain can be a public ledger, alliance ledger, or even private ledgers. The              
+EchoLink browser provides a readable and user friendly interface to multiple blockchains. 
+ 
+ 
+
+5. ECONOMIC MODEL 
+ 
+As indicated earlier in the paper, large amounts of financial resources and personnel are              
+spent on acquiring talent by businesses around the world. On average, each user of              
+LinkedIn’s corporate recruiter service pays $9,000 per year. LinkedIn generated a staggering            
+$623 million from such solutions in Q3 of 2016 alone. The need to find the right job candidate                  
+is the fundamental economic driver of the EchoLink System. 
+ 
+The fees paid by business users contribute to the health of the EchoLink System. A portion of                 
+the fees are distributed to education and training organisations as incentives to provide             
+verified information. A portion of the fees also contribute to the actual upkeep of the EchoLink                
+System. 
+  
+
+5.1. Token on EchoLink System – EchoLinkToken 
+ 
+The EchoLink System provides an exchange medium to pay fees between users and other              
+participants of the system in the form of the EchoLinkToken (symbol: EKO). With support for               
+heterogeneous back-end blockchain data sources in the EchoLink System, a common           
+exchange medium is needed. The EchoLink smart contract and multi-blockchain browser           
+have built-in support for the EchoLinkToken across different blockchain systems. Therefore,           
+data providers from public blockchains, alliance blockchains, and even private blockchain           
+would be easily rewarded with EchoLinkTokens. 
+ 
+An even more important use of the EchoLinkToken is to establish an international education              
+reputation and skill level market place. With the EchoLinkToken as the common method of              
+value exchange in the EchoLink System, quality of education in different countries,            
+institutions, and disciplines can be measured by a common and consistent token. 
+ 
+ 
+
+6. CONCLUSION 
+ 
+The EchoLink System is a user focused blockchain application system, and is designed from              
+a user perspective. The EchoLink System supports multiple blockchain platforms across           
+countries. It addresses an acute business need, namely identifying great talent with verified             
+credentials at a reduced cost. The EchoLink System is driven by real-world economic needs              
+and is built on top of a sound economic model. 
+ 
+Furthermore, The EchoLink System breaks down barriers between education systems,          
+credential verification systems, and value systems to bring out a truly trusted and worldwide              
+talent market. 
+ 
+
+6.1. Future Work 
+ 
+We plan to further strengthen the EchoLink System by focusing on the following areas: 
+
+21 
+ 
+
+
+
+EchoLink - Blockchain Based Professional Networking and Recruiting Platform Chen 
+ 
+
+ 
+(a) next generation of end user access and interaction: both mobile and desktop; 
+
+ 
+(b) more industries support in addition to talent and education; and 
+
+ 
+(c) education credential valuation market based on EchoLink System users voting. 
+
+ 
+In addition to improvements to the EchoLink System, the same design principle can be              
+utilised to create blockchain based notary, transaction, and proof of existence system for             
+other industries. 
+ 
+
+6.2. Acknowledgements 
+ 
+We would like to acknowledge several industry veterans for advising our project. 
+ 
+
+6.3. Whitepaper Versions 
+ 
+Echo v. 1.0 – April 2017, initial release 
+ 
+Echo v. 1.1 – July 2017, first updated draft 
+ 
+Echo v. 1.2 – October 2017, second updated draft Echo v. 1.3 – November 2017, third                
+updated draft 
+ 
+ 
+
+6.4. Code Base 
+ 
+Codebase: https://github.com/EchoLinkTech/EchoLink 
+ 
+
+ 
+ 
+
+22 
+ 
+
+

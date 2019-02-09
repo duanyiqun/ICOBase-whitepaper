@@ -1,0 +1,2191 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+White​ ​paper 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+June,​ ​2017 
+
+ 
+
+
+
+ 
+
+Executive​ ​summary 2 
+
+1.​ ​Three​ ​significant​ ​problems​ ​that​ ​merchants​ ​face:​ ​trust​ ​and​ ​reputation,​ ​payments, 
+and​ ​an​ ​inability​ ​to​ ​reach​ ​the​ ​growing​ ​Ethereum​ ​economy 4 
+
+1.1​ ​Trust​ ​and​ ​reputation​ ​problem​ ​in​ ​global​ ​e-commerce 5 
+1.2​ ​Expensive​ ​and​ ​long​ ​payment​ ​process 7 
+1.3​ ​An​ ​inability​ ​to​ ​participate​ ​in​ ​token-enabled​ ​digital​ ​asset​ ​economy​ ​potentially​ ​worth 
+$10T​ ​in​ ​2025. 9 
+
+2.​ ​Monetha’s​ ​solution:​ ​a​ ​decentralized​ ​trust​ ​and​ ​reputation​ ​system​ ​working​ ​flawlessly 
+together​ ​through​ ​a​ ​blockchain​ ​based​ ​payment​ ​gateway 10 
+
+2.1​ ​A​ ​Universal​ ​Decentralized​ ​Trust​ ​and​ ​Reputation​ ​System​ ​on​ ​the​ ​Ethereum​ ​blockchain. 
+Ensuring​ ​trust​ ​in​ ​global​ ​commerce. 11 
+2.2​ ​A​ ​mobile​ ​payments​ ​solution​ ​to​ ​accept​ ​mobile​ ​Ethereum​ ​based​ ​cryptocurrency 
+payments​ ​generally​ ​up​ ​to​ ​5X​ ​cheaper​ ​and​ ​up​ ​to​ ​x10000​ ​faster. 15 
+2.3​ ​Enabling​ ​merchants​ ​to​ ​reach​ ​$10​ ​trillion​ ​digital​ ​asset​ ​economy 18 
+
+3.​ ​Product​ ​architecture​ ​and​ ​product​ ​development​ ​timeline 21 
+3.1​ ​Smart​ ​Contracts​ ​&​ ​Workflows 21 
+3.2​ ​Intended​ ​Product​ ​architecture 24 
+3.3​ ​Beta​ ​version​ ​of​ ​the​ ​product 24 
+3.4​ ​Product​ ​development​ ​roadmap. 25 
+
+4.​ ​Market​ ​opportunity​ ​and​ ​business​ ​model 27 
+4.1​ ​Market​ ​opportunity 28 
+4.2​ ​Business​ ​model 32 
+
+5.​ ​Marketing​ ​and​ ​Strategy 33 
+5.1​ ​Network​ ​effect 33 
+5.2​ ​Loyalty​ ​program 34 
+
+6.​ ​Crowdsale​ ​details 36 
+6.1​ ​MTH​ ​Creation​ ​Ratios 37 
+
+1st​ ​price​ ​batch​ ​until​ ​the​ ​soft​ ​cap​ ​is​ ​reached:​ ​1​ ​ETH​ ​=​ ​2400​ ​MTH 37 
+2rd​ ​price​ ​batch​ ​after​ ​the​ ​soft​ ​cap​ ​is​ ​reached:​ ​1​ ​ETH​ ​=​ ​2000​ ​MTH. 37 
+
+6.2​ ​MTH​ ​Tokens 38 
+6.3​ ​Incentive​ ​program 38 
+6.4​ ​Budget 39 
+
+7.​ ​Legal 40 
+
+8.​ ​Team 43 
+8.1​ ​Monetha​ ​Team 43 
+8.2​ ​Monetha​ ​Advisory​ ​Team 45 
+
+References 47 
+ 
+ 
+
+ 
+1 
+
+
+
+ 
+
+Executive​ ​summary  
+E-commerce​ ​worldwide​ ​sales​ ​in​ ​2014​ ​were​ ​USD​ ​1.33​ ​trillion​ ​and​ ​are​ ​projected​ ​to 
+increase​ ​to​ ​USD​ ​4.058​ ​trillion​ ​by​ ​2020.​ ​E-commerce​ ​share​ ​of​ ​retail​ ​sales​ ​​is​ ​expected 
+to​ ​increase​ ​from​ ​7.4%​ ​in​ ​2015​ ​to​ ​14.6%​ ​in​ ​2020.​ ​Furthermore,​ ​according​ ​to​ ​Statista, 
+the​ ​number​ ​of​ ​people​ ​buying​ ​goods​ ​or​ ​services​ ​online​ ​will​ ​increase​ ​from​ ​1.46​ ​billion 
+in​ ​2015​ ​to​ ​above​ ​2​ ​billion​ ​in​ ​2020.  
+ 
+Despite​ ​the​ ​explosive​ ​growth,​ ​three​ ​major​ ​problems​ ​still​ ​exist:  
+ 
+
+1. Trust​ ​and​ ​reputation​:​ ​Building​ ​trust​ ​is​ ​difficult,​ ​and​ ​it​ ​is​ ​centrally​ ​governed​ ​by 
+big​ ​marketplaces.​ ​There​ ​is​ ​an​ ​inability​ ​to​ ​transfer​ ​trust​ ​from​ ​one​ ​centralized 
+service​ ​to​ ​another,​ ​and​ ​thus​ ​a​ ​need​ ​to​ ​establish​ ​relationship​ ​with​ ​each 
+merchant​ ​separately.​ ​Moreover,​ ​a​ ​merchant’s​ ​history​ ​is​ ​not​ ​recorded,​ ​so​ ​there 
+is​ ​no​ ​ability​ ​to​ ​punish​ ​fraudulent​ ​buyers​ ​or​ ​merchants.​ ​Huge​ ​efforts​ ​and 
+advertising​ ​budgets​ ​are​ ​needed​ ​to​ ​create​ ​trust​ ​if​ ​a​ ​merchant​ ​is​ ​not​ ​a​ ​part​ ​of​ ​a 
+centralized​ ​marketplace. 
+
+ 
+2. Expensive​ ​and​ ​long​ ​payment​ ​process:​ ​​There​ ​are​ ​16(!)​ ​different​ ​steps​ ​to 
+
+settle​ ​the​ ​transaction​ ​and​ ​up​ ​to​ ​15(!)​ ​different​ ​fees​ ​to​ ​pay​ ​for​ ​payment 
+gateways.​ ​Transaction​ ​fees​ ​range​ ​from​ ​2%​ ​+​ ​0.1​ ​to​ ​6%​ ​+​ ​0.7.​ ​Chargeback 
+fees​ ​of​ ​USD​ ​15.​ ​Moreover,​ ​existing​ ​payment​ ​gateways​ ​​rarely​ ​offer​ ​a​ ​simple 
+solution​ ​for​ ​a​ ​merchant​ ​to​ ​accept​ ​mobile​ ​payments​ ​on​ ​their​ ​website​ ​or​ ​point​ ​of 
+sale​ ​terminals. 
+
+  
+3. An​ ​inability​ ​to​ ​reach​ ​the​ ​growing​ ​ethereum​ ​economy:​​ ​Today,​ ​merchants 
+
+cannot​ ​accept​ ​payments​ ​in​ ​Ether,​ ​which​ ​has​ ​reached​ ​a​ ​market​ ​cap​ ​of​ ​USD 
+36bn​ ​as​ ​of​ ​June​ ​14th.​ ​Moreover,​ ​a​ ​totally​ ​new​​ ​digital​ ​asset​ ​class​ ​is​ ​being 
+created:​ ​tokens​ ​of​ ​products​ ​that​ ​are​ ​built​ ​on​ ​the​ ​Ethereum​ ​platform.​ ​The​ ​rise 
+of​ ​a​ ​new​ ​kind​ ​of​ ​digital​ ​assets​ ​enables​ ​the​ ​creation​ ​of​ ​a​ ​token-based​ ​digital 
+asset​ ​economy.​ ​It​ ​is​ ​expected​ ​that​ ​​10%​ ​of​ ​global​ ​GDP​ ​will​ ​be​ ​generated​ ​on 
+blockchains​ ​by​ ​2025.​ ​Merchants​ ​will​ ​definitely​ ​want​ ​to​ ​participate​ ​in​ ​the 
+blockchain​ ​created​ ​economy.  
+
+ 
+Monetha​ ​is​ ​creating​ ​a​ ​universal​ ​decentralized​ ​trust​ ​and​ ​reputation​ ​solution 
+working​ ​flawlessly​ ​together​ ​with​ ​mobile​ ​payments​ ​processing​ ​on​ ​the 
+Ethereum​ ​blockchain​ ​leveraging​ ​smart​ ​contract​ ​technology.  
+ 
+
+1. Universal/Transferable​ ​trust​ ​and​ ​reputation​ ​system:​ ​​Every​ ​time​ ​a 
+transaction​ ​is​ ​made​ ​the​ ​blockchain​ ​will​ ​record​ ​the​ ​time​ ​of​ ​the​ ​transaction,​ ​both 
+receiving​ ​and​ ​sending​ ​wallet​ ​addresses,​ ​warranty​ ​conditions,​ ​delivery​ ​time, 
+
+ 
+2 
+
+
+
+ 
+
+and​ ​all​ ​other​ ​information​ ​that​ ​is​ ​typically​ ​needed​ ​to​ ​ensure​ ​trust.​ ​All​ ​the 
+sensitive​ ​information​ ​will​ ​be​ ​hashed​ ​and​ ​only​ ​available​ ​to​ ​authorized​ ​users​ ​in 
+a​ ​beautifully​ ​designed​ ​user​ ​interface.​ ​Based​ ​on​ ​that​ ​information,​ ​clients​ ​and 
+merchants​ ​will​ ​be​ ​able​ ​to​ ​file/solve​ ​a​ ​claim,​ ​rate​ ​each​ ​other,​ ​etc.​ ​​Every​ ​time​ ​a 
+transaction​ ​is​ ​made,​ ​claim​ ​registered,​ ​solved​ ​or​ ​unsolved​ ​(according​ ​to 
+the​ ​purchase​ ​details​ ​saved​ ​during​ ​the​ ​purchase),​ ​review​ ​written,​ ​etc.,​ ​the 
+smart​ ​contract​ ​will​ ​automatically​ ​change​ ​the​ ​trust​ ​level​ ​for​ ​each​ ​of​ ​the 
+parties​ ​involved. 
+
+ 
+2. Mobile​ ​payments​ ​solution:​ ​​With​ ​the​ ​help​ ​of​ ​the​ ​Ethereum​ ​blockchain,​ ​we 
+
+are​ ​able​ ​to​ ​make​ ​payments​ ​with​ ​​only​​ ​​1​ ​step​ ​and​ ​1​ ​fee,​ ​​which​ ​results​ ​in 
+accepting​ ​payments​ ​generally​ ​up​ ​to​ ​5X​ ​cheaper​ ​and​ ​up​ ​to​ ​x10000​ ​faster​ ​for 
+merchants.​ ​After​ ​simple​ ​integration​ ​with​ ​Monetha,​ ​merchants​ ​will​ ​be​ ​able​ ​to: 
+use​ ​our​ ​decentralized​ ​trust​ ​and​ ​reputation​ ​system,​ ​accept​ ​Ethereum​ ​based 
+tokens,​ ​accept​ ​mobile​ ​payments,​ ​and​ ​easily​ ​convert​ ​cryptocurrency​ ​to​ ​their 
+local​ ​fiat​ ​currency.  
+
+ 
+3. Enabling​ ​merchants​ ​to​ ​reach​ ​$10​ ​trillion​ ​digital​ ​asset​ ​economy:​ ​​By 
+
+developing​ ​Monetha,​ ​we​ ​will​ ​not​ ​only​ ​allow​ ​merchants​ ​to​ ​participate​ ​in​ ​a 
+trustful​ ​decentralized​ ​economy,​ ​but​ ​also​ ​reach​ ​the​ ​growing​ ​digital​ ​asset 
+economy​ ​through​ ​our​ ​payment​ ​solution.​ ​The​ ​World​ ​Bank​ ​estimates​ ​that​ ​10% 
+of​ ​global​ ​GDP​ ​will​ ​be​ ​generated​ ​on​ ​blockchains​ ​by​ ​2025.​ ​The​ ​GDP​ ​estimated 
+for​ ​2025​ ​is​ ​$100T,​ ​thus​ ​the​ ​value​ ​generated​ ​through​ ​blockchain​ ​is​ ​expected​ ​to 
+be​ ​$10T​ ​(10%).  
+
+ 
+Mobile​ ​payments:​ ​​According​ ​to​ ​Boston​ ​Consulting​ ​Group,​ ​the​ ​payment​ ​industry​ ​is 
+about​ ​to​ ​experience​ ​a​ ​huge​ ​shift​ ​towards​ ​mobile​ ​payments:​ ​1)​ ​In​ ​2015​ ​mobile 
+payment​ ​volume​ ​was​ ​USD​ ​8.6​ ​billion​ ​in​ ​the​ ​US.​ ​It​ ​is​ ​expected​ ​to​ ​increase​ ​almost​ ​32x 
+by​ ​2021​ ​to​ ​reach​ ​$274bn​ ​in​ ​the​ ​US​ ​alone,​ ​2)​ ​mobile​ ​share​ ​of​ ​total​ ​ecommerce​ ​is 
+expected​ ​to​ ​increase​ ​to​ ​48.5%​ ​of​ ​total​ ​e-commerce​ ​by​ ​2020.​ ​It​ ​was​ ​23.6%​ ​in​ ​2015.  
+ 
+Business​ ​model:​ ​​Monetha​ ​will​ ​only​ ​have​ ​one​ ​fee​ ​–​ ​a​ ​1.5%​ ​transaction​ ​fee​ ​for 
+merchants.  
+ 
+Token​ ​and​ ​token​ ​ecosystem:​ ​​A​ ​⅓​ ​of​ ​Monetha’s​ ​revenue​ ​will​ ​be​ ​put​ ​in​ ​the​ ​“Voucher 
+Smart​ ​Contract”​ ​in​ ​a​ ​form​ ​of​ ​MTH​ ​tokens​ ​to​ ​our​ ​token​ ​holders​ ​with​ ​an​ ​ability​ ​to​ ​claim​ ​for​ ​a 
+voucher​ ​proportionately​ ​to​ ​the​ ​amount​ ​of​ ​MTH​ ​tokens​ ​they​ ​hold.​ ​Token​ ​holders​ ​will​ ​receive​ ​a 
+voucher​ ​in​ ​MTH​ ​(Monetha’s​ ​currency)​ ​to​ ​use​ ​it​ ​as​ ​a​ ​discount​ ​when​ ​buying​ ​from​ ​​ ​Monetha’s 
+merchants.​ ​This​ ​voucher​ ​would​ ​be​ ​proportional​ ​to​ ​the​ ​amount​ ​of​ ​the​ ​MTH​ ​tokens​ ​held.  
+ 
+Loyalty​ ​program:​ ​​In​ ​order​ ​to​ ​encourage​ ​a​ ​network​ ​effect​ ​and​ ​create​ ​an​ ​ecosystem 
+for​ ​the​ ​Monetha​ ​token,​ ​we​ ​are​ ​going​ ​to​ ​introduce​ ​a​ ​loyalty​ ​program​ ​for​ ​merchants. 
+
+ 
+3 
+
+
+
+ 
+
+Every​ ​purchase​ ​made​ ​via​ ​the​ ​Monetha​ ​payment​ ​system​ ​will​ ​reward​ ​the​ ​client​ ​of​ ​the 
+merchant​ ​with​ ​0.2%​ ​(the​ ​exact​ ​percentage​ ​might​ ​change​ ​over​ ​time)​ ​of​ ​the​ ​value​ ​of 
+the​ ​transaction​ ​in​ ​Monetha​ ​tokens​ ​from​ ​the​ ​Monetha​ ​loyalty​ ​pool.  
+ 
+
+1.​ ​Three​ ​significant​ ​problems​ ​that​ ​merchants 
+face:​ ​trust​ ​and​ ​reputation,​ ​payments,​ ​and​ ​an 
+inability​ ​to​ ​reach​ ​the​ ​growing​ ​Ethereum 
+economy  
+ 
+E-commerce​ ​has​ ​grown​ ​at​ ​an​ ​unprecedented​ ​rate​ ​and​ ​is​ ​projected​ ​to​ ​grow​ ​at​ ​an 
+even​ ​higher​ ​rate​ ​over​ ​the​ ​coming​ ​years.​ ​According​ ​to​ ​“Statista”,​ ​​retail​ ​e-commerce 
+sales​ ​worldwide​ ​in​ ​2014​ ​were​ ​USD​ ​1.33​ ​trillion​ ​and​ ​are​ ​projected​ ​to​ ​increase​ ​to​ ​USD 
+4.058​ ​trillion​ ​by​ ​2020.  
+ 
+
+ 
+ 
+ 
+The​ ​growth​ ​is​ ​perfectly​ ​illustrated​ ​by​ ​the​ ​number​ ​of​ ​shops​ ​created​ ​on​ ​the​ ​Shopify 
+platform.​ ​They​ ​had​ ​84,000​ ​shops​ ​in​ ​2013,​ ​144,000​ ​in​ ​2014,​ ​243,000​ ​in​ ​2015​ ​and 
+ended​ ​2016​ ​with​ ​almost​ ​378,000​ ​merchants​ ​on​ ​the​ ​platform​ ​-​ ​a​ ​growth​ ​of​ ​450%​ ​over 
+3​ ​years.  
+ 
+
+ 
+4 
+
+
+
+ 
+
+E-commerce​ ​is​ ​also​ ​gaining​ ​greater​ ​weight​ ​in​ ​total​ ​retail​ ​sales​ ​globally.​ ​It​ ​is​ ​expected 
+to​ ​increase​ ​from​ ​7.4%​ ​in​ ​2015​ ​to​ ​14.6%​ ​in​ ​2020.​ ​Furthermore,​ ​according​ ​to​ ​Statista, 
+the​ ​number​ ​of​ ​people​ ​buying​ ​goods​ ​or​ ​services​ ​online​ ​will​ ​increase​ ​from​ ​1.46​ ​billion 
+in​ ​2015​ ​to​ ​above​ ​2​ ​billion​ ​in​ ​2020.  
+ 
+Despite​ ​the​ ​super​ ​high​ ​growth​ ​of​ ​e-commerce,​ ​merchants​ ​face​ ​three​ ​major 
+problems:​ ​​1)​​ ​​Trust​ ​and​ ​reputation,​ ​2)​ ​Expensive​ ​and​ ​long​ ​payment​ ​process,​ ​and 
+3)​ ​An​ ​inability​ ​to​ ​reach​ ​the​ ​growing​ ​Ethereum​ ​ecosystem,​ ​with​ ​a​ ​market​ ​cap​ ​of 
+~36​ ​billion​ ​and​ ​its​ ​corresponding​ ​Ethereum​ ​token​ ​economy. 
+ 
+
+1.1​ ​Trust​ ​and​ ​reputation​ ​problem​ ​in​ ​global​ ​e-commerce 
+ 
+Building​ ​trust​ ​is​ ​difficult.​ ​It​ ​takes​ ​time​ ​and​ ​costs​ ​a​ ​lot​ ​of​ ​money.​ ​It’s​ ​even​ ​more​ ​difficult 
+for​ ​new​ ​or​ ​small​ ​merchants.  
+ 
+Trust​ ​and​ ​reputation​ ​are​ ​extremely​ ​important​ ​for​ ​participants​ ​of​ ​today's​ ​global 
+commerce.​ ​People​ ​are​ ​more​ ​likely​ ​to​ ​buy​ ​from​ ​trusted​ ​merchants;​ ​therefore, 
+merchants​ ​are​ ​striving​ ​to​​ ​​maximise​ ​their​ ​trust​ ​rating/reputation​​ ​and​ ​build​ ​a​ ​loyal 
+customer​ ​base.  
+
+According​ ​to​ ​Econsultancy,​ ​61%​ ​of​ ​customers​ ​read​ ​online​ ​reviews​ ​before​ ​making​ ​a 
+purchase​ ​decision.​ ​Moreover,​ ​according​ ​to​ ​Reevo​ ​stats,​ ​63%​ ​of​ ​customers​ ​are​ ​more 
+likely​ ​to​ ​make​ ​a​ ​purchase​ ​from​ ​a​ ​site​ ​which​ ​has​ ​user​ ​reviews​ ​and​ ​a​ ​proven​ ​trust 
+rating.  
+
+Consumer​ ​reviews​ ​are​ ​significantly​ ​more​ ​trusted​ ​(nearly​ ​12​ ​times​ ​more)​​ ​than 
+descriptions​ ​that​ ​come​ ​from​ ​manufacturers,​ ​according​ ​to​ ​a​ ​survey​ ​of​ ​US​ ​internet 
+users​ ​by​ ​the​ ​online​ ​video​ ​review​ ​site​ ​EXPO.​ ​Furthermore,​ ​Shopify,​ ​in​ ​one​ ​of​ ​their 
+merchant​ ​blogs,​ ​emphasized​ ​that​ ​“showing​ ​that​ ​others​ ​trust​ ​you”​ ​is​ ​vital​ ​to​ ​a 
+merchant’s​ ​success.  
+
+There​ ​are,​ ​however,​ ​a​ ​few​ ​major​ ​problems​ ​regarding​ ​trust​ ​that​ ​merchants​ ​face​ ​in 
+today's​ ​global​ ​e-commerce.  
+ 
+1.​ ​The​ ​trust​ ​and​ ​reputation​ ​system​ ​to​ ​facilitate​ ​commerce​ ​​is​ ​only​ ​possible​ ​in​ ​closed 
+marketplaces,​​ ​which​ ​are​ ​controlled​ ​by​ ​a​ ​central​ ​authority.​ ​In​ ​order​ ​to​ ​build​ ​trust,​ ​you 
+have​ ​to​ ​join​ ​one​ ​or​ ​a​ ​few​ ​of​ ​the​ ​closed​ ​marketplaces,​ ​such​ ​as:​ ​Amazon,​ ​Ebay, 
+Alibaba,​ ​etc.​ ​By​ ​joining​ ​them,​ ​merchant​ ​must​ ​accept​ ​all​ ​their​ ​rules;​ ​for​ ​example,​ ​20% 
+commission​ ​from​ ​sales. 
+
+ 
+5 
+
+
+
+ 
+
+2.​ ​Merchants​ ​have​ ​​no​ ​ability​ ​to​ ​transfer​ ​their​ ​trust​ ​rate​ ​from​​ ​one​ ​centralized 
+service​ ​to​ ​another.​ ​For​ ​example,​ ​once​ ​you​ ​become​ ​trusted​ ​on​ ​Amazon,​ ​you​ ​still​ ​must 
+build​ ​your​ ​trust​ ​on​ ​Ebay​ ​or​ ​another​ ​marketplace. 
+
+3.​ ​Merchants​ ​have​ ​to​ ​​invest​ ​considerable​ ​effort​ ​and​ ​finance​ ​into​ ​their​ ​brand​ ​and 
+advertising​​ ​if​ ​they​ ​do​ ​not​ ​want​ ​to​ ​join​ ​the​ ​centralized​ ​marketplace​ ​that​ ​facilitates 
+trust​ ​and​ ​reputation. 
+
+4.​ ​Buyers​ ​need​ ​to​ ​​establish​ ​a​ ​relationship​ ​with​ ​each​ ​merchant​ ​separately. 
+Moreover,​ ​a​ ​buyer’s​ ​history​ ​is​ ​not​ ​available​ ​for​ ​merchants​ ​to​ ​make​ ​decisions.​ ​Being 
+trusted​ ​with​ ​one​ ​merchant​ ​doesn't​ ​mean​ ​you​ ​are​ ​trusted​ ​with​ ​another.  
+
+5.​ ​There​ ​is​ ​no​ ​ability​ ​to​ ​punish​ ​fraudulent​ ​buyers​ ​or​ ​merchants​ ​and​ ​reflect​ ​that​ ​in​ ​their 
+history.​ ​​Most​ ​fraud​ ​happens​ ​due​ ​to​ ​stolen​ ​cards​ ​or​ ​stolen​ ​credit​ ​card​ ​information.​ ​In 
+2015,​ ​card​ ​fraud​ ​reached​ ​$21.84​ ​billion​ ​–​ ​a​ ​figure​ ​that​ ​is​ ​expected​ ​to​ ​rise​ ​to​ ​$31.67 
+billion​ ​by​ ​2020.​ ​According​ ​to​ ​Advanced​ ​Payment​ ​Report​ ​2016​ ​conducted​ ​with​ ​the 
+help​ ​of​ ​Wirecard.de,​ ​92%​ ​of​ ​merchants​ ​say​ ​fraud​ ​will​ ​remain​ ​a​ ​prime​ ​concern​ ​for 
+online​ ​payments.​ ​​Large​ ​e-commerce​ ​and​ ​m-commerce​ ​merchants​ ​lose​ ​1.4%​ ​and 
+1.7%​ ​of​ ​revenues​​ ​respectively​ ​to​ ​fraud​ ​according​ ​to​ ​the​ ​2015​ ​True​ ​Cost​ ​of​ ​Fraud 
+Study. 
+
+There​ ​are​ ​millions​ ​of​ ​e-commerce​ ​merchants​ ​outside​ ​closed​ ​marketplaces​ ​that​ ​need 
+a​ ​universal​ ​trust​ ​and​ ​reputation​ ​system​ ​in​ ​order​ ​to​ ​be​ ​trusted​ ​by​ ​their​ ​clients. 
+
+In​ ​order​ ​to​ ​build​ ​global​ ​trust​ ​in​ ​e-commerce,​ ​​we​ ​need​ ​a​ ​universal​ ​trust​ ​and 
+reputation​ ​system​.​ ​Payments​ ​and​ ​commerce​ ​using​ ​Monetha​ ​will​ ​be​ ​done​ ​directly 
+between​ ​two​ ​unknown​ ​parties​ ​using​ ​a​ ​much-needed​ ​​decentralized,​ ​smart​ ​contract 
+based,​ ​trust​ ​and​ ​reputation​ ​system​. 
+
+1.2​ ​Expensive​ ​and​ ​long​ ​payment​ ​process 
+ 
+Despite​ ​having​ ​a​ ​wide​ ​variety​ ​of​ ​different​ ​payment​ ​gateways​ ​and​ ​processing 
+companies,​ ​the​ ​following​ ​major​ ​problems​ ​still​ ​exist​ ​for​ ​merchants: 
+
+● Costly​ ​and​ ​complex​ ​transaction​ ​settlements​ ​with​ ​​up​ ​to​ ​16(!)​ ​steps​ ​to​ ​accept 
+and​ ​settle​ ​transactions. 
+
+● Up​ ​to​ ​15(!)​ ​different​ ​type​ ​of​ ​fees​​ ​including​ ​a​ ​transaction​ ​fee​ ​of​ ​between​ ​2% 
+to​ ​6%,​ ​and​ ​a​ ​chargeback​ ​fee​ ​of​ ​​USD​ ​20. 
+
+● Extremely​ ​high​ ​cross-border​ ​transaction​ ​fees.  
+● Long​ ​transaction​ ​times​ ​ranging​ ​from​​ ​2​ ​days​ ​to​ ​several​ ​weeks​​ ​to​ ​receive​ ​their 
+
+money.​ ​E-commerce​ ​payment​ ​processors​ ​often​ ​hold​ ​merchants’​ ​money​ ​for​ ​a 
+week​ ​due​ ​to​ ​higher​ ​probability​ ​of​ ​chargebacks​ ​during​ ​first​ ​week​ ​after 
+
+ 
+6 
+
+
+
+ 
+
+purchase. 
+● Mobile​ ​payments.​ ​Mobile​ ​payment​ ​solutions​ ​are​ ​fragmented​ ​and​ ​not​ ​available 
+
+universally​ ​or​ ​simply​ ​not​ ​easy​ ​to​ ​use​ ​despite​ ​a​ ​strong​ ​consumer​ ​appetite​ ​to 
+leverage​ ​them.​ ​Payment​ ​processors​ ​​rarely​ ​offer​ ​a​ ​simple​ ​solution​ ​for​ ​a 
+merchant​ ​to​ ​accept​ ​mobile​ ​payments​.  
+
+1.2.1​ ​Current​ ​payment​ ​process 
+
+The​ ​picture​ ​below​ ​describes​ ​the​ ​payment​ ​confirmation​ ​or​ ​rejection​ ​in​ ​8​ ​steps​ ​at​ ​the 
+time​ ​of​ ​payment​ ​regardless​ ​of​ ​it​ ​being​ ​in​ ​a​ ​physical​ ​store,​ ​e-commerce​ ​or 
+m-commerce.​ ​The​ ​process​ ​is​ ​complex​ ​and​ ​includes​ ​8​ ​additional​ ​steps​ ​to​ ​settle​ ​the 
+transaction.​ ​In​ ​total,​ ​you​ ​have​ ​​16​ ​steps​​ ​for​ ​money​ ​to​ ​be​ ​transferred​ ​from​ ​the​ ​client's 
+bank​ ​account​ ​to​ ​the​ ​merchant's​ ​bank​ ​account.  
+
+ 
+1.2.2​ ​Merchant​ ​fees 
+ 
+Merchants​ ​have​ ​to​ ​pay​ ​​up​ ​to​ ​15(!)​ ​different​ ​types​ ​of​ ​fees​​ ​in​ ​order​ ​to​ ​accept 
+payments​ ​from​ ​their​ ​customers. 
+ 
+
+● Transactional​ ​fees​​ ​stand​ ​somewhere​ ​between​ ​2%​ ​and​ ​6%​ ​per​ ​transaction 
+plus​ ​a​ ​fixed​ ​fee​ ​which​ ​is​ ​between​ ​USD​ ​0.1​ ​and​ ​USD​ ​0.7.​ ​For​ ​example:​ ​every 
+time​ ​someone​ ​makes​ ​a​ ​transaction​ ​for​ ​USD​ ​10,​ ​the​ ​merchant​ ​on​ ​average 
+pays​ ​=>​ ​10*((0.02+0.06)/2)​ ​+​ ​((0.1+0.7)/2))​ ​=​ ​USD​ ​0.8​ ​for​ ​banks,​ ​credit​ ​card 
+associations,​ ​payment​ ​gateways​ ​and​ ​processors.  
+
+ 
+● Retrieval​ ​Request​ ​Fee​​ ​and​ ​​Chargeback​ ​Fee​​ ​​are​ ​paid​ ​when​ ​someone​ ​claims 
+
+for​ ​a​ ​chargeback.​​ ​The​ ​best-known​ ​payment​ ​gateways​ ​such​ ​as​ ​PayPal​ ​and 
+Stripe​ ​charge​ ​merchants​ ​a​ ​USD​ ​15​ ​chargeback​ ​fee.​ ​In​ ​addition​ ​to​ ​the 
+chargeback​ ​fee,​ ​there​ ​is​ ​work​ ​to​ ​be​ ​done​ ​by​ ​the​ ​retailer​ ​to​ ​prove​ ​the 
+
+ 
+7 
+
+
+
+ 
+
+transaction​ ​was​ ​done​ ​respecting​ ​the​ ​rules.​ ​This​ ​costs​ ​time​ ​and​ ​money.​ ​When 
+the​ ​info​ ​is​ ​missing,​ ​the​ ​charge​ ​is​ ​reversed​ ​even​ ​if​ ​it​ ​was​ ​legit. 
+
+ 
+● Flat​ ​fees​​ ​include:​ ​​Terminal​ ​fees​​ ​to​ ​buy​ ​the​ ​needed​ ​terminal​ ​for​ ​retail 
+
+merchants,​ ​​PCI​ ​fees​​ ​paid​ ​to​ ​Payment​ ​Card​ ​industry​ ​for​ ​compliance​ ​OR 
+noncompliance,​ ​and​ ​others,​ ​such​ ​as:​ ​​Annual​ ​fees​,​ ​​Monthly​ ​fees​,​ ​​Monthly 
+minimum​ ​fees​,​ ​​IRS​ ​reporting​ ​fees​,​ ​​network​ ​fees​,​ ​etc. 
+
+ 
+● Incidental​ ​fees​ ​that​​ ​consist​ ​of:​ ​​Address​ ​Verification​ ​Service​ ​(AVS)​,​ ​​Voice 
+
+Authorization​ ​Fee​ ​(VAF),​​ ​​Batch​ ​Fee,​ ​and​​ ​​NFS​ ​fee.  
+ 
+
+● Cross-border​ ​fees.​​ ​PayPal,​ ​for​ ​example,​ ​charges​ ​the​ ​merchant​ ​a​ ​transaction 
+fee​ ​of​ ​4.4%​ ​+​ ​fixed​ ​fee​ ​(depends​ ​on​ ​the​ ​currency),​ ​instead​ ​of​ ​2.9%​ ​+​ ​fixed​ ​fee 
+(depends​ ​on​ ​the​ ​currency)​ ​if​ ​the​ ​funds​ ​the​ ​merchant​ ​is​ ​receiving​ ​comes​ ​from 
+outside​ ​of​ ​the​ ​U.S.  
+
+ 
+Finally,​ ​some​ ​payment​ ​gateways​ ​and/or​ ​processing​ ​companies​ ​like​ ​to​ ​keep​ ​their​ ​fee 
+structure​ ​hidden​ ​or​ ​totally​ ​incomprehensible​ ​to​ ​the​ ​average​ ​merchant.  
+ 
+1.2.3​ ​Long​ ​fund​ ​transfer​ ​time 
+ 
+As​ ​there​ ​are​ ​a​ ​lot​ ​of​ ​different​ ​parties​ ​involved​ ​in​ ​moving​ ​the​ ​money​ ​from​ ​one​ ​bank 
+account​ ​to​ ​another​ ​(or​ ​from​ ​one​ ​country​ ​to​ ​another),​ ​it​ ​often​ ​takes​ ​up​ ​​3​ ​days​ ​to 
+settle​ ​the​ ​transaction​.​ ​For​ ​international​ ​payments,​ ​it​ ​can​ ​take​ ​​up​ ​to​ ​a​ ​week​ ​or 
+even​ ​more​.​ ​Moreover,​ ​payment​ ​gateways​ ​more​ ​often​ ​than​ ​not​ ​hold​ ​your​ ​money​ ​for​ ​a 
+week.  
+ 
+That​ ​often​ ​causes​ ​​cash​ ​flow​ ​problems​ ​for​ ​small​ ​merchants.  
+ 
+1.2.4​ ​Mobile​ ​payments 
+ 
+According​ ​to​ ​StatCounter,​ ​October​ ​2016​ ​was​ ​the​ ​first​ ​ever​ ​month​ ​in​ ​the​ ​history​ ​when 
+more​ ​users​ ​around​ ​the​ ​world​ ​accessed​ ​the​ ​internet​ ​from​ ​mobile​ ​devices​ ​than​ ​from 
+desktop​ ​computers.​ ​Of​ ​all​ ​users,​ ​51.3%​ ​used​ ​mobile​ ​devices​ ​while​ ​48.7%​ ​used 
+computers.​ ​Moreover,​ ​according​ ​to​ ​Statista,​ ​​approximately​ ​80%​ ​of​ ​internet​ ​usage 
+will​ ​be​ ​mobile​ ​by​ ​2018​.​ ​At​ ​the​ ​same​ ​time,​ ​mobile​ ​payments​ ​are​ ​projected​ ​to 
+increase​ ​from​ ​USD​ ​8.6bn​ ​in​ ​2015​ ​to​ ​USD​ ​274bn​ ​in​ ​2021.  
+ 
+The​ ​problem​ ​is​ ​that​ ​most​ ​e-commerce​ ​and​ ​retail​ ​payment​ ​gateways​ ​and/or​ ​terminals 
+were​ ​developed​ ​to​ ​accept​ ​and​ ​process​ ​payments​ ​using​ ​physical​ ​credit​ ​cards,​ ​and​ ​at 
+their​ ​core,​ ​cards​ ​are​ ​not​ ​mobile-friendly.​ ​Payment​ ​gateways​ ​rarely​ ​offer​ ​a​ ​simple 
+
+ 
+8 
+
+
+
+ 
+
+solution​ ​for​ ​a​ ​merchant​ ​to​ ​accept​ ​mobile​ ​payments​ ​in​ ​their​ ​website​ ​or​ ​point​ ​of​ ​sale 
+terminals.  
+ 
+
+1.3​ ​An​ ​inability​ ​to​ ​participate​ ​in​ ​token-enabled​ ​digital​ ​asset 
+economy​ ​potentially​ ​worth​ ​$10T​ ​in​ ​2025.  
+ 
+The​ ​market​ ​cap​ ​of​ ​all​ ​the​ ​Ethereum​ ​tokens​ ​is​ ​growing​ ​extraordinarily​ ​fast.​ ​Ether 
+reached​ ​a​ ​market​ ​cap​ ​of​ ​USD​ ​36bn​ ​as​ ​of​ ​June​ ​14th.​ ​But​ ​most​ ​importantly,​ ​a​ ​totally 
+new​ ​market​ ​of​ ​​digital​ ​assets​ ​is​ ​being​ ​created:​​ ​tokens​ ​of​ ​projects​ ​that​ ​are​ ​built​ ​on 
+Ethereum​ ​platform.​ ​The​ ​rise​ ​of​ ​new​ ​kind​ ​of​ ​digital​ ​assets​ ​enables​​ ​the​ ​creation​ ​of​ ​a 
+token-based​ ​digital​ ​asset​ ​economy​.  
+ 
+A​ ​correspondent​ ​of​ ​Bloomberg​ ​talks​ ​about​ ​it​ ​​here​,​ ​starting​ ​from​ ​2:00.  
+
+The​ ​World​ ​Bank​ ​estimates​ ​that​ ​10%​ ​of​ ​global​ ​GDP​ ​will​ ​be​ ​generated​ ​on​ ​blockchains 
+by​ ​2025.​ ​The​ ​GDP​ ​estimated​ ​for​ ​2025​ ​is​ ​$100T,​ ​thus​ ​the​ ​value​ ​generated​ ​through 
+blockchain​ ​is​ ​expected​ ​to​ ​be​ ​$10T​ ​(10%).  
+ 
+Today,​ ​merchants​ ​don’t​ ​have​ ​an​ ​opportunity​ ​to​ ​access​ ​that​ ​money.​ ​They​ ​will​ ​have​ ​a 
+considerable​ ​incentive​ ​to​ ​participate​ ​in​ ​the​ ​token​ ​economy​ ​within​ ​the​ ​next​ ​few​ ​years.  
+ 
+
+2.​ ​Monetha’s​ ​solution:​ ​a​ ​decentralized​ ​trust​ ​and 
+reputation​ ​system​ ​working​ ​flawlessly​ ​together 
+through​ ​a​ ​blockchain​ ​based​ ​payment​ ​gateway 
+ 
+We​ ​are​ ​creating​ ​a​ ​decentralized​ ​​payment​ ​and​ ​trust​ ​solution​ ​on​ ​the​ ​Ethereum 
+blockchain​ ​leveraging​ ​smart​ ​contract​ ​technology.​ ​​The​​ ​​payment​ ​solution​ ​works 
+flawlessly​ ​together​ ​with​ ​our​ ​decentralized​ ​trust​ ​and​ ​reputation​ ​system.​ ​Merchants​ ​will 
+be​ ​able​ ​to​ ​accept​ ​Ethereum​ ​based​ ​cryptocurrencies​ ​and​ ​exchange​ ​them​ ​with 
+traditional​ ​(fiat)​ ​currencies.​ ​Merchants​ ​and​ ​customers​ ​will​ ​participate​ ​in​ ​global 
+decentralized​ ​commerce​ ​with​ ​total​ ​trust.  
+ 
+Monetha​ ​is​ ​on​ ​a​ ​mission​ ​to: 
+ 
+
+● Develop​ ​a​ ​global​ ​​decentralized​ ​trust​ ​and​ ​reputation​ ​system​​ ​for​ ​tomorrow's 
+global​ ​e-commerce. 
+
+ 
+9 
+
+https://www.bloomberg.com/news/videos/2017-05-31/looking-for-a-bubble-in-bitcoin-s-recent-bounce-video
+
+
+ 
+
+● Make​ ​the​ ​payment​ ​process​ ​simple​ ​and​ ​efficient:​ ​​only​ ​one​ ​step​. 
+● Make​ ​accepting​ ​payments​ ​for​ ​merchants​ ​generally​ ​up​ ​to​ ​​5x​ ​cheaper​ ​and​ ​up 
+
+to​ ​10,000​ ​times​ ​faster.  
+● Provide​ ​an​ ​opportunity​ ​for​ ​merchants​ ​to​ ​accept​ ​​mobile​ ​payments. 
+● Bring​ ​the​​ ​Ethereum-based​ ​​token​ ​economy​​ ​to​ ​the​ ​​mainstream. 
+● Expand​ ​Ethereum​ ​real-world​ ​application​ ​infrastructure.  
+
+ 
+In​ ​simple​ ​words:​ ​our​ ​​mission​ ​is​ ​to​ ​develop​ ​and​ ​deploy​ ​the​ ​best​ ​transaction​ ​system​ ​that 
+would​ ​be​ ​based​ ​on​ ​enforceable​ ​contracts​ ​without​ ​third​ ​party​ ​between​ ​consumer​ ​and 
+merchants​ ​and​ ​a​ ​strong​ ​decentralised​ ​reputation​ ​management​ ​system.​ ​Transaction 
+and​ ​fund​ ​transfer​ ​will​ ​be​ ​done​ ​in​ ​one​ ​step​ ​together​ ​with​ ​the​ ​enforceable​ ​sale 
+contract.​ ​Transaction​ ​fees​ ​would​ ​be​ ​simplified​ ​from​ ​many​ ​to​ ​a​ ​simple​ ​transaction​ ​fee 
+wherever​ ​the​ ​consumer​ ​and​ ​merchants​ ​are​ ​located​ ​on​ ​the​ ​planet.  
+
+2.1​ ​A​ ​Universal​ ​Decentralized​ ​Trust​ ​and​ ​Reputation​ ​System​ ​on 
+the​ ​Ethereum​ ​blockchain.​ ​Ensuring​ ​trust​ ​in​ ​global​ ​commerce.  
+ 
+Building​ ​trust​ ​is​ ​difficult​ ​because: 
+
+● Merchants​ ​need​ ​to​ ​become​ ​part​ ​of​ ​a​ ​centrally​ ​governed​ ​marketplace,​ ​like 
+Amazon,​ ​Ebay,​ ​Alibaba,​ ​Etsy,​ ​etc,​ ​where​ ​they​ ​must​ ​pay​ ​a​ ​sales​ ​commission.  
+
+● Merchants​ ​cannot​ ​transfer​ ​their​ ​trust​ ​from​ ​one​ ​centralized​ ​service​ ​to​ ​another. 
+● Merchants​ ​need​ ​to​ ​invest​ ​huge​ ​efforts​ ​and​ ​budgets​ ​into​ ​brand​ ​and​ ​advertising 
+
+if​ ​not​ ​being​ ​part​ ​of​ ​centralized​ ​marketplace.  
+● Complicated​ ​conflict​ ​management​ ​using​ ​existing​ ​system. 
+● Buyers​ ​need​ ​to​ ​establish​ ​a​ ​relationship​ ​with​ ​each​ ​merchant​ ​separately​ ​and 
+
+their​ ​history​ ​is​ ​not​ ​transparent. 
+● There​ ​is​ ​no​ ​ability​ ​to​ ​punish​ ​fraudulent​ ​buyers​ ​or​ ​merchants​ ​and​ ​reflect​ ​that​ ​in 
+
+their​ ​history. 
+ 
+Monetha’s​ ​trust​ ​and​ ​reputation​ ​system​ ​will​ ​be​ ​universal,​ ​transparent, 
+transferable,​ ​self-executing,​ ​not​ ​controlled​ ​by​ ​a​ ​central​ ​authority,​ ​and​ ​working 
+flawlessly​ ​together​ ​with​ ​a​ ​payment​ ​solution. 
+
+2.1.1​ ​How​ ​it​ ​works  
+
+Every​ ​time​ ​a​ ​transaction​ ​is​ ​made,​ ​no​ ​matter​ ​if​ ​it’s​ ​retail​ ​or​ ​e-commerce,​ ​the 
+blockchain​ ​will​ ​save​ ​the​ ​time​ ​of​ ​the​ ​transaction,​ ​both​ ​the​ ​receiving​ ​and​ ​sending 
+addresses,​ ​warranty​ ​conditions,​ ​delivery​ ​time,​ ​and​ ​all​ ​other​ ​information​ ​that​ ​is 
+typically​ ​needed​ ​to​ ​ensure​ ​the​ ​trust.​ ​All​ ​the​ ​sensitive​ ​information​ ​will​ ​be​ ​hashed​ ​and 
+only​ ​available​ ​to​ ​authorized​ ​users​ ​in​ ​a​ ​beautifully​ ​designed​ ​user​ ​interface.​ ​Based​ ​on 
+
+ 
+10 
+
+
+
+ 
+
+that​ ​information,​ ​clients​ ​and​ ​merchants​ ​will​ ​be​ ​able​ ​to​ ​file/solve​ ​a​ ​claim,​ ​rate​ ​each 
+other,​ ​etc.  
+ 
+Default​ ​trust​ ​rates​ ​will​ ​be​ ​created​ ​for​ ​both​ ​merchant​ ​and​ ​client​ ​using​ ​the​ ​Monetha 
+ecosystem​ ​for​ ​the​ ​first​ ​time.​ ​A​ ​Trust​ ​rating​ ​will​ ​be​ ​assigned​ ​to​ ​a​ ​specific​ ​wallet 
+address.​ ​​Every​ ​time​ ​a​ ​transaction​ ​is​ ​made,​ ​claim​ ​registered,​ ​solved​ ​or​ ​unsolved 
+(according​ ​to​ ​the​ ​purchase​ ​details​ ​saved​ ​during​ ​the​ ​purchase),​ ​review​ ​written, 
+etc.,​ ​the​ ​smart​ ​contract​ ​will​ ​automatically​ ​change​ ​the​ ​trust​ ​level​ ​for​ ​each​ ​of​ ​the 
+parties​ ​involved.  
+ 
+The​ ​merchant​ ​trust​ ​rating 
+
+Once​ ​the​ ​merchant​ ​starts​ ​accepting​ ​mobile​ ​Ethereum​ ​based​ ​currency​ ​payments 
+using​ ​Monetha,​ ​a​ ​default​ ​trust​ ​rating​ ​will​ ​be​ ​created.​ ​Smart​ ​contract​ ​will​ ​automatically 
+change​ ​the​ ​trust​ ​rating​ ​according​ ​to​ ​the​ ​behavior​ ​of​ ​the​ ​merchant.​ ​For​ ​example:  
+
+● Does​ ​the​ ​merchant​ ​react​ ​to​ ​claims​ ​from​ ​clients?  
+● Does​ ​the​ ​merchant​ ​react​ ​​quickly​​ ​to​ ​claims​ ​from​ ​clients?  
+● Do​ ​clients​ ​rate​ ​the​ ​merchant​ ​for​ ​delivering​ ​products​ ​as​ ​promised:​ ​on​ ​time,​ ​as 
+
+advertised​ ​and​ ​in​ ​good​ ​quality? 
+● Does​ ​the​ ​merchant​ ​have​ ​good​ ​reviews​ ​from​ ​clients?  
+
+ 
+Different​ ​weights​ ​will​ ​be​ ​assigned​ ​to​ ​different​ ​actions. 
+ 
+The​ ​trust​ ​rating​ ​will​ ​be​ ​visible​ ​to​ ​everyone​ ​in​ ​the​ ​most​ ​common​ ​and​ ​typical​ ​places, 
+such​ ​as​ ​the​ ​footer​ ​of​ ​the​ ​merchant's​ ​website​ ​or​ ​mobile​ ​app.​ ​The​ ​only​ ​way​ ​the 
+merchant​ ​can​ ​increase​ ​the​ ​trust​ ​rating​ ​is​ ​by​ ​providing​ ​products​ ​or​ ​services​ ​as 
+advertised​ ​and​ ​in​ ​good​ ​condition.  
+ 
+Trust​ ​client’s​ ​trust​ ​rating  
+ 
+The​ ​main​ ​reason​ ​to​ ​create​ ​a​ ​trust​ ​rating​ ​for​ ​the​ ​client​ ​is​ ​to​ ​decrease​ ​the​ ​likelihood​ ​of 
+fraudulent​ ​buyers​ ​and​ ​offer​ ​loyalty​ ​features​ ​for​ ​trustful​ ​buyers.  
+ 
+Once​ ​a​ ​client​ ​buys​ ​something​ ​from​ ​a​ ​merchant​ ​using​ ​Monetha​ ​for​ ​the​ ​first​ ​time,​ ​the 
+default​ ​trust​ ​rating​ ​for​ ​that​ ​client​ ​will​ ​be​ ​automatically​ ​created​ ​and​ ​linked​ ​to​ ​the​ ​wallet 
+address​ ​of​ ​that​ ​client.  
+ 
+The​ ​client​ ​trust​ ​rating​ ​will​ ​be​ ​updated​ ​automatically​ ​by​ ​the​ ​smart​ ​contract​ ​based​ ​on 
+his​ ​or​ ​her​ ​behavior.​ ​Different​ ​weights​ ​will​ ​be​ ​assigned​ ​to​ ​different​ ​actions.​ ​For 
+example:  
+ 
+
+ 
+11 
+
+
+
+ 
+
+● What​ ​is​ ​the​ ​client’s​ ​claim​ ​history?  
+● How​ ​many​ ​claims​ ​has​ ​the​ ​user​ ​made?​ ​Are​ ​those​ ​claims​ ​being​ ​resolved? 
+● Have​ ​all​ ​the​ ​previous​ ​claims​ ​been​ ​solved​ ​with​ ​merchants?  
+● Purchase​ ​history:​ ​behavior,​ ​frequency,​ ​etc. 
+
+ 
+The​ ​trust​ ​rate​ ​of​ ​the​ ​client​ ​will​ ​be​ ​available​ ​to​ ​see​ ​on​ ​the​ ​blockchain​ ​and​ ​visible​ ​in​ ​a 
+user-friendly​ ​interface​ ​to​ ​merchants​ ​once​ ​the​ ​purchase​ ​is​ ​made. 
+ 
+The​ ​client’s​ ​trust​ ​rating​ ​will​ ​be​ ​visible​ ​on​ ​the​ ​blockchain​ ​or​ ​in​ ​Monetha’s​ ​mobile​ ​app. 
+ 
+In​ ​totally​ ​decentralized​ ​e-commerce,​ ​it​ ​is​ ​important​ ​that​ ​merchants​ ​have​ ​information 
+about​ ​the​ ​client​.​ ​The​ ​most​ ​important​ ​thing​ ​for​ ​a​ ​merchant​ ​is​ ​to​ ​avoid​ ​someone​ ​who 
+does​ ​hazardous​ ​things​ ​on​ ​purpose.​ ​If​ ​that​ ​happens,​ ​the​ ​merchant​ ​will​ ​be​ ​able​ ​to 
+decrease​ ​the​ ​client’s​ ​trust​ ​rating​ ​significantly.​ ​Based​ ​on​ ​that​ ​information,​ ​other 
+merchants​ ​will​ ​be​ ​able​ ​to​ ​decide​ ​whether​ ​they​ ​want​ ​to​ ​sell​ ​products​ ​to​ ​a​ ​client​ ​with​ ​a 
+low​ ​trust​ ​rating. 
+ 
+Claims,​ ​reviews​ ​and​ ​conflict​ ​management. 
+
+Every​ ​purchase​ ​will​ ​be​ ​saved​ ​on​ ​the​ ​blockchain​ ​together​ ​with​ ​the​ ​time​ ​of​ ​the 
+transaction,​ ​both​ ​receiving​ ​and​ ​sending​ ​addresses,​ ​warranty​ ​conditions,​ ​estimated 
+delivery​ ​date,​ ​the​ ​product​ ​that​ ​was​ ​bought​ ​and​ ​all​ ​other​ ​information​ ​that​ ​is​ ​typically 
+needed​ ​to​ ​ensure​ ​trust. 
+ 
+The​ ​following​ ​information​ ​will​ ​be​ ​available​ ​to​ ​both​ ​parties:  
+ 
+
+● The​ ​merchant​ ​will​ ​have​ ​all​ ​the​ ​information​ ​about​ ​every​ ​transaction​ ​with​ ​the 
+above-mentioned​ ​details​ ​in​ ​his​ ​profile​ ​in​ ​the​ ​Monetha​ ​system.  
+
+● The​ ​client​ ​will​ ​be​ ​able​ ​to​ ​see​ ​all​ ​his​ ​purchases​ ​together​ ​with​ ​the 
+above-mentioned​ ​details​ ​only​ ​in​ ​his​ ​profile​ ​within​ ​the​ ​Monetha​ ​mobile​ ​app.  
+
+ 
+Based​ ​on​ ​that​ ​information,​ ​parties​ ​will​ ​have​ ​an​ ​opportunity​ ​to​ ​file/resolve​ ​claims, 
+review,​ ​and​ ​rate​ ​each​ ​other​ ​in​ ​a​ ​transparent​ ​way.​ ​Smart​ ​contract​ ​will​ ​automatically 
+decrease​ ​or​ ​increase​ ​the​ ​trust​ ​rating.​ ​That​ ​kind​ ​of​ ​management​ ​of​ ​conflict​ ​resolution 
+through​ ​smart​ ​contracts​ ​will​ ​help​ ​each​ ​party​ ​to​ ​deal​ ​with​ ​the​ ​situation​ ​faster,​ ​easier 
+and​ ​cheaper​ ​(no​ ​chargeback​ ​fees​ ​for​ ​the​ ​merchant).  
+ 
+Examples​: 
+ 
+
+1. Claim.​ ​​Once​ ​the​ ​client​ ​makes​ ​a​ ​purchase,​ ​all​ ​the​ ​needed​ ​information​ ​is​ ​saved 
+to​ ​the​ ​blockchain.​ ​In​ ​order​ ​to​ ​see​ ​that​ ​information,​ ​the​ ​client​ ​must​ ​download 
+the​ ​Monetha​ ​app.​ ​Once​ ​he​ ​logs​ ​in,​ ​he​ ​sees​ ​all​ ​the​ ​purchases​ ​he​ ​made​ ​with​ ​a 
+
+ 
+12 
+
+
+
+ 
+
+particular​ ​wallet​ ​address​ ​​anywhere​ ​using​ ​Monetha​ ​as​ ​a​ ​payment​ ​gateway​. 
+The​ ​client​ ​selects​ ​the​ ​particular​ ​purchase​ ​he​ ​is​ ​not​ ​happy​ ​about,​ ​and​ ​initiates 
+a​ ​claim​ ​by​ ​providing​ ​the​ ​details​ ​of​ ​the​ ​claim,​ ​e.g.,​ ​the​ ​product​ ​is​ ​broken.​ ​The 
+merchant’s​ ​trust​ ​rating​ ​is​ ​immediately​ ​decreased,​ ​so​ ​the​ ​merchant​ ​is 
+incentivized​ ​to​ ​solve​ ​the​ ​problem​ ​as​ ​quickly​ ​as​ ​possible.​ ​The​ ​merchant 
+receives​ ​the​ ​notification​ ​about​ ​the​ ​claim,​ ​looks​ ​at​ ​the​ ​details​ ​and​ ​contacts​ ​the 
+client​ ​off-chain.​ ​Client​ ​and​ ​merchant​ ​agree​ ​on​ ​the​ ​solution​ ​and​ ​one​ ​of​ ​the 
+parties​ ​initiates​ ​a​ ​resolution​ ​by​ ​pressing​ ​the​ ​"Claim​ ​resolved"​ ​button​ ​in​ ​the 
+mobile​ ​app​ ​or​ ​the​ ​merchant​ ​system.​ ​Details​ ​of​ ​how​ ​the​ ​situation​ ​was​ ​resolved 
+(product​ ​changed,​ ​money​ ​returned,​ ​etc.)​ ​must​ ​be​ ​provided​ ​as​ ​well.​ ​The​ ​details 
+are​ ​saved​ ​to​ ​the​ ​blockchain.​ ​The​ ​other​ ​party​ ​gets​ ​the​ ​notification,​ ​reads​ ​the 
+details​ ​and​ ​agrees​ ​by​ ​pressing​ ​“Claim​ ​resolved”.​ ​Once​ ​the​ ​claim​ ​is​ ​resolved, 
+trust​ ​rating​ ​is​ ​increased​ ​for​ ​both​ ​parties​ ​instantly.  
+
+ 
+2. Reviews​.​ ​Clients​ ​and​ ​merchants​ ​will​ ​be​ ​able​ ​to​ ​write​ ​reviews​ ​about​ ​each 
+
+other.​ ​​ ​Written​ ​reviews​ ​will​ ​have​ ​more​ ​weight​ ​on​ ​each​ ​other’s​ ​trust​ ​rating​ ​than 
+just​ ​“silent”​ ​transactions​ ​without​ ​a​ ​review.​ ​For​ ​example,​ ​a​ ​client's​ ​review​ ​about 
+a​ ​good​ ​product​ ​and​ ​customer​ ​service​ ​will​ ​increase​ ​the​ ​merchant's​ ​trust​ ​rating 
+more​ ​than​ ​just​ ​a​ ​simple​ ​“silent”​ ​transaction​ ​without​ ​writing​ ​a​ ​review.​ ​Reviews 
+about​ ​the​ ​merchant​ ​will​ ​be​ ​visible​ ​in​ ​the​ ​mobile​ ​app​ ​for​ ​a​ ​client.​ ​Merchants​ ​will 
+see​ ​the​ ​reviews​ ​clients​ ​have​ ​written​ ​about​ ​them​ ​in​ ​their​ ​system.​ ​​ ​​All​ ​reviews, 
+good​ ​and​ ​bad,​ ​will​ ​be​ ​automatically​ ​reflected​ ​in​ ​the​ ​trust​ ​rating​ ​of​ ​the 
+client​ ​and​ ​the​ ​merchant​.  
+
+ 
+3. Sales​ ​contracts​.​ ​A​ ​merchant​ ​can​ ​propose​ ​a​ ​15​ ​day​ ​return​ ​policy​ ​-​ ​no 
+
+questions​ ​asked.​ ​This​ ​merchant​ ​will​ ​be​ ​in​ ​a​ ​better​ ​position​ ​to​ ​sell​ ​than​ ​the​ ​one 
+who​ ​does​ ​not​ ​offer​ ​a​ ​return​ ​policy.​ ​These​ ​rules​ ​will​ ​be​ ​published​ ​by​ ​the 
+merchant.​ ​Smart​ ​contract​ ​will​ ​ensure​ ​merchants​ ​and​ ​consumers​ ​are 
+respecting​ ​their​ ​commitments​ ​to​ ​each​ ​other​ ​and​ ​the​ ​rating​ ​system​ ​will​ ​reflect 
+that. 
+
+ 
+
+ 
+2.1.2​ ​How​ ​the​ ​likelihood​ ​of​ ​fraud​ ​is​ ​reduced​ ​with​ ​a​ ​global​ ​decentralized 
+reputation​ ​and​ ​trust​ ​system 
+
+The​ ​trust​ ​rate​ ​will​ ​be​ ​available​ ​and​ ​visible​ ​to​ ​everyone​ ​in​ ​the​ ​ecosystem​ ​so​ ​that 
+parties​ ​are​ ​incentivized​ ​to​ ​increase​ ​their​ ​trust​ ​rating,​ ​which​ ​will​ ​enable​ ​better 
+decision-making​ ​and​ ​a​ ​safer​ ​e-commerce​ ​environment.​ ​Moreover,​ ​we​ ​will​ ​offer 
+incentives​ ​such​ ​as​ ​a​ ​reduced​ ​transaction​ ​fee,​ ​faster​ ​transaction​ ​times,​ ​etc.,​ ​for​ ​those 
+who​ ​hold​ ​higher​ ​ratings​ ​and​ ​proven​ ​history.​ ​This​ ​level​ ​of​ ​transparency​ ​could 
+decrease​ ​fraud​ ​significantly​ ​or​ ​at​ ​least​ ​make​ ​it​ ​more​ ​difficult.  
+ 
+
+ 
+13 
+
+
+
+ 
+
+To​ ​illustrate​ ​this​ ​point,​ ​Kevin​ ​Kelly,​ ​the​ ​author​ ​of​ ​a​ ​book​ ​titled​ ​“Out​ ​of​ ​Control”,​ ​wrote:  
+ 
+
+A​ ​pretty​ ​good​ ​society​ ​needs​ ​more​ ​than​ ​just​ ​anonymity.​ ​An​ ​online 
+civilization​ ​requires​ ​online​ ​anonymity,​ ​online​ ​identification,​ ​online 
+authentication,​ ​​online​ ​reputations,​ ​online​ ​trust​ ​holders,​ ​​online 
+signatures,​ ​online​ ​privacy,​ ​and​ ​online​ ​access.​ ​All​ ​are​ ​essential 
+ingredients​ ​of​ ​any​ ​open​ ​society.  
+
+ 
+ 
+We​ ​bring​ ​this​ ​to​ ​the​ ​next​ ​level.​ ​We​ ​want​ ​to​ ​create​ ​a​ ​transferable​ ​trust​ ​system​ ​so​ ​that 
+every​ ​merchant,​ ​big​ ​and​ ​small,​ ​retail​ ​or​ ​e-commerce,​ ​will​ ​be​ ​able​ ​to​ ​join​ ​a 
+global​ ​decentralized​ ​trust​ ​rating​ ​system​​ ​by​ ​accepting​ ​mobile​ ​payments​ ​with 
+Monetha. 
+ 
+
+2.2​ ​A​ ​mobile​ ​payments​ ​solution​ ​to​ ​accept​ ​mobile​ ​Ethereum 
+based​ ​cryptocurrency​ ​payments​ ​generally​ ​up​ ​to​ ​5X​ ​cheaper 
+and​ ​up​ ​to​ ​x10000​ ​faster. 
+
+After​ ​simple​ ​integration​ ​with​ ​Monetha,​ ​merchants​ ​will​ ​be​ ​able​ ​to: 
+ 
+
+● Use​ ​our​ ​decentralized​ ​trust​ ​and​ ​reputation​ ​system. 
+● Accept​ ​Ethereum​ ​based​ ​tokens. 
+● Easily​ ​convert​ ​cryptocurrency​ ​to​ ​fiat​ ​currency. 
+
+ 
+2.2.1​ ​How​ ​it​ ​works:​ ​e-commerce​ ​example  
+ 
+Clients​ ​will​ ​pick​ ​their​ ​items,​ ​add​ ​them​ ​to​ ​the​ ​cart​ ​and​ ​select​ ​that​ ​they​ ​will​ ​pay​ ​through 
+the​ ​Monetha​ ​gateway​ ​instead​ ​of​ ​other​ ​available​ ​options​ ​such​ ​as​ ​credit​ ​card​ ​or 
+PayPal.  
+ 
+The​ ​amount​ ​needed​ ​to​ ​pay​ ​is​ ​converted​ ​to​ ​the​ ​selected​ ​Ethereum​ ​based​ ​currency 
+(token)​ ​from​ ​traditional​ ​currency​ ​in​ ​real-time.​ ​A​ ​QR​ ​code​ ​is​ ​generated​ ​which​ ​the 
+client​ ​scans​ ​​with​ ​any​ ​crypto​ ​wallet​ ​​on​ ​his​ ​mobile​ ​app​ ​and​ ​presses​ ​“send”.​ ​Money 
+arrives​ ​in​ ​merchant’s​ ​smart​ ​contract​ ​wallet​ ​in​ ​approximately​ ​2​ ​minutes.​ ​The​ ​amount 
+of​ ​Ethereum​ ​based​ ​currency​ ​received​ ​is​ ​​exchanged​ ​to​ ​a​ ​merchant’s​ ​preferred​ ​fiat 
+currency​​ ​according​ ​to​ ​the​ ​merchant’s​ ​preference​ ​via​ ​Kraken​ ​or​ ​another​ ​crypto 
+exchange​ ​API.​ ​Merchants​ ​will​ ​be​ ​able​ ​to​ ​choose​ ​the​ ​frequency​ ​at​ ​which​ ​crypto 
+tokens​ ​are​ ​converted​ ​to​ ​fiat,​ ​the​ ​local​ ​currency​ ​to​ ​exchange​ ​to,​ ​time​ ​of​ ​sending 
+money​ ​to​ ​their​ ​bank​ ​account,​ ​and​ ​many​ ​other​ ​options. 
+
+ 
+14 
+
+
+
+ 
+
+Monetha​ ​is​ ​easy,​ ​fast,​ ​cheap,​ ​and​ ​guaranteed​ ​by​ ​smart​ ​contracts.  
+ 
+How​ ​merchant​ ​payment​ ​fees​ ​and​ ​transaction​ ​time​ ​are​ ​resolved 
+
+The​ ​picture​ ​below​ ​shows​ ​how​ ​blockchain​ ​changes​ ​the​ ​method​ ​of​ ​payment.​ ​The 
+transaction​ ​goes​ ​from​ ​customer​ ​to​ ​merchant​ ​directly;​ ​ditching​ ​all​ ​the​ ​intermediaries​ ​in 
+the​ ​process​ ​and​ ​saving​ ​merchants​ ​a​ ​huge​ ​amount​ ​of​ ​time​ ​and​ ​money.​ ​There​ ​is​ ​no 
+need​ ​to​ ​close​ ​or​ ​settle​ ​anything​ ​for​ ​merchant​ ​anymore.​ ​The​ ​settlement​ ​and​ ​closing 
+happens​ ​at​ ​the​ ​same​ ​time​ ​as​ ​the​ ​transaction.​ ​There​ ​is​ ​only​ ​​1​ ​step​ ​instead​ ​of​ ​16!  
+ 
+As​ ​the​ ​payment​ ​now​ ​goes​ ​directly​ ​from​ ​the​ ​client​ ​to​ ​merchant​,​​ ​instead​ ​of​ ​waiting​ ​for 
+up​ ​to​​ ​2​ ​weeks​​ ​to​ ​see​ ​the​ ​funds,​ ​it​ ​arrives​ ​approximately​ ​​2​ ​minutes​​ ​after​ ​the 
+purchase​ ​no​ ​matter​ ​where​ ​in​ ​the​ ​world​ ​the​ ​purchase​ ​was​ ​made. 
+ 
+As​ ​far​ ​as​ ​payment​ ​fees​ ​are​ ​concerned,​ ​​instead​ ​of​ ​15​ ​types​ ​of​ ​fees​​ ​merchants​ ​may 
+pay​ ​using​ ​a​ ​standard​ ​payment​ ​gateway;​ ​with​ ​Monetha,​ ​they​ ​will​ ​have​ ​​only​ ​1​ ​fee​:​ ​a 
+transaction​ ​fee​ ​of​ ​1.5%.  
+ 
+The​ ​​chargeback​ ​fee​ ​goes​ ​away​ ​as​ ​well​.​ ​Once​ ​the​ ​merchant​ ​agrees​ ​to​ ​send​ ​the 
+money​ ​back,​ ​they​ ​just​ ​send​ ​the​ ​money​ ​back​ ​and​ ​pay​ ​the​ ​transaction​ ​fee.​ ​No 
+ridiculously​ ​high​ ​chargeback​ ​fees​ ​anymore.​ ​In​ ​addition,​ ​the​ ​pain​ ​(time​ ​and​ ​money​ ​to 
+prove​ ​the​ ​transaction​ ​is​ ​legit)​ ​is​ ​gone.​ ​Moreover,​ ​the​ ​decentralized​ ​trust​ ​and 
+reputation​ ​system​ ​helps​ ​to​ ​decrease​ ​the​ ​rate​ ​of​ ​fraudulent​ ​payments​ ​as​ ​well. 
+ 
+Ultimately,​ ​it’s​ ​​up​ ​to​ ​x5​ ​cheaper​ ​and​ ​up​ ​to​ ​x10000​ ​faster​ ​​for​ ​merchants​ ​to​ ​accept 
+payments​ ​with​ ​Monetha:​ ​with​ ​a​ ​transparent​ ​fee​ ​structure​ ​with​ ​no​ ​chargeback​ ​or 
+hidden​ ​fees,​ ​and​ ​a​ ​beautiful​ ​user​ ​interface​ ​with​ ​smart​ ​contract​ ​enabled​ ​wallet 
+security.  
+ 
+ 
+
+ 
+15 
+
+
+
+ 
+
+ 
+ 
+ 
+Smart​ ​contract​ ​based​ ​wallet​ ​for​ ​merchants 
+
+The​ ​merchant's​ ​account​ ​acts​ ​as​ ​the​ ​equivalent​ ​of​ ​a​ ​bank​ ​account​ ​that​ ​stores​ ​funds 
+and​ ​enforces​ ​security.​ ​The​ ​crucial​ ​fact​ ​here​ ​is​ ​that​ ​it's​ ​only​ ​controlled​ ​by​ ​the​ ​user,​ ​the 
+merchant.​ ​Today,​ ​banks​ ​hold​ ​higher​ ​authority​ ​because​ ​they​ ​run​ ​the​ ​database​ ​that 
+points​ ​at​ ​the​ ​database​ ​entry​ ​which​ ​says​ ​you​ ​have​ ​that​ ​money​ ​and​ ​you​ ​have​ ​to​ ​trust 
+that​ ​your​ ​money​ ​is​ ​safe.​ ​Banks​ ​own​ ​the​ ​control​ ​of​ ​that​ ​database​ ​and​ ​authority​ ​to 
+grant​ ​or​ ​deny​ ​the​ ​access​ ​to​ ​the​ ​money​ ​they​ ​hold.​ ​Not​ ​anymore.  
+ 
+Monetha​ ​will​ ​not​ ​be​ ​able​ ​to​ ​suspend,​ ​hold​ ​or​ ​prevent​ ​any​ ​transaction.​ ​Instead, 
+permissionless​ ​transactions​ ​will​ ​be​ ​guaranteed​ ​by​ ​the​ ​smart​ ​contract.​ ​Instantly,​ ​and 
+as​ ​promised.​ ​No​ ​more​ ​headache​ ​of​ ​not​ ​knowing​ ​where​ ​the​ ​merchant’s​ ​money​ ​is​ ​and 
+why​ ​it’s​ ​being​ ​withheld.  
+ 
+Merchants​ ​can​ ​customize​ ​their​ ​settings​ ​to​ ​fit​ ​their​ ​preferences,​ ​such​ ​as: 
+ 
+
+● How​ ​much​ ​funds​ ​to​ ​exchange​ ​with​ ​the​ ​local​ ​currency. 
+● How​ ​often​ ​to​ ​exchange. 
+● Others. 
+
+    
+With​ ​Monetha,​ ​we​ ​are​ ​giving​ ​control​ ​of​ ​merchant​ ​funds​ ​back​ ​into​ ​their​ ​own​ ​hands 
+and​ ​giving​ ​them​ ​easy-to-manage​ ​control​ ​of​ ​their​ ​funds​ ​received​ ​from​ ​selling​ ​goods​ ​or 
+services​ ​which​ ​is​ ​safeguarded​ ​by​ ​the​ ​security​ ​of​ ​smart​ ​contracts.​ ​Now,​ ​merchants 
+
+ 
+16 
+
+
+
+ 
+
+can​ ​have​ ​better​ ​security​ ​and​ ​substantially​ ​improved​ ​usability.  
+ 
+It​ ​is​ ​literally​ ​a​ ​merchant​ ​becoming​ ​his​ ​own​ ​bank.  
+ 
+2.2.2​ ​Case​ ​studies:​ ​merchant​ ​fees​ ​and​ ​transaction​ ​time 
+
+Merchant​ ​fees 
+ 
+John​ ​is​ ​the​ ​owner​ ​of​ ​a​ ​small​ ​e-commerce​ ​store​ ​selling​ ​T-shirts​ ​for​ ​USD​ ​10.​ ​He​ ​was 
+always​ ​frustrated​ ​by​ ​the​ ​transactions​ ​fees​ ​he​ ​paid​ ​to​ ​the​ ​banks​ ​and​ ​other 
+intermediaries.  
+ 
+One​ ​day,​ ​he​ ​found​ ​out​ ​about​ ​Monetha​ ​through​ ​a​ ​financial​ ​news​ ​article​ ​and​ ​decided 
+to​ ​try​ ​it​ ​out.​ ​It​ ​took​ ​him​ ​only​ ​a​ ​few​ ​minutes​ ​to​ ​get​ ​started.​ ​Now​ ​the​ ​transaction​ ​money 
+goes​ ​directly​ ​from​ ​the​ ​client​ ​to​ ​his​ ​account.​ ​That​ ​means​ ​that​ ​from​ ​now​ ​on,​ ​John​ ​will 
+not​ ​only​ ​be​ ​able​ ​to​ ​accept​ ​mobile​ ​payments,​ ​but​ ​also,​ ​more​ ​importantly,​ ​instead​ ​of 
+paying​ ​every​ ​intermediary​ ​in​ ​the​ ​payment​ ​process​ ​from​ ​2%+0.1​ ​up​ ​to​ ​6%+0.7​ ​per 
+transaction,​ ​John​ ​now​ ​pays​ ​only​ ​1.5%​ ​per​ ​transaction.​ ​So​ ​instead​ ​of​ ​paying​ ​EUR​ ​0,8 
+on​ ​average​ ​​every​ ​time​ ​someone​ ​buys​ ​a​ ​T-shirt,​ ​John​ ​will​ ​now​ ​only​ ​pay​ ​EUR​ ​0,15 
+per​ ​transaction​ ​using​ ​Monetha​ ​as​ ​his​ ​mobile​ ​payments​ ​processor.​ ​​That’s​ ​5x​ ​times 
+cheaper​ ​on​ ​average!  
+ 
+Moreover,​ ​Monetha​ ​exchanges​ ​Ethereum​ ​based​ ​currencies​ ​with​ ​his​ ​local​ ​currency 
+and​ ​sends​ ​the​ ​money​ ​to​ ​his​ ​bank​ ​according​ ​to​ ​predefined​ ​settings:​ ​upon​ ​his​ ​request 
+or​ ​automatically. 
+ 
+Transaction​ ​time​ ​and​ ​cash​ ​flow​ ​problems.​ ​E-commerce​ ​merchant.  
+ 
+Peter​ ​has​ ​a​ ​website​ ​where​ ​he​ ​sells​ ​various​ ​home​ ​appliances​ ​to​ ​customers​ ​all​ ​around 
+the​ ​globe​ ​for​ ​almost​ ​12​ ​years​ ​now.​ ​He​ ​knows​ ​money​ ​is​ ​just​ ​a​ ​digit​ ​that​ ​must​ ​be 
+exchanged​ ​once​ ​the​ ​transaction​ ​is​ ​made.​ ​That’s​ ​why​ ​he​ ​cannot​ ​believe​ ​how​ ​long​ ​it 
+takes​ ​for​ ​him​ ​to​ ​receive​ ​the​ ​funds​ ​after​ ​a​ ​client​ ​places​ ​an​ ​order.  
+ 
+If​ ​the​ ​client​ ​is​ ​local,​ ​the​ ​funds​ ​show​ ​up​ ​in​ ​his​ ​bank​ ​account​ ​in​ ​up​ ​to​ ​2-3​ ​days.​ ​But​ ​if 
+the​ ​client​ ​is​ ​from​ ​the​ ​other​ ​side​ ​of​ ​the​ ​world,​ ​it​ ​may​ ​take​ ​up​ ​to​ ​2​ ​weeks​ ​for​ ​funds​ ​to 
+show​ ​up​ ​his​ ​bank​ ​account.​ ​​He​ ​has​ ​to​ ​trust​ ​the​ ​client​ ​and​ ​the​ ​banks​ ​and​ ​ship​ ​the 
+product​ ​before​ ​he​ ​receives​ ​the​ ​funds.​​ ​Moreover,​ ​the​ ​payment​ ​gateway​ ​often​ ​holds 
+the​ ​money​ ​for​ ​a​ ​week.​ ​Because​ ​of​ ​the​ ​time​ ​it​ ​takes​ ​for​ ​him​ ​to​ ​receive​ ​the​ ​money,​​ ​he 
+often​ ​experiences​ ​cash​ ​flow​ ​problems​ ​and,​ ​consequently,​ ​is​ ​not​ ​able​ ​to​ ​pay 
+his​ ​suppliers.  
+ 
+One​ ​day,​ ​a​ ​friend​ ​of​ ​Peter​ ​told​ ​him​ ​about​ ​Monetha.​ ​The​ ​friend​ ​told​ ​him​ ​that​ ​it​ ​takes 
+
+ 
+17 
+
+
+
+ 
+
+up​ ​to​ ​2​ ​minutes​ ​to​ ​receive​ ​money​ ​with​ ​Monetha​ ​after​ ​a​ ​purchase​ ​was​ ​made.​ ​With 
+Monetha,​ ​Peter​ ​can​ ​accept​ ​mobile​ ​payments​ ​and​ ​​receive​ ​funds​ ​instantly​ ​no 
+matter​ ​where​ ​the​ ​client​ ​is​​ ​after​ ​the​ ​purchase​ ​is​ ​made.​ ​He​ ​no​ ​longer​ ​has​ ​to​ ​trust 
+banks,​ ​payment​ ​gateways​ ​or​ ​PDF​ ​files​ ​generated​ ​as​ ​a​ ​proof​ ​of​ ​payment​ ​that​ ​clients 
+send​ ​him.​ ​Furthermore,​ ​Monetha​ ​solved​ ​his​ ​cash​ ​flow​ ​problems​ ​instantly.​ ​He 
+receives​ ​funds,​ ​can​ ​ship​ ​products​ ​instantly​ ​and​ ​order​ ​more​ ​shoes​ ​without​ ​a​ ​fear​ ​of 
+not​ ​being​ ​able​ ​to​ ​pay.  
+ 
+
+2.3​ ​Enabling​ ​merchants​ ​to​ ​reach​ ​$10​ ​trillion​ ​digital​ ​asset 
+economy 
+ 
+By​ ​developing​ ​Monetha,​ ​we​ ​will​ ​not​ ​only​ ​allow​ ​merchants​ ​to​ ​participate​ ​in​ ​a​ ​trustful 
+decentralized​ ​economy,​ ​but​ ​also​ ​reach​ ​the​ ​growing​ ​digital​ ​asset​ ​economy​ ​through 
+our​ ​payment​ ​solution.  
+ 
+2.3.1​ ​Growth​ ​of​ ​Ether​ ​as​ ​a​ ​currency​ ​and​ ​the​ ​Ethereum​ ​ecosystem’s 
+digital​ ​token​ ​economy  
+
+As​ ​shown​ ​above,​ ​a​ ​correspondent​ ​for​ ​Bloomberg​ ​talks​ ​about​ ​Ethereum’s​ ​potential 
+here​,​ ​starting​ ​from​ ​2:00. 
+
+Ethereum​ ​is​ ​a​ ​platform​ ​that​ ​enables​ ​the​ ​creation​ ​of​ ​decentralised​ ​applications.​ ​As​ ​a 
+result,​ ​it​ ​has​ ​facilitated​ ​the​ ​emergence​ ​of​ ​a​ ​new​ ​and​ ​exclusively​ ​digital​ ​asset​ ​class: 
+tokens.​​ ​As​ ​discussed​ ​above,​ ​the​ ​​World​ ​Bank​ ​estimates​ ​that​ ​10%​ ​of​ ​global​ ​GDP, 
+which​ ​is​ ​approximately​ ​$10T,​ ​will​ ​go​ ​through​ ​blockchains​ ​in​ ​2025.  
+
+To​ ​illustrate​ ​the​ ​fact,​ ​let​ ​us​ ​look​ ​at​ ​the​ ​graph​ ​below​ ​showing​ ​the​ ​growth​ ​of​ ​altcoins. 
+This​ ​growth​ ​is​ ​influenced​ ​by​ ​the​ ​ascendency​ ​of​ ​Ether​ ​as​ ​a​ ​currency​ ​and​ ​the 
+expansion​ ​of​ ​Ethereum-based​ ​tokens.  
+
+ 
+
+ 
+
+ 
+18 
+
+https://www.bloomberg.com/news/videos/2017-05-31/looking-for-a-bubble-in-bitcoin-s-recent-bounce-video
+
+
+ 
+
+ 
+
+ 
+
+The​ ​graph​ ​below​ ​shows​ ​the​ ​growth​ ​of​ ​Ether’s​ ​market​ ​cap.​ ​Market​ ​capitalization 
+stands​ ​at​ ​approximately​ ​USD​ ​36​ ​billion​ ​as​ ​of​ ​June​ ​14th.​ ​It​ ​has​ ​grown​ ​by​ ​~4,390% 
+since​ ​May​ ​8th​.   
+
+ 
+
+ 
+
+ 
+
+It​ ​is​ ​very​ ​likely​ ​that​ ​Ethereum​ ​will​ ​be​ ​the​ ​number​ ​one​ ​cryptocurrency​ ​platform​ ​soon 
+because​ ​it​ ​facilitates​ ​the​ ​creation​ ​of​ ​an​ ​ecosystem​ ​that​ ​Bitcoin​ ​cannot​ ​match.  
+
+At​ ​the​ ​same​ ​time,​ ​it​ ​gets​ ​harder​ ​and​ ​harder​ ​to​ ​make​ ​transactions​ ​on​ ​Bitcoin: 
+according​ ​to​ ​​www.blockchain.info​,​ ​the​ ​“Average​ ​Confirmation​ ​Time”​ ​to​ ​confirm​ ​a 
+transaction​ ​was​ ​316​ ​minutes​ ​as​ ​of​ ​June​ ​13​ ​and​ ​“Cost​ ​per​ ​Transaction”​ ​was 
+approximately​ ​USD​ ​4.  
+
+Merchants​ ​cannot​ ​use​ ​services​ ​such​ ​as​ ​BitPay​ ​to​ ​accept​ ​bitcoin​ ​payments​ ​when 
+
+ 
+19 
+
+http://www.blockchain.info/
+
+
+ 
+
+transaction​ ​time​ ​is​ ​that​ ​long​ ​and​ ​the​ ​cost​ ​per​ ​transaction​ ​is​ ​that​ ​high.  
+
+This​ ​fact​ ​causes​ ​Bitcoin’s​ ​weight​ ​relative​ ​to​ ​other​ ​currencies​ ​to​ ​decrease​ ​dramatically 
+and​ ​the​ ​graph​ ​below​ ​demonstrates​ ​that​ ​pretty​ ​well.​ ​Just​ ​a​ ​few​ ​months​ ​ago,​ ​Bitcoin 
+accounted​ ​for​ ​more​ ​than​ ​80%​ ​of​ ​all​ ​the​ ​market​ ​cap​ ​of​ ​cryptocurrencies.​ ​As​ ​of​ ​June 
+14th,​ ​it’s​ ​approximately​ ​39%,​ ​while​ ​Ethereum​ ​is​ ​already​ ​31.7%.​ ​Ethereum​ ​is​ ​one​ ​of 
+the​ ​reasons​ ​why​ ​the​ ​relative​ ​weight​ ​of​ ​bitcoin​ ​is​ ​decreasing.  
+
+ 
+
+ 
+
+3.​ ​Product​ ​architecture​ ​and​ ​product​ ​development 
+timeline  
+
+3.1​ ​Smart​ ​Contracts​ ​&​ ​Workflows 
+ 
+Smart​ ​contracts​ ​will​ ​enable​ ​us​ ​to​ ​facilitate​ ​a​ ​payment​ ​solution​ ​working​ ​flawlessly 
+together​ ​with​ ​a​ ​decentralized​ ​trust​ ​and​ ​reputation​ ​system​ ​between​ ​parties​ ​via​ ​the 
+blockchain.​ ​Number​ ​of​ ​smart​ ​contracts,​ ​detailed​ ​structure,​ ​and​ ​functionality​ ​will​ ​be 
+defined​ ​and​ ​finalized​ ​during​ ​development.  
+ 
+To​ ​illustrate​ ​the​ ​intended​ ​functionality,​ ​we​ ​provide​ ​​sample​ ​workflows​​ ​illustrating​ ​the 
+purchase​ ​and​ ​claim​ ​process​ ​and​ ​how​ ​they​ ​affect​ ​the​ ​trust​ ​rate​ ​for​ ​both​ ​parties.  
+
+ 
+20 
+
+
+
+ 
+
+ 
+Client​ ​makes​ ​a​ ​purchase 
+
+ 
+
+ 
+
+Claim​ ​workflows 
+ 
+The​ ​sample​ ​workflows​ ​below​ ​demonstrate​ ​the​ ​process​ ​when​ ​the​ ​client​ ​initiates​ ​a 
+claim,​ ​which​ ​is​ ​resolved​ ​together​ ​with​ ​the​ ​merchant.​ ​We​ ​will​ ​introduce​ ​incentives​ ​for 
+merchants​ ​and​ ​clients​ ​to​ ​handle​ ​the​ ​claims​ ​fast​ ​and​ ​keep​ ​trust​ ​level​ ​high​ ​for​ ​both 
+sides.  
+ 
+Client​ ​files​ ​a​ ​claim 
+
+ 
+
+ 
+21 
+
+
+
+ 
+
+ 
+
+The​ ​merchant​ ​responds​ ​to​ ​a​ ​claim,​ ​finds​ ​a​ ​solution​ ​together​ ​with​ ​the​ ​client​ ​and 
+provides​ ​resolution​ ​details 
+
+ 
+The​ ​client​ ​and​ ​merchant​ ​resolve​ ​the​ ​claim​ ​resolution​ ​“offline”​ ​or​ ​on​ ​Monetha’s 
+off-chain​ ​messaging​ ​system.​ ​After​ ​both​ ​parties​ ​agree​ ​on​ ​resolution​ ​terms,​ ​the 
+merchant​ ​enters​ ​those​ ​terms​ ​(e.g.​ ​money​ ​back,​ ​shipping​ ​out​ ​new​ ​product,,​ ​etc.)​ ​into 
+the​ ​merchant’s​ ​user​ ​interface.​ ​Resolution​ ​terms​ ​are​ ​saved​ ​on​ ​the​ ​blockchain.​ ​The 
+merchant​ ​then​ ​waits​ ​for​ ​client’s​ ​confirmation. 
+  
+Client​ ​confirms​ ​resolution 
+
+ 
+
+ 
+22 
+
+
+
+ 
+
+ 
+
+If​ ​the​ ​claim​ ​is​ ​resolved​ ​relatively​ ​quickly,​ ​the​ ​merchant​ ​gets​ ​a​ ​relatively​ ​higher​ ​trust 
+rating​ ​upgrade.​ ​The​ ​client’s​ ​trust​ ​rating​ ​is​ ​also​ ​upgraded​ ​once​ ​the​ ​claim​ ​is​ ​resolved. 
+ 
+
+3.2​ ​Intended​ ​Product​ ​architecture 
+
+ 
+
+ 
+
+ 
+23 
+
+
+
+ 
+
+3.3​ ​Beta​ ​version​ ​of​ ​the​ ​product 
+
+Goal​ ​of​ ​Beta​ ​version: 
+ 
+
+● Provide​ ​a​ ​platform​ ​for​ ​e-commerce​ ​merchants​ ​to​ ​expand​ ​their​ ​online​ ​payment 
+solutions​ ​and​ ​accept​ ​mobile​ ​payments​ ​in​ ​Ethereum-based​ ​currencies. 
+
+● Show​ ​the​ ​potential​ ​of​ ​“TrustLevel”​ ​mechanism​ ​which​ ​will​ ​help​ ​to​ ​increase​ ​the 
+transparency​ ​of​ ​e-commerce,​ ​which​ ​both​ ​merchants​ ​and​ ​clients​ ​will​ ​benefit 
+from. 
+
+ 
+We​ ​have​ ​developed​ ​a​ ​solution​ ​where​ ​the​ ​merchant​ ​receives​ ​a​ ​Monetha​ ​payment 
+gateway​ ​script​ ​that​ ​can​ ​be​ ​integrated​ ​into​ ​any​ ​shopping​ ​cart​ ​or​ ​website​ ​(some 
+scripting​ ​knowledge​ ​is​ ​required). 
+ 
+The​ ​workflow​ ​is​ ​simple:​ ​the​ ​user​ ​picks​ ​items​ ​he​ ​or​ ​she​ ​wants,​ ​adds​ ​them​ ​to​ ​the 
+basket​ ​and​ ​selects​ ​to​ ​pay​ ​with​ ​ETH.​ ​Monetha​ ​servers​ ​generate​ ​a​ ​QR​ ​code​ ​with​ ​all 
+the​ ​needed​ ​underlying​ ​order​ ​information​ ​such​ ​as​ ​order​ ​number,​ ​price,​ ​currency, 
+warranty,​ ​delivery​ ​option,​ ​etc.​ ​The​ ​client​ ​must​ ​scan​ ​the​ ​code​ ​during​ ​a​ ​defined​ ​time 
+limit​ ​otherwise​ ​he​ ​needs​ ​to​ ​re-initiate​ ​payment.​ ​After​ ​the​ ​client​ ​scans​ ​the​ ​code​ ​with 
+his​ ​preferred​ ​mobile​ ​crypto​ ​wallet​ ​and​ ​presses​ ​“send”,​ ​the​ ​transaction​ ​is​ ​sent​ ​to​ ​the 
+blockchain​ ​together​ ​with​ ​purchase​ ​details.  
+ 
+Once​ ​the​ ​transaction​ ​has​ ​received​ ​several​ ​confirmations,​ ​the​ ​client​ ​is​ ​notified​ ​it​ ​was 
+successful.​ ​After​ ​a​ ​few​ ​minutes,​ ​the​ ​merchant​ ​sees​ ​the​ ​money​ ​arrive​ ​in​ ​his​ ​wallet. 
+During​ ​further​ ​development​ ​phases,​ ​we​ ​will​ ​introduce​ ​Merchant​ ​Smart​ ​Contract 
+Wallet​ ​to​ ​enable​ ​rates,​ ​limits,​ ​and​ ​automatic​ ​exchange​ ​to​ ​local​ ​currency. 
+ 
+We​ ​aim​ ​to​ ​integrate​ ​with​ ​merchants​ ​in​ ​early​ ​Beta​ ​product​ ​stage,​ ​and​ ​together​ ​with 
+them,​ ​improve​ ​and​ ​test​ ​the​ ​solution.​ ​Early​ ​participation​ ​will​ ​allow​ ​them​ ​to​ ​influence 
+what​ ​features​ ​should​ ​be​ ​included​ ​in​ ​the​ ​roadmap.​ ​It​ ​will​ ​also​ ​enable​ ​them​ ​to​ ​expand 
+their​ ​market​ ​reach,​ ​and​ ​through​ ​a​ ​simple​ ​setup​ ​to​ ​start​ ​accepting​ ​online​ ​payments 
+with​ ​ETH.  
+ 
+After​ ​its​ ​launch,​ ​we​ ​will​ ​invite​ ​merchants​ ​to​ ​Beta​ ​programs​ ​to​ ​experiment​ ​with​ ​the 
+newly​ ​introduced​ ​features.  
+ 
+
+3.4​ ​Product​ ​development​ ​roadmap.  
+ 
+The​ ​product​ ​development​ ​timeline​ ​might​ ​not​ ​be​ ​final​ ​and​ ​is​ ​subject​ ​to​ ​change 
+
+ 
+24 
+
+
+
+ 
+
+depending​ ​on​ ​the​ ​feedback​ ​we​ ​receive​ ​from​ ​our​ ​initial​ ​customers.  
+ 
+Phase​ ​1:​ ​E-commerce​ ​and​ ​first​ ​version​ ​of​ ​the​ ​trust​ ​rating​ ​-​ ​EUR​ ​700k 
+
+ 
+Goal:​ ​develop​ ​a​ ​fully-functional​ ​payment​ ​gateway​ ​with​ ​a​ ​user​ ​interface​ ​for 
+e-commerce​ ​merchants​ ​and​ ​enable​ ​them​ ​to​ ​accept​ ​ETH​ ​currency​ ​while​ ​leveraging 
+first​ ​version​ ​of​ ​trust​ ​level​ ​mechanism.  
+ 
+Time:​ ​early​ ​2018 
+ 
+Phase​ ​2:​ ​A​ ​full​ ​e-commerce​ ​solution​ ​to​ ​accept​ ​Ethereum-based​ ​tokens​ ​and 
+exchange​ ​them​ ​to​ ​fiat​ ​currency:​ ​​ ​EUR​ ​1.7m  
+ 
+Goal:​ ​accept​ ​not​ ​only​ ​Ether​ ​currency,​ ​but​ ​also​ ​Ethereum-based​ ​tokens​ ​and​ ​enable 
+merchants​ ​to​ ​exchange​ ​Ethereum​ ​currencies​ ​to​ ​fiat​ ​currency​ ​and​ ​transfer​ ​funds​ ​to 
+their​ ​preferred​ ​account.​ ​Moreover,​ ​smart​ ​contract​ ​wallets,​ ​real-time​ ​analytics,​ ​and 
+dashboards​ ​for​ ​merchants​ ​will​ ​be​ ​introduced​ ​during​ ​this​ ​stage 
+ 
+Time:​ ​mid​ ​2018 
+ 
+Phase​ ​3:​ ​A​ ​Monetha​ ​Wallet​ ​for​ ​clients​ ​+​ ​Loyalty​ ​program​ ​+​ ​Significant 
+improvement​ ​of​ ​decentralized​ ​trust​ ​and​ ​reputation​ ​algorithm:​ ​EUR​ ​3.5m  
+ 
+Goal:​ ​make​ ​a​ ​significant​ ​step​ ​towards​ ​a​ ​fully​ ​working​ ​decentralized​ ​trust​ ​and 
+reputation​ ​system:​ ​improvement​ ​of​ ​decentralized​ ​trust​ ​and​ ​reputation​ ​algorithm 
+together​ ​with​ ​Monetha​ ​smart​ ​contract​ ​based​ ​mobile​ ​wallet​ ​for​ ​making/solving​ ​claims, 
+rating​ ​merchants,​ ​writing​ ​reviews,​ ​etc.​ ​Review​ ​purchase​ ​history,​ ​see​ ​clients’​ ​and 
+merchants’​ ​trust​ ​rating,​ ​etc.​ ​Finally,​ ​the​ ​loyalty​ ​program​ ​will​ ​be​ ​enabled​ ​during​ ​this 
+stage​ ​of​ ​development. 
+ 
+Time:​ ​late​ ​2018  
+ 
+Phase​ ​4:​ ​Full​ ​functionality​ ​of​ ​the​ ​decentralized​ ​trust​ ​and​ ​reputation​ ​system​ ​- 
+EUR​ ​5.5m 
+ 
+
+1. Goal:​ ​This​ ​level​ ​of​ ​financing​ ​will​ ​allow​ ​us​ ​to​ ​fully​ ​develop​ ​a​ ​globalized​ ​trust​ ​and 
+reputation​ ​system​ ​to​ ​enable​ ​both​ ​parties​ ​to​ ​initiate/resolve​ ​claims​ ​so​ ​that 
+global​ ​trust​ ​rate​ ​would​ ​reflect​ ​“the​ ​true​ ​trust​ ​of​ ​both​ ​parties”.​ ​Reviews​ ​will​ ​be 
+enabled,​ ​which​ ​will​ ​have​ ​a​ ​significant​ ​weight​ ​on​ ​trust​ ​rate​ ​for​ ​merchants​ ​and 
+clients.​ ​Trust​ ​system​ ​algorithm​ ​will​ ​be​ ​improved​ ​to​ ​facilitate​ ​claims​ ​and​ ​client 
+reviews.​ ​Mobile​ ​wallet​ ​version​ ​2,​ ​mobile​ ​in-app​ ​SDK​ ​and​ ​other​ ​improvements 
+to​ ​merchant’s​ ​interface​ ​will​ ​be​ ​developed​ ​during​ ​this​ ​phase.  
+
+ 
+25 
+
+
+
+ 
+
+ 
+Time:​ ​early​ ​2019 
+ 
+Phase​ ​5:​ ​Retail​ ​-​ ​​ ​EUR​ ​7m 
+ 
+Goal:​ ​Develop​ ​and​ ​introduce​ ​the​ ​decentralized​ ​payment,​ ​trust​ ​and​ ​reputation​ ​system 
+for​ ​retail​ ​merchants.​ ​The​ ​ability​ ​to​ ​accept​ ​mobile​ ​payments​ ​in​ ​Ethereum-based 
+currencies​ ​and​ ​exchange​ ​them​ ​to​ ​preferred​ ​fiat​ ​currency.​ ​Top-tier​ ​retail​ ​merchant 
+interface​ ​to​ ​see​ ​the​ ​purchase​ ​history,​ ​analytics,​ ​etc. 
+ 
+Time:​ ​mid-to-late​ ​2019 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+26 
+
+
+
+ 
+
+4.​ ​Market​ ​opportunity​ ​and​ ​business​ ​model 
+ 
+The​ ​global​ ​e-commerce​ ​market​ ​size​ ​in​ ​2016​ ​was​ ​USD​ ​1.9​ ​trillion​ ​and​ ​is​ ​expected​ ​to 
+rise​ ​to​ ​USD​ ​4​ ​trillion​ ​in​ ​2020.​ ​At​ ​the​ ​same​ ​time,​ ​the​ ​global​ ​retail​ ​payments​ ​industry 
+was​ ​worth​ ​USD​ ​16​ ​trillion​ ​in​ ​2015.​ ​It​ ​is​ ​estimated​ ​to​ ​increase​ ​to​ ​USD​ ​21​ ​trillion​ ​in 
+2020.​ ​Global​ ​payment​ ​revenue​ ​was​ ​USD​ ​1.8​ ​trillion​ ​in​ ​2015​ ​and​ ​should​ ​reach​ ​USD 
+2.2​ ​trillion​ ​in​ ​2020. 
+ 
+According​ ​to​ ​Boston​ ​Consulting​ ​Group,​ ​the​ ​payment​ ​industry​ ​is​ ​about​ ​to​ ​experience 
+a​ ​huge​ ​shift​ ​towards​ ​mobile​ ​payments: 
+
+● Mobile​ ​payment​ ​volume​ ​was​ ​USD​ ​8.6​ ​billion​ ​in​ ​the​ ​US.​ ​It​ ​is​ ​expected​ ​to 
+increase​ ​tenfold​ ​by​ ​2021​ ​to​ ​reach​ ​$274bn​ ​only​ ​in​ ​US. 
+
+● Mobile​ ​share​ ​of​ ​total​ ​ecommerce​ ​is​ ​expected​ ​to​ ​increase​ ​to​ ​48.5%​ ​of​ ​total 
+e-commerce​ ​by​ ​2020.​ ​It​ ​was​ ​23.6%​ ​in​ ​2015.  
+
+● Merchant​ ​mobile​ ​payment​ ​acceptance​ ​network​ ​to​ ​grow​ ​10X​ ​by​ ​2020. 
+ 
+
+4.1​ ​Market​ ​opportunity 
+ 
+4.2.1​ ​Explosive​ ​growth​ ​of​ ​E-commerce 
+ 
+According​ ​to​ ​Statista,​ ​​retail​ ​e-commerce​ ​sales​ ​worldwide​ ​in​ ​2014​ ​were​ ​USD​ ​1.33 
+trillion​ ​and​ ​are​ ​projected​ ​to​ ​increase​ ​to​ ​USD​ ​4.058​ ​trillion​ ​by​ ​2020.  
+ 
+The​ ​growth​ ​is​ ​perfectly​ ​illustrated​ ​by​ ​the​ ​number​ ​of​ ​shops​ ​created​ ​on​ ​Shopify 
+platform.​ ​They​ ​had​ ​84.000​ ​shops​ ​in​ ​2013,​ ​144.000​ ​in​ ​2014,​ ​243.000​ ​in​ ​2015​ ​and 
+ended​ ​2016​ ​with​ ​almost​ ​378.000​ ​merchants​ ​on​ ​the​ ​platform​ ​-​ ​a​ ​growth​ ​of​ ​4.500% 
+over​ ​3​ ​years.  
+ 
+E-commerce​ ​is​ ​also​ ​gaining​ ​greater​ ​weight​ ​in​ ​total​ ​retail​ ​sales​ ​globally.​ ​It​ ​is​ ​expected 
+to​ ​increase​ ​from​ ​7.4%​ ​in​ ​2015​ ​to​ ​14.6%​ ​in​ ​2020.  
+ 
+
+ 
+27 
+
+
+
+ 
+
+ 
+ 
+Furthermore,​ ​according​ ​to​ ​Statista,​ ​the​ ​number​ ​of​ ​people​ ​buying​ ​goods​ ​or​ ​services 
+online​ ​will​ ​increase​ ​from​ ​1.46​ ​billion​ ​in​ ​2015​ ​to​ ​above​ ​2​ ​billion​ ​in​ ​2020.  
+ 
+
+ 
+ 
+ 
+4.2.2​ ​Explosive​ ​growth​ ​of​ ​mobile​ ​and​ ​digital​ ​payments 
+
+ 
+28 
+
+
+
+ 
+
+ 
+According​ ​to​ ​Boston​ ​Consulting​ ​Group,​ ​the​ ​digital​ ​payments​ ​space​ ​is​ ​about​ ​to 
+witness​ ​significant​ ​disruption​ ​in​ ​coming​ ​years.​ ​Some​ ​trends​ ​are​ ​starting​ ​to​ ​become 
+clear​ ​that​ ​will​ ​transform​ ​the​ ​payments​ ​landscape​ ​globally​ ​over​ ​the​ ​next​ ​few​ ​years:
+
+ 
+● Technology​ ​will​ ​make​ ​digital​ ​payments​ ​simpler:​ ​smartphone​ ​penetration, 
+
+blockchain​ ​and​ ​crypto​ ​currencies,​ ​ubiquitous​ ​connectivity,​ ​biometrics, 
+tokenization,​ ​cloud​ ​computing,​ ​and​ ​the​ ​Internet​ ​of​ ​Things​ ​are​ ​a​ ​few​ ​trends​ ​that 
+will​ ​shape​ ​the​ ​way​ ​consumers​ ​will​ ​transact​ ​in​ ​the​ ​future.  
+ 
+
+● Merchant​ ​mobile​ ​payment​ ​acceptance​ ​network​ ​to​ ​grow​ ​10X​ ​by​ ​2020:​ ​Mobile 
+based​ ​payment​ ​solutions​ ​and​ ​proprietary​ ​payment​ ​networks​ ​will​ ​drive 
+merchant​ ​acquisition​ ​by​ ​offering​ ​low-investment​ ​solutions​ ​that​ ​will​ ​create 
+economic​ ​incentives​ ​for​ ​merchants​ ​and​ ​acquirers,​ ​resulting​ ​in​ ​over​ ​10​ ​million 
+merchant​ ​establishments​ ​that​ ​will​ ​accept​ ​digital/mobile​ ​payments.  
+
+ 
+Mobile​ ​payment​ ​volume​ ​is​ ​expected​ ​to​ ​increase​ ​to​ ​$274bn​ ​by​ ​2021​ ​in​ ​the​ ​US​ ​alone. 
+Chinese​ ​mobile​ ​payments​ ​were​ ​nearly​ ​50​ ​times​ ​greater​ ​than​ ​those​ ​in​ ​the​ ​US​ ​last 
+year,​ ​according​ ​to​ ​Financial​ ​Times.​ ​Mobile​ ​payment​ ​with​ ​Alipay​ ​or​ ​WeChat​ ​is​ ​much 
+more​ ​streamlined​ ​and​ ​only​ ​requires​ ​scanning​ ​a​ ​QR​ ​code​ ​from​ ​a​ ​retailer’s 
+point-of-service​ ​terminal​ ​or​ ​a​ ​smartphone. 
+ 
+ 
+
+ 
+ 
+
+ 
+29 
+
+
+
+ 
+
+ 
+Moreover,​ ​as​ ​shown​ ​in​ ​the​ ​graph​ ​below,​ ​the​ ​mobile​ ​share​ ​of​ ​total​ ​e-commerce​ ​is 
+expected​ ​to​ ​increase​ ​to​ ​48.5%​ ​of​ ​total​ ​e-commerce.  
+ 
+
+ 
+ 
+
+In-app​ ​payments​ ​and​ ​proximity​ ​transactions​ ​are​ ​expected​ ​to​ ​be​ ​key​ ​catalysts​ ​of 
+growth​ ​in​ ​the​ ​days​ ​ahead.​ ​However,​ ​in​ ​a​ ​breakout​ ​scenario,​ ​given​ ​a​ ​possible 
+disruption​ ​by​ ​convenience,​ ​security​ ​and​ ​Internet​ ​of​ ​Things,​ ​the​ ​growth​ ​rate​ ​of​ ​mobile 
+and​ ​digital​ ​payments​ ​could​ ​be​ ​even​ ​higher.  
+ 
+ 
+4.1.3​ ​Transaction​ ​volume​ ​and​ ​global​ ​payment​ ​revenues 
+
+ 
+The​ ​payments​ ​industry​ ​is​ ​enormously​ ​big.​ ​The​ ​total​ ​value​ ​of​ ​global​ ​retail​ ​payments 
+transactions​ ​was​ ​estimated​ ​at​ ​USD​ ​16​ ​trillion​ ​in​ ​2015.​ ​This​ ​is​ ​estimated​ ​to​ ​increase 
+to​ ​USD​ ​21​ ​trillion​ ​by​ ​2020.​ ​The​ ​estimation​ ​comprised​ ​consumer-to-merchant 
+transactions​ ​across​ ​retail​ ​verticals​ ​such​ ​as​ ​food​ ​and​ ​grocery,​ ​apparel,​ ​consumer 
+durables​ ​etc.​​ ​Digital​ ​payments​ ​contributed​ ​to​ ​8​ ​percent,​ ​which​ ​is​ ​USD​ ​1.26 
+trillion,​​ ​of​ ​the​ ​overall​ ​global​ ​retail​ ​payments​ ​market​ ​in​ ​2015​ ​and​ ​is​ ​projected​ ​to 
+increase​ ​to​ ​​18-24​ ​percent​ ​by​ ​2020,​ ​which​ ​is​ ​USD​ ​6.3​ ​trillion.  
+ 
+The​ ​global​ ​payments​ ​revenue​ ​market​ ​size​ ​is​ ​approximately​ ​​USD​ ​2​ ​trillion​​ ​and 
+steadily​ ​rising.​ ​​In​ ​most​ ​cases,​ ​global​ ​payments​ ​are​ ​the​ ​payments​ ​revenues​ ​that 
+include​ ​direct​ ​and​ ​indirect​ ​revenues​ ​generated​ ​by​ ​non-cash​ ​payment​ ​services 
+
+ 
+30 
+
+
+
+ 
+
+(excluding​ ​interbank​ ​transfers).​ ​Simply​ ​speaking,​ ​it’s​ ​the​ ​total​ ​revenues​ ​collected​ ​by 
+financial​ ​services​ ​companies​ ​around​ ​the​ ​globe.  
+ 
+As​ ​shown​ ​in​ ​the​ ​graph,​ ​the​ ​global​ ​payment​ ​revenues​ ​should​ ​reach​ ​USD​ ​2.2​ ​trillion 
+over​ ​the​ ​upcoming​ ​few​ ​years. 
+
+ 
+
+4.2​ ​Business​ ​model 
+Monetha​ ​will​ ​charge​ ​a​ ​1.5%​ ​transaction​ ​fee​ ​from​ ​merchants.​ ​Of​ ​that,​ ​0.5%​ ​will​ ​go​ ​to 
+a​ ​“Voucher​ ​Smart​ ​Contract”​ ​in​ ​a​ ​for​ ​of​ ​MTH​ ​for​ ​Monetha​ ​token​ ​holders​ ​for​ ​an​ ​ability 
+to​ ​use​ ​that​ ​in​ ​the​ ​Monetha’s​ ​ecosystem​ ​and​ ​other​ ​1%​ ​will​ ​go​ ​to​ ​the​ ​company​ ​as 
+revenues. 
+ 
+An​ ​interesting​ ​fact​ ​is​ ​that​ ​the​ ​average​ ​traditional​ ​payment​ ​gateways​ ​take 
+approximately​ ​only​ ​0.25%​ ​+​ ​0.1​ ​from​ ​total​ ​fee​ ​as​ ​their​ ​revenue.​ ​This​ ​0.25%​ ​+​ ​0.1​ ​is​ ​a 
+mark-up​ ​fee​ ​to​ ​the​ ​interchange​ ​rates. 
+ 
+For​ ​example,​ ​if​ ​the​ ​total​ ​transaction​ ​fee​ ​that​ ​merchant​ ​is​ ​charged​ ​is​ ​2.35%​ ​+​ ​$0.2, 
+the​ ​2.1%+​ ​$0.2​ ​is​ ​the​ ​​interchange​ ​part​​ ​that​ ​banks,​ ​credit​ ​card​ ​associations​ ​and 
+others​ ​are​ ​dividing​ ​and​ ​0.25%​ ​+​ ​$0.1​ ​is​ ​the​ ​​markup​ ​part​,​ ​which​ ​payment​ ​gateways 
+take​ ​home​ ​as​ ​revenue.​ ​We​ ​not​ ​only​ ​decrease​ ​the​ ​transaction​ ​fee​ ​that​ ​merchant​ ​has 
+to​ ​pay,​ ​let​ ​alone​ ​the​ ​other​ ​fees​ ​that​ ​he​ ​will​ ​not​ ​have​ ​to​ ​worry​ ​about​ ​anymore,​ ​but​ ​we 
+are​ ​also​ ​left​ ​with​ ​approximately​ ​four​ ​times​ ​the​ ​rate​ ​to​ ​do​ ​business​ ​with.  
+
+ 
+31 
+
+
+
+ 
+
+5.​ ​Marketing​ ​and​ ​Strategy 
+
+5.1​ ​Network​ ​effect 
+ 
+Our​ ​strategy​ ​is​ ​focused​ ​on​ ​​creating​ ​a​ ​network​ ​effect​​ ​as​ ​our​ ​decentralized​ ​trust​ ​and 
+reputation​ ​system​ ​enables​ ​us​ ​to​ ​do​ ​that.​ ​Moreover,​ ​we​ ​will​ ​use​ ​the​ ​well-known 
+bowling​ ​pin​ ​strategy:​ ​start​ ​with​ ​a​ ​niche​ ​market​ ​(stage​ ​2:​ ​existing​ ​crypto​ ​community), 
+and​ ​then​ ​move​ ​to​ ​other​ ​niches​ ​and​ ​broader​ ​markets.  
+
+ 
+Stage​ ​1.​​ ​In​ ​our​ ​case,​ ​we​ ​are​ ​focusing​ ​on​ ​the​ ​supply​ ​side​ ​first:​ ​being​ ​accepted​ ​in​ ​as 
+many​ ​locations​ ​as​ ​fast​ ​as​ ​possible​ ​through​ ​partnerships​ ​that​ ​enables​ ​instant​ ​scale. 
+To​ ​achieve​ ​that,​ ​we​ ​will​ ​partner​ ​with​ ​payment​ ​providers​ ​that​ ​can​ ​give​ ​us​ ​instant 
+scale.​ ​​We​ ​are​ ​already​ ​in​ ​positive​ ​talks​ ​with​ ​major​ ​players​,​ ​​Revel​ ​Systems​​ ​and 
+Shopify,​​ ​being​ ​the​ ​biggest​ ​(as​ ​of​ ​the​ ​end​ ​of​ ​2016,​ ​Shopify​ ​had​ ​over​ ​377K​ ​merchants 
+on​ ​its​ ​platform). 
+Stage​ ​2.​​ ​Educate​ ​the​ ​initial​ ​client​ ​base​ ​in​ ​the​ ​existing​ ​crypto​ ​community.​ ​Main​ ​value 
+propositions:​ ​decentralized​ ​trust​ ​system,​ ​no​ ​need​ ​to​ ​pay​ ​credit​ ​card​ ​network​ ​fees,​ ​no 
+spending​ ​limit. 
+Stage​ ​3​.​ ​Broader​ ​market​ ​adoption:  
+
+1. Once​ ​again:​ ​supply​ ​side​ ​first.​ ​Monetha​ ​is​ ​accepted​ ​in​ ​even​ ​more 
+locations​ ​globally. 
+
+2. Education​ ​of​ ​general​ ​public.​ ​Supply​ ​increases​ ​exposure​ ​and​ ​people​ ​are 
+willing​ ​to​ ​buy​ ​more​ ​from​ ​trusted​ ​merchants.​ ​Only​ ​Merchants​ ​accepting 
+payments​ ​through​ ​Monetha​ ​will​ ​be​ ​guaranteed​ ​to​ ​be​ ​trustful​ ​by 
+decentralized​ ​reputation​ ​and​ ​trust​ ​system.  
+
+3. Once​ ​there​ ​are​ ​more​ ​people​ ​willing​ ​to​ ​pay​ ​with​ ​their​ ​mobile​ ​phones​ ​at 
+trusted​ ​merchants,​ ​more​ ​merchants​ ​will​ ​join​ ​the​ ​network. 
+
+ 
+Network​ ​effect​​ ​is​ ​very​ ​well​ ​illustrated​ ​by​ ​​Metcalfe’s​ ​Law​.​ ​For​ ​example:​ ​one 
+telephone​ ​is​ ​useless.​ ​Two​ ​people​ ​with​ ​telephones​ ​can​ ​only​ ​make​ ​one​ ​connection, 
+while​ ​five​ ​telephones​ ​make​ ​10​ ​connections​ ​and​ ​twelve​ ​telephones​ ​make​ ​66 
+connections.  
+ 
+
+​ ​​ ​​ ​​ ​​ ​ alue of  a network n(n )/2, where n is number of  people using the networkV =  − 1    
+ 
+Focusing​ ​on​ ​the​ ​supply​ ​side​ ​first​ ​drives​ ​the​ ​demand​ ​which​ ​in​ ​turn​ ​drives​ ​the​ ​supply. 
+Network​ ​effect​ ​kicks​ ​in:​​ ​the​ ​more​ ​users​ ​there​ ​are,​ ​the​ ​more​ ​valuable​ ​it​ ​is.​​ ​This 
+rapid​ ​adoption​ ​is​ ​then​ ​self-perpetuating​ ​as​ ​both​ ​sides​ ​value​ ​the​ ​access​ ​to​ ​a​ ​bigger 
+network​ ​of​ ​users​ ​(read​ ​‘more​ ​choice’,​ ​‘higher​ ​probability​ ​of​ ​finding​ ​a​ ​match’)​ ​coupled 
+
+ 
+32 
+
+
+
+ 
+
+with​ ​the​ ​improved​ ​transaction​ ​experience.  
+ 
+The​ ​importance​ ​of​ ​network​ ​effect​ ​was​ ​very​ ​well​ ​described​ ​by​ ​the​ ​Vice​ ​President​ ​of 
+Bessemer​ ​Venture​ ​Partners​ ​(investors​ ​are​ ​LinkedIn,​ ​Shopify,​ ​etc.)​ ​in​ ​this​ ​LinkedIn 
+post: 
+https://www.linkedin.com/pulse/winning-marketplace-importance-supply-side-raghav-
+bahl 
+ 
+The​ ​growth​ ​of​ ​the​ ​ecosystem​ ​following​ ​those​ ​steps​ ​is​ ​illustrated​ ​in​ ​the​ ​graph​ ​below. 
+That​ ​is​ ​how,​ ​in​ ​most​ ​cases,​ ​marketplaces​ ​and​ ​ecosystems​ ​are​ ​being​ ​built. 
+ 
+ 
+
+ 
+ 
+
+5.2​ ​Loyalty​ ​program 
+ 
+In​ ​order​ ​to​ ​encourage​ ​networks​ ​effects​ ​and​ ​create​ ​an​ ​ecosystem​ ​for​ ​Monetha​ ​token, 
+we​ ​are​ ​going​ ​to​ ​introduce​ ​a​ ​loyalty​ ​program​ ​for​ ​clients.​ ​That​ ​is​ ​unprecedented​ ​as 
+most​ ​loyalty​ ​programs​ ​are​ ​facilitated​ ​by​ ​merchants​ ​themselves​ ​and​ ​not​ ​payment 
+providers.  
+ 
+5.1.1​ ​How​ ​does​ ​the​ ​loyalty​ ​program​ ​work? 
+ 
+
+● Every​ ​purchase​ ​made​ ​via​ ​the​ ​Monetha​ ​payment​ ​system​ ​will​ ​reward​ ​the​ ​client 
+with​ ​0.2%​ ​(the​ ​percentage​ ​might​ ​change​ ​over​ ​time)​ ​of​ ​the​ ​value​ ​of​ ​the 
+transaction​ ​in​ ​Monetha​ ​tokens​ ​from​ ​the​ ​Monetha​ ​loyalty​ ​pool.​ ​This​ ​is​ ​provided 
+
+ 
+33 
+
+https://www.linkedin.com/pulse/winning-marketplace-importance-supply-side-raghav-bahl
+https://www.linkedin.com/pulse/winning-marketplace-importance-supply-side-raghav-bahl
+
+
+ 
+
+by​ ​Monetha​ ​no​ ​matter​ ​what​ ​goods​ ​or​ ​services​ ​the​ ​client​ ​buys​ ​or​ ​where​ ​the 
+merchant​ ​and​ ​client​ ​are​ ​based.  
+
+ 
+● Loyalty​ ​tokens​ ​can​ ​be​ ​used​ ​during​ ​any​ ​purchase​ ​using​ ​a​ ​Monetha​ ​wallet: 
+
+○ The​ ​client​ ​picks​ ​an​ ​item​ ​he/she​ ​wants​ ​to​ ​buy 
+○ If​ ​the​ ​client​ ​has​ ​Monetha​ ​tokens​ ​she/he​ ​can​ ​apply​ ​them​ ​to​ ​reduce​ ​the 
+
+items​ ​cost.​ ​The​ ​client​ ​gets​ ​a​ ​discount.  
+○ Monetha​ ​tokens​ ​are​ ​converted​ ​to​ ​ETH​ ​in​ ​real​ ​time. 
+○ Monetha​ ​tokens​ ​are​ ​returned​ ​to​ ​Monetha​ ​loyalty​ ​pool. 
+○ Monetha​ ​platform​ ​covers​ ​a​ ​discount​ ​for​ ​the​ ​merchant,​ ​so​ ​he​ ​gets​ ​the 
+
+full​ ​item​ ​price. 
+○ Monetha​ ​tokens​ ​can​ ​be​ ​applied​ ​for​ ​up​ ​to​ ​70%​ ​of​ ​the​ ​purchase​ ​value. 
+○ The​ ​client​ ​is​ ​still​ ​getting​ ​0.2%​ ​of​ ​the​ ​amount​ ​paid​ ​by​ ​ETH​ ​(or​ ​other 
+
+cryptocurrency)​ ​after​ ​loyalty​ ​is​ ​applied.  
+● Tokens​ ​acquired​ ​in​ ​this​ ​way​ ​are​ ​eligible​ ​for​ ​a​ ​discount​ ​for​ ​6​ ​months.​ ​Unused 
+
+tokens​ ​are​ ​returned​ ​back​ ​to​ ​Monetha​ ​loyalty​ ​token​ ​pool.  
+● The​ ​client​ ​cannot​ ​convert​ ​tokens​ ​exchanged​ ​in​ ​this​ ​way​ ​to​ ​any​ ​crypto​ ​or​ ​fiat 
+
+currency. 
+● The​ ​merchant​ ​is​ ​able​ ​to​ ​provide​ ​bigger​ ​loyalty​ ​discounts​ ​for​ ​his​ ​clients​ ​by 
+
+adjusting​ ​his​ ​loyalty​ ​settings​ ​in​ ​merchants​ ​interface. 
+● Clients​ ​with​ ​high​ ​trust​ ​are​ ​eligible​ ​for​ ​higher​ ​discount​ ​percentage​ ​than​ ​0.2%. 
+● The​ ​exact​ ​percentage​ ​of​ ​loyalty​ ​MTH​ ​tokens​ ​granted​ ​with​ ​every​ ​purchase 
+
+might​ ​change​ ​over​ ​time.  
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+34 
+
+
+
+ 
+
+6.​ ​Crowdsale​ ​details  
+The​ ​Monetha​ ​crowdsale​ ​and​ ​the​ ​corresponding​ ​token​ ​creation​ ​process​ ​will​ ​be​ ​issued 
+by​ ​Monetha​ ​GmbH,​ ​a​ ​Swiss​ ​Limited​ ​Liability​ ​Company,​ ​and​ ​will​ ​be​ ​organized​ ​around 
+smart​ ​contracts​ ​running​ ​on​ ​Ethereum.​ ​Participants​ ​willing​ ​to​ ​support​ ​the 
+development​ ​of​ ​the​ ​Monetha​ ​Project​ ​can​ ​do​ ​so​ ​by​ ​sending​ ​Ether​ ​currency​ ​to​ ​the 
+designated​ ​address.​ ​By​ ​doing​ ​so,​ ​they​ ​are​ ​purchasing​ ​Monetha​ ​Tokens​ ​(MTH)​ ​at​ ​the 
+rate​ ​of​ ​2​ ​000​ ​MTH​ ​per​ ​1​ ​ETH​ ​which​ ​are​ ​sent​ ​instantly​ ​to​ ​their​ ​wallet.  
+ 
+
+● The​ ​accepted​ ​currency​ ​during​ ​the​ ​ICO​ ​is​ ​Ether.  
+● The​ ​creation​ ​will​ ​be​ ​capped​ ​(“Soft​ ​Cap”)​ ​upon​ ​receipt​ ​of​ ​ETH​ ​equivalent​ ​to 
+
+EUR​ ​7m​ ​(fixed​ ​on​ ​28000​ ​ETH).​ ​This​ ​amount​ ​is​ ​subject​ ​to​ ​change​ ​before​ ​the 
+Token​ ​Creation​ ​event. 
+
+● The​ ​Token​ ​Creation​ ​period​ ​will​ ​last​ ​31​ ​(thirty​ ​one)​ ​days,​ ​if​ ​Soft​ ​Cap​ ​is​ ​not 
+reached​ ​sooner.  
+
+● If​ ​the​ ​Soft​ ​Cap​ ​is​ ​reached​ ​before​ ​the​ ​end​ ​of​ ​31​ ​(thirty​ ​one)​ ​days,​ ​additional 
+contributions​ ​will​ ​be​ ​accepted​ ​for​ ​120​ ​hours​ ​in​ ​case​ ​some​ ​contributors​ ​missed 
+the​ ​very​ ​short​ ​window​ ​for​ ​MTH​ ​creation.  
+
+● If​ ​the​ ​Crowdsale​ ​campaign​ ​does​ ​not​ ​reach​ ​its​ ​minimal​ ​capital​ ​goal​ ​of​ ​EUR 
+700.000​ ​(fixed​ ​on​ ​2800​ ​ETH)​ ​all​ ​funds​ ​will​ ​be​ ​returned​ ​automatically​ ​to​ ​the 
+MTH​ ​holders​ ​by​ ​the​ ​Ethereum​ ​smart​ ​contract. 
+
+● Token​ ​Creation​ ​has​ ​a​ ​hard​ ​cap:​ ​upon​ ​achieving​ ​this​ ​cap,​ ​token​ ​creation​ ​will 
+stop​ ​and​ ​no​ ​further​ ​contributions​ ​will​ ​be​ ​accepted.​ ​The​ ​hard​ ​cap​ ​amount​ ​is​ ​95 
+000​ ​ETH. 
+
+● Tokens​ ​that​ ​are​ ​not​ ​sold​ ​during​ ​the​ ​Crowdsale​ ​will​ ​be​ ​burned​ ​automatically​ ​by 
+the​ ​smart​ ​contract 
+
+ 
+  
+
+Issuer Monetha​ ​GmbH 
+
+Jurisdiction​ ​of​ ​Issuance Switzerland 
+
+Legal​ ​qualification Utility​ ​Coin,​ ​not​ ​a​ ​security 
+
+MTH​ ​created​ ​per​ ​ether 2000​ ​MTH 
+
+Minimal​ ​goal EUR​ ​700k​ ​(fixed​ ​on​ ​2800 
+ETH) 
+
+Soft​ ​Cap  EUR​ ​7m​ ​(fixed​ ​on​ ​28000 
+ETH) 
+
+ 
+35 
+
+
+
+ 
+
+Hard​ ​Cap 95​ ​000​ ​ETH 
+
+Additional 120h​ ​if​ ​soft​ ​cap​ ​is​ ​reached 
+
+Maximum​ ​number​ ​of​ ​tokens​ ​generated 402​ ​400​ ​000 
+
+%​ ​of​ ​tokens​ ​generated​ ​to​ ​Monetha 
+team  
+
+15%.​ ​Automatically​ ​locked​ ​for 
+12​ ​months​ ​by​ ​smart​ ​contract. 
+
+%​ ​of​ ​tokens​ ​generated​ ​for​ ​loyalty 
+program 
+
+13%.​ ​Automatically​ ​locked​ ​for 
+12​ ​months​ ​by​ ​smart​ ​contract. 
+
+%​ ​of​ ​tokens​ ​generated​ ​to​ ​bounty 
+campaign,​ ​advisors,​ ​partners,​ ​ICO 
+campaign​ ​costs  
+
+12%  
+
+%​ ​of​ ​tokens​ ​generated​ ​for​ ​future 
+company​ ​financing 
+
+10%.​ ​Automatically​ ​locked​ ​for 
+12​ ​months​ ​by​ ​smart​ ​contract. 
+
+%​ ​of​ ​tokens​ ​generated​ ​to​ ​Crowdsale 
+participants  
+
+50% 
+
+Date​ ​of​ ​crowdsale​ ​start August​ ​31,​ ​2017 
+
+Date​ ​of​ ​crowdsale​ ​end 31​ ​days​ ​or​ ​until​ ​soft​ ​cap​ ​is 
+reached 
+
+Additional​ ​time​ ​if​ ​soft​ ​cap​ ​is​ ​reached 120h 
+
+ 
+
+6.1​ ​MTH​ ​Creation​ ​Ratios  
+ 
+
+● 1st​ ​price​ ​batch​ ​until​ ​the​ ​soft​ ​cap​ ​is​ ​reached:​ ​1​ ​ETH​ ​=​ ​2400​ ​MTH  
+● 2rd​ ​price​ ​batch​ ​after​ ​the​ ​soft​ ​cap​ ​is​ ​reached:​ ​1​ ​ETH​ ​=​ ​2000​ ​MTH. 
+
+ 
+The​ ​contribution​ ​amount​ ​limits​ ​for​ ​each​ ​price​ ​batch​ ​will​ ​be​ ​announced.  
+
+6.2​ ​MTH​ ​Tokens 
+ 
+The​ ​Monetha​ ​token​ ​will​ ​be​ ​an​ ​Ethereum-based​ ​token​ ​of​ ​value.​ ​The​ ​token​ ​is​ ​a​ ​digital 
+asset,​ ​bearing​ ​value​ ​by​ ​itself​ ​based​ ​on​ ​its​ ​underlying​ ​assets,​ ​properties​ ​and/or 
+associated​ ​rights.  
+
+ 
+36 
+
+
+
+ 
+
+ 
+Ethereum-based​ ​tokens​ ​rely​ ​on​ ​a​ ​well-established​ ​Ethereum​ ​infrastructure, 
+benefiting​ ​from​ ​several​ ​advantages: 
+ 
+
+● Security​ ​and​ ​predictability​ ​(as​ ​opposed​ ​to,​ ​for​ ​example,​ ​having​ ​to​ ​run​ ​an 
+independent​ ​blockchain​ ​network). 
+
+● Use​ ​of​ ​robust​ ​and​ ​well-supported​ ​clients​ ​(Ethereum-based​ ​tokens​ ​can​ ​be 
+managed​ ​with​ ​official​ ​Ethereum​ ​clients). 
+
+● High​ ​liquidity​ ​(interchangeable​ ​with​ ​other​ ​Ethereum-based​ ​tokens​ ​or​ ​Ether), 
+easier​ ​listing​ ​on​ ​exchanges​ ​with​ ​infrastructure​ ​already​ ​in​ ​place. 
+
+ 
+ 
+Our​ ​Ethereum-based​ ​token​ ​contract​ ​complies​ ​with​ ​the​ ​ERC20​ ​standard.​ ​More 
+detailed​ ​info​ ​about​ ​the​ ​ERC20​ ​standard​ ​can​ ​be​ ​obtained​ ​from: 
+https://github.com/ethereum/EIPs/issues/20 
+ 
+
+6.3​ ​Incentive​ ​program 
+ 
+Always​ ​with​ ​the​ ​scope​ ​to​ ​create​ ​a​ ​network​ ​effect,​ ​Monetha​ ​has​ ​decided​ ​to​ ​increase 
+the​ ​purchase​ ​value​ ​of​ ​the​ ​MTH​ ​on​ ​the​ ​Monetha​ ​platform,​ ​by​ ​shifting​ ​⅓​ ​of​ ​Monetha’s 
+revenue​ ​in​ ​the​ ​“Voucher​ ​Smart​ ​contract”​ ​with​ ​an​ ​ability​ ​to​ ​claim​ ​for​ ​a​ ​voucher 
+proportionately​ ​to​ ​the​ ​amount​ ​of​ ​MTH​ ​tokens​ ​that​ ​they​ ​hold.​ ​Token​ ​holders​ ​will 
+receive​ ​a​ ​voucher​ ​in​ ​MTH​ ​(Monetha’s​ ​currency)​ ​to​ ​use​ ​it​ ​as​ ​a​ ​discount​ ​when 
+shopping​ ​with​ ​Monetha’s​ ​merchants.​ ​This​ ​voucher​ ​would​ ​be​ ​proportional​ ​to​ ​the 
+amount​ ​of​ ​the​ ​MTH​ ​tokens​ ​held.  
+ 
+Here’s​ ​how​ ​it​ ​works:  
+ 
+*Let’s​ ​say​ ​we​ ​have​ ​1000​ ​investors​ ​as​ ​MTH​ ​holders,​ ​holding​ ​1​ ​MTH​ ​each.​ ​Now,​ ​all 
+token​ ​holders​ ​equally​ ​hold​ ​0.1%​ ​of​ ​the​ ​total​ ​token​ ​supply. 
+ 
+*Let’s​ ​say​ ​Monetha’s​ ​merchants​ ​sold​ ​100​ ​000​ ​ETH​ ​worth​ ​of​ ​goods​ ​and​ ​services​ ​in 
+one​ ​month​ ​and​ ​let’s​ ​say​ ​that​ ​1ETH​ ​=​ ​1MTH.​ ​Because​ ​Monetha​ ​takes​ ​1.5% 
+transaction​ ​fee​ ​from​ ​merchants,​ ​Monetha​ ​will​ ​have​ ​1500​ ​ETH​ ​of​ ​revenue​ ​collected.  
+ 
+*For​ ​this​ ​scenario,​ ​⅓​ ​of​ ​Monetha’s​ ​revenue​ ​means​ ​⅓​ ​of​ ​1500​ ​ETH​ ​=​ ​500​ ​ETH. 
+Therefore,​ ​​ ​we​ ​will​ ​put​ ​500​ ​MTH​ ​in​ ​the​ ​“Voucher​ ​Smart​ ​Contract”.  
+We​ ​get​ ​500​ ​MTH​ ​Voucher​ ​that​ ​is​ ​available​ ​to​ ​use​ ​for​ ​MTH​ ​holders​ ​in​ ​Monetha’s 
+ecosystem.​ ​All​ ​1000​ ​MTH​ ​holders​ ​will​ ​equally​ ​have​ ​the​ ​ability​ ​to​ ​use​ ​500​ ​MTH 
+
+ 
+37 
+
+https://github.com/ethereum/EIPs/issues/20
+
+
+ 
+
+Voucher​ ​when​ ​shopping​ ​with​ ​Monetha’s​ ​merchants.​ ​In​ ​this​ ​case,​ ​one​ ​token​ ​holder 
+will​ ​be​ ​able​ ​to​ ​spend​ ​up​ ​to​ ​0.1%​ ​of​ ​500​ ​MTH​ ​(=0.5​ ​MTH​ ​each). 
+ 
+This​ ​voucher​ ​will​ ​be​ ​redeemable​ ​if​ ​you​ ​transfer​ ​your​ ​MTH​ ​tokens​ ​to​ ​the​ ​smart 
+contract​ ​address​ ​on​ ​the​ ​1st​ ​day​ ​of​ ​every​ ​month.​ ​Then,​ ​within​ ​the​ ​24​ ​hour​ ​window, 
+your​ ​MTH​ ​tokens​ ​will​ ​be​ ​returned​ ​to​ ​your​ ​wallet.​ ​You​ ​will​ ​be​ ​able​ ​to​ ​accumulate​ ​your 
+voucher​ ​each​ ​month​ ​and​ ​spend​ ​the​ ​amount​ ​you​ ​collected​ ​over​ ​the​ ​6​ ​month​ ​period​ ​in 
+the​ ​Monetha’s​ ​ecosystem.​ ​Each​ ​month’s​ ​collected​ ​MTH​ ​voucher​ ​will​ ​be​ ​viable​ ​to 
+spend​ ​for​ ​the​ ​upcoming​ ​6​ ​months.​ ​Unclaimed/unused​ ​revenue​ ​from​ ​vouchers​ ​will​ ​be 
+put​ ​in​ ​a​ ​pool​ ​for​ ​the​ ​next​ ​month.  
+ 
+The​ ​MTH​ ​voucher​ ​is​ ​not​ ​compare​ ​to​ ​the​ ​MTH​ ​token.​ ​The​ ​voucher​ ​is​ ​not​ ​transferable, 
+cannot​ ​be​ ​sold​ ​and​ ​can​ ​only​ ​be​ ​used​ ​for​ ​purchasing​ ​discounted​ ​goods​ ​on​ ​the 
+Monetha​ ​Platform. 
+ 
+The​ ​duration​ ​of​ ​this​ ​incentive​ ​program​ ​will​ ​stay​ ​at​ ​full​ ​discretion​ ​of​ ​Monetha,​ ​but​ ​will 
+at​ ​least​ ​last​ ​for​ ​the​ ​first​ ​24​ ​months​ ​starting​ ​from​ ​the​ ​first​ ​purchasing​ ​activity​ ​on​ ​the 
+platform. 
+ 
+
+6.4​ ​Budget   
+ 
+
+Field Portion​ ​of​ ​budget Activities 
+
+Legal 10% Company​ ​establishment, 
+contracts​ ​with​ ​merchants, 
+etc. 
+
+Product​ ​Development 50% Product​ ​development 
+according​ ​to​ ​development 
+roadmap 
+
+Operations 10% Management,​ ​employee 
+salaries.  
+
+Marketing,​ ​sales, 
+merchant​ ​acquisition​ ​& 
+partnerships 
+
+30% Expenses​ ​for​ ​attracting 
+merchants,​ ​making 
+partnerships​ ​with 
+payment​ ​providers,​ ​loyalty 
+program 
+
+ 
+38 
+
+
+
+ 
+
+  
+
+7.​ ​Legal 
+
+7.1​ ​General​ ​information 
+The​ ​Monetha​ ​token​ ​does​ ​not​ ​have​ ​the​ ​legal​ ​qualification​ ​of​ ​a​ ​security,​ ​since​ ​it​ ​does​ ​not​ ​give 
+any​ ​rights​ ​to​ ​dividends​ ​or​ ​interests.​ ​The​ ​sale​ ​of​ ​Monetha​ ​tokens​ ​is​ ​final​ ​and​ ​non-refundable. 
+Monetha​ ​tokens​ ​are​ ​not​ ​shares​ ​and​ ​do​ ​not​ ​give​ ​any​ ​right​ ​to​ ​participate​ ​to​ ​the​ ​general 
+meeting​ ​of​ ​Monetha​ ​GmbH.​ ​Monetha​ ​tokens​ ​cannot​ ​have​ ​a​ ​performance​ ​or​ ​a​ ​particular 
+value​ ​outside​ ​the​ ​Monetha​ ​Platform.​ ​Monetha​ ​tokens​ ​shall​ ​therefore​ ​not​ ​be​ ​used​ ​or 
+purchased​ ​for​ ​speculative​ ​or​ ​investment​ ​purposes.​ ​The​ ​purchaser​ ​of​ ​Monetha​ ​tokens​ ​is 
+aware​ ​that​ ​national​ ​securities​ ​laws,​ ​which​ ​ensure​ ​that​ ​investors​ ​are​ ​sold​ ​investments​ ​that 
+include​ ​all​ ​the​ ​proper​ ​disclosures​ ​and​ ​are​ ​subject​ ​to​ ​regulatory​ ​scrutiny​ ​for​ ​the​ ​investors' 
+protection,​ ​are​ ​not​ ​applicable. 
+  
+Anyone​ ​purchasing​ ​Monetha​ ​tokens​ ​expressly​ ​acknowledges​ ​and​ ​represents​ ​that​ ​she/he 
+has​ ​carefully​ ​reviewed​ ​this​ ​white​ ​paper​ ​and​ ​fully​ ​understands​ ​the​ ​risks,​ ​costs​ ​and​ ​benefits 
+associated​ ​with​ ​the​ ​purchase​ ​of​ ​Monetha. 
+
+7.2​ ​Knowledge​ ​required 
+The​ ​purchaser​ ​of​ ​Monetha​ ​tokens​ ​undertakes​ ​that​ ​she/he​ ​understands​ ​and​ ​has​ ​significant 
+experience​ ​of​ ​cryptocurrencies,​ ​blockchain​ ​systems​ ​and​ ​services,​ ​and​ ​that​ ​she/he​ ​fully 
+understands​ ​the​ ​risks​ ​associated​ ​with​ ​the​ ​crowdsale​ ​as​ ​well​ ​as​ ​the​ ​mechanism​ ​related​ ​to​ ​the 
+use​ ​of​ ​cryptocurrencies​ ​(incl.​ ​storage). 
+  
+Monetha​ ​shall​ ​not​ ​be​ ​responsible​ ​for​ ​any​ ​loss​ ​of​ ​Monetha​ ​tokens​ ​or​ ​situations​ ​making​ ​it 
+impossible​ ​to​ ​access​ ​Monetha​ ​tokens,​ ​which​ ​may​ ​result​ ​from​ ​any​ ​actions​ ​or​ ​omissions​ ​of​ ​the 
+user​ ​or​ ​any​ ​person​ ​undertaking​ ​to​ ​acquire​ ​Monetha​ ​tokens,​ ​as​ ​well​ ​as​ ​in​ ​case​ ​of​ ​hacker 
+attacks. 
+
+7.3​ ​Risks 
+Acquiring Monetha tokens and storing them involves various risks, in particular the risk that              
+Monetha GbmH may not be able to launch its operations and develop its blockchain and               
+provide the services promised. Therefore, and prior to acquiring Monetha tokens, any user             
+should carefully consider the risks, costs and benefits of acquiring Monetha tokens in the              
+context of the crowdsale and, if necessary, obtain any independent advice in this regard.              
+Any interested person who is not in the position to accept or to understand the risks                
+associated with the activity (incl. the risks related to the non-development of the Monetha              
+platform) or any other risks as indicated in the Terms & Conditions of the crowdsale should                
+not​ ​acquire​ ​Monetha​ ​tokens.   
+
+ 
+39 
+
+
+
+ 
+
+7.4​ ​Important​ ​disclaimer 
+This​ ​white​ ​paper​ ​shall​ ​not​ ​and​ ​cannot​ ​be​ ​considered​ ​as​ ​an​ ​invitation​ ​to​ ​enter​ ​into​ ​an 
+investment.​ ​It​ ​does​ ​not​ ​constitute​ ​or​ ​relate​ ​in​ ​any​ ​way​ ​nor​ ​should​ ​it​ ​be​ ​considered​ ​as​ ​an 
+offering​ ​of​ ​securities​ ​in​ ​any​ ​jurisdiction.​ ​This​ ​white​ ​paper​ ​does​ ​not​ ​include​ ​or​ ​contain​ ​any 
+information​ ​or​ ​indication​ ​that​ ​might​ ​be​ ​considered​ ​as​ ​a​ ​recommendation​ ​or​ ​that​ ​might​ ​be 
+used​ ​as​ ​a​ ​basis​ ​for​ ​any​ ​investment​ ​decision.​ ​Monetha​ ​tokens​ ​are​ ​just​ ​utility​ ​tokens​ ​which 
+can​ ​be​ ​used​ ​only​ ​on​ ​the​ ​Monetha​ ​platform​ ​and​ ​are​ ​not​ ​intended​ ​to​ ​be​ ​used​ ​as​ ​an 
+investment. 
+  
+The​ ​offering​ ​of​ ​Monetha​ ​tokens​ ​on​ ​a​ ​trading​ ​platform​ ​is​ ​done​ ​in​ ​order​ ​to​ ​allow​ ​the​ ​use​ ​of​ ​the 
+Monetha​ ​platform​ ​and​ ​not​ ​for​ ​speculative​ ​purposes.​ ​The​ ​offering​ ​of​ ​Monetha​ ​tokens​ ​on​ ​a 
+trading​ ​platform​ ​does​ ​not​ ​change​ ​the​ ​legal​ ​qualification​ ​of​ ​the​ ​tokens,​ ​which​ ​remain​ ​a​ ​simple 
+means​ ​for​ ​the​ ​use​ ​of​ ​the​ ​Monetha​ ​platform​ ​and​ ​are​ ​not​ ​a​ ​security. 
+  
+Monetha​ ​GmbH​ ​is​ ​not​ ​to​ ​be​ ​considered​ ​as​ ​an​ ​advisor​ ​in​ ​any​ ​legal,​ ​tax​ ​or​ ​financial​ ​matters. 
+Any​ ​information​ ​in​ ​the​ ​white​ ​paper​ ​is​ ​provided​ ​for​ ​general​ ​information​ ​purposes​ ​only​ ​and 
+Monetha​ ​GmbH​ ​does​ ​not​ ​provide​ ​any​ ​warranty​ ​as​ ​to​ ​the​ ​accuracy​ ​and​ ​completeness​ ​of​ ​this 
+information. 
+  
+Monetha​ ​GmbH​ ​is​ ​not​ ​a​ ​financial​ ​intermediary​ ​according​ ​to​ ​Swiss​ ​law​ ​and​ ​is​ ​not​ ​required​ ​to 
+obtain​ ​any​ ​authorization​ ​for​ ​Anti​ ​Money​ ​Laundering​ ​purposes. 
+Acquiring​ ​Monetha​ ​tokens​ ​shall​ ​not​ ​grant​ ​any​ ​right​ ​or​ ​influence​ ​over​ ​Monetha​ ​GmbH’s 
+organization​ ​and​ ​governance​ ​to​ ​the​ ​Purchasers. 
+  
+Regulatory​ ​authorities​ ​are​ ​carefully​ ​scrutinizing​ ​businesses​ ​and​ ​operations​ ​associated​ ​to 
+cryptocurrencies​ ​in​ ​the​ ​world.​ ​In​ ​that​ ​respect,​ ​regulatory​ ​measures,​ ​investigations​ ​or​ ​actions 
+may​ ​impact​ ​Monetha​ ​GmbH’s​ ​business​ ​and​ ​even​ ​limit​ ​or​ ​prevent​ ​it​ ​from​ ​developing​ ​its 
+operations​ ​in​ ​the​ ​future.​ ​Any​ ​person​ ​undertaking​ ​to​ ​acquire​ ​Monetha​ ​tokens​ ​must​ ​be​ ​aware 
+of​ ​the​ ​Monetha​ ​GmbH​ ​business​ ​model,​ ​the​ ​white​ ​paper​ ​or​ ​terms​ ​and​ ​conditions​ ​may​ ​change 
+or​ ​need​ ​to​ ​be​ ​modified​ ​because​ ​of​ ​new​ ​regulatory​ ​and​ ​compliance​ ​requirements​ ​from​ ​any 
+applicable​ ​laws​ ​in​ ​any​ ​jurisdictions.​ ​In​ ​such​ ​a​ ​case,​ ​purchasers​ ​and​ ​anyone​ ​undertaking​ ​to 
+acquire​ ​Monetha​ ​tokens​ ​acknowledge​ ​and​ ​understand​ ​that​ ​neither​ ​Monetha​ ​GmbH​ ​nor​ ​any 
+of​ ​its​ ​affiliates​ ​shall​ ​be​ ​held​ ​liable​ ​for​ ​any​ ​direct​ ​or​ ​indirect​ ​loss​ ​or​ ​damage​ ​caused​ ​by​ ​such 
+changes. 
+  
+Monetha​ ​GmbH​ ​will​ ​do​ ​its​ ​utmost​ ​to​ ​launch​ ​its​ ​operations​ ​and​ ​develop​ ​the​ ​Monetha​ ​platform. 
+Anyone​ ​undertaking​ ​to​ ​acquire​ ​Monetha​ ​tokens​ ​acknowledges​ ​and​ ​understands​ ​that 
+Monetha​ ​GmbH​ ​does​ ​not​ ​provide​ ​any​ ​guarantee​ ​that​ ​it​ ​will​ ​manage​ ​to​ ​achieve​ ​it.​ ​They 
+acknowledge​ ​and​ ​understand​ ​therefore​ ​that​ ​Monetha​ ​GmbH​ ​(incl.​ ​its​ ​bodies​ ​and​ ​employees) 
+assumes​ ​no​ ​liability​ ​or​ ​responsibility​ ​for​ ​any​ ​loss​ ​or​ ​damage​ ​that​ ​would​ ​result​ ​from​ ​or​ ​relate 
+to​ ​the​ ​incapacity​ ​to​ ​use​ ​Monetha​ ​tokens,​ ​except​ ​in​ ​case​ ​of​ ​intentional​ ​misconduct​ ​or​ ​gross 
+negligence. 
+
+ 
+40 
+
+
+
+ 
+
+7.5​ ​Representation​ ​and​ ​warranties 
+By participating in the crowdsale, the purchaser agrees to the above and in particular, they               
+represent​ ​and​ ​warrant​ ​that​ ​they: 
+
+● have read carefully the terms and conditions attached to the white paper;            
+agree​ ​to​ ​their​ ​full​ ​contents​ ​and​ ​accept​ ​to​ ​be​ ​legally​ ​bound​ ​by​ ​them; 
+
+● are authorized and have full power to purchase Monetha tokens according to            
+the​ ​laws​ ​that​ ​apply​ ​in​ ​their​ ​jurisdiction​ ​of​ ​domicile; 
+
+● are​ ​neither​ ​a​ ​US​ ​citizen​ ​or​ ​resident; 
+● live in a jurisdiction which allows Monetha GmbH to sell Monetha tokens            
+
+through​ ​a​ ​crowdsale​ ​without​ ​requiring​ ​any​ ​local​ ​authorization; 
+● are familiar with all related regulations in the specific jurisdiction in which they             
+
+are based and that purchasing cryptographic tokens in that jurisdiction is not            
+prohibited,​ ​restricted​ ​or​ ​subject​ ​to​ ​additional​ ​conditions​ ​of​ ​any​ ​kind; 
+
+● will not use the crowdsale for any illegal activity, including but not limited to              
+money​ ​laundering​ ​and​ ​the​ ​financing​ ​of​ ​terrorism; 
+
+● have sufficient knowledge about the nature of the cryptographic tokens and           
+have significant experience with, and functional understanding of, the usage          
+and intricacies of dealing with cryptographic tokens and currencies and          
+blockchain-based​ ​systems​ ​and​ ​services; 
+
+● purchase Monetha tokens because they wish to have access to the Monetha            
+platform; 
+
+● are not purchasing Monetha tokens for the purpose of speculative investment           
+or​ ​usage. 
+
+7.6​ ​Governing​ ​law​ ​and​ ​arbitration 
+Any​ ​dispute​ ​or​ ​controversy​ ​arising​ ​from​ ​or​ ​under​ ​the​ ​crowdsale​ ​shall​ ​be​ ​resolved​ ​by 
+arbitration​ ​in​ ​accordance​ ​with​ ​the​ ​Swiss​ ​Rules​ ​of​ ​International​ ​Arbitration​ ​of​ ​the​ ​Swiss 
+Chamber​ ​of​ ​Commerce​ ​in​ ​force​ ​on​ ​the​ ​date​ ​when​ ​the​ ​Notice​ ​of​ ​Arbitration​ ​is​ ​submitted​ ​in 
+accordance​ ​with​ ​these​ ​Rules.​ ​The​ ​arbitration​ ​panel​ ​shall​ ​consist​ ​of​ ​one​ ​arbitrator​ ​only.​ ​The 
+seat​ ​of​ ​the​ ​arbitration​ ​shall​ ​be​ ​Lugano,​ ​Switzerland.​ ​The​ ​arbitral​ ​proceedings​ ​shall​ ​be 
+conducted​ ​in​ ​English. 
+  
+
+8.​ ​Team 
+
+8.1​ ​Monetha​ ​Team 
+ 
+Andrej​ ​Ruckij:​ ​co-founder,​ ​technology.​ ​​ ​​ ​​LinkedIn 
+
+ 
+41 
+
+https://www.linkedin.com/in/andrejruckij/
+
+
+ 
+
+ 
+The​ ​mastermind​ ​architect​ ​of​ ​“Monetha”​ ​technology.​ ​A​ ​blockchain​ ​geek.​ ​ He​ ​earned 
+gigantic​ ​experience​ ​as​ ​a​ ​Vice​ ​President​ ​of​ ​Development​ ​at​ ​“Adform”,​ ​a​ ​global​ ​digital 
+advertising​ ​company.​ ​He​ ​is​ ​an​ ​engineering​ ​star​ ​who​ ​built​ ​and​ ​led​ ​more​ ​than​ ​300+ 
+engineers​ ​to​ ​build​ ​a​ ​scalable​ ​technology​ ​“Adform”​ ​now​ ​used​ ​globally. ​ ​With​ ​a 
+degree​ ​in​ ​computer​ ​science,​ ​Andrej​ ​is​ ​recognized​ ​as​ ​one​ ​of​ ​the​ ​thought​ ​leaders​ ​in 
+“Agile”​ ​software​ ​development​ ​philosophy,​ ​and​ ​as​ ​a​ ​proof​ ​of​ ​that,​ ​he​ ​runs​ ​one​ ​of​ ​the 
+most​ ​read​ ​“Agile”​ ​blogs​ ​in​ ​the​ ​world​ ​called​ ​“Agile​ ​Mindstorm”.​ ​It​ ​is​ ​notable​ ​that​ ​Andrej 
+left​ ​“Adform”​ ​after​ ​9​ ​years​ ​of​ ​excellent​ ​work​ ​to​ ​co-found​ ​“Monetha”. 
+ 
+Eric​ ​Duprat:​ ​payments​ ​lead.​ ​​LinkedIn 
+ 
+A​ ​major​ ​name​ ​in​ ​the​ ​payments​ ​industry.​ ​A​ ​former​ ​executive​ ​at​ ​PayPal.​ ​Eric​ ​was​ ​the 
+General​ ​Manager​ ​of​ ​Mobile​ ​at​ ​PayPal​ ​where​ ​he​ ​played​ ​an​ ​instrumental​ ​role​ ​in 
+establishing​ ​PayPal​ ​as​ ​a​ ​player​ ​in​ ​mobile​ ​payments.​ ​Under​ ​Eric’s​ ​leadership, 
+PayPal’s​ ​mobile​ ​payment​ ​business​ ​saw​ ​a​ ​growth​ ​from​ ​$7M​ ​of​ ​payment​ ​volume​ ​on 
+2008​ ​to​ ​$4+​ ​billion​ ​in​ ​2011.​ ​During​ ​the​ ​past​ ​two​ ​decades,​ ​he​ ​has​ ​established​ ​a 
+reputation​ ​throughout​ ​the​ ​industry​ ​as​ ​a​ ​results-oriented​ ​leader.​ ​Eric​ ​has​ ​20+​ ​years​ ​of 
+experience​ ​in​ ​global​ ​payment​ ​and​ ​security​ ​systems​ ​and​ ​6​ ​years​ ​with​ ​CEO/CFO​ ​and 
+founder​ ​experience​ ​including​ ​successful​ ​fund​ ​raising. 
+ 
+ 
+Kellogg​ ​N.​ ​Fairbank:​ ​Sales​ ​and​ ​Merchant​ ​Acquisition​ ​Lead​ ​​LinkedIn 
+ 
+An​ ​accomplished​ ​FinTech​ ​sales​ ​and​ ​BD​ ​executive.​ ​Former​ ​VP​ ​Sales/Head​ ​of 
+Business​ ​Development​ ​for​ ​Braintree​ ​Payments​ ​in​ ​Europe,​ ​hired​ ​as​ ​their​ ​first 
+international​ ​employee.​ ​As​ ​part​ ​of​ ​the​ ​Braintree/Venmo​ ​team,​ ​helped​ ​grow​ ​the 
+company​ ​to​ ​$12​ ​Billion​ ​in​ ​overall​ ​payments​ ​volume​ ​and​ ​$4​ ​Billion​ ​in​ ​mobile 
+payments​ ​volume​ ​annually,​ ​until​ ​its​ ​eventual​ ​sale​ ​to​ ​PayPal​ ​in​ ​2013​ ​for​ ​$800​ ​Million. 
+8+​ ​years​ ​working​ ​for​ ​major​ ​names​ ​in​ ​the​ ​payments​ ​space,​ ​including​ ​GlobalCollect 
+and​ ​PayPal.​ ​More​ ​recently,​ ​leveraging​ ​his​ ​strong​ ​international​ ​network​ ​in​ ​the 
+industry,​ ​Kellogg​ ​has​ ​been​ ​advising​ ​large​ ​international​ ​merchants​ ​to​ ​streamline​ ​their 
+payments​ ​platforms​ ​at​ ​Opus​ ​Capital. 
+
+ 
+Jean-Marc​ ​Seigneur:​ ​Decentralized​ ​Trust​ ​and​ ​Reputation​ ​lead.​ ​​LinkedIn 
+ 
+Dr.​ ​Jean-Marc​ ​(Jm)​ ​Seigneur​ ​has​ ​published​ ​internationally​ ​more​ ​than​ ​100​ ​scientific 
+papers​ ​on​ ​computational​ ​trust​ ​and​ ​online​ ​reputation​ ​management​ ​(ORM).​ ​With​ ​a 
+Ph.D.​ ​in​ ​Computer​ ​Science​ ​from​ ​Trinity​ ​College​ ​Dublin​ ​in​ ​2005,​ ​Jm​ ​has​ ​managed 
+several​ ​EU-funded​ ​multi-million​ ​R&D​ ​e-reputation​ ​projects​ ​at​ ​the​ ​University​ ​of 
+Geneva.​ ​In​ ​2016,​ ​he​ ​has​ ​obtained​ ​a​ ​Google​ ​Award​ ​for​ ​Excellent​ ​Research​ ​in 
+
+ 
+42 
+
+https://www.linkedin.com/in/jmseigneur/
+https://www.linkedin.com/in/ericduprat/
+https://www.linkedin.com/in/kelloggfairbank/
+
+
+ 
+
+Academia.​ ​He​ ​has​ ​advised​ ​companies​ ​like​ ​“Philips”,​ ​“Amazon”,​ ​“Thales”​ ​and 
+“Swissquote”.​ ​Since​ ​2016,​ ​Jm​ ​has​ ​started​ ​to​ ​apply​ ​online​ ​reputation​ ​management​ ​to 
+the​ ​fintech​ ​world​ ​as​ ​Chief​ ​Reputation​ ​Officer​ ​of​ ​“GLOBCOIN”​ ​and​ ​as​ ​member​ ​of​ ​the 
+ITU​ ​standardization​ ​groups​ ​on​ ​trust​ ​and​ ​digital​ ​currency​ ​including​ ​digital​ ​fiat 
+currency. 
+ 
+ 
+Justas​ ​Pikelis:​ ​co-founder,​ ​business.​ ​​ ​​ ​​LinkedIn  
+ 
+Justas​ ​is​ ​a​ ​Lithuanian​ ​entrepreneur​ ​who​ ​has​ ​previously​ ​founded​ ​companies​ ​in​ ​IT​ ​and 
+robotics.​ ​He​ ​has​ ​gotten​ ​a​ ​governmental​ ​scholarship​ ​for​ ​his​ ​education​ ​in​ ​IIT​ ​(illinois 
+Institute​ ​of​ ​Technology).​ ​In​ ​2010,​ ​Justas​ ​Pikelis​ ​founded​ ​an​ ​established​ ​marketing 
+and​ ​business​ ​consulting​ ​company​ ​“G4”.​ ​With​ ​his​ ​main​ ​competencies​ ​in​ ​digital 
+marketing,​ ​social​ ​media​ ​marketing,​ ​product​ ​advertising​ ​and​ ​branding,​ ​he​ ​was​ ​able​ ​to 
+attract​ ​well​ ​known​ ​international​ ​clients​ ​in​ ​Baltic​ ​States,​ ​France,​ ​the​ ​United​ ​States, 
+United​ ​Arab​ ​Emirates,​ ​Sri​ ​Lanka,​ ​Singapore,​ ​Malaysia​ ​and​ ​other​ ​countries.​ ​Justas’s 
+marketing​ ​knowledge​ ​of​ ​financial​ ​technologies​ ​and​ ​the​ ​blockchain​ ​inspired​ ​him​ ​to 
+co-found​ ​“Monetha”. 
+ 
+Laurynas​ ​Jokubaitis:​ ​co-founder,​ ​product.​ ​​ ​​ ​​LinkedIn  
+ 
+Previously​ ​a​ ​founding​ ​CEO​ ​of​ ​“Wowtto”​ ​which​ ​raised​ ​more​ ​than​ ​EUR​ ​300k​ ​from 
+Venture​ ​Capital​ ​investors.​ ​With​ ​an​ ​enormous​ ​interest​ ​in​ ​blockchain​ ​and​ ​financial 
+technologies,​ ​he​ ​made​ ​an​ ​investment​ ​into​ ​“Edgeless”:​ ​zero​ ​edge​ ​decentralized 
+casino​ ​on​ ​Ethereum​ ​blockchain.​ ​One​ ​of​ ​the​ ​most​ ​successful​ ​ICOs​ ​of​ ​2017. 
+It​ ​is​ ​noteworthy,​ ​that​ ​Laurynas​ ​(Wowtto​ ​CEO)​ ​and​ ​Andrej​ ​(Wowtto​ ​CTO)​ ​co-founded 
+“Wowtto”​ ​and​ ​have​ ​a​ ​history​ ​of​ ​working​ ​together​ ​in​ ​a​ ​team.  
+ 
+Viaceslavas​ ​Ruckis:​ ​engineering​ ​lead.​ ​​ ​​ ​​LinkedIn 
+ 
+Jack​ ​of​ ​all​ ​trades.​ ​The​ ​right​ ​hand​ ​of​ ​Andrej.​ ​10​ ​years​ ​of​ ​experience​ ​designing​ ​and 
+implementing​ ​software​ ​solutions.​ ​With​ ​the​ ​main​ ​expertise​ ​at​ ​the​ ​moment​ ​carrying​ ​in: 
+B2B​ ​Ecommerce,​ ​Blockchain​ ​based​ ​systems​ ​development,​ ​data​ ​driven​ ​applications 
+and​ ​document​ ​management​ ​applications.​ ​Bridging​ ​the​ ​gap​ ​from​ ​technical​ ​solutions 
+to​ ​business.​ ​Participated​ ​as​ ​a​ ​technical​ ​consultant​ ​in​ ​startups​ ​like​ ​Wobble​ ​and 
+Wowtto.​ ​Helped​ ​designing​ ​and​ ​building​ ​scalable,​ ​durable​ ​and​ ​cost​ ​optimized​ ​solution 
+covering​ ​mobile,​ ​frontend​ ​and​ ​backend​ ​tracks. 
+ 
+Martynas​ ​Adomaitis:​ ​smart​ ​contract​ ​developer.​ ​​ ​​ ​​LinkedIn 
+ 
+10​ ​years​ ​experience​ ​implementing​ ​software​ ​solutions​ ​in​ ​B2B​ ​ecommerce,​ ​document 
+
+ 
+43 
+
+https://www.linkedin.com/in/laurynas-jokubaitis-2b460248/
+https://www.linkedin.com/in/justaspikelis/
+https://www.linkedin.com/in/martynas-adomaitis-27b83845/
+https://www.linkedin.com/in/viaceslavas-ruckis-aa46b220/
+
+
+ 
+
+management​ ​applications.​ ​Now​ ​he​ ​focuses​ ​on​ ​data​ ​driven​ ​applications​ ​and​ ​smart 
+contract​ ​development. 
+Full​ ​stack​ ​software​ ​developer​ ​capable​ ​of​ ​handling​ ​whole​ ​life-cycle​ ​of​ ​development 
+process. 
+Counts​ ​himself​ ​as​ ​a​ ​developer​ ​who​ ​believes​ ​nothing​ ​is​ ​impossible​ ​and​ ​any​ ​idea​ ​can 
+be​ ​realized. 
+ 
+Andrej​ ​Davidovic:​ ​software​ ​engineer.  
+ 
+Andrej​ ​has​ ​a​ ​very​ ​interesting​ ​background​ ​as​ ​he​ ​came​ ​to​ ​software​ ​development​ ​world 
+from​ ​a​ ​world​ ​of​ ​statistical​ ​data​ ​-​ ​previously​ ​working​ ​in​ ​National​ ​Department​ ​of 
+Statistics.​ ​He​ ​is​ ​very​ ​precise​ ​in​ ​his​ ​work​ ​as​ ​a​ ​software​ ​engineer​ ​so​ ​he​ ​does​ ​not​ ​let 
+even​ ​a​ ​minor​ ​bug​ ​slip​ ​by​ ​unnoticed! 
+ 
+Erikas​ ​Malisauskas:​ ​product​ ​design/front​ ​end​ ​developer.​ ​​ ​​​ ​LinkedIn 
+ 
+Erikas​ ​is​ ​a​ ​magnificent​ ​UX/UI​ ​designer​ ​who​ ​also​ ​has​ ​a​ ​great​ ​product​ ​design​ ​thinking. 
+His​ ​6​ ​years​ ​of​ ​experience​ ​working​ ​in​ ​companies​ ​like​ ​"MailerLite"​ ​and​ ​"Mediapark" 
+has​ ​positioned​ ​him​ ​as​ ​a​ ​high​ ​demand​ ​user​ ​experience​ ​designer.​ ​Erikas​ ​is​ ​most 
+effective​ ​when​ ​designing​ ​handy​ ​user​ ​interfaces,​ ​attractive​ ​product​ ​landing​ ​pages​ ​and 
+satisfying​ ​mobile​ ​apps.​ ​He​ ​also​ ​has​ ​a​ ​strong​ ​knowledge​ ​in​ ​coding,​ ​so​ ​can 
+communicate​ ​with​ ​developers​ ​very​ ​easily 
+ 
+
+8.2​ ​Monetha​ ​Advisory​ ​Team 
+ 
+James​ ​Downton:​ ​Marketing​ ​advisor.​ ​​ ​​ ​​LinkedIn 
+ 
+Co-Founder​ ​of​ ​“The​ ​Marketing​ ​Group​ ​Plc”​ ​(IPO’d​ ​in​ ​May​ ​2016).​ ​He​ ​is​ ​also​ ​the​ ​CEO 
+of​ ​a​ ​successful​ ​marketing​ ​agency​ ​“Clickverta”.​ ​James’s​ ​knowledge​ ​in​ ​digital 
+marketing​ ​brings​ ​a​ ​lot​ ​of​ ​value​ ​to​ ​“Monetha”​ ​and​ ​his​ ​strategic​ ​experience​ ​in​ ​IPO’s​ ​is 
+potentially​ ​very​ ​precious​ ​for​ ​“Monetha’s”​ ​ICO. 
+ 
+Sean​ ​Harper:​ ​product​ ​and​ ​payments​ ​advisor.​ ​​ ​​ ​​ ​​LinkedIn 
+ 
+Sean​ ​Harper​ ​has​ ​been​ ​deeply​ ​involved​ ​in​ ​payments​ ​industry.​ ​After​ ​a​ ​successful​ ​run, 
+his​ ​project​ ​"FeeFighters"​ ​(founder/CEO)​ ​was​ ​later​ ​bought​ ​by​ ​an​ ​e-commerce​ ​giant 
+"Groupon".​ ​“FeeFighters”​ ​later​ ​became​ ​Groupon​ ​Payments.​ ​After​ ​the​ ​acquisition, 
+Sean's​ ​involvement​ ​in​ ​payments​ ​didn't​ ​stop.​ ​He​ ​was​ ​a​ ​Chief​ ​Product​ ​Officer​ ​at​ ​more 
+than​ ​100​ ​employee​ ​firm​ ​called​ ​"2Checkout".​ ​Nowadays,​ ​Sean​ ​is​ ​a​ ​board​ ​member​ ​of 
+
+ 
+44 
+
+https://www.linkedin.com/in/jamesdownton/
+https://www.linkedin.com/in/erikasaves/
+https://www.linkedin.com/in/harpersean/
+
+
+ 
+
+"Accion"​ ​and​ ​a​ ​thought​ ​leader​ ​in​ ​payment​ ​innovation. 
+ 
+Nik​ ​Rokop:​ ​business​ ​advisor.​ ​​ ​​LinkedIn 
+ 
+Nik​ ​Rokop​ ​is​ ​currently​ ​a​ ​Coleman​ ​Foundation​ ​Clinical​ ​Associate​ ​Professor​ ​of 
+Entrepreneurship​ ​at​ ​Illinois​ ​Institute​ ​of​ ​Technology​ ​with​ ​over​ ​40​ ​years​ ​of​ ​experience 
+in​ ​business​ ​(Former​ ​VP​ ​of​ ​Rokop​ ​Corporation).​ ​Nik​ ​positioned​ ​himself​ ​as​ ​one​ ​of​ ​the 
+thought​ ​leaders​ ​in​ ​Chicago’s​ ​startup​ ​scene. 
+ 
+Robertas​ ​Visinskis:​ ​ICO​ ​advisor​ ​​LinkedIn 
+ 
+Robertas​ ​is​ ​not​ ​only​ ​a​ ​founder/CEO​ ​of​ ​a​ ​very​ ​well-known​ ​ICO​ ​project​ ​“Mysterium 
+Network”​ ​(raised​ ​15​ ​million​ ​USD​ ​in​ ​only​ ​45​ ​minutes!),​ ​but​ ​also​ ​has​ ​more​ ​than​ ​2​ ​years 
+of​ ​experience​ ​in​ ​online​ ​reputation​ ​systems​ ​building​ ​(ex-CEO​ ​of​ ​Trustribe).​ ​Robertas 
+provides​ ​significant​ ​ICO​ ​knowledge​ ​to​ ​raise​ ​money​ ​for​ ​Monetha’s​ ​development. 
+ 
+KPMG:​ ​Legal​ ​and​ ​regulatory​ ​advisor 
+ 
+KPMG​ ​in​ ​Switzerland​ ​helps​ ​us​ ​navigate​ ​through​ ​Switzerland’s​ ​legal​ ​and​ ​regulatory 
+framework.​ ​They​ ​helped​ ​us​ ​make​ ​the​ ​structuring​ ​of​ ​the​ ​coin​ ​for​ ​the​ ​launch​ ​of​ ​the 
+token​ ​sale​ ​and​ ​coordinate​ ​with​ ​the​ ​regulatory​ ​authority. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+References  
+ 
+https://telr.com/english/blog/the-problem-with-payment-gateways 
+https://www.cognizant.com/whitepapers/the-internet-of-things-a-prime-opportunity-for-merch
+ant-acquirers-codex2042.pdf 
+https://curbstone.com/iblog/68-everything-you-wanted-to-know-about-card-processing 
+https://due.com/blog/top-5-payment-processing-challenges-small-businesses/ 
+https://cdn.www.getsmarter.com/career-advice/wp-content/uploads/2016/12/mit_mobile_and
+
+ 
+45 
+
+https://cdn.www.getsmarter.com/career-advice/wp-content/uploads/2016/12/mit_mobile_and_money_payments_report.pdf
+https://due.com/blog/top-5-payment-processing-challenges-small-businesses/
+https://www.linkedin.com/in/nikrokop/
+https://www.cognizant.com/whitepapers/the-internet-of-things-a-prime-opportunity-for-merchant-acquirers-codex2042.pdf
+https://www.linkedin.com/in/robertasvisinskis/
+https://curbstone.com/iblog/68-everything-you-wanted-to-know-about-card-processing
+https://telr.com/english/blog/the-problem-with-payment-gateways
+https://www.cognizant.com/whitepapers/the-internet-of-things-a-prime-opportunity-for-merchant-acquirers-codex2042.pdf
+
+
+ 
+
+_money_payments_report.pdf 
+https://www.wirecard.de/fileadmin/user_upload/wirecard/market_intelligence/infografiken/Ed
+gar__Dunn___Company_-_2016_Advanced_Payments_Report.pdf 
+https://www.linkedin.com/pulse/5-ways-blockchain-technology-may-change-payment-industr
+y-per-majak 
+https://due.com/blog/top-5-payment-processing-challenges-small-businesses/ 
+https://medium.com/@edmundedgar/why-ethereum-is-great-for-payments-ee80c5cb912a 
+https://www.ft.com/content/00585722-ef42-11e6-930f-061b01e23655 
+https://www.google.lt/#q=mobile+payment+share+of+ecommerce&start=10 
+https://www.diva-portal.org/smash/get/diva2:706735/FULLTEXT01.pdf 
+http://www.ey.com/Publication/vwLUAssets/EY_-_Mobile_money_-_the_next_wave_of_grow
+th_in_telecoms/$FILE/EY-mobile-money-the-next-wave.pdf 
+https://www.capgemini.com/resource-file-access/resource/pdf/payments_trends_2016.pdf 
+https://letstalkpayments.com/an-overview-of-blockchain-technology/ 
+https://www.slideshare.net/bernardmoon/fintech-industry-report-2016 
+https://www.statista.com/statistics/249863/us-mobile-retail-commerce-sales-as-percen
+tage-of-e-commerce-sales/ 
+http://www.ipv.pt/ci/adm/docs/5797.pdf- 
+ 
+ 
+ 
+ 
+ 
+
+ 
+46 
+
+https://www.wirecard.de/fileadmin/user_upload/wirecard/market_intelligence/infografiken/Edgar__Dunn___Company_-_2016_Advanced_Payments_Report.pdf
+https://www.slideshare.net/bernardmoon/fintech-industry-report-2016
+http://www.ey.com/Publication/vwLUAssets/EY_-_Mobile_money_-_the_next_wave_of_growth_in_telecoms/$FILE/EY-mobile-money-the-next-wave.pdf
+https://www.linkedin.com/pulse/5-ways-blockchain-technology-may-change-payment-industry-per-majak
+http://www.ey.com/Publication/vwLUAssets/EY_-_Mobile_money_-_the_next_wave_of_growth_in_telecoms/$FILE/EY-mobile-money-the-next-wave.pdf
+https://www.wirecard.de/fileadmin/user_upload/wirecard/market_intelligence/infografiken/Edgar__Dunn___Company_-_2016_Advanced_Payments_Report.pdf
+https://due.com/blog/top-5-payment-processing-challenges-small-businesses/
+http://www.ipv.pt/ci/adm/docs/5797.pdf-
+https://cdn.www.getsmarter.com/career-advice/wp-content/uploads/2016/12/mit_mobile_and_money_payments_report.pdf
+https://www.statista.com/statistics/249863/us-mobile-retail-commerce-sales-as-percentage-of-e-commerce-sales/
+https://www.diva-portal.org/smash/get/diva2:706735/FULLTEXT01.pdf
+https://www.google.lt/#q=mobile+payment+share+of+ecommerce&start=10
+https://letstalkpayments.com/an-overview-of-blockchain-technology/
+https://www.ft.com/content/00585722-ef42-11e6-930f-061b01e23655
+https://www.linkedin.com/pulse/5-ways-blockchain-technology-may-change-payment-industry-per-majak
+https://www.statista.com/statistics/249863/us-mobile-retail-commerce-sales-as-percentage-of-e-commerce-sales/
+https://www.capgemini.com/resource-file-access/resource/pdf/payments_trends_2016.pdf
+https://medium.com/@edmundedgar/why-ethereum-is-great-for-payments-ee80c5cb912a
+

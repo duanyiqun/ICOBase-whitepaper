@@ -1,0 +1,757 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MergedFile
+
+
+T H E    
+
+S M A R T M E S H  
+
+P R O J E C T
+
+s
+m
+
+a
+r
+
+tm
+e
+
+s
+h
+
+.io
+ 
+
+p
+r
+
+@
+s
+
+m
+a
+
+r
+m
+
+e
+s
+
+h
+.io
+
+S M A R T M E S H  
+F O U N D A T I O N
+
+P T E .  L T D .
+
+P R O D U C E D   B Y
+
+T H E  
+S M A R T M E S H  
+
+W H I T E  P A P E R
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 1
+
+SmartMesh
+Tokenized Mobile Mesh
+Network
+_____________________________
+
+If the Internet was conceived today, it would have been a P2P network that connects
+smartphones, and it would have been safer, cheaper, faster.
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 2
+
+Abstract
+1) Mesh network is an ad hoc network that can be automatically established between radio
+
+nodes such as mobile devices. It is more private, resilient, and efficient and often comes
+free, yet it has a challenge to scale, one of the reasons is the lack of economic incentives.
+In this project, we provide with such an incentive by introducing a crypto token, of which
+people can "mine" when they share their nodes.
+
+2) To do that, there are issues that we need to address:
+3) Mesh network is often used and deployed in areas where Internet is not available, which
+
+means payment transactions between nodes need to be made without access to the
+blockchain, obviously this is a paradox.
+
+4) Even when the device in this mesh has access to the Internet, there is still a problem:
+Because of a hard-coded limit on computation per block, the Ethereum blockchain
+currently supports roughly 15 transactions per second compared to, say, the 45,000
+processed by Visa. To make Ethereum based ERC-20 token a viable payment solution for
+the mesh network we build, we need to make it faster.
+
+5) How to scale up blockchain to make the payment fast and economical?
+The core enabler is to develop an off-chain payment channel by which such micro payment
+transactions to be both scalable and cost effective.
+This white paper examines how we have solved and will solve these problems to achieve
+our goal, a mesh of nodes that self-sustain, self-govern and grows.
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 3
+
+Table of Content
+
+Genesis 4
+
+About SmartMesh 4
+
+What is the SmartMesh protocol 5
+
+SmartMesh positioning: 5
+Mobile MESH technology pioneer, focus on technology, andecosystem incubator. 5
+SmartMesh Third-Party Ecosystem 5
+
+Information Security Issues: Point-to-point no network transmission 6
+Network congestion Problem 6
+Off-internet Communication 6
+Off-internet Payment 6
+Inclusive Finance 6
+
+Vision: a global mesh network 7
+
+Mesh Overview 8
+
+Nodes 8
+
+User nodes 8
+
+Carrier nodes 9
+
+Internet nodes 9
+
+Tech Stack 9
+
+SmartMesh Mesh Architecture 9
+
+SmartMesh Token 10
+SmartMesh Token Contract 10
+Signed Authorized Payment 10
+
+SmartMesh Micro Payment 11
+
+SmartMesh Off-Internet Payment 12
+
+Universal connectivity architecture 13
+
+SmartMesh governance 14
+
+SmartMesh Foundation 14
+
+SmartMesh Decision Making Committee 14
+
+SmartMesh Ecosystem Center 15
+
+SmartMesh Research and Development Center 15
+
+SmartMesh Marketing Centers 15
+
+SmartMesh Daily Operation Center 15
+
+Development team 16
+
+Roadmap 17
+
+SmartMesh ico Allocation and distribution 18
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 4
+
+Genesis
+
+In the beginning Men created the Internet.
+People see the Internet is good. However, on the Internet, people do not trust each other.
+Then people created the blockchain. It allows people to work with each other without mutual trust.
+Blockchain is good, but it's slow.
+Then people created Lightning, Raiden and Plasma. They allow people to do things. But people can
+not work without the net.
+Then people created SmartMesh, the spirit of SmartMesh saying: Make everything connected, even
+without the internet.
+SmartMesh connects everything without internet. Everything is always connected.
+
+About SmartMesh
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 5
+
+What is the SmartMesh protocol
+
+SmartMesh is a blockchain-based IoT underlying protocol that enables smartphones, onboard
+devices and other devices to connect to each other without the internet. SmartMesh has built-in
+blockchain light nodes and extends Raiden network protocol for Tokenless Meshless Pay. Motivated
+by blockchain tokens, SmartMesh can self-organize to create a resilient, decentralized, self-healing
+Mesh Network that offers higher near-field communication speed and bandwidth than the Internet
+and it will be generally free. It is possible to achieve a network parallel to the existing Internet.
+
+SmartMesh positioning:
+
+Mobile MESH technology pioneer, focus on technology, andecosystem incubator.
+
+The Serval Project in Australia and NextApp in China optimized Wi-Fi Direct, Bluetooth, Bluetooth LE,
+ANT and other wireless protocols and the above applications to make the near field communication
+of Android and iOS mobile phones become a reality.
+Every Mesh Network-based messaging application does the same thing: They allow you to stay in
+touch with others without a SIM card. Their user scenarios may be slightly different, some focus on
+chatting, others focus on research, and some may focus on social interactions, but together they
+have tens of millions of user groups.
+Based on existing technological advantages and ecological resources, SmartMesh will mainly
+continue to develop the underlying IoT protocol in the future, and continuously integrate the
+world's top off-internet communication companies to devise a uniform standard for global IoT
+communications. At the same time, the SmartMesh Foundation will continue to introduce various
+application scenarios based on the SmartMesh protocol through third-party development teams
+such as incubation and cooperation.
+
+SmartMesh Third-Party Ecosystem
+
+SmartMesh builds a mesh network that is parallel to the internet based on P2P direct connection of
+smartphones, so that traffic would not need to be sent to the center servers but through
+communication in the local mesh network, saving traffic resources, reducing radiation and waste of
+power communication. The SmartMesh Foundation will make it easier and more convenient to
+make people to people, people to things and things to things connections. It is the future direction
+of off-internet communication, off-internet payment and off-internet gaming.
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 6
+
+Information Security Issues: Point-to-point no network
+transmission
+Have you ever wondered if all of the mobile apps we use have the risk of information disclosure?
+Why? Because all of our chat history, browsing habits are all saved in the third-party server.
+American daddy, Visa and other big companies have had many times the more common customer
+data breach leaked small businesses. With SmartMesh all messaging is just point-to-point, thus
+isolating the risk of third-party information being exposed.
+
+Network congestion Problem
+Whether in the train, subway, plane, outdoor camping or sports stadium, User density congests
+data traffic and people cannot access the internet properly. However, with SmartMesh, users can
+send messages to people around during these entertainment and sports events, which can be
+wonderful moment if shared with the outside world. As the density of devices increases, the quality
+of the network improves, and the speed will be faster. SmartMesh fulfills this last mile of social
+connectivity, and entertainment will be more enjoyable.
+
+Off-internet Communication
+Some time ago, the United Nations Broadband Commission (hereinafter referred to as "UNBC")
+released a report saying that there are 3.9 billion people in the world without regular access to the
+Internet. Although internet inflitration in the developed countries is very high. And yet, in the
+world's poorest 48 countries, 90% of the population has no access to the Internet. SmartMesh will
+change the situation for those people with the rollout of SmartMesh App. People can connect to
+each other to form a local mesh network. Within one local mesh network, as long as that one of the
+mobile phones has internet connectivity, everyone on the Mesh will be able to connect to the
+world.
+
+Off-internet Payment
+Current payment application platforms cannot work without internet, SmartMesh will allow
+payment through the SmartMesh Mesh Network, where each phone will become a node to form a
+dense network. This new network will break the traditional boundary of payment service and make
+payment easy.
+
+Inclusive Finance
+As of 2016, about 2.9 billion people around the world have no bank accounts, and at present,
+basically all the products in the field of mobile banking and payment are implemented using the
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 7
+
+internet. SmartMesh will build upon its own communications protocol to build a rich ecosystem of
+communications and inclusive finance to fulfill the demand of these 2.9 billion people.
+
+Vision: a global mesh network
+As pioneers in mesh network, we had faced the dilemma of scalability. A global Mesh Network
+requires global collaborations of technologists and entrepreneurs to work together, and users need
+to be incentivized to share nodes, hence to increase user density to make the mesh network to be
+stable and accessible.
+Today three leaders in mesh network decide to pursue the vision together. With progress of the
+Raiden Network in off-chain micro-payment and SmartMesh Raiden Extension, off-Internet high
+speed payment is achievable. The team of dreamers and technologists are working together to
+make this shared vision a reality.
+We propose to build a mesh network that connects mobile phones, on which people who share
+their own mobile phone as nodes are rewarded in crypto tokens.
+
+SmartMesh is a marketplace of nodes, like an Airbnb of smart phone nodes. Anyone with a smart
+phone can send text messages, photos, or voice to other nodes; and they are rewarded with tokens
+by helping transfer the data, and of course the data packets are encrypted.
+To deal with daunting task like this, the biggest challenge is to transfer crypto tokens between
+mobile phones quickly so that people can share their nodes and get paid quickly, which was not
+possible on blockchain. As we all know, transaction confirmation on blockchain is too slow and too
+expensive to be applied on sharing mobile phone nodes.
+Since inception, Bitcoin and blockchain have been plagued with its inherent technical issues, only 7
+transactions can be processed per second, and every transaction need be confirmed by 6 blocks
+deep to be verified as effective. This level of throughput could not be regarded as a currency, by
+which people can use to conduct business, not to mention the ultra-high speed of micropayments
+between mobile phone nodes.
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 8
+
+Fortunately, since 2015, we have the new technologies that we didn’t have, which are blockchain,
+crypto token, especially Lightning Network and Raiden Network as an off-chain payment
+accelerator.
+Lightning Network proposes to achieve peer to peer micro-payment transactions off-chain with
+on-chain validation and settlement. The blockchain processing bottleneck is broken; issues such as
+latency, finality, throughput and privacy are all solved. Raiden Network is based on the same
+concept and built on Ethereum. Plasma expands Lightning Network to computation in addition to
+payment.
+Hereafter is the plan to construct the SmartMesh Mesh:
+1. To create an incentive mechanism by which people are rewarded. This is implemented with
+
+blockchain and token.
+2. To make token transaction fast enough, we need to build a Ethereum based Raiden Network
+
+Micropayment
+3. Raiden Network runs fast enough, but it could not work without access to the Internet. We
+
+have designed SmartMesh Extension to enable off-Internet micropayment on mobile phones;
+4. When off-Internet micropayment is ready, people can participate in SmartMesh Mesh by
+
+sharing their mobile phone nodes to co-build the global mesh network we conceive.
+
+In the following passages, we will describe with reasonable technical details about what we have
+done, what we are doing, where this journey lead us to, you should be able to understand whether
+you are of technical or non-technical background.
+
+Mesh Overview
+
+Nodes
+
+The base primitive that SmartMesh Mesh is built upon is a pay-for-forward network, of which no
+infrastructures are needed; instead all people use their smart phones to connect together.
+These smart phones, or called nodes, can pay each other for the service of forwarding data, and
+verify that the data forwarding is performed well.
+It is like an Airbnb of mobile phones, which share nodes and provide with data-forwarding services
+rather than bed and breakfast. This mesh network not only handle “local traffic” such as text and
+phone sharing inside the mesh but also provide with Internet access if at least one node is
+connected to the Internet with a “uplink”.
+There are three types of nodes in SmartMesh Mesh.
+
+User nodes
+
+Anyone who connects with SmartMesh Mesh is a user node. They pay their neighboring node to
+send out data packets. For example, if there are 3 nodes between Alex and Brandon, then Alex pays
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 9
+
+the 3 nodes for forwarding the data packets to Brandon through a mesh payment channel, which
+will synchronize to the blockchain and settle in crypto tokens. In this case, Alex is user node here.
+
+Carrier nodes
+
+Carrier nodes are smart phones that forward data packets for other nodes. They are paid in tokens
+for their services. In this case, Brandon is a carrier node.
+
+Internet nodes
+
+Internet nodes are like carrier nodes, but they have internet access and offer to others. They can
+be smart phones with big data plans they would like to resell to others who need it.
+
+Tech Stack
+
+SmartMesh Mesh Architecture
+
+SmartMesh Mesh is a decentralized peer-to-peer distributed network that functions either Internet
+access is available or not.
+SmartMesh embeds the Ethereum light node, which is based on the Light Ethereum Sub-protocol
+(LES), and is connected to the Ethereum via Geth. LES is a protocol designed for a light client such as
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 10
+
+a smart phone. It downloads only the block header instead of the entire block when the block chain
+is synchronized. It provides a fully secured blockchain access function, but does not participate in
+mining and the formation of consensus.
+Decentralized Application, on the top layer, interacts with the SmartMesh contract layer through
+Web3.js. The user uses Wallet to store their private key, make transfer, and make query and other
+operations.
+SmartMesh uses Swarm to implement to host personal files in shared storage space, uses Whisper
+to build a peer-to-peer messaging network, off-chain transactions via Lightning Network or Plasma
+to accelerate transaction confirmation and incentivize users to contribute storage space and
+network resources through checkbook contracts.
+Near-field, peer-to-peer connection based onWi-Fi, Bluetooth, ANT and other protocols, with the
+increase of distributed nodes, this mesh networks will be better, and ultimately becomes a world
+parallel network to the Internet.
+We believe SmartMesh Mesh has the potential to support applications far more beyond
+off-Internet chat, data transmission and off-Internet payment.
+
+SmartMesh Token
+
+SmartMesh token, or SMT, is a contract token based on Ethereum. Ethereum is an open source,
+public distributed computing platform that provides a distributed Turing Complete Virtual Machine
+to support execution of SmartMesh contracts.
+SMT is used to incentivize SmartMesh Mesh node contributors and to purchase products and
+services in the SmartMesh Mesh ecosystem. When users connect their SmartMesh phone nodes to
+the SmartMesh mesh network, they are rewarded with the SMT tokens. The longer the user stays
+on the network, the more SMT that they amass on the SmartMesh Blockchain.
+
+SmartMesh Token Contract
+SmartMesh Token Contract is based on the ERC20 Token standard. We implemented a number of
+features on SMT to support SmartMesh Mesh, of which include Signed Authorized Agent
+Transactions etc.
+ERC20 Token Standard has won recognition in the Ethereum community. A large number of
+well-known Ethereum applications are in compliance with this standard and has proven the ERC20
+Token Standard to be successful.
+
+Signed Authorized Payment
+The Ethereum-based SmartMesh contract consume gas to run, which is one of the precautions that
+Ethereum has taken for security, but gas needs to be paid in ETH, which increases the complexity of
+Decentralized Applications (DAPP) to mainstream users. To help these users, we have developed a
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 11
+
+Signed Authorized Payment Agent, which is to let a third party to assist a user to pay ETH to cover
+gas consumption.
+The service fee of the third party is paid in SMT. The process requires the user to authorize by
+providing with a specified format signature to activate the SmartMesh contract to operate on users
+assets.
+Minimal information required for the he user signature include the agent address, service fee and
+statement of asset change, which means the user, has complete control and it is as safe and sound
+as if the user is doing it in person.
+
+SmartMesh Micro Payment
+
+With progress of blockchain technologies, the PC based wallet applications are no longer good
+enough for users. Data on nodes are too large to be synchronized and PCs are not convenient to be
+carried around.
+The present light wallet apps still rely on centralized services, which require the signature data to be
+sent to servers for the transaction data to be broadcast. If the servers are hacked, the request of
+service would be denied and this is potential security vulnerability. Plus, in the process of
+transactions, it would need confirmation of other blocks and consumes gas. This is contradictory to
+the very idea of decentralization and could not complete micropayment quickly.
+SmartMesh App is a truly decentralized mobile node with micro-payment wallet, which uses the
+LES-enabled Geth node on the smart phone to verify and synchronize the block header. The Light
+Ethereum Sub-protocol, often referred to as LES, is a sub-protocol of Ethereum, which is designed
+to maintain the high security of certain instances of Ethereum on the current state in a light client
+(such as a smart phone).
+Meanwhile, SmartMesh App has integrated Raiden Network technologies to accelerate
+micro-payment transactions. The Raiden Network is a state channel technology based on Ethereum,
+which increases the processing power of the Ethereum The basic idea, is that users can have
+transaction with signed messages off-chain, rather than to have all transactions to be processed
+on-chain.
+Through PEER-TO-PEER payment and deposit on Ethereum, Raiden retains the protection
+mechanism that the Blockchain has provided.
+Raiden network has the advantages of scalability, fast transaction, confidentiality, interoperability,
+low cost, micropayment-ready. It could process up to one million transactions per second.
+Confirmation and termination of transfer is completed within a 1 second. The cost of transaction
+could be as low as 1 millionth that of on-chain, which makes SmartMesh a viable micropayment
+solution.
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 12
+
+SmartMesh Off-Internet Payment
+
+Today, electronic payment without Internet remains a technological challenge, even when payment
+apps such as Alipay and Wechat Pay have become so popular that people living in China could
+hardly live one day without. Yet, in locations where Internet is either unavailable or the mobile
+service signal is low, none of these apps could complete a transaction without Internet access until
+SmartMesh. For the first time, SmartMesh makes crypto payment without Internet possible.
+
+SmartMesh Off-Internet Micropayment is the SmartMesh Payment Protocol based on Raiden
+Network Extension. Users transfer signed encrypted transaction data through direct peer to peer
+such as Wi-Fi, aka, to allow Off-Internet payment.
+Alice and Brandon establish a channel on Raiden Network through SmartMesh App; they both
+commit a certain amount of assets as deposits, then they are ready to make payment with
+SmartMesh Micro Payment.
+
+Alice and Brandon establish off-Internet connection through SmartMesh App
+Alice pays Brandon 5 tokens
+Alice sends crypto transaction data to Brandon without the Internet, both sides store crypto
+transaction information.
+When there is internet access, Alice and Brandon synchronizes the transaction information up to
+Raiden Network node; verify transaction settlement within the transaction verification channel.
+If Alice closes the transaction channel, Alice submits a signed Update Transaction message to the
+blockchain contract, which will wait for the Hold Period. During which if Brandon could submit a
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 13
+
+higher Update Transaction message with a higher sequence number; the contract will confiscate all
+pledged assets of Alice in the channel and transfer it to Brandon. If there is no objection until wait
+for Brandon is timeout, the contract will complete the transfer payment and close the channel in
+the block chain according to the message content. Vice versa.
+If Alice closes transaction channel, Alice submit a Update Transaction
+Compared to Lightning Network, Raiden Network introduces a more common SmartMesh Condition
+than Hash Timelock Contract of Lightning Network. In the event of a dispute, the contract can be
+enforced by presenting the latest version of the Update Transaction message to the SmartMesh
+contract on blockchain, and requesting SmartMesh contract to process the SmartMesh Condition in
+the message. If there is no dispute, none of these will appear on Ethereum blockchain, which
+enhances the privacy as well as performance.
+When Alice and Brandon make off-the-Internet transactions, the two sides store encrypted
+transaction information off-chain, which will be synchronized, verified when the Internet access is
+available. This guarantees security of the transactions and untamperable.
+SmartMesh has integrated Ethereum Light Node, Raiden Light Node and a SmartMesh Off-Internet
+Extension of Raiden Network, by which a parallel global mesh network incentivized by crypto tokens
+will emerge and thrive.
+
+Universal connectivity architecture
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 14
+
+SmartMesh Mesh aim to enable a Global Mesh Network parallel to the Internet. Every
+SmartMeshphone is like a SmartMesh. A single spark can start a wild fire on a prairie. With the
+increase in Fireflies, mobile SmartMesh nodes create a network of their own; the apps would be
+SmartMesh enough to choose a path for each data packet, over Internet or SmartMesh Mesh.
+Blockchain was on PC nodes only, and now they are making their ways to SmartMeshphones with
+mobile light node technologies, which allows crypto currencies trading whether access to the
+Internet is available or not. SmartMesh off-Internet Payment lets crypto currencies can be traded
+even when the Internet is off.
+For the future generation of communications, the Internet and SmartMesh Mesh complement each
+other, SmartMesh Mesh will be carrying a large number of local traffic and it will be the most
+optimized universal connection.
+
+SmartMesh governance
+
+SmartMesh Foundation
+
+SmartMesh Decision Making Committee
+
+The SmartMesh Blockchain Decision Committee is responsible for the management and decision
+making of significant matters, including the appointment and dismissal of executive officers and
+directors of each committee and important decisions. Members of the decision-making committee
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 15
+
+term of office are three years. The committee will appoint a chairperson and specifics shall be
+determined later.
+The members of the First Decision Committee will be appointed by SmartMesh Founding Team and
+Investors.
+
+SmartMesh Ecosystem Center
+
+The purpose of SmartMesh Ecosystem Center is to explore the potential use cases and facilitate
+business applications, to promote applications in education, e-commerce and social networks, to
+achieve artificial intelligence, cross-border transactions, interoperability and sharing of value.
+
+SmartMesh Research and Development Center
+
+The SmartMesh Research and Development Center is responsible for the research and development
+of infrastructure layer technologies, including testing, launch and verification. The SDK supports
+mainstream programming languages and provides technical support in all domains and offer open
+source code.
+
+SmartMesh Marketing Centers
+
+TheMarketing Center is responsible for technical marketing, product marketing and marketing of
+related applications.
+
+SmartMesh Daily Operation Center
+
+The Daily Operation Center performs financial, legal affairs, Human Resources, office administration
+managerial duties. Finance Department is responsibility for the use and audit of the fund;
+Drafting and examination of official documents, to prevent potential legal risks; Administration and
+HR are responsible for personnel management, compensation and daily administrative work.
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 16
+
+Development team
+
+Henry Wang
+
+Founder of SmartMesh
+The Founder and President of International Blockchain Application Federation (IBAF).
+
+Kraken Yu
+
+VP Global Engineering
+Former Chief Strategy Officer for Cubits, leading European Crypto Payment Exchange in Berlin / UK
+
+Ashton Addison
+
+Chief Marketing Strategist
+CEO & Founder at EventChain.io
+A leader, entrepreneur and technology enthusiast in blockchain technology since 2013.
+
+Leo Yao
+
+VP Mesh Networking
+Former Head of Huawei Mesh Networking Product Line
+
+Maxim Prishchepo
+
+Founder&CEO Integral LLC
+Maxim is a founder and CEO of two innovative IT companies.
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 17
+
+Roadmap
+
+
+
+SmartMesh White Paper
+
+©2017-SmartMesh 18
+
+SmartMesh ico Allocation and distribution
+Only 3,141,592,653 SMT tokens will ever be created. The SMT tokens are intended to be
+allocated as follows:
+
+- 40% to be sold by the Company to Crowdsale and pre-crowdsale purchasers pursuant to
+the offering or through Company Approved Affiliates.
+- 25% reserved by the Company to incentivize future developements.
+- 12% reserved by the Company early investors.
+- 10% to be distributed by the Company to the SmartMesh team.
+- 5% to be used for marketing purposes throughout the entire
+project.
+- 4% reserved by the Company advisory board.
+- 4% reserved by the Company angel investors.
+
+- SmartMesh platform and Company Staff tokens will be locked for 24 months after
+the end of the Crowdsale.
+- Company angel investors and early investors tokens will be locked for 12 months
+after the end of the Crowdsale.
+- Company advisory board tokens will be locked for 12 months after the end of the
+Crowdsale, and released at a rate of 25% per quarter thereafter.
+
+©All Rights Reserved 2017 SMARTMESH FOUNDATION PTE. LTD.
+
+
+	Genesis 
+	About SmartMesh
+	   What is the SmartMesh protocol
+	    SmartMesh positioning: 
+	   Mobile MESH technology pioneer, focus on techno
+	SmartMesh Third-Party Ecosystem
+	Information Security Issues: Point-to-point no net
+	Network congestion Problem
+	Off-internet Communication
+	Off-internet Payment
+	Inclusive Finance
+	Vision: a global mesh network
+	Mesh Overview
+	Nodes
+	User nodes 
+	Carrier nodes
+	Internet nodes
+	Tech Stack
+	SmartMesh Mesh Architecture
+	SmartMesh Token
+	SmartMesh Token Contract
+	Signed Authorized Payment
+	SmartMesh Micro Payment
+	SmartMesh Off-Internet Payment
+	Universal connectivity architecture
+	SmartMesh governance 
+	SmartMesh Foundation 
+	SmartMesh Decision Making Committee
+	SmartMesh Ecosystem Center
+	SmartMesh Research and Development Center
+	SmartMesh Marketing Centers
+	SmartMesh Daily Operation Center
+	Development team
+	Roadmap
+	  SmartMesh ico Allocation and distribution
+

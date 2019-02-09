@@ -1,0 +1,1982 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DECENTRALIZED LEVERAGED 
+EXCHANGE
+
+LAST UPDATED: 2017-11-22
+
+LEVERJ
+
+Technical Adviser
+
+
+
+LEVERJ.IO
+
+TABLE OF CONTENTS
+
+1. Executive Summary
+
+2. The Leverj Protocol
+
+3. Derivatives on Leverj
+
+4. The LEVERJ (LEV) token
+
+5. Token Sale
+
+6. Post-sale Considerations
+
+7. Platform Features
+
+8. Enhanced Trading Platform
+
+9. Timeline 
+
+10. Roadmap 
+
+11. Leadership
+
+12. Legal Considerations
+
+3
+
+4
+
+10
+
+11
+
+16
+
+17
+
+19
+
+20
+
+24
+
+25
+
+27
+
+28
+
+2
+
+
+
+1. EXECUTIVE SUMMARY
+
+INTRODUCTION
+Derivatives trading is the largest market in the 
+world at an estimated 1.2 quadrillion dollars1, with 
+a current growth rate of 30% per year2. The crypto-
+currency market is growing at an even faster rate, 
+and is eager for a full derivatives ecosystem that ex-
+ists within the traditional financial systems. Current 
+growth in centralized cryptocurrency derivatives ex-
+changes, which is at $1 billion daily notional value3, 
+indicates massive potential for the industry.
+
+CHALLENGES
+Efforts to establish markets for leveraged crypto-
+currency derivatives have focused on centralized 
+exchanges that traders must trust as the custodi-
+ans of their funds. In an environment where even 
+the biggest (Bitfinex) and most security conscious 
+(Shapeshift) exchanges experience loss of funds to 
+hacking, a focus on security using blockchain and 
+cryptography becomes imperative.
+
+While decentralized exchanges are nothing new, 
+most of them offer poor user experience, low liquid-
+ity, and scant traction. Most of these systems subse-
+quently fail to be adopted at scale.
+
+SOLUTION
+Leverj decentralizes the most security critical fea-
+tures of derivatives trading by implementing them 
+in smart contracts. Leverj focuses on derivatives 
+trading and the supporting ecosystem. We plan to 
+build an ecosystem of features that will enable insti-
+tutions to move into the cryptocurrency world.
+
+PROBLEM
+Traditional finance is bogged down by heavy regu-
+lation, excessive cost and censorship, among other 
+issues. The cryptocurrency world has inherited some 
+of these failings and added a few of its own, includ-
+ing counterparty risk, account security, identity pro-
+tection, exchange centralization and exchange insta-
+bility. Taken together, these points of friction make it 
+inefficient and suboptimal.
+
+OPPORTUNITY
+Blockchain based financial systems challenge 
+the status quo by providing censorship resistance, 
+non-repudiation, counterparty risk reduction, and 
+many other desirable properties to financial con-
+tracts. Cryptography and game theory offer an op-
+portunity to build regulatory benefits into block-
+chain products.
+
+A trading system has efficiency and risk manage-
+ment requirements that make it usable and practi-
+cal; however, these requirements are currently only 
+satisfied in centralized systems. Current decentral-
+ized exchanges are unsuitable for trading and barely 
+
+acceptable for hedging risk. Leverj aims to satisfy the 
+requirements for practical trading in a decentralized 
+system by implementing a distributed exchange 
+protocol executing off-chain, yet verifiable on-chain. 
+By supporting derivatives contracts, classical hedg-
+ing strategies can be combined with financial appli-
+cations on Ethereum. The degree of centralization 
+may be tunable without compromise of the distrib-
+uted nature of the protocol. This leaves room to ex-
+plore decentralized variants of initially centralized 
+algorithms, both of which remain distributed.
+
+LEVERJ.IO
+
+3
+
+1 http://www.bis.org/statistics/d1.pdf
+2 http://www.bis.org/publ/qtrpdf/r_qt0712.pdf
+
+3 https://coinmarketcap.com/currencies/volume/24-hour/
+
+
+
+LEVERJ.IO
+
+2. THE LEVERJ PROTOCOL
+
+Leverj consists of on-chain Custody and Staking 
+contracts along with an off-chain centralized or-
+der book and matching engine. The exchange pro-
+vides various aspects of the trading experience the 
+user interacts with such as a UI, API, integration 
+with other platform services, etc.
+
+SEGREGATED ACCOUNTS
+Custody contract implements the non-custodial 
+model of Leverj. Its purpose is to hold funds and 
+ensure that only the owner can deposit or with-
+draw from it. When a user deposits into the smart 
+contract (1), Custody allocates any tokens or ether 
+received against the sending address and enables 
+withdrawal only up to the balance an account holds. 
+This ensures that its not possible for any malicious 
+actor to take control of all the funds.
+
+ORDER BOOK 
+AND MATCHING ENGINE
+Order book and matching are centralized and are 
+off-chain. The order-cancel-match critical path 
+
+4
+
+is optimized for speed and are designed to not 
+depend on the blockchain.
+
+The user signs orders with their private key and sends 
+orders to the exchange(2). This ensures that the key 
+that controls the account is the same key that au-
+thorized the order or other operation. The updated 
+order book is streamed to all users off-chain like any 
+other centralized order book. As orders are matched, 
+executions are also streamed to all users. Executions 
+are periodically synced(3) to the blockchain. The 
+Custody smart contract verifies the integrity of the 
+fills and updates user balances(4). 
+
+To ensure any pending executions are synced and 
+balances are updated, withdrawals are gated by 
+the Exchange. The user submits a signed request 
+to the exchange, which ensures there are no open 
+orders or unsynced transactions and submits the 
+request to the Custody contract. However after 
+10,000 blocks of inactivity, the user can withdraw 
+directly(5) from the Custody contract even without 
+exchange involvement.
+
+Fig 1. Leverj Protocol
+
+
+
+LEVERJ.IO
+
+5
+
+STAKING
+Custody contract accumulates fees and sends it to 
+the Staking contract. The staking contract periodi-
+cally calculates the allocation for everyone based on 
+the amount and duration of the stake according to 
+the staking formula. Staking generates new tokens 
+as needed. Fees paid in ether are sent to the owner 
+of the staking contract (Leverj) and the appropriate 
+amount of FEE is generated and distributed.
+
+ATTACK VECTORS
+There are two main kinds of attack on custodial 
+models. The first is the heist, where a significant 
+portion of the funds is taken at once. The attack-
+er does not expect to be able to repeat the attack 
+and would generally not care if the theft is detected 
+immediately. The second is skimming, where small 
+amounts of funds are taken repeatedly over a lon-
+ger duration. The attacker generally would like to 
+go undetected since repeating the attack as many 
+times as possible is key to a big payout. Our model 
+aims to provably prevent heists and prevent or de-
+tect most types of skimming using fraud-proofs.
+
+MALICIOUS USER
+Since the only avenue to extract assets is via a user 
+account, a compromised exchange would have to 
+set up a malicious user and collaborate with it to 
+move all assets into that user by supplying data in a 
+way to overcome the checks of the custody contract. 
+Since all executions need signatures from users and 
+executions without assets backing them would be 
+rejected, the exchange would have to rearrange ex-
+isting legitimate orders to favor the malicious user. 
+These can only occur in small pieces and are skim-
+ming attacks.
+
+PROTOCOL
+Instead of matching peer-to-peer, users can submit 
+their orders to one or more matching entities (ex-
+changes), which can do the matching and submit 
+fills to the smart contract.PREVENTING HEISTS
+
+For heists to be possible, the possibility for one per-
+son to control all coins in custody must be possible. 
+Segregated accounts that only enable the depositor 
+to withdraw only their own balance eliminate this 
+possibility, since the attacker would now need the 
+keys of most users of the platform. Ensuring that 
+the user’s keys are never sent across the network 
+is also a fundamental requirement for this to work. 
+Therefore all authentication must be using public/
+private keys only. Password or other shared secrets 
+should never be used.
+
+TRADING SETTLEMENTS
+Movement of assets between users as part of 
+trade settlement requires that both users sign the 
+amounts and price they are ready to exchange. Al-
+
+though the exchange performs the match, the cus-
+tody contract  transfers assets after verifying user 
+signatures and integrity of all changes. Executions 
+need to meet specifications set by both users ac-
+cording to the signatures from their private key for 
+the smart contract to move assets among users.
+
+1. User deposits into segregated account on 
+
+Custodian 
+
+a) User ui deposits asset ti into his segregated 
+
+account Ai from Ethereum address ei  
+
+b) Custodian updates user balance of ti for Ai 
+
+2. Exchange updates balance of Ai after N 
+
+confirmations enabling trading of new balance
+
+3. User ui submits signed order 𝞺i with signature 𝞺i
+
+4. Exch ange validates order 𝞺i against signature 𝞺i
+
+5. Exch ange countersigns order 𝞺i with signature
+
+𝞺i and returns to user ui
+
+6. Exch ange updates order 𝞺i in order book
+
+PROTOCOL SPEC
+
+
+
+LEVERJ.IO
+
+6
+
+7. Exch ange match es orders  𝞺1 and 𝞺2 to creates
+
+execution 𝞺i 
+
+8. Exch ange periodically submits execution set 𝞺 to 
+
+custodian
+
+9. Custodian processes execution set 𝞺 
+
+a. Custodian verifies user signatures 𝞺1 and 𝞺2 
+
+and execution parameters (price, quantity, expira-
+
+tion, etc.) against orders 𝞺1 and 𝞺2 for each 𝞺i in 
+
+b. Custodian settles asset balance between 
+
+users u1 and u2 of matched orders 
+
+c. Custodian ensures integrity of all asset balanc-
+
+es ensuring all assets add up
+
+10. User ui initiates a withdraw request of n ti from 
+
+his segregated Account Ai
+
+11.  Custodian moves n ti to user’s Ethereum 
+
+Address ei
+
+12. Fees if any are moved from Custodian to a stak-
+
+ing contract. Th ere is never any assets flowing 
+
+to Exchange. All FEE and ether move to the 
+
+staking contract, which generates and allocates 
+
+FEE tokens as needed.
+
+PROTOCOL SECURITY
+The exchange cannot synthesize or alter orders with 
+the signature of a legitimate user and the protocol 
+constraints prevent catastrophic theft. A compro-
+mised exchange however may collude with and fa-
+vor a malicious user using a variety of skim attacks. 
+To favor a colluding user, the exchange would need 
+signed orders from victim users which would be 
+filled at an adverse price. Since the exchange can-
+not synthesize or alter orders, it may try to manipu-
+late legitimate orders to use them for victimization. 
+Note that even a coarse expiry time on the orders 
+greatly reduces the impact and detection burden of 
+the attack. Note that this is not a comprehensive list 
+of all possible attacks but a framework to quickly 
+address them by quickly adding fraud-proofs when 
+a new defect is discovered.
+
+REPLAY ATTACK
+A simple way to synthesize a victim order is to sim-
+ply remember a past order and use it when the 
+price is adverse for the victim. The exchange simply 
+duplicates an order and fills it at a price favoring a 
+colluding user. Custodian contract prevents replay 
+attacks by the tracking order ids of all matched or-
+ders and rejecting duplicates.
+
+CANCELLED ORDER ATTACK
+A variant of the above is when the exchange simply 
+fills an order that was cancelled. Storing cancelled 
+order ids in the smart contract is impractical, since 
+cancels are numerous and cancellation need to be 
+fast. However, proof-of-cancellation (exchange sig-
+nature on cancel request) can be used as a fraud-
+proof that can be submitted to the Custodian. The 
+custodian can verify that a cancelled order has been 
+filled and halt the exchange.
+
+PRICE-TIME PRIORITY 
+VIOLATION ATTACK
+Even non-cancelled orders can be used for attacks 
+by simply withholding them from the order book 
+and waiting for an adverse price movement and 
+matching with a colluding user. Such violations 
+can be detected by the user using price-time fraud 
+proof: an execution exists for an order with a better 
+price but later timestamp than the victim order.
+
+NON-ACKNOWLEDGEMENT ATTACK
+An exchange may refuse to accept legitimate or-
+ders from a user due to operational policies such 
+as rate limiting or network issues; these do not 
+produce fraud-proofs. In contrast, a non-acknowl-
+edgement attack occurs when the exchange takes 
+a user’s signed order and instead of replying with its 
+own signature, saves the submitted order for skim-
+ming. It then waits for the price to move and then 
+matches it at an unfavorable price, siphoning profit 
+
+
+
+LEVERJ.IO
+
+7
+
+to a colluding user. If this happens, a user can detect 
+immediately when he sees one of his unacknowl-
+edged orders filled. The fraud proof for this is the 
+same as the price-time fraud-proof.
+
+SUPPRESSED EXECUTIONS ATTACK
+While executions cannot be synthesized or dupli-
+cated, they can certainly be suppressed, enabling 
+a compromised exchange to simply suppress los-
+ing trades of a colluding user from being synced to 
+the smart contract and withdrawing funds while 
+the smart contract is still in the stale state. This is a 
+variant of TOCTOU attack4. Users who observe with-
+drawals being processed while the Custodian is in a 
+stale state can submit a fraud proof preventing the 
+attacker from withdrawing.
+
+MITIGATION OF SKIM ATTACKS
+The exchange would need to sync executions to the 
+smart contract containing a fraudulent execution 
+before the assets can be withdrawn. The syncing 
+will cause anyone monitoring the executions to de-
+tect the anomaly instantly and submit fraud-proofs 
+as described below, preventing the attacker from 
+stealing funds.
+
+A compromised exchange can rearrange orders 
+that flow into and executions that flow out of the 
+matching engine. There are four possible rearrange-
+ments: suppress, pass faithfully, duplicate and reor-
+der (i.e., pass after a delay)
+
+There are two possible order operations: Cancel and 
+create. Updates are simply cancel and create.
+
+Suppress Duplicate Reorder
+
+Order Create No effect 
+
+Replay
+
+Prevented
+
+Order Cancel
+
+Execution
+
+Non-Acknowledgment 
+
+Execution Suppression
+
+Cancel Order Attack 
+
+No effect
+
+Non-Acknowledgment Price-time Priority 
+
+4  https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use
+
+Faithful passes are not attacks, so we have the following attack matrix:
+
+Table 1. Combinatorial attacks on leverj protocol
+
+All these attacks are described above and have 
+fraud-proofs that can be submitted to the Custodi-
+an contract to disincentivize skimming attacks.
+
+
+
+LEVERJ.IO
+
+8
+
+PRICE-TIME PRIORITY
+For a compromised exchange to skim from the user, 
+it would need to violate price-time priority. This can 
+be detected in most cases.
+
+Consider the order book at time t0 and t1. Prices 
+above spread are asks, ones below are bids. Price 
+moves adversely to bid o1. An adverse move would 
+have to put an ask below the victim bid for skim-
+ming to be profitable.
+
+ t0   t1
+
+ 302   
+
+ 301
+
+ 300   300
+
+ (spread)   299
+
+ 298(o1)   298(o2)
+
+ 297   297(o3)
+
+ 296   (spread)
+
+    295
+
+    294
+
+    293
+
+The exchange holds victim bid order o1 at 298 and 
+waits for an adverse price move. It then sells into 
+the victim’s bid with its own ask o2 at 298 and buys 
+from a bystander ask o3 at 297. Since the fraudulent 
+order at 298 cannot be trusted, detection of fraud 
+should depend purely on the victim and the by-
+stander orders.
+
+In general, order time agreed between the exchange and 
+non-compromised user using signatures can be accept-
+ed by the smart contract to be sufficient for verification.
+
+In most cases, when o1 is withheld for skimming, the 
+market moving adversely would cause an execution 
+at a better price (<= o1.price) but with worse order 
+time (>o1.time), enabling us to detect the violation.
+
+The time for an execution is effectively the time of 
+the taker order. Therefore, price-time priority has 
+been violated if:
+
+1. There is an execution where the maker order o3’s 
+time is worse than the victim’s order o1’s time
+
+2. o3 price is better than o1 price
+
+Detection for victim bids:
+
+for all executions Ei after o1.time
+
+Let oi = Ei.maker
+
+isViolation = oi.time > o1.time && oi.price <= o1.price
+
+To prevent detection, the exchange would have to 
+prevent any ask hitting the price of the victim order, 
+which would effectively halt normal trading.
+
+LIMITATIONS
+In a highly illiquid market, there are many corner 
+cases that the above may not catch. For example, 
+may be no market action for a long time followed 
+by a sudden move (price gap) which can be exploit-
+ed by a compromised exchange. This is currently 
+not detectable.
+
+MARKET ORDERS AND 
+FRONT RUNNING
+Market orders skip ahead of the price-time priority 
+queue and front running market orders cannot be 
+detected using the check above.
+
+Market orders are not currently part of the proto-
+col. We hope to extend market order fraud-proofs or 
+go fully on-chain once plasma or other high speed 
+chain is operational.
+
+
+
+LEVERJ.IO
+
+9
+
+SUBMISSION OF FRAUD-PROOFS
+A malicious actor would need to withdraw their 
+funds after a fraudulent action. As long as there is a 
+sufficient window of time to detect and submit fraud 
+proofs, the smart contract can prevent the withdraw-
+al or disable further action on the Custodian. Other 
+users can detect the state change and withdraw 
+their assets at their convenience. We propose a wait-
+ing period for every user after a withdrawal request, 
+sufficient enough for any fraud proofs to be submit-
+ted. The exchange and smart contract would not ac-
+cept any transactions for a user until their withdrawal 
+is processed. This slight inconvenience is a justifiable 
+tradeoff for the added safety. On the verification of 
+a fraud proof, the exchange would halt. The perpe-
+trator’s balance could be awarded to the fraud-proof 
+submitter, making compliance a form of mining.
+
+All attacks can be detected by the victim as soon as 
+they occur and a fraud-proof can be submitted to the 
+smart contract, which can be used to take corrective 
+action such as disabling the exchange and allowing 
+all users to withdraw their funds. A small mandatory 
+delay before withdrawal ensures there is sufficient 
+time to submit fraud-proofs before a malicious user 
+can siphon money from the contract.
+
+COMPARISON TO OTHER DEX
+Leverage and Derivatives: Most DEX are not fo-
+cused on risk management and derivatives offer-
+ings. We hope to be the first exchange that offers 
+derivatives with secure custody.
+
+High Speed:  Blockchain not involved in the critical 
+create-cancel-execute path, making Leverj highly 
+competitive against other DEX in terms of speed.
+
+Congestion insensitive: Leverj can postpone sync 
+to blockchain during times of blockchain conges-
+tion, while enabling trading to proceed, only im-
+pacting withdrawals. On-chain matching DEX can-
+not degrade gracefully during network congestion.
+
+Secure against on-chain attacks: There are a vari-
+ety of attacks possible against pure peer to peer ex-
+changes. For example, a rouge taker can soak up all 
+bids from makers and not submit trades. Conges-
+tion and arbitrage attacks are also possible when 
+market is moving fast.
+
+Low cost: 98% of orders are cancelled in developed 
+markets. By not requiring storage costs for can-
+celled orders, Leverj is nearly 2 orders of magnitude 
+cheaper than nearly every other DEX. Leverj can 
+also hold off syncing to chain when during times of 
+blockchain congestion without impacting trading. 
+Only withdrawals are impacted. This kind of grace-
+ful degradation cannot be matched by most DEX.
+
+Other DEX Action
+
+Leverj Action
+
+Eth Cost 
+for 100 orders
+
+Eth Cost 
+for 100 orders
+
+Stores unfilled orders
+
+Does not store unfilled orders
+
+Stores filled orders
+
+Stores filled orders
+
+Requires gas to cancel
+
+No gas to cancel
+
+Total
+
+Total
+
+Updates on every execution
+
+Updates on every execution
+
+*Estimated cost at 4Gwei gas price
+
+0.0196
+
+0
+
+0.0004
+
+0.0004
+
+0.0196
+
+0
+
+0.0002
+
+0.0002
+
+0.0398
+
+0.0006
+
+
+
+LEVERJ.IO
+
+10
+
+3. DERIVATIVES ON LEVERJ
+
+NON-CUSTODIAL DERIVATIVES 
+The major distinguishing requirement of leveraged 
+exchanges over spot exchanges is risk management. 
+Since users who owe money can simply walk away 
+in a decentralized environment, we need to ensure 
+that no account goes into negative balance. 
+
+In the traditional exchanges, risk is managed by con-
+tinuous monitoring of user balances and closing out 
+positions forcibly when there is a risk of insolvency. 
+This process is expensive and not reliable. Clearing 
+members are bound by legal obligations to make 
+up for any shortfall of their member accounts.
+
+Replacing monitoring and ad-hoc forcible closures 
+with mandatory stop orders enables us to manage 
+risk without a central exchange user. The entire risk 
+system is beyond the scope of this document but 
+relies on the following:
+
+1. Atomic stops: Stop orders  th at are guaranteed to fill 
+
+within a max slippage. These enable prevention of 
+
+accounts going into negative balance.
+
+2. Auto-Deleveraging: Ensures integrity of system and 
+
+no positions are dangling. 
+
+To implement the above in a manner that makes 
+trading enjoyable requires careful crafting of appro-
+priate leverage offered, reference index construc-
+tion and handling of corner cases.
+
+DERIVATIVES OFFERINGS
+Our primary product offering will be ETH/USD in-
+verse contracts based off a median index created 
+from the highest volume spot exchanges. This will 
+enable hedging Ether against fiat using only Ether. 
+We can also offer a variety of products denominated 
+in ether for which a reliable reference index can be 
+constructed. 
+
+ERC20 spot and derivatives on highly liquid tokens 
+will also be offered including options and futures in-
+cluding on Token index prices.
+
+
+
+4. THE LEVERJ (LEV) TOKEN 
+
+BI-LEVEL TOKENS VS REVENUE 
+SHARING
+Most revenue sharing systems have the following 
+challenges:
+
+1. Building liquidity is difficult.
+
+2. Attracting other service providers to grow a rich 
+ecosystem is extremely challenging without liquidity.
+
+The two level Leverj token system has been carefully 
+crafted using economics and game theory to incen-
+tivize liquidity and quickly grow a rich ecosystem. 
+
+USER PERSPECTIVE
+From the user’s point of view, bi-level tokens have 
+the following advantages:
+
+1. The second level token holds fees stable in ETH 
+terms to ameliorate cryptocurrency fluctuations. 
+For example, when the ETH exchange rate is very 
+high in USD terms, it makes sense to sell your full 
+ETH position instead of using part of it to pay fees.
+
+2. The ability to sell excess capacity when trading activity 
+
+LEV AND FEE TOKENS
+The Leverj DApp is designed with a bi-level token 
+structure a two level tokens. The primary token is of 
+fixed supply, and represents a license to transact on 
+LEV platform proportional to the percentage owner-
+ship of the token supply. The secondary token FEE is 
+the accounting mechanism to ensure the rights of 
+LEV can be exercised fully in a decentralized manner.
+
+LEVERJ.IO
+
+11
+
+0.0001 ETH
+
+LEV is an ERC20 token that represents the partici-
+pation to trade on Leverj. LEV is not a requirement 
+to trade on Leverj and a trader can choose to simply 
+pay fees in ether. However, regular traders will ben-
+efit from holding and staking LEV since its econom-
+ically attractive to do so.
+
+is low. This allows the trader to sell FEE tokens generat-
+ed when, for example, the trader is on vacation without 
+giving up possession of LEV tokens. This is equivalent 
+to a temporary transfer of the right to use LEV. Indeed, 
+some investors may have a strategy of simply selling 
+generated FEE as a steady source of income.
+
+SYSTEM PERSPECTIVE
+From a systemic point of view, two level tokens 
+have enormous positive consequences.
+
+1. The accumulation of FEE tokens over time will 
+increase trading pressure. This is analogous to 
+typically higher volume on no-fee exchanges, sim-
+ply because more trading strategies are profitable. 
+This increased trading pressure increases volume 
+and liquidity greatly, enabling tight spreads and 
+predictable fills, without slippage and helps facil-
+itate generally healthy markets. 
+
+2. A secondary effect of FEE accumulation is that it 
+enables a rich ecosystem with many other partici-
+pants. The ability to pay for additional services from 
+auto-generated FEE tokens means that traders are 
+more likely to purchase, and providers more likely 
+
+
+
+12
+
+LEVERJ.IO
+
+LEV TOKEN
+The token sold during the token launch is known as 
+the Leverj LEV token. This token is created only on 
+the ICO issuance and it’s supply is permanently fixed. 
+
+FEE TOKEN GENERATION
+LEV tokens may be used to generate FEE tokens. LEV 
+holders will not automatically generate fee; howev-
+er, token holders can “lock” their tokens into a smart 
+contract, which applies the user-selected lock dura-
+tion to a formula designed to regulate the total sup-
+ply of FEE tokens. Longer lock periods generate larg-
+er amount of FEE tokens.
+
+Once users execute the contract, depending on how 
+much trading activity there is on the platform — as 
+well as the FEE market mechanics — they will receive 
+a proportionate amount of FEE.
+
+Once the lock duration expires, the locked LEV ceas-
+es to generate FEE and becomes freely transferable 
+by the holder once again. There is no limit (other 
+than duration) to how many times LEV tokens may 
+be used to generate FEE.
+
+GAME THEORY
+The main goal is to create a functioning market for 
+FEE in ETH (Ethereum) so that LEV holders have 
+access to a liquid market for their disbursements, 
+and Leverj platform users can get a discount on the 
+fees they would otherwise pay in ETH. Connecting 
+these two major users in the Leverj ecosystem will 
+help foster an economy within the community that 
+pairs groups with overlapping interests. FEE will be 
+maintained as a market that maximizes utility for 
+the stakeholders.
+
+FEE TOKEN GENERATION 
+LEV tokens may be used to generate FEE tokens. 
+LEV holders will not automatically generate fee; 
+however, token holders can “lock” their tokens into 
+a smart contract, which applies the user-selected 
+lock duration to a formula designed to regulate the 
+total supply of FEE tokens. Longer lock periods gen-
+erate larger amount of FEE tokens.
+
+Once users execute the contract, depending on 
+how much trading activity there is on the platform 
+
+— as well as the FEE market mechanics — they will 
+receive a proportionate amount of FEE.
+
+Once the lock duration expires, the locked LEV ceas-
+es to generate FEE and becomes freely transferable 
+by the holder once again. There is no limit (other 
+
+to supply services to the system. High liquidity and 
+a rich ecosystem are value multipliers and we be-
+lieve the overall system would be worth much more 
+than a simple revenue sharing/fee rebate system. 
+
+
+
+13
+
+LEVERJ.IO
+
+ECONOMICS
+Market forces are at work in the pricing of any as-
+set, and the FEE token is no exception. An increase 
+in supply, ceteris paribus, will increase the quan-
+tity provided by the market and lower the price. 
+Therefore, an unexpected supply increase will ad-
+just the price downward, whereas an unexpected 
+demand increase will adjust the price upward.
+
+Using a diverse set of tools to influence the FEE de-
+mand and supply mechanisms, both directly and 
+indirectly, the system will target a FEE price that is 
+approximately equal to the coupon value for cover-
+ing Leverj exchange fees.
+
+DEMAND PRESSURE
+When the economic activity on the platform grows, 
+there is likely to be demand pressure on FEE. This 
+pressure will not only affect LEV holders who might 
+wish to generate additional FEE; there may also be 
+significant secondary market demand that drives the 
+price significantly above the targeted coupon rate.
+
+To counteract this effect, more FEE is produced 
+when fees are paid in ETH and distributed to LEV 
+holders, easing the demand pressure and bringing 
+
+SUPPLY PRESSURE
+The opposite situation can also occur: an imbalance 
+arises from too much FEE supply, resulting in a price 
+decline. In response to this, the self-regulating sys-
+tem for FEE production will adjust such that the FEE 
+supply is slowed to bring the price back up.
+
+PRICE STABILIZATION MECHANISMS
+The price of FEE will be managed by a series of Price 
+Stabilization Mechanisms (PSMs).
+
+SYSTEMIC PSMS
+The primary systemic PSMs are parameterized by 
+platform activity and supply generated by the same 
+platform activity. 
+
+The most important source of demand for FEE to-
+kens will be the users who are purchasing FEE to 
+pay the Leverj trade fees which are denominated 
+in Ether. The platform will accept FEE and it will be 
+tradable in a FEE/ETH order book.
+
+To give a simple example, if an individual is go-
+ing to make a trade worth 100 ETH and the fee 
+charged is 1% (in practice it will be much less than 
+this), then the user needs to pay 1 ETH or 10,000 
+FEE (1 FEE = 0.0001 ETH). Assume that the price 
+
+than duration) to how many times LEV tokens may 
+be used to generate FEE.
+
+the market back into equilibrium.
+
+
+
+LEVERJ.IO
+
+14
+
+currently trading at 0.00008 in the FEE/ETH order 
+book, meaning it is 20% cheaper to pay your trad-
+ing fees in FEE than ETH. The trader on Leverj can 
+merely check a box preferring to pay for fees in FEE 
+token instead of ETH, and platform will automati-
+cally buy 10,000 FEE from the market at 0.00008 
+(for 0.8 ETH) and cover the 1 ETH fees, saving 0.2 
+ETH in the process!
+
+In this model, if the FEE/ETH book is trading above 
+0.0001 ETH (at say 0.00012 ETH), due to excessive 
+speculative demand, then the platform demand 
+will dry up, and LEV holders who receive FEE will 
+be able to get above-par returns on the FEE they 
+sell into the market for ETH.
+
+On the supply side, when FEE is generated, it is 
+done so based on a formula that attempts to tar-
+get FEE price to be near 0.0001 ETH. Thus, LEV 
+holders will be able to receive FEE and use it to pay 
+for trading activity on Leverj, save it for future trad-
+ing activity, or sell for ETH immediately. Our prima-
+ry concern is that FEE retain proper demand and a 
+reasonable price, should LEV holders choose to sell. 
+The risk of the FEE price being abnormally low out-
+weighs the risk of it being abnormally high.
+
+Thus, if the price becomes low, based on a criteria 
+we make open source, it will trigger a mass-staking 
+by the team’s LEV. This will mean less FEE distrib-
+utes to LEV holders who are selling large amounts 
+in the FEE market. This will help reduce the sup-
+ply pressure while the demand remains the same, 
+guiding prices closer to the par value.
+
+LEV AND FEE TOKENS
+Leverj is designed around a bi-level token structure. 
+The primary token (LEV) is of fixed supply, and rep-
+resents a license to transact on the Leverj platform 
+proportional to the total token supply. The second-
+ary token, FEE, is the accounting mechanism to 
+ensure the rights of LEV can be exercised fully in a 
+decentralized manner.
+
+STAKING
+Fair distribution of FEE tokens is ensured by staking 
+LEV tokens. Users who stake for longer durations 
+get more FEE tokens. This ensures that users com-
+mitted to trading on the platform can be assured 
+that they can exercise their license compared to us-
+ers who are holding LEV simply for speculation. 
+
+Leverj uses economic pressure instead of a mathe-
+matical model to compute the proper amount of 
+FEE required to be in circulation. This is because 
+a mathematical model will always have elaborate 
+that no model can perfectly account for. An eco-
+nomic pressure relieves us of the need for modeling 
+and we simply use actual demand pressure which 
+can be reduced to simple computation.
+
+In an equilibrium where the volume traded on the 
+exchange does not change, there is sufficient FEE 
+tokens that circulate among market participants, 
+enabling trading without paying fees to the ex-
+change. This is the ideal execution of LEV as license 
+to trade on the platform and FEE as its accounting 
+mechanism.
+
+When the volume falls, excess FEE tokens may be 
+destroyed (or simply stored) and users can continue 
+to trade without paying additional fees.
+
+When the platform is ramping up, increasing vol-
+ume is likely to result in a situation where there are 
+insufficient FEE tokens to satisfy the trading volume. 
+This may give rise to a premium on FEE tokens and 
+may result in undesirable behavior such as hoard-
+ing. To prevent this, fees can be paid in ether and 
+the equivalent FEE tokens are generated and dis-
+tributed to LEV stakers.
+
+The amount of FEE tokens charged can be lower (say 
+0.1 FEE) or higher (say 1.5 FEE) based on the product 
+traded. Leverj can also adjust the coupon value based 
+on market conditions such as price of ether.
+
+
+
+LEVERJ.IO
+
+STAKING CADENCE
+To simplify the UX and security of the staking con-
+tract, there is a fixed staking cadence which com-
+putes the number of tokens staked and the dura-
+tion of the stake. This enables a simple calculation 
+that allocates the FEE tokens to the traders.
+
+EXPIRY
+At the end of the staking period, all LEV are re-
+turned to stakers and FEE tokens proportional to 
+their stake are distributed to stakers.
+
+15
+
+STAKING FORMULAS
+
+For  single stake:
+
+Let L => Number of lev to be staked (passed by user) 
+Let T => the expiry block number 
+Let t = T - current_block => number of blocks to stake 
+Then Lt => Number of Lev blocks staked 
+stake[user] += L 
+evblocks[user] += Lt 
+total_levblocks += Lt
+
+FEE events (periodic aggregated) could combine 
+with expiry:
+
+Total_Fees += FEE sent for trading fees + ETH sent 
+for trading fees * ETH_FEE_RATE
+
+At Expiry Adjust Supply: 
+If Total_Fees > FEE_supply:  
+Generate (Total_Fees - FEE_supply) FEE tokens
+
+At expiry (for all users):
+
+Fee_share[user] = (levblocks[user] / total_levblocks) 
+* Total_Fees 
+Transfer fee_share[user]  FEE to user 
+Transfer stake[user] to user
+
+
+
+16
+
+5. TOKEN SALE 
+
+TOKEN SUPPLY 
+
+TOKEN SALE STRUCTURE
+
+TOKEN SALE TIMELINE 
+
+Token
+
+Duration
+
+Event
+
+1000M (1 billion)
+
+1ST 150M tokens
+
+Sale Start
+
+400M
+
+2ND 250M token
+
+Sale Ends
+
+300M
+
+100M
+
+200M
+
+Description
+
+Price
+
+Date (12 UTC)
+
+Tokens created
+
+4615 LEV per ETH
+
+2017-11-07
+
+Available for purchase including bonus *
+
+3000 LEV per ETH
+
+2017-12-07
+
+Founders
+
+Liquidity and Operations
+
+Partners
+
+* Unsold tokens will be sent to a burning contract where 50% are locked for 12 months and the 
+remaining are locked for 10 years in order to stabilize LEV utility during the early adoption phase.
+
+* Founders pledge to donate LEV proportional to the burnt ratio to the liquidity and operations pool
+* Airdrops and bounties will be paid from the Liquidity and Operations
+
+
+
+LEVERJ.IO
+
+6. POST-SALE CONSIDERATIONS   
+
+TOKEN DISTRIBUTION
+The following pie chart provides the breakup of the 
+tokens distribution. All tokens, including pre-sale, 
+are distributed via smart contract, audited by Con-
+senSys, and managed by the independent escrow 
+providers BraveNewCoin.com (BNC).
+
+SECONDARY SALES
+Leverj holds 30% of tokens for liquidity and opera-
+tions. Leverj will stake most of these tokens in order 
+to get FEE tokens. Leverj is therefore economical-
+ly incentivized to hold on to these tokens and has 
+no plans at present to sell large portions of these 
+tokens on secondary market. As part of business 
+development, some tokens may be given to finan-
+cial institutions as part of partnership agreements, 
+incentivize advisors and new employees. In such 
+cases, we will require lockout periods of sufficient 
+length to ensure there is no major disruption in 
+market value.
+
+In case the Leverj team chooses to sell LEV tokens 
+that it holds on the secondary market in the future, 
+it will sell on or around the 1st of each month an 
+amount of approximately USD 100,000 worth of 
+tokens. For any amounts exceeding this, the public 
+will receive notice at least one week in advance of 
+the time and amount of tokens that may be sold.
+
+Liquidity operations require that a portion (up to 2% 
+of supply) of the tokens will be made available on 
+the order book. Traders can buy from or sell into the 
+book and this means our share of tokens will vary 
+slightly based on market activity.
+
+VESTING SCHEDULE
+The token vesting schedule, shown below, has been 
+designed to specifically align the long-term inter-
+ests of the founding team with those of public to-
+ken sale participants to maintain consistent and 
+healthy growth of the trading ecosystem. The long 
+drawn-out vesting schedule also ensures that the 
+team is continuously motivated and stays vested in 
+the success of the project for a longer duration. Ear-
+ly exit of the core team also impacts the success of 
+the project and thereby the value of the token.
+
+Purpose
+
+Partners
+
+Liquidity/Ops
+
+Founders
+
+Token Sale
+
+% Share
+
+10
+
+30
+
+40
+
+20
+
+Period
+
+Immediately
+
+6 months
+
+18 months
+
+12 months
+
+% Locked
+
+10
+
+30
+
+30
+
+30
+
+Marketing
+
+Biz Developement
+
+Operations
+
+Liquidity
+
+Legal
+
+10%
+
+10%
+
+10%
+
+10%
+
+30%
+
+USE OF PROCEEDS
+
+17
+
+Developement 30%
+
+
+
+LEVERJ.IO
+
+18
+
+Disclaimer: Our project is subject to several oth-
+er considerations that require flexibility in how we 
+spend the raise. For example, if we get an opportuni-
+ty to partner with a legacy financial powerhouse, we 
+may need to invest significant resources for speedy 
+implementation. We may also have opportunity to 
+work with regulators in untapped crypto markets 
+such as the United States that may require unfore-
+seen expenditures. All-in-all, since we have a central-
+ized component, we have need for operational and 
+strategic flexibility unlike a pure protocol project.
+
+Converting to Fiat: Most of the raise will be kept in 
+ETH and be converted to fiat as necessary. There will 
+be an initial conversion of up to $5M USD to boot-
+strap the project.
+
+
+
+7. PLATFORM FEATURES
+
+BASE PLATFORM
+Centralized trading platforms have inherent coun-
+terparty and custodial risk. User identity, transaction 
+history, and funds are all ultimately controlled by the 
+exchange operators. The exchange custody of these 
+valuables   makes an attractive target for hackers, 
+lawsuits and state actors. The risks and losses inher-
+ent in centralization can be substantial1. Leverj pro-
+vides decentralized identity to avoid identity leaks.
+
+DECENTRALIZED IDENTITY
+A third-party issued identity (such as an email ad-
+dress) puts you at the mercy of a centralized ex-
+change's competence, fairness and integrity. Every 
+identity you use can be held hostage to the interests 
+and whims of unpredictable actors such as hackers 
+or governments.
+
+A decentralized identity can be used for authenti-
+cation, signatures on contracts, attestation of docu-
+ments, messaging other traders and to share media.
+
+DERIVATIVES OFFERINGS
+Leverj focuses on derivatives products, which distin-
+guishes it from other DEX offerings. Using non-cus-
+todial risk management, we can offer derivatives 
+products without requiring an exchange user to 
+take over losing positions for liquidations. ETH/USD 
+inverse futures will be the primary offering. Howev-
+er, we can offer futures on any market with a stable, 
+well developed market. We can also offer a variety of 
+options or futures on liquid ERC20 tokens.
+
+HARDWARE WALLET SUPPORT
+
+Cryptography has made remarkable financial 
+products possible, but at the cost of an ever-pres-
+ent risk of compromise via malware, security 
+breaches, or custodial issues in regards to pri-
+vate keys held on computers and backend serv-
+ers. Hardware wallet support greatly reduces the 
+
+LEVERJ.IO
+
+19
+
+chances of malware or other security breaches 
+stealing coins on your trading computer.
+
+ON-CHAIN SETTLEMENT
+
+With an on-chain exchange, there are no custo-
+dy settlement and manual withdrawal processing 
+steps since closing a position results in near-in-
+stant settlement. Elimination of exchange custodial 
+responsibility to the exchange has the pleasant 
+side-effect of not requiring the exchange to perform 
+any actions in order for you to access your profits. 
+We eliminate waiting for exchange action to settle 
+trades, process expiries and refill hot-wallets. Every 
+change in your position automatically updates your 
+equity in real-time, making your funds available for 
+withdrawal subject only to blockchain latencies.
+
+
+
+20
+
+8. ENHANCED TRADING PLATFORM
+
+The privacy and security benefits of decentralization 
+and the basics of reliable stops and position manage-
+ment facilitate trading, but fall short of that is available 
+on legacy financial platforms. The Leverj enhanced 
+trading platform brings these features to digital cur-
+rency, enabling rapid growth of the Leverj platform.
+
+PRICE ACTION ENTRIES
+The most common trading regret is taking a position 
+due to "fear of missing out" (FOMO). FOMO entries are 
+caused by hesitation due to a less-than-perfect setup 
+and subsequent late reaction once price moves with 
+unexpected strength. Habitual FOMO trading makes 
+it impossible to build trading discipline. Price Action 
+entries free the trader from absolute price levels and 
+allow focus to remain on unfolding market structure. 
+For example, you may want to enter on the breakout 
+of a signal bar, or want stops to trail below the low of 
+the prior bar instead of a fixed number of ticks. You 
+may want to sell on the close of a bar on the third 
+
+TRADE REPLAY VIDEO
+The best way to improve your trading is to observe 
+yourself trading. Trade replay videos allow the trader 
+to view how a trade was planned and executed, from 
+placing the entry order, to stop management, to 
+eventual exit. Video replay can be used to document 
+your trading, share with and teach other traders, or 
+simply archive your greatest trading moments. Even 
+add audio commentary and background music. Your 
+video of making a killing on the big bear move would 
+be fantastic with Carmina Burana as soundtrack.
+
+SUBSCRIBE
+Another great way to learn any highly specialized 
+skill is to be mentored by someone who excels in 
+that field. Find the most respected traders, subscribe 
+to their feed, and learn from them a lot faster than 
+you would learn by trading (and possibly losing) your 
+own money. Open up your trade videos and reports 
+and share with the world. If you are a good trader, 
+you can build a following.
+
+MANAGED TRADING
+Many people desire the exposure to digital currency, 
+but are too busy in their professional lives to spare 
+their attention for full-time trading. Managed trad-
+ing presents an attractive alternative to those who 
+have the capital but not the skill to trade. Simply 
+
+“follow” or replicate trades of highly skilled traders 
+automatically in exchange for a percentage of the 
+winnings. In the beginning this is likely to be a fixed 
+percentage but as the platform evolves, we expect 
+traders to set their own rates.
+
+LEVERJ.IO
+
+AUTOMATED TRADE MANAGEMENT
+The most profitable professional traders use discre-
+tionary entry and mechanical trade management. 
+This approach enables them to focus their atten-
+tion on market opportunities and delegate trade 
+management to software modules. This “fire and 
+forget” approach eliminates an entire class of trade 
+management errors. For example, an order will be 
+placed to enter on the breakout of a signal bar if the 
+bar closes strongly. Once filled, a trailing stop will 
+tighten below every new swing point once a new 
+high is reached. Partial profits are taken on every 
+push and the position is closed on a parabolic move. 
+All of these are orchestrated routinely once the po-
+sition is open, relieving the stress of trade manage-
+ment and enabling the trader to focus on price ac-
+tion and new entries.
+
+push, rather than hoping you guessed the exit price 
+correctly. Leverj supports price action entries that 
+enter and exit precisely, reducing unexpected losses 
+and suboptimal exits.
+
+
+
+PLUGIN FRAMEWORK
+A plugin framework enables quick composition of 
+an ideal trading environment, building on the work 
+of others. Plugin your own indicators, trading strate-
+gies, reports, or anything else that enrich your trad-
+ing experience. The plugin framework is a founda-
+tional aspect of the marketplace.
+
+ZERO-KNOWLEDGE API KEYS 
+
+A trading or reporting service needs to be autho-
+rized to perform certain operations on behalf of the 
+user. In the centralized world, this is accomplished 
+through API keys. Leverj provides Zero-Knowledge 
+API keys that enable integration with vendors and 
+partners without relying on transport and storage 
+secrecy. This enables the creation of an ecosystem 
+of decentralized services that can build a new value 
+network on the blockchain.
+
+HISTORICAL DATA REPLAY 
+AND TRADING
+Institutional trading is largely algorithmic and the 
+ability to fine tune and harden a trading system 
+depends on reliable historical data. How would a 
+trading strategy fare during the great bull move and 
+subsequent crash of 2013? Harden trading strate-
+gies by replaying extreme market conditions and 
+add safeguards to ensure sustainability in adverse 
+conditions. Leverj brings the advantages enjoyed 
+by institutional traders to crypto trading, enabling 
+re-playing market data to fine tune and perfect your 
+home grown strategies.
+
+MARKETPLACE
+A marketplace for decentralized trading services is 
+essential to a rich ecosystem. Instead of building 
+your own indicators and strategies, buy them from a 
+marketplace. If you have developed a great indicator, 
+list it on the marketplace and get paid in FEE tokens.
+
+LEVERJ.IO
+
+21
+
+SIMULATED TRADING
+The first few months of a new trader’s performance 
+is unlikely to be profitable. In addition, there is sub-
+stantial risk testing out unproven ideas with real 
+money. Simulated trading enables trying out ideas 
+and fine tuning trading strategy with real-time 
+market data, while avoiding market risk. Once the 
+trading idea or setup is proven, it can confidently be 
+executed on a live account.
+
+ISSUES WITH DECENTRALIZED 
+LEVERAGED TRADING
+Leveraged trading adds risk management and posi-
+tion management capabilities required for practical 
+trading. Adding margin to a position or re-leasing 
+margin from a winning position to open a new po-
+sition are practical necessities for trading. Recent 
+attempts at decentralized leveraged trading plat-
+forms have resulted in poor user experience due to 
+lack of attention to practical exchange operation is-
+sues. Leveraged trading adds another level of com-
+plexity to decentralized trading that must be care-
+fully designed. As exchange needs to be performant 
+in addition to secure for trading to be enjoyable in 
+addition to enabling the basic goals of decentraliza-
+tion. The key issues with decentralized trading are 
+latency, finality and liquidity. We address these by 
+using the blockchain sparingly and relying on ancil-
+lary technology where possible.
+
+
+
+LEVERJ.IO
+
+22
+
+STOPS
+Reliable stops are the hardest feature to get per-
+fect, even for centralized exchanges. When a price 
+spike can trigger a stop, but never fill (or fill it at an 
+undesirable price) it becomes imperative to your 
+position. This induces attention fatigue and causes 
+unforced error that reduce your profitability. Profes-
+sional traders simply cannot afford to trade with-
+out reliable stops, since they are vital to precise risk 
+management. Leverj provides atomic stops that are 
+guaranteed to fill within predictable range. 
+
+LIQUIDATIONS
+When a trader’s position moves into a losing area  
+beyond its allocated margin, the position needs to  
+be liquidated. Leverj is able to liquidate positions  
+without the need for a centralized exchange user to  
+take over the position.
+
+POSITION MANAGEMENT
+Good position management is often the only differ-
+ence between a break-even trader and a profitable 
+trader. A platform that facilitates good position man-
+agement practices is essential to trade effectively.
+
+ADD/REMOVE MARGIN
+Current decentralized leveraged systems “lock-in” a 
+margin until the contract expires or is settled. This 
+means profits cannot be taken when available if the 
+market reacts earlier than expected. Positions can-
+
+not be saved by adding margin if a pullback is deep-
+er than expected. All in all, this approach to trading is 
+essentially a gamble on direction at a point in time. A 
+sophisticated trader requires the ability to modify the 
+margin backing any position based on price action. 
+Indeed, the freedom to take profit and allocate it to 
+a new opportunity should be smooth and natural to 
+ensure that the trader can take profit when price ac-
+tion enables it. Leverj enables addition and removal 
+of margin with an intuitive stop order inter-face that 
+allows traders to manage position margin.
+
+SPLIT/MERGE
+It is a good practice to take partial profit on a wind-
+fall move in the trader’s favor. The ability to split a 
+large position facilitates this. Once a position is 
+split, it is possible to manage each position differ-
+ently, for example, a tighter stop on half to protect 
+profits and a looser stop on the remaining for lon-
+ger holding periods. The converse is the ability to 
+build up a position by many small entries (such as 
+iceberg orders) and manage them as a single po-
+sition by merging them. Leverj provides splitting/
+merging  of positions, giving the trader flexibility 
+to react appropriately to the market and manage 
+exits, leverage and stops for optimal profit.
+
+
+
+23
+
+LEVERJ.IO
+
+CROSS/FIXED 
+Traders who trade long timeframes and accumu-
+late large positions need to use all available mar-
+gin (cross margin) to ensure they can accumulate 
+through  large  dips  without  being  stopped  out.
+
+However, often they also wish to trade portions with 
+fixed margin to protect profits on moves on a small-
+er timeframe. Leverj is the only exchange that offers 
+simultaneous fixed and cross margin while splitting 
+a fixed portion out of the cross margin for partial exit.
+
+NETWORK CONGESTION
+
+Blockchains can suffer congestion for extended du-
+rations. A severely congested network may mean 
+that settlement transactions are confirmed with 
+a significant delay, but wont impact actual settle-
+ment amounts.
+
+
+
+9. TIMELINE
+
+2013
+
+2014
+Q1
+
+2015
+Q4
+
+2016
+Q1-Q2
+
+2016
+Q3
+
+2017
+Q1-Q2
+
+Proof of Concept development in motion
+
+Self-funded full-time development begins
+
+Industry first Robust Median Index launched
+
+Coinpit.io launched at TechCrunch Disrupt 
+
+~600K Seed Angel Investment Raised
+
+Inverse contract launched 
+
+Exclusive & Industry First:
+Proof-of-Audit embedded in blockchain 
+Zero-Knowledge API keys 
+Hardware multisig wallet launched
+
+Coinpit.io becomes the first exchange to open-source security code
+
+Coinpit.io launches public beta 
+
+Industry First Features:
+Decentralized Identity
+Segregated Accounts
+Zero-Knowledge Authentication
+
+Exclusive & Industry First:
+Multisig with user controlled private key
+On-blockchain Settlement
+
+Start
+Founders Bharath Rao and Nirmal Gupta meet
+Concept for decentralized leveraged derivatives on bitcoin conceived
+
+24
+
+LEVERJ.IO
+
+
+
+BASE PLATFORM
+
+ENHANCED PLATFORM 
+
+RAISE NEEDED
+
+RAISE NEEDED
+
+2018
+Q1
+
+2018
+Q2
+
+$2.5M
+
+$4M
+
+$5M
+
+$6M
+
+$8M
+
+$10M
+
+2018
+Q3
+
+2018
+Q4
+
+2019
+Q1
+
+2019
+Q2
+
+Fully decentralized custody futures trading live
+
+Price Action Entries 
+
+Trade Replay Videos
+
+Managed Trading
+
+Simulated Trading 
+
+Historical Data Replay and Trading
+
+Marketplace
+
+Plugin Framework
+
+Social Media Trading
+
+Automated Strategies
+
+Enhanced Reporting
+
+Internationalization
+
+Encrypted/Anonymous Messaging/Chat/Email
+
+Decentralized ETH/ERC20 spot trading platform
+
+Hardware key authentication instant settlement
+
+LEVERJ.IO
+
+10.  ROADMAP
+
+25
+
+
+
+PRODUCT OFFERINGS RAISE NEEDED
+
+$20M
+
+$25M
+
+$30M
+
+2018
+H1
+
+2018
+H2
+
+2019
+H1
+
+Major Cryptocurrency Futures
+
+Crypto10 Index and Futures
+
+CFD on OIL/GOLD/Top Commodities
+
+Single Stock Futures
+
+Major World Index Futures 
+
+26
+
+LEVERJ.IO
+
+
+
+11. LEADERSHIP
+
+Bharath Rao, Founder/CEO
+Entrepreneur. Trader. Techie. Leader. Blogger. Speaker. Inventor
+10 Year Wall St. Veteran
+Policy and Strategy Advisor to Liberland
+MS Computer Engineering from Syracuse University
+
+Babu SK, Operations
+FinTech Veteran, Growth & Tech Strategy
+Operational Transformation
+MBA, IIM Bangalore
+
+Nirmal Gupta, CoFounder/CTO
+Full Stack Developer. 
+
+10 years on Forex Trading Software
+BS Aerospace Engineering from IIT Kanpur 
+
+Gerry Howatt, Marketing
+20+ year Marketing Executive, Media Strategist, Product 
+
+Marketer, Partnership Development, Entrepreneur
+BA St Lawrence University
+
+Swapman, Advisor Economics & Financial Theory
+Financial Market Expert, Crypto Market Expert & Trader, Economist
+M.Sc. Economics, University South Denmark 
+
+Alexandra Ward, Community Manager
+Crypto Personality and Trader. 
+
+Administrative Role in Trading Communities.
+Moderator of Bitcoin-Related Subreddit. 
+
+LEVERJ.IO
+
+27
+
+
+
+LEVERJ.IO
+
+28
+
+Benny Sadeh, Software Craftsman
+25+ years of Software Engineering
+M.S. Computer Science, University of Alabama
+
+Merunas Grincalaitis
+Ethereum Smart Contract and Javascript Engineer
+
+Universidad de Granada
+
+
+
+12. LEGAL CONSIDERATION
+
+As part of legal due-diligence, the Leverj team has 
+consulted with several law firms around the globe 
+to evaluate the implications of our structure, token 
+launch, and operations.  We can make no guaran-
+tees regarding the legality of the platform or launch 
+in any given jurisdiction. Regardless, we have mod-
+eled the platform to be provably compliant with 
+the spirit of regulations in major jurisdictions and 
+we hope to be a model of regulatory compliance for 
+decentralized applications and token launches. We 
+will be responsive and collaborative with any regu-
+lators as necessary going forward. 
+
+FORWARD LOOKING STATEMENTS
+This document has forward looking statements that 
+are subject to risks and uncertainties, which could 
+cause actual results to differ materially from those 
+anticipated. Such statements are based on our be-
+liefs as well as assumptions made by and informa-
+tion currently available LEGAL LANDSCAPE FOR 
+
+DERIVATIVES TRADING  
+Derivatives trading are an area of interest for many 
+regulators around the globe, including those with-
+in the United States. Leverj intends to operate our 
+business in accordance with the laws of relevant ju-
+risdictions. As such, Leverj may not be immediately 
+available in certain jurisdictions. The Leverj team and 
+our advisors are aggressively pursuing strategies to 
+bring the benefits of the platform to the global trad-
+ing community expeditiously. This includes obtain-
+ing securities licenses as required by law.  
+
+LEGAL IMPLICATIONS OF TOKEN 
+LAUNCHES
+LEV/FEE tokens (henceforth “tokens”) are function-
+al utility tokens within the Leverj platform. TOKENS 
+
+UNFORESEEABLE TECHNICAL 
+LIMITATIONS
+Some of the features described herein are based on 
+our current understanding of blockchain technology 
+and the assumption that blockchain systems contin-
+ue to work with the same characteristics in the near 
+future. In the event that the nature of the blockchain 
+changes dramatically for example due to high con-
+gestion, change in proof of work, network splits, 51% 
+attack or any other unpredictable event, the plat-
+form’s stability and our ability to deliver features de-
+scribed here may be negatively impacted.
+
+ARE NOT SECURITIES. TOKENS ARE NONREFUND-
+ABLE. TOKENS ARE NOT FOR SPECULATIVE IN-
+VESTMENT. NO PROMISES OF FUTURE PERFOR-
+MANCE OR VALUE ARE MADE WITH RESPECT TO 
+TOKENS, INCLUDING NO PROMISE OF INHERENT 
+VALUE, NO PROMISE  OF CONTINUING PAYMENTS, 
+AND NO GUARANTEE THAT TOKENS WILL HOLD 
+ANY PARTICULAR VALUE. TOKENS ARE NOT PAR-
+TICIPATION IN THE COMPANY AND TOKENS HOLD 
+NO RIGHTS IN SAID COMPANY. TOKENS ARE SOLD 
+AS A FUNCTIONAL GOOD AND ALL PROCEEDS RE-
+CEIVED BY COMPANY MAY BE SPENT FREELY BY 
+COMPANY ABSENT ANY CONDITIONS. Tokens are 
+intended for experts in dealing with cryptographic 
+tokens and blockchainbased software systems. TO-
+KEN SALE IS UNAVAILABLE TO CHINESE RESIDENTS, 
+US PERSONS & SEYCHELLES RESIDENTS AND OFAC 
+SANCTIONED COUNTRIES AND PERSONS (SDN).
+
+LEVERJ.IO
+
+29
+
+

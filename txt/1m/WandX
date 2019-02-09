@@ -1,0 +1,1457 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 1/23
+
+wandxdapp  WandX whitepaper
+
+Updated 5 months ago
+
+ABOUT 0 DISCUSSIONS 1 CHANGE REQUEST
+
+ Star 2  Subscribe 1
+
+WANDX - ERC20 TOKEN
+PRODUCTS USING SMART
+CONTRACTS
+
+1. Executive summary
+
+As consumer appetite in various classes of assets
+
+have grown over the last half of the 20th century,
+
+methods to derisk a purchaser from speculative
+
+activity has evolved. An ideal example of the need for
+
+this derisking is the tulip mania that overtook modern
+
+day Netherlands in the 17th century. Similarly,
+
+purchasers of wine, paintings, property and stamps,
+
+are vexed with the question of how to ensure that pure
+
+speculation does not negatively affect the price of the
+
+asset that they are buying. Purchasers of
+
+cryptocurrencies face the same problem.
+
+Read
+
+Pricing Explore
+
+About Blog
+
+WE ARE HIRING!
+
+https://www.gitbook.com/@wandxdapp
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/discussions
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/changes
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/stars
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/subscriptions
+https://www.gitbook.com/read/book/wandxdapp/wandx-whitepaper
+https://www.gitbook.com/
+https://www.gitbook.com/pricing
+https://www.gitbook.com/explore
+https://www.gitbook.com/about
+https://www.gitbook.com/blog
+https://www.gitbook.com/about
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 2/23
+
+WandX seeks to establish an infrastructure for
+
+decentralized creation and trade of ERC20 Tokens built
+
+on the Ethereum blockchain. The pilot application
+
+allows users to create combinations of ERC20 Tokens
+
+(known as a Basket of Tokens) and trade the Basket by
+
+way of a single transaction.
+
+2. Problem statement
+
+Some of the problems that the WandX platform aims to
+
+solve are:
+
+How can users solve the problem that the price of
+
+any single ERC20 Token is higher than it ought to
+
+be, on account of speculation?
+
+How can users purchase multiple ERC20 Tokens in
+
+a single transaction?
+
+How can users not lose money even if there is a
+
+fall in the price of a single ERC20 Token?
+
+How can users increase the liquidity of single
+
+ERC20 tokens?
+
+How can users create and trade digital assets
+
+(such as loyalty points) recorded on a blockchain?
+
+Many of these problems are currently being solved by
+
+centralized cryptocurrency exchanges and crypto-asset
+
+management platforms. Though popular and easy to
+
+use, many centralized exchanges and asset
+
+management platforms face problems with data
+
+security. They provide a centralized platform for
+
+blockchain assets, which by definition are meant to be
+
+decentralized. Other challenges faced by centralized
+
+exchanges and platforms include low liquidity
+
+thresholds and longer waiting periods for users to
+
+withdraw their funds from these exchanges.
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 3/23
+
+3. Solution
+
+WandX aims to solve the above problem by providing a
+
+decentralized platform that enables the creation and
+
+trade of Baskets of ERC20 Tokens through smart
+
+contracts.
+
+Users can trade in Baskets of ERC20 Tokens.
+
+Users can acquire multiple ERC20 Tokens with a
+
+single transaction. The WandX platform does not
+
+hold private keys or any Tokens.
+
+Innovative solutions to sell an ERC20 Token or
+
+Basket that is borrowed are being developed on
+
+WandX.
+
+WandX provides tools to create tokens that can be
+
+backed by a digital asset such as loyalty points,
+
+and these tokens can be traded on our platform.
+
+We are experimenting with a larger number of
+
+trades happening off-chain, and only record the
+
+trades happening on-chain.
+
+Some of the ERC20 Token instruments that can be
+
+created on WandX are as follows:
+
+Baskets of ERC20 Tokens: These are combinations of
+
+ERC20 Tokens can be created with a single
+
+transaction. Users can create a basket of ERC20
+
+Tokens; this Basket has an associated price which is
+
+determined by the underlying ERC20 Tokens in the
+
+Basket. Creation and Trade of this Basket happens by
+
+way of smart contracts.
+
+Issue Crypto-assets: WandX would enable a user to
+
+record his/her digital asset(s) on the blockchain
+
+through a user friendly front-end for creating tokens on
+
+Ethereum. These tokens would then represent
+
+ownership of crypto-asset(s) such as loyalty points
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 4/23
+
+which could be transacted with other users. Such
+
+transactions, along with the decentralized exchange,
+
+could be used to create markets for any crypto-asset.
+
+4. Identity
+
+Although anonymity or pseudonymity is welcome in
+
+certain cases, in the WandX business model it would
+
+benefit the network as well as the users to reveal their
+
+identities or parts of their identities. This would be
+
+done through integration with identification platforms
+
+such as uPort and Civic. WandX enables solving the
+
+information asymmetry problem using the
+
+transparency of the blockchain, but still retaining the
+
+business model and working economics of creating
+
+liquidity of ERC20 Tokens.
+
+5. Technology
+
+From a technology standpoint, WandX is built on the
+
+Ethereum blockchain because of its smart contracting
+
+capabilities, large network of miners and users, and a
+
+large number of tokens already having been issued on
+
+Ethereum. Our initial product will be based on creation
+
+of baskets of ERC20 tokens on Ethereum. We have six
+
+types of contracts - data storage (d-gen), functionality
+
+enabler (f-gen), trade enabler (t-gen), settlement
+
+enabler (s-gen), rating enabler (r-gen), and analytics
+
+enabler (a-gen). Together they create a holistic
+
+ecosystem to create, trade, view, and settle contracts.
+
+Issuers create the ERC20 Token instruments, market
+
+makers and buyers purchase these instruments, sellers
+
+close the loop and thus all the players together create
+
+the market for the instrument. Using the f-gen, the
+
+issuer creates the product, the d-gen stores the
+
+product, the t-gen and s-gen are responsible for
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 5/23
+
+decentralized trade of the product through smart
+
+contracts. The r-gen is optional, and can be used only
+
+by certain users to rate products.
+
+[Figure 1. WandX platform architecture]
+
+6. Incentivization
+
+Users of each of the gen modules are incentivized to
+
+contribute to the platform. Incentives of different
+
+players on the WandX platform are slightly different
+
+depending on the value they bring to the platform. All
+
+the incentives are distributed using the Wand token
+
+which is based on Ether. The underlying value of this
+
+Dapp will be in its applications to create, trade and
+
+settle instruments based on ERC20 Tokens. The Token
+
+sale will distribute the Wand tokens among the public,
+
+after which bounty programs will be conducted to
+
+incentivize each player in the platform.
+
+Market maker: Market makers are marketing partners.
+
+Their role is a combination of acting as an issuer and
+
+as a seller. They create a market for products that they
+
+think will sell based on their real-world experience in
+
+various industries. For example, if they think that a
+
+certain basket of five ERC20 Tokens has shown good
+
+returns in the past two years, they would create and
+
+trade this basket on WandX. They would receive Wand
+
+for its creation, and they can specify their trading fees
+
+when they sell the basket.
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 6/23
+
+Developers: Benevolent developers are always
+
+welcome! Developers can greatly contribute to the Beta
+
+version of the platform by identifying bugs and
+
+suggesting features, and better yet creating and
+
+pushing the fix.
+
+Hackathons: Virtual hackathons will be held once
+
+during the Beta phase.
+
+Issuer: Issuers are basically creators of the ERC20
+
+Token products.
+
+Sellers: Using the d-gen, f-gen, and the t-gen, sellers
+
+will enhance the liquidity of the various products.
+
+Sellers are the other side of the contract, and help with
+
+price discovery of the basket or asset.
+
+Buyers: Buyers will use the t-gen to trade in the
+
+products given below.
+
+Baskets: These baskets can be traded on the API
+
+and smart contract structure built on WandX.
+
+Bilateral Contracts: Two parties could create a
+
+bilateral contract whose settlement would be done
+
+by the s-gen automatically. This would be a
+
+contract which is executed by the EVM.
+
+A month after our Token launch, we will introduce
+
+bounties for each player in the platform, and for each
+
+type of product that can be created.
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 7/23
+
+[Figure 2. WandX platform users and modules]
+
+7. Governance
+
+The point of creating this system of decentralized
+
+ERC20 Token contract settlement on Ethereum is to
+
+allow the system to develop trust amongst different
+
+players. However, adherence to the type of contracts
+
+on the platform can be further enforced using
+
+standardized accounts available on the platform.
+
+Since this platform is developed on the Ethereum
+
+blockchain, the single source of truth of the creation,
+
+trade and settlement of the products is based on the
+
+blockchain. Integrations of uPort and other identity
+
+platforms will serve to increase trust in the system.
+
+8. Timeline
+
+[Figure 3. Roadmap of WandX development and feature
+
+addition for the next 6 months.]
+
+9. Competitor Landscape
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 8/23
+
+Decentralized exchanges: 0x project, Etherdelta
+
+Centralized exchanges: Kraken, Coinbase, Shapeshift
+
+Centralized digital assets trading: Kraken, Poloniex,
+
+Prism (by shapeshift)
+
+Decentralized digital assets trading: Dcorp (Not
+
+released as per the time of writing this), EtherOpt
+
+(Beta)
+
+Our biggest differentiator is that we are creating the
+
+entire infrastructure for decentralized creation and
+
+trade of any ERC20 Token instrument. Managers can
+
+create baskets of ERC20 Tokens or programmes to
+
+diversify such holdings, as well as define rules for
+
+trading these baskets.
+
+Digital assets such as loyalty points can also be traded
+
+on WandX. There are no automated market makers or
+
+price discovery mechanisms, it is an open market to
+
+the gamut of users who would participate and benefit
+
+from this decentralized platform.
+
+10. Technology integrations
+
+10.1 Data from other blockchains and oracles
+
+Using applications such as Oraclize, Streamr, and IPFS,
+
+we are in the process of creating the backend for d-gen
+
+and f-gen to connect and retrieve information from
+
+other blockchains as well as different web APIs. The
+
+users can use these third party applications to retrieve
+
+data which acts as an impartial oracle, required when
+
+blockchains have to interact with data on the web.
+
+These features (or suitable alternatives) would release
+
+on WandX 2.0.
+
+10.2 IoT
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 9/23
+
+In the not so distant future, we shall see machines
+
+interacting with each other through blockchains. We’re
+
+building towards this future. Transactions between IoT
+
+machines ought to be permissible within our
+
+architecture.
+
+10.3 Other platforms
+
+After the release of WandX 1.0, we intend to add an API
+
+which could possibly be used in platforms such as
+
+Gnosis. To verify the identity of different players, we
+
+plan to integrate with identity verification systems such
+
+as uPort. This could be used to verify users’
+
+credentials, past transactions, trustworthiness and to
+
+minimise potential loss.
+
+10.4 Analytics engines
+
+We are working on integrating analytics tools such as
+
+R. This could be used to generate statistical models on
+
+the ERC20 products .
+
+[Figure 4. Different technology integrations into
+
+WandX]
+
+11. Legal considerations
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 10/23
+
+The legal and regulatory environment around token
+
+generation events, cryptocurrencies and crypto-
+
+exchanges are in a state of flux. Our ability to operate
+
+legally in the jurisdictions that we operate in are
+
+subject to these legal and regulatory changes. As such,
+
+we anticipate initiating a continuous channel of
+
+discussion with regulators and to modify our roadmap
+
+and plans depending on these discussions.
+
+The legal considerations of using the WandX platform
+
+is tied to the regulations around cryptocurrencies in
+
+your respective countries. Please read our terms of
+
+use, privacy policy requirements and consult with a
+
+legal expert in your jurisdiction before using the WandX
+
+application or taking part in our token sale.
+
+Each phased plan of implementation will involve a
+
+continuous channel of communication with our
+
+lawyers, with regulators (including but not limited to
+
+the Monetary Authority of Singapore, the Securities &
+
+Exchange Commission of the United States and the
+
+Reserve Bank of India). Should either our lawyers or
+
+applicable regulators raise any issue in respect of the
+
+implementation of this roadmap, we will remodel this
+
+roadmap or obtain appropriate approvals.
+
+YOU ARE ASSUMING THE RISK THAT A REGULATOR
+
+WILL IMPOSE REGULATORY RESTRICTIONS ON
+
+WANDX. WANDX WILL NOT BE LIABLE TO YOU FOR
+
+ANY DIRECT OR INDIRECT LOSSES ATTRIBUTABLE TO
+
+A LEGAL OR REGULATORY EVENT DESCRIBED ABOVE.
+
+12. Development Roadmap
+
+Pilot: Create, trade, and settle a Basket of ERC20
+
+Tokens. For example, you could create a Basket of five
+
+ERC20 tokens in a given proportion. This Basket can be
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 11/23
+
+traded with buyers who don’t want to go into the
+
+trouble of buying five separate ERC20 Tokens. A
+
+trading fee and a creation fee can be specified at the
+
+time of creation. The buyer can then choose to
+
+liquidate his Basket and get the underlying
+
+cryptocurrencies into his wallet.
+
+Beta: We will release our Beta by 16th September onto
+
+the Ethereum blockchain.
+
+Token sale: We are launching our Token sale on 27th
+
+October. Further details are available in the Token sale
+
+section of the Whitepaper.
+
+WandX 1.0: WandX 1.0 will go live on the Ethereum
+
+mainnet on 20th November.
+
+Pilot across industries: We aim to be a truly
+
+decentralized platform for the creation and trading of
+
+baskets of ERC20 Tokens. We believe in building great
+
+products, but also in creating trustworthy brands. We
+
+plan to pilot our platform on a private Ethereum
+
+network in the telecom sector and carbon credit
+
+trading sector. For applications in industries as
+
+highlighted here, we will create a private network
+
+whose transactions will be pegged to the main-net to
+
+reduce transaction time and transaction costs.
+
+P2P contracts for digital assets: In November, we will
+
+launch the P2P traded baskets and digital assets
+
+market on WandX.
+
+WandX 2.0: This releases in Jan 2018. WandX 2.0 will
+
+be the platform to create and trade any ERC20 Token
+
+instrument.
+
+13. Marketing and sales strategy
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 12/23
+
+Our strategy is aimed toward onboarding a gamut of
+
+user types. We want our users to use our platform as a
+
+tool to understand and explore crypto assets, as a
+
+method to create crypto-assets, and to reduce the risk
+
+of fluctuations in the value of crypto assets.
+
+13.1 Online strategy
+
+Ads: Google and Facebook ads.
+
+Social media: Use social media (Reddit, Twitter,
+
+and Facebook) to spread the word.
+
+Other media: Use medium, Blogs, YouTube videos,
+
+Github, our Slack channel, Reddit, and Telegram to
+
+inform users about our updates and new features.
+
+Videos: Create YouTube videos for instructions on
+
+how to use our platform.
+
+13.2 Offline strategy
+
+Crypto Partners: Partnerships with various players
+
+to make it easy for fast onboarding.
+
+Industry Partners: Partner with industry experts
+
+and fintech startups who can use WandX to
+
+improve efficiencies in their processes. This would
+
+be to integrate off-chain transactions with on-
+
+chain settlements.
+
+Use cases: Create pilot programs of use cases.
+
+Sale bounty: Give out bounties for those who are
+
+willing to be our sales partners to identify and
+
+engage with potential clients.
+
+Advisors: We have a large team of advisors in the
+
+fields of statistics, data analytics, and markets.
+
+14. Token Sale
+
+We are launching the Wand token through a Token sale
+
+on 27th October. The Wand token will be used in the
+
+WandX platform for transacting with any of the WandX
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 13/23
+
+APIs. The first WandX API will be the Olio basket
+
+trading application. This application allows users to
+
+create and trade in a basket of ERC20 tokens. The
+
+latest details of our token sale page will be updated on
+
+our site. Users must closely read the Terms and
+
+Conditions before contribution.
+
+14.1 Why launch a new token instead of just using
+
+Ether?
+
+Governance: Governance over updates to the
+
+software which is separate from the Ethereum
+
+ecosystem.
+
+Incentives: Incentive programs for various users,
+
+bounties for bug identification, and promoting the
+
+use of all the modules of our platform.
+
+Future development: If we decide to integrate the
+
+tokens created on other blockchains as well (such
+
+as Tezos and NEO), we would need to be able to
+
+introduce protocols such as the COMIT protocol
+
+for interaction between the blockchains. It would
+
+be more secure and more efficient to do this if we
+
+have our own token.
+
+Contracts for baskets of crypto assets: Collateral
+
+and margin can be posted in terms of a common
+
+Token whose movement is not directly dependent
+
+on Ether.
+
+Developing the WandX protocol: The Wand token
+
+will be used to access any application on the
+
+WandX platform. The functionality in all
+
+applications is enabled by APIs. When external
+
+applications use any of the WandX APIs, they will
+
+be charged a certain fee in Wand; to use any of the
+
+applications on WandX, users will have to transact
+
+using Wand.
+
+Use cases: To pilot the WandX protocol in the use
+
+cases mentioned here.
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 14/23
+
+Token sale contribution: The uniqueness of a
+
+Token sale is that it allows you to gather potential
+
+users of your platform.
+
+14.2. Rules for the Token sale
+
+1. A total of 75,000,000 tokens will be created by the
+
+WandX team. For the Token sale, 55,000,000 will
+
+be distributed, with the founding and advising
+
+team retaining the rest of the tokens.
+
+2. There will be a minimum gas limit of 300,000.
+
+Users can participate using Metamask,
+
+MyEtherWallet, Parity, or Mist wallets. For
+
+participating in the Token sale, we will integrate
+
+Civic and uPort as identity management.
+
+3. We aim to raise 12500ETH (ether) over a period of
+
+4 weeks. We will end the token sale either when
+
+the 12500ETH is raised or when the 4 weeks is up,
+
+whichever comes first.
+
+4. Users can send ether to our contract address
+
+which will be displayed 2 hours before the start of
+
+the Token sale. Ether must be sent through
+
+MyEtherWallet, Mist, Parity or Metamask. Do not
+
+send Ether through exchanges such as Jaxx,
+
+Kraken, or others as your Ether may be stolen.
+
+5. The funds raised during the Token sale will be
+
+used for hiring, operation costs, and for technology
+
+development.
+
+6. Start date - October 27th 2pm GMT; End date -
+
+November 21st 7:30pm GMT.
+
+7. Tokens accepted - ETH.
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 15/23
+
+[Figure 5. Description of how the ether received during
+
+the Token sale will be used]
+
+14.3. Pre-Token sale
+
+14.3.1 Why launch a pre-Token sale?
+
+Gauge market sentiment — We would like to gauge
+
+market sentiment for a decentralized basket of
+
+crypto assets trading application such as ours.
+
+Marketing — In the six weeks till the end of our
+
+Token sale, we want to step up our PR and
+
+marketing campaign for our platform.
+
+Fast track mainnet release — We would like to
+
+release WandX onto the mainnet soon after our
+
+token sale, hence we will use part of the funds to
+
+stress test our basket trading application APIs.
+
+14.3.2 Time:
+
+Start date and time — October 9th 2pm GMT.
+
+End date and time — October 12th 7:30pm GMT.
+
+Update: Since the whitelisted users exceeded 500ETH
+
+of contribution, a pre-sale was not done.
+
+14.3.3 Tokens:
+
+5.2% of the total supply of Wand will be available
+
+for the Pre-Token sale.
+
+Pre-Token sale + Token sale = 12500ETH.
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 16/23
+
+Pre-Token sale = 530ETH.
+
+Total Supply = 75 million Wand.
+
+Supply offered for the pre-Token sale + Token sale
+
+= 55 million Wand.
+
+Supply offered for the Token sale = 51500000.
+
+Supply offered for the pre-Token sale = 3500000.
+
+Tokens accepted for the pre-Token sale = ETH.
+
+Minimum Ether required to participate in the Pre-
+
+Token sale = 1ETH.
+
+Remaining Supply after pre-Token sale + Token
+
+sale = 20 million Wand.
+
+This remaining 20 million Wand supply will be
+
+reserved for advisers, founders, and offered as a
+
+Seasonal Token Offering during the release of
+
+WandX 2.0.
+
+[Token sale process]
+
+14.3.5 How to participate:
+
+Send your Ether only through MyEtherWallet, Mist
+
+Wallet, Parity Wallet, Metamask to the address
+
+mentioned on the Token sale page at 2pm GMT on
+
+October 8th for pre-sale and 2pm GMT on October 27th
+
+for Token sale. Do not send Ether through exchanges
+
+such as Poloniex or through wallets such as the Jaxx
+
+wallet, since your ether could be misplaced.
+
+Please read the terms and conditions before
+
+participating in our pre-Token sale and our Token sale.
+
+14.4 WandX protocol and the Wand token
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 17/23
+
+The Wand tokens are utility Tokens in the WandX
+
+application. They act as a loyalty points scheme in
+
+retail. Users are incentivized to create and trade in
+
+ERC20 Token baskets, hence every time a creation or
+
+trade occurs, users get a small amount of Wand tokens
+
+added to their address The Ethereum blockchain
+
+protocol token (which is Ether) allows users to use
+
+Ether in the Ethereum world computer; the
+
+filecoin/storj/sia protocol token allows users to use
+
+tokens for file storage; pending regulatory approval, the
+
+WandX protocol would ensure clearing of ERC20 Token
+
+baskets based contracts. These contracts could be a
+
+number of Token products or baskets or variations on
+
+these products or baskets that are used to cater to
+
+users with different reward/risk appetites. Hence each
+
+of the modules at WandX are in the form of an API,
+
+both for security reasons as well as to enable users to
+
+clear contracts on other platforms using our APIs. The
+
+WandX protocol token is a means to an end - create
+
+decentralized markets for any ERC20 Token
+
+instrument/product.
+
+15. System architecture
+
+15.1 Core platform
+
+Data storage: Data on all trades conducted will be
+
+stored on the IPFS/Swarm. However, our pilot will
+
+be designed to store data in our servers. This pilot
+
+is to verify contract creation, trade and settlement.
+
+The next pilot will verify data storage, retrieval and
+
+pushing data back to the IPFS/Swarm.
+
+Methods: Variations of baskets of ERC20 Tokens
+
+will be available as well as the ability to record
+
+current crypto-assets on the Ethereum blockchain.
+
+Users can create, trade, and settle these products
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 18/23
+
+using the front-end, which connects to our smart
+
+contract architecture.
+
+Permissions: Users can set permissions on the
+
+contracts that they create. Permissions help build
+
+an additional layer of trust in the system.
+
+Contract creators: These are functionalities
+
+provided to the users to create their products.
+
+These directly link to smart contracts at the
+
+backend, hence any product that the user creates
+
+is in essence a smart contract on the Ethereum
+
+blockchain.
+
+Connecting to other platforms: We will eventually
+
+provide APIs to retrieve data from our platform for
+
+use in markets such as Gnosis. We would also
+
+integrate crypto-assets recorded on other
+
+blockchains through protocols such as the COMIT
+
+protocol, but this would only happen after the
+
+release of WandX 2.0 since we are experimenting
+
+with the stability of such protocols for mainstream
+
+use.
+
+Off-chain capabilities: We are working on
+
+technology to create most transactions off-chain
+
+in order to prevent clogging of the Ethereum
+
+network. In the real world trades happen in
+
+microseconds, which we can enable either through
+
+pegged blockchains, lightning networks, or state
+
+channels through integration of socket.io and
+
+Whisper.
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 19/23
+
+[Figure 6. Front end design of WandX]
+
+15.2 WandX Beta (Olio basket trading application)
+
+Our Beta product enables users to trade in a basket of
+
+ERC20 tokens on Ethereum. There are three main
+
+features of Olio - Create basket, buy a basket, sell a
+
+basket. The basic principles in designing Olio is to
+
+keep all transactions on-chain while all other
+
+computations and non-token transfer transactions off-
+
+chain.
+
+15.2.1 WandX-Olio API
+
+In order to realize the creation of the WandX protocol
+
+for decentralized ERC20 Token instruments, starting
+
+with the Olio basket trading application, WandX is
+
+creating APIs for all future Dapps on WandX. Each API
+
+will contain all functionality available on the Dapp, and
+
+the API will act as a bridge between the front-end Dapp
+
+and the Ethereum smart contracts. In addition to the
+
+protocol, the API would add a security layer for the
+
+platform as well as an additional business model for
+
+external API calls.
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 20/23
+
+[Figure 7. WandX-Olio architecture]
+
+15.2.2 Create baskets
+
+Users can create a basket of ERC20 tokens (known as
+
+a basket from now on) which can then be traded with
+
+other users. For our Beta product, we will enable
+
+creation of baskets from the top 20 ERC20 tokens.
+
+Users can select the percentages of each ERC20 token
+
+in the basket. If the user has the coins in his wallet, the
+
+basket is immediately created. If not, the user is
+
+redirected to an exchange.
+
+15.2.3 Buy baskets
+
+Users can quote bid prices for basket that they want to
+
+own. For the first two weeks, users can quote prices in
+
+Ether, and then they can quote prices in only Wand
+
+tokens. All bids have an expiry date and time; when
+
+sellers accept a bid, the basket along with the
+
+underlying coins is transferred to the buyer and the
+
+seller receives Ether.
+
+15.2.4 Sell baskets
+
+Users who own a basket can quote an ask price when
+
+they want to sell it. For the first two weeks they may
+
+quote in Ether, following which period they would quote
+
+in Wand. When a buyer accepts the ask price, the
+
+basket is transferred and Ether/Wand is transferred to
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 21/23
+
+the seller. If the seller wants to liquidate the basket and
+
+get the underlying coins, he activates the liquidate
+
+contract through the Dapp and the Wand-Olio API, after
+
+which they receive the underlying coins in their
+
+address.
+
+15.2.5 On-chain
+
+All transactions that happen on-chain are through
+
+the WandX-Olio API. The API integrates the Dapp
+
+with the smart contracts, hence improving security
+
+of the platform and providing an additional
+
+business model for future use of the APIs.
+
+Creating baskets: Creation of baskets by users is
+
+done through the WandX-Olio API.
+
+Buy/sell baskets: Accepting Bid and Ask prices
+
+calls functions from the API which execute the
+
+smart contract code.
+
+Liquidate baskets: Liquidation is the process of
+
+getting the underlying coins into your address.
+
+This event again calls the smart contract through
+
+the Olio API.
+
+Recording changes in the order book: Any change
+
+in ownership of a basket is also recorded on the
+
+WandX order book contract.
+
+Use of WandX Token sale revenue: The revenue
+
+gained from the WandX Token sale will be used as
+
+mentioned on our token sale page. Addresses are
+
+assigned for operational costs, hiring, and basket
+
+creation. Users can see how the revenue is used
+
+by seeing the consumption of tokens in each of
+
+these addresses.
+
+15.2.6 Off-chain
+
+Order book listing: Listing the basket available to
+
+buy/sell will be done off-chain. Keeping the list on-
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 22/23
+
+chain would be very expensive because of gas
+
+costs due to change in contract state.
+
+Bid/Ask quotes: Listing of bid/ask quotes is done
+
+off-chain, with only the accepted quote being
+
+moved to the blockchain through the API and
+
+smart contract.
+
+16. Risk and compliance
+
+Token sale: The ETH address to which you will
+
+have to send your ETH during the token sale will be
+
+on the date of the Token sale.
+
+Terms and conditions: Before participating in our
+
+Dapp or token sale, users will have to accept the
+
+terms and conditions and privacy policy of our
+
+platform, login through civic, enter their Ethereum
+
+address.
+
+17. Advantages of WandX
+
+Automated decentralized contracts: There’s no
+
+middleman to guarantee the obligation of smart
+
+contracts on WandX; this process is automated.
+
+WandX provides an easy, automated, decentralised
+
+method of creation and exchanging tokens. This
+
+would help in providing more liquidity to the
+
+contracts and the tradability of tokens.
+
+Cryptocurrency and blockchain based products:
+
+Create, sell, buy, rate cryptocurrency based
+
+products like AUG+GNO+BNT = product 1. This
+
+product 1 invests in all three cryptocurrencies to
+
+reduce risk of any untoward fluctuation in the price
+
+of any single cryptocurrency. You can create
+
+variations of these products to support certain
+
+blockchain based products and receive
+
+
+
+3/24/2018 WandX whitepaper · GitBook
+
+https://www.gitbook.com/book/wandxdapp/wandx-whitepaper/details 23/23
+
+consideration for the support through terms in the
+
+contract.
+
+Identity management: Accounts will be linked to
+
+uPort and other identity management software to
+
+guarantee your trustworthiness. If the person does
+
+not adhere to the terms of a contract, that
+
+information will be available to the entire network,
+
+and they will cease to trade with that person.
+
+Liquidity: The blockchain provides a single source
+
+of truth, but also enables the liquidity of
+
+cryptocurrencies in the market. We have inbuilt
+
+functions that can reduce or eliminate fluctuations
+
+of the market or, at worst, make them more
+
+predictable.
+
+Integration with IoT (optional): An IoT sensor could
+
+be attached to goods traded on our exchange to
+
+verify the validity of the transaction, which would
+
+connect with the blockchain.
+
+About Help Explore Editor Blog
+
+Pricing Contact © GitBook.com
+
+https://www.gitbook.com/about
+https://help.gitbook.com/
+https://www.gitbook.com/explore
+https://www.gitbook.com/editor
+https://www.gitbook.com/blog
+https://www.gitbook.com/pricing
+https://www.gitbook.com/contact
+https://www.gitbook.com/
+

@@ -1,0 +1,2676 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WHITE PAPER
+Unibr ight  –  the unified framework
+
+for  b lockchain  based business  integrat ion
+
+team@unibr ight . io
+
+unibr ight . io
+
+
+
+Unibright - the unified framework for blockchain
+
+based business integration
+
+Stefan Schmidt
+
+stefan@unibright.io
+
+Marten Jung
+
+marten@unibright.io
+
+Thomas Schmidt Ingo Sterzinger Günter Schmidt
+
+Moritz Gomm Klaus Tschirschke Tapio Reisinger
+
+Fabian Schlarb Daniel Benkenstein Bastian Emig
+
+2018-Feb-26
+
+Abstract
+
+The purpose of Unibright is to leverage the promises of blockchain
+
+technology for all those driving business. Unibright is a unified framework
+
+for blockchain-based business integration.
+
+Unibright establishes a template based, visual definition of business
+
+integration workflows and serves with automatic smart contract gener-
+
+ation. The Unibright framework wants to enable cross-blockchain and
+
+cross-system connections and provides all system components to support
+
+a blockchain-based business integration process.
+
+This whitepaper points out the benefits of using blockchain technol-
+
+ogy in the field of business integration, and what unsolved issues can be
+
+addressed thereby. It shows why a unifying framework like Unibright is
+
+mandatory to turn all these benefits to account and evolves the details of
+
+the Unibright concept.
+
+Contents
+
+1 What is Unibright? 4
+
+1.1 The Unibright view on the blockchain . . . . . . . . . . . . . . . 4
+
+1.2 The promises of blockchain technology . . . . . . . . . . . . . . . 4
+
+1.3 The potential of blockchain technology . . . . . . . . . . . . . . . 6
+
+1.4 The Unibright mission . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+1
+
+
+
+2 Business Integration 8
+
+2.1 What is Business Integration? . . . . . . . . . . . . . . . . . . . . 8
+
+2.2 Why and how should blockchain technology be used for business
+
+integration? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+2.3 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+3 The Unibright Concept 12
+
+3.1 The Unibright Software Architecture . . . . . . . . . . . . . . . . 12
+
+3.2 Unibright Application Level . . . . . . . . . . . . . . . . . . . . . 13
+
+3.3 The Unibright Contract Interface, Templates, Use cases and Smart
+
+Contracts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+3.4 The Unibright smart contract lifecycle . . . . . . . . . . . . . . . 14
+
+3.4.1 Defining Unibright conformant business workflows . . . . 16
+
+3.4.2 Generating, deploying and maintaining Unibright confor-
+
+mant smart contracts . . . . . . . . . . . . . . . . . . . . 16
+
+3.4.3 Exploring and querying Unibright conformant smart con-
+
+tracts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+
+3.4.4 Connecting and integrating Unibright conformant smart
+
+contracts . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+3.4.5 Orchestrating Unibright workflows - Cross Blockchain Busi-
+
+ness Integration . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+3.5 The Unibright Ecosystem . . . . . . . . . . . . . . . . . . . . . . 21
+
+4 Implementation Details 23
+
+5 Examples for blockchain based business integration with the
+
+Unibright Framework 24
+
+5.1 Get Quotation for Material . . . . . . . . . . . . . . . . . . . . . 24
+
+5.1.1 Challenge . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+5.1.2 Unibright solution . . . . . . . . . . . . . . . . . . . . . . 24
+
+5.1.3 Envisaged benefits using the Unibright framework . . . . 24
+
+5.2 Product Pass Approval . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+5.2.1 Challenge . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+
+5.2.2 Unibright solution . . . . . . . . . . . . . . . . . . . . . . 25
+
+5.2.3 Envisaged benefits using the Unibright framework . . . . 25
+
+5.3 Shipping Process Monitoring . . . . . . . . . . . . . . . . . . . . 25
+
+5.3.1 Challenge . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+
+5.3.2 Unibright solution . . . . . . . . . . . . . . . . . . . . . . 25
+
+5.3.3 Envisaged benefits using the Unibright framework . . . . 25
+
+5.4 Tracking of resources during a production process . . . . . . . . . 26
+
+5.4.1 Challenge . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+
+2
+
+
+
+5.4.2 Unibright solution . . . . . . . . . . . . . . . . . . . . . . 26
+
+5.4.3 Envisaged benefits using the Unibright framework . . . . 26
+
+5.5 Invoice release . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+
+5.6 Aircraft Production History . . . . . . . . . . . . . . . . . . . . . 26
+
+5.7 New Hire . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+
+5.8 Insurance claim processing . . . . . . . . . . . . . . . . . . . . . . 27
+
+5.9 Milestone based project payment . . . . . . . . . . . . . . . . . . 27
+
+5.10 ...and many more . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+
+6 Outlook 27
+
+7 Token Sale 28
+
+7.1 General . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+
+7.2 Token Sale Bonuses . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+
+7.3 Token Distribution . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+
+7.4 Token Sale Proceeds Distribution . . . . . . . . . . . . . . . . . . 30
+
+7.5 Token Compliance and regulation . . . . . . . . . . . . . . . . . 30
+
+7.6 Knowledge required . . . . . . . . . . . . . . . . . . . . . . . . . 30
+
+7.7 Risks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+7.8 Important Disclaimer . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+References 32
+
+3
+
+
+
+1 What is Unibright?
+
+1.1 The Unibright view on the blockchain
+
+The blockchain as a concept can be assessed from different point of views. It
+
+is important to understand the view of the Unibright team on the blockchain
+
+to understand the framework and the constructive applications Unibright offers
+
+and to answer the question: ”What is Unibright?”
+
+We understand the blockchain1 as a data structure that is technically im-
+
+plemented in a decentralized peer-to-peer network and offers the possibility to
+
+define and hold both data and functions in single blocks, the smart contracts.2
+
+Some features promised by blockchain technology, like built-in security and in-
+
+formation completeness, predestine it for use in the business integration domain.
+
+1.2 The promises of blockchain technology
+
+We focus on the needs and demands of secure and efficient business integration.
+
+The challenges in business integration exist independently from an implementa-
+
+tion strategy. Business integration is already happening and there will be cases,
+
+where existing technologies completely suffice to meet the demands, no matter
+
+if these technologies are based upon technical knowledge of the last decade or
+
+even the last millennium.
+
+Nevertheless, there has been a demand and a reason for moving on, say, from
+
+1There is no widely agreed definition of blockchain. Its description is still fuzzy due to the
+
+rapid change in research, knowledge and development in that domain. Colloquially, blockchain
+
+is widely used as an equivalent to Bitcoin, which is certainly as wrong as understanding a prod-
+
+uct like Dropbox as an equivalent to Cloud. In some definitions, a blockchain is characterized
+
+a ”different kind of database”, a view which is too broad and technical in our opinion.
+
+In our understanding, a blockchain[1] first and foremost means a data structure, a linked list.
+
+Every item, or block is inseparably connected to its predecessor by the use of cryptographic
+
+methods, which define hash functions on the content of the predecessor block and verify the
+
+result in the following block. This chain is constantly growing as blocks with transactions are
+
+added to it with a new set of recordings in a linear, chronological order.
+
+Technically, a blockchain is a replicated structure, where each node in a peer-to-peer network
+
+holds a copy of the blockchain. Each node performs the transactions included in a block, thus
+
+establishing a decentralized consensus. The blockchain is secure by design and has complete
+
+information about the addresses and their content right from the genesis block to the most
+
+recently completed block. Data wise, a block can consist of variables of primitive datatypes
+
+(the ”state”) and functions which read or manipulate the current state.
+2In our understanding, smart contracts[2] (also called self-executing contracts, blockchain
+
+contracts, or cryptocontracts) are simply computer programs that act as agreements where
+
+the terms of the agreement can be pre-programmed with the ability to self-execute. Smart
+
+contracts reside inside a blockchain and enable trusted transactions and agreements to be
+
+carried out among anonymous parties without the need for a central authority or enforcement
+
+mechanism. They render transactions transparent, traceable and irreversible.
+
+4
+
+
+
+a direct ”information-by file exchange” strategy, over a proprietary middleware
+
+solution exchanging self-defined structured data to a cloud solution building
+
+upon industry conformant exchange formats.
+
+We understand the blockchain as next step in this evolution to solve certain
+
+problems and meet certain doubts in the area of middleware- and cloud-based
+
+business integration.
+
+Some of the commonly agreed advantages and promises of blockchain tech-
+
+nology encompass:
+
+Disintermediation
+
+Information exchange between two parties without the intermediation
+
+through a third party, eliminating counterparty risk.
+
+Durability, Reliability, Longevity
+
+Due to the decentralized structure, a blockchain does not have a central
+
+point of failure, hence being better able to withstand malicious attacks.
+
+Transparency
+
+Changes to public blockchains are publicly viewable by all participating
+
+nodes.
+
+Immutability
+
+Transactions cannot be altered or deleted due to the cryptographic link
+
+structure of all blocks in the chain.
+
+Lower transaction costs
+
+By eliminating third party intermediaries and overhead costs for exchang-
+
+ing assets, blockchains have the potential to greatly reduce transaction
+
+fees.
+
+SAP, one of the world leading ERP-software vendors, sums up the blockchain
+
+trend as follows[3]:
+
+”Every business is based on transactions. But these transactions are often
+
+routed through third-party intermediaries like banks, lawyers, and brokers
+
+which can make processing time-consuming and expensive. Blockchain
+
+technology has the potential to reduce the role of middlemen, dramatically
+
+speeding up multi-participant transactions and lowering costs, while ensuring
+
+all parties are protected. People, businesses, machines, and algorithms would
+
+be free to transact and communicate with one another in a frictionless way.
+
+This is the promise of blockchain.”
+
+5
+
+
+
+1.3 The potential of blockchain technology
+
+Aside from the Hype factor, that accompanies every new technology, the blockchain
+
+technology already yielded its proof of concept and its real-life relevance with
+
+the bitcoin[4] implementation and the Ethereum[5] environment, among others.
+
+Without regard to the use of the blockchain technology as a tool for business
+
+integration, experts agree on the potential of blockchains regarding growth and
+
+distribution (see fig. 1).
+
+grandviewresearch.com[6] predicts:
+
+”The global blockchain technology market size was valued at USD 509.1 million
+
+in 2015 and is predicted to gain momentum over the forecast period. The
+
+blockchain technology is one of the most promising upcoming technological
+
+trends in the information technology domain.”
+
+Figure 1: Global blockchain technology market by type, 2015 - 2024 (USD
+
+Million)[6]
+
+As with every new technology, it will take time to establish the blockchain
+
+concept in ”the mainstream”, just as it took powerful and working tools like
+
+Dropbox to solidify a real understanding of the concept cloud to the majority
+
+of non-expert users.
+
+Arvind Krishna, director of research at IBM, states[7]
+
+”[] those companies will be around when the blockchain goes mainstream that
+
+create software that makes it easy for businesses and consumers to actually
+
+implement all of blockchains possibilities.”
+
+He adds an example by likening the blockchain technology to the early days of
+
+email:
+
+6
+
+
+
+”[] even though email technology had been around for years, it still took the
+
+likes of AOL to package it in a way that got lots of people to use it.”
+
+We believe that the demand for smart contracts will continue to grow as
+
+automated interactions between systems, applications and digital individuals is
+
+becoming more and more widespread in our society.
+
+The experience of arising technologies in the past and the conviction that
+
+blockchain technology will find its way into the IT mainstream leads us to our
+
+Unibright mission.
+
+1.4 The Unibright mission
+
+Our mission is to provide the first unified framework for blockchain-based busi-
+
+ness integration. We expect blockchain technology to become pervasive and
+
+therefore want to make the use of blockchain technology more feasible and prof-
+
+itable for those driving real business and not ”only” exchanging crypto curren-
+
+cies.
+
+We are confident to be well positioned to become the first provider for
+
+blockchain based business integration. We strive for bringing the promises of
+
+blockchain technology usage to the next level for business professionals.
+
+We are aware of and are gaining motivation out of the fact that complex
+
+enterprise system landscapes already exist. Some of these will not be touched
+
+for years, paying tribute to the principle of ”never changing a running system”.
+
+We do not see this as a defect - quite the contrary: It is an essential motivation
+
+of those standing for Unibright to offer a high-level concept and practical tools
+
+to integrate existing processes and IT-landscapes into the promising ecosystems
+
+of blockchains. We address existing teams with experts in different domains and
+
+want to make it easier for those teams to use the blockchain as one part of their
+
+versatile solutions.
+
+During the analysis stage of the Unibright ecosystem it turned out that we
+
+have to operate on two levels of modelling to achieve blockchain based business
+
+integration a software architectural level and an end user driven application
+
+level. Both levels are presented in more detail in the following sections.
+
+So what is Unibright? Unibright is a unified framework for blockchain-
+
+based business integration and a set of applications leveraging this
+
+framework.
+
+7
+
+
+
+2 Business Integration
+
+2.1 What is Business Integration?
+
+In our understanding, business integration[8] is the use of system architectural
+
+principals, software architecture and implementation to integrate a set of enter-
+
+prise computer applications. It means the integration, automation and optimi-
+
+sation of IT based business processes within and beyond the walls of a company’s
+
+organisation.
+
+The purpose of business integration may be data integration, abstraction
+
+from specific vendors systems to ensure independence and integrity, providing
+
+common front-ends and standardized queries on available data.
+
+In demarcation of related terms, we understand business integration as one
+
+motivation to define business processes3 and implement business workflows4 on
+
+top of them.[9] [10]
+
+Commonly agreed challenges to business integration can be named:
+
+Message Exchange
+
+Within a business workflow, different parties of a business process will
+
+need to exchange messages. Message formats, the reasons triggering a
+
+message and actions following the message have to be defined.
+
+Notifications
+
+When a message is sent, the sender wants to make sure the message ar-
+
+rived. The recipient may need to inform the sender on missing information.
+
+The notification can be part of the message exchange itself, thus leading
+
+to potential recursive problems.
+
+State Management
+
+3We understand a business process as a collection of activities that produce a specific
+
+service or product, hence to achieve a particular goal in a business context. Multiple parties
+
+may be involved in the business process. A business process can be described in an informal
+
+manner (e.g. as a detailed written concept) and/or be technically formalized (e.g. as a
+
+flowchart). In our understanding, the business process defines the requirements that have to
+
+be met to achieve the defined goal, but not necessarily the technical steps which address these
+
+requirements.
+4In our understanding, a business workflow is the logical definition of a business process.
+
+The goal to be achieved (as described in the business process) is transformed into a set of
+
+activities, moving and/or transforming information or material from one activity or party to
+
+another. Activities within a workflow are structured and arranged in sequences, which may
+
+also feature parallel activities. The workflow defines a deterministic path through the graph-
+
+oriented activity sequence, including conditions, iterations and the integration of external data,
+
+which may in turn be provided from another workflow. A business workflow is technically
+
+describable, storable and verifiable by a set of rules, definitions and constraints.
+
+8
+
+
+
+Parties have to keep track of already sent messages and notifications, lead-
+
+ing to the necessity of resending messages, update information or cancel-
+
+lation of processing.
+
+Control Flow
+
+Workflows have to be enabled to react on different parameters changing,
+
+by defining control flow with elements like decisions, choices, loops or
+
+exceptions.
+
+Changing Requirements
+
+Existing workflows will have to be updated. Parties have to be added,
+
+system components may be changed and changes in established control
+
+flows may be introduced.
+
+Data Integrity
+
+Different message formats on different parties will need mappings to ensure
+
+content integrity.
+
+Technical Integrity
+
+Different channels, protocols and messages have to be orchestrated to keep
+
+all parties connected to the business integration process.
+
+Security
+
+It has to be assured that the desired partner is reached, data holding
+
+information needs encryption and validation.
+
+Cost estimate
+
+It is necessary to keep track of resources (e.g. time and money spent) to
+
+evaluate the cost-benefit ratio.
+
+2.2 Why and how should blockchain technology be used
+
+for business integration?
+
+During the past decades, several technical approaches to business integration
+
+have been established.
+
+In our understanding, the blockchain technology should be seen as an add-
+
+on to existing middleware5 or cloud based6 architectures, which have already
+
+5Using Middleware, a central instance, also called the broker, resides in the centre of
+
+the network, and provides all message transformation, routing, and any other functionality.
+
+All communication between applications must flow through this hub, allowing the broker to
+
+maintain data concurrency for the network as well as enabling new connections to be added.
+
+This approach delivers a central configuration repository and enables the applications to
+
+communicate asynchronously, without awaiting response from the recipient. Unfavourable, at
+
+the same time this central instance hast to be considered a single point of failure.
+6Using a cloud based software solution for business integration means dividing a classical
+
+9
+
+
+
+replaced outworn point-to-point7 architectures. [11], [12]
+
+Looking back on the challenges to business integration presented before, we
+
+compare these different approaches with regard to their ability to meet these
+
+challenges (fig. 2).
+
+ 
+
+0
+
+2
+
+4
+
+6
+
+8
+
+10
+Data Integrity
+
+Technical Integrity
+
+SecurityStateManagements
+
+Changing
+Requirements
+
+Point-to-Point
+
+Middleware
+
+Cloud
+
+Blockchain
+
+Unibright
+
+Figure 2: Meeting challenges on business integration
+
+The Blockchain as a concept has clear advantages in some areas of business
+
+integration. Still it most probably will only be one part in a complete business
+
+integration scenario, having to be included in existing IT landscapes, of whatever
+
+state they are.
+
+A blockchain infrastructure consists of an independent peer-to-peer network
+
+without a central instance. To be part of this infrastructure and to integrate with
+
+it, every party has to be part of the blockchain, meaning running or interacting
+
+with a blockchain node (fig. 3).
+
+middleware solution into smaller units, that can be run as services in a distributed server
+
+landscape (”The cloud”) connected over the Internet. These units may provide storage services
+
+like databases, computing, message queuing, caching and many more. Well-designed cloud
+
+based software solution are easily scalable and reproducible, to ensure fast adjustment when it
+
+comes to peak loads or to expanding the services to different areas of the world. The flexibility,
+
+scalability and cost-efficiency promised by Cloud computing has seen rapid acceptance within
+
+many stakeholders in the world of business integration. The dependency (”lock-in”) on the
+
+cloud providing instance or company is enormous, in terms of availability as well as in terms
+
+of security and trustfulness about possible misuse of data and transactions.
+7In a point-to-point model, a specific connector is implemented for each pair of applications
+
+or systems that have to communicate. This connector handles data transformation, integra-
+
+tion, and any other messaging related services that take place between the specific pair of
+
+components it is connecting. When additional components are added to the infrastructure,
+
+the number of point-to-point connections required (and to be maintained) to create a complete
+
+integration architecture increases exponentially.
+
+10
+
+
+
+Blockchain
+
+Existing Cloud 
+Architecture
+
+Existing Middleware Architecture
+
+Existing Point-to-Point Connections
+
+Figure 3: Including the blockchain in existing IT landscapes
+
+In this setup, the blockchain is monitored all the time for new events or
+
+transactions. To use the blockchain as a part of a business integration sys-
+
+tem, the current information state of the blockchain can be harmonised with
+
+information from non-blockchain systems like ERP- and legacy-systems.
+
+From a technical point of view, this means existing IT-infrastructure is con-
+
+nected to local blockchain nodes to interact with them, for example in calling
+
+functions in smart contracts or watching events raised and transactions per-
+
+formed by smart contracts.
+
+2.3 Conclusion
+
+To benefit from the promises the blockchain offers, we need a concept that allows
+
+us to integrate specific blockchain technologies into existing IT- and business
+
+integration landscapes, which leads us to the Unibright concept.
+
+11
+
+
+
+3 The Unibright Concept
+
+3.1 The Unibright Software Architecture
+
+The blockchain world is still a highly vibrant market, emitting numerous new
+
+cryptocurrencies or even new blockchains in short time.
+
+Despite all the promising advantages of blockchain, there are some intriguing
+
+problems that exist with creating or coding smart contracts today. Generally
+
+speaking, programming smart contracts is complex and error prone and uses a
+
+different approach compared to existing programming for business software.
+
+Today, creating smart contracts for a blockchain platform requires the usage
+
+of a specific programming language like Solidity for Ethereum. For compa-
+
+nies wanting to use multiple blockchains this involves different programming
+
+languages which all come with their own requirements and shortcomings. Fur-
+
+thermore, extending and managing a smart contract is expensive and requires
+
+specialist knowledge, as user friendly or visually oriented tools are lacking in
+
+the field of smart contract development today.
+
+To ensure reliable and enduring business integration based on blockchain
+
+technology, we need a superordinate concept of abstracting from specific blockchain
+
+implementations. This ensures adaptability and an indispensable level of ab-
+
+straction. It also reduces dependency on single blockchains, taking into account
+
+that there will be new blockchain implementations, bringing their own smart
+
+contract syntax with them.
+
+In terms of business process modelling these superordinate concepts already
+
+exist. We do not reinvent any wheel here, but adapt parts of those concepts for
+
+using them in a blockchain related environment: We describe business processes
+
+as workflows, as presented in previous chapters.
+
+When it comes to smart contracts, we need a concept enabling us not only
+
+to abstract from a certain platform specific implementation, but also from the
+
+type of a smart contract - smart contracts differ with regard to their function
+
+or role in the distributed application: A smart contract can operate as data
+
+storage, as a dispatcher, as a state machine, as a factory generating new smart
+
+contracts and many more.
+
+In our vision, a smart contract can be executed in different blockchain im-
+
+plementations and can be integrated in different types of enterprise system
+
+landscapes. Although our current implementations work on the Ethereum
+
+blockchain, our concept enables us to be blockchain agnostic.
+
+To combine these different levels of abstraction, we introduce a combina-
+
+tion of Contract Interfaces, use case related templates and generation of multi-
+
+inherited smart contracts and smart adapters. The basic underlying concept is
+
+12
+
+
+
+the Unibright Contract Interface, which is presented in more detail later.
+
+3.2 Unibright Application Level
+
+We defined a set of system components supporting all phases of a business
+
+integration process. This helps us to abstract from the different roles in a
+
+business process, to address different levels of (expert) knowledge and to attend
+
+different execution domains:
+
+• Business integration workflows are designed locally with the Unibright
+Business Workflow Designer.
+
+• The automatically generated code is deployed, maintained and updated
+as Smart Contracts into a specific blockchain by the Unibright Contract
+
+Lifecycle Manager.
+
+• Existing Unibright conformant smart contracts are monitored and queried
+by the Unibright Explorer, using automatically generated Smart Query
+
+Sets.
+
+• Business processes, IT and ERP-Systems in the enterprise domain as well
+as other blockchains are integrated by the Unibright Connector. Smart
+
+Adapters using automatically generated configurations enable standard-
+
+ized connections via common technologies. The included Mapping engine
+
+transfers interface defined objects into domain specific objects for further
+
+processing.
+
+These applications focus on business process and workflow specialists, soft-
+
+ware architects, blockchain developers and domain IT specialists in equal mea-
+
+sure, assuring that the particular expert knowledge can be used without requir-
+
+ing expert knowledge in all of the other domains.
+
+3.3 The Unibright Contract Interface, Templates, Use cases
+
+and Smart Contracts
+
+The central part of the Unibright ecosystem will be the Unibright Contract
+
+Interface (UCI):
+
+The UCI defines the main structure, state variables, mappings and methods
+
+which every generated Smart Contract automatically implements, thus mark-
+
+ing a smart contract Unibright conformant. It is the irremovable guarantee of
+
+recognizing smart contracts as part of the Unibright ecosystem, ensuring that
+
+Unibright conformant smart contracts can be found, called, maintained and
+
+connected.
+
+13
+
+
+
+Content-wise, the UCI will offer the fundament to integrate smart contracts
+
+into different blockchains and system landscapes.
+
+Operators of the Unibright ecosystem will be able to visually define work-
+
+flows and choose from a set of Templates. Templates pre-define typical business
+
+workflows on a high level of abstraction. By choosing a certain template, the
+
+operator will be automatically given a suitable subset of all available workflow
+
+tool set items and an initial example workflow which can be customized to the
+
+needs of a special use case.
+
+Each template is supposed to bring its own purpose-built interface, which
+
+the generated smart contract will implement in addition to the basic Unibright
+
+Contract Interface (fig. 4).
+
+Unibright 
+Contract 
+Interface
+
+Buiness Case
+Templates
+
+Template 
+Interface
+
+Example 
+Workflow
+
+Adjusted
+Toolset
+
+Smart ContractCustomized Workflow
+
+implements
+
+implements
+
+Generated Code
+
+Figure 4: Inheritation Hierarchy
+
+Technically, smart contracts are small computer programs, coded in a blockchain
+
+specific high-level programming language. These languages will differ in their
+
+syntax, but will share common paradigms of structural and object oriented pro-
+
+gramming. Some of these paradigms will be assumed in our concept to work,
+
+like the existence of primitive datatypes like strings, integers or bools, the pos-
+
+sibility to unite a set of primitive datatypes in some kind of structure (structs)
+
+and to define functions working on these datatypes and optionally returning
+
+values.
+
+The set of templates will be constantly enhanced to serve other use cases
+
+and different industries.
+
+3.4 The Unibright smart contract lifecycle
+
+Smart contracts are enclosed code-blocks, stored and executed in a blockchain.
+
+Unibright will offer standardized, abstract views and control mechanisms on top
+
+14
+
+
+
+of any specific blockchain technology to create a set of automatically generated
+
+smart contracts for each specific business workflow. All Unibright conformant
+
+smart contracts will implement the Unibright Contract Interface, which ensures
+
+logical access in every layer (fig. 5).
+
+U
+n
+
+ib
+ri
+
+g
+h
+
+t C
+o
+
+nn
+ec
+
+to
+r
+
+[I
+N
+
+T
+EG
+
+R
+A
+
+TE
+]
+
+U
+n
+
+ib
+ri
+
+g
+h
+
+t E
+xp
+
+lo
+re
+
+r
+[M
+
+O
+N
+
+IT
+O
+
+R
+]
+
+U
+n
+
+ib
+ri
+
+g
+h
+
+t C
+o
+
+nt
+ra
+
+ct
+ L
+
+if
+ec
+
+yc
+le
+
+ M
+an
+
+ag
+er
+
+[M
+A
+
+IN
+TA
+
+IN
+]  
+
+   [
+D
+
+EP
+LO
+
+Y
+]
+
+U
+n
+
+ib
+ri
+
+g
+h
+
+t B
+u
+
+si
+n
+
+es
+s 
+
+W
+o
+
+rk
+fl
+
+ow
+ D
+
+es
+ig
+
+n
+er
+
+[D
+E
+
+FI
+N
+
+E]
+
+Visually defining 
+business 
+
+workflows
+
+Business Objects Workflow toolset items Control Flow
+
+Templates
+
+Generating smart 
+contract
+
+Deploying into 
+Blockchain
+
+Updating
+
+Locally stored 
+workflow 
+
+definitions
+
+Platform specific 
+Smart Contracts
+
+implementing 
+UCI
+
+Locally stored 
+Smart Query Sets
+
+Queries Views
+
+Executing 
+monitoring queries 
+
+on blockchain 
+content
+
+Smart Adapters 
+and Mappings
+
+Connecting Smart 
+contracts to 
+
+Enterprise systems
+
+Figure 5: The Unibright smart contract lifecycle
+
+15
+
+
+
+3.4.1 Defining Unibright conformant business workflows
+
+Business workflows are based on use case specific templates, which include an
+
+adaptable basic workflow and corresponding workflow tool set items. By select-
+
+ing the appropriate template for a business use case the user will be able to
+
+build his specific needs on top of the already existing base logic coming from
+
+the template. He will be able to do this visually, with the Unibright Business
+
+Workflow Designer (fig. 6), so no programming skills are needed. The resulting
+
+workflow definition is blockchain independent, saved locally and can be compiled
+
+to different blockchain platforms.
+
+Figure 6: The Unibright Business Workflow Designer
+
+3.4.2 Generating, deploying and maintaining Unibright conformant
+
+smart contracts
+
+Each template will bring its own interface defining basic attributes and functions
+
+to be implemented by a blockchain specific smart contract. For example, some
+
+workflow templates may include the interface ”Delegable” which prepares the
+
+routing of function calls to other smart contract instances.
+
+The Unibright Contract Lifecycle Manager (fig. 7) will be the tool to gen-
+
+erate, deploy and maintain Unibright conformant smart contracts.
+
+After having defined a specific workflow based on one or more Unibright tem-
+
+plates, the user will be able to compile the workflow definition to a blockchain
+
+specific implementation. At the time of writing the first blockchain environment
+
+to be supported is Ethereum; thus the compilation leads to Solidity code.
+
+After its creation, the smart contract will be deployed to its destined blockchain.
+
+Moreover, an update or adaption of the deployed code is possible. Referring to
+
+16
+
+
+
+the example above, smart contracts implementing the Unibright ”Delegable-
+
+Interface” can be marked as outdated and be replaced with a new version.
+
+Existing smart contracts can also be paused or terminated if needed.
+
+Figure 7: The Unibright Contract Lifecycle Manager
+
+3.4.3 Exploring and querying Unibright conformant smart contracts
+
+Those smart contracts being published to a ”real world”-blockchain will be
+
+queried and monitored in a blockchain independent manner with the Unibright
+
+Explorer (fig. 8). The user will be able to see all data and transaction flow of
+
+all their deployed, Unibright conformant smart contracts in one place.
+
+Reoccurring queries, composing information from different smart contracts
+
+will be be saved locally as query sets. Queries might be assembled to views and
+
+also contain conditions. An example for such a specific query in the context of
+
+a shipping process monitoring could be ”Show all containers registered in Hong
+
+Kong within the last month with a reported temperature more than 30 degree
+
+Celsius”.
+
+A first set of Smart Queries is automatically generated based on the use case
+
+related template used for the integration workflow.
+
+17
+
+
+
+Figure 8: The Unibright Explorer
+
+3.4.4 Connecting and integrating Unibright conformant smart con-
+
+tracts
+
+The Unibright Connector aims to connect existing IT-landscapes and sepa-
+
+rated IT-systems to the blockchain world. Smart Adapters encapsulate com-
+
+munication technologies to different target platforms (ERP systems or other
+
+blockchains) via different channels (RFC, REST, SOAP, WebServices [13], ...).
+
+Their initial configuration will be automatically generated based on the systems
+
+designed in the basic workflow.
+
+Off-chain systems, like SAP ERP or SAP PI, can be connected to be part
+
+of blockchain based business integration. For example, programs residing in a
+
+SAP-System will be able to call functions in Unibright conformant smart con-
+
+tracts, using the standardized communication channels offered by the suitable
+
+Smart Adapter (fig. 9).
+
+18
+
+
+
+B
+lo
+
+ck
+ch
+
+ai
+n
+
+D
+om
+
+ai
+n
+
+U
+n
+
+ib
+ri
+
+g
+h
+
+t C
+o
+
+nn
+ec
+
+to
+r
+
+E
+nt
+
+er
+p
+
+ri
+se
+
+ D
+o
+
+m
+ai
+
+n
+
+Webservice
+
+Ethereum Mainnet Blockchain X
+
+A
+ll 
+
+da
+ta
+
+ a
+nd
+
+ c
+om
+
+m
+un
+
+ic
+at
+
+io
+n 
+
+in
+ lo
+
+ca
+l /
+
+ tr
+us
+
+te
+d 
+
+ne
+tw
+
+or
+k
+
+SAP 
+ERP
+
+Oracle 
+ERP
+
+Local 
+Ethereum Node
+
+geth / Parity
+
+Local 
+Blockchain Node
+
+blockchain specific 
+access
+
+Unibright Connector
+
+FTP
+
+Web3.js ...
+
+t1
+
+t2 t3
+
+t4 t4'
+
+t5
+
+t6
+
+Call Function
+getQuote()
+
+Call Function
+getQuote()
+
+Polling
+quote event
+
+Call Function
+postQuote()
+
+Call Function
+postQuote()
+
+Call Function
+createOrder()
+
+Smart
+Adapters
+
+Figure 9: The Unibright Connector Architecture
+
+The Unibright Connector also enables the subscription to events raised by
+
+Unibright conformant smart contracts in a specific blockchain. A smart contract
+
+can trigger actions by being polled by the connector which forwards these actions
+
+to all subscribed receivers (fig. 10).
+
+B
+lo
+
+ck
+ch
+
+ai
+n
+
+D
+om
+
+ai
+n
+
+U
+n
+
+ib
+ri
+
+g
+h
+
+t C
+o
+
+nn
+ec
+
+to
+r
+
+E
+nt
+
+er
+p
+
+ri
+se
+
+ D
+o
+
+m
+ai
+
+n
+
+Webservice
+
+Ethereum Mainnet Blockchain X
+
+A
+ll 
+
+da
+ta
+
+ a
+nd
+
+ c
+om
+
+m
+un
+
+ic
+at
+
+io
+n 
+
+in
+ lo
+
+ca
+l /
+
+ tr
+us
+
+te
+d 
+
+ne
+tw
+
+or
+k
+
+SAP 
+ERP
+
+Oracle 
+ERP
+
+Local 
+Ethereum Node
+
+geth / Parity
+
+Local 
+Blockchain Node
+
+blockchain specific 
+access
+
+Unibright Connector
+
+FTP
+
+Web3.js ...
+
+t1
+
+t2 t3
+
+t4 t4'
+
+t5
+
+t6
+
+Call Function
+getQuote()
+
+Call Function
+getQuote()
+
+Polling
+quote event
+
+Call Function
+postQuote()
+
+Call Function
+postQuote()
+
+Call Function
+createOrder()
+
+Smart
+Adapters
+
+Figure 10: Process Sequence viewed from the Unibright Connector
+
+19
+
+
+
+The Unibright connector contains an xml based, configurable Mapping En-
+
+gine to ensure smart contract data is applicable to IT-system specific objects.
+
+The Unibright Contract Lifecycle Manager as well as the Unibright Explorer
+
+use the Unibright Connector to connect to the relevant blockchain.
+
+3.4.5 Orchestrating Unibright workflows - Cross Blockchain Busi-
+
+ness Integration
+
+As explained above, visually defined workflows will be automatically rendered
+
+into platform specific smart contracts. Multiple workflows might be orchestrated
+
+to a complete business integration scenario by automatically rendered smart
+
+adapter configurations. This will enable integration scenarios with more than
+
+one blockchain involved (fig. 11).
+
+Workflow 2ERP specific processingWorkflow 1
+
+END
+
+Connector
+
+Solidity SmartContract
+[Ethereum]
+
+Chaincode (Go/Java) SmartContract
+[Hyperledger Fabric]
+
+Public Blockchain ERP System Private Blockchain
+
+Smart Adapter Configurations Smart Adapter Configuration
+
+Connector Connector
+
+Connector
+
+START
+
+Connector
+
+ERP specific processing I
+
+Two-way
+
+ERP specific processing II
+
+ERP specific processing III
+One-way
+
+One-way
+
+Figure 11: Orchestrating workflows
+
+For example, a global player demands to set up a private blockchain in a
+
+non-trustful environment. The smart contract implementing the (partial) busi-
+
+ness workflow defined for this area can be connected to the company’s ERP
+
+system. This system may be connected to another (public) blockchain, holding
+
+another Unibright smart contract. Both smart contracts are generated automat-
+
+ically out of visually defined workflows, even if they address completely different
+
+blockchain implementations. The Smart Adapters in the Unibright Connector
+
+are meant to ensure a smooth integration. Their configuration can be generated
+
+automatically by defining the system boundaries and involved systems in the
+
+respective workflows.
+
+We want the Unibright software architecture also to allow to automatically
+
+render workflows into platform specific, non-blockchain code, e.g. a SAP specific
+
+workflow configuration (fig. 12). This will be subject of further research and
+
+development.
+
+20
+
+
+
+Workflow 3Workflow 2Workflow 1
+
+Connector
+
+START
+
+Connector
+
+Connector
+
+END
+
+Connector
+
+Solidity SmartContract
+[Ethereum]
+
+Custom Code
+[ERP specific]
+
+Chaincode (Go/Java) SmartContract
+[Hyperledger Fabric]
+
+Public Blockchain ERP System Private Blockchain
+
+Smart Adapter Configuration Smart Adapter Configuration
+
+Connector Connector
+
+Figure 12: Generating non-blockchain code
+
+3.5 The Unibright Ecosystem
+
+Striving to be the first framework provider for unified blockchain based busi-
+
+ness integration, the Unibright ecosystem will bundle all components needed to
+
+empower the business integration lifecycle.
+
+• Use case related business objects, conditions and actions are orchestrated
+into template based workflows with the Unibright Business Workflow De-
+
+signer.
+
+• A template holds a template specific interface, which is implemented by a
+smart contract in addition to the Unibright Contract Interface (UCI), and
+
+is then deployed into and maintained in the blockchain by the Unibright
+
+Contract Lifecycle Manager.
+
+• All Smart queries and monitoring tasks on the smart contracts (by Unib-
+right Explorer) are working against the Interfaces, abstracting from the
+
+blockchain domain specific implementation.
+
+• Smart contracts can interact directly with a specific blockchain, or in-
+teract with enterprise systems and other blockchains via the Unibright
+
+Connector.
+
+• The Smart Adapters (included in the Unibright Connector) encapsulate
+communication channels suitable for specific systems that have to be in-
+
+tegrated.
+
+• The Mapping Engine (included in the Unibright Connector) transfers in-
+terface defined objects into domain specific objects for further processing.
+
+21
+
+
+
+E
+nt
+
+er
+p
+
+ri
+se
+
+ D
+o
+
+m
+ai
+
+n
+P
+
+ri
+v
+
+at
+e 
+
+D
+om
+
+ai
+n
+
+B
+lo
+
+ck
+ch
+
+ai
+n
+
+ D
+om
+
+ai
+n
+
+Connector
+
+Workflow 
+Designer
+
+Contract 
+Lifecycle 
+Manager
+
+Explorer
+
+Mapping 
+Engine
+
+Connector
+Smart 
+
+Contract
+
+Query Sets
+
+UCI
+
+UCI
+
+Smart 
+Contract
+
+Smart 
+Contract
+
+B
+lo
+
+ck
+ch
+
+ai
+n 
+
+1
+B
+
+lo
+ck
+
+ch
+ai
+
+n 
+1
+
+UCI
+
+UCI
+
+.NET 
+Object
+
+SAP 
+Object
+
+JAVA 
+Object
+
+B
+lo
+
+ck
+ch
+
+ai
+n 
+
+2
+B
+
+lo
+ck
+
+ch
+ai
+
+n 
+2
+
+Smart 
+Contract
+
+Templates
+
+Business 
+Objects
+
+Workflow 
+toolset 
+items
+
+Control 
+flow
+
+Unibright
+Contract
+Interface
+
+(UCI)
+
+Local Unibright Object
+
+Smart Contract implementing UCI
+
+Unibright Contract Interface
+
+Unibright System component
+
+Platform specific UCI implementation
+Template 
+
+related 
+interface
+
+Smart 
+Adapter
+
+Legacy / 
+ERP- 
+
+System
+
+Figure 13: The Unibright Ecosystem
+
+22
+
+
+
+4 Implementation Details
+
+The implementation of all Unibright components follows the central concepts
+
+blockchain technology offers. Disintermediation, security and transparency are
+
+foundations of all components. All data and transaction flow during design-time
+
+and runtime of Unibright conformant smart contracts will stay in the respective
+
+user domain.
+
+The Unibright Contract Lifecycle Manager and the Unibright Explorer will
+
+interact with the local node to maintain smart contracts or query contracts via
+
+the Unibright Connector. The Connector is supposed to enable interaction with
+
+Unibright conformant smart contracts by interacting with the local blockchain
+
+nodes residing in the respective company’s domain (fig. 14). By interacting
+
+only with local nodes, we use the communication pattern that most of the
+
+applications interacting with blockchain use, like wallets or mining software.
+
+Company AERP System X Company B
+
+Company C Company D
+
+ERP System X
+
+ERP System Y ERP System Z
+
+Blockchain 1
+
+Blockchain 2
+
+UB Connector  à XUB Connector à X
+UB Business Workflow Designer
+
+UB Contract Lifecycle Manager
+
+UB Explorer
+
+UB Connector à Y UB Connector à Z
+
+UB Connector BC1  à BC2
+
+Figure 14: Business Integration with Unibright system components
+
+For a company leveraging the Unibright framework there is no trust needed
+
+for a third party. The company can keep total control of all the information
+
+and data used.
+
+Currently the Unibright system components are focusing the Ethereum envi-
+
+ronment, using the web3.js library for communicating with the local blockchain
+
+node. Other blockchain technologies will be evaluated and added to the Unib-
+
+right framework as they gain market relevance.
+
+23
+
+
+
+5 Examples for blockchain based business inte-
+
+gration with the Unibright Framework
+
+This section illustrates some examples of real-world business integration scenar-
+
+ios which could benefit from the outstanding advantages of blockchain technol-
+
+ogy and the Unibright framework.
+
+We envisage that all use cases can be implemented by setting up on Unibright
+
+workflow templates. The designed workflows result in automatically rendered
+
+Unibright conformant smart contracts for various blockchains which then can
+
+be connected to off-chain IT landscapes.
+
+5.1 Get Quotation for Material
+
+(Request for Quotation-Template)
+
+5.1.1 Challenge
+
+A purchaser needs to reorder a certain material. The requirement is determined
+
+in the purchasers backend ERP-System.
+
+5.1.2 Unibright solution
+
+A Unibright conformant smart contract triggers potential suppliers to get a
+
+quotation on the required material, providing additional information like the
+
+requested quantity, a desired delivery date and a proposed prime cost.
+
+Potential suppliers are able to decide on the offer by direct interaction be-
+
+tween Unibright conformant smart contracts (e.g. neglecting all Requests under
+
+a certain volume) or integrating an off-chain backend system via the Unibright
+
+connector (e.g. starting capacity planning workflows in SAP).
+
+5.1.3 Envisaged benefits using the Unibright framework
+
+The blockchain technology enables automatic interaction between different smart
+
+contracts without intermediation, secure and reproducible. The compatibility
+
+to the Unibright Contract Interface allows these smart contracts to be connected
+
+to enterprise systems.
+
+5.2 Product Pass Approval
+
+(Multi Party Approval -Template)
+
+24
+
+
+
+5.2.1 Challenge
+
+A jewellery company develops new necklaces which are about to be manufac-
+
+tured abroad, and then distributed by the company-owned web shop. The
+
+approval process involves different departments and consists of different steps.
+
+Some of these steps are dependent on the fulfilment of other steps, and some
+
+are accomplishable independently.
+
+5.2.2 Unibright solution
+
+Unibright conformant smart contracts interact by setting states of their respec-
+
+tive approval. The current state of the approval process is accumulated in a
+
+central smart contract which holds the control flow and implicitly decides on
+
+the final approval state.
+
+5.2.3 Envisaged benefits using the Unibright framework
+
+The current state of the approval workflow is implicitly represented by the
+
+available blocks in the blockchain. The blockchain acts as a state-machine:
+
+secure, reliable and deterministic. The Unibright Explorer can be frequently
+
+used to check the current state of the approval process, showing the complete
+
+information flow of all participating parties.
+
+5.3 Shipping Process Monitoring
+
+(Data Collector -Template)
+
+5.3.1 Challenge
+
+In an Internet of Things (IoT)[14] enabled plant, different types of sensors on
+
+trucks, machines and containers deliver information on the current state of a
+
+shipping process. These pieces of information have to be collected and displayed
+
+properly.
+
+5.3.2 Unibright solution
+
+The different actors interact with Unibright conformant smart contracts to up-
+
+date the ongoing shipping process and show the respective states of the involved
+
+entities.
+
+5.3.3 Envisaged benefits using the Unibright framework
+
+The blockchain acts as an immutable data keeper, secure and reliable. The
+
+Unibright Explorer can be used to supervise the ongoing process, improving the
+
+25
+
+
+
+speed of analysis and the quality of tracking.
+
+5.4 Tracking of resources during a production process
+
+(Batch tracing-Template and Data Collector -Template)
+
+5.4.1 Challenge
+
+A manufacturing company in the food industry wants to enable backtracking
+
+of all raw materials used in a final product, a bottled lemonade. Parts of this
+
+production process are the mixing of basic ingredients delivered by different sup-
+
+pliers and identified by electronically readable lot numbers. The final product
+
+is bottled and sold in various tray combinations to resellers and restaurants. By
+
+the mention of a unique identifier on each sold tray combination the company
+
+wants to be able to name all original lots of the raw materials.
+
+5.4.2 Unibright solution
+
+All goods receipts, their usage in the production process and their merging into
+
+the final product are inserted into the blockchain as Unibright conformant smart
+
+contracts.
+
+5.4.3 Envisaged benefits using the Unibright framework
+
+Locally storable query sets in the Unibright Explorer enable the user to find
+
+specific information about lot usage in the production process. The blockchain
+
+is both acting as data keeper and as a state machine representing the current
+
+state of a production process.
+
+5.5 Invoice release
+
+(Multi Party Approval -Template)
+
+Once an Invoice with all its information is entered into the Unibright confor-
+
+mant smart contract, the contract analyses the invoice, decides which approvals
+
+are needed and interacts with other smart contracts to request the needed ap-
+
+provals.
+
+5.6 Aircraft Production History
+
+(Asset Lifecycle-Template)
+
+The Unibright conformant smart contracts generated for this business case
+
+enable the user to keep track of ownership transferals, maintenance and repair
+
+history and logs special events like damages or refurbishments in the complex
+
+26
+
+
+
+lifecycle of an aircraft production. For all parties getting in touch with the final
+
+product (e.g. the airline using the aircraft to offer a specific flight) the safety
+
+and reliability of the involved aircraft is traceable in a trustworthy environment.
+
+5.7 New Hire
+
+(Multi Party Approval -Template and Project Management-Template)
+
+The Unibright conformant smart contract gathers required information on
+
+the applicant (a ”background check”) and decides upon pre-defined rules and
+
+additionally requested data if an applicant qualifies for a personal interview.
+
+The smart contract can trigger notifications, request needed approvals and au-
+
+tomatically send confirmations to the applicants and the Human Resource De-
+
+partment.
+
+5.8 Insurance claim processing
+
+(ClaimProcessing-Template)
+
+The Unibright conformant smart contract performs error checking, initiates
+
+approval workflows and calculate pay-outs based on the claim, the underlying
+
+policy and the event occurring. Based on this template the smart contract can
+
+even pay out automatically against the insurable event without the policyholder
+
+having to a make a claim or the insurer having to administer the claim.
+
+5.9 Milestone based project payment
+
+(Milestone Payment-Template)
+
+The Unibright conformant smart contract continuously checks defined mile-
+
+stone conditions for payments that should be made. This enables all parties
+
+involved in a project to agree upon a payment plan based on terms that are
+
+executed reliably by the Unibright conformant smart contract.
+
+5.10 ...and many more
+
+More business integration challenges can be met by deriving workflows from
+
+a growing number of Unibright templates. Updates will be presented on the
+
+Unibright website and the corresponding blog. The shared underlying concept
+
+of the Unibright Contract Interface ensures maintainability and connectivity.
+
+6 Outlook
+
+This document described the Unibright framework for blockchain based busi-
+
+ness integration. All the components needed for the complete business integra-
+
+27
+
+
+
+tion lifecycle have been presented and are available for usage in the Ethereum
+
+blockchain. The Unibright Connector enables ERP-Systems, third-party legacy
+
+systems and custom build software to be part of the Unibright framework. The
+
+foundation laid constitutes a complete ecosystem ready to be used for workflows
+
+using blockchain technology.
+
+Regarding the implementation, we have to harden our technology to guar-
+
+antee the top quality level we want to offer. Besides improving our existing
+
+components, we will create new templates for use cases we identify in different
+
+industries. In the medium term we aim to support other blockchain technologies
+
+besides Ethereum, like Stratis[15], NEO[16], Hyperledger Fabric[17], or what-
+
+ever will arise in this vibrant technological environment.
+
+The next steps to become the first and leading provider for blockchain based
+
+business integration are:
+
+• Quality assurance of the existing components
+
+• Create templates for use cases requested and identified
+
+• Support other blockchain technologies besides Ethereum
+
+• Develop new smart adapters
+
+• Establish a marketplace for third-party developers to offer tools for Unib-
+right conformant smart contracts
+
+7 Token Sale
+
+7.1 General
+
+The Token Generation Event will create and distribute 150 million Unibright
+
+tokens. The Unibright Token is a token empowering the Unibright Framework:
+
+• Unibright Token will be the only payment option to register Unibright
+conformant smart contracts. Only registered contracts can be published,
+
+maintained and queried using the Unibright framework.
+
+• Unibright Token will be the only way of payment for our additional ser-
+vices, for example using the smart adapters provided by the Unibright
+
+connector to integrate existing ERP-Systems to the blockchain.
+
+• Business specific templates or system specific smart adapters are meant
+to be traded on a still to be developed marketplace for add-ons. This
+
+marketplace will be powered by Unibright Tokens.
+
+28
+
+
+
+Symbol UBT
+
+Type ERC20
+
+Start date date token sale April 10th 2018 at 1:00 PM UTC (14:00 CET)
+
+Maximum Supply 150 Million tokens
+
+Sold in public token sale 100.5 Million tokens (unsold tokens will be burned)
+
+Price 1 UBT = 0,14 USD
+
+Minimum Cap (including all pre-sales) 2,200,000 USD
+
+Maximum Cap (public token sale) 13,542,375 USD
+
+Accepted Cryptocurrencies ETH, BTC, others via Shapeshift.io
+
+Minting/Mining No
+
+Jurisdiction Germany
+
+Table 1: Key facts
+
+We plan to launch the ICO on April 10th 2018 at 1:00 PM UTC (14:00 CET)
+
+and it will last for at most 4 weeks, ending on May 10th 2018 1:00 PM UTC or
+
+ending instantly when all tokens are sold.
+
+The token sale will be managed by Ambisafe Financial (ambisafe-financial.com),
+
+one of the leading global blockchain services and initial coin offering solutions
+
+provider companies. Ambisafe has a track record of more than 15 successfully
+
+managed token sales with more than 55,0000 participants.
+
+7.2 Token Sale Bonuses
+
+• First quarter of tokens (25,125 Mio UBT): 10% bonus
+
+• Second quarter of tokens (25,125 Mio UBT): 5% bonus
+
+• Remainder of the tokens (50,25 Mio UBT minus bonus tokens): 0% bonus
+
+Promo/Referral: Every token sale participant will receive a unique referral link.
+
+When sharing that link with other users, the participant will automatically get
+
+a 5% bonus transferred into his wallet from newly bought tokens using that
+
+referral link.
+
+7.3 Token Distribution
+
+• 67% in the public token sale
+
+• 9% sold to early purchasers
+
+• 6% to the team (locked up for 12 months)
+
+29
+
+
+
+• 12% cold storage liquidity reserve
+
+• 6% legal / token sale expenses
+
+7.4 Token Sale Proceeds Distribution
+
+• (At least) 50% for platform development
+
+• (Up to) 20% Template Generation for Business Use-Cases
+
+• 15% for PR and marketing
+
+• 15% setting up partnerships in industry, bootstrapping pilot customers
+
+7.5 Token Compliance and regulation
+
+Unibright is working with outside legal counsel to ensure compliance with rele-
+
+vant laws in its home jurisdiction, Germany, and internationally. Our goal is to
+
+be as compliant as possible within such a regulatory environment. Please note
+
+though that the national and international regulatory framework of blockchain
+
+and distributed ledger technology in general and related applications is in the
+
+process of being clarified and might change. It is possible that the interpretation
+
+and application of existing laws and regulations may be amended or adapted
+
+and could also be subject to legislative initiatives at national and international
+
+level. Clarification of and changes to the regulatory framework could adversely
+
+affect the Unibright, its products and Unibright Tokens without us having in-
+
+fluence on such developments. That said, the contents of this document do not
+
+constitute legal advice and we encourage prospective purchasers with concerns
+
+to consult with an attorney. We expect the regulatory environment to evolve
+
+as the cryptocurrency space matures.
+
+7.6 Knowledge required
+
+The purchaser of Unibright tokens undertakes that she/he understands and
+
+has significant experience of tokens, blockchain systems and services, and that
+
+she/he fully understands the risks associated with the token sale as well as the
+
+mechanism related to the use of tokens (incl. storage). Unibright shall not be
+
+responsible for any loss of Unibright Tokens or situations making it impossible
+
+to access Unibright tokens, which may result from any actions or omissions of
+
+the user or any person undertaking to acquire Unibright Tokens as well as in
+
+case of hacker attacks or any other events.
+
+30
+
+
+
+7.7 Risks
+
+Acquiring Unibright tokens and storing them involves various risks, in particular
+
+the risk that Unibright may not be able to launch its operations and provide
+
+the envisaged services. Therefore, and prior to acquiring Unibright tokens any
+
+user should carefully consider the risks, costs and benefits of acquiring Unibright
+
+tokens in the context of the token sale and, if necessary, obtain any independent
+
+advice in this regard. Any interested person who is not in the position to
+
+accept or to understand the risks associated with purchase, holding and use of
+
+Unibright Tokens as indicated in the Terms & Conditions of the token sale and
+
+further unknown and unforeseeable risks should not acquire Unibright tokens.
+
+7.8 Important Disclaimer
+
+This white paper shall not and cannot be considered as an invitation to enter
+
+into an investment. It does not constitute or relate in any way nor should it be
+
+considered as an offering of securities in any jurisdiction. The white paper does
+
+not include nor contain any information or indication that might be considered
+
+as a recommendation or that might be used to base any investment decision.
+
+This document does not constitute an offer or an invitation to sell shares, se-
+
+curities or rights belonging to Unibright or any related or associated company.
+
+The Unibright Tokens are just a utility token which can be used only on the
+
+Unibright platform and is not intended to be used as an investment. Unibright
+
+is not to be considered as advisor in any legal, tax or financial matters. Any
+
+information in the white paper is given for general information purpose only,
+
+and Unibright does not provide any warranty as to the accuracy and complete-
+
+ness of this information. Given the lack of crypto-token qualifications in most
+
+countries, each buyer is strongly advised to carry out a legal and tax analysis
+
+concerning the purchase and ownership of Unibright Token according to their
+
+nationality and place of residence.
+
+This paper is subject to change. It will be amended from time to time to
+
+include further findings. Any amended versions of this paper will be published
+
+on our website; only the most recent version of the whitepaper published on the
+
+website is the relevant whitepaper.
+
+31
+
+
+
+References
+
+[1] M. Pilkington, Blockchain Technology: Principles and Applications. re-
+
+search handbook on digital transformations ed., 2016.
+
+[2] C. D. Clack, V. A. Bakshi, and L. Braine, Smart Contract Templates:
+
+foundations, design landscape and research directions. CoRR - Computing
+
+Research Repository - arXiv, 2016.
+
+[3] https://www.sap.com/trends/blockchain.html, SAP, 2017 (accessed Au-
+
+gust 15, 2017).
+
+[4] S. Nakamoto, Bitcoin: A peer-to-peer electronic cash system. 2008.
+
+[5] V. Buterin. Ethereum: A next-generation smart contract and decentralized
+
+application platform, 2014.
+
+[6] http://grandviewresearch.com/industry-analysis/blockchain-technology
+
+market, Grand View Research, 2016 (accessed August 15, 2017).
+
+[7] http://fortune.com/2017/05/23/blockchain-chasm-of-death bitcoin, IBM,
+
+2017 (accessed August 15, 2017).
+
+[8] C. David, D. Guy, and F. Vernadat, “Architectures for enterprise integra-
+
+tion and interoperability: Past, present and future,” Computers in Indus-
+
+try, vol. 59, no. 7, pp. 647–659, 2008.
+
+[9] A.-W. Scheer and M. Nuettgens, ARIS architecture and reference models
+
+for business process management. business process management ed., 2000.
+
+[10] G. Mentzas, C. Halaris, and S. Kavadias, Modelling business processes with
+
+workflow systems: an evaluation of alternative approaches. international
+
+journal of information management ed., 2001.
+
+[11] W. Emmerich, “Software engineering and middleware: a roadmap,” in Pro-
+
+ceedings of the Conference on the Future of Software Engineering, 2000.
+
+[12] D. Yuri, C. Ngo, R. Strijkers, and C. De Laat, “Defining inter-cloud ar-
+
+chitecture for interoperability and integration,” CLOUD COMPUTING,
+
+2012.
+
+[13] M. zur Muehlen, J. V. Nickerson, and K. D. Swenson, “Developing web ser-
+
+vices choreography standards—the case of rest vs soap,” Decision Support
+
+Systems, vol. 40, no. 1, 2005.
+
+[14] M. Atzori, Blockchain-Based Architectures for the Internet of Things: A
+
+Survey. 2016.
+
+32
+
+
+
+[15] https://stratisplatform.com, Stratis Blockchain, 2017 (accessed September
+
+30, 2017).
+
+[16] https://neotracker.io, Neo Blockchain, 2017 (accessed September 30, 2017).
+
+[17] https://www.hyperledger.org/projects/fabric, Hyperledger Fabric, 2017
+
+(accessed September 30, 2017).
+
+33
+
+
+
+team@unibr ight . io
+
+unibr ight . io
+
+

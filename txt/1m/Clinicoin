@@ -1,0 +1,2066 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WHITEPAPER
+
+Clinicoin is an open source wellness platform that rewards 
+users for engaging in healthy activities. 
+
+Leveraged by a blockchain-based ecosystem, the platform is 
+designed to connect people, developers, and providers, 
+
+worldwide, improving global health and wellness.
+
+Blockchain powered global wellness
+
+
+
+NOTICE: This is not a prospectus for investment.
+
+This document does not constitute or imply a prospectus of any sort. No 
+wording contained herein should be construed as a solicitation for investment. 
+This whitepaper contains a technical description of the functionalities of the 
+Clinicoin Project as well as the creation and issuance of Clinicoin (CLIN) 
+tokens by Mosio.
+
+Clinicoins are functional utility tokens providing access to platform functions, 
+premium content, incentives, and rewards system within the Clinicoin platform. 
+Clinicoins are not securities, nor do they imply or promise equity, ownership in, 
+or profit sharing with any part of the Company. Clinicoins are non-refundable, 
+are not for speculative investment, and they include no promise of future value 
+or performance, on their own, or as a metric of Company success. 
+
+Clinicoin is intended for patients, providers, organizations, and developers in 
+the health, research, and life sciences fields.
+
+
+
+INDEX
+
+Description Page
+Index 3-4
+
+Introduction 5-8
+Mission 5
+Vision 6
+Wellness + Healthcare + Research           7
+Health Rewards, Evolved 8
+
+The Patient Engagement Problem 9
+
+The Mobile Health App Problem 10
+
+The Solution 11
+
+Technology 12-32
+Patient Engagement Protocol 12
+
+Messages, Decentralized Paths 12
+Clinicoin Community Members 13
+ClinApps 14-15
+
+How ClinApps Benefit Developers and Providers 15
+Secure Messenger 16-18
+Rewards Engine 20-22
+
+Engagement Activities 21
+Token Distribution Events (TDEs) 22
+
+Proof of Engagement (PoE) and Validators 23 
+Proof of Engagement Process 24-25
+
+Marketplace 26-27
+Decentralized and Open Marketplace 26 
+External Marketplaces 27
+
+Architecture Overview 28
+End to End Encryption (E2EE) Messenger 29
+Transaction Processing System (TPS) 30
+Automatic Smart Contract System (RCP) 31-32
+
+Benefits 33-34
+
+Use Cases 35
+
+
+
+Description Page
+The Clinicoin Token (CLIN) 36-37
+
+ERC20, Circulation, Immediate Use  36
+Token Usage 37
+
+Token Sale 38-40
+Public Sale Dates, Bonus, Circulation, Distribution 38-39
+Vesting and Use of Funds 40
+
+Roadmap 41-45
+Milestone 1 (Messenger) 41-42
+Milestone 2 (Rewards Engine) 43
+Milestone 3  (Proof of Engagement) 44
+Milestone 4 (Marketplace) 45
+
+Executive Summary 46-47
+
+The Team 48-49
+
+Advisory Board 50
+
+Join Us 51
+
+
+
+Non-communicable (chronic) diseases 
+account for 70% of all global deaths.
+
+- World Health Organization
+
+Mission
+Clinicoin's mission is to connect people, providers, researchers, and 
+developers in delivering on the true potential of health technologies, 
+worldwide.
+
+We believe collaboration, not competition, will be the driving force behind 
+the success of global health and wellness. 
+
+Utilizing mobile technologies, human social interactions, and the 
+blockchain, Clinicoin seeks to empower people in their health and 
+wellness, while providing organizations with simple, affordable, and 
+innovative tools to achieve desired health outcomes in the digital age. 
+
+The healthcare industry is in a communications paradigm shift. People 
+have more access to information than ever before. They’re mobile-ready 
+and using technology to track and manage their health. Even so, they 
+make poor or uninformed choices regarding their health and wellness. 
+Up to half of all premature deaths (before age 80) in the U.S. are due to 
+behavioral and other preventable factors.*  
+
+Combining wellness, healthcare, research, mobile software, and the 
+blockchain, powerful, yet simple programs can be designed to improve 
+and extend the lives of millions of people.
+
+We hope you'll join us by participating in this project to advance 
+communications and drive global innovations in health and wellness.
+
+Introduction
+
+5	  *h$p://www.prb.org/Publica4ons/Ar4cles/2015/us-­‐premature-­‐deaths.aspx	  
+h$p://www.who.int/mediacentre/factsheets/fs355/en/	  
+
+
+
+Introduction
+Vision
+Regardless of what the mobile phone of the future looks like, messaging 
+and applications will be there. Efficient and effective mobile 
+communications, whether automated, algorithm-based, or through live 
+interactions, will continue to be the cornerstone of engagement in 
+healthcare, wellness, and clinical research. 
+
+For the past seven years, Mosio has helped healthcare organizations 
+and research teams communicate more efficiently with their patients, 
+patrons, and study participants using the most popular channel on 
+mobile phones: Text Messaging. 
+
+During this time, we have designed and deployed innovative solutions to 
+improve engagement and have identified shortcomings in the mobile 
+health field. We've observed users, interested in using new mobile 
+technologies to manage their health, met with a complexity of choices, 
+unsure of which apps are best suited for them. 
+
+Collaborative, Social, and Fun
+We've also seen, first hand, that improving health engagement does not 
+need to be time consuming or expensive. Finally, we've discovered that 
+people can be empowered in their health, wellness, and have fun in the 
+process. 
+
+Clinicoin’s secure, open source mobile platform leverages mobile 
+messaging, APIs, smart contracts, and a rewards-based ecosystem to 
+incentivize and reward people, providers, and developers for their 
+participation. 
+
+We believe it’s time for a “super app” in health and wellness, one that 
+starts with the user, provides much needed solutions, and inspires 
+industry innovation. It should be readily available to users, developers, 
+practitioners, and researchers all over the world, providing them with a 
+simple an inexpensive way to bring solutions to those who need them.
+
+These are the reasons we created the Clinicoin project. 
+
+6	  
+
+
+
+Introduction
+Where wellness meets the healthcare industry
+No one wakes up and thinks “I can’t wait to be an engaged patient, 
+today,” but the reality is that even an avid marathon runner is considered 
+“non-adherent” by their doctor if they don’t follow orders to rest and 
+properly care for themselves after an injury. 
+
+Clinicoin is the digital intersection between wellness, healthcare, 
+and research, providing a global opportunity for lasting change.
+
+Starting with a wellness community rewarded for being proactive in their 
+own physical and mental health, we are able to connect the necessary 
+tools to help people manage their lives while they are at their peak 
+performance, or need assistance after getting sick.
+
+Much more than a “health coin”
+One of the most exciting functions of the Clinicoin platform to users is the 
+ability to earn cryptocurrency rewards for participating in healthy 
+activities, and the platform offers a number of ways for community 
+members to do this. However, if it stopped there, it would be missing 
+large pieces of solutions to expensive and unfortunate problems, many 
+of which are preventable.
+
+In this white paper, we will cover the usefulness of the Clinicoin platform 
+to users, while providing details as to how it also serves to the healthcare 
+and research industry. In our opinion, a any large-scale project needs to 
+cater to both people and providers to have a large impact with lasting 
+success.
+
+7	  
+
+Wellness	  
+
+Research	  Healthcare	  
+
+
+
+Old Methods
+The idea of earning rewards for exercising or losing weight is not new, 
+but the offerings to date involve selling user data, depending on brands 
+to provide products in exchange for advertising, or zero sum wagers 
+where one side gains in wellness and the other side loses money.
+
+A Novel Approach
+To ensure the long term success of a global project, the old and existing 
+methods for rewards are not scalable or sustainable. 
+
+A global solution should have the following elements:
+1.  Open source
+2.  Decentralization
+3.  The blockchain
+4.  A fungible digital currency
+5.  Networks (both computerized and human)
+6.  Multiple industry player types 
+7.  An active ecosystem
+
+Healthcare Industry Applications
+The success of using incentives and rewards to encourage healthy 
+behaviors has been proven. Users will change their behaviors for 
+rewards. Clinicoin brings several novel approaches to the proven model 
+of incentives-based behavioral changes, then we look next to industry 
+challenges.
+
+We know from our experience solving problems in the healthcare and 
+research industries that low engagement between people and their 
+providers not only increases the risk of hospitalizations and 
+readmissions, it also creates expensive and unnecessary costs to the 
+healthcare system.
+ 
+Expensive and Preventable Problems
+We will not use this whitepaper to cover every challenge low 
+engagement creates, but next two pages cover two industry problems 
+resulting in over $428 billion in annual healthcare costs in the U.S. alone:
+1.  Low Engagement
+2.  Mobile Health App Overload
+
+Health Rewards, Evolved
+
+8	  
+
+
+
+Keeping people engaged is one of the costliest challenges in 
+healthcare and research today. 
+
+Properly communicating with and ensuring people follow protocols to 
+improve their health is a problem resulting in increased hospitalizations, 
+
+healthcare expenditures, and new drug development costs.
+
+Engagement Problems
+
+$150B 
+Annual cost of 
+
+missed 
+appointments 
+
+each year1	  
+	  
+
+30% 
+Average number 
+
+of participants 
+who drop out of a 
+
+study after 
+enrollment.4	  
+
+$278B 
+Healthcare costs 
+
+associated with 
+medication non-
+
+adherence2	  
+
+80% 
+Number of clinical 
+
+trials that don’t 
+meet their 
+
+recruitment 
+deadlines.3	  
+
+Healthcare	  
+
+Research	  
+
+Pharmaceutical companies lose $600,000 - $8,000,000 
+per day when a clinical trial is delayed due to 
+
+recruitment problems.
+
+9	  
+1	  h$ps://www.healthmg$ech.com/missed-­‐appointments-­‐cost-­‐u.s.healthcare-­‐system-­‐150b-­‐year	  
+2	  h$ps://mhealthintelligence.com/features/the-­‐evolving-­‐role-­‐of-­‐mhealth-­‐in-­‐medica4on-­‐management-­‐and-­‐adherence	  
+3	  h$ps://www.centerwatch.com/news-­‐online/2017/07/24/a$rac4veness-­‐conduc4ng-­‐clinical-­‐trials-­‐outside-­‐u-­‐s	  
+4	  h$ps://forteresearch.com/news/infographic-­‐reten4on-­‐in-­‐clinical-­‐trials-­‐keeping-­‐pa4ents-­‐on-­‐protocols/	  
+
+
+
+The Mobile Health App Problem
+
+Clinicoin leverages the power of mobile phones to 
+improve the health experience with a cost-effective, 
+
+innovation-friendly platform. 
+
+Other healthcare organizations 
+(hospitals, pharmacies, 
+
+researchers, etc.) are asking 
+people to download their mobile 
+
+apps as well.
+
+Number of doctors the 
+average person has during 
+their lives. At 65 years, the 
+number increases to 28.4.5
+
+18.7	  
+
+To communicate securely via a 
+mobile messaging with 
+
+providers, we must download, 
+learn, and use a mobile app. 
+
+More providers and 
+organizations means more 
+
+apps.
+
+App	  
+App	  App	  
+
+App	  
+
+are listed in the app stores. Many 
+of them cannot be verified as safe 
+or secure.6
+
+Nearly 300,000 health apps 	  
+
+Many technology providers are attempting to solve engagement 
+challenges and there is user interest, but this has created a new 
+
+problem: MOBILE HEALTH APP OVERLOAD
+
+Mobile apps are costly to build and manage ($50k-$250k), created for an 
+audience increasingly overwhelmed by choices.
+
+10	  5	  h$ps://www.prac4cefusion.com/pages/pr/survey-­‐pa4ents-­‐see-­‐over-­‐18-­‐different-­‐doctors-­‐on-­‐average.html	  
+6	  h$ps://research2guidance.com/mhealth-­‐app-­‐market-­‐geLng-­‐crowded-­‐259000-­‐mhealth-­‐apps-­‐now/	  
+	  
+
+
+
+The Solution
+An open source, blockchain-leveraged health and wellness platform.
+
+1. Clinicoin Protocol 
+The protocol powers the Clinicoin platform, enabling users, developers, and 
+providers to interact securely in an engagement-driven rewards ecosystem. 
+It is made up of four core functions that tie into the Ethereum blockchain. 
+The open source protocol enables developers to create apps (“ClinApps”) 
+and to include third party interfaces inside the Clinicoin app container.
+
+2. Secure Messaging
+The messenger uses end-to-end encryption, enabling users to interact with 
+each other, organizations, researchers, and digital tools securely (HIPAA 
+compliant). Rather than downloading a new app for each provider, health, 
+or research organization they want to communicate with, users simply add 
+them as a contact inside the Clinicoin address book.
+
+3. Rewards Engine
+The Rewards Engine enables the distribution of Clinicoin (CLIN) tokens 
+among community members. They can be used for completing healthy 
+tasks, to incentivize adherence, or for participating in medical research. The 
+Rewards Engine integrates with third party apps through ClinApps, so users 
+can earn tokens interacting with software applications outside of the 
+Clinicoin platform.
+ 
+4. Proof of Engagement (PoE) and Validators 
+Proof of Engagement (PoE) is the confirmation of healthy activities 
+connected to the Clinicoin platform by one of two different types of third 
+parties called Validators (health app developers and activity leaders). CLIN 
+token rewards are distributed based on a PoE algorithm to users from the 
+community rewards pool, which will be 600 million CLIN at genesis.
+
+5. Health and Wellness Marketplace
+The marketplace is where Clinicoin members spend their CLIN tokens for 
+access to tools, content, products, and services. Starting out as centralized 
+to ensure stability and scalability, it will move towards decentralization, 
+where vendors and even additional marketplaces can exist as part of the 
+network.
+
+
+
+1. The Clinicoin Platform
+The Clinicoin platform enables secure communications, rapid app 
+development, and rewards delivery in a health, wellness, and research 
+environment serving users, providers, and developers within the 
+community. 
+
+Open Source, Collaboration Friendly
+The platform is made up of four key functions that make it useful to all 
+members of the Clinicoin community as well as the healthcare and 
+research industries: 
+
+•  Secure Messaging
+•  Rewards Engine
+•  Proof of Engagement (PoE) and Validators
+•  Marketplace
+
+Each of these functions provides an affordable, simple platform for the 
+development of global health and research innovations.
+
+Community Members
+The Clinicoin platform has been designed to reward all members for their 
+participation and involvement in the community. Through varying 
+functional qualities, each community member can contribute in a way 
+that best suits their experiences and goals, collectively creating a thriving 
+ecosystem.
+
+ClinApps
+ClinApps are the driving force behind what makes integration into the 
+Clinicoin platform possible. Through APIs, ClinApps encourage outside 
+developers of health and research software applications to build into the 
+channel, offering secure and compliant (HIPAA, 21 CFR 11) access to 
+users. ClinApps can leverage the Rewards Engine to distribute CLIN 
+tokens to users.
+
+Technology
+
+12	  
+
+
+
+1.1 Clinicoin Community Members
+The Clinicoin project is dependent on the contributions and participation 
+of community members for its success. Following the lead of successful 
+communities in crypto and on the web, Clinicoin is poised to create a fun 
+and helpful environment where members worldwide can enjoy being 
+empowered in their health and wellness.
+
+Clinicoin solves multiple challenges in healthcare communications and 
+engagement by providing an open source mobile platform to three 
+different player types in the community interacting with each other to 
+accomplish goals.
+
+The system was designed to be useful to technical and non-technical 
+users of the system: 
+ 
+A) Technical User Example: A developer wants to integrate an outside 
+application within the system. She or he can use tools in the Clinicoin 
+SDK and Clinicoin APIs to create engaging messaging and app 
+functions, leveraging the Clinicoin platform. The Developer can earn 
+CLIN tokens by licensing her or his ClinApps or being a Validator.  
+ 
+B) Non-Technical User Example: A researcher wants to incentivize and 
+reward study participants for attending appointments and check-ins. 
+They can acquire and distribute CLIN Tokens upon completion of those 
+desired actions with no programming skills. 
+
+There are three Clinicoin community member types:
+
+Technology
+
+Users	  
+
+Providers	  Developers	  
+
+- Users 
+(people) 
+
+- Developers  
+(programmers, software engineers)
+
+- Providers  
+(healthcare orgs, researchers, companies)
+
+13	  
+
+
+
+Technology
+Users want easy access to meaningful health information, support, and 
+tools. Clinicoin offers access to all of those things in a single app, then 
+takes it one step further. By employing PoE and the Rewards Engine, it 
+gives them the opportunity to gamify and incentivize their behaviors, 
+providing them with a way to make health and wellness fun. Users 
+download the Clinicoin app, then communicate, interact, log healthy 
+activities, or sign on as a Validator to earn CLIN tokens.
+User Explainer Video: https://clnc.io/clinexpusers
+
+Developers want an easy way to develop, deploy, and be compensated 
+for their software applications. Clinicoin offers a platform to create and 
+sell apps and tools, or earn CLIN tokens as Validators through any 
+existing health applications they have.
+Developer Explainer Video: https://clnc.io/clinexpdev
+
+Providers want an easy and secure way to communicate with users, 
+remind and alert them, and keep them engaged and compliant in their 
+protocols. Clinicoin facilitates these efficient communications and gives 
+them a way to reward users with tokens through Token Distribution 
+Events (TDEs).
+Provider Explainer Video: https://clnc.io/clinexpprov
+
+1.2 ClinApps
+The Clinicoin platform enables the development of tools and secure 
+connections into the system called ClinApps. They run on the platform 
+and access software and systems outside, leveraging the protocol and 
+platform for user access.
+
+How ClinApps Work
+ClinApps are software components connected to the Clinicoin platform. 
+They can live and operate on their own within the components in the 
+platform itself, or connect to outside software and systems, leveraging 
+Clinicoin to augment their existing solutions. 
+
+Two ClinApp Types
+On Platform - Those that are coded, deployed, and “live” solely on the 
+Clinicoin platform. 
+Hybrid - Those that access outside systems, but utilize the Clinicoin 
+interface/wrapper to run their functions on top of the platform. 14	  
+
+
+
+How ClinApps Benefit Developers and Providers
+Building and managing mobile apps is expensive and resource-intensive. 
+We have NIH-funded clients who have innovative ideas requiring a 
+mobile app to fulfill their vision, but lack the funding to build a prototype 
+for a pilot. It is our intention to offer the Clinicoin platform as an 
+alternative for the need to create a mobile app. Health innovators will be 
+able to utilize Clinicoin inexpensively for their pilot programs, then rollout, 
+rather than rebuild, the existing solution, to a larger population. The end 
+result is cost savings and rapid deployment of useful health technologies.
+
+Clinicoin also provides a secure mobile messaging channel to extend the 
+reach of existing software applications. Text messaging is a great way to 
+reach the most people because of its ubiquity, available on 95% of 
+mobile phones. However, because it is not encrypted, there are 
+limitations to its usefulness in healthcare and research. Clinicoin was 
+created with the goal of providing a secure channel for messaging used 
+by the most number of users, while enabling a host of capabilities not 
+available on SMS.
+
+ClinApps connect users securely to external applications.
+
+Technology
+
+User	   ClinApp	   APIs Apps &Software
+
+14	  
+
+Provider	  
+
+Provider	  
+Provider	  
+
+Clinical Study	  
+
+ClinApp	  
+User	  
+
+Support Group	  
+ClinApp	  
+
+Easy Access, No Additional App Downloads
+Users add providers, teams, and ClinApps as 
+contacts in Clinicoin’s address book, the same 
+way they do friends and family in popular mobile 
+messaging apps, but approved for healthcare use.
+
+
+
+2. Secure Messaging
+Secure messaging enables private communications between two or 
+more parties and applications (ClinApps).
+
+The best mobile communications are private and secure. Text messaging 
+puts healthcare providers and researchers in a difficult place: SMS is not 
+secure or HIPAA compliant. Using SMS means curbing communications 
+or paying for secure mobile apps, then convincing people to use them. 
+More providers means more apps to download.
+
+The Clinicoin app acts like many popular mobile messaging apps, but 
+with healthcare-grade privacy, data security, digital tools, and a rewards 
+system. Rather than downloading a new app for each doctor, specialist, 
+pharmacy, clinic, medical study, support group, therapist, or hospital, 
+users simply add them as a contact in the app’s address book. They 
+connect to digital tools and third party software the same way.
+
+Messaging Functions
+•  One to One (secure chat between two users or a user and provider)
+•  One to Many (alerts, info, newsletters, etc. from a user or provider to 
+
+a group of users)
+•  Many to One (hotlines, helplines, coaching)
+•  Many to Many (group chat, motivation and support, wellness team)
+•  One to App (user interacting with a ClinApp)
+
+Technology
+
+User to Provider	   Support Group	  
+
+16	  
+
+
+
+Technology
+Clinicoin was designed to have distributed, yet compatible, networks 
+for messaging, allowing for private networks and smart routing. No one 
+is forced to trust anyone else in the ecosystem, and identity can be 
+verified on any message.
+
+It’s more than secure peer to peer messaging, it’s the hub for 
+automated communications as well, whether they be from bots running 
+on the platform or with outside systems using ClinApps.
+
+•  Users benefit from having access to communications and tools 
+from a variety of sources.
+
+•  Developers benefit from being able to build apps directly on the 
+platform or integrate existing software and systems.
+
+•  Providers benefit from increased adoption, a cost-effective, 
+secure messaging platform, and the ability to improve engagement 
+through digital rewards. 
+
+Use Cases 
+-  One to one communications with providers.
+-  Group messaging for support groups, healthcare teams, etc.
+-  Quick access to resources and automated bots.
+-  Digital health tools like medicine and appointment reminders.
+-  Surveys to collect research and insights data.
+-  ClinApp integrations with third party software and applications.
+-  Opt-in alerts for clinical trial recruitment, health info, or marketing.
+-  Users can log healthy activities and earn tokens.
+
+Messenger communication examples
+
+User	   Provider	  Physician, Researcher, Pharmacist, Therapist, etc.	  
+
+User	   ClinApp	  Reminders, Info, Tools	  
+
+Apps, Software, Hardware	   User	   ClinApp	   APIs
+
+Provider	  User	  
+
+User	  
+
+User	  
+
+Hotline, Clinic,
+Company, etc.	  
+
+User	   User	  
+
+User	   User	  
+
+Wellness Group, 
+Health Team	  
+
+
+
+Technology
+Messages and Objects
+The heart of the platform is a mobile app that knows how to interact 
+with subscription-based messaging paths. By adding a path to their 
+app, a user is able to submit to and receive messages from this path. 
+On the other side of the path may be another user, a group of users, 
+provider or an application. 
+
+Message content will not be limited to text, emojis, and images. 
+Message objects can be sophisticated datasets that the app will know 
+how to render and implement appropriate logic to execute the 
+message rules. 
+
+Automated Data Collection via Complex Objects
+For example, one of the first complex objects available in Clinicoin is 
+surveys. Clinicoin allows a path to deliver a multi-question survey, 
+including media, branching logic, reminder notifications and completion 
+notification rules. By serving up one message or data set, a path can 
+deliver a comprehensive survey and results will be packaged up and 
+delivered upon completion.
+
+Privacy and Control
+The purpose of Clinicoin is to provide an open source infrastructure 
+and allow organizations to control their own data. Practically speaking, 
+this means each path will point to its own messaging queue, and the 
+queue can be hosted by the owner of the path. Since all messages are 
+end-to-end encrypted, a path’s data can be considered private and 
+secure within the path’s queue and on the user’s app. Only users with 
+access to the path can decrypt the messages. This allows 
+organizations with strict data security policies or regulatory compliance 
+requirements to confidently follow those policies without depending on 
+third party providers.
+
+Teams (group messaging) can be created by individual users, 
+organizations, or providers who want to communicate beyond 
+one-on-one communications.
+
+18	  
+
+
+
+Technology
+User to User Chat
+One-on-one chat between users will initially be maintained by a Mosio-
+hosted message queue. All messages will be encrypted on the app, so 
+Mosio will not be able to read or alter the contents of the messages. 
+The community can verify the implementation of the encryption system 
+by reviewing the app source code, updated on Github.
+
+Publicizing Paths
+Channel registration will be hosted and the path database will allow 
+anyone to add a path which can be searched for within the app. To add 
+a path, users will either search in the app, or enter a short URL that will 
+deliver path details in JSON to the app.  
+
+Trusted Paths
+In order to prove ownership of a channel, users and organizations can 
+sign a path’s identity and other users’ identities with their private keys. 
+As identities are built within the system and a further number of 
+verifications accrue, users will start to see a trust rating on identities 
+that have collected numerous signatures. In this way, the community 
+can verify legitimate users and identify possible bad actors.
+
+Decentralized Paths
+Typically, a developer would have to register a channel with the 
+application provider to get access. Think of submitting an app to an 
+app store, or a creating a chat bot on a messaging platform. However, 
+this creates a central point of failure and a central point of control. 
+Paths in Clinicoin will be stored on the Clinicoin blockchain so that they 
+may be added, verified, and searched like any other identity, in a 
+decentralized fashion. The Clinicoin blockchain will be public to foster 
+an industry-wide source for directory information.
+
+Further Decentralization
+As the platform develops, use of a peer-to-peer node network will be 
+considered to replace the Clinicoin-hosted message queue for user to 
+user chat. These nodes will be able to earn Clinicoin (CLIN) tokens for 
+the work they perform helping keep the network alive and functional.
+
+In-app search databases, identities, and verification signatures may 
+also be moved to these nodes, allowing for further removal of any 
+centralized APIs. 19	  
+
+
+
+3. Rewards Engine
+The Rewards Engine is the token distribution mechanism, enabling 
+engagement transactions between users, developers, and providers.
+
+Health and wellness can and should be fun, whenever possible. 
+Clinicoin’s Rewards Engine adds incentives and gamification to the 
+experience. There is plenty of evidence showing the value of rewards 
+and games in improving one’s health, but they mostly happen in “walled 
+garden” environments through a single system. 
+
+For them to truly be effective, rewards programs should be experienced 
+more holistically, encouraging healthy behaviors in self-management as 
+well as complying with and adhering to the plans of providers and 
+healthcare organizations. 
+
+This means rewarding users for being proactive in their health and 
+wellness as well as for being engaged with providers and developers in 
+the community.
+
+The Clinicoin Rewards Engine utilizes tokens and Token Distribution 
+Events (TDEs) defined by providers and developers so users can earn 
+rewards in all aspects of their journey, whether they’re feeling sick or in 
+great health.
+
+Technology
+
+How Clinicoin Users Earn Tokens
+- Engaging in healthy activities (exercising, 
+logging health data, meditating, healthy eating) 
+
+- Participating in surveys, clinical studies, 
+reading premium messages from healthcare 
+organizations.
+ 
+- Completing desired tasks from physicians, 
+researchers, insurance providers, pharmacies, 
+etc. (appointments, medication adherence, data 
+entry, studies).
+ 
+- Community participation and spreading the 
+word about Clinicoin to improve the usefulness 
+of the platform and network.
+
+
+
+Technology
+3. Rewards Engine
+The Rewards Engine is built into the Clinicoin platform and enables the 
+frictionless distribution of CLIN tokens as rewards to be used for 
+incentives, services, premium content, and ClinApps.
+
+There are two main ways the Rewards Engine works, offering benefits to 
+every player in the Clinicoin ecosystem: Engagement Activities and 
+Token Distribution Events (TDEs).
+ 
+
+3.1 Engagement Activities
+The core mission of Clinicoin is to improve the health and wellness of 
+people all over the world. This is achieved through engaging people in 
+their own health, whether through self-managed healthy activities, as 
+part of a group, or following the requests of providers.
+
+The Clinicoin platform rewards community members for taking part in 
+engagement activities. These include, but are not limited to, jogging, 
+meditating, eating healthy meals, yoga, playing sports, tracking 
+pregnancy to do lists, etc.
+
+There are two methods of tracking engagement activities:
+a.  Manual Tracking - Users log in to the Clinicoin app and enter the 
+
+activities they’ve completed.
+b.  Proof of Engagement (PoE) - Users connect mHealth mobile apps 
+
+they use to the Clinicoin platform and engage in activities 
+determined by those apps to deliver tokens. Users wishing to be IRL 
+Validators can create Activity Events (think a running club), then 
+confirm the activity of participants.
+
+In order to connect an external app to the Clinicoin platform, the owners 
+of the app become approved Validators. Validators earn tokens for 
+validating the engagement activities within their apps. They also benefit 
+from increased promotion of their apps as a Validator and improved app 
+engagement from their users.
+
+See section 4. Proof of Engagement (PoE) for more specific details on 
+how it works.
+
+21	  
+
+
+
+3.2 Token Distribution Events (TDEs)
+Token Distribution Events let each party get something they want: 
+providers and developers get desired actions from users. Users receive 
+CLIN tokens for their actions.
+
+Providers (healthcare orgs, researchers, etc.) often have expectations of 
+users as part of their relationship together. For a physician or clinic, it 
+may be that you show up on time for an appointment, prepared for your 
+visit. For a research team, it may be the expectation that you’ll complete 
+journals, remember to take medicines, or stay in the study through to 
+completion.
+
+Tokens can be sent manually within the Clinicoin platform from one user 
+to another. Token Distribution Events give Providers the ability to 
+program the sending of tokens automatically after confirming activity 
+completion. 
+
+TDEs specify a number of tokens to be distributed to users after a 
+completed action or date. There are dozens of ways TDEs can be used, 
+the example below shows a TDE used to improve appointment 
+attendance.
+
+Token Distribution Event Process
+
+Technology
+
+Provider	   User	  
+
+Rewards 
+Engine
+
+Provider releases tokens 
+from wallet via TDE.	  
+
+User Clinicoin wallets receive tokens.	  
+
+Users arrive at appointments, confirm 
+attendance with the Clinicoin app (QR Scan). 	  
+
+1)	   2)	  
+
+4)	  
+3)	  
+
+Provider creates a TDE for users. 
+Example: Attend appointment 
+
+Appointment, Reminder  
+& Confirmation	  
+
+22	  
+
+
+
+Technology
+
+4. Proof of Engagement (PoE) and Validators
+Another way users earn tokens by participating in self-managed 
+healthy activities such as exercising, meditating, tracking personal 
+health data, etc.
+
+Confirmation of the self-management of healthy activities is done 
+through Clinicoin’s Proof of Engagement (PoE) algorithm. The PoE 
+system is powered by two different kinds of Validators, Technical and 
+IRL (In Real Life). Technical Validators run nodes through external 
+health applications to confirm user engagement activities. They are 
+compensated with tokens for their involvement in the transaction.
+
+Technical Validator (Health App Developers)
+Users connect external applications that have been approved as PoE 
+Apps to their Clinicoin Account. They then participate in healthy 
+activities within the PoE App and earn CLIN tokens, distributed to their 
+CLIN wallet after confirmation by Validators.
+
+Validators provide signed messages, presented as proof of 
+engagement by the user to the Clinicoin Rewards Engine.
+
+For example, a user can indicate she or he ran a certain distance on 
+her or his afternoon run, as recorded by a PoE App called Let’s Go 
+Exercise. The Validator (the developer managing Let’s Go Exercise) 
+confirms the engagement activity with Clinicoin, then CLIN tokens are 
+distributed to both the user and the Validator’s wallets. Clinicoin then 
+posts a hash of the confirmed transactions to the blockchain via smart 
+contract.
+
+If confirmation data does not reconcile (user IDs do not match, do not 
+exist in the system, etc.), the Validator receives an error message. 
+Validators are rewarded tokens only for confirmed transactions, which 
+will be posted via smart contract to the blockchain.
+
+23	  
+
+
+
+Technology
+
+Proof of Engagement Process
+The PoE algorithm handles the processing of validating Engagement 
+Activities and distribution of tokens to users and developers upon 
+confirmation, then posts transaction details to the blockchain.
+
+Proof of Engagement Validation Process
+
+User	  
+
+PoE App	  
+
+Clinicoin
+
+PoEV	  
+
+PoE approved App records App 
+Engagement Activities. 	  
+
+PoE Validator reports Engagement 
+Activities to Clinicoin.	  
+
+User engages with 
+PoE approved App.	  
+
+User’s Clinicoin wallet 
+receives tokens.	  
+
+1)	  
+
+2)	  
+
+3)	  
+
+Clinicoin posts PoE transaction hashes 
+on the blockchain.	  4)	  5)	  
+
+PoEV’s Clinicoin wallet 
+receives tokens.	  
+
+IRL Validators (Activity Leaders)
+IRL Validators can be an exercise class instructor, personal trainer, 
+team coach, or manager of any health or wellness group activity (like a 
+running club or meditation group). Using Clinicoin, they create an 
+Activity Event which generates a QR code on their smartphone. 
+Everyone who participated in the activity scans the code with their 
+phones to get credit for the healthy activity to earn CLIN tokens. The 
+IRL Validator earns CLIN tokens as well.
+
+24	  7	  h$p://www.aafp.org/news/family-­‐medicine-­‐americas-­‐health/20161207hip-­‐pa4entengage.html	  8	  h$ps://hackernoon.com/gamifying-­‐the-­‐delivery-­‐of-­‐money-­‐c55c25cecaee	  
+
+Users	  
+
+Clinicoin
+
+Validator	  
+
+User Wallets	  
+
+Validator’s Wallet	  
+
+Team Activity Process
+- A group of people participates in a healthy 
+activity together with one person acting as a 
+Validator.
+- After the activity, they scan the Validator’s QR 
+code.
+- Everyone receives CLIN credits from the 
+community rewards pool, including the Validator.
+
+
+
+Technology
+
+Distribution
+Users interacting with the Clinicoin app are engaged in their own 
+health and wellness. Engaged people are healthy people. They create 
+a better world for themselves and for healthcare and research, 
+producing more benefits to providers.7
+
+We believe users should be rewarded for their engagement. An 
+engagement algorithm determines the total number of CLIN to be 
+distributed to users based on PoE activities as well as usage and 
+interaction with the platform as a component of gamifying the delivery 
+of CLIN tokens.8
+
+PoE Rewards Distribution
+There are two methods of PoE token rewards distribution to engaged 
+users and developers, defined by an Open Activity List and a Secret 
+Rewards List. Open Activities will be defined so Users know which 
+activities generate tokens. The Secret Rewards will be defined by the 
+Clinicoin team. 
+
+Both PoE rewards will be pulled from the Rewards Pool, generated by 
+a privately held factorization table and algorithm defining how they are 
+distributed.
+
+Community Rewards Pool
+CLIN tokens are distributed to and from a rewards pool, reserved at 
+600,000,000 CLIN. The Clinicoin system distributes them as health 
+and wellness rewards to the community for engagement activities. 
+
+Base Level Algorithm for PoE
+
+25	  
+8	  h$ps://hackernoon.com/gamifying-­‐the-­‐delivery-­‐of-­‐money-­‐c55c25cecaee	  
+
+
+
+5. Marketplace
+Points, rewards, and loyalty programs are natural components of a 
+marketplace. Most are set up with users playing one of two roles: buyer 
+or seller. In order to maintain a healthy ecosystem, a marketplace needs 
+to exist where participants can both earn and spend.
+
+Clinicoin’s Marketplace will enable multi-faceted transactions, with the 
+goal and purpose of providing a thriving ecosystem where every 
+community member can play both roles.
+
+Technology
+
+Users	  
+
+Developers	   Providers	  
+
+Services	  
+
+Companies	  
+
+Researchers	  
+
+26	  
+
+A	  
+B	  
+
+C	  
+D	  
+
+E	  
+
+F	  
+Move Towards Decentralization
+Marketplace decentralization 
+provides the community with the 
+ability to have access to more 
+products and services.
+
+
+
+Technology
+
+Decentralized and Open 
+Marketplace
+The marketplace will start off 
+centralized with the goal of 
+decentralization, offering an easy 
+way for buyers and sellers to 
+connect to exchange CLIN for 
+goods, services, and access to 
+enhanced experiences on the 
+platform.
+
+External Marketplaces
+Encouraging CLIN token usage in 
+as many places as possible makes 
+it a more useful tool to Clinicoin 
+community members. This will be 
+achieved by making external 
+marketplaces accessible via 
+ClinApps, giving community 
+members an “in app” window to 
+those marketplaces for a better 
+experience.
+
+27	  
+9	  h$p://blog.evisit.com/36-­‐telemedicine-­‐sta4s4cs-­‐know	  
+
+
+
+Technology
+
+WAF	   SSL	   HTTPS	   CDN	   OAuth	  
+
+	  SYSTEM	  FLOW	  
+
+CLINICOIN	  SYSTEM	  ARCHITECTURE	  
+
+Vault	   Data	  Store	   Blockchain	  
+
+E2EE	  
+Sesame	  
+Ratchet	  
+OAUth2	  
+
+Access	  Control	  
+
+TPS	  
+Event	  Queue	  
+Account	  Manager	  
+Business	  Rules	  
+Repor4ng	  
+Prod-­‐Proc	  RPC	  
+
+Smart	  Contract	  
+Geth	  ,	  Web3	  ,	  JSON	  ,	  API	  
+
+SDK	  
+
+Architecture
+Clinicoin comprises three different systems integrated to provide an 
+automated end-to-end solution interacting with the Ethereum blockchain: a 
+native application with End to End Encryption Messaging (E2EE), a 
+Transaction Processing System (TPS), and an Automated Smart Contract 
+System (RPC). A more detailed description can be found in the Clinicoin 
+Yellow Paper.
+
+28	  
+
+
+
+Technology
+
+End to End Encryption (E2EE) Messenger
+Clinicoin’s native application is an asynchronous mobile messaging application 
+which utilizes the open whisper system (OWS), which is the leading end-to-end 
+encryption messaging system in the industry. OWS provides users with secure 
+channels of communication which are encrypted, while offering the additional 
+compliance requirements for healthcare (HIPAA) and clinical trials (21 CFR 11). 
+Clinicoin’s messaging service uses a combination of asynchronous key 
+agreement protocols like X3DH which enables one party to create a message 
+encrypted session and use that session to encrypt the subsequent messages 
+even if the recipient is offline. 
+
+The asynchronous system is then combined with ratcheting algorithms like 
+Double-Ratchet, which allows the sender and the receiver to keep 
+communication channels open between two parties without compromising their 
+messages. The combination of these two protocols is called the Sesame 
+algorithm which uses sessions to support the end-to-end encryption between the 
+sender and the recipient. This allows for users to be added at any point in the 
+communication channel without losing its encryption functionality. 
+
+The X3DH algorithm uses the following parameters to create its secret key:
+
+Curve :  X25519 or X448 
+Hash :  256-bit or 512-bit hash function (e.g. SHA-256 or 
+SHA-512) 
+Info :   ASCII string identifier 
+IKA = Identity Key A 
+IKB = Identity Key B 
+EKA = Ephemeral Key A 
+SPKB = Signed preKey B 
+OPKB = One-time preKey B 
+
+This diagram shows the relationship 
+between the key parameters required for 
+the X3DH algorithm to initiate. In order to 
+provide replay protection and avoid key 
+usage, a combination of ratcheting 
+protocols is to be used to generate a 
+freshly generated DH output to make 
+sure key generation are randomized and 
+no key reuse occurs. 29	  
+
+
+
+Technology
+
+Transaction Processing System (TPS)
+Clinicoin uses the Transaction Processing System (TPS) to handle events 
+related to all transactions (Token Distribution Events, Licenses, etc.) on the 
+platform. The system is built to optimize concurrency in its distributed client/
+server system. This architecture allows Clinicoin’s application to perform 
+transactions without being subjected to any geographical constraints while at 
+the same time allowing instantaneous transactions to take place on its 
+application with low latency and high volumes. The application also utilizes 
+different transaction management schemes (concurrency control, database 
+recovery, query processing), logging, and caching schemes to allow for 
+execution and updates to take place without affecting dependent systems. 
+The TPS performs events management for all transactions, including 
+handling of billing and reporting. 
+
+It also uses a mobile transaction processing system to improve concurrency. 
+A Mobile Database System (MDS) in a distributed client/server system 
+enables processing of all transactional activities to take place in different 
+modes when the client is connected, disconnected or intermittently 
+connected. This mechanism allows for the mobile TPS system to handle 
+sharing of partial states and status among transactions while also 
+customizing isolation properties of transaction for error handling. 
+
+Transac4on	  Requests	  
+
+Transac4on	  Results	  
+
+Database	  Opera4ons	  
+
+Results	  
+
+Users/	  
+Applica4ons	  
+
+Transac9on	  Processing	  System	  
+
+30	  
+
+
+
+Technology
+
+Automatic Smart Contract System (RCP)
+Clinicoin’s automated smart contract system is an extension of the TPS 
+system’s billing module where withdrawal functions are automated for 
+external transfers to wallets. The withdrawal module within the billing system 
+integrates the hot storage vault to the Ethereum blockchain via a web3js 
+library by making system calls on a transfer function. Ethereum creates a 
+smart contract using a compiler to turn source codes into binary through an 
+Application Binary Interface (ABI), which allows standard web applications 
+to make calls to the blockchain through the HTTP protocol via API’s.
+
+In order to invoke a transfer function of Clinicoin’s smart contract, the API 
+must send a transaction call to the network. 
+The transaction object being sent must contain the following 
+parameters:
+
+From (string|number). Sending account address using 
+web3.eth.defaultAccount property or a wallet address index of the hot 
+storage wallet in web3.eth.accounts.wallet. 
+
+To (string|number). The destination address of the message or transaction.
+ 
+Value (number|BigNumber). The value for the transaction, if Ether is to be 
+transferred the value will be in wei unit.
+
+Gas (number). The amount of gas to be used for the transaction. The value 
+selected can be optional or default depending on the requirements and all 
+unused gas is refunded to the From account.
+
+gasPrice (number|BigNumber). The price of gas for the transaction in wei, 
+defaults to web3.eth.gasPrice.
+
+data (string). An optional parameter either in ABI byte string containing the 
+data of the function call on a contract or its initialization code.
+
+Nonce (number). This parameter is optional and is an integer of a nonce 
+which allows the overwriting of a pending transaction that uses the same 
+nonce.
+
+Callback (function). An optional callback function that returns an error 
+object as first parameter and the result as second.
+
+31	  
+
+
+
+Technology
+
+Automatic Smart Contract System (RCP)
+Once the transaction function call is made, it returns a callback with a 
+32 byte transaction hash with a promise combined event emitter 
+which will then be resolved to generate a transaction receipt with the 
+transaction hash, receipt, confirmation and error (in the event an error 
+is generated from the function call). 
+
+Callback promise events help web3 integrate into different web 
+applications over the http protocol due to the nature of the call being 
+asynchronous. Most objects allow some sort of callback as a 
+parameter to handle promises and resolve the promise. The 
+promiEvent function in web3 handles the promises combined with an 
+event emitter to handle the different stages of actions required to 
+interact with the blockchain.
+
+Web.
+3eth.sendTransaction ({ 
+            from: 
+
+    to: 
+            value: 
+}) 
+.then (function(receipt){ 
+           ….. 
+}) 
+
+Function receipt 
+(web3.eth.getTransactionReceip
+t){ 
+ 
+             transactionHash 
+
+     transactionIndex 
+             blockHash 
+
+     blockNumber 
+             contactAddress 
+             cumulativeGasUsed 
+             gasUsed 
+} 
+
+Once the transaction promise has been 
+resolved, it will return a receipt object:
+
+Initiating a transaction over web3js:
+
+
+
+Benefits
+
+Why Clinicoin?
+It’s time for a health and wellness technology platform making it easier 
+for users, providers, and developers to accomplish their respective 
+goals. Providing a simple, secure mobile application rewarding users 
+for managing their own health and wellness, as well as incentivizing 
+them to follow healthcare and research protocols, Clinicoin tackles 
+mHealth app overload and engagement problems through a single, 
+open source solution on a blockchain backbone.
+
+Clinicoin encourages collaboration, providing a secure platform 
+for innovation, laying the groundwork for the future of health and 
+wellness.
+
+User Focused  
+Most users don’t need to know the underlying technologies powering 
+their favorite apps, they just want to interact and achieve the desired 
+result. The Clinicoin team focuses on what motivates, incentivizes, and 
+excites people about managing their health goals, and supports it with 
+a technology stack helping to deliver those goals.
+
+Developer Friendly  
+The success of the Clinicoin project depends on the involvement of the 
+development community, whether it be one programmer or a team 
+within a large company. The platform enables them to integrate mobile 
+apps and software they currently manage or provide them with the 
+ability to build from scratch. In either case, they will be rewarded for 
+their work.
+
+Provider Driven
+We’ve worked with organizations in health and research for over seven 
+years, helping them to solve recruitment, retention, and data collection 
+challenges on mobile phones. Clinicoin answers the need to make 
+communications more efficient, secure, and rewarding for providers 
+and users.
+
+33	  
+
+
+
+Benefits
+
+Build Ready
+Clinicoin is a platform removing the complexities of developing and 
+managing a secure mobile app with easy integration of existing third 
+party apps into its interface. Further, it enables providers to utilize the 
+app immediately to communicate with and engage users. 
+
+Connect Seamlessly and Securely  
+Connections are created via contacts in the app’s address book, by 
+searching public usernames, clicking links, or scanning QR codes. 
+Once connected, secure communications can take place using end to 
+end encryption.
+
+External App Friendly
+Developers with live apps benefit from incentivizing users to connect 
+their apps to the Clinicoin Rewards Engine, increasing the stickiness of 
+their apps while earning tokens for being Proof of Engagement (PoE) 
+Validators.
+
+Third Party Integrations  
+External software and systems can plug into the Clinicoin system 
+through ClinApps, offering their services to customers and users on a 
+secure platform through their existing infrastructure. 
+
+Community Rewards
+Users and developers benefit from being able to earn and utilize 
+Clinicoin (CLIN) tokens for their involvement in the community.
+
+When we engage in our health and wellness, everybody wins.
+When people are engaged in their wellness, they do more than 
+improve their personal health. They help the healthcare and research 
+industry as a whole, driving down costs and inefficiencies.
+
+34	  
+
+
+
+Use Cases
+
+The Clinicoin team has experience in providing mobile 
+solutions to the following use cases:
+
+Healthcare Providers
+Providers can offer secure, two-way mobile messaging 
+communications between people and providers. They can schedule 
+appointment reminders or announcements of events or useful 
+information.
+
+Clinical Trials
+Low engagement is a top reason for problems in clinical trials, 85% 
+of clinical studies fail to retain enough participants.10  Clinicoin can 
+improve recruitment, retention, and adherence, helping to find the 
+best participants for a trial, then keeping them engaged through 
+study completion.
+
+Health Services and Hotlines
+People are calling hotlines and helplines less and less, making 
+mobile messaging a more popular way to communicate. Health 
+education and support helplines can engage in secure, two-way 
+communications and use pre or post-experience surveys to gather 
+data.
+
+Pharmaceutical and Pharmacies
+Pharmacies are an important part of a person’s healthcare plan. 
+They can leverage Clinicoin to improve adherence, set prescription 
+refill reminders, offer one-on-one support, or allow patients to 
+schedule an appointment with their pharmacist.
+
+Support, Motivation, and Coaching
+Support communities or health coaches can mobilize by creating 
+specific groups within the platform without the need to create their 
+own mobile app.
+
+35	  
+10	  h$ps://forteresearch.com/news/infographic/infographic-­‐reten4on-­‐in-­‐clinical-­‐trials-­‐keeping-­‐pa4ents-­‐on-­‐protocols/	  
+
+
+
+The Clinicoin Token (CLIN)
+The Clinicoin token (CLIN)  is the platform’s key utility token, used for 
+entry into the community and exchanged for access, licenses, digital 
+goods, services, rewards, and incentives. It is the primary accounting 
+unit for the Rewards Engine, Proof of Engagement, and the Marketplace.
+
+ERC20 (Ethereum) Protocol
+Clinicoin has been developed as a transferable ERC20 token, 
+implemented on the Ethereum blockchain, the current industry standard 
+for digital assets, smart contracts, and custom cryptocurrencies. 
+
+It is the in-application currency powering the smart contracts of the 
+platform. Due to the usable functionality that Ethereum is able to deliver 
+in its protocol, after due diligence from the Mosio Development team, 
+ERC20 was selected as the best solution for the Clinicoin Project.
+
+Circulation
+The total supply of CLIN tokens in circulation will be 3 billion at genesis. 
+600 million will be reserved in a community rewards pool, delivered to 
+members for their activities and contributions.
+
+Immediate Use
+Bloomberg reports* 9 out of 10 tokens are not usable directly after a 
+public sale. 11 CLIN tokens will be usable on the platform immediately 
+upon post-discount sale distribution. Further, as one of Clinicoin’s first 
+ClinApp developers, Mosio is promoting and selling Clinicoin-integrated 
+services to company clients and partners. These efforts will provide real 
+world use in research and health, helping to drive early adoption of the 
+platform and tokens.
+
+The Clinicoin Token (CLIN)
+
+11	  h$ps://www.bloomberg.com/news/ar4cles/2017-­‐10-­‐23/only-­‐one-­‐in-­‐10-­‐tokens-­‐is-­‐in-­‐use-­‐following-­‐ini4al-­‐coin-­‐offerings	  
+
+The CLIN token will be usable on the Clinicoin platform 
+upon delivery to sale participants. 
+
+36	  
+
+
+
+Token Uses
+The Clinicoin token provides value to every member in the Clinicoin 
+community. As an in-app currency, users, providers, and developers can 
+exchange it for a variety of things in the Clinicoin ecosystem, uses are 
+listed below. 
+
+Access to Premium Content and Features
+Users can earn and spend CLIN on the platform for access to digital 
+tools, features, and areas of the platform not available to everyone.
+
+Rewards and Incentives
+All members in the community have the ability to send Clinicoins to each 
+other. Providers or developers can send them to users for completing 
+desired health or research related tasks, to improve recruitment, and 
+engagement.
+
+Marketplace
+Tokens can be spent within the Marketplace for goods, services, and 
+access to health-related offerings.
+
+Premium Membership
+Users can buy premium memberships for themselves and others, giving 
+them VIP access to functions and features within the platform.
+
+The Clinicoin Token (CLIN)
+
+37	  
+
+
+
+Token Discount Sale
+We will begin selling tokens for use on the platform February 21, 2018. 
+To kick things off, tokens will be sold through early buying bonuses.
+
+No Pre-Sale, No Whitelists, No Minimums
+We believe token sales should be aligned with the principles, 
+philosophies, and “egalitarian spirit of crypto” that makes it special. 12  
+We believe they should be inclusive and shouldn’t stack the deck against 
+others who may not fit a financial or social profile for early exclusivity.
+
+For these reasons we are not offering pre-sale or whitelist programs. We 
+feel everyone should be able to participate equally in the Clinicoin 
+community. Further, we will have no minimum contribution.
+
+By removing these barriers, we accomplish three things:
+- We ensure more individuals can participate in the token discount sale.
+- We are able to keep the inclusive nature of Clinicoin philosophies.
+- We provide a level playing field for all participants.
+
+This format enables us to offer a time-based bonus structure and create 
+a Children’s Health Fund component to the token sale, details on the 
+next page. 
+
+Bonuses 
+Everyone participating in the token discount sale has access to every 
+bonus level, based on timing. 
+
+Early buying bonuses include:
+•  Days 1-14: 50% Bonus (1 CLIN = $.02 USD)
+•  Days 15-30: 25% Bonus
+
+Token Sale Dates
+Open: 9AM (Pacific) on February 21, 2018 (5pm GMT, Feb 21, 2018)
+Close: 6PM (Pacific) on May 31, 2018 (2am GMT, May 31, 2018)
+
+Token Sale
+
+38	  
+12	  Vitalek	  Buterin	  h$ps://twi$er.com/vitalikbuterin/status/932404221260918785?lang=en	  
+
+15M+ CLIN Bonus 
+Days 1-4 Only 
+Purchase of 15M CLIN or more: 15% 
+additional (65% Bonus Total) 
+10 Slots Available 
+
+
+
+Circulation and Price
+3 billion Clinicoin tokens (CLIN) will be created at the genesis.
+1 CLIN = $.03 (before bonuses)
+
+Caps
+Soft Cap: $2M / Hard Cap: $26M
+
+Registration and KYC/AML
+On January 23, 2018, user registration will begin. Users will be able to 
+register on the site and complete their KYC/AML verification process.
+
+Children’s Health Fund
+When the hard cap is met, it will unlock up to 200,000,000 additional 
+CLIN which will be $.03 each. Every dollar in the round will be donated to 
+global children’s health charities, voted upon via smart contract by the 
+Clinicoin token sale participants.
+
+Further, the amount of CLIN purchased in the Children’s Health Fund will 
+be matched and distributed to token sale participants as bonuses.   
+
+Example:
+If you buy 100,000 CLIN and the CHF sells 200M CLIN:
+You’ll receive about a 14.6% bonus, or 14,600 additional CLIN.
+
+Distribution
+
+Token Sale
+
+Partners/Developers/Growth: 17.6%
+
+Discount Sale: 52.4%
+
+Advisors/Consultants: 2%
+
+Community Rewards Pool: 20%
+
+39	  
+
+Company/Team: 8%
+
+
+
+Vesting for Clinicoin Team / Mosio Employees
+Tokens for team members will vest over a 24 month vesting period with a 
+6 month cliff. If, for any reason, a founder or employee leaves the 
+company before the end of the vesting period, all unvested tokens for 
+that individual will be returned to the pool.
+
+Business Operations
+Normal operations budgeting for Mosio, Inc. is as follows:
+
+Token Sale
+
+Legal & Accounting: 8%
+
+Product & Support: 67%
+
+Miscellaneous: 5%
+
+Biz Dev & Marketing: 20%
+
+40	  
+
+
+
+The Roadmap is made up of 4 Milestones. Each is anchored by a 
+Clinicoin Stack component, but may have work being performed on other 
+platform elements congruently. Security, system, and process checks are 
+done regularly as part of the SDLC for both HIPAA and 21 CFR Part 11 
+compliance. Many core functions of the platform are currently workable 
+and in use. 
+
+Milestone .5 – Patient Engagement and Mobile Messaging 
+2011 – 2017
+•  Active Use of Mosio’s two-way mobile messaging platform in health 
+
+services, healthcare, and research.
+•  Eli Lilly Patient Engagement App Challenge Winner
+•  Modules and Programs system for solutions configuration.
+
+•  Alerts, Reminders, TextChat, Incentives, Mobile Photos, 
+Appointments
+
+•  Clients: Memorial Sloan Kettering Cancer Center, QuintilesIMS, 
+PPD, MD Anderson Cancer Center, Johns Hopkins University, 
+Cornell Medical School, Cedars-Sinai Hospital, UPENN Medical 
+School, Samueli Institute, Geneva Foundation, UCONN CHIP, ICF 
+International, Children’s Hospital of Manitoba, Worldwide Clinical 
+Trials, CareWire, National Disaster and Distress Hotline, Covance, 
+NYU Langone Medical Center, Profil Institute, Coordinated Care 
+Network, SARRC, etc.
+
+•  Initial development of Clinicoin app (Messenger, Rewards Engine).
+•  Further development of gamification and incentives functions.
+•  Smart contract development. 
+•  White paper and presentation deck completion.
+
+Roadmap
+
+M1 M2 M3 M4
+
+Note:	  All	  milestones,	  plagorm	  enhancements,	  and	  business	  development	  goals	  are	  es4mates	  and	  subject	  to	  change.	  
+41	  
+
+
+
+M1	  
+Roadmap
+
+Note:	  All	  milestones,	  plagorm	  enhancements,	  and	  business	  development	  goals	  are	  es4mates	  and	  subject	  to	  change.	  
+
+Milestone 1 – Secure Messenger
+
+Q1 2018
+Product Development
+•  Clinicoin app (iOS and Android)
+
+•  E2EE Messaging (Chat)
+•  Engagement Activity Logging
+•  Token Rewards Distribution
+
+•  CLIN token genesis
+•  Token sales begin
+•  Distribution and initial use of CLIN tokens on the platform.
+•  Rewards Engine live for self-reported Engagement Activities.
+•  Existing client integration into the Clinicoin platform.
+•  Beta Launch
+
+42	  
+
+
+
+Roadmap
+M2	  
+
+Note:	  All	  milestones,	  plagorm	  enhancements,	  and	  business	  development	  goals	  are	  es4mates	  and	  subject	  to	  change.	  
+
+Milestone 2 – Rewards Engine
+
+Q2 2018
+Product Development
+•  WhisperETH/Smart Contract Processing for PoE
+•  Transaction Processing System (TPS)
+•  REST API features included for Rewards Engine 
+•  PoE system beta tester confirmations
+•  Token Distribution Events
+•  Smart contracts (PoE and hot wallet transactions)
+•  In App Clinicoin Integration (ClinApp alpha)
+•  Configuration of Vaults
+•  Billing Admin Upgrade (semi-automated process)
+•  PoE Validator Terms and Conditions
+
+43	  
+
+
+
+M3	  
+
+Milestone 3 – Proof of Engagement
+
+Q3 2018
+Product Development
+•  Live Release
+•  GUI updates for Token Distribution Events on Rewards Engine
+•  Distribution Algorithm
+•  PoE APIs and Validator Processing
+•  IRL Validator functions
+•  System mechanics and verification
+•  Smart contract functions for PoE transactions 
+•  Finalization of Marketplace Categories
+•  Marketplace Terms and Conditions
+
+Roadmap
+
+Note:	  All	  milestones,	  plagorm	  enhancements,	  and	  business	  development	  goals	  are	  es4mates	  and	  subject	  to	  change.	  
+44	  
+
+
+
+M4	  
+
+Milestone 4 – Marketplace
+
+Q4 2018
+Product Development
+•  Initial PoEVs and partners added to marketplace
+•  Marketplace transaction processing
+•  Build of beta marketplace offering (digital goods)
+•  Marketplace vendors onboarding defined
+•  Marketplace vendor onboarding materials and how to guides
+•  Enterprise solution (ClinApp access)
+•  REST API library for additional in-app functions
+
+Roadmap
+
+Note:	  All	  milestones,	  plagorm	  enhancements,	  and	  business	  development	  goals	  are	  es4mates	  and	  subject	  to	  change.	  
+45	  
+
+
+
+Mobile Technology for Good
+Mosio has been a mobile messaging innovator since 2007 and in 2008, 
+was the Mobile Winner at South by Southwest Interactive. Since 2011, 
+the company has been solving patient engagement challenges for clients 
+in healthcare, health services, and research. In 2014, the company was 
+a winner in Eli Lilly’s Patient Engagement App Challenge.
+
+Relevant Experience and Success
+The Mosio team has a proven track record providing mobile health and 
+blockchain solutions to top organizations and companies. The company’s 
+mobile messaging platform has been utilized to assist, alert, remind, and 
+manage survey data from millions of users.
+
+Global Messaging Platform
+With global two-way mobile messaging reach, Mosio’s platform improves 
+patient engagement through a suite of “modules” configured to help our 
+clients enroll patients faster, remind them to take their medicine or attend 
+clinic visits, collect survey responses for study data, and deliver 
+incentives.
+
+Capitalizing on Industry Insights
+In 2014, we saw that rewards, incentives, and gamification elements can 
+improve patient engagement, but that many healthcare and research 
+organizations were hesitant to use it because it:
+•  Is difficult to understand and explain to decision makers.
+•  Lacks a core set of principle functions.
+•  Needs a central point of agreement to build upon in order to increase 
+
+adoption.
+
+We created Clinicoin to utilize the power of open source 
+technologies, leverage the usefulness of mobile messaging as a 
+communication tool, and deliver the power of rewards in health.
+
+Executive Summary
+
+46	  
+
+
+
+The following healthcare organizations are current Mosio clients 
+and have expressed interest in the Clinicoin project.
+
+Executive Summary
+
+Clinicoin Partners
+
+
+
+The Team
+
+Noel	  Chandler	  
+
+Co-­‐Founder	  and	  CEO	  
+
+Jay	  Sachdev	  
+
+Co-­‐Founder	  and	  CTO	  
+
+Harry	  An9bus	  
+Strategy	  and	  Market	  Development	  
+
+Proshonjit	  Das	  
+
+Blockchain	  Developer	  
+
+Daaron	  Dwyer	  
+
+Senior	  Soiware	  Engineer	  
+
+Carl	  Inniss	  
+
+Senior	  Soiware	  Engineer	  
+
+Gil	  Bindelglas	  
+
+Blockchain	  Consultant	  
+
+Jamie	  Seymour	  
+
+Account	  Execu4ve	  
+
+CharloMe	  Jus9ce	  
+
+Director,	  Customer	  Success	  
+
+Mary	  Beth	  Shields	  
+
+Client	  Services	  Manager	  
+
+Mark	  Schwartz	  
+
+Legal	  Counsel	  
+
+Ahmad	  Tahhan	  
+
+Front	  End	  Developer	  
+
+
+
+The Team
+
+MaMhew	  Fuller	  
+
+Digital	  Marke4ng	  Manager	  
+
+Issey	  Morito	  
+
+Marke4ng	  Manager,	  Japan	  
+
+Harry	  An9bus	  
+Strategy	  and	  Market	  Development	  
+
+Proshonjit	  Das	  
+
+Blockchain	  Developer	  
+
+Andrea	  “AJ”	  Jones	  
+
+Community	  and	  Social	  Media	  
+
+Mobeen	  Muzzammil	  
+
+UI/UX	  Designer	  
+
+Gil	  Bindelglas	  
+
+Blockchain	  Consultant	  
+
+Jamie	  Seymour	  
+
+Account	  Execu4ve	  
+
+MaMhew	  Fuller	  
+
+Digital	  Marke4ng	  Manager	  
+
+Mary	  Beth	  Shields	  
+
+Client	  Services	  Manager	  
+
+Mark	  Schwartz	  
+
+Legal	  Counsel	  
+
+Aaron	  Jaramillio	  
+
+Blockchain	  Developer	  
+
+
+
+Advisory Board
+
+Anne	  Zielinski	  
+VP	  of	  Partnerships	  (BioClinica,	  Medidata)	  
+
+Patrick	  Crane	  
+
+CMO	  (LinkedIn)	  
+
+James	  Maskell	  
+Author	  of	  Evolu4on	  of	  Medicine	  and	  CEO	  
+kNew	  Health	  
+
+Eric	  Stromberg	  
+Blockchain	  Compliance	  Alliance	  
+
+Kai	  Gradert	  
+
+UX	  (Google,	  Adobe,	  AngelList)	  
+
+Adam	  Piandes	  
+Leadership	  and	  Growth	  Expert	  
+
+Max	  Kobernik	  
+
+Play2Live,	  CryptoBazar	  
+
+x	  
+
+x	  
+
+Jamieson	  Chandler	  
+Community	  and	  Content,	  GRAMMYs	  
+
+Ed	  Stevens	  
+Healthcare	  Communica4ons	  Strategy	  
+
+x	  
+
+x	  
+
+x	  
+
+x	  
+
+47
+
+
+
+Join Us
+
+Email: info@clinicoin.io
+Web: www.clinicoin.io
+Twitter: http://www.twitter.com/clinicoin
+Telegram: https://t.me/clinicoin
+Telegram (Japan): https://t.me/Clinicoin_Japan
+
+

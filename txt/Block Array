@@ -1,0 +1,1044 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+blockarray whtiepaper overview
+
+
+ 
+
+ 
+
+Transport, Logistics and Enterprise Solutions 
+COMMUNICATIONS PROTOCOL & INFRASTRUCTURE LAYER FOR CONSUMERS AND ENTERPRISE BUSINESSES 
+
+Prepared by: Sam Bacha, Micah Osborne, Yuri Senyut 
+December 13, 2017 
+
+Revision: 0.7.2 
+contact@blockarray.com
+
+block.array 
+
+mailto:contact@blockarray.com
+mailto:contact@blockarray.com
+
+
+ 
+
+Notice 3 
+Overview 12 
+Introduction 13 
+Problems 14 
+How the software library works 15 
+BDI - the Blockchain Data Interface Protocol 16 
+XONS - eXtensible OBJECT NAME SERVICE  17 
+GS1 Barcodes 19 
+Development Projects & progress 20 
+Visual SmartContract Framework 23 
+Roadmap 24 
+ARY GS1 Protocol  25 
+Visual Smartcontracts - use case 27 
+Virtualized Grey Pool - use case 28 
+Supported blockchains 29 
+Putting it all together 30 
+Crowd sale Information 31
+
+BLOCK ARRAY LLC. 
+
+
+
+ 
+
+NOTICE 
+ARY TOKENS  MAY NOT BE USED TO 
+REGISTER OR TRACK WEAPONS, 
+FIREARMS, KINETIC WEAPONS, 
+REGULATED ITEMS SUCH AS ALCOHOL, 
+TOBACCO, CHEMICAL OR BIOLOGICAL 
+AGENTS, EXPORT CONTROLLED ITEMS AS 
+DEFINED BY ANY FEDERAL AGENCY IN 
+THE UNITED STATES OF AMERICA, 
+RADIOLOGICAL, NUCLEAR, OR WEAPONS 
+OF MASS DESTRUCTION 
+
+THIS DOCUMENT TAKES PRECEDENT OVER ANY 
+OTHER DOCUMENT ISSUED BY US 
+
+BLOCK ARRAY LLC
+
+
+
+ 
+
+NOTICE TO THOSE PARTICIPATING IN THE “CROWD SALE”/ “TOKEN GENERATION 
+EVENT” 
+
+*** End User License Agreement** 
+
+ARY TOKENS HOLD NO FINANCIAL OR EQUITY CLAIM ON BLOCKARRAY LLC. ARY TOKENS DO 
+NOTE IMPLY A COMMON ENTERPRISE BETWEEN 
+YOU, THE "PURCHASER" OF ARY TOKENS AND THE COMPANY "BLOCKARRAY LLC" OR ITS 
+REPRESENTATIVES. ARY TOKEN HOLDERS HOLD NO GOVERNANCE IN THE OPERATIVE DEALINGS 
+OF BLOCKARRAY LLC OR ANY OF ITS SUBSIDIARIES. 
+
+ARY TOKENS SHOULD NOT BE SEEN AS AN INVESTMENT INTO BLOCKARRAY LLC. PURCHASE OF 
+THE ARY TOKEN ENABLES CERTAIN RIGHTS 
+TO THE ARY TOKEN "PROTOCOL", WHEREAS IF YOU HAVE LEGITIMATELY PURCHASED THE 
+"TOKEN" YOU MAY USE THE UNDERLYING PROTOCOL AND ASSOCIATED SYSTEMS WITHOUT 
+ADDITIONAL COST LESS ANY CUSTOMER SERVICE OR SUPPORT INITIATED BY YOU THE "TOKEN 
+HOLDER”. 
+
+WHAT THE TOKEN IS NOT AND SHOULD NOT BE CONSIDERED: 
+1. Ownership interest in Block Array LLC, including a general partnership; 
+2. Equity interest; 
+3. Share of profits and/or losses, or assets and/or liabilities; 
+4. Status as a creditor or lender; 
+5. Claim in bankruptcy as equity interest holder or creditor; 
+6. Holder of a repayment obligation from the system or the legal entity issuer of 
+the ARY TOKEN (“BLOCK ARRAY LLC”) 
+
+Purchasers of the ARY TOKEN SHALL have the following RIGHTS:  
+1. Rights to program, develop or create features for the "protocol" 
+2. Rights to access or license the protocol; 
+3. Rights to charge a toll for such access or license; 
+4. Rights to contribute labor or effort to the protocol; 
+5. Rights to utilize protocol outputs 
+
+BLOCK ARRAY LLC, acting as the licensor of the "ARY TOKEN" grants in perpetuity 
+the RIGHTFUL OWNERS of ARY TOKENS the license to the underlying protocol of the 
+"ARY TOKEN" and any and all associated rights. You the "TOKEN HOLDER" act as the 
+licensee, who SHALL receive those rights OR a portion of those rights in order to 
+
+
+
+ 
+
+use said protocol and parts of the overall system. Any associated rights provided 
+to each token holder are accomplished through the initial issuance of the token 
+or by possessing the token through legitimate means (such as BUT NOT LIMITED TO, 
+buying the token from an exchange or directly from the owner of the token but not 
+limited to the aforementioned processes). 
+
+Purchasers should also be mindful of the potential risks involved buying any 
+“TOKEN”, as these arrangements and the parties involved operate online and may 
+not be regulated, and investors may be exposed to heightened risks of fraud. 
+Digital tokens traded on any secondary market may give rise to risks of 
+insufficient liquidity or volatile and opaque pricing. Purchasers should fully 
+understand the features of any products or business projects they intend to 
+invest in, and carefully weigh the risks before making an investment.  
+
+BLOCK ARRAY LLC, ITS SUBSIDIARIES, PARENT COMPANY, EMPLOYEES AND ANY 
+REPRESENTATIVE OF THE COMPANY MAKE THE EXPLICIT STATEMENT: 
+
+*** THAT POSSESSION OR PURCHASE OF THE ARY TOKEN BY EITHER DIRECT OR INDIRECT 
+MEANS DOES NOT GRANT ANY EQUITY, DEBT CLAIM, DEBENTURE, COLLECTIVE INVESTMENT 
+SCHEME, SECURITY, COMMODITY, FUTURE, OPTION, INVESTMENT VEHICLE, INVESTMENT 
+INSTRUMENT, OR ANYTHING SIMILARLY NOTED. 
+The Purchaser is purchasing this TOKEN for their own use to access the ARY TOKEN 
+protocol and/or software, and not with a view to, or for resale in connection 
+with the expectation of realizing a profit from their purchase of the ARY TOKEN. 
+ARY TOKENS ARE YOUR RESPONSIBILITY TO 
+KEEP SAFE AND MANAGE, WE DO NOT OFFER SECURITY, SUPPORT, OR REIMBURSEMENT FOR ANY 
+LOST TOKENS. *** 
+
+ANY VALUE OF THE NETWORK MAY BE DECOUPLED FROM FINANCIAL SUCCESS OF BLOCK ARRAY 
+LLC AND/OR ARY TOKENS. 
+
+TOKEN HOLDER / POSSESSOR RIGHTS: THESE RIGHTS ARE DEPENDENT ON THE OWNER OF THE 
+TOKEN MAINTAINING THE TOKEN IN THEIR POSSESSION. WE CAN NOT BE HELD RESPONSIBLE 
+FOR LOST, STOLEN, MISPLACED OR OTHERWISE COMPROMISED ACCOUNTS. We SHALL not 
+reimburse, credit, warranty, create or otherwise compensate ANY person, employee, 
+customer or entity that has had ARY TOKENS in their possession, either directly 
+or indirectly, lost, stolen, compromised, "burned", destroyed, or any variation 
+thereof. 
+
+
+
+ 
+
+Limitation of Liability.  
+In no event and under no legal theory, whether in tort (including negligence), 
+contract, or otherwise, unless required by applicable law (such as deliberate and 
+grossly negligent acts) or agreed to in writing, shall Block Array LLC be liable 
+to You, “Token Holder” for damages, including any direct, indirect, special, 
+incidental, or consequential damages of any character arising as a result of this 
+License or out of the use or inability to use the Work (including but not limited 
+to damages for loss of goodwill, work stoppage, computer failure or malfunction, 
+or any and all other commercial damages or losses), even if such Contributor/
+Block Array has been advised of the possibility of such damages. 
+Company Representations 
+
+To its knowledge, the Company owns or possesses (or can obtain on commercially 
+reasonable terms) sufficient legal rights to all patents, trademarks, service 
+marks, trade names, copyrights, trade secrets, licenses, information, processes 
+and other intellectual property rights necessary for its business as now 
+conducted and as currently proposed to be conducted, without any conflict with, 
+or infringement of the rights of, others. 
+
+The performance and consummation of the transactions contemplated by this TOKEN 
+do not and will not:  
+(i) violate any material judgment, statute, rule or regulation applicable to the 
+Company; 
+(ii) result in the acceleration of any material indenture or contract to which 
+the Company is a party or by which it is bound; or  
+(iii) result in the creation or imposition of any lien upon any property, asset 
+or revenue of the Company or the suspension, forfeiture, or non-renewal of any 
+material permit, license or authorization applicable to the Company, its business 
+or operations. 
+
+The Company is a LLC duly organized, validly existing and in good standing under 
+the laws of the state of its incorporation, and has the power and authority to 
+own, lease and operate its properties and carry on its business as now conducted 
+
+In the event any one or more of the provisions of this instrument is for any 
+reason held to be invalid, illegal or unenforceable, in whole or in part or in 
+any respect, or in the event that any one or more of the provisions of this 
+instrument operate or would prospectively operate to invalidate this instrument, 
+then and in any such event, such provision(s) only will be deemed null and void 
+and will not affect any other provision of this instrument and the remaining 
+provisions of this instrument will remain operative and in full force and effect 
+
+
+
+ 
+
+and will not be affected, prejudiced, or disturbed thereby. All rights and 
+obligations hereunder will be governed by the laws of the State of Delaware or 
+Wyoming without regard to the conflicts of law provisions of such jurisdiction 
+and SHALL be of OUR choosing. 
+
+Block Array LLC Reserves the right to modify, change or otherwise alter this 
+agreement at its sole discretion. 
+
+Interested Parties in the ARY Token, please take note of the following: 
+
+Who should buy ARY Tokens: 
+Small businesses looking to have GS1 Barcodes 
+Manufacturers interested in our software license  
+
+Who should NOT buy ARY Tokens: 
+Speculators 
+People looking to make money purely based on price appreciation  
+People who do not understand the technology behind the Token 
+
+This is not an exhaustive list by any means, but provides a general idea of who 
+should and should not purchase our tokens. 
+
+For more information on GS1, see: https://www.gs1.org/terms-use 
+
+
+
+ 
+
+Open to ONLY the following countries:  
+U.S.A  
+
+N.A.T.O Member Countries  
+E.U. Member Countries 
+
+Albania, Belgium, Bulgaria, Canada, Croatia, Czech Republic, Denmark, Estonia, 
+
+Finland, France, Germany, Greece, Hungary, Iceland, Republic of Ireland, Italy, 
+Latvia, Lithuania, Luxembourg, Malta, Montenegro, Netherlands, Norway, Poland, 
+Portugal, Romania, Slovakia, Sweden Slovenia, Spain, Turkey, the United Kingdom 
+
+ 
+Israel 
+
+South Africa  
+India  
+Japan  
+Mexico  
+
+New Zealand 
+Australia  
+
+British Commonwealth Associated Countries 
+
+I f y o u l i v e i n : C h i n a , S i n g a p o r e , S o u t h K o r e a , 
+Philippines, Hong Kong, Crimea Region of Ukraine, Cuba, Iran, 
+
+North Korea, Burundi, Central African Republic, Democratic 
+Republic of the Congo, Libya, Lebanon, Sudan, South Sudan, 
+
+Somalia, Belarus, Iraq, Yemen, Myanmar (formerly Burma), 
+Russia/Ukraine, Zimbabwe, Balkans, Venezuela, Iran, Pakistan, 
+
+Russia, Egypt, Malaysia, , Kuwait, Lebanon, Syria, United Arab 
+Emirates, Saudi Arabia,  
+or are otherwise listed on OFAC or are a SDN you can not 
+participate. If your country was not mentioned in the Open To 
+
+list, you can not participate.   
+
+
+
+ 
+
+this page left blank. 
+
+
+
+ 
+
+This document contains the primary information and is the most up-to-
+date. We offer the older documents as they have more information for 
+specifics, but do not contain information such as Roadmaps or Token 
+
+information. Join our Telegram and ask questions if you have any. 
+
+** This document you are reading takes precedent for any information 
+that may be found below *** 
+
+Technical research whitepaper 
+http://bit.ly/blockarray-whitepaper 
+
+A “visual” summary of how XONS and our Software works 
+http://bit.ly/blockarray-visualsummary 
+
+Sign-up for whitelist 
+http://bit.ly/blockarray-whitelist-signup 
+
+telegram group 
+https://t.me/blockarray_ito 
+
+http://bit.ly/blockarray-whitepaper
+http://bit.ly/blockarray-visualsummary
+http://bit.ly/blockarray-whitelist-signup
+https://t.me/blockarray_ito
+
+
+ 
+
+
+
+ 
+
+OVERVIEW 
+Problem 
+
+Barcodes don’t provide much information besides what company is associated with it and the product 
+identification.  
+
+Solution 
+
+Create a protocol and infrastructure to enable consumers and businesses to be able to communicate with each 
+other through the use of barcodes 
+
+Products 
+
+GS1 Barcodes anchored to the blockchain with ARY Tokens 
+Software libraries  
+Mobile Applications  
+Visual SmartContracts 
+Array.Network - Powered with ARY Tokens 
+
+Goals 
+Create a semi-centralized barcode system that offers both normal GS1 Barcodes along with unique anti-
+counterfeit barcodes. In order to comply with existing laws and regulations (e.g. firearms, chemicals, biological 
+agents, etc) necessitate a “party” to discern what products are not allowed to be anchored to the blockchain and 
+tracked. Implement a protocol that can take blockchain transaction IDs and user permissions into EPCIS-style 
+event data. 
+
+Project Outline 
+
+We will outline our Consumer, Enterprise, and Logistics mobile applications. Provide a brief overview of the ARY 
+Token, the associated protocols that the token is for and various implementations of our protocols that use the 
+ARY Token.  
+
+• ARY Tokens are used to anchor new GS1 Barcodes to the Ethereum blockchain 
+• ARY Tokens are used to validate software licensing for commercial use  
+• ARY Tokens to be used for virtualized grey-pool for truck drivers 
+• ARY Tokens to provide a “toll” for access to outputs of platform-specific protocols 
+
+
+
+ 
+
+INTRODUCTION 
+At the core of any traceability program is the requirement to identify and track individual products. BlockArray can 
+revolutionize businesses’ supply chain operations product, shipment changes of custody, business processes, and 
+traceability events. Block Array also can provide increased business intelligence and chain of custody logs via 
+actionable analytics, demand forecasting and alerts. 
+
+• Why does your project need to be on a blockchain? 
+• Some countries restrict how data for sensitive products, such as weapons or chemical/biological/radioactive 
+
+items can be stored on computers. Barcode data may be required to be hosted in the country and not on a 
+global cloud system. See GS1 ONS 2.0.1 – Political Concerns 
+
+• Are you creating your own blockchain?  
+• We are using the Ethereum blockchain to “anchor” records by burning a token for creating a timestamp. A 
+
+proof is a JSON-LD document, that contains the information to cryptographically verify a piece of data is 
+anchored to a blockchain. It proves the data existed at time it was anchored. We also have our own 
+chainpoint nodes for hashing additional information 
+
+
+
+ 
+
+PROBLEMS 
+Global operations need consistent global standards to be applied across their supply chain, 
+and this is only going to become increasingly difficult with legacy enterprise systems and 
+increased legal costs. Laws recently passed like The California Transparency Supply Chain Act 
+or the Electronic Logging Data Mandate for Trucking add additional burdens to businesses 
+trying to comply with the law, coupled with more demands on increasingly outdated IT systems 
+- this then creates multiple problems for firms. Access to data required for different jurisdictions 
+can be problematic, and barcodes provide an efficient and intuitive way to access that 
+information. 
+
+#1 Data Fragmentation 
+From Suppliers, freight, retailers and vendors there is a lot of information available from disparate sources all 
+concerning the same product 
+
+#2 Contextual Problem 
+Even if that data was available, the issue then becomes how can the consumer or relevant party access that data 
+in an efficient and relevant manner? 
+
+#3 Authoritative  
+Information you find online might not be the correct information, you have to trust the results you are finding on 
+google 
+
+Being able to authenticate a product does not make sense if you don’t have a way 
+consumers can easily find that information. The GS1 barcode is how we base everything 
+off of. When you put the capability of a consumer to suddenly find out specifics, you might find 
+out that they actually do care about where it came from, who handled it, what people have to 
+say about it, etc. The business impact can also be seen in industries that still do faxing and 
+physical storage of documents as well, such as healthcare. What good is it if you can 
+authenticate a product if you don’t have an easy way to find out if it is authentic?  
+
+
+
+ 
+
+HOW THE SOFTWARE LIBRARY WORKS 
+Codename - AGRIPPA  
+
+1. Breakdown of the barcode into its constituent parts  
+2. Parse and compile the constituent elements as defined in the XONS protocol 
+3. Access the ARRAY.NETWORK and resolve URI  
+
+URI (domain names, Ethereum addresses, 
+namecoin.bit)
+
+
+itemreference.checkdigit.company.com  
+(.com,.xyz,.bit, etc)
+
+
+Serialized Format  
+(1D, 2D, RFID, BTC/ETH Address)
+
+DECODING
+
+1
+
+2
+
+3
+
+Software Library  
+ (mobile applications, sensors, etc)
+
+
+http://itemreference.checkdigit.company.com
+http://itemreference.checkdigit.company.com
+
+
+ 
+
+BDI - THE BLOCKCHAIN DATA INTERFACE PROTOCOL 
+
+The Blockchain Data Interface is an electronic data interface protocol that allows communication between 
+blockchains and existing software systems, such as ERM, ERPs, etc. The protocol uses a JSON schema to define 
+queries, and can plug in existing RESTful APIs into the system to push requests. BDI is based off of the EDI 
+specifications from GS1 along with some modifications. User activity tracking through a mobile device, such as a 
+warehouse employee fulfilling orders and scanning a barcode for a specific order will be visually tracked through 
+Emerge, our specific application within Visual SmartContracts. The Smart Contract pushes out to the user and the 
+user is granted permission to complete it and pass it on to the next person (this is done automatically be user 
+permissions already). This fulfillment process can be adapted to many industries and supply chain systems. 
+Creating a blockchain protocol based on the ONS/EPCIS specification (eXtensible ONS, XONS) for the access and 
+creation of barcode records (for the tracking and management for shipping and logistics) is a secondary objective. 
+We can get out the gate using a Web based solution to interact with the blockchain, but down the line we fully 
+plan on implementing the protocol specified as a free and open source project.Token holders will have the 
+opportunity to host full nodes or partial nodes for the blockchain network. Block Array will have its own GS1 Prefix, 
+allowing us to issue codes for those who wish to use our own prefix for their products. Token holders will be able 
+to purchase ONS2.0.1 compliant barcodes using our prefix, and domain name service will be provided by us for 
+such issuances. A proportion of the tokens used in the issuance of such barcodes will be burned, providing an 
+anchor to the blockchain by means of the timestamp of the transaction. 
+
+ 
+
+2a) block array protocols & software 
+(BDI, XONS, OCTOPUS, mobile application, 
+
+software libraries)
+
+2b) XONS
+
+3) URI 
+
+
+(webpages, etc)
+
+1) Barcode is 
+Scanned
+
+
+
+ 
+
+XONS - EXTENSIBLE OBJECT NAME SERVICE  
+
+In order to use DNS to find information about an item, the item’s GS1 Identification Key must be converted into a 
+format that DNS can understand, which is the typical, “dot” delimited, left-to- right form of all domain names. As 
+the purpose of ONS is to discover data and services associated with a GS1 Identification Key and multiple sets of 
+data and services may exist for that key, the appropriate DNS record type is the Naming Authority PoinTeR 
+(NAPTR) [RFC 3403]. This record type contains several fields for denoting the protocol, services, and features that 
+a given service endpoint exposes. It also allows the service endpoint to be expressed as a URI, thus allowing 
+complex services to be encoded in a standard way. The figure below describes a typical XONS query from start to 
+finish from the viewpoint of a developer. In this example, the starting point is a bar code or RFID tag. However, the 
+source of the GS1 IdentificationKey is not restricted to data carriers; it could be part of a transaction document 
+(e.g. a purchase order), an event record, a master data record, or any other source. 
+
+Application Level 
+Events  
+
+(mobile app, handheld 
+terminals, etc) 
+
+OCTOPUS 
+PROTOCOL
+
+Traditional Web 
+Services & 
+
+Blockchain Services  
+
+array.network  
+(IN) FQDN -  (OUT) NAPTR 
+
+Recursive Name Server 
+ (KnotDNS, PowerDNS, R53) 
+
+ 
+XONS PROTOCOL
+
+
+
+ 
+
+ 
+
+Consumer 
+Applications
+
+Business 
+Mobile 
+
+Applications
+Infrastructure Protocols
+
+Badger Mobile 
+App
+
+Enterprise 
+Mobile 
+
+Application 
+
+Trucking ELD 
+Application
+
+array.network data 
+anchoring nodes
+
+array.network dedicated 
+RPC nodes
+
+BDI  
+(blockchain data 
+
+interchange)
+
+OCTOPUS 
+Low-Level 
+
+Application Events
+
+XONS 
+(eXtensible Object 
+
+Name Service)
+
+ABSTRACTED OVERVIEW OF THE ENTIRE ARRAY.NETWORK
+
+
+
+ 
+
+GS1 BARCODES 
+With a GS1 Barcode you will have access to large retailers, including Amazon FBA (fulfillment by amazon). It is an 
+international standard that having access to allows your goods to be traded internationally. Buying a GS1 Barcode 
+does not mean that these companies will sell your products, only that you can offer your goods at these retailers. 
+This is only a few of the many retailers that mandate GS1 barcodes. https://www.gs1.org/ 
+
+PRICING OF GS1 BARCODE 
+
+List of companies that require product data to be in GS1 Format
+
+NABCA (National Alcohol Beverage Control 
+Association)
+
+Amazon FBA (amazon.com) 
+
+Acosta, Inc. Ahold
+
+Safeway Associated Food Stores, Inc.
+
+Sears Associated Grocers
+
+Southern Wine and Spirits Inc Associated Wholesale Grocers
+
+SUPERVALU, Inc. Best Buy
+
+Target Carrefour SA
+
+TSN West, Inc (Bunzl) Defense Supply Center Philadelphia
+
+Wakefern Food Corp Delhaize
+
+Walgreens Family Dollar Stores, Inc
+
+Wal-Mart Mexico Glazers Wholesale Distributor
+
+Wal-Mart Stores, Inc. Kmart
+
+Webco Alaska Lowe’s Companies Inc.
+
+Webco Hawaii McLane Company
+
+Wegmans Food Markets
+
+Average Price Our Price
+
+$80.00 $40.00
+
+https://www.gs1.org/
+http://amazon.com
+
+
+ 
+
+DEVELOPMENT PROJECTS & PROGRESS 
+
+Mobile Application 
+Consumer: Badger Mobile Application for scanning normal barcodes into URIs, along with support for dual-layer 
+QR Codes 
+
+Here is an older screen shot of the mobile application running in an emulation 
+
+
+
+ 
+
+Enterprise Application  
+
+Here we can see the enterprise application development as it syncs to our chainpoint nodes (array.network) and 
+creates the appropriate logs on-the-blockchain along with a push to BrickFTP. 
+
+ 
+
+
+
+ 
+
+Enterprise Application 
+http://blockarray.com/demo/vsc/dashboard.html 
+Enterprise Dashboard 
+
+Paperwork is done in the KANBAN style above - Tasks must be completed from left-to-right to progress. Data 
+from previous tasks can be used to auto-complete, and set fields can be updated across all documents.  
+
+http://blockarray.com/demo/vsc/dashboard.html
+
+
+ 
+
+VISUAL SMARTCONTRACT FRAMEWORK 
+
+Based on user permissions that are defined in our visual smart contracts platform we define a specific employees 
+permissions. Their permissions are tied to a mobile device (smartphone, handheld terminal, etc). The actions they 
+are allowed to do (such as moving an order onto a truck) are defined by their permissions. The events listed above 
+in the table are the actions normally recorded on an EPCIS server: these events are now interpreted through 
+Transaction IDs on the blockchain.  
+
+Object
+
+Aggregation
+
+Transaction
+
+Transformation
+
+Quantity
+
+Event ID / Transaction ID (RFC 4122 either 
+v1 or v4, v4 is used in Hyperledger
+
+Employee 
+Permissions
+
+Scanning of 
+Barcode/RFID 
+
+(human or 
+machine)
+
+Who, What, 
+Where, & When
+
+ActionUser Asset
+
+
+
+ 
+
+ROADMAP 
+
+WHILE WE WILL DO OUR UTMOST TO ADHERE TO THE ROADMAP, THINGS HAPPEN. WE WILL DO OUR BEST TO 
+ACKNOWLEDGE ANY SETBACKS OR POTENTIAL DELAYS THROUGH OUR WEBSITE, TWITTER, TELEGRAM AND SLACK. 
+
+ARRAY.NETWORK LIVE 
+XONS TEST-NET LIVE 
+DECEMBER 2017 
+
+ARY GS1 TOKEN PROTOCOL 
+XONS PROTOCOL LIVE 
+JANUARY 2018 
+
+BADGER - CONSUMER MOBILE APP 
+OCTOPUS PROTOCOL 
+FEBUARY 2018 
+
+ENTERPRISE MOBILE APPLICATION  
+MARCH 2018 
+
+Electronic Logging Device records anchored to blockchain (supply chain) 
+MARCH 2018 (this is not a FMCSA compliant application, it is to be used in conjunction with existing 
+
+VISUAL SMARTCONTRACTS 
+APRIL/MAY 2018 
+
+E-COMMERCE INTEGRATION PLUGINS (WOO-COMMERCE AND MAGENTO) 
+APRIL 2018 
+
+DUAL-LAYER QR CODES 
+AUGUST 2018 
+
+
+
+ 
+
+ARY GS1 PROTOCOL  
+Description and Mechanics  
+
+1) The small business registers the GS1 Barcode and products with us 
+2) Upon receipt of information, we register the GS1 Barcode. 
+3) The small business then must send us the tokens to a predetermined burn wallet address 
+4) After completion of the GS1 registration, small business is given all the information (Barcode files, packaging 
+
+placement, etc) 
+5) We then burn the tokens from the wallet address, and the information associated with the burn like the 
+
+Ethereum wallet address for the small business along with the GS1 Barcode information is included in the 
+Transaction Field. 
+
+6) GS1 Barcode is created and anchored to the Ethereum blockchain, 1 ARY Token is sent back to the Ethereum 
+Wallet Address for the Small Business. 
+
+ARY Token
+
+Ethereum 
+Wallet address of 
+Small Business
+
+0x000.. (burn)
+
+blockarray off-chain 
+frontend and backend
+
+blockarray 
+GS1 Wallet 
+
+address 
+
+
+
+ 
+
+By scanning the barcode, companies can provide information on a single web-page of disparate information 
+concerning the product. From Medical Devices to Consumer goods, anything that follows a standardized serial 
+format can be aggregated within the context of a barcode 
+
+Other Documents and 
+Records
+
+GS1 Data-Pool
+
+Consumer Supplied 
+Information
+
+Company Supplied 
+Information
+
+3rd Party Vendors
+
+“Badger” & 
+“Enterprise” Mobile 
+
+Application 
+
+Protocols
+
+OCTOPUS 
+Low-Level 
+
+Application Events
+
+XONS 
+(eXtensible Object 
+
+Name Service)
+
+
+
+ 
+
+VISUAL SMARTCONTRACTS - USE CASE 
+HOW INTERACTIONS AND COMMUNICATIONS CAN HELP THE POINT OF CONTACT 
+EMPLOYEE FOR COMPANIES USING VISUAL SMART CONTRACTS SYSTEM 
+With Smart Contracts, standards can be applied, such as seeing how long an employee at a supplier works in a 
+foreign country, or where the coffee beans were sourced through GPS tracking, seamlessly. The value of smart 
+contracts exists in business logic: the ability to define user actions and permissions in a distributed and 
+decentralized way. Visual SmartContracts follows the KANBAN methodology: Based on user permissions they are 
+given access to orders as they progress through the system. You will be able to see work orders, purchase orders, 
+etc in real time as they are processed through the system using barcode scans throughout the scans. We can see 
+here how business logic can filter out what a point of contact person (in this example a customer support person) 
+can be assisted through the use of business logic (smart contracts).  
+
+Sales Representative 
+
+Operations
+
+Accounting, Back Office
+
+Demand planning
+
+Point of Contact 
+“Customer Support”
+
+Business Logic 
+Visual SmartContracts
+
+
+
+ 
+
+VIRTUALIZED GREY POOL - USE CASE  
+
+block array protocol 
+ARRAY.NETWORK
+
+Individual Truck 
+Driver
+
+truck drivers that 
+have unused shipping 
+
+capacity
+
+ELD Data 
+Anchoring 
+
+people needing 
+shipping capacity 
+
+Virtualized Grey Pool
+
+
+
+ 
+
+SUPPORTED BLOCKCHAINS 
+
+Hyperledger Fabric   
+(Our main net will be deployed when PBFT is implemented in Q1 2018, sawtooth Q3 2018 tentative) 
+
+Ethereum  
+(Present) 
+
+Cardano  
+(Q3/Q4 2018) 
+
+Chainpoint 
+(we have our own nodes, array.network, functional and operating) 
+
+Oracles POA  
+(support for notary services through visual smartcontracts) 
+
+Tokens will be interoperable for any services on supported blockchains where we have some control, e.g. side chains) 
+
+3rd party smart contract integration in visual smart contracts to be on-going 
+
+
+
+ 
+
+PUTTING IT ALL TOGETHER 
+ 
+In this paper we have outlined the major issues and current methodologies/technologies deployed in supply chain 
+management. We can see that the system is hugely monolithic and requires a vast up-front cost to implement to 
+truly have an adaptable global supply chain. Our approach to adapting these for use with a private & permission 
+based distributed ledger system does not try and “re-invent” the wheel, but rather use existing terminology and 
+design aspects to better adapt the system to current technology trends and allow easier integration among 
+disparate systems. Ultimately we are not seeking to supplant any GS1 specifications or standards, but use them 
+as they were intended to be used: as a global communication framework to allow companies to talk to each other. 
+
+• How we can get normal barcodes to automatically point to a URL/URI 
+
+• How we can use physical actions such as scanning a barcode to record transactions onto the blockchain  
+
+• How we can provide that information in a similar fashion that supply chain companies are familiar with, but do 
+not have access to necessarily, nor do they have the level of data or granularity that we can provide  
+
+• Utilize new technology to improve QR codes to help fight counterfeiting 
+
+• Create new product identification mechanisms to ensure product is authentic using current technology  
+
+• How we can track assets without the use of RFID tags with only updated software  
+
+• Create a virtualized “grey-pool” for businesses to have access to unused shipping capacity  
+
+• How our token can actually be used for small businesses to gain access to larger customers  
+
+• Lower the barrier of entry for new businesses in accessing existing marketplaces like Amazon 
+
+• How our Protocol Anchors GS1 Barcode creation to the blockchain and points to that businesses associated 
+Ethereum Wallet Address  
+
+
+
+ 
+
+CROWD SALE INFORMATION 
+
+Tokens are unlocked when crowd sale ends 
+Tokens are only generated with ETH contributions  
+GS1 Barcodes are anchored by burning ARY Tokens. $40 for 1 GS1 Barcode which means $39.98 worth of ARY 
+Tokens must be burned to finalize and anchor the creation to the blockchain. 
+Only 100,000 Barcodes Available 
+Pre-Sale is only open to whitelist  
+
+Whatever bonuses remain after the whitelist period (pre-sale) ends, will be available to the public (un-whitelisted) 
+crowd sale portion 
+
+“VESTING” PERIOD 
+Do not think that because we use the term “vesting” that his implies an equity ownership stake into Block Array 
+LLC. We use the term out of convenience.   
+
+Tokens held by us (Block Array LLC) will follow this scheme: 
+9 month cliff - If employee leaves before 9 months, 0 tokens. 
+4 year normal vesting afterwards. 
+Right of First Refusal - Any tokens held by individuals associated with Block Array must be offered to us first 
+before they can be sold to any individual or exchange or marketplace  
+
+Tier 1 2 3 4
+
+ETH in Tier 2,500 5,000 3,500 500
+
+Bonus % 25% 15% 10% 0%
+
+Tokens per tier 14,922,022 27,456,521 18,383,931 2,387,523
+
+ARY = 1 ETH 5,968 5,491 5,252 4,775
+
+Total Supply: 63,150,000 63,149,997
+
+Burn Rate $40 per GS1 Barcode = $39.95 of ARY Token Burned & Anchored to 
+blockchain
+
+
+
+ 
+
+60%
+
+40%
+
+Held by us Crowdsale
+
+10%
+
+15%
+
+20%
+
+55%
+
+Development Marketing Business Expenses Reserve
+
+
+
+ 
+
+E-mail: 
+contact@blockarray.com 
+
+Telegram:  
+https://t.me/blockarray_ito 
+
+ 
+ 
+ 
+
+block array llc 
+Chattanooga, Tennessee 
+
+mailto:contact@blockarray.com
+https://t.me/blockarray_ito
+

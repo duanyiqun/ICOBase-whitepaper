@@ -1,0 +1,1514 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Effect Network:
+Decentralized Network for Artificial Intelligence
+
+REV-1.0
+
+Eisses, Jesse
+jesse@effect.ai
+
+Verspeek, Laurens
+laurens@effect.ai
+
+Dawe, Chris
+chris@effect.ai
+
+Dijkstra, Sjoerd
+sjoerd@effect.ai
+
+February 20, 2018
+
+Abstract
+The Artificial Intelligence (AI) market is growing at a remarkable rate
+
+but has become more inaccessible than ever. The requirement for large
+annotated datasets and a complex technical infrastructure has driven AI
+development behind the closed doors of corporations. This paper intro-
+duces an open, decentralized network called Effect.AI , that provides ser-
+vices in the AI market. The network replaces several existing services and
+requires no fees, has a low barrier of entry and provides fast growth of
+the industry. This is accomplished by three platforms that run on the NEO
+blockchain and are fueled by a network token called EFX. The first platform
+is a marketplace for tasks that require human intelligence. It allows any-
+one in the world to perform tasks for a fair payment and gives businesses
+access to a large workforce of human intelligence. The second platform is a
+decentralized registry of AI services described by a rich ontology. On this
+platform any algorithm can be accessed as a service in a unified manner
+and has a convenient way to receive payment. The last platform provides
+a decentralized, distributed computational platform that can run popular
+deep learning frameworks. The effect of this network will define the future
+relationship between humans and AI.
+
+mailto:jesse@effect.ai
+mailto:laurens@effect.ai
+mailto:chris@effect.ai
+mailto:sjoerd@effect.ai
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+Contents
+
+1 Introduction 3
+
+1.A Blockchain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+1.B Artificial Intelligence . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+1.C Problem Statement . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+1.D Solution Effect.AI . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+2 The community driven Effect Network 8
+
+2.A EFX tokens and the Effect Galaxy Pool . . . . . . . . . . . . . . . 8
+
+2.B Effect Reputation Score . . . . . . . . . . . . . . . . . . . . . . . 11
+
+2.C Galaxy Allowance . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+2.D Governance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+2.E Improvement Proposals . . . . . . . . . . . . . . . . . . . . . . . 13
+
+2.F Effect Council . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+2.G Implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+3 Phase 1: Effect.AI Mechanical Turk 15
+
+3.A Requesters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+3.B Workers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+3.C Tasks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+
+3.D Data sets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+
+3.E Privacy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+
+4 Phase 2: Effect.AI Smart Market 19
+
+4.A Application registry . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+4.B Endpoints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+5 Phase 3: Effect.AI Power 21
+
+6 Conclusion 22
+
+Page 2
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+Whether we are based on carbon
+or on silicon makes no
+fundamental difference; we should
+each be treated with appropriate
+respect.
+
+Arthur C. Clarke
+
+1 Introduction
+
+Artificial Intelligence (AI) is progressing rapidly and has already caused many
+
+different effects. We see AI applications everywhere we look; from phones to
+
+autonomous vehicles to biotechnology, AI has become ubiquitous. AI is often
+
+considered the key component of the Fourth Industrial Revolution [1]. Like the
+
+revolutions that preceded it, the Fourth Industrial Revolution has the poten-
+
+tial to raise global income levels and improve the quality of life for populations
+
+around the world. However, the revolution could yield greater inequality as well,
+
+particularly in its potential to disrupt labor markets as automation substitutes
+
+labor across the entire economy [1]. Consider, for example, when entire work-
+
+forces were laid off when pinhead factories started incorporating machines in
+
+their fabrication process. A similar, though far larger threat looms due to new
+
+advances in AI development. Bill Gates had the idea to tax labor performed
+
+by AI-algorithms, to compensate for the loss of jobs in many sectors1. This
+
+idea seemed science fiction at the time, but the concept can be realized on the
+
+Effect Network, a decentralized network for AI. Effect.AI brings AI-algorithms
+
+to an open and proven decentralized platform, powered by the blockchain and
+
+accessible to all.
+
+1.A Blockchain
+
+A blockchain is a decentralized data store that can contain arbitrary logic and
+
+processes, without the need for a trusted central party. Blockchain was first pro-
+
+posed in the Bitcoin whitepaper by Satoshi Nakamoto, 2009 [2]. Since then the
+1https://qz.com/911968/bill-gates-the-robot-that-takes-your-job-should-pay-taxes/
+
+Page 3
+
+https://qz.com/911968/bill-gates-the-robot-that-takes-your-job-should-pay-taxes/
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+technology has been applied in many areas, and has had a disruptive influence
+
+in the markets of banking, insurance, real-estate, to name a few. Decentralized
+
+applications have some unique properties like transparency and a fixed history.
+
+We propose a protocol that decentralizes the global market in AI; which lowers
+
+the barrier for entry, stimulates market growth and greatly reduces usage cost.
+
+NEO NEO [3] is (i) the use of blockchain technology and digital identity to
+
+digitize assets, and (ii) the use of smart contracts for digital assets to be self–
+
+managed. This establihes, what is called, a Smart Economy with a distributed
+
+network2. Hence, it’s a smart contracts ecosystem, similar to Ethereum [4].
+
+NEP5 tokens are tokens that are managed by smart contracts on the NEO
+
+blockchain. Most existing NEO projects use a NEP5 token (e.g. RedPulse3,
+
+Qlink4, and DeepBrain Chain5). NEP5 describes the protocol that these tokens
+
+conform to, as the Effect.AI EFX token does as well.
+
+1.B Artificial Intelligence
+
+AI is intelligence displayed by machines, in contrast with the Natural Intelligence
+
+(NI) displayed by humans and other animals. In computer science AI is defined
+
+as the study of "intelligent agents": any device that perceives its environment
+
+and takes actions that maximize its chance of success at some goal.
+
+In the past five years there has been a rapid growth in the number of practical
+
+AI applications. Smart services like self-driving cars, face and voice recognition
+
+in mobile phones, and image translation are getting a central place in every-
+
+day life. The increase in AI applications can be explained by the advances in
+
+Machine Learning (ML), Computer Vision (CV), and Natural Language Pro-
+
+cessing (NLP) research, as well as the ready availability of cloud computing.
+
+This has resulted in large adoption by the industry and the birth of a billion-
+
+dollar-economy around smart applications. While academic achievements are
+2http://docs.neo.org/en-us/index.html
+3https://coin.red-pulse.com/
+4https://www.qlink.mobi/
+5https://www.deepbrainchain.org/
+
+Page 4
+
+http://docs.neo.org/en-us/index.html
+https://coin.red-pulse.com/
+https://www.qlink.mobi/
+https://www.deepbrainchain.org/
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+available to the public most intelligent algorithms are developed behind the
+
+closed doors of large corporations. We propose a private, decentralized ecosys-
+
+tem called the Effect.AI Network (Effect Network). The network is designed
+
+to develop in the phases shown in fig. 1, and operates fully on smart contracts
+
+deployed on a Turing-complete blockchain.
+
+Phase 1
+
+Phase 2
+
+Phase 3
+
+Mechanical
+Turk
+
+Smart
+Market
+
+Power
+
+Token
+Distribution
+
+Event
+
+Galaxy Pool
+
+Community
+
+EFX
+
+Council
+Governance
+
+Reputation
+System
+
+Figure 1: Development roadmap for the Effect Network
+
+1.C Problem Statement
+
+Despite the advantages AI brings there are a number of problems that have to be
+
+dealt with, especially regarding the research and development of AI technology.
+
+These problems can broadly be categorized into three areas that currently make
+
+AI research and development difficult to perform.
+
+Data processing The first problem is that of data processing. Intelligent ap-
+
+plications perform tasks that traditionally require human feedback. Such tasks
+
+involve processing unstructured data and finding patterns that can provide use-
+
+ful output. These applications are trained on large data sets with annotations.
+
+Page 5
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+Obtaining an annotated data set is non-trivial and requires a lot of time and
+
+resources.
+
+Diverging Tasks The second problem that currently makes AI hard to practi-
+
+tion is that of diverging tasks. An obstacle when developing a complex algorithm
+
+is the need to interact with parts of the world outside the current domain. For
+
+example: a self-driving car learning to steer will also need to identify road signs
+
+around the world. This situation can best be treated as a knowledge system
+
+where the classification of the sign is done by an external application. This
+
+quickly increases the complexity of an application.
+
+Computational Costs The last main problem is the computational cost of
+
+AI algorithms. Developing and training AI systems is in most cases a computa-
+
+tional intensive and thus expensive task. It requires a technical infrastructure
+
+capable of processing large amounts of data, doing batched processing on Graph-
+
+ics Processing Units (GPUs) and coordinating the results.
+
+1.D Solution Effect.AI
+
+A decentralized ledger like the blockchain provides a direct link between sup-
+
+ply and demand which can greatly mitigate these problems. The transparency
+
+that blockchain offers will boost discoverability on the network, resulting in a
+
+high degree of collaboration and data sharing between agents. It also increases
+
+knowledge diversity and makes AI more affordable by sharing costs. Around
+
+this vision the Effect Network is designed. Like other decentralized applica-
+
+tions, Effect.AI directly connects supply and demand without the need for an
+
+intermediary party. To be more specific, the Effect Network will establish the
+
+following:
+
+1. Accessibility. By directly linking supply and demand through our micro-
+
+tasking platform Effect.AI Mechanical Turk (EMT) will make training AI
+
+algorithms easier, faster and cheaper (section 3). This will enable users
+
+Page 6
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+who do not have access to a large dataset or a big network to train their
+
+AI algorithm.
+
+2. Accuracy. The Effect.AI Smart Market (ESM) is an exchange with a
+
+rich ontology of specialist AI applications. Individual applications are
+
+able to find each other to buy or sell information, as specified in section 4.
+
+Through this exchange, users can use data sets with significantly higher
+
+complexities to train their AI algorithms.
+
+3. Performance. Users can enrich their existing datasets by purchasing
+
+services from algorithms on the ESM (section 4), or they can setup a new
+
+datasets by creating micro-tasks on the EMT platform (section 3). By en-
+
+abling users to build datasets quickly and accurately they can immediately
+
+use these datasets to train AI algorithms.
+
+4. Interoperability. By putting the AI algorithms on the blockchain and
+
+creating a communication standard to which these AI algorithms have
+
+to comply to, we can truly decentralize AI and achieve interoperability
+
+between individual AIs (section 5). The combination of multiple AI algo-
+
+rithms will result in powerful capabilities and emergent intelligence that
+
+no single AI algorithm can achieve on its own.
+
+The network will be deployed in consecutive phases, allowing adaption and
+
+development of the network to grow together. The phases cover independent
+
+market sections but are interconnected in our network model and are all fueled
+
+by the same token; the EFX token.
+
+The rest of the Effect.AI whitepaper is structured as follows. The Effect
+
+Network will be outlined in section 2. Hereafter, section 3, section 4, and
+
+section 5 will detail the three different phases for the development of the Effect
+
+Network , in chronological order. The whitepaper will be concluded in section 6.
+
+Page 7
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+I alone cannot change the world,
+but I can cast a stone across the
+waters to create many ripples..
+
+Mother Teresa
+
+2 The community driven Effect Network
+
+The Effect Network can be deployed and used as a decentralized application
+
+as-is. However, in order for the network to grow and be sustainable, we believe
+
+there has to be a form of governance. Participants should have incentive to use
+
+the EFX token for the purpose of AI tasks. Investors looking for quick monetary
+
+gain should be discouraged and pump-and-dump schemes should be avoided in
+
+order for the network to grow and slowly take market value from the existing
+
+centralized services.
+
+The Effect.AI Galaxy Pool (EGP) will be outlined in section 2.A. There-
+
+after, section 2.B will explain the reputation mechanism in the network. The
+
+Effect.AI Galaxy Allowance (EGA) will be outlined in section 2.C, section 2.D
+
+details the governance system, section 2.E is dedicated to the improvement pro-
+
+posal system, and section 2.F explains the council formation. This Section will
+
+finish with blockchain implementation specifics on the NEO and GAS platform in
+
+section 2.G.
+
+2.A EFX tokens and the Effect Galaxy Pool
+
+It is important to maintain liquidity in EFX tokens, especially during the early
+
+days when there is no listing on exchanges. Ideally the following actions should
+
+always be possible:
+
+1. Workers are able to sell their EFX rewards for native tokens
+
+2. Requesters and network users should be able to buy EFX
+
+For a new token on the market this kind of liquidity can be hard to achieve
+
+and can be hurt by speculative trading. The Effect.AI Network (Effect Network)
+
+Page 8
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+will maintain a central pool of tokens to provide liquidity, encourage adoption
+
+and stabilize network fees. This pool is called the Effect.AI Galaxy Pool (EGP)
+
+and consists of a mix of EFX and native tokens. Several rules will drive the EGP
+
+towards an equilibrium. These rules can later be refined by means of governance
+
+as is discussed in section 2.D.
+
+Requesters
+& Services
+
+Effect.AI Interface
+(Smart Contracts)
+
+Workers
+& Users
+
+Galaxy
+Pool
+
+Crowdsale
+Funds
+
+Governance
+Platform
+
+Donations
+
+External
+Exchanges
+
+External
+Exchanges
+
+(Galaxy)
+EFX
+
+EFX
+
+EFX
+
+EFXNEO, GAS
+& NEP5
+
+NEO, GAS
+& EFX
+
+EFX EFX
+
+Galaxy
+EFX
+
+NEO, GAS
+& NEP5
+
+Figure 2: Diagram of the Governance Model and construction of the Effect.AI
+Galaxy Pool
+
+The EGP ensures stable exchange rates for users of the network at all times.
+
+The pool is not suitable for day traders, as only Galaxy-EFX tokens (G-EFX)
+
+can be bought. Any G-EFX bought from the EGP can not be sold back to the
+
+EGP. A G-EFX is washed (converted to a regular EFX token) by spending it
+
+through an Effect.AI Service Contract (ESC). These are the smart contracts
+
+that processs the transactions of tasks and the service registry. This protects
+
+the EGP from external manipulation and keeps exchange rates stable for all
+
+Page 9
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0
+
+NEO blocks ×106
+
+0.0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1.0
+G
+-E
+
+F
+X
+
+×106
+
+Figure 3: Total amount of G-EFX for 4 × 106 blocks in the NEO blockchain
+
+agents in the network.
+
+To assure Requesters will not have an overflow G-EFX will gradually expire
+
+and flow back to the EGP over time. eq. (1) shows how G-EFX flows back every
+
+α blocks in the blockchain.
+
+G-EFX′ =
+
+
+G-EFX, ∆
+
+(
+βcurrent, βlast.
+
+)
+< α
+
+G-EFX− γ ·
+∆∑
+i
+
+[
+G-EFX · (1 − γ)i
+
+]
+, otherwise
+
+(1)
+
+Where G-EFX′ is the new wallets’ total from the original transaction, β are
+
+blocks in the NEO blockchain, γ is the backflow factor defined by the Effect
+
+Council, and α is the number of blocks that have to go past for the function to
+
+activate. ∆
+(
+βcurrent, βlast.
+
+)
+, or short ∆, denotes the number of blocks since the
+
+last time the G-EFX was decreased.
+
+This ensures, for a Requesters, there is seamless payment for the ESC with
+
+native tokens, such as NEO, GAS, and other NEP5 tokens.
+
+Page 10
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+Other measures that will be undertaken in order to maintain a healthy liq-
+
+uidity in the Effect Network to keep the EGP stable, especially in the first
+
+phase of the development, are the implementation of beneficial exchange rates
+
+between EFX tokens and the native tokens NEO, GAS, and NEP5 tokens. This
+
+means that Requesters will have to pay less native tokens to use Effect Services,
+
+and that Workers will recieve more native tokens in exchange for their received
+
+EFX tokens.
+
+In the future, when cross-chain trading techniques are more common in
+
+blockchain, other tokens (e.g. BTC and ETH) can be added to the EGP.
+
+2.B Effect Reputation Score
+
+Users in the Effect Network are rewarded for the amount of effort and work
+
+they do. This could allow malevolent users to gain wealth by submitting large
+
+quantities of work with poor quality [5]. To avoid users submit work with bad
+
+quality, the network will appraise users by their quality of work. Users that put
+
+in good effort will get a higher Effect.AI Reputation Score (ERS), and users
+
+that put in poor effort will get a lower ERS. This score will gradually expire
+
+over time. Workers with a higher ERS will be able to apply for higher rewarding
+
+tasks than workers with a lower score. Furthermore, workers with higher, rather
+
+than lower, ERS will have to pay a lower fee over their recieved EFX tokens to
+
+the EGP.
+
+ERS is credited to users ad-hoc when they are rated for good work. There
+
+are two ways this can happen:
+
+1. The task owner can add Ground Truth / Known Answer ratings of exam-
+
+ples. If a worker rates an example similar to the ground-truth provide by
+
+the task owner, they are rewarded ERS, else they lose this score. Ground-
+
+Truth examples are stored encrypted on the blockchain and the decryption
+
+key is shared by the requester after the task has expired. Thus the rating
+
+takes place after task expiration time.
+
+2. Workers that deliver similar work and performance on the same Human
+
+Page 11
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+Intelligence Tasks (HIT) (section 3) are credited with ERS. This is done
+
+periodically and at random. Workers that consequently give deviant feed-
+
+back are subtracted ERS.
+
+The ERS function is represented in eq. (2). Let F (t) be the degradation
+
+function of positive scores, and negative scores, over time. Let P be a set of
+
+positive score-time entries p, and N be a set of negative score-time entries n.
+
+ERS =
+NP∑
+i
+
+[
+pi,score × F (pi,time)
+
+]
+− ω
+
+( NN∑
+i
+
+[
+ni,score × F (ni,time)
+
+])
+(2)
+
+Where NP is the total number of positive evaluations, and NN is the total
+
+number of negative evaluations. ω is the weight factor for negative scores that is
+
+governed (section 2.D) to maintain a healthy and effective workforce in Effect.AI.
+
+As of now, we found a linear degradation in F (t), and a weight ω = 5 assures
+
+best results in our simulations.
+
+2.C Galaxy Allowance
+
+An other use case of the Galaxy Pool is to provide liquidity on the supply side
+
+of EFX. Earlier we saw how “consumers” of services can purchase G-EFX which
+
+is only spendable to Effect Service Contracts. In a similar way “producers” of
+
+services are able to sell EFX to the EGP at fixed rates. As the rates can be
+
+profitable compared to market, this exchange must be restricted to contributers
+
+of the network. To accomplish this we introduce Galaxy Allowance.
+
+Any person or algorithm on the network that earns EFX tokens from an ESC,
+
+gets an equal amount of Effect.AI Galaxy Allowance (EGA). EGA can be used
+
+to sell an amount of EFX tokens to the EGP at a very profitable rate. This rate
+
+is maintained by the Effect.AI Council (section 2.F) through voting. This way
+
+Workers and algorithms are not dependent on market fluctuation of EFX tokens
+
+as they can always sell their earning at stable rates. The general Effect.AI
+
+exchange protocol is reflected in eq. (3), eq. (4), and eq. (5). The exchange
+
+Page 12
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+rates cNEO, cGAS, and cNEP5 remain constant untill the Effect.AI Council changes
+
+them.
+
+NEO = cNEO × EFX (3)
+
+GAS = cGAS × EFX (4)
+
+NEP5 = cNEP5 × EFX (5)
+
+2.D Governance
+
+The blockchain is immutable by nature, yet the Effect Network has to be able
+
+to continuously adapt to market and research developments. This means the
+
+network needs a mechanism to apply changes to its components when necessary.
+
+There are two types of changes that can be applied. Firstly, there are the
+
+variables defined in Smart Contracts (SCs) that can change over time. Examples
+
+of SCs’ variables that can change over time are the exchange rates in the EGP
+
+and the fees over service transactions. Secondly, the smart contracts themselves
+
+need to be changeable with sufficient agreement: introducing new SCs - like new
+
+task types - and amending existing contracts will be necessary in the future.
+
+As the Effect Network is decentralized there can not be a single person or
+
+organization authoring these changes. To fix this, the network has a governance
+
+system that allows prominent people in the community to propose and vote for
+
+improvements as explained in section 2.E. Right to vote is at first acquired by
+
+selected individuals as discussed in section 2.F.
+
+2.E Improvement Proposals
+
+Both smart contracts and service variable adjustments should be submitted to
+
+an improvement proposal system. Each proposal contains logic for adjusting
+
+parts of the ecosystem. A proposal is only executed if a majority of the council
+
+members voted in favor of it within a time limit.
+
+Page 13
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+2.F Effect Council
+
+The Effect.AI Council (EC) is a group of individuals that are allowed to cast a
+
+vote on improvement proposals. This council is dynamic in size; one can leave
+
+the group at any time and new members can join if they are approved by the
+
+majority. The council members are responsible to continuously apply changes
+
+to the network so it can adapt to the dynamic market.
+
+2.G Implementation
+
+This Section contains examples of how the platform would function when built
+
+on the NEO blockchain. NEO is a blockchain that uses Delegate Byzantine Fault
+
+Tolerance (dBFT) consensus and features Turing-complete SCs. It also has
+
+features for user identification and file storage that make it a very suitable host
+
+for the Effect Network .
+
+Galaxy Pool: NEO and GAS In NEO there are two native tokens: NEO and
+
+GAS. The GAS is a utility token used for paying network fees. These are fees
+
+associated with deploying and executing smart contracts. NEO acts as a share
+
+in the platform; holding NEO gives a payout in GAS from network usage. In this
+
+setup, the EGP should hold a combination of EFX, NEO and GAS to function
+
+correctly. The NEO is used to payout workers at a stable exchange rate and
+
+to increase the GAS stake by collecting dividend. As NEO is indivisible the rate
+
+should be defined in EFXNEO . The GAS is used to pay any network fees to users of
+
+the network, so workers will not have to go to an exchange to use the platform.
+
+The GAS is also used to deploy new smart contracts and amend existing smart
+
+contracts. This is crucial as the Effect Network will be developing all the time.
+
+Page 14
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+There are no great limits to
+growth because there are no limits
+of human intelligence,
+imagination, and wonder.
+
+Ronald Reagan
+
+3 Phase 1: Effect.AI Mechanical Turk
+
+The Effect.AI Mechanical Turk (EMT) platform is a decentralized, peer to
+
+peer marketplace for tasks that require human intelligence. It provides sim-
+
+ilar features as centralized services like Amazon Mechanical Turk6, Fiverr7,
+
+Crowdsource8 and Guru.com9. It is a crowdsourcing technology that enables
+
+Requesters (section 3.A) to submit tasks that can be completed by human agents
+
+in exchange for compensation. Workers (section 3.B) can accept tasks from Re-
+
+questers at any time, anywhere and from any device. The tasks are called Hu-
+
+man Intelligence Tasks (HIT). The providers of the HITs are called Requesters.
+
+When a Worker completes a HIT, they are paid with cryptographic EFX tokens.
+
+3.A Requesters
+
+Requesters can put tasks (see section 3.C) on the EMT platform to be completed
+
+by workers. The requesters can decide how many EFX the workers will get for
+
+each completed task. The requesters can retrieve the results from the EMT
+
+platform and use these results to, for example: train their Artificial Intelligence
+
+(AI) algorithm. EMT gives requesters access to an on-demand, scalable and
+
+distributed workforce.
+
+3.B Workers
+
+Workers can complete the tasks from the requesters in exchange for the EFX
+
+tokens tied to these HITs (see section 3.C).
+6https://www.mturk.com/
+7https://www.fiverr.com/
+8https://www.crowdsource.com/
+9https://www.guru.com/
+
+Page 15
+
+https://www.mturk.com/
+https://www.fiverr.com/
+https://www.crowdsource.com/
+https://www.guru.com/
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+TasksWorkerInterface
+
+Requester
+Interface
+
+Decentralized
+File Storage
+
+Task contracts
+
+1. register
+
+2. invoke job
+contract
+
+3. fetch
+files
+
+4. submit
+work
+
+5. approve work
+
+6. payout
+
+upload submit
+& deposit
+
+Figure 4: Process of submitting tasks on the Effect Mechanical Turk
+
+3.C Tasks
+
+A HIT task represent a piece of work that has been submitted by a Requester,
+
+and can be accepted by Workers that match its requirements. Each task points
+
+to a data set that can contain any amount of media assets. The contract ID
+
+of the task will validate the format of the data. Extracting and presenting
+
+examples from the data set is done by the user interface. A task has at least
+
+the properties shown in table 1.
+
+The structure and required feedback for a task is defined by the contract
+
+ID and the blueprint. Each type op task requires a smart contract to handle
+
+interaction. Effect.AI maintains a database of deployed smart contracts to make
+
+it easy for requesters and workers to interact with the network. Adding smart
+
+contracts to the network is handled through governance (section 2.D). Affiliate
+
+programs will cover costs of deploying new contract types.
+
+Page 16
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+Property Description
+Data set URL
+Description description of the task
+Contract ID smart contract that will handle task
+Blueprint data for the contract
+Required ERS require trusted users
+Reward rewarded EFX upon completion
+Num. ratings number of ratings per user
+Rating timeout timeout on performing a rating
+Expiration block ID after which task expires
+Sequence ID for sequencing examples (optional)
+Data credentials to unlock private data sets
+
+Table 1: Properties of a HIT
+
+3.D Data sets
+
+Data sets are often large and consist of various types of media. A blockchain is
+
+not a suitable database for storing this kind of information. Other decentralized
+
+storage options, like BitTorrent10 and IPFS11, are specialized in these types of
+
+assets. For this reason, the network will use a similar hash-based distributed
+
+file storage, where each media asset can be referred to by a single hash.
+
+Note that the feedback on a task can also involve storing media assets, for
+
+example in tasks like image segmentation. In this case the ratings asset will be
+
+stored on the distributed storage, and a hash and checksum of the rating are
+
+stored on the blockchain.
+
+Requesters will also be able to supply data sets through traditional channels,
+
+like Amazon S312, Google Cloud Storage13, or File Transfer Protocol (FTP)14.
+
+3.E Privacy
+
+The blockchain is decentralized and open by nature. These properties are not
+
+always desirable, for example when privacy is concerned. There are several
+10http://www.bittorrent.com/
+11https://ipfs.io/
+12https://aws.amazon.com/s3/
+13https://cloud.google.com/storage/
+14https://nl.wikipedia.org/wiki/File_Transfer_Protocol/
+
+Page 17
+
+http://www.bittorrent.com/
+https://ipfs.io/
+https://aws.amazon.com/s3/
+https://cloud.google.com/storage/
+https://nl.wikipedia.org/wiki/File_Transfer_Protocol/
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+measures that must be taken to make sure the Effect Network can be used for
+
+sensitive information. The network can provide privacy for the following cases:
+
+Data sets Requesters can provide their data set in encrypted form. Only se-
+
+lected users will be able to decrypt or access the data. This is determined
+
+by network smart contracts using Public Key Encryption, ensuring only
+
+selected users can decrypt the data set credentials.
+
+User ratings Ratings of tasks performed by workers are stored on the blockchain
+
+using Public Key Encryption. The public key of the owner is used to sign
+
+the ratings, so only the owner of the task can view the ratings.
+
+Tasks that involve privacy features will be more computationally expensive,
+
+thus will also have a higher network fee.
+
+Page 18
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+I believe that at the end of the
+century the use of words and
+general educated opinion will have
+altered so much that one will be
+able to speak of machines thinking
+without expecting to be
+contradicted.
+
+Alan Turing
+
+4 Phase 2: Effect.AI Smart Market
+
+The Effect.AI Smart Market (ESM) is a decentralized marketplace where AI
+
+algorithms can exchange their services. An application owner can register on
+
+the exchange by specifying a public endpoint of his or her application, following
+
+our data interchange format and specifying a usage fee for consumers. This
+
+application can now be invoked through smart contracts on the blockchain.
+
+The caller of the contract will have to transfer the required funds to the owner
+
+of the contract to get an authorization token that allows him or her to interact
+
+with the application.
+
+The exchange protocol can be built directly onto the Effect.AI interface
+
+setup proposed in section 2, where the agents receiving EFX tokens are the ones
+
+supplying AI algorithms, and the agents providing EFX tokens for these services
+
+are the Requesters. The Effect.AI Galaxy Pool (EGP) is merely used in the
+
+background to assure liquidity. The EGP enables payments for these services
+
+with native tokens, as well as EFX tokens. At this point Smart Contracts (SCs)
+
+will ensure and improve availabilty of the services that are requested and/or
+
+provided by agents in the network.
+
+Two important pillars in the ESM are the application registry and the end-
+
+points. The following subsections will describe the application registry (sec-
+
+tion 4.A) and enpoints (section 4.B) in more detail.
+
+Page 19
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+Buying
+Agents
+
+Effect Interface
+(Smart Contracts)
+
+Selling
+Agents
+
+Galaxy
+Pool
+
+Galaxy
+EFX
+
+EFX
+
+ApplicationsApplications
+
+EFX
+
+EFXNEO, GAS
+& NEP5
+
+Galaxy
+EFX
+
+NEO, GAS
+& NEP5
+
+Figure 5: Diagram of the Effect Smart Market
+
+4.A Application registry
+
+The network will maintain a registry of available applications. This registry will
+
+be enriched with a semantic ontology that describes the application, as well as
+
+a technical schema of its inputs and outputs.
+
+Thanks to the application registry, algorithms are able to explore possible
+
+collaborations over the blockchain. It also encourages standardization of data
+
+exchange formats, as interoperability with other applications means more inter-
+
+actions, providing an obvious financial incentive.
+
+4.B Endpoints
+
+Application endpoints on the ESM communicate over the HTTP protocol. Data
+
+is exchanged in JSON format and should strongly confirm the defined RDF
+
+schema.
+
+Requests signed with the private key of the buyer will be accepted by the
+
+endpoint. Issuing authorization tokens and checking their validity can be done
+
+by public APIs that hold a partial index of the blockchain. They could request
+
+small fees for providing this service.
+
+Page 20
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+Alone we can do so little; together
+we can do so much.
+
+Helen Keller
+
+5 Phase 3: Effect.AI Power
+
+Phase 1 and 2 of the Effect Network decentralized the data gathering and usage
+
+of AI algorithms. Up to this point the algorithms themselves still run on cen-
+
+tralized servers. In the final phase of the network the actual computation will
+
+be distributed so that the algorithms run globally without a single point of fail-
+
+ure. To achieve this we use the fact that most machine learning algorithms have
+
+rigid structure and operate on sets of weights. These types of algorithms are
+
+relatively easy to distribute. The Effect Network decentralized compute engine
+
+is based on popular Deep Learning (DL) frameworks like Caffe15, MXNet16,
+
+and TensorFlow17, where the network structure can be defined as a declarative
+
+graph and weights are stored as matrices of real numbers. These matrices can
+
+be distributed over a decentralized file system and be processed at different
+
+compute nodes on the network.
+
+15http://caffe.berkeleyvision.org/
+16https://mxnet.apache.org/
+17https://www.tensorflow.org/
+
+Page 21
+
+http://caffe.berkeleyvision.org/
+https://mxnet.apache.org/
+https://www.tensorflow.org/
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+Control is as much an effect as a
+cause, and the idea that control is
+something you exert is a real
+handicap to progress
+
+Steve Grand
+
+6 Conclusion
+
+Having an open, accessible and affordable platform for intelligent algorithms
+
+to operate and develop will be a key component in the coming century. Ar-
+
+tificial Intelligence (AI) and decentralization are a natural match and should
+
+be enforced more in the future. The vision and development roadmap of the
+
+Effect.AI Network (Effect Network) is to create an accessable and decentralized
+
+AI market.
+
+Community The Effect Network is fueled by EFX tokens that allow for fair,
+
+decentralized and peer-to-peer exchange for everything related to AI. EFX tokens
+
+are NEP5 conform and operate directly within the NEO smart economy blockchain.
+
+Galaxy Pool One of the most unique facets of Effect.AI is the Effect.AI
+
+Galaxy Pool (EGP). The EGP is a governed exchange system and pool. The
+
+EGP is filled with both native NEO and GAS, as wel as, EFX and other NEP5 tokens.
+
+This setup assures stable exchange rates. Furthermore, the EGP construction
+
+will allow to increase liquidity by providing, for example, beneficial exchange in
+
+the first phase of the network.
+
+Prospects Besides a strong community driven platform and token exchange
+
+Galaxy Pool, the Effect Network will develop three different AI service mar-
+
+kets, in consequtive phases. The first phase is called Effect.AI Mechanical Turk
+
+(EMT) and is similar to Amazon’s Mechanical Turk data labeling platform. Ef-
+
+fect.AI will effectively push the mechanical turk service on the blockchain using
+
+Effect.AI Service Contract (ESC), the smart contracts in the Effect Network .
+
+The second phase, Effect.AI Smart Market (ESM), builds upon the first phases
+
+Page 22
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+by expanding the service market, not only for data, but with algorithms as well.
+
+The ESM allows agents in the Effect Network to share, compare, and exchange
+
+AI algorithms. The third, and last, phase is called Effect.AI Power (EP) and
+
+allows for computation sharing completely in the Effect Network . EP completes
+
+the Effect Network . The effect of this network will define the future relationship
+
+between humans and AI.
+
+Page 23
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+List of Abbreviations
+
+Effect Network Effect.AI Network . 5–8, 11, 13, 14, 18, 21–23
+
+G-EFX Galaxy-EFX tokens. 9, 10, 12
+
+AI Artificial Intelligence. 1, 3–8, 15, 19, 21–23
+
+CV Computer Vision. 4
+
+dBFT Delegate Byzantine Fault Tolerance. 14
+
+DL Deep Learning. 21
+
+EC Effect.AI Council. 14
+
+EGA Effect.AI Galaxy Allowance. 8, 12
+
+EGP Effect.AI Galaxy Pool. 8–14, 19, 22
+
+EMT Effect.AI Mechanical Turk. 6, 7, 15, 22
+
+EP Effect.AI Power. 23
+
+ERS Effect.AI Reputation Score. 11, 12, 17
+
+ESC Effect.AI Service Contract. 9, 10, 12, 22
+
+ESM Effect.AI Smart Market. 7, 19, 20, 22, 23
+
+FTP File Transfer Protocol. 17
+
+GPUs Graphics Processing Units. 6
+
+HIT Human Intelligence Tasks. 11, 15–17
+
+ML Machine Learning. 4
+
+Page 24
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+NI Natural Intelligence. 4
+
+NLP Natural Language Processing. 4
+
+SCs Smart Contracts. 13, 14, 19
+
+Page 25
+
+
+
+Effect Network: Decentralized Network for Artificial Intelligence REV-1.0
+
+References
+
+[1] K. Schwab, The fourth industrial revolution. Crown Business, 2017 (cit. on
+
+p. 3).
+
+[2] S. Nakamoto, “Bitcoin: A peer-to-peer electronic cash system,” 2008 (cit.
+
+on p. 3).
+
+[3] (2014). Neo: A distributed network for the smart economy, [Online]. Avail-
+
+able: http://docs.neo.org/en-us/ (cit. on p. 4).
+
+[4] V. Buterin. (2014). A next-generation smart contract and decentralized
+
+application platform, [Online]. Available: https://github.com/ethereum/
+
+wiki/wiki/White-Paper/ (cit. on p. 4).
+
+[5] J. S. Downs, M. B. Holbrook, S. Sheng, and L. F. Cranor, “Are your partici-
+
+pants gaming the system?: Screening mechanical turk workers,” in Proceed-
+
+ings of the SIGCHI Conference on Human Factors in Computing Systems,
+
+ser. CHI ’10, Atlanta, Georgia, USA: ACM, 2010, pp. 2399–2402. [Online].
+
+Available: http://doi.acm.org/10.1145/1753326.1753688 (cit. on
+
+p. 11).
+
+Page 26
+
+http://docs.neo.org/en-us/
+https://github.com/ethereum/wiki/wiki/White-Paper/
+https://github.com/ethereum/wiki/wiki/White-Paper/
+http://doi.acm.org/10.1145/1753326.1753688
+
+	Introduction
+	Blockchain
+	Artificial Intelligence
+	Problem Statement
+	Solution Effect.AI
+
+	The community driven Effect Network
+	EFX tokens and the Effect Galaxy Pool
+	Effect Reputation Score
+	Galaxy Allowance
+	Governance
+	Improvement Proposals
+	Effect Council
+	Implementation
+
+	Phase 1: Effect.AI Mechanical Turk
+	Requesters
+	Workers
+	Tasks
+	Data sets
+	Privacy
+
+	Phase 2: Effect.AI Smart Market
+	Application registry
+	Endpoints
+
+	Phase 3: Effect.AI Power
+	Conclusion
+
