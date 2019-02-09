@@ -9,7 +9,6 @@ import nltk
 from nltk.stem import SnowballStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
-import bcolz
 import numpy as np
 import pickle
 import enchant
