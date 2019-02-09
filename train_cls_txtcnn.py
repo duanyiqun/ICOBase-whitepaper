@@ -29,7 +29,6 @@ parser.add_argument('--content_dim',default=256, type=str, help='emb_dim size')
 parser.add_argument('--pooling_dim',default=256, type=str, help='emb_dim size')
 parser.add_argument('--linear_dim',default=1000, type=str, help='emb_dim size')
 parser.add_argument('--num_classes',default=5, type=str, help='emb_dim size')
-parser.add_argument('--indexdir',default='/Users/duanyiqun/Downloads/Textcls/txt', type=str, help='direction folder path')
 args = parser.parse_args()
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
