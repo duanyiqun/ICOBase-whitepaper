@@ -14,20 +14,20 @@ import pandas as pd
 import time
 
 import dataloader
-import TextCNN
+import TextLSTM
 import torch.utils.data as data
 
 parser = argparse.ArgumentParser(description='PyTorch TextCNN Training')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
 parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
-parser.add_argument('--mname',default='TextCNN-ICO', type=str, help='model name for save')
+parser.add_argument('--mname',default='TextLSTM-ICO', type=str, help='model name for save')
 parser.add_argument('--csvdir',default='./wp_analysis.csv', type=str, help='for ICO white paper list')
 parser.add_argument('--article_dir',default='./txt', type=str, help='index direction for save')
 parser.add_argument('--vocab_size',default=21224, type=str, help='vocab size')
 parser.add_argument('--emb_dim',default=200, type=str, help='emb_dim size')
-parser.add_argument('--content_dim',default=256, type=str, help='emb_dim size')
-parser.add_argument('--pooling_dim',default=256, type=str, help='emb_dim size')
-parser.add_argument('--linear_dim',default=1000, type=str, help='emb_dim size')
+parser.add_argument('--hidden_size',default=1000, type=str, help='hiddensize')
+parser.add_argument('--num_layers',default=3, type=str, help='num of LSTM layers')
+parser.add_argument('--linear_dim',default=1000, type=str, help='linear hidden size')
 parser.add_argument('--num_classes',default=5, type=str, help='emb_dim size')
 args = parser.parse_args()
 
@@ -42,7 +42,7 @@ test_loader =data.DataLoader(test_data,batch_size=1,shuffle=False)
 
 print('==> Loading Network structure..\n')
 
-net = TextCNN.MultiCNNTextBNDeep(args.vocab_size,args.emb_dim,args.content_dim,args.pooling_dim, args.linear_dim,args.num_classes)
+net = TextLSTM.LSTMText(args.vocab_size,args.emb_dim,args.hidden_size,args.num_layers, args.linear_dim,args.num_classes)
 net = net.to(device)
 
 print('==> Loading cuda...\n')

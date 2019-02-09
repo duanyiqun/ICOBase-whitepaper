@@ -35,6 +35,6 @@ class LSTMsum(nn.Module):
 
 if __name__ == "__main__":
     x1 = torch.randn(1,3000,200)
-    net = LSTMsum(10000,200,3000,3000,3,True, False,1000,512,5)
+    net = LSTMsum(30000,200,3000,3000,3,True, False,1000,512,5)
     y = net(Variable(x1))
     print(y.size())
