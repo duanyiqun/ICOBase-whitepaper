@@ -35,7 +35,7 @@ class Myarticles(data.Dataset):
         #    self.articles = self.articles[200:250]
         #else:
         #    self.articles = self.articles[0:200]
-        self.articles = self.articles[128:250]
+        self.articles = self.articles[188:250]
         self.folderpath = txt_folder_path
         self.snowball_stemmer = SnowballStemmer('english')
         self.wordnet_lematizer = WordNetLemmatizer()
