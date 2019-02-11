@@ -23,7 +23,7 @@ parser.add_argument('--resume', '-r', action='store_true', help='resume from che
 parser.add_argument('--mname',default='TextCNN-ICO', type=str, help='model name for save')
 parser.add_argument('--csvdir',default='./wp_analysis.csv', type=str, help='for ICO white paper list')
 parser.add_argument('--article_dir',default='./txt', type=str, help='index direction for save')
-parser.add_argument('--vocab_size',default=21224, type=str, help='vocab size')
+parser.add_argument('--vocab_size',default=24589, type=str, help='vocab size')
 parser.add_argument('--emb_dim',default=200, type=str, help='emb_dim size')
 parser.add_argument('--content_dim',default=256, type=str, help='emb_dim size')
 parser.add_argument('--pooling_dim',default=256, type=str, help='emb_dim size')
@@ -35,6 +35,7 @@ args = parser.parse_args()
 device = 'cpu'
 best_acc = 0
 start_epoch = 0
+
 train_data = dataloader.Myarticles(args.csvdir,args.article_dir,validation=False)
 test_data = dataloader.Myarticles(args.csvdir,args.article_dir,validation=True)
 
@@ -42,7 +43,7 @@ train_loader =data.DataLoader(train_data,batch_size=1,shuffle=True)
 test_loader =data.DataLoader(test_data,batch_size=1,shuffle=False)
 
 print('==> Loading Network structure..\n')
-
+args.vocab_size = len(train_data.init_word2idx)
 net = TextCNN.MultiCNNTextBNDeep(args.vocab_size,args.emb_dim,args.content_dim,args.pooling_dim, args.linear_dim,args.num_classes)
 net = net.to(device)
 
