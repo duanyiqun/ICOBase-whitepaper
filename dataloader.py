@@ -30,12 +30,12 @@ class Myarticles(data.Dataset):
         self.glove_path =glove_path
         #self.glove_init()
         #self.w2v = self.init_word2vec()
-        self.articles = self.Creat_article_list(csvfile_path)
-        #if validation:
-        #    self.articles = self.articles[200:250]
-        #else:
-        #    self.articles = self.articles[0:200]
-        self.articles = self.articles[0:250]
+        self.articleor = self.Creat_article_list(csvfile_path)
+        if validation:
+            self.articles = self.articleor[200:250]
+        else:
+            self.articles = self.articleor[0:200]
+        #self.articles = self.articles[0:250]
         self.folderpath = txt_folder_path
         self.snowball_stemmer = SnowballStemmer('english')
         self.wordnet_lematizer = WordNetLemmatizer()
