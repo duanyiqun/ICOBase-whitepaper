@@ -43,7 +43,7 @@ train_loader =data.DataLoader(train_data,batch_size=1,shuffle=True)
 test_loader =data.DataLoader(test_data,batch_size=1,shuffle=False)
 
 print('==> Loading Network structure..\n')
-args.vocab_size = len(train_data.init_word2idx)
+args.vocab_size = len(train_data.word2idx)
 net = TextCNN.MultiCNNTextBNDeep(args.vocab_size,args.emb_dim,args.content_dim,args.pooling_dim, args.linear_dim,args.num_classes)
 net = net.to(device)
 
