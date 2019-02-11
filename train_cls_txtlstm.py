@@ -31,8 +31,8 @@ parser.add_argument('--linear_dim',default=512, type=str, help='linear hidden si
 parser.add_argument('--num_classes',default=5, type=str, help='emb_dim size')
 args = parser.parse_args()
 
-#device = 'cuda' if torch.cuda.is_available() else 'cpu'
-device = 'cpu'
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+#device = 'cpu'
 best_acc = 0
 start_epoch = 0
 train_data = dataloader.Myarticles(args.csvdir,args.article_dir,validation=False)
