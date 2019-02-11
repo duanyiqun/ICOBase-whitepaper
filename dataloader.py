@@ -206,7 +206,7 @@ class Myarticles(data.Dataset):
 if __name__ == '__main__':
     article = Myarticles('./wp_analysis.csv','./txt')
     test_loader = data.DataLoader(article,batch_size=1,shuffle=False)
-    article.save_wdx()
+    #article.save_wdx()
     for sample, target in test_loader:
         print(sample)
         print(target)
