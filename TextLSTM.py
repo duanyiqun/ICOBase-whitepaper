@@ -55,7 +55,7 @@ class LSTMText(BasicModule):
 
  
 if __name__ == '__main__':
-    m = LSTMText(vocab_size = 22124, embedding_dim = 200, hidden_size = 1000, num_layers = 3, linear_hidden_size = 1000, num_classes = 5)
+    m = LSTMText(vocab_size = 22124, embedding_dim = 200, hidden_size = 500, num_layers = 3, linear_hidden_size = 512, num_classes = 5)
     content = t.autograd.Variable(t.arange(0,300).view(1,300)).long()
     o = m(content)
     print(o.size())

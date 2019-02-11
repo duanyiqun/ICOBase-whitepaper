@@ -24,10 +24,10 @@ parser.add_argument('--mname',default='TextLSTM-ICO', type=str, help='model name
 parser.add_argument('--csvdir',default='./wp_analysis.csv', type=str, help='for ICO white paper list')
 parser.add_argument('--article_dir',default='./txt', type=str, help='index direction for save')
 parser.add_argument('--vocab_size',default=21224, type=str, help='vocab size')
-parser.add_argument('--emb_dim',default=200, type=str, help='emb_dim size')
-parser.add_argument('--hidden_size',default=1000, type=str, help='hiddensize')
+parser.add_argument('--emb_dim',default=50, type=str, help='emb_dim size')
+parser.add_argument('--hidden_size',default=500, type=str, help='hiddensize')
 parser.add_argument('--num_layers',default=3, type=str, help='num of LSTM layers')
-parser.add_argument('--linear_dim',default=1000, type=str, help='linear hidden size')
+parser.add_argument('--linear_dim',default=512, type=str, help='linear hidden size')
 parser.add_argument('--num_classes',default=5, type=str, help='emb_dim size')
 args = parser.parse_args()
 
@@ -135,6 +135,9 @@ def test(epoch):
         best_acc = acc
     return data
 
+a=[1,2,3,4]
+trainnp=np.array(a)
+testnp=np.array(a)
 
 for epoch in range(start_epoch, start_epoch+90):
     nd=train(epoch)

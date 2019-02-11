@@ -18,16 +18,16 @@ import TextCNN
 import torch.utils.data as data
 
 parser = argparse.ArgumentParser(description='PyTorch TextCNN Training')
-parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
+parser.add_argument('--lr', default=0.01, type=float, help='learning rate')
 parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
 parser.add_argument('--mname',default='TextCNN-ICO', type=str, help='model name for save')
 parser.add_argument('--csvdir',default='./wp_analysis.csv', type=str, help='for ICO white paper list')
 parser.add_argument('--article_dir',default='./txt', type=str, help='index direction for save')
 parser.add_argument('--vocab_size',default=24589, type=str, help='vocab size')
-parser.add_argument('--emb_dim',default=200, type=str, help='emb_dim size')
+parser.add_argument('--emb_dim',default=50, type=str, help='emb_dim size')
 parser.add_argument('--content_dim',default=256, type=str, help='emb_dim size')
 parser.add_argument('--pooling_dim',default=256, type=str, help='emb_dim size')
-parser.add_argument('--linear_dim',default=1000, type=str, help='emb_dim size')
+parser.add_argument('--linear_dim',default=512, type=str, help='emb_dim size')
 parser.add_argument('--num_classes',default=5, type=str, help='emb_dim size')
 args = parser.parse_args()
 
@@ -136,6 +136,9 @@ def test(epoch):
         best_acc = acc
     return data
 
+a=[1,2,3,4]
+trainnp=np.array(a)
+testnp=np.array(a)
 
 for epoch in range(start_epoch, start_epoch+90):
     nd=train(epoch)
