@@ -41,7 +41,7 @@ train_loader =data.DataLoader(train_data,batch_size=1,shuffle=True)
 test_loader =data.DataLoader(test_data,batch_size=1,shuffle=False)
 
 print('==> Loading Network structure..\n')
-
+args.vocab_size = len(train_data.word2idx)
 net = TextLSTM.LSTMText(args.vocab_size,args.emb_dim,args.hidden_size,args.num_layers, args.linear_dim,args.num_classes)
 net = net.to(device)
 

@@ -12,7 +12,7 @@ class LSTMText(BasicModule):
     def __init__(self, vocab_size, embedding_dim, hidden_size, num_layers, linear_hidden_size, num_classes):
         super(LSTMText, self).__init__()
         self.model_name = 'LSTMText'
-        self.kmax_pooling_dim = 1000
+        self.kmax_pooling_dim = 200
         self.encoder = nn.Embedding(vocab_size, embedding_dim)
         self.content_lstm =nn.LSTM(  input_size = embedding_dim,
                             hidden_size = hidden_size,
@@ -56,6 +56,6 @@ class LSTMText(BasicModule):
  
 if __name__ == '__main__':
     m = LSTMText(vocab_size = 22124, embedding_dim = 200, hidden_size = 1000, num_layers = 3, linear_hidden_size = 1000, num_classes = 5)
-    content = t.autograd.Variable(t.arange(0,200).view(1,200)).long()
+    content = t.autograd.Variable(t.arange(0,300).view(1,300)).long()
     o = m(content)
     print(o.size())
