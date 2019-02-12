@@ -102,7 +102,7 @@ def test(epoch):
     total = 0
     start_time=time.time()
     for batch_idx, (inputs, targets) in enumerate(test_loader):
-        inputs, targets = inputs.to(device), targets.to(device)
+        inputs, targets = inputs.to(device), targets.long().to(device)
         outputs = net(inputs)
         loss = criterion(outputs, targets)
 
