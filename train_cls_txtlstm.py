@@ -101,7 +101,7 @@ def test(epoch):
     total = 0
     start_time=time.time()
     for batch_idx, (inputs, targets) in enumerate(test_loader):
-        inputs, targets = inputs.to(device), targets.to(device)
+        inputs, targets = inputs.to(device), targets.long().to(device)
         outputs = net(inputs)
         loss = criterion(outputs, targets)
 
@@ -155,7 +155,7 @@ test_data.to_csv(savepath)
 
 print('\n\nadjust learning rate to 0.01')
 #learning rate change
-args.lr=0.01
+args.lr=0.001
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=args.lr, momentum=0.9, weight_decay=1e-4)
