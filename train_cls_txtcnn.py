@@ -18,7 +18,7 @@ import TextCNN
 import torch.utils.data as data
 
 parser = argparse.ArgumentParser(description='PyTorch TextCNN Training')
-parser.add_argument('--lr', default=0.01, type=float, help='learning rate')
+parser.add_argument('--lr', default=0.001, type=float, help='learning rate')
 parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
 parser.add_argument('--mname',default='TextCNN-ICO', type=str, help='model name for save')
 parser.add_argument('--csvdir',default='./wp_analysis.csv', type=str, help='for ICO white paper list')
@@ -39,8 +39,8 @@ start_epoch = 0
 train_data = dataloader.Myarticles(args.csvdir,args.article_dir,validation=False)
 test_data = dataloader.Myarticles(args.csvdir,args.article_dir,validation=True)
 
-train_loader =data.DataLoader(train_data,batch_size=1,shuffle=True)
-test_loader =data.DataLoader(test_data,batch_size=1,shuffle=False)
+train_loader =data.DataLoader(train_data,batch_size=2,shuffle=True)
+test_loader =data.DataLoader(test_data,batch_size=2,shuffle=False)
 
 print('==> Loading Network structure..\n')
 args.vocab_size = len(train_data.word2idx)
