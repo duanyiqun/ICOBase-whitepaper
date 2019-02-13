@@ -39,8 +39,8 @@ start_epoch = 0
 train_data = dataloader.Myarticles(args.csvdir,args.article_dir,validation=False)
 test_data = dataloader.Myarticles(args.csvdir,args.article_dir,validation=True)
 
-train_loader =data.DataLoader(train_data,batch_size=2,shuffle=True)
-test_loader =data.DataLoader(test_data,batch_size=2,shuffle=False)
+train_loader =data.DataLoader(train_data,batch_size=1,shuffle=True)
+test_loader =data.DataLoader(test_data,batch_size=1,shuffle=False)
 
 print('==> Loading Network structure..\n')
 args.vocab_size = len(train_data.word2idx)
