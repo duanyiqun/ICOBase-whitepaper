@@ -130,7 +130,7 @@ def test(epoch):
         }
         if not os.path.isdir('checkpoint'):
             os.mkdir('checkpoint')
-        savepath='./train/'+str(args.mname)+'/best_check.plk'
+        savepath='../outputs/'+str(args.mname)+'/best_check.plk'
         torch.save(state, savepath)
         best_acc = acc
     return data
@@ -146,10 +146,10 @@ for epoch in range(start_epoch, start_epoch+90):
     testnp=np.vstack((testnp,np.array(ed)))
 
 
-savepath='./train/'+str(args.mname)+'train.csv'
+savepath='../outputs/'+str(args.mname)+'train.csv'
 train_data=pd.DataFrame(trainnp,columns=['epoch','accuracy','loss','epoch_time'])
 train_data.to_csv(savepath)
-savepath='./train/'+str(args.mname)+'test.csv'
+savepath='../outputs/'+str(args.mname)+'test.csv'
 test_data=pd.DataFrame(testnp,columns=['epoch','accuracy','loss','epoch_time'])
 test_data.to_csv(savepath)
 
@@ -166,10 +166,10 @@ for epoch in range(90+start_epoch, 90+start_epoch+60):
     ed=test(epoch)
     testnp=np.vstack((testnp,np.array(ed)))
 
-savepath='./train/'+str(args.mname)+'train.csv'
+savepath='../outputs/'+str(args.mname)+'train.csv'
 train_data=pd.DataFrame(trainnp,columns=['epoch','accuracy','loss','epoch_time'])
 train_data.to_csv(savepath)
-savepath='./train/'+str(args.mname)+'test.csv'
+savepath='../outputs/'+str(args.mname)+'test.csv'
 test_data=pd.DataFrame(testnp,columns=['epoch','accuracy','loss','epoch_time'])
 test_data.to_csv(savepath)
 

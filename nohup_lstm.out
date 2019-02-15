@@ -1,0 +1,33 @@
+sucessfully load word dictionary with shape24589
+sucessfully load word dictionary with shape24589
+==> Loading Network structure..
+
+==> Loading cuda...
+
+
+Epoch: 0
+Traceback (most recent call last):
+  File "train_cls_txtlstm.py", line 143, in <module>
+    nd=train(epoch)
+  File "train_cls_txtlstm.py", line 70, in train
+    loss.backward()
+batch 3 of total batch 200 Loss: 1.290 | Acc: 25.000% (1/4)
+batch 4 of total batch 200 Loss: 1.032 | Acc: 40.000% (2/5)
+batch 5 of total batch 200 Loss: 3.301 | Acc: 33.333% (2/6)
+batch 6 of total batch 200 Loss: 3.743 | Acc: 28.571% (2/7)
+batch 7 of total batch 200 Loss: 3.275 | Acc: 37.500% (3/8)
+batch 8 of total batch 200 Loss: 18.937 | Acc: 33.333% (3/9)
+batch 9 of total batch 200 Loss: 17.043 | Acc: 40.000% (4/10)
+batch 10 of total batch 200 Loss: 233.836 | Acc: 36.364% (4/11)
+batch 11 of total batch 200 Loss: 878.066 | Acc: 33.333% (4/12)
+batch 12 of total batch 200 Loss: 80826.494 | Acc: 30.769% (4/13)
+Traceback (most recent call last):
+  File "train_cls_txtlstm.py", line 143, in <module>
+    nd=train(epoch)
+  File "train_cls_txtlstm.py", line 70, in train
+    loss.backward()
+  File "/home/claude.duan/anaconda3/envs/cdtorch/lib/python3.6/site-packages/torch/tensor.py", line 93, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/claude.duan/anaconda3/envs/cdtorch/lib/python3.6/site-packages/torch/autograd/__init__.py", line 89, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: CUDNN_STATUS_EXECUTION_FAILED

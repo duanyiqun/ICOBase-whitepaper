@@ -1,0 +1,50 @@
+sucessfully load word dictionary with shape24589
+sucessfully load word dictionary with shape24589
+==> Loading Network structure..
+
+==> Loading cuda...
+
+
+Epoch: 0
+batch 0 of total batch 200 Loss: 1.567 | Acc: 100.000% (1/1)
+batch 1 of total batch 200 Loss: 1.769 | Acc: 50.000% (1/2)
+batch 2 of total batch 200 Loss: 2.142 | Acc: 33.333% (1/3)
+batch 3 of total batch 200 Loss: 1.928 | Acc: 25.000% (1/4)
+batch 4 of total batch 200 Loss: 1.734 | Acc: 40.000% (2/5)
+batch 5 of total batch 200 Loss: 2.071 | Acc: 33.333% (2/6)
+batch 6 of total batch 200 Loss: 1.893 | Acc: 42.857% (3/7)
+batch 7 of total batch 200 Loss: 4.162 | Acc: 37.500% (3/8)
+batch 8 of total batch 200 Loss: 3.857 | Acc: 33.333% (3/9)
+batch 9 of total batch 200 Loss: 3.730 | Acc: 30.000% (3/10)
+batch 10 of total batch 200 Loss: 3.391 | Acc: 36.364% (4/11)
+batch 11 of total batch 200 Loss: 5.133 | Acc: 33.333% (4/12)
+batch 12 of total batch 200 Loss: 181.945 | Acc: 30.769% (4/13)
+batch 13 of total batch 200 Loss: 168.949 | Acc: 35.714% (5/14)
+batch 14 of total batch 200 Loss: 157.686 | Acc: 40.000% (6/15)
+batch 15 of total batch 200 Loss: 8084.601 | Acc: 37.500% (6/16)
+batch 16 of total batch 200 Loss: 7609.495 | Acc: 35.294% (6/17)
+batch 17 of total batch 200 Loss: 7186.783 | Acc: 38.889% (7/18)
+batch 18 of total batch 200 Loss: 6808.561 | Acc: 42.105% (8/19)
+batch 19 of total batch 200 Loss: 6468.157 | Acc: 45.000% (9/20)
+batch 20 of total batch 200 Loss: 6160.167 | Acc: 47.619% (10/21)
+batch 21 of total batch 200 Loss: 5880.173 | Acc: 50.000% (11/22)
+batch 22 of total batch 200 Loss: 5624.662 | Acc: 47.826% (11/23)
+batch 23 of total batch 200 Loss: 5390.309 | Acc: 50.000% (12/24)
+batch 24 of total batch 200 Loss: 5174.802 | Acc: 48.000% (12/25)
+batch 25 of total batch 200 Loss: 4975.777 | Acc: 50.000% (13/26)
+batch 26 of total batch 200 Loss: 4791.495 | Acc: 51.852% (14/27)
+batch 27 of total batch 200 Loss: 4620.375 | Acc: 53.571% (15/28)
+batch 28 of total batch 200 Loss: 4461.056 | Acc: 55.172% (16/29)
+batch 29 of total batch 200 Loss: 4312.448 | Acc: 53.333% (16/30)
+Traceback (most recent call last):
+  File "train_cls_txtlstm.py", line 143, in <module>
+    nd=train(epoch)
+  File "train_cls_txtlstm.py", line 68, in train
+    outputs = net(inputs)
+  File "/home/claude.duan/anaconda3/envs/cdtorch/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/claude.duan/demos/ICO_whitepaper/TextLSTM.py", line 40, in forward
+    content_conv_out = kmax_pooling((content_out),2,self.kmax_pooling_dim)
+  File "/home/claude.duan/demos/ICO_whitepaper/TextLSTM.py", line 8, in kmax_pooling
+    index = x.topk(k, dim = dim)[1].sort(dim = dim)[0]
+RuntimeError: invalid argument 5: k not in range for dimension at /opt/conda/conda-bld/pytorch_1525909934016/work/aten/src/THC/generic/THCTensorTopK.cu:21

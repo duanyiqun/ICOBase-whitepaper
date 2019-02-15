@@ -25,7 +25,7 @@ class MultiCNNTextBNDeep(BasicModule):
                                         kernel_size = kernel_size),
                                 nn.BatchNorm1d(content_dim),
                                 nn.ReLU(inplace=True),
-                                nn.AdaptiveMaxPool1d(pooling_out_dim)
+                                nn.AdaptiveAvgPool1d(pooling_out_dim)
                             )
             for kernel_size in kernel_sizes ]
 

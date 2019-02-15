@@ -17,13 +17,13 @@ from torch.autograd import Variable
 from string import digits
 
 #### Please download nltk resources before using this file. 
-nltk.download("stopwords")
-print(stopwords.words('english'))
-nltk.download('wordnet')
-wordnet_lematizer = WordNetLemmatizer()
-print(wordnet_lematizer.lemmatize('good'))
-nltk.download('averaged_perceptron_tagger')
-print(nltk.pos_tag(['do','yes']))
+#nltk.download("stopwords")
+#print(stopwords.words('english'))
+#nltk.download('wordnet')
+#wordnet_lematizer = WordNetLemmatizer()
+#print(wordnet_lematizer.lemmatize('good'))
+#nltk.download('averaged_perceptron_tagger')
+#print(nltk.pos_tag(['do','yes']))
 
 class Myarticles(data.Dataset):
     def __init__(self, csvfile_path, txt_folder_path, glove_path='/Users/duanyiqun/Downloads/Textcls/glove.6B', validation=False):
@@ -35,7 +35,7 @@ class Myarticles(data.Dataset):
             self.articles = self.articleor[200:250]
         else:
             self.articles = self.articleor[0:200]
-        #self.articles = self.articleor[0:10]
+        #self.articles = self.articles[0:250]
         self.folderpath = txt_folder_path
         self.snowball_stemmer = SnowballStemmer('english')
         self.wordnet_lematizer = WordNetLemmatizer()
