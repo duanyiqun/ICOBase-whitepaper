@@ -1,3 +1,8 @@
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 import os  
 import re
 import string
