@@ -1,0 +1,30 @@
+---
+
+- step:
+    name: concat model
+    image: pytorch/pytorch:0.4_cuda9_cudnn7
+    command: python pre_trained.py {parameters}
+    inputs:
+      - name: training-set
+        default: s3://twohat-valohai/baseline31k.tar 
+      - name: test-set
+        default: s3://twohat-valohai/baseline31k.tar 
+    parameters:
+      - name: mname
+        type: string
+        pass-as: --mname={v}
+        description: model name
+        default: wahtever
+      - name: posdir
+        type: string
+        pass-as: --posdir={v}
+        default: ../inputs/test-set/dataset_60kcommon_30kporn/common
+      - name: negdir
+        type: string
+        pass-as: --negdir={v}
+        default: ../inputs/test-set/dataset_60kcommon_30kporn/porn
+
+      
+
+
+    
