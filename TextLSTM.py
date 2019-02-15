@@ -36,6 +36,7 @@ class LSTMText(BasicModule):
  
     def forward(self, content):
         content = self.encoder(content)
+        #content_out = self.content_lstm(content.permute(1,0,2))
         content_out = self.content_lstm(content.permute(1,0,2))[0].permute(1,2,0)
         content_conv_out = kmax_pooling((content_out),2,self.kmax_pooling_dim)
         #conv_out = t.cat(content_conv_out,dim=1)
