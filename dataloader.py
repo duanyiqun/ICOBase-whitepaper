@@ -72,7 +72,7 @@ class Myarticles(data.Dataset):
 
     def __getitem__(self, index):
         filepath = os.path.join(self.folderpath,self.articles[index][0])
-        with open(filepath) as f:
+        with open(filepath,encoding = 'utf-8') as f:
             article = f.read()
         article = self.CleanLines(article)
         article = self.SenToken(article)
