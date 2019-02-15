@@ -1,8 +1,4 @@
-
-import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
-
+# -*- coding: utf-8 -*-
 import os  
 import re
 import string
