@@ -52,7 +52,7 @@ print('==> Loading cuda...\n')
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=args.lr, momentum=0.9, weight_decay=1e-4)
 
-savepath='./train/'+str(args.mname)
+savepath='../outputs/'+str(args.mname)
 if not os.path.exists(savepath):
     os.makedirs(savepath)
 
