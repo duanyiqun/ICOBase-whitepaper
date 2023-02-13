@@ -1,7 +1,7 @@
 # White Paper Analysis Dataset for ICO Projects
 
 This is a simple dataset of analysing ICO projects according to their ICO white papers. 
-We collect up to 1100+ whitepapers with projects information at the year of 2018. All white papers are labled with three annotators. 
+We collect up to 1100+ whitepapers with projects information at the year of 2018. All white papers are transferd to plain text material and labled with three annotators. 
 
 We evaluate the ICO white papers with aspects as bellow:
 
